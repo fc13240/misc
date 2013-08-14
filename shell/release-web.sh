@@ -1,8 +1,9 @@
 #!/bin/bash
 
 CURRENT_DIR=`dirname $0`
-LOG_PATH=`cd $CURRENT_DIR;cd ..;pwd`
+BASE_DIR=`cd $CURRENT_DIR;cd ..;pwd`
 su - sam << EOF
+	cd $BASE_DIR;
 	git pull origin master
 EOF
 echo 'release down'
