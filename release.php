@@ -7,7 +7,7 @@ if(!empty($_POST)){
 		//echo 'release-web';
 	}
 	header("Content-type: text/html");
-	$shellName = ($type == 1?'release-misc.sh':'release-web.sh')
+	$shellName = ($type == 1?'release-misc.sh':'release-web.sh');
 	$command = dirname(__FILE__).'/shell/'.$shellName;
 	passthru ($command,$res);
 	var_dump($res);
