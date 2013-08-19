@@ -76,3 +76,8 @@ pre.prettyprint .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - 
 pre.prettyprint .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
 pre.prettyprint .atv { color: #ffa0a0 } /* attribute value - pink */
 pre.prettyprint .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+
+/* rewrite */
+pre{font-family: Consolas, "Liberation Mono", Courier, monospace;font-size: 12px;}
+pre.prettyprint .com{color: #999988;font-style: italic;}
