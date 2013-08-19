@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NEWLINE='<br/>';
-CURRENT_TIME=$(date '+%Y-%m-%d %H:%M:%S');
+CURRENT_TIME=$(date +%Y%m%d_%H%M%S);
 
 # must be absolute path
 CURRENT_DIR=`dirname $0`
