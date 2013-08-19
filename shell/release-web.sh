@@ -38,7 +38,7 @@ echo $NEWLINE;
 # compress source/* -> min/*
 echo "<b>5. compress</b>";
 echo '<pre>';
-/usr/local/bin/node /home/sam/nodejs/compresser/index.js $WORK_DIR/source $WORK_DIR/min
+/usr/local/bin/node /home/sam/nodejs/compresser/index.js $WORK_DIR/source $WORK_DIR/min --colors=false
 echo '</pre>';
 echo $NEWLINE;
 
