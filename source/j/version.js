@@ -1,1 +1,1 @@
-__coreCallback('20130715_3');
+__coreCallback('@VERSION');
