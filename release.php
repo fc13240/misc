@@ -10,7 +10,6 @@ if(!empty($_POST)){
 	echo '<br/><a href="">发布成功</a>';
 	exit();
 }
-
 ?>
 
 <form method="POST">
