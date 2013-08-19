@@ -22,4 +22,4 @@ echo "git pull origin master;$NEWLINE";
 
 # tag
 git tag $CURRENT_TIME;
-echo 'release finished,taged as:$CURRENT_TIME;';
+echo "release finished,taged as:$CURRENT_TIME;";
