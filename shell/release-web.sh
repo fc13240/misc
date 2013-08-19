@@ -9,7 +9,9 @@ WORK_DIR=`cd $CURRENT_DIR;cd ..;pwd`
 
 # change work directory first
 echo "<b>1. cd $WORK_DIR;</b>";
+echo '<pre>';
 cd $WORK_DIR;
+echo '</pre>';
 echo $NEWLINE;
 
 # remove modify
@@ -35,18 +37,25 @@ git tag $CURRENT_TIME;
 echo '</pre>';
 echo $NEWLINE;
 
+# replace @VERSION
+echo "<b>5. replace @VERSION -> $CURRENT_TIME</b>";
+echo '<pre>';
+sed 's/@VERSION/$CURRENT_TIME/' $WORK_DIR/source/j/version.js
+echo '</pre>';
+echo $NEWLINE;
+
 # compress source/* -> min/*
-echo "<b>5. compress</b>";
+echo "<b>6. compress</b>";
 echo '<pre>';
 /usr/local/bin/node /home/sam/nodejs/compresser/index.js $WORK_DIR/source $WORK_DIR/min --colors=false
 echo '</pre>';
 echo $NEWLINE;
 
 # rsync
-echo "<b>6. rsync</b>";
+echo "<b>7. rsync</b>";
 echo '<pre>';
 # rsync -vaz '-e ssh -p 2222'  $WORK_DIR/min/ sam@61.4.185.220:/home/sam/www/htdocs/n/
 echo '</pre>';
 echo $NEWLINE;
 
-echo "<b>7. release finished</b>";
+echo "<b>8. release finished</b>";

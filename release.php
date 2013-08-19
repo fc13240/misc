@@ -1,5 +1,10 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body style="width:700px;margin: 10px auto">
 <?php
-header("Content-type: text/html; charset=utf-8");
 if(!empty($_POST)){
 	$type = $_POST['release-type'];
 	$shellName = ($type == 1?'release-misc.sh':'release-web.sh');
@@ -8,15 +13,14 @@ if(!empty($_POST)){
 	passthru ($command,$res);
 	var_dump($res);
 	echo '<br/><a href="">发布成功</a>';
-	exit();
-}
-?>
-
-<form method="POST">
-	<input type="hide" name="release-type" value="1"/>
-	<input type="submit" value="release-misc" style="width:150px;"/>
-</form>
-<form method="POST">
-	<input type="hide" name="release-type" value="2"/>
-	<input type="submit" value="release-web" style="width:150px;"/>
-</form>
+}else{?>
+	<form method="POST">
+		<input type="hide" name="release-type" value="1"/>
+		<input type="submit" value="release-misc" style="width:150px;"/>
+	</form>
+	<form method="POST">
+		<input type="hide" name="release-type" value="2"/>
+		<input type="submit" value="release-web" style="width:150px;"/>
+	</form>
+<?php}?>
+</body>
