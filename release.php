@@ -22,5 +22,5 @@ if(!empty($_POST)){
 		<input type="hide" name="release-type" value="2"/>
 		<input type="submit" value="release-web" style="width:150px;"/>
 	</form>
-<?php}?>
+<?php }?>
 </body>
