@@ -2,7 +2,6 @@
 	var Event = global.Event = function(){
 		this.events = {};
 	}
-	Event.test = function(){console.log('test')}
 	var eventProp = Event.prototype;
 	eventProp.on = function(eventName,callback){
 		var events = this.events;

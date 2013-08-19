@@ -1,0 +1,28 @@
+/*常用样式及整体风格*/
+
+/*常用样式*/
+.fl{
+	float: left;
+	display: inline;
+}
+.fr{
+	float: right;
+	display: inline;
+}
+/* Clearfix */
+.clearfix:after {/*用于内部有浮动元素的元素，可以起到关闭浮动的作用 */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+
+/* 网站样式整体风格 */
+body {font: 12px/1.4 微软雅黑,tahoma,arial; color: #404040;}
+a {color: #dd295c; text-decoration: none;}
+a:visited { color: blue;text-decoration: underline;}
+a:hover { color: #e76a8d;text-shadow:3px 3px 3px #ccc}
