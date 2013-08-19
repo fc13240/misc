@@ -1,4 +1,5 @@
 <?php
+var_dump($_SERVER);
 if(!empty($_POST)){
 	$type = $_POST['release-type'];
 	header("Content-type: text/html");
