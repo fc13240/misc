@@ -11,6 +11,7 @@ if(!empty($_POST)){
 }
 
 ?>
+hello
 <form method="POST">
 	<input type="hide" name="release-type" value="1"/>
 	<input type="submit" value="release-misc" style="width:150px;"/>
