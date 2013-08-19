@@ -1,11 +1,10 @@
 <?php
-var_dump($_SERVER);
 if(!empty($_POST)){
 	$type = $_POST['release-type'];
 	header("Content-type: text/html");
 	$shellName = ($type == 1?'release-misc.sh':'release-web.sh');
-	$command = '/bin/bash '.dirname(__FILE__).'/shell/'.$shellName;
-	echo $command;
+	$command = '/bin/bash '.$_SERVER['DOCUMENT_ROOT'].'/shell/'.$shellName;
+	echo $command.'<br/>';
 	passthru ($command,$res);
 	var_dump($res);
 	echo '<br/><a href="">back</a>';
