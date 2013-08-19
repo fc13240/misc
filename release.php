@@ -1,17 +1,18 @@
 <?php
+header("Content-type: text/html; charset=utf-8");
 if(!empty($_POST)){
 	$type = $_POST['release-type'];
-	header("Content-type: text/html");
 	$shellName = ($type == 1?'release-misc.sh':'release-web.sh');
 	$command = '/bin/bash '.$_SERVER['DOCUMENT_ROOT'].'/shell/'.$shellName;
 	echo $command.'<br/>';
 	passthru ($command,$res);
 	var_dump($res);
-	echo '<br/><a href="">back</a>';
+	echo '<br/><a href="">发布成功</a>';
+	exit();
 }
 
 ?>
-hello
+
 <form method="POST">
 	<input type="hide" name="release-type" value="1"/>
 	<input type="submit" value="release-misc" style="width:150px;"/>
