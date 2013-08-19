@@ -31,7 +31,7 @@ if($isShowForm){
 		<input type="hidden" name="flag" value="<?php echo $_SESSION['flag'];?>"/>
 		<input type="hidden" name="release-type" value="1"/>
 		<input type="submit" value="发布前端网站" style="width:150px;float:left;margin-right:10px;"/>
-		<p>发布前端网站资源</p>
+		<p>发布前端网站资源,会压缩CSS及JS,更改版本号</p>
 	</form>
 	<form method="POST">
 		<input type="hidden" name="flag" value="<?php echo $_SESSION['flag'];?>"/>
