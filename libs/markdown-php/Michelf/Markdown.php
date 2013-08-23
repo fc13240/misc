@@ -2768,6 +2768,8 @@ class _MarkdownExtra_TmpImpl extends \Michelf\Markdown {
 				# 1: Opening marker
 				(
 					~{3,} # Marker: three tilde or more.
+					|
+					`{3,} # zk add,for github ```code```
 				)
 				[ ]*
 				(?:

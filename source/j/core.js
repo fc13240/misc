@@ -1008,5 +1008,6 @@ seajs.config = function(configData) {
       charset: 'utf-8'
     });
   }
+  W.data = {'base': basePath};
   global.W = W;
 })(this);

@@ -21,11 +21,21 @@ $html = Markdown::defaultTransform($text);
 <html>
     <head>
         <title>PHP Markdown Lib - Readme</title>
+        <script src="../../source/j/core.js"></script>
     </head>
     <body>
 		<?php
 			# Put HTML content in the document
 			echo $html;
 		?>
+		<script type="text/javascript">
+		W(function(){
+			var base = W.data.base;
+			W.use([base+'../libs/js/highlight.js',base+'../libs/css/markdown.css'],function(){
+				hljs.tabReplace = '    ';
+	  			hljs.initHighlightingOnLoad();
+			});
+		});
+		</script>
     </body>
 </html>

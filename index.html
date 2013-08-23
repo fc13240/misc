@@ -1,1 +1,24 @@
-hello http://misc.weather.com.cn,release from web.sh
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset='utf-8'>
+        <title></title>
+        <script src="/source/j/core.js"></script>
+        <script type="text/javascript">
+        W.css('./source/c/reset.css','./source/c/core.css','./libs/css/p_index.css','./libs/css/markdown.css','./libs/css/highlight.css');
+        </script>
+    </head>
+    <body>
+    	<div class="float_layer">
+    		<a href="#/docs/index.md" class="ajax-link md">前言</a>
+    		<a href="#/docs/standard.md" class="ajax-link md">前端规范</a>
+    		<a href="#/docs/directory.md" class="ajax-link md">目录及文件介绍</a>
+    		<a href="#/docs/modules.md" class="ajax-link md init">模块</a>
+    	</div>
+    	<div class="content"></div>
+
+		<script type="text/javascript">
+		W.use('./libs/js/p_index');
+		</script>
+    </body>
+</html>
