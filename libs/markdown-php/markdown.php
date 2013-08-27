@@ -43,23 +43,28 @@ if($arr[1]){
 <html>
     <head>
     	<meta charset='utf-8'>
-        <title>PHP Markdown Lib - Readme</title>
+        <title></title>
         <script src="/source/j/core.js"></script>
+        <script>W.css('../../source/c/reset.css','../../source/c/core.css','../../libs/css/markdown.css','../../libs/css/highlight.css');</script>
         <style>
-        body{width:980px;margin: 0 auto;}
+        .main_container{width:980px;margin: 0 auto;}
         </style>
     </head>
     <body>
+    	<div class="main_container">
 		<?php
 			# Put HTML content in the document
 			echo $html;
 		?>
+		</div>
 		<script type="text/javascript">
 		W(function(){
 			var base = W.data.base;
 			W.use([base+'../libs/js/highlight.js',base+'../libs/css/markdown.css'],function(){
 				hljs.tabReplace = '    ';
 	  			hljs.initHighlightingOnLoad();
+	  			$('title').html($('h1').html());
+	  			$('body').trigger('initDown');
 			});
 		});
 		</script>

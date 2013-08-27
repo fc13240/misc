@@ -26,10 +26,17 @@
 				}
 				loading && loading.show();
 				$.get(href,function(html){
-					html = $('<div>').html(html).find('pre code').each(function(){
-						$(this).html(hljs.highlightAuto($(this).html()).value);
-					}).end().children();//直接存储编译后内容
-
+					var tempDiv = $('<div>').get(0);
+					tempDiv.innerHTML = html;
+					tempDiv = $(tempDiv).find('pre code').each(function(){
+						$(this).html(hljs.highlightAuto($(this).html().replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<')).value);
+					}).end();//直接存储编译后内容
+					// html = $(tempDiv.innerTHML);
+					tempDiv.find('.example_js').each(function(){
+						var $this = $(this);
+						$('<div>').addClass('example_js').html($this.html()).appendTo($this.closest('.example_container'));
+					});
+					html = tempDiv.children();
 					cache[href] = html;
 					showHtml(html);
 					loading.hide();
