@@ -15,12 +15,12 @@
 	var EVENT_START_MOVE = 'startmove';
 	var EVENT_MOVE = 'move';
 	var EVENT_END_MOVE = 'endmove';
-
+	var isMoving = false;
 	function init(Event){
 		var $doc = $(document);
 		//forbade document select
 		$doc.on('selectstart',function(){
-			return false; 
+			return !isMoving; 
 		});
 		var defaultConfig = {
 			'container': $(window)//移动元素可移动的容器范围
@@ -69,7 +69,7 @@
 				var $container = $(config.container);
 				var isWin = data['isWin'] = $container.is($(window));
 				if(isWin){
-					$('body').addClass(DRAG_CONTAINER_CLASS);
+					// $('body').addClass(DRAG_CONTAINER_CLASS);
 				}else{
 					// 把子元素用新元素包起来，防止容器元素的float和position:relative冲突
 					var $tempContainer = $('<div>').addClass(DRAG_CONTAINER_CLASS);
@@ -106,15 +106,17 @@
 						if(e.which != 1){
 							return;
 						}
+						isMoving = true;
 						e.target = this;
 						_this.emit(STR_MOUSEDOWN,e);
-					}).on(STR_MOUSEUP,function(e){return;
+					}).on(STR_MOUSEUP,function(e){
+						isMoving = false;
 						e.target = this;
 						_this.emit(STR_MOUSEUP,e);
 					});
 				},
 				/*拖动*/
-				'drag': function(){
+				'drag': function(isFromLayout){
 					var _this = this;
 					var config = _this.config;
 					var data = _this.data;
@@ -139,8 +141,8 @@
 						var c_height = _height($container,isWin);
 						var m_height = _height($moveObj);
 						var m_width = _width($moveObj);
-						var x_down = e_mousedown.pageX;
-						var y_down = e_mousedown.pageY;
+						var x_down = e_mousedown.clientX;
+						var y_down = e_mousedown.clientY;
 						var m_offset = $moveObj.offset();
 						var m_left = m_offset.left;
 						var m_top = m_offset.top;
@@ -154,10 +156,10 @@
 							var c_left = c_offset.left;
 							var c_top = c_offset.top;
 						}
-						//鼠标移动事件
-						$doc.on(STR_MOUSEMOVE,function(e_mousemove){
-							var x_move = e_mousemove.pageX;
-							var y_move = e_mousemove.pageY;
+
+						var _resetPos = function(e){
+							var x_move = e.clientX;
+							var y_move = e.clientY;
 							var left = x_move - c_left - x_cha;
 							left < 0 && (left = 0);
 							left + m_width > c_width && (left = c_width - m_width);
@@ -166,15 +168,21 @@
 							top < 0 && (top = 0);
 							top + m_height > c_height && (top = c_height - m_height);
 							var _offset = {'left': left,'top': top};
-							e_mousemove.target = $this;//reset e.target
-							_this.emit(EVENT_MOVE,$.extend({'w':m_width,'h':m_height,'cw':c_width,'ch': c_height,'cl':c_left,'ct':c_top,'e':e_mousemove},_offset));
 							$moveObj.css(_offset);
+							return _offset;
+						}
+						!isFromLayout && _resetPos(e_mousedown);
+						//鼠标移动事件
+						$doc.on(STR_MOUSEMOVE,function(e_mousemove){
+							var _offset = _resetPos(e_mousemove);
+							e_mousemove.target = $this;//reset e.target
+							_this.emit(EVENT_MOVE,$.extend({'w':m_width,'h':m_height,'cw':c_width,'ch': c_height,'cl':c_left,'ct':c_top},e_mousemove,_offset));
 						});
 						//鼠标抬起时清除事件
 						$doc.on(STR_MOUSEUP,function(){
 							$doc.off(STR_MOUSEMOVE);
 							$doc.off(STR_MOUSEUP);
-							$moveObj.removeClass('on');
+							$moveObj.removeClass('on'); 
 							_this.emit(EVENT_END_MOVE);
 						});
 					});
@@ -182,6 +190,7 @@
 				}
 				/*布局*/
 				,'layout': function(){
+					var ALLOWANCE = 10;//把最佳位置时的容差
 					var _this = this;
 					var config = _this.config;
 					var data = _this.data;
@@ -207,8 +216,10 @@
 							}
 						},10);//防止操作过快，出现抖动现象
 					}
+					var currentMousePos = [];//当前鼠标的位置
 					//开始拖动
 					_this.on(EVENT_START_MOVE,function(e){
+						currentMousePos = [e.pageX,e.pageY];
 						currentMoveHandle && currentMoveHandle.stop(true,true);
 						var dragHandle = $(e.target);;
 						_resetIndex(dragHandle);
@@ -219,7 +230,14 @@
 					})
 					//拖动时，点位符处理
 					.on(EVENT_MOVE,function(data){
-						var dragHandle = $(data.e.target);
+						var x = data.pageX,y = data.pageY;
+						var MIN_SIZE = 1;//判断鼠标移动方向容差
+						var isToLeft = x < currentMousePos[0];//鼠标是否向左
+
+						var isToTop = y < currentMousePos[1];//鼠标是否向上
+						// console.log(isToTop,'=',x,'<',currentMousePos[0],isToLeft,'=',y,'<',currentMousePos[1]);
+						currentMousePos = [x,y];
+						var dragHandle = $(data.target);
 						_resetIndex(dragHandle);
 						var left = data.left;
 						var top = data.top;
@@ -257,14 +275,13 @@
 								}
 							}
 						}
-						
 						// return;
 						//if not suitable,insertAfter the last child of layout container or appendTo the layout container						 
 						var layoutContainer = _getLayoutContainer();
 
 						var first = $(layoutContainer.splice(0,1));
 						var fn = function($obj){
-							var lc_offset = $obj.offset();
+							var lc_offset = $obj.position();//得到相对容器的位置
 							var lc_left = lc_offset.left;
 							var lc_top = lc_offset.top;
 							var lc_width = _width($obj);
@@ -288,7 +305,7 @@
 							arr = fn($this);
 							//在右方
 							if(arr[2] > min_left_container){
-								if(arr[0] < min_left){
+								if(arr[0] < min_left || (!isToLeft && left < ALLOWANCE)){
 									min_left = arr[0];
 									min_top = arr[1];
 									closestContainer = $this;
@@ -297,7 +314,7 @@
 							}
 							//在下方
 							if(arr[3] > min_top_container){
-								if(arr[1] < min_top){
+								if(arr[1] < min_top && !(isToTop && top < ALLOWANCE)){
 									min_left = arr[0];
 									min_top = arr[1];
 									closestContainer = $this;
@@ -345,7 +362,7 @@
 						}		
 					});
 					//开启拖动
-					return _this.drag.call(_this);
+					return _this.drag.call(_this,true);
 				}
 				/*临时添加布局*/
 				,'addLayout': function($layoutContainer){
