@@ -69,7 +69,7 @@
 				var $container = $(config.container);
 				var isWin = data['isWin'] = $container.is($(window));
 				if(isWin){
-					// $('body').addClass(DRAG_CONTAINER_CLASS);
+					$('body').addClass(DRAG_CONTAINER_CLASS);
 				}else{
 					// 把子元素用新元素包起来，防止容器元素的float和position:relative冲突
 					var $tempContainer = $('<div>').addClass(DRAG_CONTAINER_CLASS);
@@ -94,6 +94,7 @@
 							$this.addClass(MOUSEOVER_CLASS);
 						}
 					}).on(STR_MOUSELEAVE,function(e){
+						isMoving = false;
 						var _t = this;
 						e.target = _t;
 						_this.emit(STR_MOUSELEAVE,e);
@@ -122,6 +123,7 @@
 					var data = _this.data;
 
 					var isWin = data['isWin'];
+					var $win = $(window);
 					var $container = data['container'];
 					
 					var $dragHandle = data['dragHandle'];
@@ -134,8 +136,7 @@
 							return;
 						}
 						_this.emit(EVENT_START_MOVE,e_mousedown);
-						$moveHandle.addClass(DRAG_MOVE_CLASS);
-						var $moveObj = $moveHandle.addClass(DRAG_MOVE_ON_CLASS);
+						var $moveObj = $moveHandle;
 
 						var c_width = _width($container,isWin);
 						var c_height = _height($container,isWin);
@@ -160,31 +161,40 @@
 						var _resetPos = function(e){
 							var x_move = e.clientX;
 							var y_move = e.clientY;
+							var min_left = min_top = 0;
+							if(isWin){
+								min_left = $win.scrollLeft(),
+								min_top = $win.scrollTop();
+							}
 							var left = x_move - c_left - x_cha;
-							left < 0 && (left = 0);
-							left + m_width > c_width && (left = c_width - m_width);
+							left < min_left && (left = min_left);
 
 							var top = y_move - c_top - y_cha;
-							top < 0 && (top = 0);
-							top + m_height > c_height && (top = c_height - m_height);
+							top < min_top && (top = min_top);
+
+							left + m_width - min_left > c_width && (left = c_width - m_width + min_left);
+							top + m_height - min_top > c_height && (top = c_height - m_height + min_top);
+
 							var _offset = {'left': left,'top': top};
 							$moveObj.css(_offset);
 							return _offset;
 						}
 						!isFromLayout && _resetPos(e_mousedown);
+						$moveHandle.addClass(DRAG_MOVE_CLASS).addClass(DRAG_MOVE_ON_CLASS);
 						//鼠标移动事件
-						$doc.on(STR_MOUSEMOVE,function(e_mousemove){
+						$doc.on(STR_MOUSEMOVE,function(e_mousemove){							
 							var _offset = _resetPos(e_mousemove);
 							e_mousemove.target = $this;//reset e.target
 							_this.emit(EVENT_MOVE,$.extend({'w':m_width,'h':m_height,'cw':c_width,'ch': c_height,'cl':c_left,'ct':c_top},e_mousemove,_offset));
 						});
-						//鼠标抬起时清除事件
-						$doc.on(STR_MOUSEUP,function(){
+						var fn_clear = function(){
 							$doc.off(STR_MOUSEMOVE);
 							$doc.off(STR_MOUSEUP);
 							$moveObj.removeClass('on'); 
 							_this.emit(EVENT_END_MOVE);
-						});
+						}
+						//鼠标抬起时清除事件
+						$doc.on(STR_MOUSEUP,fn_clear).on(STR_MOUSELEAVE,fn_clear);
 					});
 					return _this;
 				}
@@ -235,7 +245,6 @@
 						var isToLeft = x < currentMousePos[0];//鼠标是否向左
 
 						var isToTop = y < currentMousePos[1];//鼠标是否向上
-						// console.log(isToTop,'=',x,'<',currentMousePos[0],isToLeft,'=',y,'<',currentMousePos[1]);
 						currentMousePos = [x,y];
 						var dragHandle = $(data.target);
 						_resetIndex(dragHandle);
