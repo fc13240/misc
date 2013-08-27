@@ -53,6 +53,10 @@
 		}
 		var links = $('.ajax-link');
 		bindLinkEvent(links);
-		links.filter('.init').click();
+		var initLinks = links.filter('.init');
+		if(!initLinks.length){
+			initLinks = links;
+		}
+		initLinks.first().click();
 	});
 })();

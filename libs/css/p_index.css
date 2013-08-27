@@ -49,6 +49,7 @@ ul{
 .content{
 	padding-left: 160px;
 	padding-right: 20px;
+	padding-bottom: 60px;/*让内容最底下留白*/
 	max-width: 90%; 
 	min-width: 800px;
 }

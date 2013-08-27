@@ -73,7 +73,7 @@
     <style class="example_css">
     .layout-vertical{
 		width: 270px;
-		/*margin: 20px;*/
+		margin: 20px;
 		border: 1px dotted #ccc;
 	}
 	.layout-vertical p{

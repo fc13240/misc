@@ -1,9 +1,14 @@
 # 拖拽模块
 
+> 依赖[`m_event.js`](#/docs/modules/event.md){.ajax-link .md}
+
 　　此模块继承自`m_event.js(事件模块)`，所以此模块有事件模块的基本功能。此模块主要实现两个功能 **拖拽功能** ,
  **拖拽布局功能** 。用法需要实例化成对象并传相应参数，如：`new Drag(options)`
 
-options 要有以下选项
+**要使用布局时，为美观，样式表应重写`.drag_placeholder`**
+> 可参考[layout示例](#/examples/drag/layout.md){.ajax-link .md}
+
+options 可有以下选项
 >```
 container {Object} //移动元素可移动的容器范围(默认为$(window))
 dragHandle {Object} //可以拖动的元素，即响应mousedown事件

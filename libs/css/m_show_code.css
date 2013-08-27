@@ -7,6 +7,7 @@
 	padding:3px 10px;
 	background: white;
 	margin: 0 3px;
+	font-size: 12px;
 }
 .example_nav a:hover,
 .example_nav a.on{

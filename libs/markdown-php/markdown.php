@@ -45,9 +45,12 @@ if($arr[1]){
     	<meta charset='utf-8'>
         <title></title>
         <script src="/source/j/core.js"></script>
-        <script>W.css('../../source/c/reset.css','../../source/c/core.css','../../libs/css/markdown.css','../../libs/css/highlight.css');</script>
+        <script>(function(){
+        	var base = W.data.base;
+        	W.css(base+'c/reset.css',base+'c/core.css',base+'../libs/css/markdown.css',base+'../libs/css/highlight.css');
+        })();</script>
         <style>
-        .main_container{width:980px;margin: 0 auto;}
+        .main_container{width:980px;margin: 0 auto;border: 1px solid white;/*防止子元素margin影响*/}
         </style>
     </head>
     <body>

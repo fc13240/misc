@@ -94,7 +94,6 @@
 							$this.addClass(MOUSEOVER_CLASS);
 						}
 					}).on(STR_MOUSELEAVE,function(e){
-						isMoving = false;
 						var _t = this;
 						e.target = _t;
 						_this.emit(STR_MOUSELEAVE,e);
@@ -107,11 +106,9 @@
 						if(e.which != 1){
 							return;
 						}
-						isMoving = true;
 						e.target = this;
 						_this.emit(STR_MOUSEDOWN,e);
 					}).on(STR_MOUSEUP,function(e){
-						isMoving = false;
 						e.target = this;
 						_this.emit(STR_MOUSEUP,e);
 					});
@@ -135,6 +132,7 @@
 						if(_isnotLayout($moveHandle)){
 							return;
 						}
+						isMoving = true;
 						_this.emit(EVENT_START_MOVE,e_mousedown);
 						var $moveObj = $moveHandle;
 
@@ -190,7 +188,8 @@
 						var fn_clear = function(){
 							$doc.off(STR_MOUSEMOVE);
 							$doc.off(STR_MOUSEUP);
-							$moveObj.removeClass('on'); 
+							$moveObj.removeClass('on');
+							isMoving = false;
 							_this.emit(EVENT_END_MOVE);
 						}
 						//鼠标抬起时清除事件

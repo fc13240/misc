@@ -10,7 +10,43 @@
 			{
 				'name': 'docs',
 				'des': '文档',
-				'sub': []
+				'sub': [{
+					'name': 'modules',
+					'des': '模块文档',
+					'sub': [
+						{
+							'name': 'drag.md',
+							'des': '拖拽模块',
+							'isFolder': false
+						}
+						,{
+							'name': 'event.md',
+							'des': '事件模块',
+							'isFolder': false
+						},
+						{
+							'name': 'player.md',
+							'des': '播放器模块',
+							'isFolder': false
+						}
+					]
+				},{
+					'name': 'index.md',
+					'des': '前言',
+					'isFolder': false
+				},{
+					'name': 'modules.md',
+					'des': '模块',
+					'isFolder': false
+				},{
+					'name': 'standard.md',
+					'des': '前端规范',
+					'isFolder': false
+				},{
+					'name': 'directory.md',
+					'des': '目录及文件介绍',
+					'isFolder': false
+				}]
 			},
 			{
 				'name': 'examples',
@@ -54,6 +90,32 @@
 						]
 					},
 					{
+						'name': 'drag',
+						'des': '拖拽模块示例',
+						'sub': [
+							{
+								'name': 'drag.md',
+								'des': '拖动方法示例',
+								'isFolder': false
+							},
+							{
+								'name': 'layout.md',
+								'des': '布局方法示例',
+								'isFolder': false
+							}
+						]
+					},{
+						'name': 'example-show-code',
+						'des': '示例代码测试',
+						'sub': [
+							{
+								'name': 'index.html',
+								'des': '示例代码',
+								'isFolder': false
+							}
+						]
+					},
+					{
 						'name': 'highlight.html',
 						'des': 'highlight用法示例',
 						'isFolder': false
@@ -73,12 +135,32 @@
 			{
 				'name': 'shell',
 				'des': 'shell脚本',
-				'sub': []
+				'sub': [{
+					'name': 'release-misc.sh',
+					'des': '发布网站资源',
+					'isFolder': false
+				},{
+					'name': 'release-web.sh',
+					'des': '发布前端资源',
+					'isFolder': false
+				}]
 			},
 			{
 				'name': 'source',
 				'des': '前端资源文件',
-				'sub': []
+				'sub': [{
+					'name': 'c',
+					'des': 'css',
+					'sub': []
+				},{
+					'name': 'j',
+					'des': 'javascript',
+					'sub': []
+				},{
+					'name': 'i',
+					'des': 'image',
+					'sub': []
+				}]
 			},
 			{
 				'name': 'tests',
