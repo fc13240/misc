@@ -187,7 +187,11 @@
 				return;
 			}
 			nodeArr.sort(function(a,b){
-				return !a.isFolder?-1: a.name.localeCompare(b.name);
+				if(a.isFolder == b.isFolder){
+					return a.name.localeCompare(b.name);
+				}else{
+					return a.isFolder ? 1: -1;
+				}
 			});
 			for(var i = 0,j=nodeArr.length;i<j;i++){
 				var item = nodeArr[i];
@@ -203,8 +207,10 @@
 					isFolder = true;
 				}
 				var cHref = pHref+item['name']+(isFolder && pid != -1?'/':'');
-				conf['url'] = cHref;
-				conf['target'] = '_blank';
+				if(!isFolder){
+					conf['url'] = cHref;
+					conf['target'] = '_blank';
+				}
 				var id = addItem(conf,pid);//root node
 				parseData(item['sub'],id,cHref);
 			}
