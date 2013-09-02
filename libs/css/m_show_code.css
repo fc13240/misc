@@ -1,4 +1,4 @@
-.example_nav{}
+.example_nav{padding-left:10px;}
 .example_nav a{
 	display: inline-block;
 	border: 1px solid #ccc;

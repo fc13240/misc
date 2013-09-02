@@ -989,14 +989,6 @@ seajs.config = function(configData) {
   
   /*得到版本号后的回调*/
   global.__coreCallback = function(frontVersion){
-    W.use = _seajs.use;
-    var tempArgs;
-    while((tempArgs = useFns.shift())){
-      W.use.apply(null,tempArgs);
-    }
-    delete useFns;
-    global.__coreCallback = null;//清除回调
-
     _seajs.config({
       base: basePath, //配置静态资源的根目录
       map: [
@@ -1007,6 +999,13 @@ seajs.config = function(configData) {
       },
       charset: 'utf-8'
     });
+    W.use = _seajs.use;
+    var tempArgs;
+    while((tempArgs = useFns.shift())){
+      W.use.apply(null,tempArgs);
+    }
+    delete useFns;
+    global.__coreCallback = null;//清除回调
   }
   W.data = {'base': basePath};
   global.W = W;
