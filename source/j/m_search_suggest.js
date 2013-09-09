@@ -4,7 +4,7 @@
 		var defaultOptions = {
 			'isBindFocus': true	//是否绑定得到和失去焦点事件
 			,'textBox': null	//文本框对像
-			,'url': 'http://localhost:8010/search'			//数据来源
+			,'url': 'http://toy1.weather.com.cn/search'			//数据来源
 			,'key': 'cityname'	//关键词名称
 			,'cbName': 'callback' //回调函数名
 			,'onSelect': function(){} //建议项选中的回调函数
