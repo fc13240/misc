@@ -208,10 +208,6 @@
 		playerProp._loadData = function(href){
 			var _this = this;
 			_this.loading();
-			// $.getScript(href,function(){
-			// 	console.log(arguments);
-			// 	_this.loading.stop();
-			// });
 			$.ajax(href,{
 				'dataType':'script',
 				'cache': true,
@@ -541,7 +537,7 @@
 			var selectData = imgData[selectIndex];
 			_this.loading();
 			var img = new Image();
-			var _loaded = function(src,width){console.log(_this.watingImg , src);
+			var _loaded = function(src,width){
 				if(_this.watingImg == src){
 					_this.loading.stop();
 					var $img = _this.player.find('.img>img');
@@ -549,7 +545,7 @@
 						var imgContainer = _this.player.find('.img');
 						$img = $('<img>').appendTo(imgContainer);
 					}
-					$img.attr('src',src);console.log($img.parent().width(),width);
+					$img.attr('src',src);
 					$img.attr('width',Math.min($img.parent().width(),width))
 					$img.attr('title',selectIndex);
 					data.index = selectIndex;

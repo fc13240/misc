@@ -3,6 +3,7 @@
 	define(function(require){
 		require('./highlight.js');
 		require('../css/markdown.css');
+		var m_show_code = require('./m_show_code.js');
 		var loading,contentContainer;
 		W(function(){
 			contentContainer = $('.content');
@@ -40,6 +41,7 @@
 						html = tempDiv.children();
 						cache[href] = html;
 						showHtml(html);
+						m_show_code();
 						loading.hide();
 					});
 				}).each(function(){

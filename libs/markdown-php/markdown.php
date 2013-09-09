@@ -35,6 +35,7 @@ if($arr[1]){
 	}
 	if($param['ajax']){
 		echo $html;
+		echo "<script>W.use(W.data.base+'../../libs/js/m_show_code');</script>";
 		exit();
 	}
 }

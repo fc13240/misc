@@ -1,6 +1,6 @@
 (function(){
 	var type = ['html','css','js'];
-	W(function(){
+	var initExample = (function(){
 		var codePre = [];
 		var $containers = $('.example_container').each(function(){
 			var container = $(this);
@@ -62,5 +62,9 @@
 				$code.html(code);
 			})
 		});
+	});
+	var base = W.data.base;
+	define(function(require){
+		return initExample;
 	});
 })();

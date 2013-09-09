@@ -1,4 +1,6 @@
 .suggest_list{
+    list-style: none;
+    display: none;
     background-color: white;
     border: 1px solid #C2D0E7;
     margin: 0;

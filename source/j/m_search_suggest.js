@@ -2,7 +2,7 @@
 (function(){
 	function init(){
 		var defaultOptions = {
-			'bindEvent': true	//是否绑定得到和失去焦点事件
+			'isBindFocus': true	//是否绑定得到和失去焦点事件
 			,'textBox': null	//文本框对像
 			,'url': 'http://localhost:8010/search'			//数据来源
 			,'key': 'cityname'	//关键词名称
@@ -29,7 +29,7 @@
 			var _this = this;
 			var options = _this.options;
 			var $textBox = options.textBox;
-			if(options.bindEvent){
+			if(options.isBindFocus){
 				$textBox.focus(function(){
 					_this.show();
 				});
@@ -39,7 +39,7 @@
 			url += (url.indexOf('?')>-1?'&':'?') + options.key + '=';
 			var currentIndex = -1;
 			$textBox.keyup(function(e){
-				_this._tryHide();
+				// _this._tryHide();
 				var keyCode = e.keyCode;
 				var listItems = suggestList.children();
 				var len = listItems.length;
@@ -83,10 +83,12 @@
 						}
 					});
 				}
+			}).blur(function(){
+				_this._tryHide();
 			});
 			var selectCallback = options.onSelect;
 			var suggestList = $('<ul>').addClass(CLASS_SUGGEST_LIST).delegate('li','mouseenter',function(){
-				_this._tryHide();
+				// _this._tryHide();
 				suggestList.find(CLASS_ON_JQ).removeClass(CLASS_ON);
 				$(this).addClass(CLASS_ON);
 			}).delegate('li','mouseleave',function(){
@@ -94,13 +96,13 @@
 				currentIndex = $this.index();
 				$this.removeClass(CLASS_ON);
 			}).delegate('li','click',function(){
-				selectCallback($(this).data('d'));
 				_this.hide();
+				selectCallback($(this).data('d'));
 			}).mouseenter(function(){
 				_this._clTT();
 			}).mouseleave(function(){
 				_this._tryHide();
-			}).appendTo($textBox.parent());
+			}).appendTo($('body'));// 防止css:position对下拉选项的影响
 
 			$textBox.data(DATA_LIST_NAME,suggestList);
 			var checkClass = '.'+CLASS_SUGGEST_LIST;
@@ -115,7 +117,7 @@
 		suggestProp.resetPos = function(){
 			var $textBox = this.options.textBox;
 			var suggestList = $textBox.data(DATA_LIST_NAME);
-			var pos = $textBox.position();
+			var pos = $textBox.offset();
 			var textBox = $textBox.get(0);
 			var width = textBox.offsetWidth;
 			var heigth = textBox.offsetHeight;
@@ -137,7 +139,7 @@
 			_this._clTT();
 			d.t = setTimeout(function(){
 				_this.hide();
-			},3000);
+			},1500);
 		}
 		var REG_LETTER = /^\w+$/;
 		/*渲染数据*/
@@ -204,8 +206,11 @@
 		suggestProp.show = function(){
 			var _this = this;
 			_this.resetPos();
-			_this.options.textBox.data(DATA_LIST_NAME).show();
-			_this._tryHide();
+			var suggestList = _this.options.textBox.data(DATA_LIST_NAME);
+			if(suggestList.children().length > 0){
+				suggestList.show();
+			}
+			// _this._tryHide();
 		}
 		suggestProp.hide = function(){
 			var _this = this;

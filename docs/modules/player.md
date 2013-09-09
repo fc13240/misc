@@ -57,4 +57,3 @@ showsize {String} //显示的数据键名
     });
     </script>
 </div>
-<script>W.use(W.data.base+'../../libs/js/m_show_code');</script>
