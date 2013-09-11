@@ -14,7 +14,8 @@
     height: 28px;
     line-height: 28px;
     text-indent: 10px;
-    padding-right: 10px;
+   /* padding-right: 10px;*/
+   width: 100%;
 }
 /*.suggest_list li:hover,*/
 .suggest_list li.on{

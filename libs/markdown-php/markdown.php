@@ -52,6 +52,17 @@ if($arr[1]){
         })();</script>
         <style>
         .main_container{width:980px;margin: 0 auto;border: 1px solid white;/*防止子元素margin影响*/}
+        /* rewrite markdown { */
+		pre{
+			margin: 10px 0;
+		}
+		ol{
+			list-style-type: decimal;
+		}
+		ul{
+			list-style-type: disc;
+		}
+		/* rewrite markdown } */
         </style>
     </head>
     <body>
@@ -62,15 +73,14 @@ if($arr[1]){
 		?>
 		</div>
 		<script type="text/javascript">
-		W(function(){
+		// W(function(){
 			var base = W.data.base;
-			W.use([base+'../libs/js/highlight.js',base+'../libs/css/markdown.css'],function(){
+			W.use(['jquery',base+'../libs/js/highlight.js',base+'../libs/js/ie.js',base+'../libs/css/markdown.css'],function(){
 				hljs.tabReplace = '    ';
 	  			hljs.initHighlightingOnLoad();
 	  			$('title').html($('h1').html());
-	  			$('body').trigger('initDown');
 			});
-		});
+		// });
 		</script>
     </body>
 </html>

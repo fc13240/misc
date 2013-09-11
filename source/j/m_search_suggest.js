@@ -4,7 +4,7 @@
 		var defaultOptions = {
 			'isBindFocus': true	//是否绑定得到和失去焦点事件
 			,'textBox': null	//文本框对像
-			,'url': 'http://toy1.weather.com.cn/search'			//数据来源
+			,'url': 'http://localhost:8010/search'			//数据来源
 			,'key': 'cityname'	//关键词名称
 			,'cbName': 'callback' //回调函数名
 			,'onSelect': function(){} //建议项选中的回调函数
@@ -121,8 +121,8 @@
 			var textBox = $textBox.get(0);
 			var width = textBox.offsetWidth;
 			var heigth = textBox.offsetHeight;
-			var lb = parseFloat(suggestList.css('border-left'));
-			var rb = parseFloat(suggestList.css('border-right'));
+			var lb = parseFloat(suggestList.css('border-left')) || 1;
+			var rb = parseFloat(suggestList.css('border-right')) || 1;
 			suggestList.css({
 				'left': pos.left
 				,'top': pos.top + heigth
