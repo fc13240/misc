@@ -40,7 +40,7 @@ echo $NEWLINE;
 # replace @VERSION
 echo "<b>5. replace @VERSION -> $CURRENT_TIME</b>";
 echo '<pre>';
-sed -i "s/@VERSION/$CURRENT_TIME/" $WORK_DIR/source/j/version.js
+sed -i "s/@VERSION[^'\"]*/$CURRENT_TIME/" $WORK_DIR/source/j/version.js
 echo '</pre>';
 echo $NEWLINE;
 

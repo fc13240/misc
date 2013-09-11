@@ -1,1 +1,1 @@
-__coreCallback('@VERSION9');
+__coreCallback("@VERSION");
