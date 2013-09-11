@@ -29,7 +29,8 @@ body{
     W.use('j/m_search_suggest',function(Suggest){
         var $textBox = $('#text_simple');
         new Suggest({
-            'textBox': $textBox
+            'url': 'http://toy1.weather.com.cn/search'
+            ,'textBox': $textBox
             ,'bindEvent': false
             ,'onSelect': function(data){
                 if(data.length == 20){
@@ -71,11 +72,15 @@ body{
             }
         });
         new Suggest({
-            'textBox': $textBox
+            'url': 'http://toy1.weather.com.cn/search'
+            ,'key': 'cityname'
+            ,'cbName': 'callback'
+            ,'textBox': $textBox
             ,'bindEvent': false
             ,'onSelect': function(data){
                 $textBox.val(data[2]+data[0]);
             }
+            ,'maxnum': 6
         });
     });
     </script>
