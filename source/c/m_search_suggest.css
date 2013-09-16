@@ -8,6 +8,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 101;
 }
 .suggest_list li{
     font-size: 14px;
@@ -16,6 +17,7 @@
     text-indent: 10px;
    /* padding-right: 10px;*/
    width: 100%;
+   overflow: hidden;
 }
 /*.suggest_list li:hover,*/
 .suggest_list li.on{

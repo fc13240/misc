@@ -14,12 +14,30 @@
     		<a href="#/docs/standard.md" class="ajax-link md">前端规范</a>
     		<a href="#/docs/directory.md" class="ajax-link md">目录及文件介绍</a>
     		<a href="#/docs/modules.md" class="ajax-link md ">模块</a>
-            <a href="/release.php" target="_blank">发布资源</a>
+            <a href="/release.php" class="last" target="_blank">发布资源</a>
     	</div>
-    	<div class="content"></div>
+        <div class="content"></div>
 
-		<script type="text/javascript">
-		W.use('./libs/js/p_index');
-		</script>
+        <script type="text/javascript">
+        W(function(){
+            if($.browser.msie && $.browser.version < 9){
+                // $('.content').html('<p style="background:#990000;color:white;margin-top:20px;padding:10px;">不支持IE9以下版本</p>');
+                define('/libs/js/highlight.js',[],function(){
+                    hljs = {
+                        highlightAuto: function(html){
+                            return {
+                                value: html
+                            }
+                        }
+                    }
+                })
+                
+            }
+// 
+                W.use('./libs/js/p_index');
+            
+        });
+        
+        </script>
     </body>
 </html>

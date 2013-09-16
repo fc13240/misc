@@ -218,7 +218,10 @@
 		parseData(treeData,-1,'');
 		W.use('jquery',function(){
 			tree.draw(function(rootHtml){
-				$('#tree-container').append($(rootHtml));
+				var container = $('#tree-container');
+				if(container.html() == ''){
+					container.append($(rootHtml));
+				}
 			})
 		});
 	});

@@ -45,26 +45,25 @@
 				}
 			})
 		});
-		var base = W.data.base;
-		W.use([base+'../libs/js/highlight.js',base+'../libs/css/m_show_code.css'],function(){
-			$.each(codePre,function(i,v){
-				var $code = v.find('code');
-				var code = $code.html().replace(/^[\n\r]+|[\s]+$/g,'');
-				var m = code.match(/^ {4,}/);//4个空格
-				// 消除pre对格式影响
-				if(m){
-					if(m[0].length % 2 == 0){
-						var reg = new RegExp('^'+m[0],'gm');
-						code = code.replace(reg,'');
-					}
+		$.each(codePre,function(i,v){
+			var $code = v.find('code');
+			var code = $code.html().replace(/^[\n\r]+|[\s]+$/g,'');
+			var m = code.match(/^ {4,}/);//4个空格
+			// 消除pre对格式影响
+			if(m){
+				if(m[0].length % 2 == 0){
+					var reg = new RegExp('^'+m[0],'gm');
+					code = code.replace(reg,'');
 				}
-				var code = hljs.highlightAuto(code.replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<')).value;
-				$code.html(code);
-			})
-		});
+			}
+			var code = hljs.highlightAuto(code.replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<')).value;
+			$code.html(code);
+		})
 	});
 	var base = W.data.base;
 	define(function(require){
+		require('./highlight.js');
+		require('../css/m_show_code.css');
 		return initExample;
 	});
 })();
