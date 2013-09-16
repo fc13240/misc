@@ -22,3 +22,19 @@
     
     </script>
 </div>
+<div class="example_container">
+    <style class="example_css">
+    .adposter_6116{
+    	width: 100%;
+    	height: 90px;
+    	margin-top:20px;
+    }
+    </style>
+    <div class="example_html">
+       	<div class="adposter_6116"> 
+		<script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%27text%2Fjavascript%27%3E%0D%0ATQ_FillSlot%28%2710000_001_02%27%29%3B%0D%0A%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6116&pos=0&ch=9993&act=1389&order=641&contract=182&host=153&ck=18474","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script>
+		</div>
+    </div>
+    <script class="example_js">
+    </script>
+</div>
