@@ -1,6 +1,5 @@
 # 拖拽模块——拖动
 ### 1. 以整个浏览器为容器 
-> **<font color="red">目前不支持body设置宽度及position:relative的页面</font>**
 
 <div class="example_container">
     <style class="example_css">
