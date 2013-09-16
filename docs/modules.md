@@ -12,3 +12,6 @@
 
 ### [文本框搜索提示模块](#/docs/modules/search_suggest.md){.ajax-link .md}
 此模块提供在文本框输入信息提示结果的统一的方法
+
+### [广告异步解决方案](#/docs/modules/ad.md){.ajax-link .md}
+针对网站广告严重堵塞页面的解决方案

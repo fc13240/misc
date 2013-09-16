@@ -19,6 +19,9 @@
         <div class="content"></div>
 
         <script type="text/javascript">
+        document.write = document.writeln = function(str){
+            document.body.innerHTML += str;
+        }
         W(function(){
             if($.browser.msie && $.browser.version < 9){
                 // $('.content').html('<p style="background:#990000;color:white;margin-top:20px;padding:10px;">不支持IE9以下版本</p>');
@@ -33,11 +36,8 @@
                 })
                 
             }
-// 
-                W.use('./libs/js/p_index');
-            
+            W.use('./libs/js/p_index');
         });
-        
         </script>
     </body>
 </html>

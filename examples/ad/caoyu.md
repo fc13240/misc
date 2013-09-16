@@ -1,10 +1,15 @@
-# caoyu广告异步解决方案
-<script src="../../source/j/core.js"></script>
-<script src="../../source/j/ad/reset.js"></script>
+<script>
+W.js('../../source/j/ad/caoyu.js');
+</script>
+<style>
+.mt20{
+	margin-top: 20px;
+}
+</style>
 <div class="example_container">
     <style class="example_css">
     .adposter_6216{
-    	width: 100%;
+    	width: 99%;
     	height: 90px;
     }
     .async-ad{
@@ -22,18 +27,47 @@
     
     </script>
 </div>
-<div class="example_container">
+<div class="example_container mt20">
     <style class="example_css">
     .adposter_6116{
-    	width: 100%;
+    	width: 99%;
     	height: 90px;
-    	margin-top:20px;
     }
     </style>
     <div class="example_html">
        	<div class="adposter_6116"> 
-		<script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%27text%2Fjavascript%27%3E%0D%0ATQ_FillSlot%28%2710000_001_02%27%29%3B%0D%0A%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6116&pos=0&ch=9993&act=1389&order=641&contract=182&host=153&ck=18474","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script>
+		<script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"PIC","files":[{"file":"http:\/\/poster.weather.com.cn\/p_files\/8\/4308.jpg","link":"http:\/\/poster1.weather.com.cn\/r.php?url=http%3A%2F%2F3g%2Eweather%2Ecom%2Ecn%2Fwzfw%2Fzgtqtpd%2Fpublic%2Eshtml&p=6087&pos=0&ch=9991&ck=16078","IsFlash":"img"}],"code":"","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"650","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6087&pos=0&ch=9991&act=&order=&contract=&host=&ck=16078","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
 		</div>
+    </div>
+    <script class="example_js">
+    </script>
+</div>
+<div class="example_container mt20">
+    <style class="example_css">
+    .adposter_6116{
+    	width: 99%;
+    	height: 90px;
+    }
+    </style>
+    <div class="example_html">
+       	<div class="adposter_6116"> 
+		<script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_002_04%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"650","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6088&pos=0&ch=9991&act=1233&order=641&contract=182&host=153&ck=18288","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+		</div>
+    </div>
+    <script class="example_js">
+    </script>
+</div>
+<div class="example_container mt20">
+    <style class="example_css">
+    #after-ad{
+    	background: #990000;
+    	color: white;
+    	font-size: 14px;
+    	padding: 10px;
+    }
+    </style>
+    <div class="example_html">
+       	<div id="after-ad">我是在几个广告之后，你应该很快看到我，我现在不受广告的影响了（广告不会堵塞我显示了,哈哈。。。）</div>
     </div>
     <script class="example_js">
     </script>

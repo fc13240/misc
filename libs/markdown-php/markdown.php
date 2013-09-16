@@ -35,7 +35,7 @@ if($arr[1]){
 	}
 	if($param['ajax']){
 		echo $html;
-		echo "<script>W.use('/libs/js/m_show_code');</script>";
+		
 		exit();
 	}
 }
@@ -75,11 +75,17 @@ if($arr[1]){
 		<script type="text/javascript">
 		// W(function(){
 			var base = W.data.base;
-			W.use(['jquery',base+'../libs/js/highlight.js',base+'../libs/js/ie.js',base+'../libs/css/markdown.css'],function(){
+			W.use(['jquery','/libs/js/highlight.js','/libs/css/markdown.css'],function(){
 				hljs.tabReplace = '    ';
 	  			hljs.initHighlightingOnLoad();
 	  			$('title').html($('h1').html());
+
 			});
+			W.use('/libs/js/m_show_code',function(m_show_code){
+				W(function(){
+					m_show_code();
+				});
+            });
 		// });
 		</script>
     </body>

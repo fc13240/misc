@@ -955,6 +955,8 @@ seajs.config = function(configData) {
   W.use = function(){
     useFns.push(arguments);
   }
+  var doc = document;
+  /*同步写CSS*/
   W.css = (function() {
     var cssDefaultConfig = {
       'media': 'all'
@@ -975,18 +977,23 @@ seajs.config = function(configData) {
         var href = _seajs.resolve(args[i]);
         if (!cssCache[href]) {
           cssCache[href] = true;
-          document.writeln('<link href="' + href + '" media="' + config.media + '" rel="stylesheet" type="text/css" />');
+          doc.writeln('<link href="' + href + '" media="' + config.media + '" rel="stylesheet" type="text/css" />');
         }
       }
     }
   })();
+  /*同步写JS*/
+  W.js = function (src){
+    doc.writeln('<script src="'+src+'?'+data.v+'"></script>');
+  }
   W.config = _seajs.config;
-
   var _resolve = _seajs.resolve;
-  var coreJsPath = _resolve(document.getElementsByTagName('script')[0].src,location.href);//得到core.js的全路径
-  document.writeln('<script src="'+_resolve('./version.js',coreJsPath)+'?'+(new Date().getTime())+'"></script>');//得到版本号并回调处理
+  var scripts = doc.getElementsByTagName('script');
+  var coreJsPath = _resolve(scripts[scripts.length-1].src,location.href);//得到core.js的全路径，防止core.js前面引入script
   var basePath = _resolve('../',coreJsPath).replace('/.js','/');
-  
+  var data = W.data = {'base': basePath,'v':Math.random()};
+  // doc.writeln('<script src="'+_resolve('./version.js',coreJsPath)+'?'+(new Date().getTime())+'"></script>');//得到版本号并回调处理
+  W.js(_resolve('./version.js',coreJsPath));
   /*得到版本号后的回调*/
   global.__coreCallback = function(frontVersion){
     _seajs.config({
@@ -1006,7 +1013,7 @@ seajs.config = function(configData) {
     }
     delete useFns;
     global.__coreCallback = null;//清除回调
+    data.v = frontVersion;
   }
-  W.data = {'base': basePath};
   global.W = W;
 })(this);

@@ -11,7 +11,7 @@
 			$.each(type,function(i,v){
 				var item = container.find('.example_'+v);
 				if(item.length > 0 && item.html().replace(/^\s+|\s+$/,'').length > 0/*过滤内容为空的项*/){
-					var html = item.html();
+					var html = item.html().replace(/<script>.*?<\/script>/,'');//防止同步写的script对页面影响
 					var codeC = $('<code>').html(html);
 					var preC = $('<pre class="code_'+v+'"></pre>').html(codeC).appendTo(container);
 					codePre.push(preC);
