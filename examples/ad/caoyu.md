@@ -8,8 +8,9 @@
     	height: 90px;
     }
     .async-ad{
-    	background:url(http://61.4.185.115/m2/i/index/loading.gif) center center no-repeat;
+    	background:url(http://www.weather.com.cn/m2/i/index/loading.gif) center center no-repeat;
     	background-color: #eee;
+    	font-size: 0;
     }
     </style>
     <div class="example_html">

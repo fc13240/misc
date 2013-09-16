@@ -40,6 +40,7 @@
 								.attr('width',containerParaent.width())
 								.attr('height',containerParaent.height())
 								.appendTo(container).get(0);
+
 			        var doc = null;
 					if(ifrm.contentDocument) { // Firefox, Opera
 						doc = ifrm.contentDocument;
