@@ -79,6 +79,7 @@ W.use('jquery',function(){//这里的jquery是2.2.4.3里配置的alias
 	});
 });
 > > >```
+> > > 关于W.use及模块里`require`及`require.async`，路径问题可参考[这里](#/docs/seajs.md)
 
 > ### 2.3	CSS编写规范
 > > #### 2.3.1 尽量按功能进行分隔，要不要所有CSS放在同个文件里，如：
