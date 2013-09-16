@@ -11,5 +11,13 @@
 W.js('../../source/j/ad/caoyu.js');
 </script>
 ```
+处理程序在每个广告的iframe外面的div上加了一个`async-ad`的样式，重写这个样式可以实现不同的loading效果。
+```
+.async-ad{
+	background:url(http://www.weather.com.cn/m2/i/index/loading.gif) center center no-repeat;
+	background-color: #eee;
+	font-size: 0;
+}
+```
 
 <h3><a href="/examples/ad/caoyu.md" target="_blank">示例</a></h3>
