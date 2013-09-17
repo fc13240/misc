@@ -992,8 +992,11 @@ seajs.config = function(configData) {
   var coreJsPath = _resolve(scripts[scripts.length-1].src,location.href);//得到core.js的全路径，防止core.js前面引入script
   var basePath = _resolve('../',coreJsPath).replace('/.js','/');
   var data = W.data = {'base': basePath,'v':Math.random()};
-  // doc.writeln('<script src="'+_resolve('./version.js',coreJsPath)+'?'+(new Date().getTime())+'"></script>');//得到版本号并回调处理
-  W.js(_resolve('./version.js',coreJsPath));
+  var isDebug = /debug/.test(location.href);
+  if(!isDebug){
+    W.js(_resolve('./version.js',coreJsPath));
+  }
+  
   /*得到版本号后的回调*/
   global.__coreCallback = function(frontVersion){
     _seajs.config({
@@ -1014,6 +1017,9 @@ seajs.config = function(configData) {
     delete useFns;
     global.__coreCallback = null;//清除回调
     data.v = frontVersion;
+  }
+  if(isDebug){
+    global.__coreCallback(data.v);
   }
   global.W = W;
 })(this);

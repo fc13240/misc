@@ -11,7 +11,7 @@
 	global.WRATING = {
 		PLAY: {
 			ACTION: function(adData){
-				document.write('<div id="'+getAdId(adData)+'" class="async-ad">test</div>');
+				document.write('<div id="'+getAdId(adData)+'" class="async-ad"></div>');
 			}
 		}
 	};
@@ -48,7 +48,7 @@
 				var containerParaent = container.parent();
 				var ifrm = $('<iframe class="bgLoading" frameborder="0" scrolling="no" allowTransparency="true">')
 							.attr('width',containerParaent.width())
-							.attr('height',containerParaent.height())
+							.attr('height',containerParaent.height()||containerParaent.parent().height())
 							.appendTo(container).get(0);
 
 		        var doc = null;
