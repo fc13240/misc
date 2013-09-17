@@ -13,4 +13,5 @@ W.__adCallback(function(){
 	  var s = document.getElementsByTagName("script")[0]; 
 	  s.parentNode.insertBefore(hm, s);
 	})();
+	document.write('<scr'+'ipt src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21580435"></scr'+'ipt>');
 });
