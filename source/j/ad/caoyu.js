@@ -11,7 +11,7 @@
 	global.WRATING = {
 		PLAY: {
 			ACTION: function(adData){
-				document.write('<div id="'+getAdId(adData)+'" class="async-ad"></div>');
+				document.write('<div id="'+getAdId(adData)+'" class="async-ad">test</div>');
 			}
 		}
 	};
