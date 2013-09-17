@@ -74,30 +74,20 @@ if($arr[1]){
 		</div>
 		<script type="text/javascript">
 		W(function(){
-			var base = W.data.base;
-			if($.browser.msie && $.browser.version < 9){
-                // $('.content').html('<p style="background:#990000;color:white;margin-top:20px;padding:10px;">不支持IE9以下版本</p>');
-                define('/libs/js/highlight.js',[],function(){
-                    hljs = {
-                        highlightAuto: function(html){
-                            return {
-                                value: html
-                            }
-                        }
-                    }
-                })
-                
-            }
-			W.use(['/libs/js/highlight.js','/libs/css/markdown.css'],function(){
-				hljs.tabReplace = '    ';
-	  			hljs.initHighlightingOnLoad();
-	  			$('title').html($('h1').html());
-			});
-			W.use('/libs/js/m_show_code',function(m_show_code){
-				W(function(){
-					m_show_code();
+			if(!($.browser.msie && $.browser.version < 9)){
+                W.use(['/libs/js/highlight.js','/libs/css/markdown.css'],function(){
+					hljs.tabReplace = '    ';
+		  			hljs.initHighlightingOnLoad();
+		  			$('title').html($('h1').html());
 				});
-            });
+				W.use('/libs/js/m_show_code',function(m_show_code){
+					W(function(){
+						m_show_code();
+					});
+	            });
+            }else{
+            	$('.main_container').prepend($('<div style="background: #990000;color: white;font-size: 14px;padding: 10px;">IE9以下版本不支持代码高亮</div>'));
+            }			
 		});
 		</script>
     </body>

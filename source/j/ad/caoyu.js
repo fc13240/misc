@@ -46,7 +46,7 @@
 			for(var i in dataCache){
 				var container = $('#'+i);
 				var containerParaent = container.parent();
-				var ifrm = $('<iframe class="bgLoading" frameborder="0" scrolling="no">')
+				var ifrm = $('<iframe class="bgLoading" frameborder="0" scrolling="no" allowTransparency="true">')
 							.attr('width',containerParaent.width())
 							.attr('height',containerParaent.height())
 							.appendTo(container).get(0);
