@@ -73,7 +73,7 @@ if($arr[1]){
 		?>
 		</div>
 		<script type="text/javascript">
-		// W(function(){
+		W(function(){
 			var base = W.data.base;
 			if($.browser.msie && $.browser.version < 9){
                 // $('.content').html('<p style="background:#990000;color:white;margin-top:20px;padding:10px;">不支持IE9以下版本</p>');
@@ -88,18 +88,17 @@ if($arr[1]){
                 })
                 
             }
-			W.use(['jquery','/libs/js/highlight.js','/libs/css/markdown.css'],function(){
+			W.use(['/libs/js/highlight.js','/libs/css/markdown.css'],function(){
 				hljs.tabReplace = '    ';
 	  			hljs.initHighlightingOnLoad();
 	  			$('title').html($('h1').html());
-
 			});
 			W.use('/libs/js/m_show_code',function(m_show_code){
 				W(function(){
 					m_show_code();
 				});
             });
-		// });
+		});
 		</script>
     </body>
 </html>
