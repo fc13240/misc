@@ -1,6 +1,11 @@
+<script type="text/javascript" src="/source/j/jquery-1.8.2.js"></script>
 <script>
-W.js('http://www.weather.com.cn/m2/j/shibo/caoyu-min.js');
-W.js('http://ad.321tq.com/ex2?posid=d');
+W.js('/source/j/ad/caoyu.js');
+var confCache = {},TS_ADS;
+W.js('http://ad.321tq.com/ex2?posid=d',true);
+TS_ADS = $.extend(confCache,TS_ADS);
+W.js('http://ad.321tq.com/ex2?posid=i',true);
+TS_ADS = $.extend(confCache,TS_ADS);
 </script>
 <style>
 .mt20{

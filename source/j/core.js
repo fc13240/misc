@@ -983,9 +983,8 @@ seajs.config = function(configData) {
     }
   })();
   /*同步写JS*/
-  W.js = function (src,tempData){
-    W.__temp = tempData;
-    doc.writeln('<script src="'+src+'?'+data.v+'"></script>');
+  W.js = function (src,isNoVersion){
+    doc.writeln('<script src="'+src+(isNoVersion?'':'?'+data.v)+'"></script>');
   }
   W.config = _seajs.config;
   var _resolve = _seajs.resolve;
