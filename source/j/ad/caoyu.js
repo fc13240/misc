@@ -60,7 +60,7 @@
 					doc = ifrm.document;
 				}
 				doc.open();
-				doc.write('<html><head><script>'+code+'</'+'script></head><body style="background-color: transparent;padding:0;margin:0;"><script>WRATING.PLAY.ACTION(parent.W.__getAdData("'+i+'"))</'+'script></body></html>');
+				doc.write('<html><head><script>var oParent=parent;top=parent=this;'+code+'</'+'script></head><body style="background-color: transparent;padding:0;margin:0;"><script>WRATING.PLAY.ACTION(oParent.W.__getAdData("'+i+'"))</'+'script></body></html>');
 				//thanks to http://antalpha.blogspot.com/2009/02/add-dynamic-content-to-iframe-ie-issues.html
 				if (!isIE) {
 					doc.close();
