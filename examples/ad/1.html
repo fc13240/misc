@@ -242,23 +242,5 @@
     </script>
 </div>
 		</div>
-		<script type="text/javascript">
-		W(function(){
-			if(!($.browser.msie && $.browser.version < 9)){
-                W.use(['/libs/js/highlight.js','/libs/css/markdown.css'],function(){
-					hljs.tabReplace = '    ';
-		  			hljs.initHighlightingOnLoad();
-		  			$('title').html($('h1').html());
-				});
-				W.use('/libs/js/m_show_code',function(m_show_code){
-					W(function(){
-						m_show_code();
-					});
-	            });
-            }else{
-            	$('.main_container').prepend($('<div style="background: #990000;color: white;font-size: 14px;padding: 10px;">IE9以下版本不支持代码高亮</div>'));
-            }			
-		});
-		</script>
     </body>
 </html>
