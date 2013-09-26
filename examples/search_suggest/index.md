@@ -29,7 +29,8 @@ body{
     W.use('j/m_search_suggest',function(Suggest){
         var $textBox = $('#text_simple');
         new Suggest({
-            'url': 'http://toy1.weather.com.cn/search'
+            1:1
+            // 'url': 'http://toy1.weather.com.cn/search'
             ,'textBox': $textBox
             ,'bindEvent': false
             ,'onSelect': function(data){

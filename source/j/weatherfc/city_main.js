@@ -134,10 +134,10 @@ define(function(require){
 			$("#golf .golfItem").hide();
 	})
 	//右侧内容块定位
-	var rightElements = $(".rightEl"),
-		top = 10;
-	for(var i=0,ii = rightElements.length;i<ii;i++){
-		rightElements.eq(i).css({"top":top});
-		top+= rightElements.eq(i).outerHeight()+10;
-	}
+	// var rightElements = $(".rightEl"),
+	// 	top = 10;
+	// for(var i=0,ii = rightElements.length;i<ii;i++){
+	// 	rightElements.eq(i).css({"top":top});
+	// 	top+= rightElements.eq(i).outerHeight()+10;
+	// }
 })
