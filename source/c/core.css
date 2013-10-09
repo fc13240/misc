@@ -25,4 +25,4 @@
 body {font: 12px/1.4 微软雅黑,tahoma,arial; color: #404040;}
 a {color: #dd295c; text-decoration: none;}
 a:visited { color: blue;text-decoration: underline;}
-a:hover { color: #e76a8d;text-shadow:3px 3px 3px #ccc}
+a:hover { color: #e76a8d;text-shadow:3px 3px 3px #ccc;text-decoration: none;}
