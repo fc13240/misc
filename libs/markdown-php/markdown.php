@@ -12,12 +12,16 @@ spl_autoload_register(function($class){
 
 # Get Markdown class
 use \Michelf\GithubMarkdown;
-define("PROJECT_BASE_PATH", realpath(dirname(__FILE__) . "/../../"));
-$arr = explode('?',$_GET['md']);
-// var_dump($arr);
-$filePath = $_GET['md'] ? PROJECT_BASE_PATH.'/'.$arr[0]: 'Readme.md';
-// echo $filePath;
-# Read file and pass content through the Markdown praser
+if(isset($_GET['extmd'])){
+	$filePath = $_GET['extmd'];
+}else{
+	define("PROJECT_BASE_PATH", realpath(dirname(__FILE__) . "/../../"));
+	$arr = explode('?',$_GET['md']);
+	// var_dump($arr);
+	$filePath = $_GET['md'] ? PROJECT_BASE_PATH.'/'.$arr[0]: 'Readme.md';
+	// echo $filePath;
+	# Read file and pass content through the Markdown praser
+}
 
 if(!file_exists($filePath)){
 	header("HTTP/1.1 404 Not Found");  
