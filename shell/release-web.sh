@@ -8,7 +8,7 @@ WORK_DIR=`cd $CURRENT_DIR;cd ..;pwd`
 echo "<b>rsync</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/min/ sam@61.4.185.223:/home/sam/www/misc/min/
-# echo '==============';
+echo '==============';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/source/ sam@61.4.185.223:/home/sam/www/misc/source/
 echo '</pre>';
 echo '<br/>';
