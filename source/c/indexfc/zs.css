@@ -173,6 +173,7 @@ cursor:pointer;}
 .block figure img{border:1px solid #959595;width:100px;height:70px;}
 .block figure figcaption{position:absolute;width:203px;height:70px;top:0px;right:10px;font-size:12px;}
 .block figure figcaption a,.tabs_Item figure figcaption a{color:#000000;font-size:14px;}
+.block figure figcaption a{height: 20px;line-height: 20px;overflow: hidden;}
 .block figure figcaption a:hover,.tabs_Item figure figcaption a:hover,#defense figure figcaption a:hover{color:#ee842f;}
 .block02,.block03{width:670px;}
 .block02 .tabs,.block03 .tabs{width:670px;height:40px;}
@@ -189,7 +190,7 @@ cursor:pointer;padding:0px 15px;}
 .tabs_Item figure{width:320px;height:77px;position:relative;}
 .tabs_Item figure img{width:100px;height:75px;border:1px solid #959595;}
 .tabs_Item figure figcaption{position:absolute;width:208px;height:77px;right:0px;top:0px;font-size:14px;font-weight:bold;vertical-align:middle;}
-.tabs_Item figure figcaption p{font-weight:normal;}
+.tabs_Item figure figcaption p{font-weight:normal;line-height: 18px;}
 .tabs_Item ul{width:320px;background-color:#ebebeb;margin-top:10px;}
 .tabs_Item ul li{height:25px;line-height:25px;padding:0px 10px;width:300px;border-bottom:1px solid #fff;}
 .tabs_Item aside{position:absolute;top:0px;right:10px;}

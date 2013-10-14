@@ -1,4 +1,6 @@
-define(function(){
+define(function(require){
+	require('jquery');
+	require('../plugs/jquery.easing.1.3');
 	var weather = weather || {};
 	weather.createRandom = function(oldIndex, len) {
 		var newIndex = parseInt(Math.random() * len);

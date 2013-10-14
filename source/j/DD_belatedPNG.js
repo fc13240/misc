@@ -321,6 +321,7 @@ define(function(require){
             lib.applyVML(el); /* Render! */
         }
     };
+    window['DD_belatedPNG'] = DD_belatedPNG;
     try {
         document.execCommand("BackgroundImageCache", false, true); /* TredoSoft Multiple IE doesn't like this, so try{} it */
     } catch (r) { }
@@ -331,5 +332,5 @@ define(function(require){
              DD_belatedPNG.fix(".tipBt span,.color,.collect,.share,.opacity,#subNav li a,.showPic li p,.collect,.share");
     }
     $(window).load(JumpListInit);
-    DD_belatedPNG.fix("nav h1,#summary,#rMain h2 b,#month_avg aside table tr td b,#hotNew figure#video i,#expert .tabs ul li,#encyclopedias figure i,#encyclopedias #rBlock dl dt,#bbs ul li");
+    return DD_belatedPNG;
 })
