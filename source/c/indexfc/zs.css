@@ -1,4 +1,4 @@
-body{background-color:#EEEEEE;background-attachment:fixed;background-position:center -100px;background-repeat:no-repeat;background-size: 100%;}
+body{background-color:#EEEEEE;background-attachment:fixed;background-position:center -100px;background-repeat:no-repeat;background-size: cover;}
 
 nav{height:75px;line-height:75px;padding:0px 10px;position:relative;}
 nav h1{background:url(../../i/indexfc/warn.png) no-repeat;background-position:0px 10px;float:left;width:155px;height:75px;float:left;text-indent:-9999px;}

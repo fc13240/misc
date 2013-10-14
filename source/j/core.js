@@ -383,7 +383,7 @@ function pollCss(node, callback) {
 }
 
 function getCurrentScript() {
-  if (currentlyAddingScript) {console.log(1,currentlyAddingScript);
+  if (currentlyAddingScript) {
     return currentlyAddingScript
   }
 
@@ -392,7 +392,7 @@ function getCurrentScript() {
   // could query the script nodes and the one that is in "interactive"
   // mode indicates the current script
   // ref: http://goo.gl/JHfFW
-  if (interactiveScript && interactiveScript.readyState === "interactive") {console.log(2,interactiveScript);
+  if (interactiveScript && interactiveScript.readyState === "interactive") {
     return interactiveScript
   }
 
@@ -401,7 +401,7 @@ function getCurrentScript() {
   for (var i = scripts.length - 1; i >= 0; i--) {
     var script = scripts[i]
     if (script.readyState === "interactive") {
-      interactiveScript = script;console.log(3,interactiveScript);
+      interactiveScript = script;
       return interactiveScript
     }
   }

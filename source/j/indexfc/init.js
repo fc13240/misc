@@ -21,12 +21,14 @@
 	})
 
 
-
-	if (zstype != "ct" && zstype != "gz") {
-		$("#forecast h3 span").hide();
-	} else {
-		$("#forecast h3 span").show();
-	}
+	W(function(){
+		if (zstype != "ct" && zstype != "gz") {
+			$("#forecast h3 span").hide();
+		} else {
+			$("#forecast h3 span").show();
+		}
+	})
+	
 
 	var provinceid = cityid.substring(0, 5),
 		provinceItem;
