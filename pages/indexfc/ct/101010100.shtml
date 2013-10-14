@@ -12,30 +12,30 @@
   <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
   <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
   <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
-  <link rel="stylesheet" href="http://static.zk.com/c/core.css" />
-  <link rel="stylesheet" href="http://static.zk.com/c/indexfc/common.css" />
-  <link rel="stylesheet" href="http://static.zk.com/c/indexfc/zs.css" />
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/core.js"></script>
+  <link rel="stylesheet" href="http://61.4.185.223/min/c/core.css" />
+  <link rel="stylesheet" href="http://61.4.185.223/min/c/indexfc/common.css" />
+  <link rel="stylesheet" href="http://61.4.185.223/min/c/indexfc/zs.css" />
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/core.js"></script>
 
   <!--
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/jquery-1.8.2.js"></script>
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/zsLevel.js"></script>
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/color.js"></script>
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/raphael-min.js"></script>
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/common.js"></script>
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/zs.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/jquery-1.8.2.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/zsLevel.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/color.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/raphael-min.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/common.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/zs.js"></script>
 
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/line.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/line.js"></script>
   
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/province.js"></script>
-  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/init.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/province.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/init.js"></script>
   -->
 
   
-  <!--<script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/zsGetData.js"></script>
+  <!--<script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/zsGetData.js"></script>
   -->
-  <!--<script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/indexfc/pie.js"></script>
+  <!--<script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/indexfc/pie.js"></script>
   -->
   <script>
   var index3h_data=new Array();
@@ -46,16 +46,22 @@
   </script>
   <script>
   W(function(){
-    W.use('j/indexfc/zs',function(){//alert('down');
-      // 'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })
-      // DD_belatedPNG.fix("nav h1,#summary,#rMain h2 b,#month_avg aside table tr td b,#hotNew figure#video i,#expert .tabs ul li,#encyclopedias figure i,#encyclopedias #rBlock dl dt,#bbs ul li");
+    W.use('j/indexfc/zs',function(){
     });
-    W.use('j/indexfc/line',function(){//alert('down1')
+    W.use('j/indexfc/line',function(){
     });
    }) 
   </script>
-
-<!--[if lt IE 9]>
+  <!--[if lt IE 7]>
+     <script>
+     W(function(){
+        W.use('j/DD_belatedPNG',function(DD_belatedPNG){
+          DD_belatedPNG.fix("nav h1,#summary,#rMain h2 b,#month_avg aside table tr td b,#hotNew figure#video i,#expert .tabs ul li,#encyclopedias figure i,#encyclopedias #rBlock dl dt,#bbs ul li");
+        });
+     }) 
+     </script>
+    <![endif]-->
+  <!--[if lt IE 9]>
     <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
     <![endif]-->
 

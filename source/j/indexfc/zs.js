@@ -1,4 +1,3 @@
-//alert('before');
 define(function(require) {
 	var provinceItem = require('./init').provinceItem;
 	var weather = require('./weather');
@@ -45,8 +44,7 @@ define(function(require) {
 			weather_ZS_Manager.old_index = weather_ZS_Manager.current_index;
 		}
 	};
-	//alert(0);	
-	W(function() {//alert(1);
+	W(function() {
 		//分享到qq空间
 		$(".qzone").click(function() {
 			window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + encodeURIComponent(document.location), 'qzone', 'toolbar=0,status=0,width=900,height=760,left=' + (screen.width - 900) / 2 + ',top=' + (screen.height - 760) / 2);

@@ -1,6 +1,5 @@
-//alert(97);
-(function(){//alert(98);
-	var init = function(initObj,weather) {//alert(100);
+(function(){
+	var init = function(initObj,weather) {
 		var color = initObj.color;
 		var zstype = initObj.zstype;
 		//每次显示的点数
@@ -18,7 +17,7 @@
 			dots: [],
 			rects: [],
 			wLength: 0,
-			init: function(data, num, cellwidth, cellheight) {//alert(101);
+			init: function(data, num, cellwidth, cellheight) {
 				var dl_items = "",
 					date_items = "",
 					sp_items = [],
@@ -242,10 +241,8 @@
 		require('../raphael');
 		var initObj = require('./init');
 		var weather = require('./weather');
-		var DD_belatedPNG = require('../DD_belatedPNG');//alert(99);alert(DD_belatedPNG);
 		W(function(){
 			init(initObj,weather);
-			DD_belatedPNG.fix("nav h1,#summary,#rMain h2 b,#month_avg aside table tr td b,#hotNew figure#video i,#expert .tabs ul li,#encyclopedias figure i,#encyclopedias #rBlock dl dt,#bbs ul li");
 		});
 	});
 })();
