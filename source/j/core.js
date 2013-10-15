@@ -951,7 +951,6 @@ seajs.config = function(configData) {
     return _seajs;
   };
  
-  var isIE6 = (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0");
   var useFns = [];
   W.use = function(){
     useFns.push(arguments);
@@ -1010,14 +1009,7 @@ seajs.config = function(configData) {
       },
       charset: 'utf-8'
     });
-    //ie6时保证在document.ready时再进行dom操作(这里是动态插入脚本)
-    W.use = isIE6? function(){
-      var args = arguments;
-      var _this = this;
-      W(function(){
-        _seajs.use.apply(_this,args);
-      });
-    }:_seajs.use;
+    W.use = _seajs.use;
     var tempArgs;
     while((tempArgs = useFns.shift())){
       W.use.apply(null,tempArgs);
