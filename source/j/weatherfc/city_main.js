@@ -1,7 +1,7 @@
 define(function(require){	
 	require('jquery');
 	require('../raphael');
-	require('./base');
+	require('../base');
 	var share = require('../m_share');
 	require('../plugs/jquery.easing.1.3');
 	require('./forecast7d');

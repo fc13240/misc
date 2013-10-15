@@ -21,7 +21,7 @@ define(function(require){
 	$("#week .scroll,#week .RBtn,#week .lBtn").hover(function(){
 		$("#week .RBtn,#week .lBtn").show();
 	},function(){
-		$("#week .RBtn,#week .lBtn").hide();
+		//$("#week .RBtn,#week .lBtn").hide();
 	})
 	//禁止一周天气a链接跳转
 	$("#week a").each(function(){

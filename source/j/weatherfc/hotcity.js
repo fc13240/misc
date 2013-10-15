@@ -5,7 +5,14 @@ define(function(require){
 	var COOKIE_NAME = 'hotcity';
 	$(function(){
 		var $hotCities = $(".hotCities");
-		$(".icons .addCity,#canc").click(function(){
+		var cityInfoArr = [];
+		$(".icons .addCity").click(function(){
+			$cityname.each(function(i,v){
+				var info = cityInfoArr[i] || '||';
+				var cityInfo = info.split('|');
+				var shortName = cityInfo[2];
+				$cityname.eq(i).val(cityInfo[0]).data('code',cityInfo[1]).next('.nick').val(shortName);
+			});
 			$hotCities.toggle();
 		});
 		var $cityname = $('input.cityname').each(function(){
@@ -46,26 +53,29 @@ define(function(require){
 				$.getJSON("/data/cityinfo/" + cityInfo[1] + ".html",function(data){
 					var weatherInfo = data.weatherinfo;
 					var cityid = weatherInfo.cityid;
-					shortName || (shortName = weatherInfo.city);
+					shortName || (shortName = cityInfo[0]);
 					$cityList.append("<li class=\"city\"><p><a href=\"http://www.weather.com.cn/weather/"+cityid+".shtml\">"+shortName+"</a></p><p class=\"img\"><a class=\"d01\"  href=\"http://www.weather.com.cn/weather/"+cityid+".shtml\"></a><a class=\"n01\"  href=\"http://www.weather.com.cn/weather/"+cityid+".shtml\"></a></p><p><a class=\"temp\" href=\"http://www.weather.com.cn/weather/"+cityid+".shtml\">"+weatherInfo.temp1+"~"+weatherInfo.temp2+"</a></p></li>");
 					$cityname.eq(initedNum).val(weatherInfo.city).data('code',cityid);
 					$shorname.eq(initedNum).val(shortName);
 					initedNum++;
 				});
-			})
+			});
+			cityInfoArr = cityArr || [];
 		}
 		var scrollTop = $(window).scrollTop();
 		var winHeight = $(window).height();
 		var myhotcity = getCookie(COOKIE_NAME) || '';
 		var cityArr = myhotcity.split(","),
 			cityNum = cityArr.length;
-		$icons.css({"marginRight":"-565px","top":(scrollTop+winHeight-(cityNum*75)-330)});
+		$icons.css({"marginRight":"-565px","top":(scrollTop+winHeight-(cityNum*75)-405)});
 		//北京|101010100|,郑州|200000000|家
 		initCityInfo(cityArr);
 		$('.hotCities p span.btn:contains(清除)').click(function(){
 			$(this).siblings('input').val('').removeData('code');
 		});
-
+		$("#canc").click(function(){
+			$hotCities.toggle();
+		});
 		$('#add').click(function(){
 			var dataArr = [];
 			$cityname.each(function(){
@@ -77,14 +87,14 @@ define(function(require){
 					dataArr.push([val,code,shortName].join('|'));
 				}
 			});
-			if(dataArr.length == 0){
-				alert('请填写城市信息!');
-			}else{
+			//if(dataArr.length == 0){
+			//	alert('请填写城市信息!');
+			//}else{
 				setCookie(COOKIE_NAME,dataArr.join(','),7);
 				$cityList.find('.city').remove();
 				initCityInfo(dataArr);
 				$hotCities.hide();
-			}
+			//}
 		});
 	});
 })
