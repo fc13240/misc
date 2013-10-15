@@ -12,13 +12,13 @@
   <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
   <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
   
-  <link rel="stylesheet" href="http://static.zk.com/c/core.css" />
-  <link rel="stylesheet" href="http://static.zk.com/c/weatherfc/common.css" />
-  <link rel="stylesheet" href="http://static.zk.com/c/weatherfc/city.css" />
+  <link rel="stylesheet" href="http://61.4.185.223/min/c/core.css" />
+  <link rel="stylesheet" href="http://61.4.185.223/min/c/weatherfc/common.css" />
+  <link rel="stylesheet" href="http://61.4.185.223/min/c/weatherfc/city.css" />
   <base target="_blank"/>
-  <script type="text/javascript" language="javascript" charset="utf-8" src="http://static.zk.com/j/core.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf-8" src="http://61.4.185.223/min/j/core.js"></script>
   <script type="text/javascript" language="javascript" charset="utf-8" src="http://geoip.weather.com.cn/g/"></script>
-  <script type="text/javascript" language="javascript" charset="utf-8" src="http://static.zk.com/j/ad/caoyu-min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf-8" src="http://61.4.185.223/min/j/ad/caoyu-min.js"></script>
   <script type="text/javascript" language="javascript" charset="utf-8" src="http://ad.321tq.com/ex2?posid=d"></script>
   <!---->
   
@@ -35,7 +35,7 @@
     <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
   <![endif]-->
 </head>
-<body style="background-image:url(http://static.zk.com/i/weatherfc/city_bg.jpg);">
+<body style="background-image:url(http://61.4.185.223/min/i/weatherfc/city_bg.jpg);">
   <!--顶部日期及导航start-->
   <div id="toolBar">
     <div class="midBlock">
@@ -2332,28 +2332,28 @@
   <section class="topOne lv">
     <figure>
       <a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴">
-        <img src="http://static.zk.com/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
+        <img src="http://61.4.185.223/min/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
       <figcaption>
         <a href="#">震撼壮美的壮美的</a>
       </figcaption>
     </figure>
     <figure>
       <a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴">
-        <img src="http://static.zk.com/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
+        <img src="http://61.4.185.223/min/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
       <figcaption>
         <a href="#">震撼壮美的壮美的</a>
       </figcaption>
     </figure>
     <figure>
       <a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴">
-        <img src="http://static.zk.com/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
+        <img src="http://61.4.185.223/min/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
       <figcaption>
         <a href="#">震撼壮美的壮美的</a>
       </figcaption>
     </figure>
     <figure>
       <a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴">
-        <img src="http://static.zk.com/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
+        <img src="http://61.4.185.223/min/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
       <figcaption>
         <a href="#">震撼壮美的壮美的</a>
       </figcaption>
@@ -2767,7 +2767,7 @@ var observe24h_data = {"od":{"od0":"201310141500","od1":"北京_南郊观象台"
 <h3>猜你喜欢</h3>
 <figure>
 <a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴">
-<img src="http://static.zk.com/i/weatherfc/city_test/img_15.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
+<img src="http://61.4.185.223/min/i/weatherfc/city_test/img_15.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
 <figcaption>
 <a href="#">震撼壮美的“超级细胞”</a>
 <p>
@@ -2780,7 +2780,7 @@ var observe24h_data = {"od":{"od0":"201310141500","od1":"北京_南郊观象台"
 </figure>
 <figure>
 <a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴">
-<img src="http://static.zk.com/i/weatherfc/city_test/img_16.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
+<img src="http://61.4.185.223/min/i/weatherfc/city_test/img_16.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
 <figcaption>
 <a href="#">震撼壮美的“超级细胞”</a>
 <p>
@@ -2793,7 +2793,7 @@ var observe24h_data = {"od":{"od0":"201310141500","od1":"北京_南郊观象台"
 </figure>
 <figure>
 <a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴">
-<img src="http://static.zk.com/i/weatherfc/city_test/img_17.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
+<img src="http://61.4.185.223/min/i/weatherfc/city_test/img_17.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a>
 <figcaption>
 <a href="#">震撼壮美的“超级细胞”</a>
 <p>
@@ -3577,7 +3577,7 @@ Copyright&copy;中国气象局公共气象服务中心 All Rights Reserved (2008
 
 <script>
       var cityid = "101010100";
-      W.use('http://static.zk.com/j/weatherfc/city_main');
+      W.use('http://61.4.185.223/min/j/weatherfc/city_main');
     </script>
 </body>
 </html>
