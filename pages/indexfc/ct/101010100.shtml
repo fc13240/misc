@@ -63,7 +63,7 @@
     <![endif]-->
   <!--[if lt IE 9]>
     <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
-    <![endif]-->
+  <![endif]-->
 
   <script type="text/javascript" src="http://geoip.weather.com.cn/g/"></script>
   <script type="text/javascript" src="/m2/j/shibo/caoyu-min.js"></script>

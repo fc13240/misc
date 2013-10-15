@@ -127,7 +127,7 @@ clear: both;
     margin: 3px 0 -3px;
 }
 .stico {
-    background: url("/m2/i/share_s.png") no-repeat scroll left center transparent;
+    background: url(http://www.weather.com.cn/m2/i/share_s.png) no-repeat scroll left center transparent;
     cursor: pointer;
     display: block !important;
     height: 16px !important;
@@ -157,7 +157,7 @@ clear: both;
     background-position: 0 -96px;
 }
 .stico_qq {
-    background: url("/m2/i/weiboicon16.png") no-repeat scroll 0 center transparent;
+    background: url(http://www.weather.com.cn/m2/i/weiboicon16.png) no-repeat scroll 0 center transparent;
     float: left;
     height: 16px;
     width: 16px;
@@ -466,8 +466,8 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 .zs .detail aside b{font-size:24px;color:#fff;display:block;line-height:30px;}
 .zs ul li h3{border-top:0px;height:25px;line-height:25px;font-size:14px;font-weight:normal;padding-left:5px;position:absolute;left:0px;top:85px;width:70px;line-height:16px;text-align:center;}
 .zs ul li h3 a{color:#fff;}
-.hotNews{width:300px;position:absolute;right:0px;top:270px;}
-.hotNews .tabs,.hotVideo .tabs,.rank .tabs,.interact .tabs{width:300px;height:35px;line-height:35px;font-size:18px;background-color:#fff;border-top:2px solid #1662a8;padding-top:5px;position:relative;}
+.hotNews{width:300px;_overflow:hidden;position:absolute;right:0px;top:270px;}
+.hotNews .tabs,.hotVideo .tabs,.rank .tabs,.interact .tabs{width:300px;height:35px;line-height:35px;font-size:18px;background-color:#fff;border-top:2px solid #1662a8;padding-top:5px;position:relative;left: 0;top: 0;}
 .hotNews .tabs ul,.hotVideo .tabs ul,.interact .tabs ul{width:280px;height:35px;padding:0px 10px;}
 .hotNews .tabs ul li,.hotVideo .tabs ul li,.interact .tabs ul li{float:left;color:#333333;cursor:pointer;padding:0px 10px 0px 10px;}
 .hotNews .tabs ul li.on,.hotVideo .tabs ul li.on,.interact .tabs ul li.on{border-left:0px;color:#076ea8;}
@@ -692,7 +692,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #history .detailInf span b{font-size:20px;font-weight:normal;}
 
 .three{top:1592px;}
-.interact{width:300px;position:absolute;right:0px;top:1852px;z-index:15;}
+.interact{width:300px;position:absolute;right:0px;top:1852px;z-index:15;_overflow: hidden;}
 
 #aroundCity{width:670px;padding-top:10px;}
 #aroundCity h3{font-size:22px;line-height:35px;height:35px;font-weight:normal;}
