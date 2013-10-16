@@ -50,6 +50,7 @@
 					showHtml(html);
 					m_show_code();
 					loading.hide();
+					initBtns();
 				});
 			}
 			function hashChange (hash){
@@ -72,10 +73,27 @@
 				// initLinks.first().click();
 				hashChange(initLinks.first().attr('href'));
 			}
+			
+			var isHaveHashchange = false;
+			function initBtns(){
+				if(isHaveHashchange){
+					return;
+				}
+				
+				$('a[href^=#],a.ajax-link').live('click',function(e){
+					e.stopImmediatePropagation();
+					setTimeout(function(){
+						hashChange(location.hash);
+					},0);
+    			});
+			}
 			if ('onhashchange' in window) {
+				isHaveHashchange = true;
       			window.onhashchange = function() {
         			hashChange(location.hash);
       			}
+    		}else{
+    			initBtns();
     		}
 		});
 	});
