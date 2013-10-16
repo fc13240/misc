@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="http://61.4.185.223/min/c/jquery-ui-1.10.3.custom.min.css" />
     <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/core.js"></script>
     <script type="text/javascript" language="JavaScript" src="http://geoip.weather.com.cn/g/"></script>
-    <script type="text/javascript" language="JavaScript" src="/m2/j/shibo/caoyu-min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/ad/caoyu-min.js"></script>
     <script type="text/javascript" language="JavaScript" src="http://ad.321tq.com/ex2?posid=d"></script>
     <!--[if lt IE 7]>
     <script>
