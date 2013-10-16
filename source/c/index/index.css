@@ -125,7 +125,7 @@ a:hover{color:#ee842f;}
 #topNews .news p{font-size:14px;line-height:15px;}
 #topNews .news p a{padding:0px 10px;}
 #topNews .news ul{padding-left:10px;}
-#topNews .news ul li,.life ul li,.climate ul li,.international ul li{height:30px;line-height:30px;}
+#topNews .news ul li,.life ul li,.climate ul li,.international ul li{height:30px;line-height:30px;overflow: hidden;}
 #topNews .news ul li a,.life ul li a,.climate ul li a,.international ul li a{height:30px;line-height:30px;background:url(../../i/index/index_icons.png) no-repeat -290px -153px;padding-left:10px;}
 #topNews .news ul li a:hover,.life ul li a:hover,.climate ul li a:hover,.international ul li a:hover{background-position:-290px -184px;}
 #topNews .leftBlock{width:300px;overflow:hidden;}
@@ -149,7 +149,7 @@ a:hover{color:#ee842f;}
 .rightBlock h2 i{display:block;float:left;background:url(../../i/index/index_icons.png) no-repeat -42px -110px;width:34px;height:34px;margin-right:10px;}
 .rightBlock h2 b{color:#ee842f;}
 .rightBlock p{font-size:12px;height:34px;line-height:34px;background-color:#bdeafd;overflow:hidden;}
-.rightBlock p span{display:block;width:300px;}
+.rightBlock p span{display:block;/*width:300px;*/}
 .rightBlock p a{display:block;width:250px;height:34px;line-height:34px;padding-left:50px;}
 /*
 .rightBlock p .df{background:url(../../i/index/img37.jpg) no-repeat 0px 0px;}
@@ -215,7 +215,7 @@ a:hover{color:#ee842f;}
 .life p{line-height:30px;}
 .life ul{width:273px;position:absolute;right:0px;top:40px;border:1px solid #eee7e7;padding:5px 10px;overflow:hidden;}
 
-.block .rightBlock{width:300px;position:absolute;right:0px;top:-30px;}
+.block .rightBlock{width:300px;position:absolute;right:0px;top:-30px;_overflow: hidden;}
 .expert,.knowledge{width:300px;border-top:3px solid #076ea8;}
 .expert h3,.knowledge h3{height:30px;line-height:30px;background-color:#e8e8e8;padding-left:10px;font-size:18px;font-weight:normal;}
 .expert h3 span,.knowledge h3 span{position:absolute;top:0px;right:10px;font-size:12px;}
@@ -341,14 +341,14 @@ a:hover{color:#ee842f;}
 .climate ul{width:320px;}
 .climate dl{width:310px;height:230px;position:absolute;right:10px;top:10px;background-color:#252525;}
 .climate dl dd,.climate dl dd img{width:310px;height:190px;overflow:hidden;}
-.climate dl dt{width:310px;height:40px;line-height:40px;font-size:20px;text-align:center;}
+.climate dl dt{width:310px;height:40px;line-height:40px;font-size:20px;text-align:center;overflow: hidden;}
 .climate dl dt a{color:#fff;}
 .climate dl dt a:hover{color:#ee842f;}
 
 .international .imgs{border:1px solid #eee7e7;padding:20px 20px 20px 0px;width:280px;height:120px;float:left;}
 .international .imgs dl{width:120px;margin-left:20px;float:left;background-color:#076ea8;display:inline;}
 .imgs dl dd,.imgs dl dd img{width:120px;height:90px;overflow:hidden;}
-.imgs dl dt{height:30px;line-height:30px;width:120px;text-align:center;}
+.imgs dl dt{height:30px;line-height:30px;width:120px;text-align:center;overflow: hidden;}
 .imgs dl dt a{color:#fff;}
 .imgs dl dt a:hover{color:#ee842f;}
 .international ul{width:343px;border:1px solid #eee7e7;float:left;padding:5px 10px;margin-left:3px;}

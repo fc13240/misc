@@ -61,9 +61,9 @@ define(function(require){
 	//require('../jquery-1.8.2);
 	require('../base');
 	//require('./selCity');
-    require('./hotcity_index');
+         require('./hotcity_index');
 	require('./city3index');
-	var _alarm = require('./alarm');
+	require('./alarm');
 	//焦点图切换
 	var focusImg = new W.scroll({"container":".focusImg ul","el":"li","flag":1,"orientation":"h"});
 		focusImg.autoScroll = function(){
@@ -99,22 +99,19 @@ define(function(require){
 		},5000);
 		}
 	})
-	_alarm(function(){
-		//预警切换
-		var alarm = new W.scroll({"container":".rightBlock #alarm p span","el":"a","flag":1,"orientation":"v"});
-		var alarmTimer = setInterval(function(){
+	//预警切换
+	var alarm = new W.scroll({"container":".rightBlock #alarm p span","el":"a","flag":1,"orientation":"v"});
+	var alarmTimer = setInterval(function(){
+		alarm.go(1);
+	},5000);
+	$(".rightBlock #alarm p").hover(function(){
+		clearInterval(alarmTimer);
+		alarmTimer = null;
+	},function(){
+		alarmTimer = setInterval(function(){
 			alarm.go(1);
 		},5000);
-		$(".rightBlock #alarm p").hover(function(){
-			clearInterval(alarmTimer);
-			alarmTimer = null;
-		},function(){
-			alarmTimer = setInterval(function(){
-				alarm.go(1);
-			},5000);
-		})
-	});
-	
+	})
 	//旅游天气图片脚本
 	$(".imgArea a").hover(function(){
 		$(this).find("i").stop().fadeIn();
