@@ -12,3 +12,6 @@
 1. **采用`markdown`写文档时一定要认真学习`markdown`语法**
 2. **严格按照 *前端规范* 编写代码及样式**
 
+### 重要注意事项说明
+1. 当页面要使用`<base>`标签时，考虑IE6[参考](http://stackoverflow.com/questions/1889076/is-it-recommended-to-use-the-base-html-tag)，要使用`<base href="http://www.weather.com.cn"/><!--[if lte IE 6]></base><![endif]-->`
+

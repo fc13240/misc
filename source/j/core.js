@@ -1023,3 +1023,8 @@ seajs.config = function(configData) {
   }
   global.W = W;
 })(this);
+!function(){
+  window.onerror = function(){
+    return false;
+  }
+}();

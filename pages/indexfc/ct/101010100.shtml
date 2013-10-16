@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <base href="http://www.weather.com.cn"/>
+  <base href="http://www.weather.com.cn"><!--[if lte IE 6]></base><![endif]-->
   <meta charset="utf-8" />
   <link rel="dns-prefetch" href="http://61.4.185.223">
   <title>穿衣指数-北京-中国天气网-专业天气预报、气象服务门户</title>
@@ -45,20 +45,13 @@
       
   </script>
   <script>
-  W(function(){
-    W.use('j/indexfc/zs',function(){
-    });
-    W.use('j/indexfc/line',function(){
-    });
-   }) 
+    W.use(['j/indexfc/zs','j/indexfc/line']);
   </script>
   <!--[if lt IE 7]>
      <script>
-     W(function(){
         W.use('j/DD_belatedPNG',function(DD_belatedPNG){
           DD_belatedPNG.fix("nav h1,#summary,#rMain h2 b,#month_avg aside table tr td b,#hotNew figure#video i,#expert .tabs ul li,#encyclopedias figure i,#encyclopedias #rBlock dl dt,#bbs ul li");
         });
-     }) 
      </script>
     <![endif]-->
   <!--[if lt IE 9]>
