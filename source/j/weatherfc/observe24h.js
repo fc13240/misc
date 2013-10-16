@@ -328,11 +328,12 @@ Raphael.fn.polygon = function(x,y,s){
 
 	//观察台
 	$("#platform").html(observe24h_data.od.od1);
-	if(adjustData.temperature[0] == ""){
+	var newTemperature = adjustData.temperature[adjustData.temperature.length-1];
+	if(newTemperature == ""){
 		$("#currHour").html("最新整点实况气温:暂无数据");
 	}
 	else{
-		$("#currHour").html("最新整点实况气温:"+adjustData.temperature[0]+"℃");
+		$("#currHour").html("最新整点实况气温:"+newTemperature+"℃");
 	}
 	if(adjustData.invalid.temperature.length == adjustData.length){
 		$("#detailHour").html("暂无数据");
