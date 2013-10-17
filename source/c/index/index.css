@@ -108,7 +108,7 @@ a:hover{color:#ee842f;}
 #search .pp span{display:block;height:25px;float:right;position:relative;}
 #search .text{height:23px;width:254px;line-height:23px;border:1px solid #959595;position:absolute;right:0px;top:0px;padding:0px 49px 0px 5px;color:#9e9e9e;font-size:12px;}
 #search .button{height:23px;width:42px;background:url(../../i/index/index_icons.png) no-repeat 0px -109px;text-indent:-9999px;position:absolute;right:1px;top:1px;cursor:pointer;}
-
+#search .midBlock{height: 100%;}
 #nav{border:1px solid #dee8f2;padding:10px 0px 10px 10px;width:958px;height:48px;line-height:24px;margin:0 auto 10px;}
 #nav dl{float:left;height:48px;padding:0px 0px 0px 15px;border-right:1px solid #dee8f2;}
 #nav .last{border-right:none;}

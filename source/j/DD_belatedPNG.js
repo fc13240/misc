@@ -97,7 +97,7 @@ define(function(require){
                 var selectors, i;
                 selectors = selector.split(','); /* multiple selectors supported, no need for multiple calls to this anymore */
                 for (i = 0; i < selectors.length; i++) {
-                    this.screenStyleSheet.addRule(selectors[i], 'behavior:expression(DD_belatedPNG.fixPng(this))'); /* seems to execute the function without adding it to the stylesheet - interesting... */
+                    this.screenStyleSheet.addRule(selectors[i], 'behavior:expression('+tempName+'.fixPng(this))'); /* seems to execute the function without adding it to the stylesheet - interesting... */
                 }
             }
         },
@@ -321,7 +321,8 @@ define(function(require){
             lib.applyVML(el); /* Render! */
         }
     };
-    window['DD_belatedPNG'] = DD_belatedPNG;
+    var tempName = 'pngfix_'+(new Date().getTime());
+    window[tempName] = DD_belatedPNG;
     try {
         document.execCommand("BackgroundImageCache", false, true); /* TredoSoft Multiple IE doesn't like this, so try{} it */
     } catch (r) { }
