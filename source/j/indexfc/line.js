@@ -238,7 +238,7 @@
 		})
 	}
 	define(function(require){
-		require('../raphael');
+		require('../tool/raphael');
 		var initObj = require('./init');
 		var weather = require('./weather');
 		W(function(){

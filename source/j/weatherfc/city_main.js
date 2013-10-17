@@ -1,6 +1,6 @@
 define(function(require){	
 	require('jquery');
-	require('../raphael');
+	require('../tool/raphael');
 	require('../base');
 	var share = require('../m_share');
 	require('../plugs/jquery.easing.1.3');

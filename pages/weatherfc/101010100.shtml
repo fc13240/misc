@@ -21,7 +21,7 @@
     <script type="text/javascript" language="JavaScript" src="http://ad.321tq.com/ex2?posid=d"></script>
     <!--[if lt IE 7]>
     <script>
-        W.use('j/DD_belatedPNG',function(DD_belatedPNG){
+        W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
           DD_belatedPNG.fix(".lBtn,.RBtn");
         });
     </script>
