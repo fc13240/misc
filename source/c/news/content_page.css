@@ -65,7 +65,7 @@
 .top_contents li .icon{
 	width: 81px;
 	height: 81px;
-	background: url('/n/i/content_icon.gif') no-repeat 0 0;
+	background: url(../../i/content_icon.gif) no-repeat 0 0;
 	position: absolute;
 	left: 0;
 	top: 12px;
@@ -165,7 +165,7 @@
     display: inline-block;
     width:28px;
     height:29px;
-    background: url(/n/i/content_icon.gif) no-repeat 0px -81px;
+    background: url(../../i/content_icon.gif) no-repeat 0px -81px;
     margin-right:2px;
 }
 .doctools dd a.print{
@@ -279,7 +279,7 @@
     display: inline-block;
     width:28px;
     height:28px;
-    background: url(/n/i/content_icon.gif) no-repeat 0px -82px;
+    background: url(../../i/content_icon.gif) no-repeat 0px -82px;
     margin-right:10px;
 }
 .bottom_toolbar .sharebtns dd a.weibo{
@@ -311,7 +311,7 @@
     width:280px;
     float:left;
     line-height:30px;
-    background:url(/n/i/dot1.gif) no-repeat 0 13px;
+    background:url(../../i/dot1.gif) no-repeat 0 13px;
     padding-left:16px;
     margin-right:20px;
 }
@@ -472,7 +472,7 @@
 	height: 26px;
 	overflow: hidden;
 	margin: 19px auto 0 auto;
-	background: url('/n/i/content_icon.gif') no-repeat -227px -82px;
+	background: url(../../i/content_icon.gif) no-repeat -227px -82px;
 }
 .photothumbs .nextbtn .icon{
 	background-position: -227px -110px;
