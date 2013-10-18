@@ -3,7 +3,7 @@
   <head>
     <base href="http://www.weather.com.cn" target="_blank"/><!--[if lte IE 6]></base><![endif]-->
     <meta charset="utf-8" />
-    <link rel="dns-prefetch" href="http://61.4.185.223">
+    <link rel="dns-prefetch" href="http://i.tq121.com.cn">
     <title>北京天气预报</title>
     <meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
     <meta name="description" content="中国天气网为您提供实时全国天气气象信息,及时发布天气预报、灾害预警、气象云图、旅游天气、台风、暴雨雪等气象信息，为我国的生产生活提供全面精确的气象服务" />
