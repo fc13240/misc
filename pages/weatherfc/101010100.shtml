@@ -12,12 +12,12 @@
     <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
     <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
     <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
-    <link rel="stylesheet" href="http://61.4.185.223/min/c/weatherfc/common.css" />
-    <link rel="stylesheet" href="http://61.4.185.223/min/c/weatherfc/city.css" />
-    <link rel="stylesheet" href="http://61.4.185.223/min/c/jquery-ui-1.10.3.custom.min.css" />
-    <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/core.js"></script>
+    <link rel="stylesheet" href="http://i.tq121.com.cn/c/weatherfc/common.css" />
+    <link rel="stylesheet" href="http://i.tq121.com.cn/c/weatherfc/city.css" />
+    <link rel="stylesheet" href="http://i.tq121.com.cn/c/jquery-ui-1.10.3.custom.min.css" />
+    <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
     <script type="text/javascript" language="JavaScript" src="http://geoip.weather.com.cn/g/"></script>
-    <script type="text/javascript" language="JavaScript" src="http://61.4.185.223/min/j/ad/caoyu-min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/ad/caoyu-min.js"></script>
     <script type="text/javascript" language="JavaScript" src="http://ad.321tq.com/ex2?posid=d"></script>
     <!--[if lt IE 7]>
     <script>
@@ -30,7 +30,7 @@
     <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
     <![endif]-->    
   </head>
-  <body style="background-image:url(http://61.4.185.223/min/i/weatherfc/city_bg.jpg);">
+  <body style="background-image:url(http://i.tq121.com.cn/i/weatherfc/city_bg.jpg);">
     <!--顶部日期及导航start-->
     <div id="toolBar">
   <div class="midBlock"> <span id="time"></span> <i class="mobile"></i><b>移动客户端<i></i></b> <span class="links"><!--<a class="blue" href="#"  title="登录">登录</a>--><a id="setIndex" href="javascript:void(0);" target="_self" title="设为首页">设为首页</a><a id="collect" target="_self" href="javascript:void(0);"  title="收藏">收藏</a><a id="provice" href="javascript:void(0);"  title="省级站" target="_self"><i class="icon"></i>省级站<i class="arrow"></i></a><a id="eg" href="http://www.weather.com.cn/english/" target="_blank" title="English Version">English Version</a><a href="#"  id="dl_tw">繁體中文</a></span> </div>
@@ -761,10 +761,10 @@
           <!--旅游删除
           <div class="news">
             <section class="topOne lv">
-              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://61.4.185.223/min/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
-              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://61.4.185.223/min/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
-              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://61.4.185.223/min/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
-              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://61.4.185.223/min/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
+              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://i.tq121.com.cn/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
+              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://i.tq121.com.cn/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
+              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://i.tq121.com.cn/i/weatherfc/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
+              <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://i.tq121.com.cn/i/weatherfc/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的壮美的</a></figcaption></figure>
               <div class="clear"></div>
             </section>
             <ul class="lv">
@@ -917,9 +917,9 @@ var observe24h_data = {"od":{"od0":"201310160900","od1":"北京_南郊观象台"
 </div>
         <div class="like">
           <h3>猜你喜欢</h3>
-        <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://61.4.185.223/min/i/weatherfc/city_test/img_15.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的“超级细胞”</a><p><span>¥129.00元</span><a href="#">横扫2009各大美容杂 志与网站的UV王推荐</a><a href="#" class="more">更多&gt;&gt;</a></p></figcaption><i class="bg"></i></figure>
-        <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://61.4.185.223/min/i/weatherfc/city_test/img_16.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的“超级细胞”</a><p><span>¥129.00元</span><a href="#">横扫2009各大美容杂 志与网站的UV王推荐</a><a href="#" class="more">更多&gt;&gt;</a></p></figcaption><i class="bg"></i></figure>
-        <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://61.4.185.223/min/i/weatherfc/city_test/img_17.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的“超级细胞”</a><p><span>¥129.00元</span><a href="#">横扫2009各大美容杂 志与网站的UV王推荐</a><a href="#" class="more">更多&gt;&gt;</a></p></figcaption><i class="bg"></i></figure>
+        <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://i.tq121.com.cn/i/weatherfc/city_test/img_15.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的“超级细胞”</a><p><span>¥129.00元</span><a href="#">横扫2009各大美容杂 志与网站的UV王推荐</a><a href="#" class="more">更多&gt;&gt;</a></p></figcaption><i class="bg"></i></figure>
+        <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://i.tq121.com.cn/i/weatherfc/city_test/img_16.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的“超级细胞”</a><p><span>¥129.00元</span><a href="#">横扫2009各大美容杂 志与网站的UV王推荐</a><a href="#" class="more">更多&gt;&gt;</a></p></figcaption><i class="bg"></i></figure>
+        <figure><a href="#" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="http://i.tq121.com.cn/i/weatherfc/city_test/img_17.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#">震撼壮美的“超级细胞”</a><p><span>¥129.00元</span><a href="#">横扫2009各大美容杂 志与网站的UV王推荐</a><a href="#" class="more">更多&gt;&gt;</a></p></figcaption><i class="bg"></i></figure>
           <div class="clear"></div>
       </div>
 <!--历史start-->
@@ -1146,7 +1146,7 @@ var observe24h_data = {"od":{"od0":"201310160900","od1":"北京_南郊观象台"
 
     <script>
       var cityid = "101010100";
-      W.use('http://61.4.185.223/min/j/weatherfc/city_main');
+      W.use('http://i.tq121.com.cn/j/weatherfc/city_main');
     </script>
   </body>
 </html>
