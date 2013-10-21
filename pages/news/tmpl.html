@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+<!--%Response.Output(ThisDocument.Item("TITLE"));%-->-<!--%java.util.Vector objAncestors1 = ThisChannel.Ancestors();Response.Output(ThisChannel.RootChannel().Name);%-->-中国天气网</title>
+<meta content="<!--%Response.Output(ThisDocument.Item("TITLE"));%-->,<!--%Response.Output(ThisDocument.Item("KEYWORD"));%-->,中国天气网" name="keywords">
+<meta content="<!--%Response.Output(ThisDocument.Item("LongTitle"));%-->" name="description">
+<link  rel="icon" href="http://www.weather.com.cn/m2/i/icon/faviconie9.ico?v=3" type="image/x-icon" />
+<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+<script>
+		W.css('http://i.tq121.com.cn/c/core.css','http://i.tq121.com.cn/c/common.css','http://i.tq121.com.cn/c/news/content_page.css');
+</script>
+<!--[if lt IE 7]>
+<script>
+    W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+      DD_belatedPNG.fix(".png");
+    });
+</script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script>W.js('http://i.tq121.com.cn/j/tool/html5shiv.js')</script>
+<![endif]-->
+</head><body>
+<!--#include virtual="/site2/html/pubm/header_top.htm"-->
+<!--#include virtual="/site2/html/pubm/header_s.htm"-->
+
+<!--  code block  -->
+<div class="contentpage_container clearfix">
+  <div class="topads clearfix">
+    <div class="ad_1"> <img src="http://placehold.it/115x90" alt="" /> </div>
+    <div class="ad_2"> <img src="http://placehold.it/727x90" alt="" /> </div>
+    <div class="ad_3"> <img src="http://placehold.it/115x90" alt="" /> </div>
+  </div>
+  <div class="top_contents clearfix">
+  <!--#include virtual="/site2/html/pubm/content_list_t01.htm"-->
+  <!--#include virtual="/site2/html/pubm/content_list_t02.htm"-->  
+  
+    
+   </div>
+  <div class="breadcrumb_search clearfix">
+    <ul class="breadcrumb">
+<li><a href="http://www.weather.com.cn/">中国天气网</a></li>   
+<!--%
+//当前位置
+java.util.Vector objAncestors = ThisChannel.Ancestors();
+for (int i=0;i<objAncestors.size();i++){
+	Channel objChannel =(Channel)objAncestors.get(i);
+	Response.Output(" <li class=\"divider\">&gt;</li><li><a href=\"" + objChannel.CoverPage + "\">" + objChannel.Name + "</a></li>");
+}
+Response.Output(" <li class=\"divider\">&gt;</li> <li><a href=\"" + ThisChannel.CoverPage + "\">" + ThisChannel.Name + "</a></li>");
+%-->
+
+    </ul>
+  </div>
+  <div class="contentcon clearfix">
+    <div class="col_1">
+      <div class="contentinner">
+        <div class="content_section">
+          <div class="content_section_topbar clearfix"> <em>
+          
+          <!--%
+//如果是XXXX-XX-XX格式，则取substring(0,10)；如果是XX-XX XX:XX:XX，则取substring(5,19)。
+Response.Output(TurboCMS.tools.Config.GetDateString((java.util.Date)ThisDocument.Item("PUBLISHDATE")).substring(0,19));
+%-->
+                  
+          
+              来源：
+<!--%
+java.util.ArrayList al = ThisDocument.DocumentSource();
+java.util.Iterator iter = al.iterator();
+TDLSource objSource =null;
+String sourceTemp = "";
+if(iter.hasNext()){
+   do{
+      objSource = (TDLSource)iter.next();
+      sourceTemp =  objSource.Source.toString();
+%-->
+        <!--%=objSource.Source%-->
+<!--%
+   }while(iter.hasNext());
+  objSource = null;
+}
+else
+{
+	
+	sourceTemp = "中国天气网";
+%-->
+
+
+中国天气网
+<!--%
+}
+al=null;
+%-->          
+       
+          </em>
+            <dl class="doctools">
+              <dt>收藏</dt>
+              <dd><a class="fav" href="#"></a></dd>
+              <dt>打印</dt>
+              <dd><a class="print" href="#"></a></dd>
+              <dt>字体</dt>
+              <dd class="fontsize"><a class="big" href="#">大</a><a class="medium" href="#">中</a><a class="small" href="#">小</a></dd>
+            </dl>
+          </div>
+          <div class="content_doc">
+            <h3>
+            <!--%
+		//文档字段:TITLE
+		if(!ThisDocument.Item("LONGTITLE").equals(""))
+		Response.Output(ThisDocument.Item("LongTITLE"));
+		else
+		Response.Output(ThisDocument.Item("TITLE"));
+		%-->
+            
+            </h3>
+            
+            <!--%
+		String imgids = ThisDocument.Item("imgid").toString();   //这是获取本文章相关联的图片集文章ID
+		int imgid = -1;
+		try{
+		imgid = Integer.parseInt(imgids);
+		}catch(Exception e){
+			imgid = -1;
+		}
+		Document aDoc = null;    //定义一个aDoc对象，用来获取所关联的图片集文章
+		if(imgid>0){
+			aDoc = ThisDocument.getDocById(imgid);    //当imgid大于0，用getDocById方法获取到所关联的图片集文章，该图片集的所有信息，就可以通过之前的方法取到了。
+		%-->
+		<div class="photoslide">
+		<div class="photocon image_big"> <img id="image_big" src="http://placehold.it/500x380" />
+			<div class="phototitle">
+			<div class="titletxt"><!--%=aDoc.Item("title")%--></div>
+			<div class="photonums"><span class="currentnum">00</span>/<span class="totalnum">00</span></div>
+			</div>
+			<div class="photodesc"><!--%=aDoc.Item("longtitle")%--></div>
+			<div class="tpbg"></div>
+			<div class="btbg"></div>
+			<div class="loading"><img src="/site2/m2/i/public/loading.gif" /></div>
+		</div>
+		<div class="photothumbs clearfix">
+			<div class="thumbnail">
+			<div class="thumbnailcon">
+                    <ul>
+		
+		<!--%
+			
+			Vector vm = aDoc.ImageSet();
+			if(vm.size()>0){
+			for(int i=0;i<vm.size();i++){
+				Image objImg = (Image)vm.get(i);
+		%-->
+			<li><img src="<!--%=objImg.BigFile.replaceAll(".jpg","_s.jpg")%-->"  data-big="<!--%=objImg.BigFile%-->" /><em></em></li>
+		<!--%
+				}
+			}
+				
+		%-->		
+			</ul>
+			</div>
+			</div>
+			<a href="#" class="nextbtn">
+			<div class="icon"></div>
+			</a> <a href="#" class="prevbtn">
+			<div class="icon"></div>
+			</a> </div>
+		</div>		
+		<!--%					
+		}
+		
+		if(!("").equals(ThisDocument.Item("VIDEO").toString())){
+		
+	    %-->
+            
+        <div class="video">
+        <p id="player1" style="text-indent:0;"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
+
+            </div>
+            <!--%
+	    }
+            Response.Output(ThisDocument.Item("CONTENT"));
+            %-->
+
+          </div>
+          
+          <div class="keywords">
+          
+
+      <!--%
+      if(!("").equals(ThisDocument.Item("ZUOZHE")))
+      {
+       
+       if(("|").equals(ThisDocument.Item("ZUOZHE").toString().substring(0,1))){
+              Response.Output("编辑：");
+              Response.Output(ThisDocument.Item("ZUOZHE").toString().substring(1));
+
+       
+        }else{
+        Response.Output("作者：");
+        Response.Output(ThisDocument.Item("ZUOZHE"));
+        }
+        
+       }
+	  else
+      {
+           Response.Output("编辑：");
+	//TurboCMS内容管理中用户TrueName的获取
+	try{
+		TurboCMS.user.User objUser = new TurboCMS.user.User();
+		objUser.LoadByUserName((String)ThisDocument.Item("Author"));
+		Response.Output(objUser.MSN);
+		objUser = null;
+	}catch(Exception eu){
+		Response.Output(ThisDocument.Item("Author"));
+	}
+	}
+	%-->
+                    
+          </div>
+          <div class="content_pages"> 
+        <!--%
+	//内容页分页    上一页  下一页
+	String pPage, nPage;
+	pPage = (String)ThisDocument.Item("PrevPage");
+	nPage = (String)ThisDocument.Item("NextPage");
+	int pNum = 0;
+	pNum = (int)Integer.parseInt(ThisDocument.Item("PageNum").toString());
+
+	Vector pages;
+	int flag=0;
+	pages = (Vector)ThisDocument.Item("Pages");
+	if(pages.size()>1){
+	if(!pPage.equals(""))
+		Response.Output("<a href=\"" + pPage + "\">上一页</a>");
+	else     Response.Output("上一页");
+	for(int i = 0;i<pages.size();i++){
+	flag++;
+	if(flag == pNum)Response.Output("<a href=\"" + pages.get(i) + "\">"+ flag +"</a>");
+	else Response.Output("<a href=\"" + pages.get(i) + "\">"+ flag +"</a>");
+
+	}
+	if(!nPage.equals(""))
+		Response.Output("<a href=\"" + nPage + "\">下一页</a>");
+	else     Response.Output("下一页");
+	}
+	%-->
+           
+        
+        </div>
+          
+          
+          
+        <!--%
+	if(("中国天气网").equals(sourceTemp))Response.Output("<div class=\"content_ft clearfix\"> <span class=\"cp\">转载请注明“来源：中国天气网” </span> <span class=\"editor\">转载请注明“来源：中国天气网” </span> </div>");
+	%-->
+         
+        
+        </div>
+        <div class="bottom_toolbar clearfix">
+          <dl class="doctools doctools_inverse">
+            <dt>收藏</dt>
+            <dd><a class="fav" href="#"></a></dd>
+            <dt>打印</dt>
+            <dd><a class="print" href="#"></a></dd>
+            <dt>字体</dt>
+            <dd class="fontsize"><a class="big" href="#">大</a><a class="medium" href="#">中</a><a class="small" href="#">小</a></dd>
+          </dl>
+          <dl class="sharebtns">
+            <dt>分享</dt>
+            <dd><a class="weibo" href="javascript:(function(){window.open('http://v.t.sina.com.cn/share/share.php?  
+    title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href)  
+    +'&source=bookmark','_blank','width=450,height=400');})()"></a><a class="qq" href="javascript:void(0);" onClick=" window.open('http://v.t.qq.com/share/share.php?title='+encodeURI(document.title)+'&url='+encodeURIComponent(location.href),'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );"></a><a class="renren" href="javascript:void((function(s,d,e){if(/xiaonei\.com/.test(d.location))return;var%20f='http://share.xiaonei.com/share/buttonshare.do?link=',u=d.location,l=d.title,p=[e(u),'&amp;title=',e(l)].join('');function%20a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent));"></a></dd>
+          </dl>
+        </div>
+        <div class="relatednews">
+          <h2>相关新闻</h2>
+          <ul class="clearfix">
+           <!--%
+		java.util.Vector relr = ThisDocument.RelativeArticles(14,"1");
+		if(relr.size()>0)
+		{
+			for(int i=0;i<relr.size();i++){
+				Link aLink =(Link)relr.get(i);
+				aDoc=aLink.GetDocument();
+				Response.Output("<li><a href=\"" + aDoc.Item("URL")+ "\" target=\"_blank\">"+aDoc.Item("TITLE")+"</a></li>");
+			}
+		}
+	%-->
+          </ul>
+        </div>
+      </div>
+      <!--#include virtual="/site2/html/pubm/content_list_lm01.htm"-->
+      
+      <div class="bottom_gad"> <a href="#" target="_blank"><img src="http://placehold.it/675x90" /></a> </div>
+    </div>
+    <div class="col_2">
+      <div class="side_ablock"> <a href="#hotnews"><img src="http://placehold.it/300x250" /></a> </div>
+      <!-- code block -->
+      <!--#include virtual="/site2/html/pubm/content_list_r01.htm"-->
+      <!-- code block -->
+      <div class="sidetab">
+        <ul class="tabs clearfix nav nav-tabs" id="sidetab2">
+          <li class="active"><a href="#trips">生活旅游</a></li>
+          <li><a href="#science">气候科普</a></li>
+        </ul>
+        <div class="tab-content">
+          <!--#include virtual="/site2/html/pubm/content_list_r0201.htm"-->
+          <!--#include virtual="/site2/html/pubm/content_list_r0202.htm"-->
+        </div>
+      </div>
+      <!-- code block -->
+      <!--#include virtual="/site2/html/pubm/content_list_r03.htm"-->
+      <!-- code block -->
+      <!--#include virtual="/site2/html/pubm/content_list_r04.htm"-->
+      <!-- code block -->
+      <div class="side_ablock2"> <a href="#hotnews"><img src="http://placehold.it/300x250" /></a> </div>
+      <!-- code block -->
+      <!--#include virtual="/site2/html/pubm/right_service.htm"-->
+      
+    </div>
+  </div>
+</div>
+<!--  code block  -->
+<!--#include virtual="/site2/html/pubm/footer_l.htm"-->
+<!--#include virtual="/site2/html/pubm/area_prov.htm"-->
+<!--#include virtual="/site2/html/pubm/fast_nav_weatherfc.htm"-->
+
+
+<script>
+var cityid = "101010100";
+
+W.use('j/plugs/jquery.lazyload.js',function(){
+		$('img.lazy').lazyload();
+});
+W(function(){
+	W.use(['j/base.js','j/tool/nav.js','j/tool/tab.js','j/news/index.js'],function(){
+	   $('#sidetab1 a,#sidetab2 a,#sidetab3 a').click(function (e) {
+	      e.preventDefault();
+	      $(this).tab('show');
+	   });
+	});
+	if($('#player1').length > 0){
+		W.use('j/tool/swfobject.js',function(){
+		    var s1 = new SWFObject("http://i.tq121.com.cn/s/flvplayer.swf","single","500","490","7"); 
+			s1.addParam("allowfullscreen","true");s1.addParam("wmode","transparent");
+			s1.addVariable("file","http://www.weather.com.cn<!--%Response.Output(ThisDocument.Item("VIDEO"));%-->");
+			s1.addVariable("image","<!--%Response.Output(ThisDocument.Item("CMSPIC"));%-->");
+			s1.addVariable("width","500");s1.addVariable("height","490");
+			s1.addVariable("autostart","false");s1.addVariable("repeat","false");
+			s1.addVariable("largecontrols","false");s1.addVariable("smoothing","true");
+			s1.write("player1"); 
+	    });
+    }
+})
+</script>
+</body>
+</html>

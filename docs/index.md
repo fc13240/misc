@@ -15,3 +15,9 @@
 ### 重要注意事项说明
 1. 当页面要使用`<base>`标签时，考虑IE6[参考](http://stackoverflow.com/questions/1889076/is-it-recommended-to-use-the-base-html-tag)，要使用`<base href="http://www.weather.com.cn"/><!--[if lte IE 6]></base><![endif]-->`
 
+2. 引入`html5shiv.js`时要同步引入，为保证版本号一致，引入方式如下：
+```
+<!--[if lt IE 9]>
+<script>W.js('http://i.tq121.com.cn/j/tool/html5shiv.js')</script>
+<![endif]-->
+```
