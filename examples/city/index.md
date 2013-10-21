@@ -1,5 +1,4 @@
 # 城市三级联动
-### 1. 以整个浏览器为容器 
 
 <div class="example_container">
     <style class="example_css">
