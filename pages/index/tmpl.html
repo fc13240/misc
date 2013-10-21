@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="dns-prefetch" href="http://i.tq121.com.cn">
+<meta charset="utf-8" />
+<title>中国天气网-专业天气预报、气象服务门户</title>
+<meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
+<meta name="description" content="中国天气网为您提供实时全国天气气象信息,及时发布天气预报、灾害预警、气象云图、旅游天气、台风、暴雨雪等气象信息，为我国的生产生活提供全面精确的气象服务" />
+<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<link rel="stylesheet" href="http://i.tq121.com.cn/c/common.css" />
+<link rel="stylesheet" href="http://i.tq121.com.cn/c/index/index.css" />
+<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+<!--[if lt IE 7]>
+<script>
+W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+  DD_belatedPNG.fix(".video dl dd i,.focusImg span i");
+});
+</script>
+<![endif]-->
+<base target="_blank" />
+</head>
+<body>
+<!--#include virtual="/site2/html/pubm/header_top.htm"-->
+
+
+<!--头-->
+<div id="search">
+  <div class="midBlock">
+    <h1><a href="#" >中国天气</a></h1>
+
+<div id="cityset">
+    <dl id="addCity">
+      <dt>+</dt>
+      <dd>定制城市</dd>
+    </dl>
+</div>
+
+    <p class="pp">服务社会&nbsp;&nbsp;造福人民&nbsp;&nbsp;<a title="中国气象局" href="http://www.cma.gov.cn/">中国气象局</a></p>
+
+
+<!--搜索start-->
+<!--#include virtual="/site2/html/pubm/search.shtml"-->
+<!--
+<span>
+      <input class="text" type="text">
+      </span><span>
+      <input class="button" type="submit" value="搜索">
+      </span> 
+-->
+<!--搜索end-->
+
+
+<!--start顶部定制-->
+<div class="hotCities">
+	<p><input type="text" id="cityName" class="inputTxt cityname" maxlength="100" placeholder="输入城市名、全拼、简拼、电话区号、邮编查询" title="输入城市名、全拼、简拼、电话区号、邮编查询">
+	<input type="text" id="nickname" class="inputTxt nick" placeholder="输入自定义名称" title="输入自定义名称" maxlength="100">
+	<span id="cancel" class="btn">清除</span>
+</p>
+	<p><input type="text" id="cityName" class="inputTxt cityname" maxlength="100" placeholder="输入城市名、全拼、简拼、电话区号、邮编查询" title="输入城市名、全拼、简拼、电话区号、邮编查询">
+	<input type="text" id="nickname1" class="inputTxt nick" placeholder="输入自定义名称" title="输入自定义名称" maxlength="100">
+	<span id="cancel1" class="btn">清除</span>
+</p>
+	<p><input type="text" id="cityName" class="inputTxt cityname" maxlength="100" placeholder="输入城市名、全拼、简拼、电话区号、邮编查询" title="输入城市名、全拼、简拼、电话区号、邮编查询">
+	<input type="text" id="nickname2" class="inputTxt nick" placeholder="输入自定义名称" title="输入自定义名称" maxlength="100">
+	<span id="cancel2" class="btn">清除</span>
+</p>
+
+<span id="add" class="btn">保存</span>
+<span id="canc" class="btn">取消</span>
+
+	<ul class="show" style="display: none;">
+	</ul>
+</div>
+<!--end顶部定制-->
+
+<!--
+    <div class="selCity">
+      <p><b>+</b></p>
+      <p class="droplist"><span class="province"> <b>选择省</b> <span class="provinceItem"></span> <i>&nbsp;</i> </span> <span class="city"> <b data-role="0">选择市</b> <span class="cityItem"></span> <i>&nbsp;</i> </span> </p>
+      <p class="title">自定义名称</p>
+      <p>
+        <input type="text" value="妈妈（6个字以内）" class="name">
+        <span class="queryBtn">确定</span></p>
+    </div>
+-->
+
+  </div>
+</div>
+<div id="nav">
+  <dl>
+    <dt>
+      <h3><a>预警</a></h3>
+    </dt>
+    <dd>
+      <p><a href="http://www.weather.com.cn/alarm/index.shtml">地图</a></p>
+      <p><a href="http://www.weather.com.cn/fzjz/index.shtml">减灾</a></p>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <h3><a>预报</a></h3>
+    </dt>
+    <dd>
+      <p><a href="http://www.weather.com.cn/index/zxqxgg/wlstyb.shtml">国内</a><a href="http://www.weather.com.cn/index/zxqxgg/gwtqyb.shtml">国际</a></p>
+      <p><a>机场</a><a href="http://tourism.weather.com.cn/">景区</a></p>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <h3><a>服务</a></h3>
+    </dt>
+    <dd>
+      <p><a href="http://www.weather.com.cn/static/html/product/index.shtml">产品</a><a href="http://www.weather.com.cn/life/index.shtml">生活</a></p>
+      <p><a href="http://tourism.weather.com.cn/">旅游</a><a href="http://www.xn121.com/">农业</a></p>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <h3><a>监测</a></h3>
+    </dt>
+    <dd>
+      <p><a href="http://www.weather.com.cn/static/html/product_wx.shtml">卫星</a><a href="http://www.weather.com.cn/static/html/product_ld.shtml">雷达</a></p>
+      <p><a href="http://www.weather.com.cn/static/product.php?class=JC_WDSK_DW_24">实况</a><a>拍客</a></p>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <h3><a>资讯</a></h3>
+    </dt>
+    <dd>
+      <p><a href="http://www.weather.com.cn/news/index.shtml">新闻</a><a href="http://www.weather.com.cn/photo/gqt/index.shtml">图片</a></p>
+      <p><a href="http://www.weather.com.cn/zt/index.shtml">专题</a><a href="http://www.weather.com.cn/video/index.shtml">视频</a></p>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <h3><a>科普</a></h3>
+    </dt>
+    <dd>
+      <p><a>少儿</a><a href="http://www.weather.com.cn/space/index.shtml">空间天气</a></p>
+      <p><a href="http://baike.weather.com.cn/">百科</a><a href="http://www.weather.com.cn/climate/index.shtml">气候变化</a></p>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <h3><a>互动</a></h3>
+    </dt>
+    <dd>
+      <p><a href="http://club.weather.com.cn/">社区</a><a href="http://t.sina.com.cn/weather01/">微博</a></p>
+      <p><a>我的气象台</a></p>
+    </dd>
+  </dl>
+  <dl class="last">
+    <dt>
+      <h3><a>应用</a></h3>
+    </dt>
+    <dd>
+      <p><a href="http://3g.weather.com.cn/">天气通</a><a href="#">Mobile</a></p>
+      <p><a href="http://cj.weather.com.cn/">插件</a><a href="#">商店</a><a href="#">桌面</a></p>
+    </dd>
+  </dl>
+</div>
+
+
+
+<!--include virtual="/site2/html/pubm/header_s_index.htm"-->
+<!--头end-->
+
+
+<div id="topNews">
+<!--要点新闻-->
+  <div class="news">
+    <!--#include virtual="/site2/html/pubm/index_list_m01.htm"-->
+    <!--#include virtual="/site2/html/pubm/index_list_m02.htm"-->
+  </div>
+<!--要点新闻-->
+
+  <div class="leftBlock">
+    <div class="focusImg">
+      <ul style="width:1500px;">
+<!--滚动图start-->
+        <!--#include virtual="/site2/html/pubm/index_list_l0101.htm"-->
+        <!--#include virtual="/site2/html/pubm/index_list_l0102.htm"-->
+<!--热点专题end-->
+      </ul>
+      <span><i class="on">1</i><i>2</i><i>3</i><i>4</i></span> </div>
+<!--热点专题start-->
+    <!--#include virtual="/site2/html/pubm/index_list_l02.htm"-->
+<!--热点专题end-->
+
+  </div>
+  <div class="rightBlock">
+
+<!--灾害预警start-->
+<div id="alarm"></div>
+<!--灾害预警end-->
+
+    <div class="ad"> <img src="/site2/n/i/index/img05.jpg"> </div>
+
+<!--指数定制start-->
+<!--#include virtual="/site2/html/pubm/dingzhi_index_index.htm"-->
+<!--指数定制end-->
+
+  </div>
+</div>
+<div class="block">
+  <div class="announcement">
+    <h3><a href="#">最新气象公告</a></h3>
+    <ul>
+<!--最新气象公告start-->
+<!--#include virtual="/site2/html/pubm/index_list_m03.htm"-->
+<!--#include virtual="/site2/html/index/zxqxgg/wlstyb_new_index.htm"-->
+<!--#include virtual="/site2/html/index/zxqxgg/wlshtyb_new_index.htm"-->
+<!--#include virtual="/site2/html/index/zxqxgg/kqwrqxtj_new_index.htm"-->
+<!--#include virtual="/site2/html/index/zxqxgg/glqxyb_new_index.htm"-->
+<!--最新气象公告end-->
+
+
+       </ul>
+  </div>
+<!--天气视频start-->
+  <!--#include virtual="/site2/html/pubm/index_module_l01.htm"-->
+<!--天气视频end-->
+
+<!--天气视频主持人start-->
+  <!--#include virtual="/site2/html/pubm/index_module_l02.htm"-->
+<!--天气视频主持人end-->
+
+  
+  <div class="ad"> <img src="/site2/n/i/index/img07.jpg"> </div>
+</div>
+<div class="block">
+  <div class="l_ad"> <img src="/site2/n/i/index/img15.jpg"> </div>
+
+<!--生活天气start-->
+   <!--#include virtual="/site2/html/pubm/index_list_lm01.htm"-->
+<!--生活天气end-->
+
+  <div class="rightBlock">
+<!--专家在线start-->
+  <!--#include virtual="/site2/html/pubm/index_list_r01.htm"-->
+<!--专家在线end-->
+  
+    <div class="s_ad"> <img src="/site2/n/i/index/img19.jpg"> </div>
+<!--微博start-->
+    <div class="weibo"> <a id="sina" href="http://t.sina.com.cn/weather01/" target="_blank">天气网新浪微博</a><a id="qq" href="http://e.t.qq.com/chinaweather" target="_blank">天气网腾讯微博</a> </div>
+<!--微博end-->  
+</div>
+</div>
+<div class="block">
+
+<!--旅游天气start-->
+   <!--#include virtual="/site2/html/pubm/index_list_lm02.htm"-->
+<!--旅游天气end-->
+
+  <div class="rightBlock" style="top:-28px;">
+
+<!--热门景点start-->
+  <!--#include virtual="/site2/html/pubm/index_prog_r01.htm"-->
+<!--热门景点end-->
+
+    <div class="ad2"> <img src="/site2/n/i/index/img28.jpg"> </div>
+
+<!--排行start-->
+    <div class="rank">
+      <h3><a>排行</a><span><a class="on">今日最低气温</a><a>昼夜温差</a><a>24小时降水</a></span></h3>
+       <!--#include virtual="/site2/html/pubm/index_prog_r0201.htm"-->
+       <!--#include virtual="/site2/html/pubm/index_prog_r0202.htm"-->
+       <!--#include virtual="/site2/html/pubm/index_prog_r0203.htm"-->
+     </div>
+<!--排行end-->
+
+  </div>
+  <div class="clear"></div>
+
+<!--气候变化start-->
+  <!--#include virtual="/site2/html/pubm/index_list_lm03.htm"-->
+<!--气候变化end-->
+  
+  <div class="l_ad" style="margin-top:10px;"> <img src="/site2/n/i/index/img29.jpg"> </div>
+
+<!--国际天气start-->
+    <!--#include virtual="/site2/html/pubm/index_list_lm04.htm"-->
+<!--国际天气end-->  
+  
+  
+</div>
+<div class="block">
+<!--气象产品start-->
+<!--#include virtual="/site2/html/pubm/index_module_lm01.htm"-->
+<!--气象产品end--> 
+
+  <div class="rightBlock" style="top:0px;*top:2px;_top:18px;">
+    <div class="ad3"> <img src="/site2/n/i/index/img31.jpg"> </div>
+
+<!--气象知识start-->
+    <!--#include virtual="/site2/html/pubm/index_list_r02.htm"-->
+<!--气象知识end-->
+
+<!--气象服务start-->
+    <!--#include virtual="/site2/html/pubm/right_service.htm"-->
+<!--气象服务end-->
+
+  </div>
+<!--高清图集start-->
+    <!--#include virtual="/site2/html/pubm/index_list_lm05.htm"-->
+<!--高清图集end-->
+</div>
+<!--页尾start-->
+<!--#include virtual="/site2/html/pubm/footer_l.htm"-->
+<!--页尾end-->
+
+<!--右侧浮动快速入口start-->
+<!--#include virtual="/site2/html/pubm/fast_nav_index.htm"-->
+<!--右侧浮动快速入口end-->
+
+<!--顶部省级end-->
+<!--#include virtual="/site2/html/pubm/area_prov.htm"-->
+<!--顶部省级end-->
+
+<script>
+			var cityid = "101080100";
+			//页面普通模块
+			W.use('j/index/index_main.js');
+</script>
+</body>
+</html>

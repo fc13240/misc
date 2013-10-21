@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><!--%Response.Output(ThisDocument.Item("TITLE"));%-->-<!--%java.util.Vector objAncestors1 = ThisChannel.Ancestors();Response.Output(ThisChannel.RootChannel().Name);%-->-中国天气网</title>
+	<meta property="qc:admins" content="15766124076751405263756367" />
+	<meta name="keywords" content="<!--%Response.Output(ThisDocument.Item("TITLE"));%-->,<!--%Response.Output(ThisDocument.Item("KEYWORD"));%-->,中国天气网" />
+	<meta name="description" content="<!--%Response.Output(ThisDocument.Item("LongTitle"));%-->" />
+	<link  rel="icon" href="http://www.weather.com.cn/m2/i/icon/faviconie9.ico?v=3" type="image/x-icon" />
+	<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+	<script>
+		W.css('http://i.tq121.com.cn/c/core.css','http://i.tq121.com.cn/c/common.css','http://i.tq121.com.cn/c/image/index.css');
+	</script>
+	<!--[if lt IE 7]>
+    <script>
+        W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+          DD_belatedPNG.fix(".png");
+        });
+    </script>
+    <![endif]-->
+	<!--[if lt IE 9]>
+	<script>W.js('http://i.tq121.com.cn/j/tool/html5shiv.js')</script>
+	<![endif]-->
+</head>
+<body>
+	<!--#include virtual="/site2/html/pubm/header_top.htm"-->
+	<!--#include virtual="/site2/html/pubm/header_s.htm"-->
+<!--  code block  -->
+	<div class="image_container">
+		<div class="breadcrumb_search clearfix">
+		<ul class="breadcrumb">
+			
+		<li><a href="http://www.weather.com.cn/">中国天气网</a></li>
+		<!--%
+		//当前位置
+		java.util.Vector objAncestors = ThisChannel.Ancestors();
+		for (int i=0;i<objAncestors.size();i++){
+			Channel objChannel =(Channel)objAncestors.get(i);
+			Response.Output(" <li class=\"divider\">&gt;</li> <li><a href=\"" + objChannel.CoverPage + "\">" + objChannel.Name + "</a></li>");
+		}
+		Response.Output(" <li class=\"divider\">&gt;</li> <li><a href=\"" + ThisChannel.CoverPage + "\">" + ThisChannel.Name + "</a></li>");
+		%-->	
+		</ul>
+		
+		<!--#include virtual="/site2/html/pubm/right_search.htm"-->
+		
+		</div>
+		<!--  code block  -->
+		<div class="image_hd clearfix">
+			<div class="title">
+				<h2><!--%=ThisDocument.Item("Title")%--><span><!--%=MyUtil.formatDate((java.util.Date)ThisDocument.Item("publishdate"),"yyyy年MM月dd日 HH:mm")%--></span></h2>
+				<p>
+				<!--%
+				String su=(String)ThisDocument.Item("CMSSUMMARY");
+				if(su.equals(""))su=(String)ThisDocument.Item("LONGSUM");
+				Response.Output(su);
+				%-->
+				（来源:&nbsp;
+				
+				<!--%
+				java.util.ArrayList al = ThisDocument.DocumentSource();
+				java.util.Iterator iter = al.iterator();
+				TDLSource objSource =null;
+				String sourceTemp = "";
+				if(iter.hasNext()){
+				do{
+				objSource = (TDLSource)iter.next();
+				sourceTemp =  objSource.Source.toString();
+				%-->
+					<!--%=objSource.Source%-->
+				<!--%
+				}while(iter.hasNext());
+				objSource = null;
+				}
+				else
+				{
+					
+				sourceTemp = "中国天气网";
+				%-->
+
+
+				中国天气网
+				<!--%
+				}
+				al=null;
+				%-->       
+				）
+				
+				</p>
+			</div>
+			<ul class="image_btns">
+				<li class="pages">
+					<div class="pagenumbs">
+						<div class="currentnum">00</div>
+						<div class="totalnum">00</div>
+					</div>
+				</li>
+				<li class="prev">
+					<a href="#"></a>
+				</li>
+				<li class="play_pause play">
+					<a href="#"></a>
+				</li>
+				<li class="next">
+					<a href="#"></a>
+				</li>
+			</ul>
+		</div>
+		<!--  code block  -->
+		<div class="image_bd">
+			<div class="image_big">
+				<img id="image_big" src="/site2/n/i/blank.gif" />
+				<div class="prev"></div>
+				<div class="next"></div>
+				<div class="loading"><img src="/site2/n/i/image_loading.gif" align="加载中..." /></div>
+			</div>
+			<div class="slides_end clearfix" id="slides_end">
+			    <div class="slides_end_l">
+			        <h5>此图集已浏览完毕</h5>
+			        <p class="timedesc">页面将在<span class="next_delay" id="next_delay">10</span>秒后自动播放下一组图片</p>
+			        <div class="slides_end_buttons">
+			        <!--%
+				Document preDoc = ThisDocument.getDocument(1);//当前频道前一篇
+				Document nextDoc = ThisDocument.getDocument(-1);//当前频道后一篇
+				String preUrl="#";
+				String nextUrl="#";
+				if(preDoc!=null)preUrl=preDoc.Item("URL").toString();
+				if(nextDoc!=null)nextUrl=nextDoc.Item("URL").toString();
+				%-->
+			            <a href="#" class="slides_end_replay">重新播放</a><a href="<!--%=nextUrl%-->" class="slides_end_nextgroup">下一组图集</a>
+			        </div>
+					<!--#include virtual="/site2/html/pubm/imageset_list_c01.htm"-->
+			    </div>
+			    <div class="slides_end_r">
+                    <img src="http://placehold.it/300x250" />
+                </div>
+			</div>
+			<div class="image_desc">
+				<div class="desc_btn">图片摘要</div>
+				<div class="desc">
+					<table>
+						<tr><td id="photo_desc"></td></tr>
+					</table>
+					<div class="bg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="image_copyright">
+		<!--%
+		if(("中国天气网").equals(sourceTemp))Response.Output("（本文版权归中国天气网所有，未经许可不得翻译或转载。）");
+		%-->
+		
+		</div>
+		<div class="image_pager clearfix">
+			<a href="<!--%=preUrl%-->" class="grouplink">上一组</a>
+			<div class="thumbnail">
+				<a href="#" class="prevbtn"></a>
+				<div class="thumbnailcon">
+					<ul>
+					<!--%
+					java.util.Vector imageV=ThisDocument.ImageSet();
+					for(int i=0;i<imageV.size();i++){
+						Image temp=(Image)imageV.get(i);
+							Response.Output("<li><img src=\""+temp.BigFile.replaceAll(".jpg","_s.jpg")+"\" data-big=\""+temp.BigFile+"\"  data-desc=\""+temp.Title+"\" /><em></em></li>");
+					}
+					%-->
+    					</ul>
+				</div>
+				<a href="#" class="nextbtn"></a>
+			</div>
+			<a href="<!--%=nextUrl%-->" id="nextgrouplink" class="grouplink">下一组</a>
+			<div class="share">
+				<a href="#" id="sharebtn" class="sharebtn"></a>
+				<div id="jiathis"></div>
+			</div>
+			<div class="download">
+				<a href="#"></a>
+			</div>
+		</div>
+		<!--  code block  -->
+		<div class="morephotos">
+		    <h3>其它图集</h3>
+		    <div class="clearfix">
+		    <!--#include virtual="/site2/html/pubm/imageset_list_lm01.htm"-->
+		        
+		        <div class="ad">
+		            <img class="lazy" src="http://placehold.it/300x250" />
+		        </div>
+		    </div>
+		</div>
+	</div>
+<!--  code block  -->
+<!--#include virtual="/site2/html/pubm/footer_l.htm"-->
+<!--#include virtual="/site2/html/pubm/area_prov.htm"-->
+<!--#include virtual="/site2/html/pubm/fast_nav_weatherfc.htm"-->
+	<script>
+	/*site global variable*/
+    var cityid = "101080100";
+
+	W(function(){
+		W.use(['j/plugs/Selectyze.jquery.js','j/base.js','j/tool/nav.js','j/tool/area.js','j/image/index.js'],function(){
+			W.citysearch.ini();
+		});
+	})
+	W.use('j/plugs/jquery.lazyload.js',function(){
+		$('img.lazy').lazyload();
+	});
+	</script>
+<script type="text/javascript" src="http://c.wrating.com/a1.js"></script>
+<script type="text/javascript" src="/site2/html/tongji/article.js"></script>
+</body>
+</html>
