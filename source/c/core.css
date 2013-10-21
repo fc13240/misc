@@ -47,7 +47,7 @@ input, button, select{
 	float: right;
 	display: inline;
 }
-body{background-color:#EEEEEE;background-attachment:fixed;background-position:center top;background-repeat:no-repeat;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
+body{background-color:#fff;background-attachment:fixed;background-position:center top;background-repeat:no-repeat;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
 *{padding:0px;margin:0px;border:0;}
 ul{list-style:none;}
 a{text-decoration:none;color:#252525;}

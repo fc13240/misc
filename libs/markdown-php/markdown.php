@@ -52,7 +52,7 @@ if($arr[1]){
         <script src="/source/j/core.js"></script>
         <script>(function(){
         	var base = W.data.base;
-        	W.css(base+'c/reset.css',base+'c/core.css',base+'../libs/css/markdown.css',base+'../libs/css/highlight.css');
+        	W.css(base+'c/core.css',base+'../libs/css/markdown.css',base+'../libs/css/highlight.css');
         })();</script>
         <style>
         .main_container{width:980px;margin: 0 auto;border: 1px solid white;/*防止子元素margin影响*/}

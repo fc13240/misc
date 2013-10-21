@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+img {
+	border: none;
+}
+
+.RadarSatellit ul h1 {
+	color: #000;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.shipinc {
+	margin-bottom: 10px;
+}
+
+.shipinc p {
+	text-indent: 2em;
+	line-height: 22px;
+	color: #333333;
+}
+
+.xgnews {
+	margin-bottom: 10px;
+	border: 1px solid #c9c9c9;
+	height: 218px;
+	overflow: hidden;
+}
+
+.xgnews h1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+	border-bottom: 1px solid #c9c9c9;
+	background: #fff;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+}
+
+.xgnews dl {
+	width: 117px;
+	float: left;
+	margin-left: 11px;
+	margin-top: 15px;
+	display: inline;
+	overflow: hidden;
+	height: 160px;
+}
+
+.xgnews dl dd {
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+}
+
+.xgnews dl dd span {
+	color: #808080;
+}
+
+.xgnews dl dd a {
+	color: #3f66a1;
+	font-weight: bold;
+}
+
+.xgnews dl dt {
+	width: 115px;
+	height: 100px;
+}
+
+.xgnews dl dt a img {
+	width: 115px;
+	height: 100px;
+}
+
+.ric {
+	text-align: right;
+	font-weight: bold;
+	font-size: 14px;
+	color: #333333;
+}
+
+.headtou {
+	height: 45px;
+	line-height: 40px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.headtou h1 {
+	border-bottom: 1px solid #B7B7B7;
+	display: inline;
+	float: left;
+	font-size: 24px;
+	font-weight: bolder;
+	line-height: 1.8;
+	width: 960px;
+	margin-bottom: 10px;
+}
+
+.maibx h3 {
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: -10px;
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.maibx h3 span {
+	right: 0px;
+	position: absolute;
+}
+
+#colNav {
+	margin: 0 auto;
+	width: 960px;
+	height: 32px;
+	background: url(http://comment.weather.com.cn/turboComment/images/logo.gif) left top no-repeat #EBEFF7;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+#colNav h1 {
+	text-indent: 118px;
+	height: 30px;
+}
+
+#colNav ul {
+	position: absolute;
+	right: 5px;
+	top: 8px;
+}
+
+#colNav ul li {
+	float: left;
+	padding: 0 10px;
+}
+
+#colNav ul li.home {
+	background: url(http://comment.weather.com.cn/turboComment/images/bg_01.gif) -530px -253px no-repeat;
+}
+
+.locationSearch .location {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+}
+
+.dWeatherRanking ul.dWeatherRankingBox {
+	background: url(/m2/i/video/ds.gif) no-repeat scroll 0 5px transparent;
+}
+
+.source {
+	color: #333;
+	height: 30px;
+	line-height: 30px;
+}
+
+.locationSearch .search {
+	width: 367px;
+}
+
+.locationSearch .search .iframeDiv {
+	width: 280px;
+}
+
+.RadarSatelliteimone dl {
+	width: 120px;
+	height: 110px;
+	float: left;
+	margin-top: 10px;
+	display: inline;
+	margin-left: 20px;
+}
+
+.RadarSatelliteimone dl dd {
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.RadarSatelliteimone dl dt img {
+	width: 120px;
+	height: 90px;
+}
+
+.RadarSatellit {
+	margin-top: 0px;
+}
+
+.life dl dd h2 {
+	background: none;
+}
+
+.search .btn {
+	float: left;
+	width: 53px;
+}
