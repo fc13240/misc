@@ -109,11 +109,12 @@ define(function(require){
 			$.each(zs_arr,function(i,v){
 				var item = v;
 				var zs = item[3].split('-');
-				$.getJSON(dataUrl+item[0]+'.html',function(data){
+				var id = item[0];
+				$.getJSON(dataUrl+id+'.html',function(data){
 					var html = '<dl>'+
 						      '<dt>'+
-						        '<a>'+(item[2]||item[1])+'</a>'+
-						        '<a class="btn-dz" data-id="'+item[0]+'" data-name="'+item[1]+'">[定制]</a>'+
+						        '<a href="/weatherfc/'+id+'.shtml">'+(item[2]||item[1])+'</a>'+
+						        '<a class="btn-dz" data-id="'+id+'" data-name="'+item[1]+'">[定制]</a>'+
 						      '</dt>'+
 						      '<dd>';
 						      var select_zs = [];
@@ -122,7 +123,7 @@ define(function(require){
 						      	var val = zs_val[vv+'_name'];
 						      	select_zs.push([vv,val]);
 						      	var desc = zs_val[vv+'_name'];
-						      	html += '<a><span title="'+desc+'">'+desc+'</span><b>'+zs_val[vv+'_hint']+'</b></a>';
+						      	html += '<a href="/indexfc/'+vv+'/'+id+'.shtml"><span title="'+desc+'">'+desc+'</span><b>'+zs_val[vv+'_hint']+'</b></a>';
 						      });
 					html += '</dd>'+
 						    '</dl>';
