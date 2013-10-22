@@ -1,5 +1,6 @@
 define(function(require){
 	require('../c/m_jia.css');
+	require('./global');
 	var conf = [
 		{
 			'n': '新浪微博',
@@ -123,16 +124,6 @@ define(function(require){
 		}
 	}
 	var win = window;
-	function jiathis_addBookmark(a) {
-		var b = parent.location.href;
-		if (win.sidebar) {
-			win.sidebar.addPanel(a, b, "")
-		} else if (doc.all) {
-			win.external.AddFavorite(b, a);
-	    } else {
-			alert('请按 Ctrl + D 为你的浏览器添加书签！');
-		}
-	}
 	function render(){
 		var html = '';
 		for(var i = 0,j=conf.length;i<j;i++){
@@ -150,7 +141,7 @@ define(function(require){
 				$this.click(jiathis_copyUrl)
 			}else if(en == 'fav'){
 				$this.click(function(){
-					jiathis_addBookmark(doc.title)
+					W.util.addFav(doc.title)
 				})
 			}else{
 				if(en == 'jiathis'){

@@ -47,5 +47,18 @@
 			}
 			return Child;
 		}
+		var win = window;
+		util.addFav = function(a) {
+			var b = win.location.href;
+			if (win.sidebar && win.sidebar.addPanel) {
+				win.sidebar.addPanel(a, b, "")
+			} else if (win.external && win.external.AddFavorite) {
+				win.external.AddFavorite(b, a);
+		    } else if (win.external && win.external.msAddSiteMode) {
+				win.external.msAddSiteMode(b, a);
+		    }else {
+				alert('请按 Ctrl + D 为你的浏览器添加书签！');
+			}
+		}
 	})(global.util||(global.util = {}));
 })(this.W || (this.W = {}));
