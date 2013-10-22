@@ -189,9 +189,7 @@
 }
 
 .rank {
-    width: 300px;
     background-color: #e8e8e8;
-    margin-top: 10px;
 }
 
 .rank h3 {
@@ -233,7 +231,6 @@
 }
 
 .rank ul {
-    width: 300px;
 }
 
 .rank ul.on {
