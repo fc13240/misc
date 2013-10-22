@@ -10,8 +10,8 @@ define(function(require){
 	var CODE_RE = /^(\d{5})(\d{2})(\d{2})$/
 	function City(config){
 		this._conf = config = $.extend({},defaultConfig,config);
-		var $province = config.prov;
-		if($province){
+		var $province = $(config.prov);
+		if($province.length){
 			var selectedId = config.selectedId;
 			var m;
 			var selectedProvId = selectedCityId = selectedCountyId = null;
@@ -20,8 +20,8 @@ define(function(require){
 				selectedCityId = m[2];
 				selectedCountyId = m[3];
 			}
-			var $city = config.city;
-			var $county = config.county;
+			var $city = $(config.city);
+			var $county = $(config.county);
 			var initNum = 0;
 			var _initCity = function(){
 				_initData(dataUrl+'provshi/'+$province.val()+'.html',$city,selectedCityId,_initCounty);
