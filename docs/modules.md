@@ -17,3 +17,5 @@
 针对网站广告严重堵塞页面的解决方案
 
 ### [城市三级联动](#/examples/city/index.md){.ajax-link .md}
+
+### [jiathis分享模块](#/examples/jia/index.md){.ajax-link .md}
