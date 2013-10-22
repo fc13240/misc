@@ -566,7 +566,9 @@
 <!--右侧浮动快速入口end-->
 <script>
 var cityid = "101080100";
-W.use(['j/base.js','j/tool/nav.js']);
+W(function(){
+  W.use(['j/base.js','j/tool/nav.js']);
+});
 W.use('j/tool/tab',function(){
   W(function(){
      $('#sidetab1 a,#sidetab2 a,#sidetab3 a').click(function (e) {
