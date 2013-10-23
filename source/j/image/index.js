@@ -290,5 +290,4 @@ $(document).ready(function() {
   			$nowThis.find("div").css('display','block');
 	});
 
-
 });
