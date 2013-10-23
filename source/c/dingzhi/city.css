@@ -34,7 +34,7 @@
 	padding: 10px;
 }
 .form div{
-	height: 25px;
+	height: 30px;
 }
 .form a{
 	display: inline-block;
@@ -62,8 +62,10 @@
 	display: none;
 }
 .form input{
-	padding: 6px 0px 5px 5px;
+	padding: 5px 0px 4px 5px;
 	margin-left: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 5px rgba(10,10,10,0.3);
 }
 .form input.location{
 	width: 260px;
@@ -73,4 +75,5 @@
 }
 .block-right{
 	width: 300px;
+	padding-top: 80px;
 }
