@@ -98,6 +98,7 @@
 					dataType: 'json',
 					success: function(data) {
 						$("#city").empty();
+						var newSelect = $("<select id='district'></select>");
 						$.each(data, function(i, items) {
 							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
 						})
@@ -177,6 +178,7 @@
 					dataType: 'json',
 					success: function(data) {
 						$("#city").empty();
+						var newSelect = $("<select id='district'></select>");
 						$.each(data, function(i, items) {
 							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
 						})
