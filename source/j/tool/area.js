@@ -9,7 +9,12 @@
 			var stationUrl = baseUrl + 'station/';
 			var $chinaURL = baseUrl + 'china.html';
 			var $provURL = baseUrl +'provshi/' + $provid + '.html';
-
+			var $districtURL;
+			if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
+				$districtURL = stationUrl + $provid + $cityid + '.html';
+			} else {
+				$districtURL = stationUrl + $provid + $districtid + '.html';
+			}
 			var initialized = [];
 			var inidetect = setInterval(function() {
 				if (initialized.length == 2) {
@@ -28,13 +33,7 @@
 					$('.skinned-select').Selectyze(opt);
 				}
 			}, 200)
-			var $districtURL;
-			if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
-				$districtURL = stationUrl + $provid + $cityid + '.html';
-				$cityid = '01';
-			} else {
-				$districtURL = stationUrl + $provid + $districtid + '.html';
-			}
+			
 
 			$.ajax({
 				type: 'GET',
