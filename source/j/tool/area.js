@@ -7,8 +7,8 @@
 			$cityid = $areaid.substr(7, 2);
 			var baseUrl = '/data/city3jdata/';
 			var stationUrl = baseUrl + 'station/';
-			var $chinaURL = baseUrl+'china.html';
-			var $provURL = stationUrl +'provshi/' + $provid + '.html';
+			var $chinaURL = baseUrl + 'china.html';
+			var $provURL = stationUrl + 'provshi/' + $provid + '.html';
 
 			var initialized = [];
 			var inidetect = setInterval(function() {
@@ -72,25 +72,25 @@
 			});
 
 			$.ajax({
-					type: 'GET',
-					url: $districtURL,
-					async: true,
-					dataType: 'json',
-					success: function(data) {
-						$("#city").empty();
-						$.each(data, function(i, items) {
-							if (i == $cityid) {
-									$('<option selected="selected" value="' + i + '">' + items + '</option>').appendTo("#city");
-								} else {
-									$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
-								}
-							})
-						initialized.push("city");
+				type: 'GET',
+				url: $districtURL,
+				async: true,
+				dataType: 'json',
+				success: function(data) {
+					$("#city").empty();
+					$.each(data, function(i, items) {
+						if (i == $cityid) {
+							$('<option selected="selected" value="' + i + '">' + items + '</option>').appendTo("#city");
+						} else {
+							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
 						}
-				});
+					})
+					initialized.push("city");
+				}
+			});
 
 			$("#district").change(function() {
-				var URL = stationUrl + $("#prov").val() + $("#district").val()  +'.html';
+				var URL = stationUrl + $("#prov").val() + $("#district").val() + '.html';
 				$.ajax({
 					type: 'GET',
 					url: URL,
@@ -101,21 +101,41 @@
 						$.each(data, function(i, items) {
 							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
 						})
+						newSelect.css({
+							"display": "none",
+							"zoom": 1
+						});
+						var skinnedSelect = $("#city").next(".DivSelectyze");
+						$("#city").remove();
+						skinnedSelect.replaceWith(newSelect);
+						var opt = {
+							theme: 'mac'
+						};
+						if ($.browser.msie && $.browser.version < 7) {
+							opt = {
+								theme: 'mac',
+								effectOpen: "default",
+								effectClose: "default"
+							};
+						}
+						$('#city').Selectyze(opt);
 					}
+
 				});
 			});
 
 
 
 			$("#prov").change(function() {
-				var URL = baseUrl + 'provshi/' + $("#prov").val() + '.html';
-				var provVal = $("#prov").val();
+				var URLDitrict = baseUrl + 'provshi/' + $("#prov").val() + '.html';
+				var URLStation = stationUrl + $("#prov").val() + $("#district").val() + '.html';
+				/*var provVal = $("#prov").val();
 				if (provVal == '10101' || provVal == '10102' || provVal == '10103' || provVal == '10104') {
 					URL = stationUrl + provVal + '00.html';
-				}
+				}*/
 				$.ajax({
 					type: 'GET',
-					url: URL,
+					url: URLDitrict,
 					async: false,
 					dataType: 'json',
 					success: function(data) {
@@ -147,6 +167,37 @@
 							};
 						}
 						$('#district').Selectyze(opt);
+					}
+				});
+
+				$.ajax({
+					type: 'GET',
+					url: URLStation,
+					async: true,
+					dataType: 'json',
+					success: function(data) {
+						$("#city").empty();
+						$.each(data, function(i, items) {
+							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
+						})
+						newSelect.css({
+							"display": "none",
+							"zoom": 1
+						});
+						var skinnedSelect = $("#city").next(".DivSelectyze");
+						$("#city").remove();
+						skinnedSelect.replaceWith(newSelect);
+						var opt = {
+							theme: 'mac'
+						};
+						if ($.browser.msie && $.browser.version < 7) {
+							opt = {
+								theme: 'mac',
+								effectOpen: "default",
+								effectClose: "default"
+							};
+						}
+						$('#city').Selectyze(opt);
 					}
 				});
 
