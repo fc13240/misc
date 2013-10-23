@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+<meta charset="utf-8" />
+<title>中国天气网-专业天气预报、气象服务门户</title>
+<meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
+<meta name="description" content="中国天气网为您提供实时全国天气气象信息,及时发布天气预报、灾害预警、气象云图、旅游天气、台风、暴雨雪等气象信息，为我国的生产生活提供全面精确的气象服务" />
+<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<link rel="stylesheet" href="http://i.tq121.com.cn/c/common.css" />
+<link rel="stylesheet" href="http://i.tq121.com.cn/c/index/index.css" />
+<link rel="stylesheet" href="http://static.zk.com/c/dingzhi/city.css" />
+<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+<!--[if lt IE 7]>
+<script>
+W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+  DD_belatedPNG.fix(".video dl dd i,.focusImg span i");
+});
+</script>
+<![endif]-->
+</head>
+<body>
+<div id="toolBar">
+  <div class="midBlock"> <span id="time"></span> <i class="mobile"></i><b>移动客户端<i></i></b> <span class="links"><!--<a class="blue" href="#"  title="登录">登录</a>--><a id="setIndex" href="javascript:void(0);" target="_self" title="设为首页">设为首页</a><a id="collect" target="_self" href="javascript:void(0);"  title="收藏">收藏</a><a id="provice" href="javascript:void(0);"  title="省级站" target="_self"><i class="icon"></i>省级站<i class="arrow"></i></a><a id="eg" href="http://www.weather.com.cn/english/" target="_blank" title="English Version">English Version</a><a href="#"  id="dl_tw">繁體中文</a></span> </div>
+</div>
+
+
+
+<!--头-->
+<div id="search">
+  <div class="midBlock">
+    <h1><a href="#" >中国天气</a></h1>
+
+<div id="cityset">
+    <dl id="addCity">
+      <dt>+</dt>
+      <dd>定制城市</dd>
+    </dl>
+</div>
+
+    <p class="pp">服务社会&nbsp;&nbsp;造福人民&nbsp;&nbsp;<a title="中国气象局" href="http://www.cma.gov.cn/">中国气象局</a></p>
+
+
+<!--搜索start-->
+
+  <div class="search">
+   <div class="formBox">
+      <div id="Zip" class="Mainbox" >
+        <div id="ZipContent">
+          <input type="text" class="textinput" id="txtZip" value="输入城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="button" class="btn"
+                id="btnZip" value="" />
+        </div>
+        <div id="Zipresult" class="inforesult"> </div>
+        <div id="show">
+          <ul>
+          </ul>
+        </div>
+        <div class="suggest-additions">
+          <div id="selectsionTabs">
+            <!-- class为active: 默认选中的标签 -->
+            <!-- id是tab_hot的标签 对应id是hot的ul 依此类推 -->
+            <span class="tab active" id="tab_hot">热门</span> <span class="tab" id="tab_A_G">A-G</span> <span class="tab" id="tab_H_L">H-L</span> <span class="tab" id="tab_M_T">M-T</span> <span class="tab" id="tab_W_Z">W-Z</span> <span class="tab" id="tab_SJZ">省级站</span> <span class="tab" id="tab_COU">国际</span><span class="tab" id="tab_zx" style="color:#f00;">资讯</span> </div>
+          
+          <div id="selectsionNotice">输入城市名、全拼、简拼、电话区号、邮编查询</div>
+        </div>
+      </div>
+   </div>
+
+	</div>
+<!--搜索框end-->
+  </div>
+</div>
+
+<div class="clearfix midBlock">
+  <div class="poster">
+    <img src="http://gtms04.alicdn.com/tps/i4/T1lFYpFhVgXXbKmrHq-980-90.jpg"/>
+  </div>
+  
+  <div class="fl block-left">
+    <dl>
+      <dt>管理你的定制</dt>
+      <dd>这里是一些注释</dd>
+    </dl>
+    <div class="top3 form-container">
+      <span class="notice">始终显示的三个城市</span>
+      <div class="form">
+        <div>
+          <a href="javascript:;" class="btn_dele">X</a>
+          <input type="text" class="location" placeholder="城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="text" placeholder="自定义名称"/>
+          <a class="btn_save">保存</a>
+          <a class="btn_cancel">取消</a>
+        </div>
+      </div>
+      <div class="form">
+        <div>
+          <a href="javascript:;" class="btn_dele">X</a>
+          <input type="text" class="location" placeholder="城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="text" placeholder="自定义名称"/>
+          <a class="btn_save">保存</a>
+          <a class="btn_cancel">取消</a>
+        </div>
+      </div>
+      <div class="form">
+        <div>
+          <a href="javascript:;" class="btn_dele">X</a>
+          <input type="text" class="location" placeholder="城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="text" placeholder="自定义名称"/>
+          <a class="btn_save">保存</a>
+          <a class="btn_cancel">取消</a>
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <span class="notice">显示在更多的定制城市列表里</span>
+      <div class="form">
+        <div>
+          
+        </div>
+      </div>
+      <div class="form">
+        <div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr block-right"></div>
+</div>
+<script>
+W.use('j/dingzhi/city');
+</script>
+</body>
+</html>
