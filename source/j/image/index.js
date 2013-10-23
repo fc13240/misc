@@ -280,18 +280,18 @@ $(document).ready(function() {
 
 	$(".morephoto_list li").mouseleave(function(){
   			/*$nowThis = $(this);
-  			$nowThis.find("p").css('display','none');
-  			$nowThis.find("div").css('display','none');*/
-  			$(this).find("p").css('display','none').find("div").css('display','none');
+  			$nowThis.find("p").fadeOut("fast");
+  			$nowThis.find("div").fadeOut("fast");*/
+  			$(this).find("p").fadeOut("fast").next("div").fadeOut("fast");
 
 	});
 
 	$(".morephoto_list li").mouseenter(function(){
   			/*$nowThis = $(this);
-  			$nowThis.find("p").css('display','block');
-  			$nowThis.find("div").css('display','block');*/
-  			$(this).find("p").css('display','block').find("div").css('display','block');
-  			
+  			$nowThis.find("p").fadeIn("fast");
+  			$nowThis.find("div").fadeIn("fast");*/
+  			$(this).find("p").fadeIn("fast").next("div").fadeIn("fast");
+
 	});
 
 });
