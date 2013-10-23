@@ -60,5 +60,32 @@
 				alert('请按 Ctrl + D 为你的浏览器添加书签！');
 			}
 		}
+		var doc = document;
+		!function(){
+			util.cookie = {
+				set: function(name,value,days){
+					var argv = arguments;
+					var argc = argv.length;
+					if (days > 0) {
+						var LargeExpDate = new Date();
+						LargeExpDate.setTime(LargeExpDate.getTime() + (days * 1000 * 3600 * 24));
+					}
+					doc.cookie = name + "=" + escape(value) + (LargeExpDate ? ("; expires=" + LargeExpDate.toGMTString()): '');
+				},
+				get: function(name){
+					var search = name + "="
+					var cookie = doc.cookie;
+					if (cookie.length > 0) {
+						offset = cookie.indexOf(search)
+						if (offset != -1) {
+							offset += search.length
+							end = cookie.indexOf(";", offset)
+							if (end == -1) end = cookie.length
+							return unescape(cookie.substring(offset, end))
+						} else return ""
+					}
+				}
+			}
+		}()
 	})(global.util||(global.util = {}));
 })(this.W || (this.W = {}));
