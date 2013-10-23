@@ -9,6 +9,12 @@
 			var stationUrl = baseUrl + 'station/';
 			var $chinaURL = baseUrl + 'china.html';
 			var $provURL = baseUrl + 'provshi/' + $provid + '.html';
+			var $districtURL;
+			if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
+					$districtURL = stationUrl + $provid + $cityid + '.html';
+			} else {
+					$districtURL = stationUrl + $provid + $districtid + '.html';
+			}
 
 			var initialized = [];
 			var inidetect = setInterval(function() {
@@ -28,13 +34,7 @@
 					$('.skinned-select').Selectyze(opt);
 				}
 			}, 200)
-			var $districtURL;
-			if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
-				$districtURL = stationUrl + $provid + $cityid + '.html';
-				$cityid = '01';
-			} else {
-				$districtURL = stationUrl + $provid + $districtid + '.html';
-			}
+			
 
 			$.ajax({
 				type: 'GET',
@@ -97,17 +97,17 @@
 					async: true,
 					dataType: 'json',
 					success: function(data) {
-						$("#city").empty();
+						var citySelect = $("<select id='city'></select>");
 						$.each(data, function(i, items) {
-							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
+							$('<option value="' + i + '">' + items + '</option>').appendTo(citySelect);
 						})
-						newSelect.css({
+						citySelect.css({
 							"display": "none",
 							"zoom": 1
 						});
 						var skinnedSelect = $("#city").next(".DivSelectyze");
 						$("#city").remove();
-						skinnedSelect.replaceWith(newSelect);
+						skinnedSelect.replaceWith(citySelect);
 						var opt = {
 							theme: 'mac'
 						};
@@ -140,8 +140,6 @@
 					dataType: 'json',
 					success: function(data) {
 						var newSelect = $("<select id='district'></select>");
-
-						var temp_data = [];
 						$.each(data, function(i, items) {
 							if (i == '01') {
 								$('<option selected="selected" value="' + i + '">' + items + '</option>').appendTo(newSelect);
@@ -176,17 +174,17 @@
 					async: true,
 					dataType: 'json',
 					success: function(data) {
-						$("#city").empty();
+						var newSelect1 = $("<select id='city'></select>");
 						$.each(data, function(i, items) {
-							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
+							$('<option value="' + i + '">' + items + '</option>').appendTo(newSelect1);
 						})
-						newSelect.css({
+						newSelect1.css({
 							"display": "none",
 							"zoom": 1
 						});
 						var skinnedSelect = $("#city").next(".DivSelectyze");
 						$("#city").remove();
-						skinnedSelect.replaceWith(newSelect);
+						skinnedSelect.replaceWith(newSelect1);
 						var opt = {
 							theme: 'mac'
 						};
