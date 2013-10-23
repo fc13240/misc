@@ -8,7 +8,7 @@
 			var baseUrl = '/data/city3jdata/';
 			var stationUrl = baseUrl + 'station/';
 			var $chinaURL = baseUrl+'china.html';
-			var $provURL = stationUrl + $provid + '00.html';
+			var $provURL = stationUrl +'provshi/' + $provid + '.html';
 
 			var initialized = [];
 			var inidetect = setInterval(function() {
@@ -71,8 +71,44 @@
 				}
 			});
 
+			$.ajax({
+					type: 'GET',
+					url: $districtURL,
+					async: true,
+					dataType: 'json',
+					success: function(data) {
+						$("#city").empty();
+						$.each(data, function(i, items) {
+							if (i == $cityid) {
+									$('<option selected="selected" value="' + i + '">' + items + '</option>').appendTo("#city");
+								} else {
+									$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
+								}
+							})
+						initialized.push("city");
+						}
+				});
+
+			$("#district").change(function() {
+				var URL = stationUrl + $("#prov").val() + $("#district").val()  +'.html';
+				$.ajax({
+					type: 'GET',
+					url: URL,
+					async: true,
+					dataType: 'json',
+					success: function(data) {
+						$("#city").empty();
+						$.each(data, function(i, items) {
+							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
+						})
+					}
+				});
+			});
+
+
+
 			$("#prov").change(function() {
-				var URL = baseUrl + '/provshi/' + $("#prov").val() + '.html';
+				var URL = baseUrl + 'provshi/' + $("#prov").val() + '.html';
 				var provVal = $("#prov").val();
 				if (provVal == '10101' || provVal == '10102' || provVal == '10103' || provVal == '10104') {
 					URL = stationUrl + provVal + '00.html';
@@ -115,13 +151,15 @@
 				});
 
 			});
+
+
 			$("#weatherselect").click(function() {
 				$provid = $("#prov").val();
 				$districtid = $("#district").val();
-				$cityid = "01";
+				$cityid = $("#city").val();
 				var $realid;
 				if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
-					$realid = $provid + $districtid + "00";
+					$realid = $provid + $cityid + $districtid;
 				} else {
 					$realid = $provid + $districtid + $cityid;
 				}
