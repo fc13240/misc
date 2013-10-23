@@ -98,9 +98,9 @@
 					dataType: 'json',
 					success: function(data) {
 						$("#city").empty();
-						var newSelect = $("<select id='district'></select>");
+						var newSelect = $("<select id='city'></select>");
 						$.each(data, function(i, items) {
-							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
+							$('<option value="' + i + '">' + items + '</option>').appendTo(newSelect);
 						})
 						newSelect.css({
 							"display": "none",
@@ -178,9 +178,9 @@
 					dataType: 'json',
 					success: function(data) {
 						$("#city").empty();
-						var newSelect = $("<select id='district'></select>");
+						var newSelect = $("<select id='city'></select>");
 						$.each(data, function(i, items) {
-							$('<option value="' + i + '">' + items + '</option>').appendTo("#city");
+							$('<option value="' + i + '">' + items + '</option>').appendTo(newSelect);
 						})
 						newSelect.css({
 							"display": "none",
