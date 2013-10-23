@@ -36,13 +36,13 @@ if($isShowForm){
 		<input type="hidden" name="flag" value="<?php echo $_SESSION['flag'];?>"/>
 		<input type="hidden" name="release-type" value="1"/>
 		<input type="submit" value="发布前端网站" style="width:150px;float:left;margin-right:10px;"/>
-		<p>发布前端网站资源,会压缩CSS及JS,更改版本号</p>
+		<p>发布前端网站资源,会压缩CSS及JS,更改版本号(更新misc.weather.com.cn的资源)</p>
 	</form>
 	<form method="POST" action="/release.php" class="clearfix">
 		<input type="hidden" name="flag" value="<?php echo $_SESSION['flag'];?>"/>
 		<input type="hidden" name="release-type" value="2"/>
 		<input type="submit" value="发布前端资源" style="width:150px;float:left;margin-right:10px;"/>
-		<p>会把source下文件同步到生产服务器</p>
+		<p>会把source和min下文件同步到生产服务器(i.tq121.com.cn)</p>
 	</form>
 <?php }?>
 </body>
