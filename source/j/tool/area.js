@@ -8,7 +8,7 @@
 			var baseUrl = '/data/city3jdata/';
 			var stationUrl = baseUrl + 'station/';
 			var $chinaURL = baseUrl + 'china.html';
-			var $provURL = stationUrl + $provid + '.html';
+			var $provURL = baseUrl +'provshi/' + $provid + '.html';
 
 			var initialized = [];
 			var inidetect = setInterval(function() {
