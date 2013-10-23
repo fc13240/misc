@@ -279,15 +279,19 @@ $(document).ready(function() {
 	});
 
 	$(".morephoto_list li").mouseleave(function(){
-  			$nowThis = $(this);
+  			/*$nowThis = $(this);
   			$nowThis.find("p").css('display','none');
-  			$nowThis.find("div").css('display','none');
+  			$nowThis.find("div").css('display','none');*/
+  			$(this).find("p").css('display','none').find("div").css('display','none');
+
 	});
 
 	$(".morephoto_list li").mouseenter(function(){
-  			$nowThis = $(this);
+  			/*$nowThis = $(this);
   			$nowThis.find("p").css('display','block');
-  			$nowThis.find("div").css('display','block');
+  			$nowThis.find("div").css('display','block');*/
+  			$(this).find("p").css('display','block').find("div").css('display','block');
+  			
 	});
 
 });
