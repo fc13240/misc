@@ -5,17 +5,11 @@
 			$provid = $areaid.substr(0, 5);
 			$districtid = $areaid.substr(5, 2);
 			$cityid = $areaid.substr(7, 2);
-			var baseUrl = '/data/city3jdata/';
-			var stationUrl = baseUrl + 'station/';
-			var $chinaURL = baseUrl + 'china.html';
-			var $provURL = baseUrl + 'provshi/' + $provid + '.html';
-			var $districtURL;
-			if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
-					$districtURL = stationUrl + $provid + $cityid + '.html';
-			} else {
-					$districtURL = stationUrl + $provid + $districtid + '.html';
-			}
-
+			$baseUrl = '/data/city3jdata/';
+			$stationUrl = $baseUrl + 'station/';
+			$chinaURL = $baseUrl + 'china.html';
+			$provURL = $baseUrl + 'provshi/' + $provid + '.html';
+		
 			var initialized = [];
 			var inidetect = setInterval(function() {
 				if (initialized.length == 2) {
@@ -35,6 +29,12 @@
 				}
 			}, 200)
 			
+			var $districtURL;
+			if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
+					$districtURL = $stationUrl + $provid + $cityid + '.html';
+			} else {
+					$districtURL = $stationUrl + $provid + $districtid + '.html';
+			}
 
 			$.ajax({
 				type: 'GET',
@@ -90,7 +90,7 @@
 			});
 
 			$("#district").change(function() {
-				var URL = stationUrl + $("#prov").val() + $("#district").val() + '.html';
+				var URL = $stationUrl + $("#prov").val() + $("#district").val() + '.html';
 				$.ajax({
 					type: 'GET',
 					url: URL,
@@ -101,7 +101,7 @@
 						$.each(data, function(i, items) {
 							$('<option value="' + i + '">' + items + '</option>').appendTo(citySelect);
 						})
-						citySelect.css({
+						/*citySelect.css({
 							"display": "none",
 							"zoom": 1
 						});
@@ -118,7 +118,7 @@
 								effectClose: "default"
 							};
 						}
-						$('#city').Selectyze(opt);
+						$('#city').Selectyze(opt);*/
 					}
 
 				});
@@ -127,8 +127,8 @@
 
 
 			$("#prov").change(function() {
-				var URLDitrict = baseUrl + 'provshi/' + $("#prov").val() + '.html';
-				var URLStation = stationUrl + $("#prov").val() + $("#district").val() + '.html';
+				var URLDitrict = $baseUrl + 'provshi/' + $("#prov").val() + '.html';
+				var URLStation = $stationUrl + $("#prov").val() + $("#district").val() + '.html';
 				/*var provVal = $("#prov").val();
 				if (provVal == '10101' || provVal == '10102' || provVal == '10103' || provVal == '10104') {
 					URL = stationUrl + provVal + '00.html';
@@ -178,7 +178,7 @@
 						$.each(data, function(i, items) {
 							$('<option value="' + i + '">' + items + '</option>').appendTo(newSelect1);
 						})
-						newSelect1.css({
+						/*newSelect1.css({
 							"display": "none",
 							"zoom": 1
 						});
@@ -195,7 +195,7 @@
 								effectClose: "default"
 							};
 						}
-						$('#city').Selectyze(opt);
+						$('#city').Selectyze(opt);*/
 					}
 				});
 
