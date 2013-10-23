@@ -60,7 +60,7 @@ define(function(require){
 					var image1=imgs(weatherInfo.img1);
 					var image2=imgs(weatherInfo.img2);
 					shortName || (shortName = cityInfo[0]);
-					$cityList.append("<dl class=\"city\"><dt>"+shortName+"</dt><dd><span><i class=\"d"+image1+"\"></i></span><span><i class=\"n"+(image2=99?image1:image2)+"\"></i></span><span>"+weatherInfo.temp1+"~"+weatherInfo.temp2+"</span></dd></dl>");
+					$cityList.prepend("<dl class=\"city\"><dt>"+shortName+"</dt><dd><span><i class=\"d"+image1+"\"></i></span><span><i class=\"n"+(image2=99?image1:image2)+"\"></i></span><span>"+weatherInfo.temp1+"~"+weatherInfo.temp2+"</span></dd></dl>");
 					$cityname.eq(initedNum).val(weatherInfo.city).data('code',cityid);
 					$shorname.eq(initedNum).val(shortName);
 					initedNum++;
