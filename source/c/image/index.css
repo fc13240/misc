@@ -397,8 +397,8 @@
     left:0;
     display:block;
     width:100%;
-    line-height:30px;
-    height: 60px;
+    line-height:20px;
+    height: 40px;
     overflow: hidden;
     font-size:12px;
     text-align:center;
@@ -410,8 +410,8 @@
     bottom:0;
     left:0;
     background:#000;
-    height:60px;
-    opacity:0.8;
+    height:40px;
+    opacity:0.6;
     filter:alpha(opacity=60);
 }
 .morephotos .morephoto_list li.more{
