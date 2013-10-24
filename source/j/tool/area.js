@@ -30,9 +30,9 @@
 			}, 200)
 			var $districtURL;
 			if ($provid == '10101' || $provid == '10102' || $provid == '10103' || $provid == '10104') {
-				$districtURL = 'city3jdata/station/' + $provid + $cityid + '.html';
+				$districtURL = $stationUrl + $provid + $cityid + '.html';
 			} else {
-				$districtURL = 'city3jdata/station/' + $provid + $districtid + '.html';
+				$districtURL = $stationUrl + $provid + $districtid + '.html';
 			}
 
 			$.ajax({
