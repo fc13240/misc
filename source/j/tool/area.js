@@ -5,7 +5,7 @@
 			$provid = $areaid.substr(0, 5);
 			$districtid = $areaid.substr(5, 2);
 			$cityid = $areaid.substr(7, 2);
-			$baseUrl = 'city3jdata/';
+			$baseUrl = '/data/city3jdata/';
 			$stationUrl = $baseUrl + 'station/';
 			$chinaURL = $baseUrl + 'china.html';
 			$provURL = $baseUrl + 'provshi/' + $provid + '.html';
