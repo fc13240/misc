@@ -6,7 +6,7 @@ session_start();
 <head>
 <meta charset='utf-8'>
 </head>
-<body style="width:800px;margin: 10px auto;text-align:center;">
+<body style="width:800px;margin: 10px auto;">
 <?php
 $isShowForm = true;
 if(!empty($_POST)){
