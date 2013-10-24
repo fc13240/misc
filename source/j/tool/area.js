@@ -89,7 +89,7 @@
 				}
 			});
 			$("#district").change(function() {
-				//alert("123");
+				alert("123");
 				$.ajax({
 					type: 'GET',
 					url: $stationUrl + $("#prov").val() + $("#district").val() + '.html',
