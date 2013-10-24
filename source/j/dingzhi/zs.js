@@ -1,40 +1,38 @@
 define(function(require){
 	require('jquery');
 	require('../global');
+	require('../plugs/jquery.placeholder.js');
+	var Suggest = require('../m_search_suggest');
 	var cookie = W.util.cookie;
 	var ZS_COOKIE_NAME = 'zs';
 	var zsList = {"co":"舒适度指数","zs":"中暑指数","lk":"路况指数","gm":"感冒指数","sg":"一句话提示指数","gj":"逛街指数","jt":"交通指数","ys":"雨伞指数","pl":"空气污染扩散条件指数","fs":"防晒指数","be":"海滨浴场","hc":"划船指数","mf":"美发指数","dy":"钓鱼指数","yd":"运动指数","cl":"晨练指数","tr":"旅游指数","yh":"约会指数","nl":"夜生活指数","uv":"紫外线强度指数","pk":"放风筝指数","ls":"晾晒指数","xq":"心情指数","ct":"穿衣指数","gz":"干燥指数","pp":"化妆指数","ac":"空调开启指数","pj":"啤酒指数","xc":"洗车指数","ag":"息斯敏过敏指数"};
 	var defaultDingZhi = '101010100|北京||yd-uv-gj,101130101|上海||yd-uv-gj,101020100|北京2||yd-uv-gj';
 	W(function(){
-		// var $sele_left = $('.sele_left').html('');
-		// var newArr = [];
 		var comp = function(a,b){
 			return b[1].localeCompare(a[1]);
 		}
-		// for(var i in zsList){			
-		// 	newArr.push([i,zsList[i]]);
-		// }
-		// newArr.sort(comp);
-		// $.each(newArr,function(i,v){
-		// 	$sele_left.append($('<option>').val(v[0]).text(v[1]));
-		// });
-		// $sele_left.find('option').dblclick(function(){
-		// 	console.log($(this).val(),$(this).text());
-		// });
-
 		//101010100|北京||yd-uv-gj,101130101|上海||yd-uv-gj,101020100|北京2||yd-uv-gj
 		var valInCookie = cookie.get(ZS_COOKIE_NAME) || defaultDingZhi;
 		var cacheData = [];
 		var itemArr = valInCookie.split(',');
 		var $sele_left = $('.sele_left');
 		var $sele_right = $('.sele_right');
-		var $locations = $('.location');
-		var $aliases = $('.alias');
+		var $locations = $('.location').placeholder();
+		var $aliases = $('.alias').placeholder();
 
 		$.each(itemArr,function(index,v){
 			var valArr = v.split('|');
 			valArr[3] = valArr[3].split('-');
 			initItem(index,valArr);
+			var $location = $locations.eq(index);
+			new Suggest({
+		        'textBox': $location
+		        // ,'url': 'http://localhost:8010/search'
+		        ,'bindEvent': true
+		        ,'onSelect': function(data){
+		        	$location.val(data[2]).data('c_id',data.length == 20?data[10]:data[0]);
+		        }
+		    });
 		});
 		
 		function initItem(index,valArr){
