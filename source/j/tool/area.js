@@ -156,7 +156,7 @@
 							};
 						}
 						$('#district').Selectyze(opt);
-						alert($('.citysearch').html());
+						//alert($('.citysearch').html());
 
 					}
 				});
