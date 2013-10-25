@@ -103,6 +103,50 @@ a:hover{color:#ee842f;}
 #search #addCity{cursor:pointer;}
 #search #addCity dt{font-size:35px;}
 
+#search .more_dz dt{
+	padding-left: 0;
+}
+#search .more_dz{overflow: initial;}
+.more_dz{cursor: pointer;display: none}
+.more_dz dt{
+	padding-top: 10px;
+	text-align: center;
+}
+.more_dz dd{
+	position: relative;
+	*zoom: 1;
+}
+.more_dz .arrow{
+	position: absolute;
+	right: 35px;
+	top: 0;
+}
+.more_dz dd i{
+	font-size: 20px;
+	font-style: normal;
+}
+.more_dz dd ul{
+	display: none;
+	background-color: #ddeff7;
+	width: 120px;
+	overflow: hidden;
+	position: absolute;
+	top: 22px;
+	left: 0;
+	border: 1px solid #bbdae8;
+	border-bottom: none;
+}
+.more_dz dd ul li{
+	height: 25px;
+	line-height: 25px;
+	padding: 0 5px;
+	border-bottom: 1px solid #bbdae8;
+}
+#search dl a{
+	color: #076ea8;
+}
+#search .more_dz dd span{display: inline-block;float: none;vertical-align: -2px;}
+
 #search .pp{text-align:right;font-size:14px;height:32px;line-height:32px;padding-right:80px;}
 #search .pp a{color:#ee842f;}
 #search .pp span{display:block;height:25px;float:right;position:relative;}

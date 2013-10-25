@@ -1,4 +1,5 @@
 define(function(require) {
+  require('./global');
   var province = [{
     "id": "10122",
     "p": "安徽",
@@ -412,28 +413,12 @@ function Lunar(objDate) {
     }, "normal");
   })
   //收藏脚本
-  $("#collect").click(function() {
-    try {
-      typeof window.sidebar == "object" && typeof window.sidebar.addPanel == "function" ? window.sidebar.addPanel("中国天气", "http://www.weather.com.cn", "中国天气") : typeof window.external.msAddSiteMode != "undefined" ? window.external.msAddSiteMode() : window.external.AddFavorite("http://www.weather.com.cn", "中国天气")
-    } catch (a) {}
-    return !1
+  $("#collect").click(function() {debugger;
+   W.util.addFav();
   })
   //设为首页
   $("#setIndex").click(function() {
-    try {
-      this.style.behavior = 'url(#default#homepage)';
-      this.setHomePage("http://www.weather.com.cn");
-    } catch (e) {
-      if (window.netscape) {
-        try {
-          netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-        } catch (e) {
-          alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
-        }
-        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
-        prefs.setCharPref('browser.startup.homepage', "http://www.weather.com.cn");
-      }
-    }
+    W.util.setHome();
   })
   //快速入口脚本
   if ($(window).width() <= 1130) {
