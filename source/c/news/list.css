@@ -57,6 +57,83 @@
 .topads .ad_3{
 	text-align: right;
 }
+.top_contents{
+	background: #fefefe;
+	height: 115px;
+	padding: 7px 8px 0 0;
+	margin: 9px 0;
+}
+.top_contents ul{
+	float: left;
+}
+.top_contents li{
+	float: left;
+	width: 160px;
+	padding: 10px 0 0 90px;
+	position: relative;
+	zoom: 1;
+	margin-left: 15px;
+	_display:inline;
+}
+.top_contents li .icon{
+	width: 81px;
+	height: 81px;
+	background: url('../../i/content_icon.gif') no-repeat 0 0;
+	position: absolute;
+	left: 0;
+	top: 12px;
+}
+.top_contents li.hot .icon{
+	background-position: -82px 0;
+}
+.top_contents li.interact .icon{
+	background-position: -164px 0;
+}
+.top_contents li h4{
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+.top_contents li p{
+	line-height: 20px;
+	font-size: 12px;
+}
+.top_contents .right_content{
+    display: block;
+    width:150px;
+    height:112px;
+    position:relative;
+    zoom:1;
+    color:#fff;
+    float: right;
+}
+.top_contents .right_content:hover{
+    color:#fff;
+}
+.top_contents .right_content img{
+    display:block;
+}
+.top_contents .right_content p{
+    position: absolute;
+    bottom:0;
+    left:0;
+    display:block;
+    width:100%;
+
+    line-height:30px;
+    font-size:12px;
+    text-align:center;
+    z-index: 2;
+}
+.top_contents .right_content .textbg{
+    position: absolute;
+    width:100%;
+    bottom:0;
+    left:0;
+    background:#000;
+    height:30px;
+    opacity:0.8;
+    filter:alpha(opacity=60);
+}
 
 .contentpage_container .contentcon{
     margin-top:10px;
