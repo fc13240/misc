@@ -88,13 +88,12 @@
 		!function(){
 			util.cookie = {
 				set: function(name,value,days){
-					var argv = arguments;
-					var argc = argv.length;
-					if (days > 0) {
-						var LargeExpDate = new Date();
-						LargeExpDate.setTime(LargeExpDate.getTime() + (days * 1000 * 3600 * 24));
-					}
-					doc.cookie = name + "=" + escape(value) + (LargeExpDate ? ("; expires=" + LargeExpDate.toGMTString()): '');
+					if (days) {
+						var date = new Date();
+						date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+						var expires = "; expires=" + date.toGMTString();
+					} else var expires = "";
+					doc.cookie = name + "=" + value + expires + "; path=/";
 				},
 				get: function(name){
 					var search = name + "="
