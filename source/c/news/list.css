@@ -33,6 +33,31 @@
 	width: 300px;
 	zoom: 1;
 }
+.topads{
+	height: 90px;
+	overflow: hidden;
+}
+.topads .ad_1,
+.topads .ad_2,
+.topads .ad_3{
+	float: left;
+}
+.topads .ad_1,
+.topads .ad_3{
+	width: 121px;
+}
+.topads .ad_2{
+	width: 738px;
+	text-align: center;
+}
+.topads .ad_2 img{
+	display: block;
+	margin: 0 auto;
+}
+.topads .ad_3{
+	text-align: right;
+}
+
 .contentpage_container .contentcon{
     margin-top:10px;
 }
