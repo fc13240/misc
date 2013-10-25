@@ -18,7 +18,7 @@ var province = province || {};
 		}
 		$.ajax({
 			type:'GET',
-            url: "/weather/yj/city3jdata/china.html",
+            url: "/data/city3jdata/china.html",
             cache: true,
 			dataType:'json',
             success: function (data) {
@@ -39,7 +39,7 @@ var province = province || {};
 			temp_Item = "";
 		$.ajax({
 			type:'GET',
-            url: "/weather/yj/city3jdata/provshi/"+province.provinceid+".html",
+            url: "/data/city3jdata/provshi/"+province.provinceid+".html",
             cache: true,
 			dataType:'json',
             success: function (data) {
@@ -67,7 +67,7 @@ var province = province || {};
 		province.cityid = $(this).attr("data-role");
 		$.ajax({
 			type:'GET',
-            url: "/weather/yj/city3jdata/station/"+province.provinceid+province.cityid+".html",
+            url: "/data/city3jdata/station/"+province.provinceid+province.cityid+".html",
             cache: true,
 			dataType:'json',
             success: function (data) {

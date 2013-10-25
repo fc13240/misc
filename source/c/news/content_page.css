@@ -516,3 +516,30 @@
 .photothumbs .thumbnail li.active em{
     display:block;
 }
+.citysearch {
+    float: right;
+    padding-right: 7px;
+}
+.citysearch .locationSearch .iframeDiv {
+    float: left;
+    height: 22px;
+    margin-top: 5px;
+}
+.citysearch .locationSearch .iframeDiv .sel select {
+    background-color: #EAEAEA;
+    float: left;
+    height: 22px;
+    line-height: 20px;
+    margin-right: 1px;
+    text-align: center;
+    width: 60px;
+}
+.citysearch .btn {
+    float: left;
+    height: 20px;
+    margin-top: 1px;
+    width: 53px;
+}
+.citysearch label, .citysearch button {
+    float: left;
+}
