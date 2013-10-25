@@ -1,6 +1,6 @@
 define(function(require){
-	require('./share');
-	var province = require('./province3j.js');
+	var share = require('../m_share');
+	var City = require('../m_city');
 	//顶部导航
 	$("nav ul li").click(function(){
 		var num = $(this).find(".dropList a").length,
@@ -17,37 +17,13 @@ define(function(require){
 		$(this).hide();
 	})
 	//城市天气查询
-	province.initprovince(".search .province");
-	province.initCity(".search .province a");
-	province.showCity(".search .city");
-	province.initArea(".search .city a");
-	province.showArea(".search .area");
-	province.setArea(".search .area a");
-	var initAddCity = function(){
-		$(".search .province .provinceItem,.search .city .cityItem,.search .area .areaItem").html("").hide();
-		$(".search .province b").html("选择省");
-		$(".search .city b").html("选择市");
-		$(".search .area b").html("选择县/区");
-		province.provinceid = null;
-	}
+	var city = new City({
+        'prov': $('.province select'),
+        'city': $('.city select'),
+        'county': $('.areaItem select')
+    });
 	$(".search .searchBtn").click(function(){
-		var cityID = province.cityID(),
-			url="http://www.weather.com.cn/weather/"+province.cityID()+".shtml";
-		if(cityID == 0 || cityID.indexOf("null") > -1){
-				alert("请选择城市");
-				return false;
-			}
-		window.open(url);
-		initAddCity();
-	})
-
-	$(document).click(function(c){
-		var d = c || window.event,
-            b = c.target || c.srcElement;
-		if(!$(b).closest("div").hasClass("search")){
-			initAddCity();
-			return;
-		}
+		window.open("http://www.weather.com.cn/weather/"+city.getValue()+".shtml");
 	})
 
 	//分享

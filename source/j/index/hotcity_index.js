@@ -1,20 +1,35 @@
 define(function(require){
 	var STORAGE_NAME = 'f_city';//favorite city name
-	var dataUrl = "/data/cityinfo/_id_.html";
-	var cityUrl = 'http://www.weather.com.cn/weatherfc/_id_.shtml'
+	var dataUrl = "/data/cityinfo/_id_.html";//加载城市信息地址
+	var cityUrl = 'http://www.weather.com.cn/weatherfc/_id_.shtml';//显示城市的链接地址
+	var dingzhiUrl = '/pages/dingzhi/city.html';//定制页面地址
 	var topNum = 3;
 	var Event = require('../m_event');
 	require('../global')
 	var cookie = W.util.cookie;
 	var dzEvent = (W.data || (W.data = {}))['event.dz_city'] = new Event();
-	dzEvent.on('modify',function(data){
-
-	})
+	dzEvent.on('modify',init);//保证事件让外部可调用
+	var addCityHtml = '<a href="'+dingzhiUrl+'">'+
+					        '<dl id="addCity">'+
+					        '<dt>+</dt>'+
+					        '<dd>定制城市</dd>'+
+					      '</dl>'+
+					    '</a>';
+	var moreDZHtml = '<dl class="more_dz">'+
+					      '<dt>更多定制</dt>'+
+					      '<dd>'+
+					        '<i class="arrow"></i>'+
+					        '<ul>'+
+					          '<li><a href="'+dingzhiUrl+'"><i>+</i>添加定制</a></li>'+
+					        '</ul>'+
+					      '</dd>'+
+					    '</dl>';				
 	var imgs=function(img){
 		var imgend=img.substring(1,img.indexOf("."));
 		if(imgend<10)imgend="0"+imgend;
 		return imgend;
 	}
+	/*解析数据*/
 	function parseData(arr,callback){
 		$.each(arr,function(i,v){
 			var val = v.split('|');
@@ -25,8 +40,10 @@ define(function(require){
 			});
 		});
 	}
+	/*初始化*/
 	function init(){
 		var $cityList = $('#cityset');
+		$cityList.children().remove().end().append(addCityHtml+moreDZHtml);
 		//北京|101010100|,郑州|200000000|家
 		var valInCookie = cookie.get(STORAGE_NAME);//||'北京|101010100|one,北京|101010100|two,北京|101010100|three,北京|101010100|four';console.log(valInCookie);
 		if(valInCookie){
@@ -49,9 +66,7 @@ define(function(require){
 			}
 		}
 	}
-	W(function(){
-		init()
-	})
+	W(init)
 })
 
 
