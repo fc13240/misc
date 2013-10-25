@@ -1,143 +1,144 @@
 define(function(require) {
-  var province = [{
-    "id": "10122",
-    "p": "安徽",
-    "n": "ah"
-  }, {
-    "id": "10101",
-    "p": "北京",
-    "n": "bj"
-  }, {
-    "id": "10104",
-    "p": "重庆",
-    "n": "cq"
-  }, {
-    "id": "10123",
-    "p": "福建",
-    "n": "fj"
-  }, {
-    "id": "10116",
-    "p": "甘肃",
-    "n": "gs"
-  }, {
-    "id": "10128",
-    "p": "广东",
-    "n": "gd"
-  }, {
-    "id": "10130",
-    "p": "广西",
-    "n": "gx"
-  }, {
-    "id": "10126",
-    "p": "贵州",
-    "n": "gz"
-  }, {
-    "id": "10131",
-    "p": "海南",
-    "n": "hainan"
-  }, {
-    "id": "10109",
-    "p": "河北",
-    "n": "hebei"
-  }, {
-    "id": "10105",
-    "p": "黑龙江",
-    "n": "hlj"
-  }, {
-    "id": "10118",
-    "p": "河南",
-    "n": "henan"
-  }, {
-    "id": "10120",
-    "p": "湖北",
-    "n": "hubei"
-  }, {
-    "id": "10125",
-    "p": "湖南",
-    "n": "hunan"
-  }, {
-    "id": "10119",
-    "p": "江苏",
-    "n": "js"
-  }, {
-    "id": "10124",
-    "p": "江西",
-    "n": "jx"
-  }, {
-    "id": "10106",
-    "p": "吉林",
-    "n": "jl"
-  }, {
-    "id": "10107",
-    "p": "辽宁",
-    "n": "ln"
-  }, {
-    "id": "10133",
-    "p": "澳门",
-    "n": "mo"
-  }, {
-    "id": "10108",
-    "p": "内蒙古",
-    "n": "nmg"
-  }, {
-    "id": "10117",
-    "p": "宁夏",
-    "n": "nx"
-  }, {
-    "id": "10115",
-    "p": "青海",
-    "n": "qh"
-  }, {
-    "id": "10112",
-    "p": "山东",
-    "n": "sd"
-  }, {
-    "id": "10102",
-    "p": "上海",
-    "n": "sh"
-  }, {
-    "id": "10110",
-    "p": "山西",
-    "n": "shanxi"
-  }, {
-    "id": "10111",
-    "p": "陕西",
-    "n": "shaanxi"
-  }, {
-    "id": "10127",
-    "p": "四川",
-    "n": "sc"
-  }, {
-    "id": "10103",
-    "p": "天津",
-    "n": "tj"
-  }, {
-    "id": "10113",
-    "p": "新疆",
-    "n": "xj"
-  }, {
-    "id": "10114",
-    "p": "西藏",
-    "n": "xz"
-  }, {
-    "id": "10129",
-    "p": "云南",
-    "n": "yn"
-  }, {
-    "id": "10121",
-    "p": "浙江",
-    "n": "zj"
-  }, {
-    "id": "10132",
-    "p": "香港",
-    "n": "xg",
-    "u": "http://www.weather.com.cn/html/province/xianggang.shtml"
-  }, {
-    "id": "10134",
-    "p": "台湾",
-    "n": "tw",
-    "u": "http://www.weather.com.cn/html/province/taiwan.shtml"
-  }];
+  require('./global');
+  // var province = [{
+  //   "id": "10122",
+  //   "p": "安徽",
+  //   "n": "ah"
+  // }, {
+  //   "id": "10101",
+  //   "p": "北京",
+  //   "n": "bj"
+  // }, {
+  //   "id": "10104",
+  //   "p": "重庆",
+  //   "n": "cq"
+  // }, {
+  //   "id": "10123",
+  //   "p": "福建",
+  //   "n": "fj"
+  // }, {
+  //   "id": "10116",
+  //   "p": "甘肃",
+  //   "n": "gs"
+  // }, {
+  //   "id": "10128",
+  //   "p": "广东",
+  //   "n": "gd"
+  // }, {
+  //   "id": "10130",
+  //   "p": "广西",
+  //   "n": "gx"
+  // }, {
+  //   "id": "10126",
+  //   "p": "贵州",
+  //   "n": "gz"
+  // }, {
+  //   "id": "10131",
+  //   "p": "海南",
+  //   "n": "hainan"
+  // }, {
+  //   "id": "10109",
+  //   "p": "河北",
+  //   "n": "hebei"
+  // }, {
+  //   "id": "10105",
+  //   "p": "黑龙江",
+  //   "n": "hlj"
+  // }, {
+  //   "id": "10118",
+  //   "p": "河南",
+  //   "n": "henan"
+  // }, {
+  //   "id": "10120",
+  //   "p": "湖北",
+  //   "n": "hubei"
+  // }, {
+  //   "id": "10125",
+  //   "p": "湖南",
+  //   "n": "hunan"
+  // }, {
+  //   "id": "10119",
+  //   "p": "江苏",
+  //   "n": "js"
+  // }, {
+  //   "id": "10124",
+  //   "p": "江西",
+  //   "n": "jx"
+  // }, {
+  //   "id": "10106",
+  //   "p": "吉林",
+  //   "n": "jl"
+  // }, {
+  //   "id": "10107",
+  //   "p": "辽宁",
+  //   "n": "ln"
+  // }, {
+  //   "id": "10133",
+  //   "p": "澳门",
+  //   "n": "mo"
+  // }, {
+  //   "id": "10108",
+  //   "p": "内蒙古",
+  //   "n": "nmg"
+  // }, {
+  //   "id": "10117",
+  //   "p": "宁夏",
+  //   "n": "nx"
+  // }, {
+  //   "id": "10115",
+  //   "p": "青海",
+  //   "n": "qh"
+  // }, {
+  //   "id": "10112",
+  //   "p": "山东",
+  //   "n": "sd"
+  // }, {
+  //   "id": "10102",
+  //   "p": "上海",
+  //   "n": "sh"
+  // }, {
+  //   "id": "10110",
+  //   "p": "山西",
+  //   "n": "shanxi"
+  // }, {
+  //   "id": "10111",
+  //   "p": "陕西",
+  //   "n": "shaanxi"
+  // }, {
+  //   "id": "10127",
+  //   "p": "四川",
+  //   "n": "sc"
+  // }, {
+  //   "id": "10103",
+  //   "p": "天津",
+  //   "n": "tj"
+  // }, {
+  //   "id": "10113",
+  //   "p": "新疆",
+  //   "n": "xj"
+  // }, {
+  //   "id": "10114",
+  //   "p": "西藏",
+  //   "n": "xz"
+  // }, {
+  //   "id": "10129",
+  //   "p": "云南",
+  //   "n": "yn"
+  // }, {
+  //   "id": "10121",
+  //   "p": "浙江",
+  //   "n": "zj"
+  // }, {
+  //   "id": "10132",
+  //   "p": "香港",
+  //   "n": "xg",
+  //   "u": "http://www.weather.com.cn/html/province/xianggang.shtml"
+  // }, {
+  //   "id": "10134",
+  //   "p": "台湾",
+  //   "n": "tw",
+  //   "u": "http://www.weather.com.cn/html/province/taiwan.shtml"
+  // }];
   //日期
   /*
   (function(){
@@ -412,28 +413,12 @@ function Lunar(objDate) {
     }, "normal");
   })
   //收藏脚本
-  $("#collect").click(function() {
-    try {
-      typeof window.sidebar == "object" && typeof window.sidebar.addPanel == "function" ? window.sidebar.addPanel("中国天气", "http://www.weather.com.cn", "中国天气") : typeof window.external.msAddSiteMode != "undefined" ? window.external.msAddSiteMode() : window.external.AddFavorite("http://www.weather.com.cn", "中国天气")
-    } catch (a) {}
-    return !1
+  $("#collect").click(function() {debugger;
+   W.util.addFav();
   })
   //设为首页
   $("#setIndex").click(function() {
-    try {
-      this.style.behavior = 'url(#default#homepage)';
-      this.setHomePage("http://www.weather.com.cn");
-    } catch (e) {
-      if (window.netscape) {
-        try {
-          netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-        } catch (e) {
-          alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
-        }
-        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
-        prefs.setCharPref('browser.startup.homepage', "http://www.weather.com.cn");
-      }
-    }
+    W.util.setHome();
   })
   //快速入口脚本
   if ($(window).width() <= 1130) {

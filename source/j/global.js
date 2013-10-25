@@ -1,5 +1,6 @@
 (function(global){
 	(function(util){
+		/*用于调试*/
 		util.log = typeof console != 'undefined' && typeof console.log == 'function'? function(){
 			return console.log.apply(console,arguments);
 		}:function(){
@@ -48,6 +49,8 @@
 			return Child;
 		}
 		var win = window;
+		var doc = document;
+		/*添加收藏*/
 		util.addFav = function(a) {
 			var b = win.location.href;
 			if (win.sidebar && win.sidebar.addPanel) {
@@ -60,7 +63,28 @@
 				alert('请按 Ctrl + D 为你的浏览器添加书签！');
 			}
 		}
-		var doc = document;
+		/*设为首页*/
+		util.setHome = function setHomepage() {
+			var url = win.location.href;
+			if (doc.all) {
+				doc.body.style.behavior = 'url(#default#homepage)';
+				doc.body.setHomePage(url);
+
+			} else if (win.sidebar) {
+				if (win.netscape) {
+					try {
+						netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+					} catch (e) {
+						alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+					}
+				}
+				var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+				prefs.setCharPref('browser.startup.homepage', url);
+			} else{
+				alert("您的浏览器不支持此功能！");
+			}
+		}
+		/*cookie相关操作*/
 		!function(){
 			util.cookie = {
 				set: function(name,value,days){
