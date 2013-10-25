@@ -44,6 +44,10 @@ define(function(require){
 					val.push(v.join('|'));
 				});
 				cookie.set(STORAGE_NAME,val.join(','));
+				var dzEvent = W.data['event.dz_city'];
+				if(dzEvent){
+					dzEvent.emit('modify');//通知外部更新
+				}
 			}
 		}
 		function addItem(cityname,cityid,aliasname){

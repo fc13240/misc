@@ -16,8 +16,8 @@
 .links #setIndex,.links #eg{border-right:1px solid #275885;}
 #provice{background-color:#ebebeb;color:#2d6ca6;padding-left:50px;padding-right:30px;position:relative;}
 #provice .icon{background:url(../i/index_icons.png) no-repeat -66px 0px;display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
-#provice .arrow{border-top:6px solid #2d6ca6;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:10px;top:20px;}
-
+#provice .arrow{position:absolute;right:10px;top:20px;}
+.arrow{border-top:6px solid #2d6ca6;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;}
 .footer{border-top:1px solid #eee7e7;background-color:#eeeeee;min-width:980px;zoom:1;}
 .footer .block{padding:20px 0px 0px;margin-bottom:0px;height:auto;}
 .footer h2{width:145px;height:38px;background:url(../i/index_icons.png) no-repeat -160px 3px;float:left;margin:10px 3px 3px 0px;overflow:hidden;}
