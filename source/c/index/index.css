@@ -11,7 +11,7 @@ a:hover{color:#ee842f;}
 #search h1 a{display:block;width:140px;height:35px;text-indent:-9999px;}
 #search dl{width:76px;height:64px;overflow:hidden;float:left;margin-left:3px;background-color:#ddeff7;color:#076ea8;font-size:12px;font-weight:bold;}
 #search dl dt{padding-left:10px;height:30px;line-height:30px;}
-#search dl dd{line-height:16px;padding-top:0px;padding-left:10px;}
+#search dl dd{line-height:16px;padding-top:0px;padding-left:10px;overflow: hidden;}
 #search dl dd span{display:block;height:16px;float:left;padding-right:5px;}
 #search dl dd span i{background-image:url(../../i/index/legend20X16.gif);background-repeat:no-repeat;display:block;width:20px;height:16px;overflow:hidden;}
 #search dl dd span .d00{background-position:0px 0px;}
@@ -80,6 +80,14 @@ a:hover{color:#ee842f;}
 #search dl dd span .n30{background-position:-60px -112px;}
 #search dl dd span .n31{background-position:-80px -112px;}
 #search dl dd span .n53{background-position:-100px -112px;}
+
+#search dl.yj dt{height: 27px;line-height: 27px;}
+#search dl.yj dd{padding-top: 1px;}
+#search dl.yj span{padding-bottom: 3px;}
+#search dl.yj div{background-color: red;clear: both;margin-left: -10px;}
+#search dl.yj div a{color: white;float: left;}
+#search dl.yj div span{padding: 0;}
+#search dl.yj div i{background: url(../../i/index/img02.jpg) no-repeat;display: inline-block;width: 16px;height: 16px;float: left;margin-right: 5px;}
 #search .midBlock{position:relative;z-index:99;}
 #search .midBlock .selCity{position:absolute;width:210px;height:120px;top:0px;left:390px;background-color:#ebebeb;padding:0px 20px 20px 20px;display:none;}
 #search .midBlock .selCity p{text-align:left;}
@@ -98,8 +106,8 @@ a:hover{color:#ee842f;}
 #search .selCity .provinceItem a,#search .selCity .cityItem a{display:block;height:35px;line-height:35px;border-bottom:1px solid #d9d9d9;padding-left:10px;color:#252525;}
 #search .selCity .provinceItem a:hover,#search .selCity .cityItem a:hover{color:#fff;background-color:#98cb55;}
 
-#search .yj dd{padding-top:0px;margin-top:-5px;height:39px;}
-#search .ld dd{background:url(../../i/index/img02.jpg) no-repeat left bottom;width:76px;}
+/*#search .yj dd{padding-top:0px;margin-top:-5px;height:39px;}
+#search .ld dd{background:url(../../i/index/img02.jpg) no-repeat left bottom;width:76px;}*/
 #search #addCity{cursor:pointer;}
 #search #addCity dt{font-size:35px;}
 

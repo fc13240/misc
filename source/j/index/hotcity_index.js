@@ -23,7 +23,49 @@ define(function(require){
 					          '<li><a href="'+dingzhiUrl+'"><i>+</i>添加定制</a></li>'+
 					        '</ul>'+
 					      '</dd>'+
-					    '</dl>';				
+					    '</dl>';
+	/*得到预警数据*/
+	var getAlarm = (function(){
+		var yjlb = ['台风', '暴雨', '暴雪', '寒潮', '大风', '沙尘暴', '高温', '干旱', '雷电', '冰雹', '霜冻', '大雾', '霾', '道路结冰'];
+		var gdlb = ['寒冷', '灰霾', '雷雨大风', '森林火险', '降温', '道路冰雪'];
+		var yjyc = ['蓝色', '黄色', '橙色', '红色'];
+		var gdyc = ['白色'];
+		//得到预警描述及等级
+		var REG = /-(\d{2})(\d{2})\.html/;
+		//得到预警信息URL
+		var url = 'http://product.weather.com.cn/alarm/grepalarm.php?count=1&areaid='
+		return function(cityId,callback){
+			$.getJSON(url+cityId,function(){
+				var result = {'url':'','text':'','title':''};
+				if(alarminfo.count > 0){
+					var url = alarminfo.data[0][1];
+					var m = REG.exec(url);
+					if(m){
+						result.url = 'http://www.weather.com.cn/alarm/newalarmcontent.shtml?file='+url;
+						var textIndex = parseInt(m[1],10);
+						var text = '';
+						if(textIndex > 90){
+							text = gdlb[textIndex-91];
+						}else{
+							text = yjlb[textIndex - 1];
+						}
+						result.text = text;
+
+						var level = '';
+						var levelIndex = parseInt(m[2],10);
+						if(levelIndex > 90){
+							level = yjyc[levelIndex-91];
+						}else{
+							level = gdyc[levelIndex - 1];
+						}
+						result.title = text+level+'预警';
+					}
+				}
+				callback && callback(result);
+			});
+		}
+	})();				
+	
 	var imgs=function(img){
 		var imgend=img.substring(1,img.indexOf("."));
 		if(imgend<10)imgend="0"+imgend;
@@ -50,7 +92,12 @@ define(function(require){
 			var arr = valInCookie.split(',');
 			var topItems = arr.splice(0,topNum);
 			parseData(topItems,function(data){
-				$cityList.prepend($('<dl class="city" title="'+data['title']+'"><dt><a href="'+cityUrl.replace('_id_',data['id'])+'">'+data['shortName']+'</a></dt><dd><span><i class="d'+data['img']+'"></i></span><span>'+data['temp']+'</span></dd></dl>').fadeIn());
+				var $item = $('<dl class="city" title="'+data['title']+'"><dt><a href="'+cityUrl.replace('_id_',data['id'])+'">'+data['shortName']+'</a></dt><dd><span><i class="d'+data['img']+'"></i></span><span>'+data['temp']+'</span></dd></dl>');
+				$cityList.prepend($item.fadeIn());
+				//异步初始化预警信息
+				getAlarm(data.id,function(d){
+					$item.find('dd').addClass('yj').append('<div class="clearfix"><a href="'+d.url+'" title="'+d.title+'"><i></i><span>'+d.text+'</span></a></div>   ');
+				});
 			});
 			if(arr.length > 0){
 				$('#addCity').hide();
