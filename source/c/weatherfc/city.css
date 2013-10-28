@@ -19,7 +19,7 @@ nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-hei
 nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;}
 nav .bg{height:75px;}
 
-#ad_banner{width:980px;height:90px;padding:0px 10px;position:relative;margin:0 auto;}
+#ad_banner{width:980px;height:90px;padding:0px 10px;position:relative;margin:0 auto;background-color: #fff;opacity: 0.8;filter: alpha(opacity=80);}
 #ad_banner span{position:absolute;display:block;height:90px;top:0px;z-index:5;}
 #ad_banner #ad1{width:115px;left:10px;}
 #ad_banner #ad2{width:730px;left:135px;}
