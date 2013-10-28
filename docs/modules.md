@@ -1,6 +1,10 @@
 # 模块介绍
 
 ---
+
+### [全局工具方法](#/docs/modules/global.md){.ajax-link .md}
+在全名空间`W`下的所有方法
+
 ### [事件模块](#/docs/modules/event.md){.ajax-link .md}
 此模块提供方便轻盈的自定义事件模块，API类`juqery`支持连写。支持绑定多个事件，及事件触发时传参。
 
