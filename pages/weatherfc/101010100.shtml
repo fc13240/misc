@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <base href="http://www.weather.com.cn" target="_blank"/><!--[if lte IE 6]></base><![endif]-->
     <meta charset="utf-8" />
     <link rel="dns-prefetch" href="http://i.tq121.com.cn">
     <title>北京天气预报</title>
@@ -1078,7 +1077,7 @@ var observe24h_data = {"od":{"od0":"201310160900","od1":"北京_南郊观象台"
 
     <div class="icons">
 <ul class="citylist">
-        <li class="addCity"><strong>+</strong>定制城市</li>
+        <li class="addCity"><a href="/pages/dingzhi/city.html"><strong>+</strong>定制城市</a></li>
       </ul>
 
 
