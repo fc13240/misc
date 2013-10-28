@@ -11,7 +11,7 @@ define(function(require){
 		var $myZS = $('.myZS');
 		var valInCookie = cookie.get(STORAGE_NAME) || '101010100|北京||yd-uv-gj,101020100|上海||yd-uv-gj,101130101|乌鲁木齐||yd-uv-gj';
 		var $loading = $('.zs-loading');
-		var arr = valInCookie.split(',');console.log(arr);
+		var arr = valInCookie.split(',');
 		$.each(arr,function(i,v){
 			var item = v.split('|');
 			var cityId = item[0];
