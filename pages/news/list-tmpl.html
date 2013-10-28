@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+	<meta charset="utf-8" />
+	<title><!--%
+java.util.Vector objAncestors1 = ThisChannel.Ancestors();
+for (int i=0;i<objAncestors1.size();i++){
+	Channel objChannel1 =(Channel)objAncestors1.get(i);
+	Response.Output(objChannel1.Name + "——");
+}
+Response.Output(ThisChannel.Name);
+%-->——中国天气网 最好最全面天气预报信息资讯平台</title>
+	<meta  name="keywords" content="天气预报,天气,天气预报,中国天气,气象, 气候, 中央气象台, 中国气象局" />
+	<meta name="description" content="中国天气网 - 中国最好的天气网站，提供国际国内3000个以上城市的精准天气预报及其它资讯服务。" />
+	<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+	<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+	<script>W.css('http://i.tq121.com.cn/c/core.css','http://i.tq121.com.cn/c/common.css','http://i.tq121.com.cn/c/news/list.css');</script>
+	<!--[if lt IE 7]>
+	<script>
+	    W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+	      DD_belatedPNG.fix(".png");
+	    });
+	</script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script>W.js('http://i.tq121.com.cn/j/tool/html5shiv.js')</script>
+	<![endif]-->
+</head>
+<body>
+	<!--#include virtual="/site2/html/pubm/header_top.htm"-->
+    <!--#include virtual="/site2/html/pubm/header_s.htm"-->
+	<div class="contentpage_container clearfix">
+
+		<div class="topads clearfix">
+			<div class="ad_1">
+				<img alt="" src="http://placehold.it/115x90"></div>
+			<div class="ad_2">
+				<img alt="" src="http://placehold.it/727x90"></div>
+			<div class="ad_3">
+				<img alt="" src="http://placehold.it/115x90"></div>
+		</div>
+		<div class="top_contents clearfix">
+  		<!--#include virtual="/site2/html/pubm/content_list_t01.htm"-->
+        <!--#include virtual="/site2/html/pubm/content_list_t02.htm"--> 
+
+		</div>
+		<div class="breadcrumb_search clearfix">
+			<ul class="breadcrumb">
+ 			<li><a href="http://www.weather.com.cn">中国天气网</a></li>
+  		<!--%
+		//当前位置
+		java.util.Vector objAncestors = ThisChannel.Ancestors();
+		for (int i=0;i<objAncestors.size();i++){
+			Channel objChannel =(Channel)objAncestors.get(i);
+			Response.Output(" <li class=\"divider\">&gt;</li><li><a href=\"" + objChannel.CoverPage + "\">" + objChannel.Name + "</a></li>");
+		}
+			Response.Output(" <li class=\"divider\">&gt;</li> <li><a href=\"" + ThisChannel.CoverPage + "\">" + ThisChannel.Name + "</a></li>");
+		%-->
+			</ul>
+
+                  <div class="citysearch">
+	<div class="locationSearch"> <span class="location"></span>
+	    <label>城市天气查询</label>
+	    <div class="iframeDiv"> 
+	    <!--#include virtual="/site2/html/pubmodel/inquires.htm"--> 
+	  </div>
+	  </div>
+	</div>
+
+
+		</div>
+
+
+		<div class="contentcon clearfix">
+			<div class="col_1">
+				<div class="content_section">
+
+<!--%
+//文章列表
+java.util.Vector vc = ThisChannel.TOC.AllLinks;
+for(int i=0;i<vc.size();i++){
+	Link aLink = (Link)vc.get(i);
+	Document aDoc = aLink.GetDocument();
+	if(("").equals(aDoc.Item("CMSPIC").toString())){
+	
+	Response.Output("<div class=\"zxItem\"><a title=\"" + aDoc.Item("TITLE") + "\" target=\"_blank\" href=\"" + aDoc.Item("URL") + "\"><b>" + aDoc.Item("TITLE") + "</b><i>" + Config.NoHtml(aDoc.Item("CMSSUMMARY").toString()) + "</i><span>时间："+TurboCMS.tools.Config.GetDateString((java.util.Date)aDoc.Item("PUBLISHDATE")).substring(0,19)+"</span></a></div>");
+
+	}else{
+	
+	Response.Output("<div class=\"zxItem\"><a title=\"" + aDoc.Item("TITLE") + "\" target=\"_blank\" href=\"" + aDoc.Item("URL") + "\"><b>" + aDoc.Item("TITLE") + "</b><i class=\"clearfix\"><img width=\"88\" height=\"66\" src=\""+ aDoc.Item("CMSPIC").toString().replaceAll(".jpg","_s.jpg")+"\" class=\"lazy\"><span>"+ Config.NoHtml(aDoc.Item("CMSSUMMARY").toString()) +"</span></i><span>时间："+TurboCMS.tools.Config.GetDateString((java.util.Date)aDoc.Item("PUBLISHDATE")).substring(0,19)+"</span></a></div>");
+
+
+	}
+	
+}
+
+%-->
+
+<div class="content_pages">
+<!--%
+try{
+String pPage, nPage;
+int cmsPageA = ThisChannel.TOC.Pages;
+pPage = ThisChannel.TOC.PrevPage;
+nPage = ThisChannel.TOC.NextPage;
+
+java.util.Vector vl =ThisChannel.TOC.AllPages;
+Link Page = (Link)vl.get(0);
+if(ThisChannel.TOC.PageNum>1)
+	Response.Output("<a target=\"_self\" href=\"" + Page.Url + "\">首页</a>");
+else
+	Response.Output("<a>首页</a>");	
+if(!pPage.equals(""))
+	Response.Output("<a target=\"_self\" href=\"" + pPage + "\">上一页</a>");
+else
+	Response.Output("<a>上一页</a>");
+if(!nPage.equals(""))
+	Response.Output("<a target=\"_self\" href=\"" + nPage + "\">下一页</a>");
+else
+	Response.Output("<a>下一页</a>");
+Page = (Link)vl.get(vl.size()-1);	//末页
+if(ThisChannel.TOC.PageNum<vl.size())	
+	Response.Output("<a target=\"_self\" href=\"" + Page.Url + "\">末页</a>");
+else
+	Response.Output("<a>末页</a>");
+
+Response.Output("<a>" + ThisChannel.TOC.PageNum +"/" +cmsPageA + "</a>");
+
+}catch(Exception eu){}
+%-->
+</div>
+
+
+				</div>
+			</div>
+			<div class="col_2">
+				<div class="side_ablock">
+					<a href="#hotnews">
+						<img src="http://placehold.it/300x250" />
+					</a>
+				</div>
+				<!-- code block -->
+      			<!--#include virtual="/site2/html/pubm/content_list_r01.htm"-->
+				<!-- code block -->
+				<div class="sidetab">
+				<ul class="tabs clearfix nav nav-tabs" id="sidetab2">
+				  <li class="active"><a href="#trips">生活旅游</a></li>
+				  <li><a href="#science">气候科普</a></li>
+				</ul>
+				<div class="tab-content">
+				  <!--#include virtual="/site2/html/pubm/content_list_r0201.htm"-->
+				  <!--#include virtual="/site2/html/pubm/content_list_r0202.htm"-->
+				</div>
+				</div>
+
+				<!-- code block -->
+     			<!--#include virtual="/site2/html/pubm/content_list_r03.htm"-->
+				<!-- code block -->
+      			<!--#include virtual="/site2/html/pubm/content_list_r04.htm"-->
+				<!-- code block -->
+				<div class="side_ablock2">
+					<a href="#hotnews">
+						<img src="http://placehold.it/300x250" />
+					</a>
+				</div>
+				<!-- code block -->
+
+				<!--#include virtual="/site2/html/pubm/right_service.htm"-->
+
+			</div>
+		</div>
+	</div>
+				<!--#include virtual="/site2/html/pubm/footer_l.htm"-->
+				<!--#include virtual="/site2/html/pubm/area_prov.htm"-->
+				<!--#include virtual="/site2/html/pubm/fast_nav_weatherfc.htm"-->
+<script>
+
+W(function() {
+ 	W.use(['j/base.js', 'j/tool/nav.js'])
+});
+
+W.use('j/m_city',function(City){
+	  var city = new City({
+	    'prov': $('#prov'),
+	    'city': $('#district'),
+	    'county': $('#city')
+		});
+  	$('#weatherselect').click(function(){
+	    var id = city.getValue() || '101010001';
+	    window.open('http://www.weather.com.cn/weather/'+id+'.shtml');
+  	});
+});
+
+
+
+W.use(['j/plugs/jquery.lazyload.js'],function(){
+	//图片异步加载
+	$('img.lazy').lazyload();
+});
+W(function(){
+	//顶部导航
+	$("nav ul li").click(function(){
+		var num = $(this).find(".dropList a").length,
+			height = parseInt($(this).find(".dropList a").css("line-height").replace("px",""));
+		$(this).find(".dropList i").css({"height":height*num+10});
+		$(this).find(".dropList").toggle();
+	})
+	$("nav ul li").mouseleave(function(){
+		$(this).find(".dropList").hide();
+	})
+	$(".dropList").hover(function(){
+		$(this).show();
+	},function(){
+		$(this).hide();
+	})
+	
+	//tab事件
+	$('#sidetab1 a,#sidetab2 a,#sidetab3 a').click(function (e) {
+		e.preventDefault();
+		if($(this).parent().hasClass("active")) return false;
+		var oldTab = $(this).closest("ul").find("li.active a").attr("href"),
+			currTab = $(this).attr("href");
+		$(this).parent().siblings().removeClass("active");
+		$(oldTab).removeClass("active");
+		$(this).parent().addClass("active");
+		$(currTab).addClass("active");
+
+	}); 
+});
+</script>
+<script type="text/javascript" src="http://c.wrating.com/a1.js"></script>
+<script type="text/javascript" src="/site2/html/tongji/<!--%Response.Output(ThisChannel.RootChannel().ID);%-->.js"></script>
+</body>
+</html>
