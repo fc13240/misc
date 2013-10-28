@@ -50,7 +50,7 @@ define(function(require){
 			var arr = valInCookie.split(',');
 			var topItems = arr.splice(0,topNum);
 			parseData(topItems,function(data){
-				$cityList.prepend($('<dl class="city" title="'+data['title']+'"><dt><a href="'+cityUrl.replace('_id_',data['id'])+'>'+data['shortName']+'</a></dt><dd><span><i class="d'+data['img']+'"></i></span><span>'+data['temp']+'</span></dd></dl>').fadeIn());
+				$cityList.prepend($('<dl class="city" title="'+data['title']+'"><dt><a href="'+cityUrl.replace('_id_',data['id'])+'">'+data['shortName']+'</a></dt><dd><span><i class="d'+data['img']+'"></i></span><span>'+data['temp']+'</span></dd></dl>').fadeIn());
 			});
 			if(arr.length > 0){
 				$('#addCity').hide();
