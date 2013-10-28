@@ -21,6 +21,7 @@ define(function(require){
 		for(var i = 0;i<10;i++){
 			$formContainer.eq(i<3?0:1).append($('<div>').addClass('form').html('<div></div>'));
 		}
+		$formContainer.find('.loading').remove();
 		var $forms = $formContainer.find('.form');
 		//北京|101010100|,郑州|200000000|家
 		var valInCookie = cookie.get(STORAGE_NAME);
