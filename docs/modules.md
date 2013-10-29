@@ -16,6 +16,7 @@
 
 ### [文本框搜索提示模块](#/docs/modules/search_suggest.md){.ajax-link .md}
 此模块提供在文本框输入信息提示结果的统一的方法
+> #### [封装好的搜索框脚本](#/examples/search_suggest/search.md){.ajax-link .md}
 
 ### [城市三级联动](#/examples/city/index.md){.ajax-link .md}
 

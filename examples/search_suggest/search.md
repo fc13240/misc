@@ -30,9 +30,7 @@
     <script class="example_js">
     W.use('j/tool/search',function(search){
     	var inputText = $('#txtZip');
-        var btnZip = $('#btnZip').click(function(){
-        	
-        });
+        var btnZip = $('#btnZip');
         search(inputText,btnZip);
     });
     </script>
