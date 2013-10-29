@@ -65,11 +65,13 @@ define(function(require){
 			});
 		}
 	})();				
-	
+	var REG_IMG = /([dm])(\d+)(?:\.gif)/;
 	var imgs=function(img){
-		var imgend=img.substring(1,img.indexOf("."));
-		if(imgend<10)imgend="0"+imgend;
-		return imgend;
+		var m = REG_IMG.exec(img);
+		if(m){
+			return m[1]+(m[2].length==1?'0':'')+m[2]
+		}
+		return img;
 	}
 	/*解析数据*/
 	function parseData(arr,callback){

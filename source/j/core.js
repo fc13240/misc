@@ -977,7 +977,8 @@ seajs.config = function(configData) {
         var href = _seajs.resolve(args[i]);
         if (!cssCache[href]) {
           cssCache[href] = true;
-          doc.writeln('<link href="' + href + '" media="' + config.media + '" rel="stylesheet" type="text/css" />');
+          // doc.writeln('<link href="' + href + '" media="' + config.media + '" rel="stylesheet" type="text/css" />');
+          W.use(href);
         }
       }
     }

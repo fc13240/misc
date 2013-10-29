@@ -45,17 +45,25 @@ define(function(require){
 		}
 		var fn = function(data){
 			$obj.empty();
-			for(var i in data){
-				$('<option value="' + i + '"'+(selectedId == i?' selected':'')+'>' + data[i] + '</option>').appendTo($obj);
-			}
+			$.each(data,function(i,v){
+				var val = v[0],text = v[1];
+				$('<option value="' + val + '"'+(selectedId == val?' selected':'')+'>' + text + '</option>').appendTo($obj);
+			});
 			callback && callback();
 		}
 		if(_data){
 			fn(_data);
 		}else{
 			$.getJSON(url,function(data){
-				cache[url] = data;
-				fn(data);
+				var arr = [];
+				for(var i in data){
+					arr.push([i,data[i]]);
+				}
+				arr.sort(function(a,b){
+					return a[0].localeCompare(b[0]);
+				});
+				cache[url] = arr;
+				fn(arr);
 			});
 		}
 	}
