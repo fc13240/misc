@@ -488,7 +488,7 @@ right:10px;
     position: absolute;
     right: 10px;
     text-indent: -9999px;
-    top: 5px;
+    top: 36px;
     width: 42px;
 }
 .show{display:none;}
@@ -564,7 +564,7 @@ right:10px;
     padding: 0;
 }
 #txtZip {
-    float: left;
+    float: right;
     font-size: 18px;
     height: 26px;
     line-height: 26px;
