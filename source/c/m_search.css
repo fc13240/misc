@@ -1,0 +1,134 @@
+.suggest-additions {
+    BORDER-RIGHT: #7f9db9 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #7f9db9 1px solid; OVERFLOW-Y: auto; PADDING-LEFT: 0px; Z-INDEX: 99; OVERFLOW-X: hidden; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #7f9db9 1px solid; COLOR: #000000; PADDING-TOP: 0px; BORDER-BOTTOM: #7f9db9 1px solid; POSITION: absolute; BACKGROUND-COLOR: #ffffff;display: none; top: 27px; width: 404px; *top:27px;*left:0px;
+}
+#selectsionTabs .tab {
+    float: left;
+    width: 50px;
+    display:inline-block;
+    text-align: center;
+    margin: 4px 2px 0 2px;
+    color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #C2D0E7;
+    border-bottom-style: none;
+    cursor: pointer;
+    background-color: #EBEFF7;
+    font-size: 15px;
+}
+#selectsionTabs .tab.active {
+    border-color: #C2D0E7;
+    background-color: #FFFFFF;
+}
+#selectsionGroups {
+    clear: left;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #C2D0E7;
+    padding: 4px;
+}
+#selectsionGroups ul {
+    display: none; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#selectsionGroups ul#hot {
+    display: block;
+}
+#selectsionGroups li {
+    float: left;
+    width: 20%;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+}
+#selectsionGroups span {
+    color: #3366BB;
+    cursor: pointer;
+}
+#selectsionGroups span.highlight {
+    color: #FF6600;
+    text-decoration: underline;
+}
+#selectsionNotice {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #C2D0E7;
+    clear: both;
+    color: #000000;
+    font-size: 12px;
+    padding: 4px;
+}
+#selectsionTabs .tab {
+    width: 45px;
+    margin: 4px 1px 0 1px;
+    padding: 2px 0px;
+    font-size: 14px;
+}
+
+#searchBox{width:500px;}
+#selectsionTabs .tab{width:45px;margin: 4px 1px 0 1px; padding:2px 0px; font-size:14px;}
+#selectsionGroups ul.dWeatherRankingBox {
+    margin-bottom:8px;
+}
+#selectsionGroups ul.dWeatherRankingBox {
+        margin:0px 0px;
+/*background:url(/m2/i/topTen.jpg) no-repeat scroll 0 5px;*/
+}
+#selectsionGroups ul.dWeatherRankingBox li {
+    float: none;
+    line-height: 24px;
+    height:24px;
+    text-align:left;
+    padding-left: 20px;
+    width: 376px;
+    background:url(http://www.weather.com.cn/m2/i/topTen.jpg) no-repeat scroll 0 -68px;
+}
+#selectsionGroups ul.dWeatherRankingBox li.num1{
+    background-position: 0 5px;
+}
+#selectsionGroups ul.dWeatherRankingBox li.num2{
+    background-position: 0 -20px;
+}
+#selectsionGroups ul.dWeatherRankingBox li.num3{
+    background-position: 0 -45px;
+}
+#selectsionGroups ul.dWeatherRankingBox li.num4{
+    background-position: 0 -68px;
+}
+#selectsionGroups ul.dWeatherRankingBox li.num5{
+    background-position: 0 -92px;
+}
+#selectsionGroups ul.dWeatherRankingBox li a {
+    padding-right:5px;
+    font-size:14px;
+    color:#000;
+}
+#selectsionGroups .hot-icon-orange {
+    background: none repeat scroll 0 0 #FA8F29;
+}
+#selectsionGroups .hot-icon-dark{
+    background: none repeat scroll 0 0 #DFDFDF;
+}
+#selectsionGroups .hot-icon-index {
+    color: #FFFFFF;
+    margin-right: 8px;
+    text-align: center;
+    width: 14px;
+}
+#selectsionGroups .hot-icon {
+    display: inline-block;
+    position:relative;
+    top:-3px;
+    font-size: 11px;
+    height: 14px;
+    line-height: 14px;
+    }
+#selectsionGroups .hot-icon-new{color:#f00;}
+.chinaTop{position:relative; z-index:9999;}
+.chengshi ul li{float:left; height:20px; line-height:20px; width:50px; text-align:center;}
+.chengshi{position:absolute; display:none;width:300px; padding:7px 2px; border:1px solid #36b; top:90px; left:150px; background:#fff; z-index:9999;}
+.chengshi ul li a{font-size:13px;}
+.zxbg{background:url(http://www.weather.com.cn/m2/i/zxbg.jpg) no-repeat right bottom; height:150px;padding-top:10px;}

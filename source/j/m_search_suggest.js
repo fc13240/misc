@@ -82,6 +82,8 @@
 							_this.show();
 						}
 					});
+				}else{
+					suggestList.children().remove();
 				}
 			}).blur(function(){
 				_this._tryHide();
