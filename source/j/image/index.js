@@ -183,7 +183,8 @@ $(document).ready(function() {
 			bimg.src = bigurl;
 			$(".download > a").attr("href", "http://search.weather.com.cn/static/download.php?filename=" + bigurl);
 			this.description.html(desc);
-			this.currentnum.html(this.current < 9 ? "0" + (this.current + 1) : this.current + 1);
+			//this.currentnum.html(this.current < 9 ? "0" + (this.current + 1) : this.current + 1);
+			this.currentnum.html(this.current);
 		};
 		this.next = function() {
 			if (!that.animating && this.page <= this.pages) {
