@@ -113,11 +113,11 @@
 }
 .image_big .prev{
 	left: 0;
-	cursor: url("http://www.weather.com.cn/n/i/weatherfc/tuji/left.cur"), auto;
+	cursor: url("http://i.tq121.com.cn/i/left.cur"), auto;
 }
 .image_big .next{
 	right: 0;
-	cursor: url("http://www.weather.com.cn/n/i/weatherfc/tuji/right.cur"), auto;
+	cursor: url("http://i.tq121.com.cn/i/right.cur"), auto;
 }
 .image_big img{
 	margin: 0 auto;
