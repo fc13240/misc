@@ -80,31 +80,16 @@
           <span id="selAroundCity">查看周边区县</span>
           <!--<span id="hotCity">我的热点城市(3)</span>-->
 <!--搜索框start-->
-        <!--搜索框start-->
-<!--
-<script src="/m2/j/public/newweatherhebing.js" type="text/javascript"></script>
-<script type="text/javascript" src="/m2/j/public/tooltips.js"></script>
--->
-<div class="search">
-   <div class="formBox">
-<div id="Zip" class="Mainbox" >
-        <div id="ZipContent">
-          <input type="text" class="textinput" id="txtZip" placeholder="输入城市名、全拼、简拼、电话区号、邮编查询"/>
-          <input type="button" class="btn"
-                id="btnZip" value="" />
+        <div class="search">
+           <div class="formBox">
+            <div id="Zip" class="Mainbox">
+                  <div id="ZipContent">
+                    <input type="text" class="textinput" id="txtZip" placeholder="输入城市名、全拼、简拼、电话区号、邮编查询">
+                    <input type="button" class="btn" id="btnZip" value="">
+                  </div>
+                </div>
+           </div>
         </div>
-        <div id="Zipresult" class="inforesult"> </div>
-        
-        
-      </div>
-   </div>
-<script>
-      W(function(){
-        W.use('http://www.weather.com.cn/m2/j/public/tooltips.js');
-      })
-</script>
-  </div>
-<!--搜索框end-->
 
 <!--搜索框end-->
         </div>
@@ -781,7 +766,7 @@ var observe24h_data = {"od":{"od0":"201310311300","od1":"北京_南郊观象台"
       var cityid = "101010100";
       W.use('j/weatherfc/city_main');
     </script>
-    
+
     <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/ad/caoyu-min.js"></script>
     <script type="text/javascript" src="http://ad.321tq.com/ex2?posid=d"></script>
 <div class="ad-container">

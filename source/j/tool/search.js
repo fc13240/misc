@@ -11,13 +11,13 @@ define(function(require){
 	//提示面板内容地址
 	var additionUrl = '/'+(isWWW?'profile':'examples/search_suggest')+'/search_addition.html';
 	var $addition;
+	var isLoading = false;
 	function show($inputText){
 		if($addition){
 			var offset = $inputText.offset();
 			offset.top += $inputText.height()+(parseFloat($inputText.css('padding-top'))||0)+(parseFloat($inputText.css('padding-bottom'))||0);
-			$addition.css(offset).show(function(){
-				$inputText.trigger('show_addition');
-			});
+			$addition.css(offset).show();
+			$inputText.trigger('show_addition');
 		}
 	}
 	function hide(){
@@ -29,8 +29,10 @@ define(function(require){
 		$inputText.focus(function(){
 			var $this = $(this);
 			if(!$this.val()){
-				if(!$addition){
+				if(!$addition && !isLoading){
+					isLoading = true;
 					$.get(additionUrl,function(html){
+						isLoading = false;
 						$addition = $(html).appendTo($('body')).mouseleave(hide);
 						var className = 'active';
 						var $items = $('#selectsionGroups').find('ul');
