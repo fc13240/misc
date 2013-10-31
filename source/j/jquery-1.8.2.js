@@ -9439,3 +9439,9 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }
 
 })( window );
+
+if(typeof define === 'function' && define.cmd){
+	define( function(){
+		return jQuery;
+	} )
+}

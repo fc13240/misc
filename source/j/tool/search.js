@@ -15,7 +15,9 @@ define(function(require){
 		if($addition){
 			var offset = $inputText.offset();
 			offset.top += $inputText.height()+(parseFloat($inputText.css('padding-top'))||0)+(parseFloat($inputText.css('padding-bottom'))||0);
-			$addition.css(offset).show();
+			$addition.css(offset).show(function(){
+				$inputText.trigger('show_addition');
+			});
 		}
 	}
 	function hide(){
@@ -88,5 +90,11 @@ define(function(require){
 				}
 			});
 		}
+		//对外提供可修复$addition样式的API
+		return function(cssObj){
+			if($addition){
+				$addition.css(cssObj);
+			}
+		};
 	}
 })

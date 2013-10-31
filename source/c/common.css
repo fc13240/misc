@@ -951,3 +951,10 @@ img.lazy{
 #topics dl dt a {
     color: #2E8ABB;
 }
+
+
+/*广告处理*/
+.adposter_pos{
+    position: absolute;
+    left: -10000px;
+}

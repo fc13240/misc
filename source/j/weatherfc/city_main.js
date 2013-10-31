@@ -140,4 +140,30 @@ define(function(require){
 	// 	rightElements.eq(i).css({"top":top});
 	// 	top+= rightElements.eq(i).outerHeight()+10;
 	// }
+
+	//预警信息
+	var alarmHtml = '<div id="disasterAlarm">'+
+				      '<span class="shadow"><i></i></span>'+
+				      '<h2>天气预警</h2>'+
+				      '<h3><a href="_url_" target="_blank"><span class="img"><img alt="预警信号等级说明" src="_img_"></span><span class="title">_title_</span><span class="time"></span></a></h3>'+
+				      '<i class="bg"></i>'+
+				    '</div>';
+	var getAlarm = require('../tool/alarm');
+	getAlarm(cityid,function(result){
+		if(result){
+			var textIndex = result.textIndex;
+			textIndex = (textIndex<10?'0':'')+textIndex;
+			var levelIndex = result.levelIndex;
+			levelIndex = (levelIndex<10?'0':'')+levelIndex;
+			var img = W.data.base+'i/alarm_icon/'+textIndex+levelIndex+'.gif';
+			var title = result.title;
+			$('.alarm_info').html(alarmHtml.replace('_url_',result.url).replace('_img_',img).replace('_url_',title));
+		}
+	});
+
+	//搜索框
+	var search = require('../tool/search');
+	var rePosFn = search($('#txtZip').on('show_addition',function(){
+		rePosFn({'left':1025});
+	}),$('#btnZip'));
 })

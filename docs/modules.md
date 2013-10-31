@@ -21,3 +21,5 @@
 ### [城市三级联动](#/examples/city/index.md){.ajax-link .md}
 
 ### [jiathis分享模块](#/examples/jia/index.md){.ajax-link .md}
+
+### [caoyu广告处理方案](#/docs/modules/ad-pos.md){.ajax-link .md}

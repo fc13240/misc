@@ -55,6 +55,7 @@ if($arr[1]){
         	W.css(base+'c/core.css',base+'../libs/css/markdown.css',base+'../libs/css/highlight.css');
         })();</script>
         <style>
+        body{background-color:white;}
         .main_container{width:980px;margin: 0 auto;border: 1px solid white;/*防止子元素margin影响*/}
         /* rewrite markdown { */
 		pre{

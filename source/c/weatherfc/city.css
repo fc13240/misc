@@ -822,3 +822,16 @@ background-color: #FFFFFF;
 #selectsionGroups .hot-icon-index {color: #FFFFFF;margin-right: 8px;text-align: center;width: 14px;}
 #selectsionGroups .hot-icon {display: inline-block;position:relative;top:-3px;font-size: 11px;height: 14px;line-height: 14px;}
 #selectsionGroups .hot-icon-new{color:#f00;}
+
+/*预警提示*/
+#disasterAlarm{width:1014px;margin:0 auto;height:43px;line-height:43px;padding:10px 10px 0px 0px;position:relative;}
+#disasterAlarm .bg{height:53px;left:12px;}
+#disasterAlarm h2{background-color:#ee7a1e;color:#fff;font-size:18px;font-weight:normal;width:94px;padding-left:10px;float:left;position:relative;z-index:5;}
+#disasterAlarm h3{width:886px;background-color:#fff;float:left;position:relative;z-index:5;}
+#disasterAlarm h3 a{display:block;}
+#disasterAlarm h3 span{display:block;float:left;font-weight:normal;cursor:pointer;}
+#disasterAlarm h3 .img{width:44px;padding:4px 16px;height:35px;background-color: #fff100;}
+#disasterAlarm h3 .title{font-size:16px;width:660px;padding-left:15px;}
+#disasterAlarm h3 .time{font-size:12px;}
+#disasterAlarm .shadow{display:block;width:12px;height:43px;background-color:#ee7a1e;float:left;position:relative;z-index:5;}
+#disasterAlarm .shadow i{display:block;width:0px;height:0px;overflow:hidden;border-top:6px solid #844009;border-right:6px solid #844009;border-bottom:6px solid transparent;border-left:6px solid transparent;_border-bottom:6px solid dashed;_border-left:6px solid dashed;position:absolute;bottom:-12px;right:0px;}

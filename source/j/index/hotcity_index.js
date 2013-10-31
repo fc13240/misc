@@ -35,7 +35,7 @@ define(function(require){
 		//得到预警信息URL
 		var url = 'http://product.weather.com.cn/alarm/grepalarm.php?count=1&areaid='
 		return function(cityId,callback){
-			$.getJSON(url+cityId,function(){
+			$.getScript(url+cityId,function(){
 				var result = {'url':'','text':'','title':''};
 				if(alarminfo.count > 0){
 					var url = alarminfo.data[0][1];
