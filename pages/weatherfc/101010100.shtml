@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="dns-prefetch" href="http://static.zk.com">
+    <link rel="dns-prefetch" href="http://i.tq121.com.cn">
     <meta charset="utf-8" />
     <title>北京天气预报</title>
     <meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
@@ -12,8 +12,8 @@
     <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
     <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
     <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
-<script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/core.js"></script>
-    <script>W.css('http://static.zk.com/c/common.css','http://static.zk.com/c/weatherfc/common.css','http://static.zk.com/c/weatherfc/city.css','http://static.zk.com/c/jquery-ui-1.10.3.custom.min.css')</script>
+<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
+    <script>W.css('http://i.tq121.com.cn/c/common.css','http://i.tq121.com.cn/c/weatherfc/common.css','http://i.tq121.com.cn/c/weatherfc/city.css','http://i.tq121.com.cn/c/jquery-ui-1.10.3.custom.min.css')</script>
     <script type="text/javascript" language="JavaScript" src="http://geoip.weather.com.cn/g/"></script>
     <!--[if lt IE 7]>
     <script>
@@ -63,7 +63,7 @@
     <!-- <div id="disasterAlarm">
       <span class="shadow"><i></i></span>
       <h2>天气预警</h2>
-      <h3><a href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=1012002-20131030140030-1202.html" target="_blank"><span class="img" style="background-color:#fff100;"><img alt="预警信号等级说明" src="http://static.zk.com/i/alarm_icon/0101.gif"></span><span class="title">湖北省襄阳市气象台发布大雾黄色预警</span><span class="time">2013-10-30 14:00:30</span></a></h3>
+      <h3><a href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=1012002-20131030140030-1202.html" target="_blank"><span class="img" style="background-color:#fff100;"><img alt="预警信号等级说明" src="http://i.tq121.com.cn/i/alarm_icon/0101.gif"></span><span class="title">湖北省襄阳市气象台发布大雾黄色预警</span><span class="time">2013-10-30 14:00:30</span></a></h3>
       <i class="bg"></i>
     </div> -->
      <!--预警信息end-->
@@ -782,7 +782,7 @@ var observe24h_data = {"od":{"od0":"201310311300","od1":"北京_南郊观象台"
       W.use('j/weatherfc/city_main');
     </script>
     
-    <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/ad/caoyu-min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/ad/caoyu-min.js"></script>
     <script type="text/javascript" src="http://ad.321tq.com/ex2?posid=d"></script>
 <div class="ad-container">
   <div class="adposter_pos" data-posid="ad_banner">
