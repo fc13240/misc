@@ -9,7 +9,7 @@ define(function(require){
 		//得到预警描述及等级
 		var REG = /-(\d{2})(\d{2})\.html/;
 		//得到预警信息URL
-		var url = 'http://product.weather.com.cn/alarm/grepalarm.php?count=1&areaid='
+		var url = 'http://product.weather.com.cn/alarm/stationalarm.php?count=1&areaid='
 		return function(cityId,callback){
 			$.getScript(url+cityId,function(){
 				if(alarminfo.count > 0){
