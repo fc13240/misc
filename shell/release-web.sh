@@ -9,7 +9,7 @@ echo "<b>rsync min to 61.4.185.223</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/min/ sam@61.4.185.223:/home/sam/www/misc/min/
 echo '==============';
-echo '<pre>';
+echo '</pre>';
 echo "<b>rsync min to 61.4.185.212</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/min/ sam@61.4.185.212:/home/sam/www/misc/min/
