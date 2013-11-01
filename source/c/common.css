@@ -957,4 +957,5 @@ img.lazy{
 .adposter_pos{
     position: absolute;
     left: -10000px;
+    z-index: 99;/*防止定位容器的z-index影响*/
 }
