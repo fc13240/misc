@@ -157,7 +157,7 @@ define(function(require){
 			levelIndex = (levelIndex<10?'0':'')+levelIndex;
 			var img = W.data.base+'i/alarm_icon/'+textIndex+levelIndex+'.gif';
 			var title = result.title;
-			$('.alarm_info').html(alarmHtml.replace('_url_',result.url).replace('_img_',img).replace('_title_',title));
+			$('.alarm_info').html($(alarmHtml.replace('_url_',result.url).replace('_img_',img).replace('_title_',title)).fadeIn().fadeOut().fadeIn());
 		}
 	});
 
