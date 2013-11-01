@@ -9,9 +9,9 @@ define(function(require){
 		//得到预警描述及等级
 		var REG = /-(\d{2})(\d{2})\.html/;
 		//得到预警信息URL
-		var url = 'http://product.weather.com.cn/alarm/stationalarm.php?count=1&areaid='
+		var getAlarmUrl = 'http://product.weather.com.cn/alarm/stationalarm.php?count=1&areaid='
 		return function(cityId,callback){
-			$.getScript(url+cityId,function(){
+			$.getScript(getAlarmUrl+cityId,function(){
 				if(alarminfo.count > 0){
 					var result = {'url':'','text':'','title':'','d':''};
 					var data = alarminfo.data[0];
@@ -31,9 +31,9 @@ define(function(require){
 						var level = '';
 						var levelIndex = parseInt(m[2],10);
 						if(levelIndex > 90){
-							level = yjyc[levelIndex-91];
+							level = gdyc[levelIndex - 91];
 						}else{
-							level = gdyc[levelIndex - 1];
+							level = yjyc[levelIndex - 1];
 						}
 						result.levelIndex = levelIndex;
 						result.textIndex = textIndex;
