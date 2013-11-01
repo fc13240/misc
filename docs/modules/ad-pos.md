@@ -38,3 +38,18 @@ W.js('/examples/ad/conf.js');
 ```
 
 >这里一定要注意`<div class="adposter_pos" data-posid="adpos_1"></div>` class不可变，data-posid为要定位到的显示广告的容器ID，这个容器最好有尺寸的样式
+
+
+-----
+
+### 遇到的问题
+此方案会在页面有动态调整某块高度或宽度时，会影响到广告的绝对定位，出现此情况，可以用如下方法解决：
+```
+try{
+	W.util.adPos();//在广告之前加载并初始化完成的化，此方法为undefined
+}catch(e){}
+```
+这种方案当页面的改变在广告代码运行之前会报错，所以**必须用`try{}catch(e){}`**，当页面改变在广告代码运行（即完成某个广告的定位）之后，此方法可正常运行。
+
+## W.util.adPos 用法
+参数: `$adposterContainer` 不传此参数时，把所有广告都重新定位

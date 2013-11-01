@@ -3,23 +3,34 @@ Namespace=new Object();Namespace.register=function(fullNS){var nsArray=fullNS.sp
 !function(){
 	var oldAction = WRATING.PLAY.ACTION;
 	var posedNum = 0;
+	var rePosAd = function($adposterContainer){
+		if($adposterContainer.length == 0){
+			$adposterContainer = $('.adposter_pos');
+		}
+
+		if($adposterContainer.length > 0){
+			$adposterContainer.each(function(i,v){
+				var $this = $(this);
+				var posId = $this.data('posid');
+				var toPos = $('#'+posId);
+				if(toPos.length > 0){
+					var offset = toPos.offset();
+					offset.top += parseFloat(toPos.css('padding-top'))||0;
+					offset.left += parseFloat(toPos.css('padding-left'))||0;
+					$this.css(offset);
+				}
+			});
+		}
+	}
 	WRATING.PLAY.ACTION = function(){
 		!function(index){
 			W.use('jquery',function(){
-				var adposterContainer = $('.adposter_pos').eq(index);
-				if(adposterContainer.length > 0){
-					var posId = adposterContainer.data('posid');
-					var toPos = $('#'+posId);
-					if(toPos.length > 0){
-						var offset = toPos.offset();
-						offset.top += parseFloat(toPos.css('padding-top'))||0;
-						offset.left += parseFloat(toPos.css('padding-left'))||0;
-						$(adposterContainer).css(offset);
-					}
-				}
+				rePosAd($('.adposter_pos').eq(index));
 			})
 		}(posedNum++);
 		
 		oldAction.apply(this,arguments);
-	}
+	};
+	
+	(W.util || (W.util = {}))['adPos'] = rePosAd
 }()

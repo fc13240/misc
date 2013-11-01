@@ -158,6 +158,9 @@ define(function(require){
 			var img = W.data.base+'i/alarm_icon/'+textIndex+levelIndex+'.gif';
 			var title = result.title;
 			$('.alarm_info').html($(alarmHtml.replace('_url_',result.url).replace('_img_',img).replace('_title_',title)).fadeIn().fadeOut().fadeIn());
+			try{
+				W.util.adPos();//在广告之前加载并初始化完成的化，此方法为undefine
+			}catch(e){}			
 		}
 	});
 
