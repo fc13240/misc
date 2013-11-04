@@ -1071,7 +1071,7 @@ var observe24h_data = {"od":{"od0":"201310290900","od1":"门头沟","od2":[{"od2
 
     <script>
       var cityid = "101011400";
-      W.use('j/weatherfc/city_main');
+      // W.use('j/weatherfc/city_main');
     </script>
   </body>
 </html>

@@ -107,15 +107,16 @@
 .icons .citylist li a,.icons .citylist li a:hover{padding-top:0px;color:#fff;height:16px;line-height:16px;}
 .icons .citylist .temp{font-size:12px;}
 .icons .addCity{text-align:center;line-height:30px;color:#fff;cursor:pointer;position:relative;}
-.icons .addCity strong{font-weight:bold;font-size:36px;display:block;height:30px;}
+.icons .addCity strong{font-weight:bold;font-size:36px;display:block;height:30px;line-height:30px;}
 .icons .citylist p{height:16px;line-height:16px;}
 .icons .citylist .img{padding:2px 0px 2px 13px;}
 /*zk add*/
-.icons .citylist li a{
-	display: inline-block;
+.icons .citylist li a,.icons .citylist li a:hover{
+	display: block;
 	clear: both;
 	*zoom: 1;
 	height: 100%;
+	cursor: pointer;
 }
 .icons .citylist span.alias{
 	display: block;
