@@ -33,7 +33,7 @@ Namespace=new Object();Namespace.register=function(fullNS){var nsArray=fullNS.sp
 	};
 	W(function(){
 		//窗口更改大小事件
-		$('window').on('resize',rePosAd);
+		$(window).on('resize',rePosAd);
 	})
 	(W.util || (W.util = {}))['adPos'] = rePosAd
 }()
