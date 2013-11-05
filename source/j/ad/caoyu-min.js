@@ -31,6 +31,9 @@ Namespace=new Object();Namespace.register=function(fullNS){var nsArray=fullNS.sp
 		
 		oldAction.apply(this,arguments);
 	};
-	
+	W(function(){
+		//窗口更改大小事件
+		$('window').on('resize',rePosAd);
+	})
 	(W.util || (W.util = {}))['adPos'] = rePosAd
 }()
