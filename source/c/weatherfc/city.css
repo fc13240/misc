@@ -837,44 +837,106 @@ background-color: #FFFFFF;
 #disasterAlarm .shadow i{display:block;width:0px;height:0px;overflow:hidden;border-top:6px solid #844009;border-right:6px solid #844009;border-bottom:6px solid transparent;border-left:6px solid transparent;_border-bottom:6px solid dashed;_border-left:6px solid dashed;position:absolute;bottom:-12px;right:0px;}
 
 /*背景图片处理*/
-body.qing_d{
+/*晴 白天*/
+body.tq_d00{
     background-image: url(../../i/bg/201311/qing_day.jpg);
     background-color: #5c91cd;
 }
-body.qing_n{
+/*晴 夜间*/
+body.tq_n00{
     background-image: url(../../i/bg/201311/qing_night.jpg);
     background-color: #294273;
 }
-
-body.yin{
+/*阴*/
+body.tq_d02,
+body.tq_n02{
     background-image: url(../../i/bg/201311/yin.jpg);
     background-color: #4a4b50;
 }
-
-body.duoyun{
+/*多云*/
+body.tq_d01,
+body.tq_n01{
     background-image: url(../../i/bg/201311/duoyun.jpg);
     background-color: #cdcdcd;
 }
-
-body.yu{
+/*雨*/
+body.tq_d03,
+body.tq_n03,
+body.tq_d04,
+body.tq_n04,
+body.tq_d05,
+body.tq_n05,
+body.tq_d06,
+body.tq_n06,
+body.tq_d07,
+body.tq_n07,
+body.tq_d08,
+body.tq_n08,
+body.tq_d09,
+body.tq_n09,
+body.tq_d10,
+body.tq_n10,
+body.tq_d11,
+body.tq_n11,
+body.tq_d12,
+body.tq_n12,
+body.tq_d19,
+body.tq_n19，
+body.tq_d21,
+body.tq_n21，
+body.tq_d22,
+body.tq_n22，
+body.tq_d23,
+body.tq_n23，
+body.tq_d24,
+body.tq_n24，
+body.tq_d25,
+body.tq_n25{
     background-image: url(../../i/bg/201311/yu.jpg);
     background-color: #b4ddf0;
 }
 
-body.xue{
+/*雪*/
+body.tq_d13,
+body.tq_n13,
+body.tq_d14,
+body.tq_n14,
+body.tq_d15,
+body.tq_n15,
+body.tq_d16,
+body.tq_n16,
+body.tq_d17,
+body.tq_n17,
+body.tq_d26,
+body.tq_n26,
+body.tq_d27,
+body.tq_n27,
+body.tq_d28,
+body.tq_n28{
     background-image: url(../../i/bg/201311/xue.jpg);
     background-color: #d4d6db;
 }
 
-body.wu{
+/*雾*/
+body.tq_d18,
+body.tq_n18{
     background-image: url(../../i/bg/201311/wu.jpg);
     background-color: #c3d4de;
 }
-body.mai{
+body.tq_d53,
+body.tq_n53{
     background-image: url(../../i/bg/201311/mai.jpg);
     background-color: #b0b1b1;
 }
-body.shachen{
+/*沙尘*/
+body.tq_d20,
+body.tq_n20,
+body.tq_d29,
+body.tq_n29,
+body.tq_d30,
+body.tq_n30,
+body.tq_d31,
+body.tq_n31{
     background-image: url(../../i/bg/201311/shachen.jpg);
     background-color: #e9b277;
 }

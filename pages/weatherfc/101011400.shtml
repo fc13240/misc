@@ -28,7 +28,7 @@
     <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
     <![endif]-->    
   </head>
-  <body class="qing_n">
+  <body class="tq_d00">
     <!--顶部日期及导航start-->
     <div id="toolBar">
   <div class="midBlock"> <span id="time"></span> <i class="mobile"></i><b>移动客户端<i></i></b> <span class="links"><!--<a class="blue" href="#"  title="登录">登录</a>--><a id="setIndex" href="javascript:void(0);" target="_self" title="设为首页">设为首页</a><a id="collect" target="_self" href="javascript:void(0);"  title="收藏">收藏</a><a id="provice" href="javascript:void(0);"  title="省级站" target="_self"><i class="icon"></i>省级站<i class="arrow"></i></a><a id="eg" href="http://www.weather.com.cn/english/" target="_blank" title="English Version">English Version</a><a href="#"  id="dl_tw">繁體中文</a></span> </div>
