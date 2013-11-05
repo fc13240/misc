@@ -4,7 +4,7 @@ Namespace=new Object();Namespace.register=function(fullNS){var nsArray=fullNS.sp
 	var oldAction = WRATING.PLAY.ACTION;
 	var posedNum = 0;
 	var rePosAd = function($adposterContainer){
-		if($adposterContainer.length == 0){
+		if(!$adposterContainer || $adposterContainer.length == 0){
 			$adposterContainer = $('.adposter_pos');
 		}
 
