@@ -390,7 +390,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #forecast .relateWeather .nongli,#forecast .relateWeather.jieri{color:#ee842f;font-size:14px;height:22px;line-height:22px;}
 .ad{width:300px;height:250px;position:absolute;right:0px;top:10px;z-index:5;}
 #remind{margin-top:2px;background-color:#fff;padding:5px 10px;width:650px;position:relative;}
-#remind h3{font-size:20px;font-weight:noraml;line-height:25px;}
+#remind h3{font-size:20px;font-weight:normal;line-height:25px;}
 #remind p{font-size:12px;line-height:20px;}
 #remind .detail{position:absolute;right:10px;top:8px;width:500px;line-height:20px;}
 
