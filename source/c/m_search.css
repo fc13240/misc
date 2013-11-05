@@ -1,5 +1,6 @@
 .suggest-additions {
     BORDER-RIGHT: #7f9db9 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #7f9db9 1px solid; OVERFLOW-Y: auto; PADDING-LEFT: 0px; Z-INDEX: 99; OVERFLOW-X: hidden; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #7f9db9 1px solid; COLOR: #000000; PADDING-TOP: 0px; BORDER-BOTTOM: #7f9db9 1px solid; POSITION: absolute; BACKGROUND-COLOR: #ffffff;display: none; top: 27px; width: 404px; *top:27px;*left:0px;
+    z-index: 100;/*在最上层*/
 }
 #selectsionTabs .tab {
     float: left;

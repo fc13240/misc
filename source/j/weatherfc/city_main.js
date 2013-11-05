@@ -166,7 +166,8 @@ define(function(require){
 
 	//搜索框
 	var search = require('../tool/search');
-	var rePosFn = search($('#txtZip').on('show_addition',function(){
-		rePosFn({'left':1025});
+	var $txtZip = $('#txtZip');
+	var rePosFn = search($txtZip.on('show_addition',function(){
+		rePosFn({'left':'50%','margin-left':74});
 	}),$('#btnZip'));
 })
