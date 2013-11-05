@@ -19,7 +19,7 @@ define(function(require){
 	W(function(){
 		var $formContainer = $('.form-container');
 		for(var i = 0;i<10;i++){
-			$formContainer.eq(i<3?0:1).append($('<div>').addClass('form').html('<div></div>'));
+			$formContainer.eq(i<3?0:1).append($('<div>').addClass('form').html('<div></div>').fadeIn());
 		}
 		$formContainer.find('.loading').remove();
 		var $forms = $formContainer.find('.form');

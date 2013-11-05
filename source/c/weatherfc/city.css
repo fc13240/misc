@@ -1,4 +1,4 @@
-body{background-color:#EEEEEE;background-attachment:fixed;background-position:center top;background-size:100%;background-repeat:no-repeat;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
+body{background-color:#EEEEEE;background-attachment:fixed;background-position:center top;background-repeat:no-repeat;background-size:100%;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
 *{padding:0px;margin:0px;border:0;}
 ul{list-style:none;}
 a{text-decoration:none;color:#252525;}
@@ -835,3 +835,46 @@ background-color: #FFFFFF;
 #disasterAlarm h3 .time{font-size:12px;}
 #disasterAlarm .shadow{display:block;width:12px;height:43px;background-color:#ee7a1e;float:left;position:relative;z-index:5;}
 #disasterAlarm .shadow i{display:block;width:0px;height:0px;overflow:hidden;border-top:6px solid #844009;border-right:6px solid #844009;border-bottom:6px solid transparent;border-left:6px solid transparent;_border-bottom:6px solid dashed;_border-left:6px solid dashed;position:absolute;bottom:-12px;right:0px;}
+
+/*背景图片处理*/
+body.qing_d{
+    background-image: url(../../i/bg/201311/qing_day.jpg);
+    background-color: #5c91cd;
+}
+body.qing_n{
+    background-image: url(../../i/bg/201311/qing_night.jpg);
+    background-color: #294273;
+}
+
+body.yin{
+    background-image: url(../../i/bg/201311/yin.jpg);
+    background-color: #4a4b50;
+}
+
+body.duoyun{
+    background-image: url(../../i/bg/201311/duoyun.jpg);
+    background-color: #cdcdcd;
+}
+
+body.yu{
+    background-image: url(../../i/bg/201311/yu.jpg);
+    background-color: #c3d4de;/*#b4ddf0*/
+}
+
+body.xue{
+    background-image: url(../../i/bg/201311/xue.jpg);
+    background-color: #d4d6db;
+}
+
+body.wu{
+    background-image: url(../../i/bg/201311/wu.jpg);
+    background-color: #c3d4de;
+}
+body.mai{
+    background-image: url(../../i/bg/201311/mai.jpg);
+    background-color: #b0b1b1;
+}
+body.shachen{
+    background-image: url(../../i/bg/201311/shachen.jpg);
+    background-color: #e9b277;
+}
