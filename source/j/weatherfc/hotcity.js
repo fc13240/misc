@@ -31,7 +31,7 @@ define(function(require){
 		}
 		var scrollTop = $(window).scrollTop();
 		var winHeight = $(window).height();
-		var myhotcity = cookie.get(COOKIE_NAME) || '北京|101010100|';
+		var myhotcity = cookie.get(COOKIE_NAME);// || '北京|101010100|';
 		var cityArr = myhotcity.split(",").splice(0,3),//只显示前三个
 			cityNum = cityArr.length;
 		$icons.css({"marginRight":"-565px","top":(scrollTop+winHeight-(cityNum*75)-405)});
