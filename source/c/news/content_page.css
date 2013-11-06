@@ -123,6 +123,8 @@
 }
 .side_ablock{
     margin-bottom:10px;
+    width: 300px;
+    height: 250px;
 }
 .side_ablock img,
 .side_ablock2 img{
@@ -130,6 +132,8 @@
 }
 .side_ablock2{
     margin-top:10px;
+    width: 300px;
+    height: 250px;
 }
 .contentpage_container .contentcon{
     margin-top:10px;
@@ -345,6 +349,8 @@
 }
 .bottom_gad{
     margin-top:10px;
+    height: 90px;
+    width: 640px;
 }
 
 .photoslide{
