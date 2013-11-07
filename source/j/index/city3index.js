@@ -1,9 +1,9 @@
 define(function(require){
 	var STORAGE_NAME = 'zs';//favorite city name
 	var dataUrl = "/data/zs/_id_.html";//加载城市指数信息地址
-	var cityUrl = 'http://www.weather.com.cn/weatherfc/_id_.shtml';//显示城市的链接地址
-	var zsUrl = '/indexfc/_zs_/_id_.shtml';//显示指数的链接地址
-	var dingzhiUrl = '/pages/dingzhi/zhishu.html';//指数定制地址
+	// var cityUrl = '/weather/_id_.shtml';//显示城市的链接地址
+	var zsUrl = '/zhishu/_zs_/_id_.shtml';//显示指数的链接地址
+	var dingzhiUrl = '/profile/';//指数定制地址
 
 	require('../global.js');
 	var cookie = W.util.cookie;
@@ -19,7 +19,7 @@ define(function(require){
 				$loading.remove();
 				var html = '<dl>'+
 						      '<dt>'+
-						        '<a href="/weatherfc/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
+						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
 						        '<a class="btn-dz" href="'+dingzhiUrl+'">[定制]</a>'+
 						      '</dt>'+
 						      '<dd>';
