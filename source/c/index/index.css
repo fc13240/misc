@@ -11,7 +11,8 @@ a:hover{color:#ee842f;}
 #search h1 a{display:block;width:140px;height:35px;text-indent:-9999px;}
 #search dl{width:76px;height:64px;overflow:hidden;float:left;margin-left:3px;background-color:#ddeff7;color:#076ea8;font-size:12px;font-weight:bold;}
 #search dl dt{padding-left:10px;height:30px;line-height:30px;}
-#search dl dd{line-height:16px;padding-top:0px;padding-left:10px;overflow: hidden;}
+#search dl dd{line-height:16px;padding-top:0px;padding-left:10px;}
+#search dl.city dd{overflow: hidden;}
 #search dl dd span{display:block;height:16px;float:left;padding-right:5px;}
 #search dl dd span i{background-image:url(../../i/index/legend20X16.gif);background-repeat:no-repeat;display:block;width:20px;height:16px;overflow:hidden;}
 #search dl dd span .d00{background-position:0px 0px;}
