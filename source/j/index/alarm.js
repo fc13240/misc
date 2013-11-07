@@ -62,6 +62,9 @@ define(function(require){
 					});
 					$gjdiv.appendTo($pppp);
 					$pppp.appendTo($appparent);
+					try{
+						W.util.adPos();//在广告之前加载并初始化完成的化，此方法为undefine
+					}catch(e){}	
 				}
 				callback && callback();
 			}
