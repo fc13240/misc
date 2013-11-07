@@ -196,7 +196,7 @@ a:hover{color:#ee842f;}
 .topic dl img{width:93px;height:70px;}
 .topic dl dt{width:93px;float:left;}
 .topic dl dd{width:175px;padding-left:10px;float:left;color:#076ea8;font-size:12px;line-height:25px;}
-#topNews .rightBlock{width:300px;position:absolute;right:0px;top:0px;z-index:98;}
+#topNews .rightBlock{width:300px;position:absolute;right:0px;top:0px;z-index:2;}
 .rightBlock h2{font-size:12px;height:34px;line-height:34px;background-color:#fffac2;}
 .rightBlock h2 i{display:block;float:left;background:url(../../i/index/index_icons.png) no-repeat -42px -110px;width:34px;height:34px;margin-right:10px;}
 .rightBlock h2 b{color:#ee842f;}
