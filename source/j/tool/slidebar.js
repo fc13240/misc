@@ -19,7 +19,7 @@ define(function(require){
 	W(function(){
 		var $slidebar = $(html).fadeIn().appendTo($('body'));
 		var $citylist = $slidebar.find('.citylist');
-		var myhotcity = store.get(STORE_NAME) || '北京|101010100|,北京|101010100|,北京|101010100|';// || '北京|101010100|';
+		var myhotcity = store.get(STORE_NAME) || '';// || '北京|101010100|';
 		var cityArr = myhotcity.split(",").splice(0,3),//只显示前三个
 			cityNum = cityArr.length;
 		$.each(cityArr,function(i,v){
