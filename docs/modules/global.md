@@ -80,8 +80,9 @@
 > #### W.util.setHome
 设置为首页
 
-> #### W.util.cookie.get
-得到一个cookie
-
-> #### W.util.cookie.set
-设置一个cookie
+> #### W.util.store
+本地存储方案
+> > ##### W.util.store.get
+得到一个值
+> > ##### W.util.store.set
+设置一个值
