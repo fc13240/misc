@@ -56,7 +56,7 @@ define(function(require){
 					show($inputText);
 				}
 			}
-		});
+		}).blur(hide);
 		$inputText.keydown(hide);
 		new Suggest({
 			'textBox': $inputText
