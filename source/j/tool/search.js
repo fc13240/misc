@@ -5,7 +5,7 @@ define(function(require){
 	var Suggest = require('../m_search_suggest');
 	var conf = {"北京":"bj","上海":"sh","天津":"tj","重庆":"cq","河北":"hebei","河南":"henan","山东":"sd","山西":"shanxi","陕西":"shaanxi","江苏":"js","湖南":"hunan","湖北":"hubei","安徽":"ah","浙江":"zj","江西":"jx","福建":"fj","台湾":"taiwan.shtml","香港":"xianggang.shtml","澳门":"mo","广东":"gd","广西":"gx","海南":"hainan","云南":"yn","贵州":"gz","四川":"sc","西藏":"xz","新疆":"xj","青海":"qh","甘肃":"gs","宁夏":"nx","内蒙古":"nmg","黑龙江":"hlj","吉林":"jl","辽宁":"ln"};
 	var host = 'weather.com.cn';
-	var isWWW = new RegExp('www1'+host).test(location.host);
+	var isWWW = new RegExp('www1.'+host).test(location.host);
 	//新闻的内容地址
 	var newsUrl = '/'+(isWWW?'':'data/')+'pubmodel/header_rdph_json.html';
 	//提示面板内容地址
