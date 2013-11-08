@@ -149,6 +149,9 @@ define(function(require) {
 	W.hotZS.init("#todayliving ul li", "<span class=\"notice\"></span>", ".detail b", ".notice", ".area");
 	$("#todayliving .title span").click(function() {
 		W.hotZS.selTab($(this).attr("data-role"));
+		try{
+		    W.util.adPos();//在广告之前加载并初始化完成的化，此方法为undefined
+		}catch(e){}
 	})
 	$("#todayliving li").hover(function() {
 		var index = $("#todayliving li").index($(this));

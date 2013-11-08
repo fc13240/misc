@@ -28,7 +28,7 @@ define(function(require){
 				$.each(zsArr,function(ii,vv){
 					var zsName = zsData[vv+'_name'];
 					var hint = zsData[vv+'_hint'];
-					var desc = zsData[vv+'_desc'];
+					var desc = zsData[vv+'_des'];
 					html += '<a href="'+zsUrl.replace('_zs_',vv).replace('_id_',cityId)+'"><span title="'+desc+'">'+zsName+'</span><b>'+hint+'</b></a>';
 				});
 				$myZS.append($(html).fadeIn());
