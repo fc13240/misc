@@ -51,7 +51,7 @@
 .app span{display:block;width:100px;height:50px;position:absolute;left:0px;top:0px;z-index:5;padding:10px;}
 .app span a{display:block;height:25px;line-height:25px;}
 
-.icons{position:absolute;right:50%;margin-right:-565px;bottom:85px;width:65px;z-index:100;}
+.icons{position:fixed;_position:absolute;left:50%;margin-left:500px;top:50%;width:65px;z-index:100;}
 .icons ul li{width:65px;height:70px;margin-bottom:5px;background:#076ea8 url(../i/app_icons.gif) no-repeat;}
 .icons ul li.icon1{background-position:23px 8px;}
 .icons ul li.icon2{background-position:-38px 8px;}
@@ -115,7 +115,7 @@
     position: relative;
 }
 .icons .citylist .city .del {
-    background: url("/n/i/weatherfc/app_icons.gif") no-repeat scroll -242px -141px transparent;
+    background: url(../i/weatherfc/app_icons.gif) no-repeat scroll -242px -141px transparent;
     cursor: pointer;
     display: block;
     height: 18px;
@@ -150,212 +150,225 @@
     height: 16px;
     line-height: 16px;
 }
-.icons .citylist .img {
-    padding: 2px 0 2px 13px;
+
+/*zk add*/
+.icons .citylist li a,.icons .citylist li a:hover{
+    display: block;
+    clear: both;
+    *zoom: 1;
+    height: 100%;
+    cursor: pointer;
 }
-.icons .citylist .img a {
-    background: url("/n/i/weatherfc/legend20X16_b.gif") no-repeat scroll 0 0 transparent;
+.icons .citylist span.alias{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.icons .citylist i {
+    background: url(../i/weatherfc/legend20X16_b.gif) no-repeat scroll 0 0 transparent;
     display: inline-block;
     height: 16px;
     vertical-align: top;
     width: 20px;
 }
-.icons .citylist .img .d00 {
+.icons .citylist i.d00 {
     background-position: 0 0;
 }
-.icons .citylist .img .d01 {
+.icons .citylist i.d01 {
     background-position: -20px 0;
 }
-.icons .citylist .img .d02 {
+.icons .citylist i.d02 {
     background-position: -40px 0;
 }
-.icons .citylist .img .d03 {
+.icons .citylist i.d03 {
     background-position: -60px 0;
 }
-.icons .citylist .img .d04 {
+.icons .citylist i.d04 {
     background-position: -80px 0;
 }
-.icons .citylist .img .d05 {
+.icons .citylist i.d05 {
     background-position: -100px 0;
 }
-.icons .citylist .img .d06 {
+.icons .citylist i.d06 {
     background-position: -120px 0;
 }
-.icons .citylist .img .d07 {
+.icons .citylist i.d07 {
     background-position: -140px 0;
 }
-.icons .citylist .img .d08 {
+.icons .citylist i.d08 {
     background-position: -160px 0;
 }
-.icons .citylist .img .d09 {
+.icons .citylist i.d09 {
     background-position: 0 -16px;
 }
-.icons .citylist .img .d10 {
+.icons .citylist i.d10 {
     background-position: -20px -16px;
 }
-.icons .citylist .img .d11 {
+.icons .citylist i.d11 {
     background-position: -40px -16px;
 }
-.icons .citylist .img .d12 {
+.icons .citylist i.d12 {
     background-position: -60px -16px;
 }
-.icons .citylist .img .d13 {
+.icons .citylist i.d13 {
     background-position: -80px -16px;
 }
-.icons .citylist .img .d14 {
+.icons .citylist i.d14 {
     background-position: -100px -16px;
 }
-.icons .citylist .img .d15 {
+.icons .citylist i.d15 {
     background-position: -120px -16px;
 }
-.icons .citylist .img .d16 {
+.icons .citylist i.d16 {
     background-position: -140px -16px;
 }
-.icons .citylist .img .d17 {
+.icons .citylist i.d17 {
     background-position: -160px -16px;
 }
-.icons .citylist .img .d18 {
+.icons .citylist i.d18 {
     background-position: 0 -32px;
 }
-.icons .citylist .img .d19 {
+.icons .citylist i.d19 {
     background-position: -20px -32px;
 }
-.icons .citylist .img .d20 {
+.icons .citylist i.d20 {
     background-position: -40px -32px;
 }
-.icons .citylist .img .d21 {
+.icons .citylist i.d21 {
     background-position: -60px -32px;
 }
-.icons .citylist .img .d22 {
+.icons .citylist i.d22 {
     background-position: -80px -32px;
 }
-.icons .citylist .img .d23 {
+.icons .citylist i.d23 {
     background-position: -100px -32px;
 }
-.icons .citylist .img .d24 {
+.icons .citylist i.d24 {
     background-position: -120px -32px;
 }
-.icons .citylist .img .d25 {
+.icons .citylist i.d25 {
     background-position: -140px -32px;
 }
-.icons .citylist .img .d26 {
+.icons .citylist i.d26 {
     background-position: -160px -32px;
 }
-.icons .citylist .img .d27 {
+.icons .citylist i.d27 {
     background-position: 0 -48px;
 }
-.icons .citylist .img .d28 {
+.icons .citylist i.d28 {
     background-position: -20px -48px;
 }
-.icons .citylist .img .d29 {
+.icons .citylist i.d29 {
     background-position: -40px -48px;
 }
-.icons .citylist .img .d30 {
+.icons .citylist i.d30 {
     background-position: -60px -48px;
 }
-.icons .citylist .img .d31 {
+.icons .citylist i.d31 {
     background-position: -80px -48px;
 }
-.icons .citylist .img .d53 {
+.icons .citylist i.d53 {
     background-position: -100px -48px;
 }
-.icons .citylist .img .n00 {
+.icons .citylist i.n00 {
     background-position: 0 -64px;
 }
-.icons .citylist .img .n01 {
+.icons .citylist i.n01 {
     background-position: -20px -64px;
 }
-.icons .citylist .img .n02 {
+.icons .citylist i.n02 {
     background-position: -40px -64px;
 }
-.icons .citylist .img .n03 {
+.icons .citylist i.n03 {
     background-position: -60px -64px;
 }
-.icons .citylist .img .n04 {
+.icons .citylist i.n04 {
     background-position: -80px -64px;
 }
-.icons .citylist .img .n05 {
+.icons .citylist i.n05 {
     background-position: -100px -64px;
 }
-.icons .citylist .img .n06 {
+.icons .citylist i.n06 {
     background-position: -120px -64px;
 }
-.icons .citylist .img .n07 {
+.icons .citylist i.n07 {
     background-position: -140px -64px;
 }
-.icons .citylist .img .n08 {
+.icons .citylist i.n08 {
     background-position: -160px -64px;
 }
-.icons .citylist .img .n09 {
+.icons .citylist i.n09 {
     background-position: 0 -80px;
 }
-.icons .citylist .img .n10 {
+.icons .citylist i.n10 {
     background-position: -20px -80px;
 }
-.icons .citylist .img .n11 {
+.icons .citylist i.n11 {
     background-position: -40px -80px;
 }
-.icons .citylist .img .n12 {
+.icons .citylist i.n12 {
     background-position: -60px -80px;
 }
-.icons .citylist .img .n13 {
+.icons .citylist i.n13 {
     background-position: -80px -80px;
 }
-.icons .citylist .img .n14 {
+.icons .citylist i.n14 {
     background-position: -100px -80px;
 }
-.icons .citylist .img .n15 {
+.icons .citylist i.n15 {
     background-position: -120px -80px;
 }
-.icons .citylist .img .n16 {
+.icons .citylist i.n16 {
     background-position: -140px -80px;
 }
-.icons .citylist .img .n17 {
+.icons .citylist i.n17 {
     background-position: -160px -80px;
 }
-.icons .citylist .img .n18 {
+.icons .citylist i.n18 {
     background-position: 0 -96px;
 }
-.icons .citylist .img .n19 {
+.icons .citylist i.n19 {
     background-position: -20px -96px;
 }
-.icons .citylist .img .n20 {
+.icons .citylist i.n20 {
     background-position: -40px -96px;
 }
-.icons .citylist .img .n21 {
+.icons .citylist i.n21 {
     background-position: -60px -96px;
 }
-.icons .citylist .img .n22 {
+.icons .citylist i.n22 {
     background-position: -80px -96px;
 }
-.icons .citylist .img .n23 {
+.icons .citylist i.n23 {
     background-position: -100px -96px;
 }
-.icons .citylist .img .n24 {
+.icons .citylist i.n24 {
     background-position: -120px -96px;
 }
-.icons .citylist .img .n25 {
+.icons .citylist i.n25 {
     background-position: -140px -96px;
 }
-.icons .citylist .img .n26 {
+.icons .citylist i.n26 {
     background-position: -160px -96px;
 }
-.icons .citylist .img .n27 {
+.icons .citylist i.n27 {
     background-position: 0 -112px;
 }
-.icons .citylist .img .n28 {
+.icons .citylist i.n28 {
     background-position: -20px -112px;
 }
-.icons .citylist .img .n29 {
+.icons .citylist i.n29 {
     background-position: -40px -112px;
 }
-.icons .citylist .img .n30 {
+.icons .citylist i.n30 {
     background-position: -60px -112px;
 }
-.icons .citylist .img .n31 {
+.icons .citylist i.n31 {
     background-position: -80px -112px;
 }
-.icons .citylist .img .n53 {
+.icons .citylist i.n53 {
     background-position: -100px -112px;
 }
 
@@ -957,6 +970,8 @@ img.lazy{
 /*广告处理*/
 .adposter_pos{
     position: absolute;
+    background: url(#);
+    background-attachment: fixed;
     left: -10000px;
     z-index: 9;/*防止定位容器的z-index影响*/
 }

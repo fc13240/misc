@@ -420,83 +420,84 @@ function Lunar(objDate) {
   $("#setIndex").click(function() {
     W.util.setHome();
   })
+  /*zk 去掉，把右边栏功能移动到tool/slidebar*/
   //快速入口脚本
-  if ($(window).width() <= 1130) {
-    $(".icons").hide();
-    $(".entrance").show();
-  }
-  $(window).resize(function() {
-    if ($(this).width() <= 1130) {
-      $(".entrance").show();
-      if ($(".entrance").hasClass("open")) {
-        $(".icons").css({
-          "marginRight": -($(window).scrollLeft() + $(window).width() / 2),
-          "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
-        });
-      } else {
-        $(".icons").hide();
-      }
-    } else {
-      $(".entrance").removeClass("open").hide();
-      $(".icons").css({
-        "marginRight": "-565px",
-        "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
-      }).show();
-    }
+  // if ($(window).width() <= 1130) {
+  //   $(".icons").hide();
+  //   $(".entrance").show();
+  // }
+  // $(window).resize(function() {
+  //   if ($(this).width() <= 1130) {
+  //     $(".entrance").show();
+  //     if ($(".entrance").hasClass("open")) {
+  //       $(".icons").css({
+  //         "marginRight": -($(window).scrollLeft() + $(window).width() / 2),
+  //         "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
+  //       });
+  //     } else {
+  //       $(".icons").hide();
+  //     }
+  //   } else {
+  //     $(".entrance").removeClass("open").hide();
+  //     $(".icons").css({
+  //       "marginRight": "-565px",
+  //       "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
+  //     }).show();
+  //   }
 
-  })
-  $(window).scroll(function() {
-    if ($(".entrance").hasClass("open")) {
-      $(".icons").css({
-        "marginRight": -($(window).scrollLeft() + $(window).width() / 2),
-        "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
-      });
-    } else {
-      $(".icons").css({
-        "marginRight": "-565px",
-        "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
-      });
-    }
-  })
-  $(".entrance").click(function() {
-    if ($(".entrance").hasClass("open")) {
-      $(this).removeClass("open");
-      $(".icons").css({
-        "marginRight": "-565px"
-      }).hide();
-    } else {
-      $(this).addClass("open");
-      $(".icons").css({
-        "marginRight": -($(window).width() / 2 + $(window).scrollLeft()),
-        "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 115)
-      }).show();
+  // })
+  // $(window).scroll(function() {
+  //   if ($(".entrance").hasClass("open")) {
+  //     $(".icons").css({
+  //       "marginRight": -($(window).scrollLeft() + $(window).width() / 2),
+  //       "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
+  //     });
+  //   } else {
+  //     $(".icons").css({
+  //       "marginRight": "-565px",
+  //       "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 330)
+  //     });
+  //   }
+  // })
+  // $(".entrance").click(function() {
+  //   if ($(".entrance").hasClass("open")) {
+  //     $(this).removeClass("open");
+  //     $(".icons").css({
+  //       "marginRight": "-565px"
+  //     }).hide();
+  //   } else {
+  //     $(this).addClass("open");
+  //     $(".icons").css({
+  //       "marginRight": -($(window).width() / 2 + $(window).scrollLeft()),
+  //       "top": ($(window).scrollTop() + $(window).height() - ($(".icons li").length * 75) - 115)
+  //     }).show();
 
-    }
-  })
-  //回到首页
-  $(".toTop").click(function() {
-    $("html,body").animate({
-      scrollTop: 0
-    }, 800);
-    return !1
-  });
+  //   }
+  // })
+  // //回到首页
+  // $(".toTop").click(function() {
+  //   $("html,body").animate({
+  //     scrollTop: 0
+  //   }, 800);
+  //   return !1
+  // });
   //城市id
-  var provinceid = cityid.substring(0, 5),
-    provinceItem;
-  $.each(province, function(i, o) {
-    if (o.id == provinceid) {
-      provinceItem = o;
-      return false;
-    }
-  })
-  $(".icons .province").addClass(provinceItem.n);
-  if (provinceItem.id == "10132" || provinceItem.id == "10134")
-    $(".icons .province").html("<a href=\"" + provinceItem.u + "\" target=\"_blank\">" + provinceItem.p + "首页</a>");
-  else {
-    if (provinceItem.p.length > 2)
-      $(".icons .province").html("<a href=\"http://" + provinceItem.n + ".weather.com.cn\" target=\"_blank\" style=\"font-size:12px;\">" + provinceItem.p + "首页</a>");
-    else
-      $(".icons .province").html("<a href=\"http://" + provinceItem.n + ".weather.com.cn\" target=\"_blank\">" + provinceItem.p + "首页</a>");
-  }
+  // var provinceid = cityid.substring(0, 5),
+  //   provinceItem;
+  // $.each(province, function(i, o) {
+  //   if (o.id == provinceid) {
+  //     provinceItem = o;
+  //     return false;
+  //   }
+  // })
+  // $(".icons .province").addClass(provinceItem.n);
+  // if (provinceItem.id == "10132" || provinceItem.id == "10134")
+  //   $(".icons .province").html("<a href=\"" + provinceItem.u + "\" target=\"_blank\">" + provinceItem.p + "首页</a>");
+  // else {
+  //   if (provinceItem.p.length > 2)
+  //     $(".icons .province").html("<a href=\"http://" + provinceItem.n + ".weather.com.cn\" target=\"_blank\" style=\"font-size:12px;\">" + provinceItem.p + "首页</a>");
+  //   else
+  //     $(".icons .province").html("<a href=\"http://" + provinceItem.n + ".weather.com.cn\" target=\"_blank\">" + provinceItem.p + "首页</a>");
+  // }
 
 })
