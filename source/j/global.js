@@ -84,9 +84,9 @@
 				alert("您的浏览器不支持此功能！");
 			}
 		}
-		/*cookie相关操作*/
+		/*本地存储相关操作*/
 		!function(){
-			util.cookie = {
+			var _cookie = {
 				set: function(name,value,days){
 					if (days) {
 						var date = new Date();
@@ -109,6 +109,25 @@
 					}
 				}
 			}
+			if(typeof localStorage != 'undefined'){
+				var store = localStorage;
+				var _localstorage = {
+					set: function(name,value){
+						store.setItem(name,value);
+					},
+					get: function(name){
+						return store.getItem(name);
+					},
+					rm: function(name){
+						if(name){
+							store.removeItem(name);
+						}else{
+							store.clear();
+						}
+					}
+				}
+			}
+			util.store = _localstorage || _cookie;
 		}()
 	})(global.util||(global.util = {}));
 })(this.W || (this.W = {}));

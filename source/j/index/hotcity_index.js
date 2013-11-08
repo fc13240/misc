@@ -6,7 +6,7 @@ define(function(require){
 	var topNum = 3;
 	var Event = require('../m_event');
 	require('../global')
-	var cookie = W.util.cookie;
+	var cookie = W.util.store;
 	var dzEvent = (W.data || (W.data = {}))['event.dz_city'] = new Event();
 	dzEvent.on('modify',init);//保证事件让外部可调用
 	var addCityHtml = '<a href="'+dingzhiUrl+'">'+

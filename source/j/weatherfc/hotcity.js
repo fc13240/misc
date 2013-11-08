@@ -1,6 +1,6 @@
 define(function(require){
 	require('../global')
-	var cookie = W.util.cookie;
+	var cookie = W.util.store;
 	var COOKIE_NAME = 'f_city';
 	$(function(){
 		var $icons = $(".icons");

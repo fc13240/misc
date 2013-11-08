@@ -6,7 +6,7 @@ define(function(require){
 	var dingzhiUrl = '/profile/';//指数定制地址
 
 	require('../global.js');
-	var cookie = W.util.cookie;
+	var cookie = W.util.store;
 	W(function(){
 		var $myZS = $('.myZS');
 		var valInCookie = cookie.get(STORAGE_NAME) || '101010100|北京||yd-uv-gj,101020100|上海||yd-uv-gj,101130101|乌鲁木齐||yd-uv-gj';

@@ -2,7 +2,7 @@ define(function(require){
 	require('jquery');
 	require('../global');
 	require('../plugs/jquery.placeholder.js');
-	var cookie = W.util.cookie;
+	var store = W.util.store;
 	var Suggest = require('../m_search_suggest');
 
 	var STORAGE_NAME = 'f_city';//favorite city name
@@ -24,7 +24,7 @@ define(function(require){
 		$formContainer.find('.loading').remove();
 		var $forms = $formContainer.find('.form');
 		//北京|101010100|,郑州|200000000|家
-		var valInCookie = cookie.get(STORAGE_NAME);
+		var valInCookie = store.get(STORAGE_NAME);
 		var cacheData = [];
 		var initedNum = 0;
 		if(valInCookie){
@@ -44,7 +44,7 @@ define(function(require){
 				$.each(cacheData,function(i,v){
 					val.push(v.join('|'));
 				});
-				cookie.set(STORAGE_NAME,val.join(','));
+				store.set(STORAGE_NAME,val.join(','));
 				var dzEvent = W.data['event.dz_city'];
 				if(dzEvent){
 					dzEvent.emit('modify');//通知外部更新
