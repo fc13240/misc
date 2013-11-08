@@ -25,6 +25,7 @@ define(function(require){
 	}
 	return function($inputText,$btnSubmit){
 		$inputText.placeholder();
+		var isEnter = false;//鼠标是否移上addition
 		//提示面板和输入提示逻辑
 		$inputText.focus(function(){
 			var $this = $(this);
@@ -33,7 +34,12 @@ define(function(require){
 					isLoading = true;
 					$.get(additionUrl,function(html){
 						isLoading = false;
-						$addition = $(html).appendTo($('body')).mouseleave(hide);
+						$addition = $(html).appendTo($('body')).mouseleave(function(){
+							hide();
+							isEnter = false;
+						}).mouseenter(function(){
+							isEnter = true;
+						});
 						var className = 'active';
 						var $items = $('#selectsionGroups').find('ul');
 						var $tabs = $addition.find('.tab').click(function(){
@@ -56,7 +62,11 @@ define(function(require){
 					show($inputText);
 				}
 			}
-		}).blur(hide);
+		}).blur(function(e){
+			if(!isEnter){
+				hide();
+			}
+		});
 		$inputText.keydown(hide);
 		new Suggest({
 			'textBox': $inputText
