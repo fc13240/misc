@@ -9,8 +9,8 @@ a:hover{color:#ee842f;}
 #search{height:64px;margin:16px auto;height:64px;}
 #search h1{display:block;float:left;width:140px;height:35px;background:url(../../i/index/index_icons.png) no-repeat -160px 0px;margin-top:15px;margin-right:10px;overflow:hidden;}
 #search h1 a{display:block;width:140px;height:35px;text-indent:-9999px;}
-#search dl{width:76px;height:64px;overflow:hidden;float:left;margin-left:3px;background-color:#ddeff7;color:#076ea8;font-size:12px;font-weight:bold;}
-#search dl dt{padding-left:10px;height:30px;line-height:30px;}
+#search dl{width:76px;height:64px;float:left;margin-left:3px;background-color:#ddeff7;color:#076ea8;font-size:12px;font-weight:bold;}
+#search dl dt{padding-left:10px;height:30px;line-height:30px;overflow: hidden;}
 #search dl dd{line-height:16px;padding-top:0px;padding-left:10px;}
 #search dl.city dd{overflow: hidden;}
 #search dl dd span{display:block;height:16px;float:left;padding-right:5px;}
