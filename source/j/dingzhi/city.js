@@ -74,16 +74,18 @@ define(function(require){
 			}
 			$html.filter('.btn_dele').click(function(){
 				if(confirm('确定要删除吗？')){
-					var $container = $(this).parent();
-					$container.children().remove();
-					var removeIndex = $forms.index($container.parent());
+					if(initedNum > 1){
+						var $container = $(this).parent();
+						$container.children().remove();
+						var removeIndex = $forms.index($container.parent());
 
-					for(var i = removeIndex+1;i<$forms.length;i++){
-						$forms.eq(i).find('div').data('i',i-1).children().appendTo($forms.eq(i-1).find('div'));
+						for(var i = removeIndex+1;i<$forms.length;i++){
+							$forms.eq(i).find('div').data('i',i-1).children().appendTo($forms.eq(i-1).find('div'));
+						}
+						initedNum--;
+						cacheData.splice(removeIndex,1);
+						save();
 					}
-					initedNum--;
-					cacheData.splice(removeIndex,1);
-					save();
 				}
 			});
 			$html.filter('.btn_save').click(function(){
@@ -106,10 +108,12 @@ define(function(require){
 							alert('输入的信息有误！');
 						},1500)
 						try{
-							$.getJSON('/data/cityinfo/'+newId+'.html',function(data){
-								clearTimeout(aa);
-								fn();
-							});
+							if(newId){
+								$.getJSON('/data/cityinfo/'+newId+'.html',function(data){
+									clearTimeout(aa);
+									fn();
+								});
+							}
 						}catch(e){
 							alert('wrong');
 						}
@@ -118,7 +122,6 @@ define(function(require){
 						fn();
 					}
 				}
-				
 			});
 			$html.filter('.btn_cancel').click(function(){
 				var olddata = cacheData[$html.parent().data('i')];
