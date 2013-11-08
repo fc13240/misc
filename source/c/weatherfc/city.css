@@ -26,7 +26,7 @@ nav .bg{height:75px;}
 #ad_banner #ad3{width:115px;right:10px;}
 #ad_banner .bg{height:90px;}
 
-.toolBanner{height:80px;width:980px;padding:10px;z-index:80;position:relative;margin:0 auto;}
+.toolBanner{height:80px;width:980px;padding:10px;position:relative;margin:0 auto;}
 .top{height:45px;width:980px;position:absolute;z-index:85;color:#fff;}
 .toolBanner .top .bg{background-color:#000;opacity:0.75;filter:alpha(opacity=75);height:45px;width:980px;}
 .top h2{position:absolute;z-index:10;width:464px;height:45px;line-height:45px;font-size:26px;font-weight:normal;padding-left:10px;}
