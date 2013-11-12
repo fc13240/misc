@@ -81,7 +81,7 @@ define(function(require){
 	                if(~enName.indexOf('.')){
 	                	toUrl += '/html/province/'+enName;
 	                }else{
-	                	toUrl += enName+'.'+host;
+	                	toUrl += 'http://'+enName+'.'+host;
 	                }
 	            }else{
 	                toUrl += '/weather/'+data[0]+'.shtml';
