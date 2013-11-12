@@ -123,7 +123,7 @@ define(function(require){
 					}
 				}
 			});
-			$html.filter('.btn_cancel').click(function(){
+			var $btn_cancel = $html.filter('.btn_cancel').click(function(){
 				var olddata = cacheData[$html.parent().data('i')];
 				if(olddata){
 					$location.data('c_id',olddata[1]).val(olddata[0]);
@@ -145,6 +145,7 @@ define(function(require){
 		        	var cityId = data.length == 20?data[10]:data[0];
 		        	if(parseInt(cityId.substr(0,3)) > 101){
 		        		alert('请选择国内城市，国外城市暂时不支持！');
+		        		$btn_cancel.click();
 		        	}else{
 		        		$location.val(data[2]).data('c_id',cityId);
 		        		isModifying($location)
