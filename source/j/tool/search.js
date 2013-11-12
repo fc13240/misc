@@ -75,7 +75,7 @@ define(function(require){
 	        ,'onSelect': function(data){
 	        	var cityName = data[2];
 	        	$inputText.val(cityName);
-	        	var toUrl = 'http://';
+	        	var toUrl = '';
 	            if(data.length == 20){
 	            	var enName = conf[cityName];
 	                if(~enName.indexOf('.')){
