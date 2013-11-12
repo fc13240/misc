@@ -79,12 +79,12 @@ define(function(require){
 	            if(data.length == 20){
 	            	var enName = conf[cityName];
 	                if(~enName.indexOf('.')){
-	                	toUrl += 'www.'+host+'/html/province/'+enName;
+	                	toUrl += '/html/province/'+enName;
 	                }else{
 	                	toUrl += enName+'.'+host;
 	                }
 	            }else{
-	                toUrl += 'www.'+host+'/weatherfc/'+data[0]+'.shtml';
+	                toUrl += '/weather/'+data[0]+'.shtml';
 	            }
 	            $inputText.data('url',toUrl);
 	            window.open(toUrl);
