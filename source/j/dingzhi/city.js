@@ -138,7 +138,7 @@ define(function(require){
 			});
 			var $location = $html.filter('.location').data('c_id',cityid).val(cityname);
 			var $alias = $html.filter('.alias').val(aliasname);
-			new Suggest({
+			var suggestObj = new Suggest({
 		        'textBox': $location
 		        ,'bindEvent': true
 		        ,'onSelect': function(data){
@@ -146,6 +146,7 @@ define(function(require){
 		        	if(parseInt(cityId.substr(0,3)) > 101){
 		        		alert('请选择国内城市，国外城市暂时不支持！');
 		        		$btn_cancel.click();
+		        		suggestObj.clear();
 		        	}else{
 		        		$location.val(data[2]).data('c_id',cityId);
 		        		isModifying($location)
