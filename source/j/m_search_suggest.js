@@ -220,6 +220,13 @@
 			var list = _this.options.textBox.data(DATA_LIST_NAME);
 			list && list.hide();
 		}
+		/*清除下拉列表*/
+		suggestProp.clear = function(){
+			var _this = this;
+			var suggestList = _this.options.textBox.data(DATA_LIST_NAME);
+			suggestList && suggestList.children().remove();
+			_this.hide();
+		}
 		return Suggest;
 	}
 	define(function(require){
