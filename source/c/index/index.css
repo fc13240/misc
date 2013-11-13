@@ -281,7 +281,7 @@ a:hover{color:#ee842f;}
 .expert dl dt a,.knowledge dl dt a{color:#076ea8;line-height:20px;}
 .expert dl dt a:hover,.knowledge dl dt a:hover{color:#ee842f;}
 .expert dl dt p,.knowledge dl dt p{font-size:12px;line-height:18px;background-color:#fff;height:auto;}
-.expert ul,.knowledge ul{background-color:#e8e8e8;padding:10px;}
+.expert ul,.knowledge ul{background-color:#e8e8e8;padding:10px;background:none;}
 
 .s_ad{width:300px;height:100px;overflow:hidden;margin-top:10px;}
 .weibo{width:300px;height:28px;margin-top:10px;}
@@ -312,6 +312,7 @@ a:hover{color:#ee842f;}
 .hotSpot ul{padding:10px;_padding:5px 10px;display:none;}
 .hotSpot ul.on{display:block;}
 .hotSpot ul li{height:35px;line-height:35px;border-bottom:1px solid #eee7e7;overflow:hidden;}
+.hotSpot ul li.lasttitle{border-bottom:0;}
 .hotSpot ul .title .name{font-size:14px;color:#111111;}
 .hotSpot ul span{display:block;height:30px;line-height:30px;text-align:center;float:left;}
 .hotSpot .name{width:93px;font-size:16px;}
