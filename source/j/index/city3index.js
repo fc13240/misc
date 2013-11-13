@@ -7,6 +7,7 @@ define(function(require){
 
 	require('../global.js');
 	var cookie = W.util.store;
+	var havePageConf = {'ys':1,'xc':1,'uv':1,'tr':1,'pl':1,'gz':1,'fs':1,'ct':1,'co':1};
 	W(function(){
 		var $myZS = $('.myZS');
 		var valInCookie = cookie.get(STORAGE_NAME) || '101010100|北京||yd-uv-gj,101020100|上海||yd-uv-gj,101130101|乌鲁木齐||yd-uv-gj';
@@ -29,7 +30,7 @@ define(function(require){
 					var zsName = zsData[vv+'_name'];
 					var hint = zsData[vv+'_hint'];
 					var desc = zsData[vv+'_des'];
-					html += '<a href="'+zsUrl.replace('_zs_',vv).replace('_id_',cityId)+'" title="'+desc+'"><span>'+zsName+'</span><b>'+hint+'</b></a>';
+					html += '<a '+(havePageConf(vv)?'href="'+zsUrl.replace('_zs_',vv).replace('_id_',cityId)+'"':'')+' title="'+desc+'"><span>'+zsName+'</span><b>'+hint+'</b></a>';
 				});
 				$myZS.append($(html).fadeIn());
 			});
