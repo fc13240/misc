@@ -277,7 +277,7 @@ a:hover{color:#ee842f;}
 .expert dl,.knowledge dl{width:280px;padding:15px 10px;height:68px;}
 .expert dl img,.expert dl dd,.knowledge dl img,.knowledge dl dd{width:70px;height:68px;}
 .expert dl dd,.knowledge dl dd{float:left;}
-.expert dl dt,.knowledge dl dt{width:200px;padding-left:10px;float:left;}
+.expert dl dt,.knowledge dl dt{width:200px;padding-left:10px;float:left; margin-top:-5px; display:inline;}
 .expert dl dt a,.knowledge dl dt a{color:#076ea8;line-height:20px;}
 .expert dl dt a:hover,.knowledge dl dt a:hover{color:#ee842f;}
 .expert dl dt p,.knowledge dl dt p{font-size:12px;line-height:18px;background-color:#fff;height:auto;}
