@@ -74,7 +74,8 @@ define(function(require){
 			}
 			$html.filter('.btn_dele').click(function(){
 				if(confirm('确定要删除吗？')){
-					if(initedNum > 1){
+					var status = $html.parent().data('s');
+					if(status && status != STAT_NULL){
 						var $container = $(this).parent();
 						$container.children().remove();
 						var removeIndex = $forms.index($container.parent());
