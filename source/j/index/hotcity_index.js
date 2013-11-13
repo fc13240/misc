@@ -1,7 +1,7 @@
 define(function(require){
 	var STORAGE_NAME = 'f_city';//favorite city name
 	var dataUrl = "/data/cityinfo/_id_.html";//加载城市信息地址
-	var cityUrl = 'http://www.weather.com.cn/weatherfc/_id_.shtml';//显示城市的链接地址
+	var cityUrl = '/weather/_id_.shtml';//显示城市的链接地址
 	var dingzhiUrl = '/profile/city.shtml';//'/pages/dingzhi/city.html';//定制页面地址
 	var topNum = 3;
 	var Event = require('../m_event');
