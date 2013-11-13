@@ -30,7 +30,7 @@ define(function(require){
 					var zsName = zsData[vv+'_name'];
 					var hint = zsData[vv+'_hint'];
 					var desc = zsData[vv+'_des'];
-					html += '<a '+(havePageConf(vv)?'href="'+zsUrl.replace('_zs_',vv).replace('_id_',cityId)+'"':'')+' title="'+desc+'"><span>'+zsName+'</span><b>'+hint+'</b></a>';
+					html += '<a '+(havePageConf[vv]?'href="'+zsUrl.replace('_zs_',vv).replace('_id_',cityId)+'"':'')+' title="'+desc+'"><span>'+zsName+'</span><b>'+hint+'</b></a>';
 				});
 				$myZS.append($(html).fadeIn());
 			});
