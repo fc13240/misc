@@ -81,7 +81,11 @@ define(function(require){
 						var removeIndex = $forms.index($container.parent());
 
 						for(var i = removeIndex+1;i<$forms.length;i++){
-							$forms.eq(i).find('div').data('i',i-1).children().appendTo($forms.eq(i-1).find('div'));
+							var toDiv = $forms.eq(i-1).find('div');
+							var fromDiv = $forms.eq(i).find('div');
+							fromDiv.data('i',i-1).children().appendTo(toDiv);
+							toDiv.data('s',fromDiv.data('s'));
+							fromDiv.removeData('s');
 						}
 						initedNum--;
 						cacheData.splice(removeIndex,1);
