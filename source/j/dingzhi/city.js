@@ -39,7 +39,8 @@ define(function(require){
 
 		//保存数据
 		function save(){
-			if(cacheData.length > 0){
+			//全部删除后cacheData.length == 0
+			// if(cacheData.length > 0){
 				var val = [];
 				$.each(cacheData,function(i,v){
 					val.push(v.join('|'));
@@ -49,7 +50,7 @@ define(function(require){
 				if(dzEvent){
 					dzEvent.emit('modify');//通知外部更新
 				}
-			}
+			// }
 		}
 		function addItem(cityname,cityid,aliasname){
 			var $html = $(html);
@@ -74,13 +75,18 @@ define(function(require){
 			}
 			$html.filter('.btn_dele').click(function(){
 				if(confirm('确定要删除吗？')){
-					if(initedNum > 1){
+					var status = $html.parent().data('s');
+					if(status && status != STAT_NULL){
 						var $container = $(this).parent();
 						$container.children().remove();
 						var removeIndex = $forms.index($container.parent());
 
-						for(var i = removeIndex+1;i<$forms.length;i++){
-							$forms.eq(i).find('div').data('i',i-1).children().appendTo($forms.eq(i-1).find('div'));
+						for(var i = removeIndex+1;i< initedNum && i<$forms.length;i++){
+							var toDiv = $forms.eq(i-1).find('div');
+							var fromDiv = $forms.eq(i).find('div');
+							fromDiv.data('i',i-1).children().appendTo(toDiv);
+							toDiv.data('s',fromDiv.data('s'));
+							fromDiv.removeData('s');
 						}
 						initedNum--;
 						cacheData.splice(removeIndex,1);
@@ -138,7 +144,7 @@ define(function(require){
 			});
 			var $location = $html.filter('.location').data('c_id',cityid).val(cityname);
 			var $alias = $html.filter('.alias').val(aliasname);
-			new Suggest({
+			var suggestObj = new Suggest({
 		        'textBox': $location
 		        ,'bindEvent': true
 		        ,'onSelect': function(data){
@@ -146,6 +152,7 @@ define(function(require){
 		        	if(parseInt(cityId.substr(0,3)) > 101){
 		        		alert('请选择国内城市，国外城市暂时不支持！');
 		        		$btn_cancel.click();
+		        		suggestObj.clear();
 		        	}else{
 		        		$location.val(data[2]).data('c_id',cityId);
 		        		isModifying($location)
