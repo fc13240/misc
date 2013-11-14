@@ -1,7 +1,7 @@
 body{background-color:#EEEEEE;background-attachment:fixed;background-position:center -100px;background-repeat:no-repeat;background-size: cover;}
 
 nav{height:75px;line-height:75px;padding:0px 10px;position:relative;}
-nav h1{background:url(../../i/indexfc/warn.png) no-repeat;background-position:0px 10px;float:left;width:155px;height:75px;float:left;text-indent:-9999px;}
+nav h1{background:url(../../i/indexfc/warn.png) no-repeat;background-position:0px 10px;float:left;width:155px;height:75px;float:left;text-indent:-9999px;left:10px;}
 nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;}
 nav ul li{float:left;line-height:28px;height:28px;position:relative;}
 nav .dropList{position:absolute;left:0px;top:28px;line-height:30px;z-index:10;display:none;}
