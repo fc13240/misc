@@ -8,7 +8,7 @@ define(function(require){
 						'<li class="addCity"><a href="/profile/city.shtml" style="display:block;" _hover-ignore="1" _orighref="/profile/city.shtml" _tkworked="true"><strong>+</strong>定制城市</a></li>'+
 					'</ul>'+
 				'</div>';
-	var REG_IMG = /([a-z])(\d+)(?:\.gif)/;
+	var REG_IMG = /([a-z])(\d+)/;
 	var imgs=function(img){
 		var m = REG_IMG.exec(img);
 		if(m){
@@ -29,9 +29,9 @@ define(function(require){
 			var cityInfo = v.split('|');
 			var shortName = cityInfo[2];
 			var cityid = cityInfo[1]
-			$.getJSON("/data/sk/" + cityid + ".html",function(data){
+			$.getJSON("/data/dingzhi/" + cityid + ".html",function(data){
 				shortName || (shortName = cityInfo[0]);
-				$citylist.prepend($('<li class="city"><a href="/weather/'+cityid+'.shtml" title="'+data.weather+'"><span class="alias">'+shortName+'</span><i class="'+imgs(data.img)+' fl"></i><span>'+data.temp+'</span></a></li>').fadeIn());
+				$citylist.prepend($('<li class="city"><a href="/weather/'+cityid+'.shtml" title="'+data.weather+'"><span class="alias">'+shortName+'</span><i class="'+imgs(data.img)+' fl"></i><span>'+data.temp+'℃</span></a></li>').fadeIn());
 				
 				$slidebar.css('margin-top',-$slidebar.outerHeight()/2)
 			});
