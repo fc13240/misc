@@ -255,7 +255,7 @@ a:hover{color:#ee842f;}
 .emcee p img{border-left:2px solid #fff;}
 .emcee p a{display:block;width:50px;height:50px;margin-left:2px solid #fff;float:left;}
 
-.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:30px;_bottom:25px;}
+.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:10px;_bottom:5px;}
 
 .l_ad{width:670px;height:90px;}
 .life{width:670px;height:262px;overflow:hidden;border-top:3px solid #8abb4a;margin-top:10px;position:relative;}
@@ -283,7 +283,7 @@ a:hover{color:#ee842f;}
 .expert dl dt p,.knowledge dl dt p{font-size:12px;line-height:18px;background-color:#fff;height:auto;}
 .expert ul,.knowledge ul{background-color:#e8e8e8;padding:10px;background:none;}
 
-.s_ad{width:300px;height:100px;overflow:hidden;margin-top:10px;}
+.s_ad{width:300px;height:100px;overflow:hidden;margin-bottom:10px;}
 .weibo{width:300px;height:28px;margin-top:10px;}
 .weibo #sina{display:block;width:148px;height:28px;background:url(../../i/index/index_icons.png) no-repeat -152px -72px;text-indent:-9999px;float:left;margin-right:4px;}
 .weibo #qq{display:block;width:148px;height:28px;background:url(../../i/index/index_icons.png) no-repeat -152px -100px;text-indent:-9999px;float:left;}
