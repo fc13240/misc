@@ -23,7 +23,7 @@ define(function(require){
         'county': $('.areaItem select')
     });
 	$(".search .searchBtn").click(function(){
-		window.open("http://www.weather.com.cn/weather/"+city.getValue()+".shtml");
+		window.open("/weather/"+city.getValue()+".shtml");
 	})
 
 	//分享
