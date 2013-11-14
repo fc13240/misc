@@ -11,7 +11,7 @@ nav .dropList a{font-size:14px;line-height:30px;display:block;text-align:left;wh
 nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-height:28px;}
 nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;}
 
-#ad_banner{width:980px;height:90px;padding:0px 10px;}
+#ad_banner{width:980px;height:90px;padding:0px 10px;overflow:hidden;}
 #ad_banner #ad1{display:block;width:115px;height:90px;margin-right:10px;float:left;}
 #ad_banner #ad2{display:block;width:730px;height:90px;margin-right:10px;float:left;}
 #ad_banner #ad3{display:block;width:115px;height:90px;float:left;}
