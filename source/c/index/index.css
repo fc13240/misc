@@ -118,10 +118,10 @@ a:hover{color:#ee842f;}
 	width: 80px;
 	margin-top: 5px;
 }
-#search .city .alarm div a{
+#search .city.alarm div a{
 	color: white;
 }
-.city .alarm div i{
+.city.alarm div i{
 	background: url(../../i/index/img02.jpg) -6px 0;
 	width: 18px;
 	height: 18px;
