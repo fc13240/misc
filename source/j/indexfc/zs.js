@@ -185,7 +185,7 @@ define(function(require) {
 
 		//主要防晒产品排行
 		$("#ranking ul li").click(function() {
-			if ($(this).hasClass(".on")) return;
+			if ($(this).hasClass("on")) return;
 			var temp_height = $(this).outerHeight() + $(this).find(".summary").outerHeight();
 			$(this).siblings().animate({
 				height: $(this).outerHeight()
