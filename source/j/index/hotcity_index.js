@@ -5,7 +5,8 @@ define(function(require){
 	var dingzhiUrl = '/profile/city.shtml';//'/pages/dingzhi/city.html';//定制页面地址
 	var topNum = 3;
 	var Event = require('../m_event');
-	require('../global')
+	require('../global');
+	var getAlarm= require('../tool/alarm');
 	var cookie = W.util.store;
 	var dzEvent = (W.data || (W.data = {}))['event.dz_city'] = new Event();
 	dzEvent.on('modify',init);//保证事件让外部可调用
@@ -25,46 +26,46 @@ define(function(require){
 					      '</dd>'+
 					    '</dl>';
 	/*得到预警数据*/
-	var getAlarm = (function(){
-		var yjlb = ['台风', '暴雨', '暴雪', '寒潮', '大风', '沙尘暴', '高温', '干旱', '雷电', '冰雹', '霜冻', '大雾', '霾', '道路结冰'];
-		var gdlb = ['寒冷', '灰霾', '雷雨大风', '森林火险', '降温', '道路冰雪'];
-		var yjyc = ['蓝色', '黄色', '橙色', '红色'];
-		var gdyc = ['白色'];
-		//得到预警描述及等级
-		var REG = /-(\d{2})(\d{2})\.html/;
-		//得到预警信息URL
-		var url = 'http://product.weather.com.cn/alarm/grepalarm.php?count=1&areaid='
-		return function(cityId,callback){
-			$.getScript(url+cityId,function(){
-				var result = {'url':'','text':'','title':''};
-				if(alarminfo.count > 0){
-					var url = alarminfo.data[0][1];
-					var m = REG.exec(url);
-					if(m){
-						result.url = 'http://www.weather.com.cn/alarm/newalarmcontent.shtml?file='+url;
-						var textIndex = parseInt(m[1],10);
-						var text = '';
-						if(textIndex > 90){
-							text = gdlb[textIndex-91];
-						}else{
-							text = yjlb[textIndex - 1];
-						}
-						result.text = text;
+	// var getAlarm = (function(){
+	// 	var yjlb = ['台风', '暴雨', '暴雪', '寒潮', '大风', '沙尘暴', '高温', '干旱', '雷电', '冰雹', '霜冻', '大雾', '霾', '道路结冰'];
+	// 	var gdlb = ['寒冷', '灰霾', '雷雨大风', '森林火险', '降温', '道路冰雪'];
+	// 	var yjyc = ['蓝色', '黄色', '橙色', '红色'];
+	// 	var gdyc = ['白色'];
+	// 	//得到预警描述及等级
+	// 	var REG = /-(\d{2})(\d{2})\.html/;
+	// 	//得到预警信息URL
+	// 	var url = 'http://product.weather.com.cn/alarm/grepalarm.php?count=1&areaid='
+	// 	return function(cityId,callback){
+	// 		$.getScript(url+cityId,function(){
+	// 			var result = {'url':'','text':'','title':''};
+	// 			if(alarminfo.count > 0){
+	// 				var url = alarminfo.data[0][1];
+	// 				var m = REG.exec(url);
+	// 				if(m){
+	// 					result.url = 'http://www.weather.com.cn/alarm/newalarmcontent.shtml?file='+url;
+	// 					var textIndex = parseInt(m[1],10);
+	// 					var text = '';
+	// 					if(textIndex > 90){
+	// 						text = gdlb[textIndex-91];
+	// 					}else{
+	// 						text = yjlb[textIndex - 1];
+	// 					}
+	// 					result.text = text;
 
-						var level = '';
-						var levelIndex = parseInt(m[2],10);
-						if(levelIndex > 90){
-							level = yjyc[levelIndex-91];
-						}else{
-							level = gdyc[levelIndex - 1];
-						}
-						result.title = text+level+'预警';
-					}
-				}
-				callback && callback(result);
-			});
-		}
-	})();				
+	// 					var level = '';
+	// 					var levelIndex = parseInt(m[2],10);
+	// 					if(levelIndex > 90){
+	// 						level = yjyc[levelIndex-91];
+	// 					}else{
+	// 						level = gdyc[levelIndex - 1];
+	// 					}
+	// 					result.title = text+level+'预警';
+	// 				}
+	// 			}
+	// 			callback && callback(result);
+	// 		});
+	// 	}
+	// })();				
 	var REG_IMG = /([dm])(\d+)/;
 	var imgs=function(img){
 		var m = REG_IMG.exec(img);
