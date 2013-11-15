@@ -12,7 +12,6 @@ define(function(require){
 		var getAlarmUrl = 'http://product.weather.com.cn/alarm/stationalarm.php?count=1&areaid='
 		return function(cityId,callback){
 			$.getScript(getAlarmUrl+cityId,function(){
-				console.log(cityId,alarminfo,alarminfo.count > 0);
 				if(alarminfo.count > 0){
 					var result = {'url':'','text':'','title':'','d':''};
 					var data = alarminfo.data[0];
@@ -42,6 +41,7 @@ define(function(require){
 						result.d = data;
 					}
 				}
+				delete alarminfo;
 				callback && callback(result);
 			});
 		}
