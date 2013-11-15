@@ -100,7 +100,7 @@ define(function(require){
 				$cityList.prepend($item.fadeIn());
 				//异步初始化预警信息
 				getAlarm(data.id,function(d){
-					$item.find('dd').addClass('yj').append('<div class="clearfix"><a href="'+d.url+'" title="'+d.title+'"><i></i><span>'+d.text+'</span></a></div>   ');
+					$item.find('dd').addClass('yj').append('<div class="clearfix alarm"><a href="'+d.url+'" title="'+d.title+'"><i></i><span>'+d.text+'</span></a></div>   ');
 				});
 			});
 			if(arr.length > 0){
