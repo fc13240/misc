@@ -113,14 +113,15 @@ a:hover{color:#ee842f;}
 	margin-left: -10px;
 	width: 80px;
 }
-.city .alarm a{
+#search .city .alarm a{
 	color: white;
 }
 .city .alarm i{
 	background: url(../../i/index/img02.jpg) -6px 0;
 	width: 18px;
 	height: 18px;
-	display: inline-block;
+	display: inline;
+	float: left;
 }
 /*#search .yj dd{padding-top:0px;margin-top:-5px;height:39px;}
 #search .ld dd{background:url(../../i/index/img02.jpg) no-repeat left bottom;width:76px;}*/
