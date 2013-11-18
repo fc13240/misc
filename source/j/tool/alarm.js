@@ -41,6 +41,7 @@ define(function(require){
 						result.d = data;
 					}
 				}
+				delete alarminfo;
 				callback && callback(result);
 			});
 		}

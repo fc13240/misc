@@ -394,7 +394,7 @@ position:relative;margin-left:40px;padding-left:10px; margin-bottom: 10px;}
 #ranking ul li span.price{width:75px;}
 #ranking ul li span.num b{padding:0px 5px;background-color:#fff;font-weight:normal;}
 #ranking ul li.on span.num b{background-color:#076ea8;color:#fff;}
-#ranking ul li.last span.num b{padding:0px 1px;}
+
 #ranking ul li.on{background-color:#f7f7f7;height:auto;}
 #ranking ul li .summary{font-size:12px;line-height:20px;padding-top:10px;padding-bottom:10px;width:280px;display:block;}
 

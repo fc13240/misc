@@ -72,7 +72,7 @@ define(function(require){
 			focusImg.go(1);
 			tempDom.removeClass("on");
 			if(oldIndex < ($(".focusImg span i").length - 1))
-				tempDom.next().addClass("on");
+				tempDom.next('i').addClass("on");
 			else
 				$(".focusImg span i").eq(0).addClass("on");	
 		};
