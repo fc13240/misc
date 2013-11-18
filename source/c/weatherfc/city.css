@@ -506,10 +506,10 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 
 #weatherChart .chart{width:670px;background-color:#f5fcff;}
 #weatherChart .chart #hourHolder{padding:10px 0px;position:relative;width:670px;height:300px;}
-#hourHolder .xLabel{position:absolute;height:35px;line-height:35px;width:575px;left:47px;bottom:5px;}
-#hourHolder .xLabel span{display:block;width:23px;height:40px;float:left;text-align:center;background:url(../../i/weatherfc/city_icons.png) no-repeat 1px -285px;font-size:12px;}
-#hourHolder .yLabel{position:absolute;width:40px;height:280px;left:10px;top:20px;}
-#hourHolder .yLabel span{display:block;width:30px;height:39px;line-height:28px;text-align:right;font-size:12px;}
+#hourHolder .xLabel{position:absolute;height:35px;line-height:35px;left: 36px;bottom:5px;}
+#hourHolder .xLabel span{display:block;width:25px;height:40px;float:left;text-align:center;background:url(../../i/weatherfc/city_icons.png) no-repeat 1px -285px;font-size:12px;}
+#hourHolder .yLabel{position:absolute;width:40px;height:280px;left:2px;top:11px;}
+#hourHolder .yLabel span{display:block;width:30px;height:40px;line-height:28px;text-align:right;font-size:12px;}
 #hourHolder .result{position:absolute;left:40%;top:60%;color:#EE842F;font-weight:bold;display:none;}
 #hourHolder .showData{position:absolute;left:40%;top:60%;background-color:#076EA8;color:#fff;padding:0px 5px;display:none;}
 #hourHolder .data{position:absolute;background-color:#076EA8;color:#fff;width:50px;height:24px;line-height:24px;text-align:center;}
