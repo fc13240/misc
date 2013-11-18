@@ -21,6 +21,10 @@ define(function() {
 	var rowNum = 6,
 		paper = null;
 	//分析数据
+	var isInvalid = function(val,isWind){
+		//风数据为0是为不合法
+		return val == '' || val == 'null' || isWind && val == 0;
+	}
 	var adjustData = {
 		length: 0,
 		date: [],
@@ -76,31 +80,48 @@ define(function() {
 		init: function(data) {
 			this.length = data.od.od2.length;
 			for (var i = this.length - 1; i >= 0; i--) {
-				this.date.push(data.od.od2[i].od21); //时间
-				if (data.od.od2[i].od22 == "")
+				var d = data.od.od2[i];
+				this.date.push(d.od21); //时间
+				if (isInvalid(d.od22)){
 					this.invalid.temperature.push(i); //温度无效数据
-				this.temperature.push(data.od.od2[i].od22); //温度
-				if (data.od.od2[i].od27 == "")
+				}
+				this.temperature.push(d.od22); //温度
+				if (isInvalid(d.od27)){
 					this.invalid.humidity.push(i); //湿度无效数据
-				this.humidity.push(data.od.od2[i].od27); //湿度
-				if (data.od.od2[i].od26 == "")
+				}
+				this.humidity.push(d.od27); //湿度
+				if (isInvalid(d.od26)){
 					this.invalid.rain.push(i); //降雨无效数据
-				this.rain.push(data.od.od2[i].od26); //降雨
-				if (data.od.od2[i].od25 == "")
+				}	
+				this.rain.push(d.od26); //降雨
+				if (isInvalid(d.od25,true)){
 					this.invalid.wind.push(i); //风力无效数据
-				this.windLevel.push(data.od.od2[i].od25); //风力
-				this.windAngle.push(data.od.od2[i].od23); //风向（角度）
-				this.windDirection.push(data.od.od2[i].od24); //风向（描述）
-				this.rainSum += parseFloat(data.od.od2[i].od26);
+				}
+				this.windLevel.push(d.od25); //风力
+				this.windAngle.push(d.od23); //风向（角度）
+				this.windDirection.push(d.od24); //风向（描述）
+				this.rainSum += parseFloat(d.od26);
 			}
-			adjustData.flagData.temperature.min = Math.min.apply(Math, adjustData.temperature); //温度最小值
-			adjustData.flagData.temperature.max = Math.max.apply(Math, adjustData.temperature); //温度最大值
-			adjustData.flagData.rain.min = Math.min.apply(Math, adjustData.rain); //降水量最小值
-			adjustData.flagData.rain.max = Math.max.apply(Math, adjustData.rain); //降水量最大值
-			adjustData.flagData.humidity.min = Math.min.apply(Math, adjustData.humidity); //湿度最小值
-			adjustData.flagData.humidity.max = Math.max.apply(Math, adjustData.humidity); //湿度量最大值
-			adjustData.flagData.wind.min = Math.min.apply(Math, adjustData.windLevel); //风力最小值
-			adjustData.flagData.wind.max = Math.max.apply(Math, adjustData.windLevel); //风力最大值
+			
+			//过滤不合法数据
+			var formateNumArr = function(arr){
+				var a = [];
+				$.each(arr,function(i,v){
+					if(!isNaN(v)){
+						a.push(v);
+					}
+				});
+				return a;
+			}
+
+			adjustData.flagData.temperature.min = Math.min.apply(Math, formateNumArr(adjustData.temperature)); //温度最小值
+			adjustData.flagData.temperature.max = Math.max.apply(Math, formateNumArr(adjustData.temperature)); //温度最大值
+			adjustData.flagData.rain.min = Math.min.apply(Math, formateNumArr(adjustData.rain)); //降水量最小值
+			adjustData.flagData.rain.max = Math.max.apply(Math, formateNumArr(adjustData.rain)); //降水量最大值
+			adjustData.flagData.humidity.min = Math.min.apply(Math, formateNumArr(adjustData.humidity)); //湿度最小值
+			adjustData.flagData.humidity.max = Math.max.apply(Math, formateNumArr(adjustData.humidity)); //湿度量最大值
+			adjustData.flagData.wind.min = Math.min.apply(Math, formateNumArr(adjustData.windLevel)); //风力最小值
+			adjustData.flagData.wind.max = Math.max.apply(Math, formateNumArr(adjustData.windLevel)); //风力最大值
 
 			adjustData.min.temperature = Math.floor(adjustData.flagData.temperature.min); //温度最小值
 			adjustData.min.rain = Math.floor(adjustData.flagData.rain.min); //降水量最小值
@@ -201,6 +222,10 @@ define(function() {
 				temp_labels.unshift("<span>" + (min + i * step) + unit + "</span>");
 			}
 			$(obj.container).html(temp_labels.join(""));
+			//zk modify,不处理不合法数据
+			if(obj.data.length == obj.invalid.length){
+				return;
+			}
 			var leftgutter = this.leftgutter,
 				cellWidth = this.cellWidth,
 				r = obj.r || 0,
@@ -300,6 +325,9 @@ define(function() {
 						var x = Math.round(leftgutter + cellWidth * (i + .5)) + 0.5,
 							y = Math.round(cellHeight * ((max - obj.data[i]) / step) + topgutter),
 							initY = Math.round(cellHeight * ((max - min) / step) + topgutter);
+						if(!x || !y || !initY){
+							continue;
+						}
 						if (obj.data[i] == "")
 							pathIndex++;
 						else {
@@ -443,6 +471,9 @@ define(function() {
 						})(i, x, y, obj.data[i])
 					}
 					for (var p = 0; p < pathCount; p++) {
+						if(!initPath[p]){
+							continue;
+						}
 						this.path[p] = paper.path(initPath[p]);
 						this.path[p].attr(this.pathStyle).hide();
 						this.path[p].animate({
@@ -450,6 +481,9 @@ define(function() {
 						}, 470).show();
 					}
 					for (var d = 0, dd = this.colNum; d < dd; d++) {
+						if(!this.shap[d]){
+							continue;
+						}
 						this.shap[d].toFront();
 					}
 					break;
@@ -485,7 +519,6 @@ define(function() {
 	//初始化温度图表
 	observe24hGraph.init(dataConf);
 	observe24hGraph.drawGraph(graphConf);
-
 	//观察台
 	$("#platform").html(observe24h_data.od.od1);
 	var newTemperature = adjustData.temperature[adjustData.temperature.length - 1];
@@ -568,7 +601,8 @@ define(function() {
 					"max": adjustData.max.rain,
 					"data": adjustData.rain,
 					"unit": "mm",
-					"step": adjustData.step.rain
+					"step": adjustData.step.rain,
+					"invalid": adjustData.invalid.rain,
 				}));
 				break;
 			case 'wind':
@@ -577,12 +611,13 @@ define(function() {
 				} else {
 					$("#currHour").html("最新整点实况风力:" + adjustData.windLevel[0] + "级");
 				}
-				if (adjustData.invalid.temperature.length == adjustData.length) {
+				if (adjustData.invalid.wind.length == adjustData.length) {
 					$("#detailHour").html("暂无数据");
 					$("#hourHolder .result").html("24小时内无风力数据").show();
 				} else {
 					$("#detailHour").html("最高" + adjustData.flagData.wind.max + "级");
 				}
+
 				paper.remove();
 				observe24hGraph.init(dataConf);
 				observe24hGraph.drawGraph($.extend({},graphConf,{
