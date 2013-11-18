@@ -32,10 +32,13 @@ Namespace=new Object();Namespace.register=function(fullNS){var nsArray=fullNS.sp
 		oldAction.apply(this,arguments);
 	};
 	W(function(){
-		//窗口更改大小事件
-		$(window).on('resize',function(){
+		setTimeout(function(){
 			rePosAd();
-		});
+			//窗口更改大小事件
+			$(window).on('resize',function(){
+				rePosAd();
+			});
+		},100);
 	});
 	(W.util || (W.util = {}))['adPos'] = rePosAd
 }()
