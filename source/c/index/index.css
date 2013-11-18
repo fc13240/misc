@@ -209,8 +209,8 @@ a:hover{color:#ee842f;}
 .focusImg ul li a img{width:300px;height:210px;overflow:hidden;float:left}
 .focusImg ul li a b{height:50px;line-height:50px;display:block;float:left;width:280px;padding:0px 10px;color:#fff;font-size:18px;}
 .focusImg span{display:block;width:90px;height:15px;position:absolute;bottom:55px;right:5px;font-size:12px;}
-.focusImg span i{display:block;font-style:normal;background:url(../../i/index/index_icons.png) no-repeat -282px -128px;float:left;width:15px;height:15px;line-height:15px;text-align:center;margin:0px 3px;overflow:hidden;display:inline;cursor:pointer;}
-.focusImg span .on{background-position:-256px -129px;color:#fff;}
+.focusImg span i{display:block;font-style:normal;background:url(../../i/index/index_icons.png) no-repeat -282px -128px;_background:#fff;float:left;width:15px;height:15px;line-height:15px;text-align:center;margin:0px 3px;overflow:hidden;display:inline;cursor:pointer;}
+.focusImg span .on{background-position:-256px -129px;color:#fff;_background:#ec8735;}
 .topic{width:278px;border:1px solid #d7d7d7;background-color:#ebebeb;margin-top:10px;padding:10px;}
 .topic h4{font-size:14px;line-height:28px;border-bottom:1px solid #898989;}
 .topic h2{font-size:18px;padding-bottom:10px;line-height:30px;}
