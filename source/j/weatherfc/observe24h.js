@@ -109,6 +109,8 @@ define(function() {
 				$.each(arr,function(i,v){
 					if(!isNaN(v)){
 						a.push(v);
+					}else{
+						arr[i] = '';//对不合法数据进行清空处理
 					}
 				});
 				return a;
@@ -325,9 +327,7 @@ define(function() {
 						var x = Math.round(leftgutter + cellWidth * (i + .5)) + 0.5,
 							y = Math.round(cellHeight * ((max - obj.data[i]) / step) + topgutter),
 							initY = Math.round(cellHeight * ((max - min) / step) + topgutter);
-						if(!x || !y || !initY){
-							continue;
-						}
+
 						if (obj.data[i] == "")
 							pathIndex++;
 						else {
@@ -345,6 +345,7 @@ define(function() {
 							}
 
 						}
+
 						if (obj.shap == 'dot') {
 							if (unit == "℃") {
 								if (obj.data[i] < 0) {
