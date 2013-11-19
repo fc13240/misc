@@ -1025,7 +1025,7 @@ seajs.config = function(configData) {
   global.W = W;
 })(this);
 !function(){
-  window.onerror = function(err){
-    return true;
-  }
+  // window.onerror = function(err){
+  //   return true;
+  // }
 }();

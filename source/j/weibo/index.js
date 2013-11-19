@@ -28,7 +28,10 @@ define(function(require){
 		layoutContainer.each(function(){
 			heightArr.push($(this).outerHeight());
 		});
-		var weiboHtml = $($('script[type="text/weibo"]').html());
+		/*
+		$(ele.html())得到是全部的节点对象
+		*/
+		var weiboHtml = $($('script[type="text/weibo"]').html()).filter('.borderBg');
 		var store_num = (store.get(STORE_NAME)||'').split('|');
 		if(store_num.length != heightArr.length){//和窗口个数不一致时，清除储存数据
 			store.set(STORE_NAME,'');
