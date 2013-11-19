@@ -39,9 +39,8 @@ a.hoverStyle:hover{color:#2267a2;}
 /*内容部分*/
 
 .content{ background:url(../../i/weibo/body_bg.png) fixed repeat-x  top #fff; padding-top:24px;}
-.conLeft{ margin-right:20px;*margin-right:1.6%; width:320px; }
-.conCenter{ margin-right:20px; *margin-right:1.6%; width:320px; }
-.conRight{ width:320px; }
+.conLeft,
+.conCenter{ margin-right:20px;}
 
 /*天气预报*/
 .weather{height:80px; margin-bottom:20px;}
@@ -56,13 +55,13 @@ a.hoverStyle:hover{color:#2267a2;}
 .hintTitle,.hintCon{ color:#EE2A6A; font-size:16px; font-weight:normal; margin-top:5px;}
 /*微博列表*/
 .BlogFather{ display:inline; float:left; width:320px;padding: 1px 0;}
-.BlogFather li{ margin-bottom:20px;width: 320px;}
+.BlogFather li{ margin-bottom:20px;}
 .blogName{ background:#0577AD; border:1px solid #fff; border-radius:10px 10px 0 0; color:#fff; height:54px;}
 .blogName img,.blogName span{ margin:10px 0 10px 13px; float:left;}
 .blogName img{width: 35px;height: 35px;}
 .blogName span{color:#fff; font-size:18px; padding-top:2px;}
 .blogNews{padding:0 12px;margin-top:1px;border-top:1px solid #eee;}
-.blogNews li{ margin-top:12px; padding-bottom:12px;width: 100%;}
+.blogNews li{ margin-top:12px; padding-bottom:12px;}
 .blogNews li a{ color:#0078b6;}
 .blogNews li a:hover{ color:red;}
 .blogNews li .img img{ max-width: 40%;margin-top:10px; }
