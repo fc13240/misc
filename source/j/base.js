@@ -413,7 +413,7 @@ function Lunar(objDate) {
     }, "normal");
   })
   //收藏脚本
-  $("#collect").click(function() {debugger;
+  $("#collect").click(function() {
    W.util.addFav();
   })
   //设为首页

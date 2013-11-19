@@ -355,7 +355,13 @@
 								}
 							}
 							newPlaceholderIndex = num;
-							_resetPlaceholder(_isnotLayout(_last)?'insertBefore':'insertAfter',_last);
+							var method = 'insertAfter';
+							if(_isnotLayout(_last)){
+								if(_last.data('pos') == 'after'){
+									method = 'insertAfter';
+								}
+							}
+							_resetPlaceholder(method,_last);
 						}
 					})
 					//拖动结束时，处理点位符及拖动元素

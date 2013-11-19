@@ -17,6 +17,11 @@ getLayoutContainer {Function} //得到拖动元素布局容器
 animal {Number|String|Boolean} //设置动画的速度,参考：http://www.w3school.com.cn/jquery/effect_animate.asp (speed)
 >```
 
+**不参加拖拽元素特殊设置**
+>`data-notlayout="true"`可设置不参加拖拽
+
+>`data-pos="after"`可设置其它拖拽元素相对此元素的位置，不设置默认为在此元素之前
+
 API如下:
 ### drag
 初始化拖动,[示例](#/examples/drag/drag.md){.ajax-link .md}

@@ -51,14 +51,15 @@
 		var win = window;
 		var doc = document;
 		/*添加收藏*/
-		util.addFav = function(a) {
+		util.addFav = function(title) {
+			title || (title == doc.title);
 			var b = win.location.href;
 			if (win.sidebar && win.sidebar.addPanel) {
-				win.sidebar.addPanel(a, b, "")
+				win.sidebar.addPanel(title, b, "")
 			} else if (win.external && win.external.AddFavorite) {
-				win.external.AddFavorite(b, a);
+				win.external.AddFavorite(b, title);
 		    } else if (win.external && win.external.msAddSiteMode) {
-				win.external.msAddSiteMode(b, a);
+				win.external.msAddSiteMode(b, title);
 		    }else {
 				alert('请按 Ctrl + D 为你的浏览器添加书签！');
 			}
