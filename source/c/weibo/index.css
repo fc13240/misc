@@ -5,7 +5,7 @@
 .box{ margin:0 auto; width:1000px;}
 .box4col{width: 1340px;}
 .box5col{width: 1680px;}
-.borderBg{border:1px solid #ECECEC; border-radius:10px 10px 10px 10px; box-shadow:0 1px 3px rgba(0, 0, 0, 0.3); background:#fff;}
+.borderBg{border:1px solid #ECECEC;width: 318px; border-radius:10px 10px 10px 10px; box-shadow:0 1px 3px rgba(0, 0, 0, 0.3); background:#fff;}
 
 /*顶部导航*/
 .toolBar{ background:url(../../i/weibo/icon.png) repeat-x 0 -186px; height:59px; z-index:2}
