@@ -276,7 +276,7 @@ a:hover{color:#ee842f;}
 .emcee p img{border-left:2px solid #fff;}
 .emcee p a{display:block;width:50px;height:50px;margin-left:2px solid #fff;float:left;}
 
-.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:-35px;_bottom:-30px;}
+.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:-55px;_bottom:-50px;}
 
 .l_ad{width:670px;height:90px;}
 .life{width:670px;height:262px;overflow:hidden;border-top:3px solid #8abb4a;margin-top:10px;position:relative;}
@@ -305,7 +305,7 @@ a:hover{color:#ee842f;}
 .expert ul,.knowledge ul{background-color:#e8e8e8;padding:10px;background:none;}
 
 .s_ad{width:300px;height:100px;overflow:hidden;margin-bottom:10px;}
-.weibo{width:300px;height:28px;margin-top:10px;}
+.weibo{width:300px;height:28px;margin-top:10px;margin-bottom:10px;}
 .weibo #sina{display:block;width:148px;height:28px;background:url(../../i/index/index_icons.png) no-repeat -152px -72px;text-indent:-9999px;float:left;margin-right:4px;}
 .weibo #qq{display:block;width:148px;height:28px;background:url(../../i/index/index_icons.png) no-repeat -152px -100px;text-indent:-9999px;float:left;}
 
@@ -460,7 +460,7 @@ a:hover{color:#ee842f;}
 
 
 .ad3{width:300px;height:250px;overflow:hidden;}
-.knowledge{margin-top:10px;}
+.knowledge{margin-top:10px; position: relative;}
 .hdImgs{width:670px;height:290px;position:relative;margin-top:10px;}
 .hdImgs a{display:block;position:absolute;overflow:hidden;}
 .hdImgs #img1{width:167px;height:124px;top:40px;left:0px;}
@@ -723,3 +723,4 @@ margin-right:60px;
 #topics dl{background:none;padding-left: 10px;}
 #topics h4{background-color: #E8E8E8;    font-size: 18px;    font-weight: normal;    height: 30px;    line-height: 30px;    padding-left: 10px;}
 .aboutUs a{color:#fff;}
+.block .rightBlock3{top:45px;}
