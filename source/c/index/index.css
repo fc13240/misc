@@ -436,7 +436,7 @@ a:hover{color:#ee842f;}
 .rank h3 span a{padding:6px 5px;border-right:1px solid #252525;}
 .rank ul{width:300px;display:none;}
 .rank ul.on{display:block;}
-.rank ul li{height:33px;line-height:33px;vertical-align:bottom;width:280px;padding:0px 10px;}
+.rank ul li{height:33px;line-height:33px;vertical-align:bottom;width:290px;padding:0px 10px;padding-right:0px;}
 .rank ul .on{background-color:#fff;}
 .rank ul li span{display:block;height:33px;float:left;text-align:center;}
 .rank .ord{width:30px;height:25px;padding-top:8px;float:left;}
