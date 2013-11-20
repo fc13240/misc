@@ -15,7 +15,14 @@
 	var EVENT_START_MOVE = 'startmove';
 	var EVENT_MOVE = 'move';
 	var EVENT_END_MOVE = 'endmove';
+
+	var METHOD_AFTER = 'insertAfter';
+	var METHOD_BEFORE = 'insertBefore';
+
+	var LAYOUT_HORIZONTAL = 1;//上下布局
+	var LAYOUT_ORIENTATION = 2;//左右布局
 	var isMoving = false;
+
 	function init(Event){
 		var $doc = $(document);
 		//forbade document select
@@ -255,128 +262,159 @@
 						// 	middle_top = top+height/2;
 
 						//以拖拽元素计算中心点
-						var _offset = dragHandle.offset();
-						var left = _offset.left;
-						var top = _offset.top;
+						var _moveObj = getMoveHandle(dragHandle);//拖拽元素可能和移动元素一样
+						var _offset = _moveObj.is(dragHandle)?{left:0,top:0}:dragHandle.position();
+						var left = _offset.left+data.left;
+						var top = _offset.top+data.top;
+						var widthMove = data.w;
+						var heightMove = data.h;
 						var width = _width(dragHandle);
 						var height = _height(dragHandle);
 						var middle_left = left+width/2,
 							middle_top = top+height/2;
-
 						//测试中心点运动轨迹
-						$('<div class="test"></div>').css({'position':'absolute',left:middle_left,top:middle_top,width:'1','height':1,'background':'red','font':0}).appendTo($('body'));
+						// $('<div class="test"></div>').css({'position':'absolute',left:middle_left,top:middle_top,width:'1','height':1,'background':'red','font':0}).appendTo(dragHandle.closest('.'+DRAG_CONTAINER_CLASS));
 						//寻找最合适的点位符
 						for(var i = $dragHandles.length-1;i>=0;i--){
 							var $dragHandle = $dragHandles.eq(i);
 							var moveObj = getMoveHandle($dragHandle);
-							var offset = moveObj.offset();//统一以offset计算
+							var offset = moveObj.position();//统一以offset计算
 							var m_left = offset.left;
 							var m_top = offset.top;
 							var m_width = _width(moveObj);
 							var m_height = _height(moveObj);
 							//根据拖动元素的中心点，找到合适的占位符位置
 							if(m_left < middle_left && m_left + m_width > middle_left && m_top < middle_top && m_top + m_height > middle_top){
-								if(!$dragHandle.is(dragHandle)){
-									// if((m_left < middle_left && m_left + m_width > middle_left && m_top < middle_top && m_top + height > middle_top)){
+								
+								if(!dragHandle.is($dragHandle) && !_isnotLayout(moveObj)){
+									//对要进行的换位进行校验，防止出现小放到大的上出现抖动现象
+									if((m_left < middle_left && m_left + widthMove > middle_left && m_top < middle_top && m_top + heightMove > middle_top)){
 										newPlaceholderIndex = i;
-										var method = 'insertBefore';
+										var method = METHOD_BEFORE;
 										var _child = _getLayoutContainer($dragHandle).children();
 										var _index = _child.index(getMoveHandle($dragHandle));
 										if(_index == 0){
 											newPlaceholderIndex = i - 1;
 										}
 										//向靠右元素靠近并且此元素可以布局
-										if((i > currentPlaceholderIndex || _index == _child.length-1) && !_isnotLayout(moveObj)){
+										if((i > currentPlaceholderIndex || _index == _child.length-1)){
 											if(_index > 0){
-												method = 'insertAfter';
+												method = METHOD_AFTER;
 											}
 										}
 										_resetPlaceholder(method,moveObj);
 										return
 									}
 									
-								// }
+								}
 							}
 						}
 						// return;
+						
 						//if not suitable,insertAfter the last child of layout container or appendTo the layout container						 
-						var layoutContainer = _getLayoutContainer();
-
-						var first = $(layoutContainer.splice(0,1));
-						var fn = function($obj){
-							var lc_offset = $obj.position();//得到相对容器的位置
-							var lc_left = lc_offset.left;
-							var lc_top = lc_offset.top;
-							var lc_width = _width($obj);
-							var lc_height = _height($obj);
-							var arr = [
-									Math.min(Math.abs(middle_left - lc_left),Math.abs(middle_left - lc_left - lc_width)),
-									Math.min(Math.abs(middle_top - lc_top),Math.abs(middle_top - lc_top - lc_height))
-									,lc_left,lc_top];
-							return arr;
-						}
-						var arr = fn(first);
-						var min_left = arr[0];
-						var min_top = arr[1];
-						var min_left_container = arr[2];
-						var min_top_container = arr[3];
-
 						//得到最近的一个容器
-						var closestContainer = first;
+						var layoutContainer = _getLayoutContainer();
+						var $tempObjLayout,
+							layout_for_container;
+						layoutContainer.each(function(){
+							var $this = $(this);									
+							var offset = $this.position();//统一以offset计算
+							if($tempObjLayout){
+								layout_for_container = m_left == $tempObjLayout.position().left?LAYOUT_HORIZONTAL:LAYOUT_ORIENTATION;
+							}
+							$tempObj = $this;
+						});
+						var closestContainer = layoutContainer.first();
 						layoutContainer.each(function(){
 							var $this = $(this);
-							arr = fn($this);
-							//在右方
-							if(arr[2] > min_left_container){
-								if(arr[0] < min_left || (!isToLeft && left < ALLOWANCE)){
-									min_left = arr[0];
-									min_top = arr[1];
+							var _offset = $this.position();
+							var _offset_closest = closestContainer.position();
+							if(layout_for_container == LAYOUT_HORIZONTAL){
+								if(Math.abs(_offset.top + _height($this)/2 - middle_top) < Math.abs(_offset_closest.top + _height(closestContainer)/2 - middle_top)){
 									closestContainer = $this;
-									return;
+								}
+							}else{
+								if(Math.abs(_offset.left + _width($this)/2 - middle_left) < Math.abs(_offset_closest.left + _width(closestContainer)/2 - middle_left)){
+									closestContainer = $this;
 								}
 							}
-							//在下方
-							if(arr[3] > min_top_container){
-								if(arr[1] < min_top && !(isToTop && top < ALLOWANCE)){
-									min_left = arr[0];
-									min_top = arr[1];
-									closestContainer = $this;
-									return;
-								}
-							}
-						});
+						})
 						//正在拖动的元素或占位元素在最近的容器内，直接返回
 						if(closestContainer.is(_getLayoutContainer(dragHandle)) || closestContainer.is(_getLayoutContainer(placeholderMoveHandle))){
 							return;
 						}
-						var _last = closestContainer.children().last();
-						
+						var closestChildren = closestContainer.children();
 						//容器内没有元素时，直接追加占位符
-						if(_last.length == 0){
+						if(closestChildren.length == 0){
 							placeholderMoveHandle.appendTo(closestContainer);
+							return;
 						}else{
 							//占位符已经在容器内，直接返回
-							if(_last.is(placeholderMoveHandle)){
+							if(closestChildren.last().is(placeholderMoveHandle)){
 								return;
+							}
+							if(closestChildren.length == 1){
+								var toPlace = closestChildren.first();
+							}else{
+								var distanceArr = [];
+								var layout = LAYOUT_HORIZONTAL;
+								var $tempObj;
+								var childArr = closestChildren.filter(function(){
+									return !_isnotLayout($(this))
+								});
+								
+								childArr.each(function(i,v){
+									var $this = $(this);									
+									var offset = $this.position();//统一以offset计算
+									var m_left = offset.left;
+									var m_top = offset.top;
+									var m_width = _width($this);
+									var m_height = _height($this);
+									if(m_left < middle_left && m_left + m_width > middle_left && m_top < middle_top && m_top + m_height > middle_top){
+										distanceArr[i] = Number.MIN_VALUE;
+									}else{
+										distanceArr[i] = Math.pow(middle_left - m_left - m_width/2,2) + Math.pow(middle_top - m_top - m_height/2,2);
+									}
+									
+								});
+								closestChildren.each(function(){
+									var $this = $(this);									
+									var offset = $this.position();//统一以offset计算
+									if($tempObj){
+										layout = m_left == $tempObj.position().left?LAYOUT_HORIZONTAL:LAYOUT_ORIENTATION;
+									}
+									$tempObj = $this;
+								});
+								var minDistance = Math.min.apply(Math,distanceArr);
+								var minIndex = $.inArray(minDistance,distanceArr);
+								var toPlace = childArr.eq(minIndex);
+							}
+							if(!toPlace.length){
+								toPlace = closestContainer.children().last();
+							}
+							var method = METHOD_BEFORE;
+							
+							var _offset = toPlace.position();
+							var _m_left = _offset.left + _width(toPlace)/2;
+							var _m_top = _offset.top + _height(toPlace)/2;
+							//计算添加的相对位置
+							if((layout == LAYOUT_HORIZONTAL && middle_top > _m_top) || (layout == LAYOUT_ORIENTATION && middle_left > _m_left)){
+								method = METHOD_AFTER;
 							}
 							//计算新的点位符的索引
 							var num = 0;
-							layoutContainer.splice(0,0,first.get(0));
 							for(var i = 0,j=layoutContainer.length;i<j;i++){
 								var layoutC = layoutContainer.eq(i);
-								num += layoutC.children().length;
+								num += layoutC.children().filter(function(){
+									return $(this).is(getMoveHandle())
+								}).length;
 								if(layoutC.is(closestContainer)){
 									break;
 								}
 							}
 							newPlaceholderIndex = num;
-							var method = 'insertAfter';
-							if(_isnotLayout(_last)){
-								if(_last.data('pos') == 'after'){
-									method = 'insertAfter';
-								}
-							}
-							_resetPlaceholder(method,_last);
+							_resetPlaceholder(method,toPlace);
+							return;
 						}
 					})
 					//拖动结束时，处理点位符及拖动元素
