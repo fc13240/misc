@@ -18,7 +18,7 @@ a.toolBarA:hover{ background:#F8F8F8; color:#2267A2;}
 .hoverStyle{ background:url(../../i/weibo/icon.png) no-repeat -2px -55px; z-index:10;color:#2267A2; font-size:16px; padding:0 18px;line-height:60px; float:left; text-indent:42px; width:109px;position:relative;}
 a.hoverStyle:hover{color:#2267a2;}
 
-.cityBoardFather{ background:#F8F8F8; height:180px; width:100%; box-shadow:0px 3px 10px 0px #bbb;display: none; position:absolute; top:60px; z-index:1;*border-bottom:2px solid #ccc;}
+.cityBoardFather{ background:#F8F8F8; width:100%; box-shadow:0px 3px 10px 0px #bbb;display: none; position:absolute; top:60px; z-index:1;*border-bottom:2px solid #ccc;}
 .cityBoard li{ overflow:hidden; zoom:1; height:50%;}
 .cityBoard .borderBottom{ border-bottom:1px solid #eee;}
 .cityBoard li ul li{ float:left; padding:19px 0 19px 70px; *padding:19px 0 18px 70px;}
