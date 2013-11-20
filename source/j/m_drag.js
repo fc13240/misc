@@ -247,40 +247,55 @@
 						currentMousePos = [x,y];
 						var dragHandle = $(data.target);
 						_resetIndex(dragHandle);
-						var left = data.left;
-						var top = data.top;
-						var width = data.w;
-						var height = data.h;
+						// var left = data.left;
+						// var top = data.top;
+						// var width = data.w;
+						// var height = data.h;
+						// var middle_left = left+width/2,
+						// 	middle_top = top+height/2;
+
+						//以拖拽元素计算中心点
+						var _offset = dragHandle.offset();
+						var left = _offset.left;
+						var top = _offset.top;
+						var width = _width(dragHandle);
+						var height = _height(dragHandle);
 						var middle_left = left+width/2,
 							middle_top = top+height/2;
+
+						//测试中心点运动轨迹
+						$('<div class="test"></div>').css({'position':'absolute',left:middle_left,top:middle_top,width:'1','height':1,'background':'red','font':0}).appendTo($('body'));
 						//寻找最合适的点位符
 						for(var i = $dragHandles.length-1;i>=0;i--){
 							var $dragHandle = $dragHandles.eq(i);
 							var moveObj = getMoveHandle($dragHandle);
-							var offset = moveObj.position();
+							var offset = moveObj.offset();//统一以offset计算
 							var m_left = offset.left;
 							var m_top = offset.top;
 							var m_width = _width(moveObj);
 							var m_height = _height(moveObj);
 							//根据拖动元素的中心点，找到合适的占位符位置
 							if(m_left < middle_left && m_left + m_width > middle_left && m_top < middle_top && m_top + m_height > middle_top){
-								if(i != currentPlaceholderIndex){
-									newPlaceholderIndex = i;
-									var method = 'insertBefore';
-									var _child = _getLayoutContainer($dragHandle).children();
-									var _index = _child.index(getMoveHandle($dragHandle));
-									if(_index == 0){
-										newPlaceholderIndex = i - 1;
-									}
-									//向靠右元素靠近并且此元素可以布局
-									if((i > currentPlaceholderIndex || _index == _child.length-1) && !_isnotLayout(moveObj)){
-										if(_index > 0){
-											method = 'insertAfter';
+								if(!$dragHandle.is(dragHandle)){
+									// if((m_left < middle_left && m_left + m_width > middle_left && m_top < middle_top && m_top + height > middle_top)){
+										newPlaceholderIndex = i;
+										var method = 'insertBefore';
+										var _child = _getLayoutContainer($dragHandle).children();
+										var _index = _child.index(getMoveHandle($dragHandle));
+										if(_index == 0){
+											newPlaceholderIndex = i - 1;
 										}
+										//向靠右元素靠近并且此元素可以布局
+										if((i > currentPlaceholderIndex || _index == _child.length-1) && !_isnotLayout(moveObj)){
+											if(_index > 0){
+												method = 'insertAfter';
+											}
+										}
+										_resetPlaceholder(method,moveObj);
+										return
 									}
-									_resetPlaceholder(method,moveObj);
-									return
-								}
+									
+								// }
 							}
 						}
 						// return;
