@@ -1,7 +1,7 @@
 define(function(require){
 	var Drag = require('../m_drag');
 	require('../global');
-	var convert = require('../tool/convert');
+	var convert = require('../tool/translate');
 	var store = W.util.store;
 	var STORE_NAME = 'wb_i';
 	W(function(){
@@ -111,8 +111,8 @@ define(function(require){
 	    $('#btn_fav').click(function(){
 	    	W.util.addFav();
 	    });
-	    $('#btn_convert').click(function(){
-	    	convert('btn_convert');
+	    $('#btn_translate').click(function(){
+	    	convert();
 	    });
 	})
 });
