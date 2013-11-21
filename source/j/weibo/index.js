@@ -35,7 +35,10 @@ define(function(require){
 		var store_num = (store.get(STORE_NAME)||'').split('|');
 		if(store_num.length != heightArr.length){//和窗口个数不一致时，清除储存数据
 			store.set(STORE_NAME,'');
-			weiboHtml.each(function(){
+			
+			weiboHtml.sort(function(a,b){
+				return $(a).data('special') < $(b).data('special')? 1: -1;
+			}).each(function(){
 				var $this = $(this);
 				var minHeight = Math.min.apply(Math,heightArr);
 				var index = $.inArray(minHeight,heightArr);
@@ -68,7 +71,17 @@ define(function(require){
 	        'getMoveHandle': function(){
 	            return $(this).parent();
 	        },
-	        'dragHandle': '.layout-horizontal li .blogName'
+	        'dragHandle': $('.layout-horizontal li .blogName')
+	        //这个逻辑可以让特定的不参与拖拽
+	        // 'dragHandle': $('.layout-horizontal li .blogName').filter(function(){
+	        // 	var $this = $(this);
+	        // 	var $parent = $this.parent();
+	        // 	if(!$parent.data('special')){
+	        // 		return $this
+	        // 	}else{
+	        // 		$parent.data('notlayout',true)
+	        // 	}
+	        // })
 	    }).layout().on('endmove',function(){
 	    	clearTimeout(saveTT);
 	    	saveTT = setTimeout(save,300);
