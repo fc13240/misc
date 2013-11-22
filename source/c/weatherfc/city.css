@@ -25,6 +25,8 @@ nav .bg{height:75px;}
 #ad_banner #ad2{width:730px;left:135px;}
 #ad_banner #ad3{width:115px;right:10px;}
 #ad_banner .bg{height:90px;}
+#top_left_ad{width: 240px;height: 90px}
+#top_right_ad{width: 728px;height: 90px}
 
 .toolBanner{height:80px;width:980px;padding:10px;position:relative;margin:0 auto;z-index: 10;/*父级优先层级*/}
 .top{height:45px;width:980px;position:absolute;z-index:85;color:#fff;}
