@@ -12,7 +12,7 @@ define(function(require){
 		var getAlarmUrl = 'http://product.weather.com.cn/alarm/stationalarm.php?count=1&areaid='
 		return function(cityId,callback){
 			$.getScript(getAlarmUrl+cityId,function(){
-				if(alarminfo.count > 0){
+				if(alarminfo && alarminfo.data.length > 0){
 					var result = {'url':'','text':'','title':'','d':''};
 					var data = alarminfo.data[0];
 					var url = data[1];
