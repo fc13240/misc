@@ -43,9 +43,9 @@ a.hoverStyle:hover{color:#2267a2;}
 .conCenter{ margin-right:20px;}
 
 /*天气预报*/
-.weather{height:80px; margin-bottom:20px;}
+.weather{height:auto; padding: 10px 0;text-align: center;}
 /*左侧标签与公告框*/
-.tagNav{ margin-bottom:20px;}
+/*.tagNav{ margin-bottom:20px;}*/
 .tagNav h1{ background:url(../../i/weibo/icon.png) no-repeat 6px -249px;padding:17px 17px 17px 59px;  font-size:18px; line-height:18px; font-weight:bold;}
 .tagNavCon{ padding:17px; border-top:1px solid #DBDBDD; overflow:hidden;  }
 .tagNavCon a{ background:#ECEDF1; border-radius:3px 3px 3px 3px; border:1px solid #ccc;  margin:0 10px 12px 0;padding:0 15px; white-space:normal; display:inline-block}
