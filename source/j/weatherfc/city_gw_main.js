@@ -12,7 +12,6 @@ define(function(require){
 	require('./life_shr');
 	require('./hotcity');
 	
-	paper.polygon(x,y,arrowR).attr(arrowStyle).animate({transform:["t0,0r"+ang]},500);
 	//顶部导航
 	$("nav ul li").click(function(){
 		var num = $(this).find(".dropList a").length,
