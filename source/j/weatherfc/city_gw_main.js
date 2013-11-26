@@ -1,14 +1,14 @@
 define(function(require){	
 	require('jquery');
 	//require('../tool/raphael');
-	require('../base');
+	//require('../base');
 	var share = require('../m_share');
 	require('./forecast7d');
-	require('./hotZS');
-	require('./aroundCity');
-	require('./observe24h');
-	require('./life_golf');
-	require('./life_shr');
+	//require('./hotZS');
+	//require('./aroundCity');
+	//require('./observe24h');
+	//require('./life_golf');
+	//require('./life_shr');
 	require('./hotcity');
 	
 	//顶部导航
@@ -47,37 +47,7 @@ define(function(require){
 	})
 	
 
-	//生活天气助手action
-	var birthP=false,
-		commonP=false,
-		birthC=false,
-		commonC=false,
-		golfP=false,
-		golfC=false,
-		golfG=false;
-	$("#birth .provinceItem").mouseenter(function() {birthP =false;}).mouseleave(function() {birthP = true;});
-	$("#common .provinceItem").mouseenter(function() {commonP =false;}).mouseleave(function() {commonP = true;});
-	$("#birth .cityItem").mouseenter(function() {birthC =false;}).mouseleave(function() {birthC = true;});
-	$("#common .cityItem").mouseenter(function() {commonC =false;}).mouseleave(function() {commonC = true;});
-	$("#golf .provinceItem").mouseenter(function() {golfP =false;}).mouseleave(function() {golfP = true;});
-	$("#golf .cityItem").mouseenter(function() {golfC =false;}).mouseleave(function() {golfC = true;});
-	$("#golf .golfItem").mouseenter(function() {golfG =false;}).mouseleave(function() {golfG = true;});
-	$(document).mousedown(function(){
-		if(birthP && $("#birth .provinceItem").is(":visible"))
-			$("#birth .provinceItem").hide();
-		if(commonP && $("#common .provinceItem").is(":visible"))
-			$("#common .provinceItem").hide();
-		if(birthC && $("#birth .cityItem").is(":visible"))
-			$("#birth .cityItem").hide();
-		if(commonC && $("#common .cityItem").is(":visible"))
-			$("#common .cityItem").hide();
-		if(golfP && $("#golf .provinceItem").is(":visible"))
-			$("#golf .provinceItem").hide();
-		if(golfC && $("#golf .cityItem").is(":visible"))
-			$("#golf .cityItem").hide();
-		if(golfG && $("#golf .golfItem").is(":visible"))
-			$("#golf .golfItem").hide();
-	})
+	
 	
 
 	//搜索框
