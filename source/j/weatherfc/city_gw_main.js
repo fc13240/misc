@@ -5,7 +5,7 @@ define(function(require){
 	var share = require('../m_share');
 	require('./forecast7d');
 	//require('./hotZS');
-	//require('./aroundCity');
+	require('./aroundCity');
 	//require('./observe24h');
 	//require('./life_golf');
 	//require('./life_shr');
