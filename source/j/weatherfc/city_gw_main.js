@@ -1,7 +1,7 @@
 define(function(require){	
 	require('jquery');
 	//require('../tool/raphael');
-	//require('../base');
+	require('../base');
 	var share = require('../m_share');
 	require('./forecast7d');
 	//require('./hotZS');
