@@ -710,7 +710,14 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #aroundCity ul li .tq span i{font-style:normal;position:absolute;right:0px;top:0px;}
 
 #topics{width:300px;position:absolute;right:0px;top:2205px;}
-#topics h4{font-size:22px;color:#333333;font-weight:normal;}
+#topics h4{background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 2px solid #1662A8;
+    color: ##076EA8;
+    font-size: 22px;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-top: 5px;
+    position: relative;}
 #topics dl{background-color:#ffffff;padding:10px 20px;font-size:12px;}
 #topics dl dt{font-size:14px;}
 #topics dl dt a{color:#b7b7b7;}

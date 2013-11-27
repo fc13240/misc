@@ -258,7 +258,7 @@ a:hover{color:#ee842f;}
 .video{width:300px;margin-bottom:10px;}
 .video h3{height:30px;line-height:30px;background-color:#8abb4a;font-size:20px;font-weight:normal;}
 .video h3 a{color:#fff;padding-left:10px;}
-.video dl{width:300px;height:170px;overflow:hidden;margin-top:1px;position:relative;}
+.video dl{width:300px;height:142px;overflow:hidden;margin-top:1px;position:relative;}
 .video dl dt{height:40px;line-height:40px;width:300px;position:absolute;left:0px;bottom:0px;}
 .video dl dt i{display:block;width:300px;height:40px;background-color:#fff;opacity:0.9;filter:alpha(opacity=90);}
 .video dl dt a{display:block;width:300px;height:40px;line-height:40px;position:absolute;left:0px;top:0px;text-align:center;font-size:16px;}
@@ -276,7 +276,7 @@ a:hover{color:#ee842f;}
 .emcee p img{border-left:2px solid #fff;}
 .emcee p a{display:block;width:50px;height:50px;margin-left:2px solid #fff;float:left;}
 
-.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:-65px;_bottom:-50px;}
+.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:-95px;_bottom:-80px;}
 
 .l_ad{width:670px;height:90px;}
 .life{width:670px;height:272px;overflow:hidden;border-top:3px solid #8abb4a;margin-top:10px;position:relative;}
@@ -461,7 +461,7 @@ a:hover{color:#ee842f;}
 
 .ad3{width:300px;height:250px;overflow:hidden;}
 .knowledge{margin-top:10px; position: relative;}
-.hdImgs{width:670px;height:290px;position:relative;margin-top:10px;}
+.hdImgs{width:670px;height:290px;position:relative;margin-top:10px; border-top: 3px solid #707070;}
 .hdImgs a{display:block;position:absolute;overflow:hidden;}
 .hdImgs #img1{width:167px;height:124px;top:40px;left:0px;}
 .hdImgs #img2{width:167px;height:124px;top:165px;left:0px;}
@@ -723,5 +723,5 @@ margin-right:60px;
 #topics dl{background:none;padding-left: 10px;}
 #topics h4{background-color: #E8E8E8;    font-size: 18px;    font-weight: normal;    height: 30px;    line-height: 30px;    padding-left: 10px;}
 
-.block .rightBlock3{top:55px;}
-.block .rightBlock4{top:-60px;}
+.block .rightBlock3{top:85px;}
+.block .rightBlock4{top:-32px;}
