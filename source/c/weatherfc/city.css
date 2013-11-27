@@ -833,6 +833,7 @@ background-color: #FFFFFF;
 #disasterAlarm h3 a{display:block;}
 #disasterAlarm h3 span{display:block;float:left;font-weight:normal;cursor:pointer;}
 #disasterAlarm h3 .img{width:44px;padding:4px 16px;height:35px;background-color: #fff100;}
+#disasterAlarm h3 .img img{display: block;}
 #disasterAlarm h3 .title{font-size:16px;width:660px;padding-left:15px;}
 #disasterAlarm h3 .time{font-size:12px;}
 #disasterAlarm .shadow{display:block;width:12px;height:43px;background-color:#ee7a1e;float:left;position:relative;z-index:5;}
