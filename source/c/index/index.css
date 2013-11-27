@@ -276,7 +276,7 @@ a:hover{color:#ee842f;}
 .emcee p img{border-left:2px solid #fff;}
 .emcee p a{display:block;width:50px;height:50px;margin-left:2px solid #fff;float:left;}
 
-.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:-65px;_bottom:-50px;}
+.block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:-95px;_bottom:-80px;}
 
 .l_ad{width:670px;height:90px;}
 .life{width:670px;height:272px;overflow:hidden;border-top:3px solid #8abb4a;margin-top:10px;position:relative;}
@@ -723,5 +723,5 @@ margin-right:60px;
 #topics dl{background:none;padding-left: 10px;}
 #topics h4{background-color: #E8E8E8;    font-size: 18px;    font-weight: normal;    height: 30px;    line-height: 30px;    padding-left: 10px;}
 
-.block .rightBlock3{top:55px;}
-.block .rightBlock4{top:-60px;}
+.block .rightBlock3{top:85px;}
+.block .rightBlock4{top:-32px;}
