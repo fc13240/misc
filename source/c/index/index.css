@@ -461,7 +461,7 @@ a:hover{color:#ee842f;}
 
 .ad3{width:300px;height:250px;overflow:hidden;}
 .knowledge{margin-top:10px; position: relative;}
-.hdImgs{width:670px;height:290px;position:relative;margin-top:10px;}
+.hdImgs{width:670px;height:290px;position:relative;margin-top:10px; border-top: 3px solid #707070;}
 .hdImgs a{display:block;position:absolute;overflow:hidden;}
 .hdImgs #img1{width:167px;height:124px;top:40px;left:0px;}
 .hdImgs #img2{width:167px;height:124px;top:165px;left:0px;}
