@@ -429,7 +429,7 @@ a:hover{color:#ee842f;}
 .imgs dl dt a:hover{color:#ee842f;}
 .international ul{width:343px;border:1px solid #eee7e7;float:left;padding:5px 10px;margin-left:3px;}
 
-.rank{width:300px;background-color:#e8e8e8;margin-top:10px;}
+.rank{width:300px;background-color:#e8e8e8;margin-top:10px;margin-bottom:10px;}
 .rank h3{background-color:#252525;color:#fff;}
 .rank h3 a{color:#fff;}
 .rank h3 span{font-size:12px;}
@@ -722,6 +722,6 @@ margin-right:60px;
 #topics{border-top: 3px solid #076EA8;}
 #topics dl{background:none;padding-left: 10px;}
 #topics h4{background-color: #E8E8E8;    font-size: 18px;    font-weight: normal;    height: 30px;    line-height: 30px;    padding-left: 10px;}
-.aboutUs a{color:#fff;}
+
 .block .rightBlock3{top:55px;}
 .block .rightBlock4{top:-60px;}
