@@ -36,6 +36,7 @@
 .serviceinfo p{height:20px;}
 .serviceinfo p span{display:block;width:265px;float:left;}
 .serviceinfo a,.serviceinfo b{color:#076ea8;font-weight:normal;}
+.serviceinfo b{color: #252525;}
 .aboutUs{background-color:#7d7d7d;color:#fff;height:45px;line-height:45px;text-align:center;font-size:12px;min-width:980px;}
 .provinceLinks{position:absolute;z-index:100;top:43px;left:0px;width:100%;height:175px;background-color:#ebebeb;display:none;}
 .provinceLinks dl{float:left;padding:10px 0px;}
@@ -975,3 +976,4 @@ img.lazy{
     left: -10000px;
     z-index: 9;/*防止定位容器的z-index影响*/
 }
+.aboutUs a{color:#fff;}
