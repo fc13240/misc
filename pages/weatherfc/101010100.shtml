@@ -118,9 +118,9 @@
                   <li><a href="./101010100.shtml"><span class="name">北京</span><span class="weather">晴</span><span class="temp">0℃/-5℃</span></a></li>
                   <li><a href="./101010500.shtml"><span class="name">怀柔</span><span class="weather">晴</span><span class="temp">0℃/-8℃</span></a></li>
                   <li><a href="./101010900.shtml"><span class="name">丰台</span><span class="weather">晴</span><span class="temp">0℃/-5℃</span></a></li>
-                  <li><a href="./101011200.shtml"><span class="name">房山</span><span class="weather">晴</span><span class="temp">0℃/-6℃</span></a></li>
+                  <li><a href="./101011200.shtml"><span class="name">房山</span><span class="weather">晴</span><span class="temp">1℃/-6℃</span></a></li>
                   <li><a href="./101010400.shtml"><span class="name">顺义</span><span class="weather">晴</span><span class="temp">0℃/-5℃</span></a></li>
-                  <li><a href="./101011100.shtml"><span class="name">大兴</span><span class="weather">晴</span><span class="temp">0℃/-5℃</span></a></li>
+                  <li><a href="./101011100.shtml"><span class="name">大兴</span><span class="weather">晴</span><span class="temp">1℃/-5℃</span></a></li>
                   <li><a href="./101011500.shtml"><span class="name">平谷</span><span class="weather">晴</span><span class="temp">0℃/-8℃</span></a></li>
                   <li><a href="./101010300.shtml"><span class="name">朝阳</span><span class="weather">晴</span><span class="temp">0℃/-5℃</span></a></li>
                   <li><a href="./101011000.shtml"><span class="name">石景山</span><span class="weather">晴</span><span class="temp">0℃/-5℃</span></a></li>
@@ -137,16 +137,16 @@
 <!--实况start-->
       <div id="detail">
   <h2 name="">
-  <script>var flAngle = 324;</script>
+  <script>var flAngle = 319;</script>
   今日实况
     <a href="http://www.weather.com.cn/static/radar_video_v1.php?class=JC_RADAR_AZ9010_JB" target="_blank">雷达</a>
     </h2>
-  <p id="detail_wd"><b>-4</b>℃</p>
-  <p id="detail_sd">相对湿度&nbsp;17%</p>
+  <p id="detail_wd"><b>0</b>℃</p>
+  <p id="detail_sd">相对湿度&nbsp;11%</p>
   <p>
-        09:45
+        14:35
   </p>
-  <p id="detail_fl">4级<span id="flHolder"></span></p>
+  <p id="detail_fl">3级<span id="flHolder"></span></p>
 </div>
 <div style="display:none;"></div>
 <!--实况end-->
@@ -197,7 +197,7 @@
 <!-- 预报发布时间 start -->
         <h2>预报<i>
                 (2013-11-27&nbsp;
-         08
+         11
                 :00发布)
         </i><!--<span><a href="#">14天预报</a><a href="#">1个月预报</a></span>--></h2>
 <!-- 预报发布时间  end -->        
@@ -250,8 +250,8 @@
             <!--每日天气一句话提醒 模块-->
 <div id="remind">
         <h3>每日天气提醒</h3>
-        <p>北京06时发布</p>
-        <p class="detail">北京：今天白天晴，北风五六级，夜间晴，北风四级左右，0到零下5℃。出门穿暖抵寒风，预防煤气中毒莫忽视，用火更要保安全。市气象台6时发布
+        <p>北京11时发布</p>
+        <p class="detail">市气象台11时发布预报：下午晴北风五六级，最高气温0℃，下班晴北风四五间六级，零下1到零下3℃。北风呼啸天气寒，添衣保暖别嫌烦。
                 </p>
 </div>
         <!--每日天气提醒end-->
@@ -446,7 +446,7 @@
         
         <!--整点天气start-->
           <script>
-var observe24h_data = {"od":{"od0":"201311271000","od1":"北京_南郊观象台","od2":[{"od21":"10","od22":"","od23":"","od24":"","od25":"","od26":"","od27":""},{"od21":"09","od22":"-4","od23":"339","od24":"北风","od25":"3","od26":"0","od27":"18"},{"od21":"08","od22":"-4","od23":"322","od24":"西北风","od25":"4","od26":"0","od27":"18"},{"od21":"07","od22":"-4","od23":"328","od24":"西北风","od25":"4","od26":"0","od27":"19"},{"od21":"06","od22":"-4","od23":"316","od24":"西北风","od25":"3","od26":"0","od27":"19"},{"od21":"05","od22":"-2","od23":"311","od24":"西北风","od25":"3","od26":"0","od27":"20"},{"od21":"04","od22":"-2","od23":"315","od24":"西北风","od25":"3","od26":"0","od27":"19"},{"od21":"03","od22":"-2","od23":"323","od24":"西北风","od25":"3","od26":"0","od27":"20"},{"od21":"02","od22":"-1","od23":"318","od24":"西北风","od25":"4","od26":"0","od27":"18"},{"od21":"01","od22":"-1","od23":"345","od24":"北风","od25":"4","od26":"0","od27":"18"},{"od21":"00","od22":"-1","od23":"304","od24":"西北风","od25":"4","od26":"0","od27":"16"},{"od21":"23","od22":"0","od23":"323","od24":"西北风","od25":"4","od26":"0","od27":"16"},{"od21":"22","od22":"1","od23":"339","od24":"北风","od25":"4","od26":"0","od27":"17"},{"od21":"21","od22":"1","od23":"338","od24":"北风","od25":"3","od26":"0","od27":"15"},{"od21":"20","od22":"2","od23":"331","od24":"西北风","od25":"3","od26":"0","od27":"13"},{"od21":"19","od22":"3","od23":"326","od24":"西北风","od25":"4","od26":"0","od27":"13"},{"od21":"18","od22":"3","od23":"314","od24":"西北风","od25":"4","od26":"0","od27":"12"},{"od21":"17","od22":"4","od23":"323","od24":"西北风","od25":"3","od26":"0","od27":"11"},{"od21":"16","od22":"5","od23":"335","od24":"西北风","od25":"3","od26":"0","od27":"11"},{"od21":"15","od22":"6","od23":"319","od24":"西北风","od25":"4","od26":"0","od27":"13"},{"od21":"14","od22":"6","od23":"317","od24":"西北风","od25":"4","od26":"0","od27":"14"},{"od21":"13","od22":"7","od23":"316","od24":"西北风","od25":"3","od26":"0","od27":"15"},{"od21":"12","od22":"6","od23":"349","od24":"北风","od25":"2","od26":"0","od27":"17"},{"od21":"11","od22":"5","od23":"11","od24":"北风","od25":"3","od26":"0","od27":"16"},{"od21":"10","od22":"4","od23":"47","od24":"东北风","od25":"2","od26":"0","od27":"18"}]}};
+var observe24h_data = {"od":{"od0":"201311271400","od1":"北京_南郊观象台","od2":[{"od21":"14","od22":"0","od23":"318","od24":"西北风","od25":"3","od26":"10","od27":"12"},{"od21":"13","od22":"0","od23":"307","od24":"西北风","od25":"4","od26":"0","od27":"12"},{"od21":"12","od22":"-1","od23":"303","od24":"西北风","od25":"4","od26":"100","od27":"14"},{"od21":"11","od22":"-2","od23":"339","od24":"北风","od25":"3","od26":"0","od27":"15"},{"od21":"10","od22":"-3","od23":"330","od24":"西北风","od25":"4","od26":"0","od27":"17"},{"od21":"09","od22":"-4","od23":"339","od24":"北风","od25":"3","od26":"0","od27":"18"},{"od21":"08","od22":"-4","od23":"322","od24":"西北风","od25":"4","od26":"0","od27":"18"},{"od21":"07","od22":"-4","od23":"328","od24":"西北风","od25":"4","od26":"0","od27":"19"},{"od21":"06","od22":"-4","od23":"316","od24":"西北风","od25":"3","od26":"0","od27":"19"},{"od21":"05","od22":"-2","od23":"311","od24":"西北风","od25":"3","od26":"0","od27":"20"},{"od21":"04","od22":"-2","od23":"315","od24":"西北风","od25":"3","od26":"0","od27":"19"},{"od21":"03","od22":"-2","od23":"323","od24":"西北风","od25":"3","od26":"0","od27":"20"},{"od21":"02","od22":"-1","od23":"318","od24":"西北风","od25":"4","od26":"0","od27":"18"},{"od21":"01","od22":"-1","od23":"345","od24":"北风","od25":"4","od26":"0","od27":"18"},{"od21":"00","od22":"-1","od23":"304","od24":"西北风","od25":"4","od26":"0","od27":"16"},{"od21":"23","od22":"0","od23":"323","od24":"西北风","od25":"4","od26":"0","od27":"16"},{"od21":"22","od22":"1","od23":"339","od24":"北风","od25":"4","od26":"0","od27":"17"},{"od21":"21","od22":"1","od23":"338","od24":"北风","od25":"3","od26":"0","od27":"15"},{"od21":"20","od22":"2","od23":"331","od24":"西北风","od25":"3","od26":"0","od27":"13"},{"od21":"19","od22":"3","od23":"326","od24":"西北风","od25":"4","od26":"0","od27":"13"},{"od21":"18","od22":"3","od23":"314","od24":"西北风","od25":"4","od26":"0","od27":"12"},{"od21":"17","od22":"4","od23":"323","od24":"西北风","od25":"3","od26":"0","od27":"11"},{"od21":"16","od22":"5","od23":"335","od24":"西北风","od25":"3","od26":"0","od27":"11"},{"od21":"15","od22":"6","od23":"319","od24":"西北风","od25":"4","od26":"0","od27":"13"},{"od21":"14","od22":"6","od23":"317","od24":"西北风","od25":"4","od26":"0","od27":"14"}]}};
 </script>
 <div id="weatherChart">
   <div class="tabs">
@@ -532,16 +532,16 @@ var observe24h_data = {"od":{"od0":"201311271000","od1":"北京_南郊观象台"
           <div class="tabContent">
           <div class="rankItems on">
             <ul>
-                                                        <li><span class="num"><b>1</b></span><span class="city"><a title="周口店北京人遗址" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556331.shtml">周口店北京人遗址</a></span><span class="tempImg"><a title="周口店北京人遗址" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556331.shtml" class="legend d00"></a><a title="周口店北京人遗址" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556331.shtml" class="legend n00"></a></span><span class="tempWord">0--6℃</span></li>
+                                                        <li><span class="num"><b>1</b></span><span class="city"><a title="周口店北京人遗址" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556331.shtml">周口店北京人遗址</a></span><span class="tempImg"><a title="周口店北京人遗址" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556331.shtml" class="legend d00"></a><a title="周口店北京人遗址" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556331.shtml" class="legend n00"></a></span><span class="tempWord">1--6℃</span></li>
                                                         <li><span class="num"><b>2</b></span><span class="city"><a title="颐和园" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556330.shtml">颐和园</a></span><span class="tempImg"><a title="颐和园" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556330.shtml" class="legend d00"></a><a title="颐和园" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556330.shtml" class="legend n00"></a></span><span class="tempWord">0--5℃</span></li>
                                                         <li><span class="num"><b>3</b></span><span class="city"><a title="故宫" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556329.shtml">故宫</a></span><span class="tempImg"><a title="故宫" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556329.shtml" class="legend d00"></a><a title="故宫" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556329.shtml" class="legend n00"></a></span><span class="tempWord">0--5℃</span></li>
-                                                        <li><span class="num"><b>4</b></span><span class="city"><a title="北京石花洞" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556328.shtml">北京石花洞</a></span><span class="tempImg"><a title="北京石花洞" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556328.shtml" class="legend d00"></a><a title="北京石花洞" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556328.shtml" class="legend n00"></a></span><span class="tempWord">0--6℃</span></li>
+                                                        <li><span class="num"><b>4</b></span><span class="city"><a title="北京石花洞" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556328.shtml">北京石花洞</a></span><span class="tempImg"><a title="北京石花洞" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556328.shtml" class="legend d00"></a><a title="北京石花洞" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556328.shtml" class="legend n00"></a></span><span class="tempWord">1--6℃</span></li>
                                                         <li><span class="num"><b>5</b></span><span class="city"><a title="北京十三陵" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556327.shtml">北京十三陵</a></span><span class="tempImg"><a title="北京十三陵" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556327.shtml" class="legend d00"></a><a title="北京十三陵" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556327.shtml" class="legend n00"></a></span><span class="tempWord">0--6℃</span></li>
                                                         <li><span class="num"><b>6</b></span><span class="city"><a title="八达岭长城" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556326.shtml">八达岭长城</a></span><span class="tempImg"><a title="八达岭长城" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556326.shtml" class="legend d00"></a><a title="八达岭长城" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556326.shtml" class="legend n00"></a></span><span class="tempWord">-2--9℃</span></li>
-                                                        <li><span class="num"><b>7</b></span><span class="city"><a title="北京十渡" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556325.shtml">北京十渡</a></span><span class="tempImg"><a title="北京十渡" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556325.shtml" class="legend d00"></a><a title="北京十渡" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556325.shtml" class="legend n00"></a></span><span class="tempWord">0--6℃</span></li>
+                                                        <li><span class="num"><b>7</b></span><span class="city"><a title="北京十渡" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556325.shtml">北京十渡</a></span><span class="tempImg"><a title="北京十渡" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556325.shtml" class="legend d00"></a><a title="北京十渡" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/07/1556325.shtml" class="legend n00"></a></span><span class="tempWord">1--6℃</span></li>
                                                         <li><span class="num"><b>8</b></span><span class="city"><a title="北京天坛" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/01/1556255.shtml">北京天坛</a></span><span class="tempImg"><a title="北京天坛" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/01/1556255.shtml" class="legend d00"></a><a title="北京天坛" href="http://tourism.weather.com.cn/jqtq/gnjq/2011/01/1556255.shtml" class="legend n00"></a></span><span class="tempWord">0--5℃</span></li>
                                                                     </ul>
-            <p>2013/11/27  08:00:00发布</p>
+            <p>2013/11/27 11:00:00发布</p>
           </div>
           <!--<div class="rankItems kqzl">
             <ul>
@@ -639,19 +639,19 @@ var observe24h_data = {"od":{"od0":"201311271000","od1":"北京_南郊观象台"
         -->
 <!-- 周边预报发布时间 start -->
         <h3>周边地区今日天气(2013-11-27  
-         08
+         11
                 :00 发布)</h3>
 <!-- 周边预报发布时间 end -->       
         <ul>
-                                    <li><a href="./101090101.shtml"><p><b>石家庄</b></p><p class="tq"><span>白天&nbsp;晴<i>5°C</i></span><span>夜间&nbsp;晴<i>-5°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
+                                    <li><a href="./101090101.shtml"><p><b>石家庄</b></p><p class="tq"><span>白天&nbsp;晴<i>5°C</i></span><span>夜间&nbsp;晴<i>-4°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
                                                 <li><a href="./101030100.shtml"><p><b>天津</b></p><p class="tq"><span>白天&nbsp;晴<i>1°C</i></span><span>夜间&nbsp;晴<i>-4°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>良</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>较适宜</i></span></span></p></a></li>
                                                 <li><a href="./101100101.shtml"><p><b>太原</b></p><p class="tq"><span>白天&nbsp;晴<i>1°C</i></span><span>夜间&nbsp;晴<i>-11°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>中等</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
                                                 <li><a href="./101090501.shtml"><p><b>唐山</b></p><p class="tq"><span>白天&nbsp;晴<i>2°C</i></span><span>夜间&nbsp;晴<i>-10°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>良</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
-                                                <li><a href="./101090701.shtml"><p><b>沧州</b></p><p class="tq"><span>白天&nbsp;晴<i>2°C</i></span><span>夜间&nbsp;晴<i>-8°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>良</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
-                                                <li><a href="./101090301.shtml"><p><b>张家口</b></p><p class="tq"><span>白天&nbsp;晴<i>-5°C</i></span><span>夜间&nbsp;晴<i>-14°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>良</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>较适宜</i></span></span></p></a></li>
-                                                <li><a href="./101090601.shtml"><p><b>廊坊</b></p><p class="tq"><span>白天&nbsp;晴<i>2°C</i></span><span>夜间&nbsp;晴<i>-7°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
-                                                <li><a href="./101090201.shtml"><p><b>保定</b></p><p class="tq"><span>白天&nbsp;晴<i>4°C</i></span><span>夜间&nbsp;晴<i>-9°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
-                                                <li><a href="./101090218.shtml"><p><b>涿州</b></p><p class="tq"><span>白天&nbsp;晴<i>3°C</i></span><span>夜间&nbsp;晴<i>-10°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
+                                                <li><a href="./101090701.shtml"><p><b>沧州</b></p><p class="tq"><span>白天&nbsp;晴<i>3°C</i></span><span>夜间&nbsp;晴<i>-8°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>良</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
+                                                <li><a href="./101090301.shtml"><p><b>张家口</b></p><p class="tq"><span>白天&nbsp;晴<i>-7°C</i></span><span>夜间&nbsp;晴<i>-14°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>良</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>较适宜</i></span></span></p></a></li>
+                                                <li><a href="./101090601.shtml"><p><b>廊坊</b></p><p class="tq"><span>白天&nbsp;晴<i>1°C</i></span><span>夜间&nbsp;晴<i>-7°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>最弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
+                                                <li><a href="./101090201.shtml"><p><b>保定</b></p><p class="tq"><span>白天&nbsp;晴<i>4°C</i></span><span>夜间&nbsp;晴<i>-8°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
+                                                <li><a href="./101090218.shtml"><p><b>涿州</b></p><p class="tq"><span>白天&nbsp;晴<i>3°C</i></span><span>夜间&nbsp;晴<i>-9°C</i></span><span class="zs"><span>空气污染扩散条件指数<i>中</i></span><span>紫外线指数<i>弱</i></span><span>洗车指数<i>适宜</i></span></span></p></a></li>
                       <!-- 周边地区天气   end -->         
         </ul>
         <div class="clear"></div>

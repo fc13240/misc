@@ -308,7 +308,7 @@ define(function() {
 									$(obj.dataContainer).hide();
 								})
 							}
-						})(i, x, y, obj.data[i])
+						})(i, x, y, obj.data[i]);
 					}
 					break;
 				default:
@@ -438,17 +438,17 @@ define(function() {
 							});
 						} else {
 							this.shap[i].animate({
-								transform: ["t0," + (-y0 + y) + "r" + obj.angle[i]]
+								transform: ["t0," + (-y0 + y) + "r" + (obj.angle[i]-180)]//处理角度
 							}, 500);
 						}
 						//鼠标事件
-						(function(i, x, y, d) {
-							if (obj.data[i] != "") {
+						(function(i, x, y, d,desc) {
+							if (d != "") {
 								observe24hGraph.rects[i].hover(function() {
 									crossLine.attr({
 										path: ["M", x, 0, "V", observe24hGraph.height, "M", 0, y + 0.5, "H", observe24hGraph.width]
 									}).show();
-									$(obj.dataContainer).html(d + unit).css({
+									$(obj.dataContainer).html(desc+d + unit).css({
 										"top": y,
 										"left": x + 10
 									}).show();
@@ -461,7 +461,7 @@ define(function() {
 								crossLine.attr({
 									path: ["M", x, 0, "V", observe24hGraph.height, "M", 0, y + 0.5, "H", observe24hGraph.width]
 								}).show();
-								$(obj.dataContainer).html(d + unit).css({
+								$(obj.dataContainer).html(desc+d + unit).css({
 									"top": y,
 									"left": x + 10
 								}).show();
@@ -469,7 +469,7 @@ define(function() {
 								crossLine.hide();
 								$(obj.dataContainer).hide();
 							})
-						})(i, x, y, obj.data[i])
+						})(i, x, y, obj.data[i],obj.desc && obj.desc[i]||'');
 					}
 					for (var p = 0; p < pathCount; p++) {
 						if(!initPath[p]){
@@ -520,18 +520,28 @@ define(function() {
 	//初始化温度图表
 	observe24hGraph.init(dataConf);
 	observe24hGraph.drawGraph(graphConf);
+	function getNewestData(dataArr){
+		return dataArr.slice(-1)[0];
+	}
+	var dataLen = adjustData.length;
+	function isEmpty(invalidDataArr){
+		return invalidDataArr.length == dataLen;
+	}
 	//观察台
 	$("#platform").html(observe24h_data.od.od1);
-	var newTemperature = adjustData.temperature[adjustData.temperature.length - 1];
+	var $currHour = $("#currHour");
+	var $detailHour = $("#detailHour");
+	var $result = $("#hourHolder .result");
+	var newTemperature = getNewestData(adjustData.temperature);
 	if (newTemperature == "") {
-		$("#currHour").html("最新整点实况气温:暂无数据");
+		$currHour.html("最新整点实况气温:暂无数据");
 	} else {
-		$("#currHour").html("最新整点实况气温:" + newTemperature + "℃");
+		$currHour.html("最新整点实况气温:" + newTemperature + "℃");
 	}
 	if (adjustData.invalid.temperature.length == adjustData.length) {
-		$("#detailHour").html("暂无数据");
+		$detailHour.html("暂无数据");
 	} else {
-		$("#detailHour").html("最高" + adjustData.flagData.temperature.max + "℃:最低" + adjustData.flagData.temperature.min + "℃");
+		$detailHour.html("最高" + adjustData.flagData.temperature.max + "℃,最低" + adjustData.flagData.temperature.min + "℃");
 	}
 	$("#weatherChart .tabs ul li").click(function() {
 		if ($(this).hasClass("on")) return;
@@ -540,102 +550,105 @@ define(function() {
 		var prev_data_role = prev.attr("data-role");
 		prev.attr("class", prev.attr("class").replace("_on", "")).removeClass("on");
 		$(this).attr("class", $(this).attr("class") + "_on").addClass("on");
-		$("#hourHolder .result").hide();
+		$result.hide();
+		var invalidData = adjustData.invalid;
+		var _graphConf;
 		switch (data_role) {
 			case 'humidity':
-				if (adjustData.rain[0] == "") {
-					$("#currHour").html("最新整点实况相对湿度:暂无数据");
+				var newestVal = getNewestData(adjustData.humidity);
+				if (isNaN(newestVal) || newestVal == '') {
+					$currHour.html("最新整点相对湿度:暂无数据");
 				} else {
-					$("#currHour").html("最新整点实况相对湿度:" + adjustData.humidity[0] + "%");
+					$currHour.html("最新整点相对湿度:" + newestVal + "%");
 				}
-				if (adjustData.invalid.humidity.length == adjustData.length) {
-					$("#detailHour").html("暂无数据");
-					$("#hourHolder .result").html("24小时内无湿度数据").show();
+				if (isEmpty(invalidData.humidity)) {
+					$detailHour.html("暂无数据");
+					$result.html("24小时内无湿度数据").show();
 				} else {
-					$("#detailHour").html("最大相对湿度:" + adjustData.flagData.humidity.max + "%");
+					$detailHour.html("最大相对湿度:" + adjustData.flagData.humidity.max + "%");
 				}
-				paper.remove();
-				observe24hGraph.init(dataConf);
-				observe24hGraph.drawGraph($.extend({},graphConf,{
+				_graphConf = $.extend({},graphConf,{
 					"min": adjustData.min.humidity,
 					"max": adjustData.max.humidity,
 					"data": adjustData.humidity,
 					"unit": "%",
-					"invalid": adjustData.invalid.humidity,
+					"invalid": invalidData.humidity,
 					"step": adjustData.step.humidity
-				}));
+				});
 				break;
 			case 'temperature':
-				if (adjustData.temperature[0] == "") {
-					$("#currHour").html("最新整点实况气温:暂无数据");
+				var newestVal = getNewestData(adjustData.temperature);
+				if (isNaN(newestVal) || newestVal == '') {
+					$currHour.html("最新整点实况气温:暂无数据");
 				} else {
-					$("#currHour").html("最新整点实况气温:" + adjustData.temperature[0] + "℃");
+					$currHour.html("最新整点实况气温:" + newestVal + "℃");
 				}
-				if (adjustData.invalid.temperature.length == adjustData.length) {
-					$("#detailHour").html("暂无数据");
-					$("#hourHolder .result").html("24小时内无温度数据").show();
+				if (isEmpty(invalidData.temperature)) {
+					$detailHour.html("暂无数据");
+					$result.html("24小时内无温度数据").show();
 				} else {
-					$("#detailHour").html("最高" + adjustData.flagData.temperature.max + "℃:最低" + adjustData.flagData.temperature.min + "℃");
+					$detailHour.html("最高" + adjustData.flagData.temperature.max + "℃,最低" + adjustData.flagData.temperature.min + "℃");
 				}
-				paper.remove();
-				observe24hGraph.init(dataConf);
-				observe24hGraph.drawGraph(graphConf);
 				break;
 			case 'rain':
-				if (adjustData.rain[0] == "") {
-					$("#currHour").html("最新1小时降水量:暂无数据");
+				var newestVal = getNewestData(adjustData.rain);
+				if (!isNaN(newestVal) && newestVal > 0) {
+					$currHour.html("最新1小时降水量:" + newestVal + "mm");
 				} else {
-					$("#currHour").html("最新1小时降水量:" + adjustData.rain[0] + "mm");
+					$currHour.html("最新1小时降水量:暂无数据");
 				}
-				if (!isNaN(adjustData.rainSum)) {
-					$("#detailHour").html("总降水量:" + adjustData.rainSum + "mm");
+				var rainSum = adjustData.rainSum;
+				if (!isNaN(rainSum)) {
+					$detailHour.html("总降水量:" + adjustData.rainSum + "mm");
 				}
-				if (isNaN(adjustData.rainSum) || adjustData.rainSum == 0 || adjustData.invalid.rain.length == adjustData.length) {
-					$("#detailHour").html("总降水量:暂无数据");
-					$("#hourHolder .result").html("24小时内无降水数据").show();
+				
+				if (isNaN(rainSum) || rainSum == 0 || isEmpty(invalidData.rain) ) {
+					$detailHour.html("总降水量:暂无数据");
+					$result.html("24小时内无降水数据").show();
 				}
-				paper.remove();
-				observe24hGraph.init(dataConf);
-				observe24hGraph.drawGraph($.extend({},graphConf,{
+				_graphConf = $.extend({},graphConf,{
 					"shap": "rect",
 					"min": adjustData.min.rain,
 					"max": adjustData.max.rain,
 					"data": adjustData.rain,
 					"unit": "mm",
 					"step": adjustData.step.rain,
-					"invalid": adjustData.invalid.rain,
-				}));
+					"invalid": invalidData.rain,
+				});
 				break;
 			case 'wind':
-				if (adjustData.windLevel[0] == "") {
-					$("#currHour").html("最新整点实况风力:暂无数据");
+				var newestVal = getNewestData(adjustData.windLevel);
+				if (!isNaN(newestVal) && newestVal > 0) {
+					$currHour.html("最新整点实况风力:" + newestVal + "级");
 				} else {
-					$("#currHour").html("最新整点实况风力:" + adjustData.windLevel[0] + "级");
+					$currHour.html("最新整点实况风力:暂无数据");
 				}
-				if (adjustData.invalid.wind.length == adjustData.length) {
-					$("#detailHour").html("暂无数据");
-					$("#hourHolder .result").html("24小时内无风力数据").show();
+				if (isEmpty(invalidData.wind)) {
+					$detailHour.html("暂无数据");
+					$result.html("24小时内无风力数据").show();
 				} else {
-					$("#detailHour").html("最高" + adjustData.flagData.wind.max + "级");
+					$detailHour.html("最大风力:" + adjustData.flagData.wind.max + "级");
 				}
-
-				paper.remove();
-				observe24hGraph.init(dataConf);
-				observe24hGraph.drawGraph($.extend({},graphConf,{
+				_graphConf = $.extend({},graphConf,{
 					"shap": "polygon",
 					"min": adjustData.min.wind,
 					"max": adjustData.max.wind,
 					"data": adjustData.windLevel,
 					"angle": adjustData.windAngle,
 					"direction": adjustData.windDirection,
+					'desc': adjustData.windDirection, // .windDirection
 					"unit": "级",
-					"invalid": adjustData.invalid.wind,
+					"invalid": invalidData.wind,
 					"step": adjustData.step.wind,
 					"r": 8
-				}));
+				})
 				break;
 		}
+		paper.remove();
+		observe24hGraph.init(dataConf);
+		observe24hGraph.drawGraph(_graphConf || graphConf);
 		$("#weatherChart .chart .detail").removeClass("detail");
 		$("#weatherChart .chart").find("." + data_role).addClass("detail");
 	})
+	// .first().removeClass('on').click();
 })
