@@ -65,6 +65,7 @@ define(function(require){
 	require('./city3index');
 	var _alarm = require('./alarm');
 	//焦点图切换
+	var focusDelay = alarmDelay = 500;
 	var focusImg = new W.scroll({"container":".focusImg ul","el":"li","flag":1,"orientation":"h"});
 		focusImg.autoScroll = function(){
 			var tempDom = $(".focusImg span .on");
@@ -76,9 +77,9 @@ define(function(require){
 			else
 				$(".focusImg span i").eq(0).addClass("on");	
 		};
-	   focusImg.Timer = setInterval(function(){
-		focusImg.autoScroll();
-		},5000);
+	   	focusImg.Timer = setInterval(function(){
+			focusImg.autoScroll();
+		},focusDelay);
 	$(".focusImg span i").click(function(){
 		if($(this).hasClass("on")) return;
 		clearInterval(focusImg.Timer);
@@ -94,9 +95,9 @@ define(function(require){
 		focusImg.Timer = null;
 	},function(){
 		if(focusImg.Timer == null){
-		focusImg.Timer = setInterval(function(){
-			focusImg.autoScroll();
-		},5000);
+			focusImg.Timer = setInterval(function(){
+				focusImg.autoScroll();
+			},focusDelay);
 		}
 	})
 	_alarm(function(){
@@ -104,14 +105,14 @@ define(function(require){
 		var alarm = new W.scroll({"container":".rightBlock #alarm p span","el":"a","flag":1,"orientation":"v"});
 		var alarmTimer = setInterval(function(){
 			alarm.go(1);
-		},5000);
+		},alarmDelay);
 		$(".rightBlock #alarm p").hover(function(){
 			clearInterval(alarmTimer);
 			alarmTimer = null;
 		},function(){
 			alarmTimer = setInterval(function(){
 				alarm.go(1);
-			},5000);
+			},alarmDelay);
 		})
 	});
 	

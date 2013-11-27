@@ -39,11 +39,8 @@ define(function(require){
 				if(alarminfo.gj.length > 0 || alarminfo.pr.length > 0){
 					$pppp = $("<p></p>");
 					$gjdiv = $("<span></span>");
-					$allj = 0;
 					$.each(alarminfo.gj, function(i, k) {
-						$display = $allj == 0 ? 'block' : 'none';
-						$('<a href="' + k.http + '" class="df" style="display:' + $display + ';background:url(http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg) no-repeat scroll 5px 5px">中央气象台发布' + k.name + '</a>').appendTo($gjdiv);
-						$allj++;
+						$('<a href="' + k.http + '" class="df" style="background:url(http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg) no-repeat scroll 5px 5px">中央气象台发布' + k.name + '</a>').appendTo($gjdiv);
 					});
 					$.each(alarminfo.pr, function(i, k) {
 						$filename = k[1];
@@ -58,7 +55,6 @@ define(function(require){
 						if ($lb > 90) $textlb = $gdlb[parseInt($lb, 10) - 91];
 						if ($jb > 90) $textyc = $gdyc[parseInt($jb, 10) - 91];
 						$('<a target="_blank" class="df" style="background:url(http://www.weather.com.cn/m/i/alarm_s/' + $img + '.gif) no-repeat scroll 7px 7px"  href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=' + $filename + '">' + k[0] + '气象台发布' + $textlb + $textyc + '预警</a>').appendTo($gjdiv);
-						$allj++;
 					});
 					$gjdiv.appendTo($pppp);
 					$pppp.appendTo($appparent);
