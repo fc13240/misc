@@ -258,7 +258,7 @@ a:hover{color:#ee842f;}
 .video{width:300px;margin-bottom:10px;}
 .video h3{height:30px;line-height:30px;background-color:#8abb4a;font-size:20px;font-weight:normal;}
 .video h3 a{color:#fff;padding-left:10px;}
-.video dl{width:300px;height:170px;overflow:hidden;margin-top:1px;position:relative;}
+.video dl{width:300px;height:142px;overflow:hidden;margin-top:1px;position:relative;}
 .video dl dt{height:40px;line-height:40px;width:300px;position:absolute;left:0px;bottom:0px;}
 .video dl dt i{display:block;width:300px;height:40px;background-color:#fff;opacity:0.9;filter:alpha(opacity=90);}
 .video dl dt a{display:block;width:300px;height:40px;line-height:40px;position:absolute;left:0px;top:0px;text-align:center;font-size:16px;}
