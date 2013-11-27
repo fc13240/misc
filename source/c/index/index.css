@@ -279,7 +279,7 @@ a:hover{color:#ee842f;}
 .block .ad{width:300px;height:250px;position:absolute;right:0px;bottom:-65px;_bottom:-50px;}
 
 .l_ad{width:670px;height:90px;}
-.life{width:670px;height:262px;overflow:hidden;border-top:3px solid #8abb4a;margin-top:10px;position:relative;}
+.life{width:670px;height:272px;overflow:hidden;border-top:3px solid #8abb4a;margin-top:10px;position:relative;}
 .life h3,.travel h3,.climate h3,.international h3,.products h3,.hdImgs h3,.service h3{height:40px;line-height:40px;font-size:20px;font-weight:normal;}
 .life dl{width:365px;height:106px;background-color:#8abb4a;margin: 0px 10px 10px 0px;float:left;overflow:hidden;}
 .life dl dd{width:128px;height:106px;float:left;}
