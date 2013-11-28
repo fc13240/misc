@@ -92,7 +92,9 @@
 				index=index-step;
 				$(container).css({"marginLeft":-(index-step)*width});
 			}
-			$(container).animate({"marginLeft":-index*width},500);
+			var $container = $(container).addClass('moving').animate({"marginLeft":-index*width},500,function(){
+ 				$container.removeClass('moving');
+			});
 		}
 	};
 	};

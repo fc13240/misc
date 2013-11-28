@@ -951,3 +951,6 @@ body.tq_n31{
     background-image: url(../../i/bg/201311/shachen.jpg);
     background-color: #e9b277;
 }
+/*头部和底部在移动设备上处理*/
+#toolBar,
+.footer{min-width: 1000px;}

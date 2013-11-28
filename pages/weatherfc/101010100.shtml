@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="dns-prefetch" href="http://static.zk.com">
+    <link rel="dns-prefetch" href="http://10.14.85.116/source">
     <meta charset="utf-8" />
     <title>北京天气预报-今日_明日_一周天气预报:11月27日星期三 晴 0/-5℃ </title>
     <meta  name="keywords" content="北京天气预报,北京今日天气,北京明日天气,北京一周天气预报" />
@@ -12,18 +12,19 @@
     <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
     <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
     <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
-<script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/core.js"></script>
-    <script>W.css('http://static.zk.com/c/core.css','http://static.zk.com/c/common.css','http://static.zk.com/c/weatherfc/city.css','http://static.zk.com/c/jquery-ui-1.10.3.custom.min.css')</script>
+<script type="text/javascript" language="JavaScript" src="http://10.14.85.116/source/j/core.js"></script>
+    <script>W.css('http://10.14.85.116/source/c/core.css','http://10.14.85.116/source/c/common.css','http://10.14.85.116/source/c/weatherfc/city.css','http://10.14.85.116/source/c/jquery-ui-1.10.3.custom.min.css')</script>
     <script type="text/javascript" language="JavaScript" src="http://geoip.weather.com.cn/g/"></script>
     <!--[if lt IE 7]>
     <script>
+      alert(1)
         W.use('j/DD_belatedPNG',function(DD_belatedPNG){
           DD_belatedPNG.fix(".lBtn,.RBtn");
         });
     </script>
     <![endif]-->
     <!--[if lt IE 9]>
-    <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
+    <script>alert(2);'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
     <![endif]-->    
   </head>
   
@@ -741,7 +742,7 @@ var observe24h_data = {"od":{"od0":"201311271400","od1":"北京_南郊观象台"
       var cityid = "101010100";
       W.use(['j/weatherfc/city_main','j/tool/slidebar']);
     </script>
-  <script>W.js("http://static.zk.com/j/ad/caoyu-min.js")</script>
+  <script>W.js("http://10.14.85.116/source/j/ad/caoyu-min.js")</script>
     <script type="text/javascript" src="http://ad.321tq.com/ex2?posid=d"></script>
     <div class="ad-container">
     <div class="adposter_pos" data-posid="top_left_ad">

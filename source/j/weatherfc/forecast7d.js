@@ -26,9 +26,36 @@ define(function(require){
 	//禁止一周天气a链接跳转
 	$("#week a").each(function(){
 		$(this).attr({"href":"javascript:void(0)","target":"_self"});
-	})
+	});
+	//当支持触屏事件时进行操作
+	if(("createTouch" in document) || ('ontouchstart' in window)){
+		var isTouching = false;
+		var $scrollUl = $('#week .scroll ul');
+		var scrollUl = $scrollUl.get(0);
+		scrollUl.ontouchstart = function(eStart){
+			isTouching = true;
+			var evtStart = eStart.touches[0];
+			var xStart = evtStart.clientX;
+			scrollUl.ontouchmove = function(eMove){
+				var evtMove = eMove.touches[0];
+				var xMove = evtMove.clientX;
+				var disc = xMove - xStart;
+				if(Math.abs(disc) > 20 && !$scrollUl.hasClass('moving')){
+					if(disc < 0){
+						$btnRight.click();
+					}else{
+						$btnLeft.click();
+					}
+				}
+			}
+			scrollUl.ontouchend = function(){
+				isTouching = false;
+			}
+		}
+	}
 	var week_scroll = new W.scroll({container:'#week .scroll ul',el:'li',flag:5});
 	$("#week .scroll ul li").live("click",function(){
+		if(isTouching){return}
 		if($(this).hasClass("current")) return;
 		var curIndex=$(this).attr("data-role");
 		var newIndex=$("#week .scroll ul li").index($(this));
@@ -56,7 +83,7 @@ define(function(require){
 		}
 	})
 	
-	$("#week .RBtn").click(function(){
+	var $btnRight = $("#week .RBtn").click(function(){
 		var itemSum = 0;
 		week_scroll.go(1);
 		//修改第一个li元素的位置
@@ -79,7 +106,7 @@ define(function(require){
 			})
 		}
 	})
-	$("#week .lBtn").click(function(){
+	var $btnLeft = $("#week .lBtn").click(function(){
 		var itemSum = 0;
 		week_scroll.go(-1);
 		//修改第一个li元素的位置
