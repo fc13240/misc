@@ -6,7 +6,7 @@ define(function(require){
 	var store = W.util.store;
 	var ZS_COOKIE_NAME = 'zs';
 	var zsList = {"co":"舒适度指数","zs":"中暑指数","lk":"路况指数","gm":"感冒指数","sg":"一句话提示指数","gj":"逛街指数","jt":"交通指数","ys":"雨伞指数","pl":"空气污染扩散条件指数","fs":"防晒指数","be":"海滨浴场","hc":"划船指数","mf":"美发指数","dy":"钓鱼指数","yd":"运动指数","cl":"晨练指数","tr":"旅游指数","yh":"约会指数","nl":"夜生活指数","uv":"紫外线强度指数","pk":"放风筝指数","ls":"晾晒指数","xq":"心情指数","ct":"穿衣指数","gz":"干燥指数","pp":"化妆指数","ac":"空调开启指数","pj":"啤酒指数","xc":"洗车指数","ag":"息斯敏过敏指数"};
-	var defaultDingZhi = '101010100|北京||yd-uv-gj,101130101|上海||yd-uv-gj,101020100|北京2||yd-uv-gj';
+	var defaultDingZhi = '101010100|北京||yd-uv-gj,101130101|上海||yd-uv-gj,101280601|深圳||yd-uv-gj';
 	W(function(){
 		var comp = function(a,b){
 			return b[1].localeCompare(a[1]);
