@@ -24,6 +24,35 @@
     <!--[if lt IE 9]>
     <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
     <![endif]-->    
+    <style>
+      #forecast .relateWeather ul {
+    display: none;
+    height: 160px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 210px;
+}
+.relateWeather {
+    background-color: #CCCCCC;
+    display: none;
+    font-size: 12px;
+    height: 160px;
+    overflow: hidden;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 205px;
+}
+#forecast .relateWeather ul li i {
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    text-align: right;
+    width:auto;
+}
+    </style>
   </head>
   
                   <body class="tq_d01">
@@ -220,7 +249,7 @@
                                                     <!--6小时 end -->
         </ul>
         </div>
-        <span class="rBtn" style="right: 0px;"><i></i><b>天气相关信息</b></span>
+      <!--  <span class="rBtn" style="right: 0px;"><i></i><b>天气相关信息</b></span>-->
         <div class="relateWeather">
 <!--当前城市相关气象信息，日出/日落时间等模块 start-->
           <ul>
