@@ -59,7 +59,7 @@ nav .bg{height:75px;}
 
 .fenxiang{
 clear: both;
-    left: 250px;
+    right: 20px;
     position: absolute;
     top: 65px;
     z-index: 9;
