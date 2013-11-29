@@ -33,7 +33,8 @@ nav .bg{height:75px;}
 .toolBanner .top .bg{background-color:#000;opacity:0.75;filter:alpha(opacity=75);height:45px;width:980px;}
 .top h2{position:absolute;z-index:10;width:464px;height:45px;line-height:45px;font-size:26px;font-weight:normal;padding-left:10px;}
 .top h2 span{font-size:14px;padding-left:20px;}
-.top .right{width:496px;height:35px;position:absolute;top:5px;right:10px;z-index:10;}
+.top .right{width:496px;height:35px;position:absolute;top:5px;right:10px;z-index:10;line-height: 35px;}
+.top .right a{color: #ffe764;}
 .top .right span{padding-right:20px;cursor:pointer;display:block;height:35px;line-height:35px;float:left;color:#fff;}
 .top .right #selAroundCity{background-color:#49b3e4;cursor:pointer;padding:0px 10px;margin-right:10px;}
 .top .right #searchbox{_padding-top:8px;_height:27px;padding-right:0px;}
