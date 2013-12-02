@@ -3,6 +3,7 @@ define(function(require){
 	//require('../tool/raphael');
 	require('../base');
 	var share = require('../m_share');
+	require('../plugs/jquery.easing.1.3');
 	require('./forecast7dFore');
 	//require('./hotZS');
 	require('./aroundCity');
