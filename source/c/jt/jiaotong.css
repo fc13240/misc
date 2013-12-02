@@ -3,10 +3,17 @@
 body
 {
 	background:#fff;}
+	
+
+#nav .bg {
+    height: 60px;
+    width: 977px;
+}
 #nav{
     height: 50px;
     margin: 0 auto;
     padding: 20px;
+    border: none;
 }
 .map
 {
