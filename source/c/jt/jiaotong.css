@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	background:#fff;}
+.map
+{
+	border:2px solid #000;
+	height:519px;}
+.jtt
+{
+	width:752px;
+	height:519px;
+	overflow:hidden;
+	float:left;}
+.cx
+{
+	float:right;
+	width:223px;}
+.jtcx h1
+{
+	background:#03192e;
+	height:31px;
+	line-height:31px;
+	font-size:16px;
+	color:#fff;
+	text-indent:9px;}
+.jtcx 
+{
+	height:285px;
+	background:#d3eaf4;
+	border-bottom:1px dashed #000;}
+.jtleft
+{
+	width:670px;
+	float:left;}
+.footer
+{
+	clear:both;}
+.jtright
+{
+	width:300px;
+	float:right;}
+.sidetab .tabs li a
+{
+	background:#969696;}
+.infoblock1 h3
+{
+	padding-left:20px;}
+	
+.mask{
+	width:670px;
+	overflow:hidden;
+	position:relative
+}
+.tabs_content{
+	overflow:hidden;
+	position:relative
+}
+.tabs_Item{
+	width:670px;
+	background:url(../../i/indexfc/white_bg.png) repeat;
+	padding-right:0;
+	padding-left:0px;
+	padding-bottom:10px;
+	position:relative;
+	overflow:hidden
+}
+.tabs_Item h3{
+	font-size:20px;
+	line-height:45px;
+	hieght:45px;
+	border-bottom:3px solid #076ea8;
+	margin-bottom:10px;
+	position:relative;
+	width:320px;
+	font-weight:normal
+}
+.tabs_Item h3 span{
+	position:absolute;
+	line-height:45px;
+	right:10px;
+	top:0
+}
+.tabs_Item h3 span a{
+	color:#076ea8font-size:14px
+}
+.tabs_Item figure{
+	width:320px;
+	height:77px;
+	position:relative
+}
+.tabs_Item figure img{
+	width:100px;
+	height:75px;
+	border:1px solid #959595
+}
+.tabs_Item figure figcaption{
+	position:absolute;
+	width:208px;
+	height:77px;
+	right:0;
+	top:0;
+	font-size:14px;
+	font-weight:bold;
+	vertical-align:middle
+}
+.tabs_Item figure figcaption p{
+	font-weight:normal;
+	line-height:18px
+}
+.tabs_Item ul{
+	width:320px;
+	background-color:#ebebeb;
+	margin-top:10px
+}
+.tabs_Item ul li{
+	height:25px;
+	line-height:25px;
+	padding:0 10px;
+	width:300px;
+	border-bottom:1px solid #fff
+}
+.tabs_Item aside{
+	position:absolute;
+	top:0;
+	right:10px
+}
+.tip
+{
+	height:255px;
+	padding:5px;
+	background:#ececec;
+	margin-top:10px;}
+.jtcx h2
+{
+	font-size:16px;
+	padding-top:10px;
+	padding-left:10px;}
+.jtcx h2 img
+{
+	margin-right:10px;}
+.hoth h1
+{
+	font-weight:bold;
+	padding-left:10px;
+	height:45px;
+	line-height:45px;
+	font-size:16px;}
+.hoth ul li a
+{
+	font-size:12px;}
+.hoth ul li
+{
+	padding-left:10px;}
+.hoth ul
+{
+	margin-bottom:20px;}
+.yz
+{
+	background:#076ea8;
+	width:190px;
+float:left;
+	height:255px;}
+.yz ul li 
+{
+	color:#fff;
+	line-height:26px;
+	text-align:center;
+	font-size:14px;}
+.yz ul li span
+{
+	font-size:22px;
+	font-weight:bold;}
+.cxtp ul 
+{
+	margin-right:5px;
+	background:#076ea8;
+	width:150px;
+	float:left;
+	height:220px;}
+.cxtp
+{
+	width:465px;
+	float:right;}
+.cxtp ul li
+{
+	text-align:center;
+	color:#fff;
+	width:115px;
+	font-size:16px;
+	line-height:50px;
+	height:50px;
+	margin:0 auto;
+	}
+.cxtp p
+{
+	height:35px;
+	line-height:35px;}
+.cxtp ul li span
+{
+	font-size:22px;
+	font-weight:bold;
+	}
