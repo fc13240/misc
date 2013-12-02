@@ -6,6 +6,7 @@ define(function(require){
 	require('./forecast7dFore');
 	//require('./hotZS');
 	require('./aroundCity');
+	require('./rightBlock');
 	//require('./observe24h');
 	//require('./life_golf');
 	//require('./life_shr');
