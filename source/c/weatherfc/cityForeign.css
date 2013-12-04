@@ -769,6 +769,10 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 /*#show{display:none;left:0px;top:27px;width:406px;line-height:20px;height:auto;position:absolute;background-color:White;}*/
 .formBox {
     height: 29px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 330px;
 }
 .searchInput {
     border: 1px solid #F9B919;
