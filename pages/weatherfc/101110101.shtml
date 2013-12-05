@@ -235,7 +235,7 @@
 				<!--<span class="rBtn" style="right: 0px;"><i></i><b>天气相关信息</b></span>-->
 				<div class="relateWeather">
 <!--当前城市相关气象信息，日出/日落时间等模块 start-->
-					<img  src="../../source/i/weatherfc/beijing1.jpg" title="" alt="" style="position:absolute;left:0px;top:0px;border:none"><a href="http://scxx.xn121.com/searchprice/beijing/beijing/beijing/index.html" style="position:absolute;background:url(#);width:100px;height:30px;bottom:5px;left:80px;"></a>
+					<img  src="http://i.tq121.com.cn/i/weatherfc/beijing1.jpg" title="" alt="" style="position:absolute;left:0px;top:0px;border:none"><a href="http://scxx.xn121.com/searchprice/beijing/beijing/beijing/index.html" style="position:absolute;background:url(#);width:100px;height:30px;bottom:5px;left:80px;"></a>
 <!--当前城市相关气象信息，日出/日落时间等模块 end-->
 				</div>
 				</div>
