@@ -1009,7 +1009,7 @@ body.tq_n31{
 }
 #forecast .relateWeather .rcrl
 {
-  background: url(../../source/i/weatherfc/rcrl.jpg) no-repeat 25px 0px;
+  background: url(../../i/weatherfc/rcrl.jpg) no-repeat 25px 0px;
   height: 74px;
   line-height:110px;
   margin:0 auto;
@@ -1017,7 +1017,7 @@ body.tq_n31{
 #forecast .relateWeather .nongli
 {
   height: 32px;
-  background: url(../../source/i/weatherfc/nongzuowu.jpg) no-repeat 17px 0px;
+  background: url(../../i/weatherfc/nongzuowu.jpg) no-repeat 17px 0px;
   line-height: 32px;
   padding-top: 0;
 
