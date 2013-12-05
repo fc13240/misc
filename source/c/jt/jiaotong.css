@@ -214,3 +214,13 @@ float:left;
 	font-size:22px;
 	font-weight:bold;
 	}
+.cbox
+{
+	float:left;
+	background: #dfebf7;
+}
+.dbox
+{
+	width:980px;
+	margin: 0 auto;
+}
