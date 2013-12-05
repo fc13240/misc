@@ -967,20 +967,21 @@ body.tq_n31{
     height: 160px;
     position: absolute;
     right: 15px;
-    top: 20px;
+    top: 10px;
     width: 210px;
 }
 .relateWeather {
     
     display: none;
     font-size: 12px;
-    height: 180px;
+    height: 170px;
     overflow: hidden;
     padding: 15px;
     position: absolute;
     right: 0;
     top: 0px;
     width: 205px;
+    margin-top: 10px;
 }
 #forecast .relateWeather ul li i {
     display: inline-block;
@@ -1016,9 +1017,9 @@ body.tq_n31{
 }
 #forecast .relateWeather .nongli
 {
-  height: 32px;
-  background: url(../../i/weatherfc/nongzuowu.jpg) no-repeat 17px 0px;
-  line-height: 32px;
+  height: 40px;
+  background: url(../../i/weatherfc/maisui.jpg) no-repeat 17px 0px;
+  line-height: 37px;
   padding-top: 0;
-
+  text-indent: 40px;
 }
