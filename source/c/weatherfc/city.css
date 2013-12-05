@@ -961,3 +961,64 @@ body.tq_n31{
 /*头部和底部在移动设备上处理*/
 #toolBar,
 .footer{min-width: 1000px;}
+
+  #forecast .relateWeather ul {
+    display: none;
+    height: 160px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 210px;
+}
+.relateWeather {
+    
+    display: none;
+    font-size: 12px;
+    height: 180px;
+    overflow: hidden;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 205px;
+}
+#forecast .relateWeather ul li i {
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    text-align: right;
+    width:auto;
+}
+#forecast .relateWeather ul li
+{
+  width: 210px;
+}
+#forecast .relateWeather ul li span
+{
+  font-size: 16px;
+  width: 70px;
+}
+#forecast .relateWeather ul li b
+{
+  font-size: 16px;
+  width: 70px;
+}
+#forecast .relateWeather .nongli a{
+  color: #068035;
+  font-size: 16px;
+}
+#forecast .relateWeather .rcrl
+{
+  background: url(../../source/i/weatherfc/rcrl.jpg) no-repeat 25px 0px;
+  height: 74px;
+  line-height:110px;
+  margin:0 auto;
+}
+#forecast .relateWeather .nongli
+{
+  height: 32px;
+  background: url(../../source/i/weatherfc/nongzuowu.jpg) no-repeat 17px 0px;
+  line-height: 32px;
+  padding-top: 0;
+
+}
