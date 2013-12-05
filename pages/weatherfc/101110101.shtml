@@ -142,14 +142,14 @@
 <!--实况start-->
 			<div id="detail">
 	<h2 name="">
-	<script>var flAngle = 203;</script>
+	<script>var flAngle = 288;</script>
 	今日实况
  	 	<a href="http://www.weather.com.cn/static/radar_video_v1.php?class=JC_RADAR_AZ9290_JB" target="_blank">雷达</a>
  	 	</h2>
-	<p id="detail_wd"><b>12</b>℃</p>
-	<p id="detail_sd">相对湿度&nbsp;26%</p>
+	<p id="detail_wd"><b>13</b>℃</p>
+	<p id="detail_sd">相对湿度&nbsp;23%</p>
 	<p>
-		 		14:00
+		 		15:00
  	</p>
 	<p id="detail_fl">1级<span id="flHolder"></span></p>
 </div>
@@ -451,7 +451,7 @@
 				
 				<!--整点天气start-->
 					<script>
-var observe24h_data = {"od":{"od0":"201312051400","od1":"西安","od2":[{"od21":"14","od22":"12","od23":"203","od24":"西南风","od25":"1","od26":"null","od27":"26"},{"od21":"13","od22":"11","od23":"212","od24":"西南风","od25":"1","od26":"null","od27":"29"},{"od21":"12","od22":"9","od23":"156","od24":"东南风","od25":"1","od26":"null","od27":"35"},{"od21":"11","od22":"9","od23":"323","od24":"西北风","od25":"1","od26":"null","od27":"37"},{"od21":"10","od22":"8","od23":"338","od24":"北风","od25":"1","od26":"null","od27":"40"},{"od21":"09","od22":"5","od23":"305","od24":"西北风","od25":"1","od26":"null","od27":"45"},{"od21":"08","od22":"3","od23":"319","od24":"西北风","od25":"1","od26":"null","od27":"52"},{"od21":"07","od22":"3","od23":"350","od24":"北风","od25":"1","od26":"null","od27":"49"},{"od21":"06","od22":"4","od23":"8","od24":"北风","od25":"1","od26":"null","od27":"44"},{"od21":"05","od22":"5","od23":"289","od24":"西风","od25":"1","od26":"null","od27":"44"},{"od21":"04","od22":"4","od23":"204","od24":"西南风","od25":"1","od26":"null","od27":"45"},{"od21":"03","od22":"5","od23":"241","od24":"西南风","od25":"1","od26":"null","od27":"44"},{"od21":"02","od22":"5","od23":"266","od24":"西风","od25":"1","od26":"null","od27":"47"},{"od21":"01","od22":"7","od23":"334","od24":"西北风","od25":"1","od26":"null","od27":"49"},{"od21":"00","od22":"8","od23":"24","od24":"东北风","od25":"1","od26":"null","od27":"45"},{"od21":"23","od22":"8","od23":"177","od24":"南风","od25":"1","od26":"null","od27":"44"},{"od21":"22","od22":"8","od23":"179","od24":"南风","od25":"1","od26":"null","od27":"46"},{"od21":"21","od22":"8","od23":"280","od24":"西风","od25":"1","od26":"null","od27":"44"},{"od21":"20","od22":"9","od23":"221","od24":"西南风","od25":"1","od26":"null","od27":"45"},{"od21":"19","od22":"8","od23":"162","od24":"南风","od25":"1","od26":"null","od27":"47"},{"od21":"18","od22":"7","od23":"229","od24":"西南风","od25":"1","od26":"null","od27":"52"},{"od21":"17","od22":"8","od23":"227","od24":"西南风","od25":"1","od26":"null","od27":"46"},{"od21":"16","od22":"9","od23":"11","od24":"北风","od25":"1","od26":"null","od27":"37"},{"od21":"15","od22":"10","od23":"271","od24":"西风","od25":"1","od26":"null","od27":"37"},{"od21":"14","od22":"9","od23":"21","od24":"北风","od25":"1","od26":"null","od27":"39"}]}};
+var observe24h_data = {"od":{"od0":"201312051500","od1":"西安","od2":[{"od21":"15","od22":"13","od23":"288","od24":"西风","od25":"1","od26":"null","od27":"23"},{"od21":"14","od22":"12","od23":"203","od24":"西南风","od25":"1","od26":"null","od27":"26"},{"od21":"13","od22":"11","od23":"212","od24":"西南风","od25":"1","od26":"null","od27":"29"},{"od21":"12","od22":"9","od23":"156","od24":"东南风","od25":"1","od26":"null","od27":"35"},{"od21":"11","od22":"9","od23":"323","od24":"西北风","od25":"1","od26":"null","od27":"37"},{"od21":"10","od22":"8","od23":"338","od24":"北风","od25":"1","od26":"null","od27":"40"},{"od21":"09","od22":"5","od23":"305","od24":"西北风","od25":"1","od26":"null","od27":"45"},{"od21":"08","od22":"3","od23":"319","od24":"西北风","od25":"1","od26":"null","od27":"52"},{"od21":"07","od22":"3","od23":"350","od24":"北风","od25":"1","od26":"null","od27":"49"},{"od21":"06","od22":"4","od23":"8","od24":"北风","od25":"1","od26":"null","od27":"44"},{"od21":"05","od22":"5","od23":"289","od24":"西风","od25":"1","od26":"null","od27":"44"},{"od21":"04","od22":"4","od23":"204","od24":"西南风","od25":"1","od26":"null","od27":"45"},{"od21":"03","od22":"5","od23":"241","od24":"西南风","od25":"1","od26":"null","od27":"44"},{"od21":"02","od22":"5","od23":"266","od24":"西风","od25":"1","od26":"null","od27":"47"},{"od21":"01","od22":"7","od23":"334","od24":"西北风","od25":"1","od26":"null","od27":"49"},{"od21":"00","od22":"8","od23":"24","od24":"东北风","od25":"1","od26":"null","od27":"45"},{"od21":"23","od22":"8","od23":"177","od24":"南风","od25":"1","od26":"null","od27":"44"},{"od21":"22","od22":"8","od23":"179","od24":"南风","od25":"1","od26":"null","od27":"46"},{"od21":"21","od22":"8","od23":"280","od24":"西风","od25":"1","od26":"null","od27":"44"},{"od21":"20","od22":"9","od23":"221","od24":"西南风","od25":"1","od26":"null","od27":"45"},{"od21":"19","od22":"8","od23":"162","od24":"南风","od25":"1","od26":"null","od27":"47"},{"od21":"18","od22":"7","od23":"229","od24":"西南风","od25":"1","od26":"null","od27":"52"},{"od21":"17","od22":"8","od23":"227","od24":"西南风","od25":"1","od26":"null","od27":"46"},{"od21":"16","od22":"9","od23":"11","od24":"北风","od25":"1","od26":"null","od27":"37"},{"od21":"15","od22":"10","od23":"271","od24":"西风","od25":"1","od26":"null","od27":"37"}]}};
 </script>
 <div id="weatherChart">
 	<div class="tabs">
@@ -769,7 +769,7 @@ var observe24h_data = {"od":{"od0":"201312051400","od1":"西安","od2":[{"od21":
 	  <div class="adposter_pos" data-posid="adpos_2">
 	    <!--6083-->
 	    <div class="adposter_6083"> 
- <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"PIC","files":[{"file":"http:\/\/poster.weather.com.cn\/p_files\/63\/4363.swf","link":"http:\/\/poster1.weather.com.cn\/r.php?url=&p=6083&pos=0&ch=9991&act=1428&order=670&contract=206&host=152&ck=18530","IsFlash":"flash"}],"code":"","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6083&pos=0&ch=9991&act=1428&order=670&contract=206&host=152&ck=18530","mask_div":0,"direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"PIC","files":[{"file":"http:\/\/poster.weather.com.cn\/p_files\/67\/4367.swf","link":"http:\/\/poster1.weather.com.cn\/r.php?url=&p=6083&pos=0&ch=9991&act=1435&order=670&contract=206&host=152&ck=18537","IsFlash":"flash"}],"code":"","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6083&pos=0&ch=9991&act=1435&order=670&contract=206&host=152&ck=18537","mask_div":0,"direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
  </div> 
 
 	  </div>

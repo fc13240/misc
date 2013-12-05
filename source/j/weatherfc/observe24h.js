@@ -100,37 +100,53 @@ define(function() {
 				this.windLevel.push(d.od25); //风力
 				this.windAngle.push(d.od23); //风向（角度）
 				this.windDirection.push(d.od24); //风向（描述）
-				this.rainSum += parseFloat(d.od26);
+				this.rainSum += parseFloat(d.od26) || 0; //处理不合法数据NaN
 			}
-			
 			//过滤不合法数据
-			var formateNumArr = function(arr){
+			//zk modify,加默认值，防止"null"等不合法数据影响
+			var formateNumArr = function(arr,defaultVal){
 				var a = [];
 				$.each(arr,function(i,v){
 					if(!isNaN(v)){
 						a.push(v);
 					}else{
+						a.push(defaultVal);
 						arr[i] = '';//对不合法数据进行清空处理
 					}
 				});
 				return a;
 			}
 
-			adjustData.flagData.temperature.min = Math.min.apply(Math, formateNumArr(adjustData.temperature)); //温度最小值
-			adjustData.flagData.temperature.max = Math.max.apply(Math, formateNumArr(adjustData.temperature)); //温度最大值
-			adjustData.flagData.rain.min = Math.min.apply(Math, formateNumArr(adjustData.rain)); //降水量最小值
-			adjustData.flagData.rain.max = Math.max.apply(Math, formateNumArr(adjustData.rain)); //降水量最大值
-			adjustData.flagData.humidity.min = Math.min.apply(Math, formateNumArr(adjustData.humidity)); //湿度最小值
-			adjustData.flagData.humidity.max = Math.max.apply(Math, formateNumArr(adjustData.humidity)); //湿度量最大值
-			adjustData.flagData.wind.min = Math.min.apply(Math, formateNumArr(adjustData.windLevel)); //风力最小值
-			adjustData.flagData.wind.max = Math.max.apply(Math, formateNumArr(adjustData.windLevel)); //风力最大值
+			var MAX = adjustData.max,
+				MIN = adjustData.min;
+			var _getMin = function(arr){
+				return Math.min.apply(Math,arr);
+			}	
+			var _getMax = function(arr){
+				return Math.max.apply(Math,arr);
+			}
+			var _getFloor = function(val){
+				return Math.floor(val);
+			}
+			var _getCeil = function(val){
+				return Math.ceil(val);
+			}
+			var _flagData = adjustData.flagData;
+			_flagData.temperature.min = _getMin( formateNumArr(adjustData.temperature,MIN.temperature)); //温度最小值
+			_flagData.temperature.max = _getMax( formateNumArr(adjustData.temperature,MAX.temperature)); //温度最大值
+			_flagData.rain.min = _getMin( formateNumArr(adjustData.rain,MIN.rain)); //降水量最小值
+			_flagData.rain.max = _getMax( formateNumArr(adjustData.rain,MAX.rain)); //降水量最大值
+			_flagData.humidity.min = _getMin( formateNumArr(adjustData.humidity,MIN.humidity)); //湿度最小值
+			_flagData.humidity.max = _getMax( formateNumArr(adjustData.humidity,MAX.humidity)); //湿度量最大值
+			_flagData.wind.min = _getMin( formateNumArr(adjustData.windLevel,MIN.wind)); //风力最小值
+			_flagData.wind.max = _getMax( formateNumArr(adjustData.windLevel,MAX.wind)); //风力最大值
 
-			adjustData.min.temperature = Math.floor(adjustData.flagData.temperature.min); //温度最小值
-			adjustData.min.rain = Math.floor(adjustData.flagData.rain.min); //降水量最小值
-			adjustData.min.humidity = Math.floor(adjustData.flagData.humidity.min); //湿度最小值
-			adjustData.max.temperature = Math.ceil(adjustData.flagData.temperature.max); //温度最大值
-			adjustData.max.rain = Math.ceil(adjustData.flagData.rain.max); //降水量最大值
-			adjustData.max.humidity = Math.ceil(adjustData.flagData.humidity.max); //湿度最大值
+			adjustData.min.temperature = _getFloor(adjustData.flagData.temperature.min); //温度最小值
+			adjustData.min.rain = _getFloor(adjustData.flagData.rain.min); //降水量最小值
+			adjustData.min.humidity = _getFloor(adjustData.flagData.humidity.min); //湿度最小值
+			adjustData.max.temperature = _getCeil(adjustData.flagData.temperature.max); //温度最大值
+			adjustData.max.rain = _getCeil(adjustData.flagData.rain.max); //降水量最大值
+			adjustData.max.humidity = _getCeil(adjustData.flagData.humidity.max); //湿度最大值
 
 			//设置step
 			adjustData.min.temperature = adjustData.min.temperature - adjustData.step.temperature;
@@ -139,13 +155,13 @@ define(function() {
 			if (adjustData.min.rain - adjustData.step.rain >= 0)
 				adjustData.min.rain -= adjustData.step.rain;
 			if ((adjustData.max.temperature - adjustData.min.temperature) / rowNum > adjustData.step.temperature) {
-				adjustData.step.temperature = Math.ceil((adjustData.max.temperature - adjustData.min.temperature) / rowNum);
+				adjustData.step.temperature = _getCeil((adjustData.max.temperature - adjustData.min.temperature) / rowNum);
 			}
 			if ((adjustData.max.humidity - adjustData.min.humidity) / rowNum > adjustData.step.humidity) {
-				adjustData.step.humidity = Math.ceil((adjustData.max.humidity - adjustData.min.humidity) / rowNum);
+				adjustData.step.humidity = _getCeil((adjustData.max.humidity - adjustData.min.humidity) / rowNum);
 			}
 			if ((adjustData.max.rain - adjustData.min.rain) / rowNum > adjustData.step.rain) {
-				adjustData.step.rain = Math.ceil((adjustData.max.rain - adjustData.min.rain) / rowNum);
+				adjustData.step.rain = _getCeil((adjustData.max.rain - adjustData.min.rain) / rowNum);
 			}
 			adjustData.max.temperature = adjustData.min.temperature + adjustData.step.temperature * rowNum;
 			adjustData.max.humidity = adjustData.min.humidity + adjustData.step.humidity * rowNum;
@@ -232,49 +248,37 @@ define(function() {
 				cellWidth = this.cellWidth,
 				r = obj.r || 0,
 				y0 = this.height - this.bottomgutter;
+
+			var $container = $(obj.dataContainer);
 			switch (obj.shap) {
 				case 'rect':
 					var rectStyle = [];
 					for (var i = 0, ii = this.colNum; i < ii; i++) {
 						var x = Math.round(leftgutter + cellWidth * (i + .5)) + 0.5,
 							y = Math.round(cellHeight * ((max - obj.data[i]) / step) + topgutter);
+						var _stroke = '#d9d9d9'
+							,_fill;
 						if (obj.data[i] < 10) {
-							rectStyle.push({
-								stroke: "#d9d9d9",
-								"stroke-width": 1.5,
-								fill: "#6600CC"
-							});
+							_fill = '#6600CC';
 						} else if (obj.data[i] >= 10 && obj.data[i] <= 25) {
-							rectStyle.push({
-								stroke: "#d9d9d9",
-								"stroke-width": 1.5,
-								fill: "#0000FF"
-							});
+							_fill = '#0000FF';
 						} else if (obj.data[i] > 25 && obj.data[i] <= 50) {
-							rectStyle.push({
-								stroke: "#d9d9d9",
-								"stroke-width": 1.5,
-								fill: "#008000"
-							});
+							_fill = '#008000';
 						} else if (obj.data[i] > 50 && obj.data[i] <= 100) {
-							rectStyle.push({
-								stroke: "#d9d9d9",
-								"stroke-width": 1.5,
-								fill: "#FFCC00"
-							});
+							_fill = '#FFCC00';
 						} else if (obj.data[i] > 100 && obj.data[i] <= 250) {
-							rectStyle.push({
-								stroke: "#d9d9d9",
-								"stroke-width": 1.5,
-								fill: "#FF6600"
-							});
+							_fill = '#FF6600';
 						} else if (obj.data[i] > 250) {
+							_fill = '#FF0000';
+						}
+						if(_stroke && _fill){
 							rectStyle.push({
-								stroke: "#d9d9d9",
+								stroke: _stroke,
 								"stroke-width": 1.5,
-								fill: "#FF0000"
+								fill: _fill
 							});
 						}
+						
 						this.shap.push(paper.rect((x - cellWidth * 0.5), y0, cellWidth, 0).attr(rectStyle[i]));
 						this.shap[i].animate({
 							height: (height - y + topgutter),
@@ -283,30 +287,27 @@ define(function() {
 						//鼠标事件
 						(function(i, x, y, d) {
 							if (d != "" && d != 0) {
-								observe24hGraph.rects[i].hover(function() {
+								var _show = function(){
 									observe24hGraph.shap[i].attr({
 										fill: "#94c05a"
 									});
-									$(obj.dataContainer).html(d + unit).css({
+									$container.html(d + unit);
+									var _width = $container.width();
+									var _left = x + 10;
+									if(_width + x > 660){
+										_left = x - _width - 20;
+									}
+									$container.css({
 										"top": y,
-										"left": x + 10
+										"left": _left
 									}).show();
-								}, function() {
+								}
+								var _hide = function(){
 									observe24hGraph.shap[i].attr(rectStyle[i]);
-									$(obj.dataContainer).hide();
-								})
-								observe24hGraph.shap[i].hover(function() {
-									observe24hGraph.shap[i].attr({
-										fill: "#94c05a"
-									});
-									$(obj.dataContainer).html(d + unit).css({
-										"top": y,
-										"left": x + 10
-									}).show();
-								}, function() {
-									observe24hGraph.shap[i].attr(rectStyle[i]);
-									$(obj.dataContainer).hide();
-								})
+									$container.hide();
+								}
+								observe24hGraph.rects[i].hover(_show, _hide)
+								observe24hGraph.shap[i].hover(_show, _hide)
 							}
 						})(i, x, y, obj.data[i]);
 					}
@@ -347,85 +348,51 @@ define(function() {
 						}
 
 						if (obj.shap == 'dot') {
+							var _color;
 							if (unit == "℃") {
 								if (obj.data[i] < 0) {
-									Style.push({
-										fill: "#6600CC",
-										stroke: "#6600CC",
-										"stroke-width": 1
-									});
+									_color = '#6600CC'
 								} else if (obj.data[i] >= 0 && obj.data[i] <= 5) {
-									Style.push({
-										fill: "#0000FF",
-										stroke: "#0000FF",
-										"stroke-width": 1
-									});
+									_color = '#0000FF'
 								} else if (obj.data[i] > 5 && obj.data[i] <= 10) {
-									Style.push({
-										fill: "#00CCFF",
-										stroke: "#00CCFF",
-										"stroke-width": 1
-									});
+									_color = '#00CCFF'
 								} else if (obj.data[i] > 10 && obj.data[i] <= 15) {
-									Style.push({
-										fill: "#008000",
-										stroke: "#008000",
-										"stroke-width": 1
-									});
+									_color = '#008000'
 								} else if (obj.data[i] > 15 && obj.data[i] <= 24) {
-									Style.push({
-										fill: "#FFCC00",
-										stroke: "#FFCC00",
-										"stroke-width": 1
-									});
+									_color = '#FFCC00'
 								} else if (obj.data[i] > 24 && obj.data[i] <= 32) {
-									Style.push({
-										fill: "#FF6600",
-										stroke: "#FF6600",
-										"stroke-width": 1
-									});
+									_color = '#FF6600'
 								} else if (obj.data[i] > 32) {
-									Style.push({
-										fill: "#FF0000",
-										stroke: "#FF0000",
-										"stroke-width": 1
-									});
+									_color = '#FF0000'
 								}
 							} else {
 								if (obj.data[i] < 26) {
-									Style.push({
-										fill: "#6600CC",
-										stroke: "#6600CC",
-										"stroke-width": 1
-									});
+									_color = '#6600CC'
 								} else if (obj.data[i] >= 26 && obj.data[i] <= 51) {
-									Style.push({
-										fill: "#008000",
-										stroke: "#008000",
-										"stroke-width": 1
-									});
+									_color = '#008000'
 								} else if (obj.data[i] > 51 && obj.data[i] <= 75) {
-									Style.push({
-										fill: "#FF6600",
-										stroke: "#FF6600",
-										"stroke-width": 1
-									});
+									_color = '#FF6600'
 								} else if (obj.data[i] > 75) {
-									Style.push({
-										fill: "#FF0000",
-										stroke: "#FF0000",
-										"stroke-width": 1
-									});
+									_color = '#FF0000'
 								}
 							}
+							if(_color){
+								Style.push({
+									fill: _color,
+									stroke: _color,
+									"stroke-width": 1
+								});
+							}
+							
 							this.shap.push(paper.circle(x, y0, r).attr(Style[i]));
 						} else {
-							if (i == 0)
+							if (i == 0){
 								Style.push({
 									fill: "#6600CC",
 									stroke: "#6600CC",
 									"stroke-width": 1
 								});
+							}
 							this.shap.push(paper.polygon(x, y0, r).attr(Style[0]));
 						}
 						if (obj.data[i] == "")
@@ -443,32 +410,29 @@ define(function() {
 						}
 						//鼠标事件
 						(function(i, x, y, d,desc) {
-							if (d != "") {
-								observe24hGraph.rects[i].hover(function() {
-									crossLine.attr({
-										path: ["M", x, 0, "V", observe24hGraph.height, "M", 0, y + 0.5, "H", observe24hGraph.width]
-									}).show();
-									$(obj.dataContainer).html(desc+d + unit).css({
-										"top": y,
-										"left": x + 10
-									}).show();
-								}, function() {
-									crossLine.hide();
-									$(obj.dataContainer).hide();
-								})
-							}
-							observe24hGraph.shap[i].hover(function() {
+							var _show = function(){
 								crossLine.attr({
 									path: ["M", x, 0, "V", observe24hGraph.height, "M", 0, y + 0.5, "H", observe24hGraph.width]
 								}).show();
-								$(obj.dataContainer).html(desc+d + unit).css({
+								$container.html(desc+d + unit);
+								var _width = $container.width();
+								var _left = x + 10;
+								if(_width + x > 660){
+									_left = x - _width - 20;
+								}
+								$container.css({
 									"top": y,
-									"left": x + 10
+									"left": _left
 								}).show();
-							}, function() {
+							}
+							var _hide = function(){
 								crossLine.hide();
 								$(obj.dataContainer).hide();
-							})
+							}
+							if (d != "") {
+								observe24hGraph.rects[i].hover(_show, _hide)
+							}
+							observe24hGraph.shap[i].hover(_show, _hide)
 						})(i, x, y, obj.data[i],obj.desc && obj.desc[i]||'');
 					}
 					for (var p = 0; p < pathCount; p++) {
@@ -601,7 +565,6 @@ define(function() {
 				if (!isNaN(rainSum)) {
 					$detailHour.html("总降水量:" + adjustData.rainSum + "mm");
 				}
-				
 				if (isNaN(rainSum) || rainSum == 0 || isEmpty(invalidData.rain) ) {
 					$detailHour.html("总降水量:暂无数据");
 					$result.html("24小时内无降水数据").show();
@@ -650,5 +613,4 @@ define(function() {
 		$("#weatherChart .chart .detail").removeClass("detail");
 		$("#weatherChart .chart").find("." + data_role).addClass("detail");
 	})
-	// .first().removeClass('on').click();
 })
