@@ -145,7 +145,7 @@ define(function(require){
 	var alarmHtml = '<div id="disasterAlarm">'+
 				      '<span class="shadow"><i></i></span>'+
 				      '<h2>天气预警</h2>'+
-				      '<h3><a href="_url_" target="_blank"><span class="img"><img alt="预警信号等级说明" src="_img_"></span><span class="title">_title_</span><span class="time"></span></a></h3>'+
+				      '<h3><a href="_url_" target="_blank"><span class="img"><img alt="预警信号等级说明" src="_img_"></span><span class="title">_title_</span><span class="time">_time_</span></a></h3>'+
 				      '<i class="bg"></i>'+
 				    '</div>';
 	var getAlarm = require('../tool/alarm');
@@ -156,8 +156,18 @@ define(function(require){
 			var levelIndex = result.levelIndex;
 			levelIndex = (levelIndex<10?'0':'')+levelIndex;
 			var img = W.data.base+'i/alarm_icon/'+textIndex+levelIndex+'.gif';
+			var data = result.d;
 			var title = result.title;
-			$('.alarm_info').html($(alarmHtml.replace('_url_',result.url).replace('_img_',img).replace('_title_',title)).fadeIn().fadeOut().fadeIn());
+			var time = '';
+			if(data){
+				title = data[0] + '气象台发布'+ title;
+				var m = /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(data[1]);
+				if(m){
+					time = m[1]+'-'+m[2]+'-'+m[3]+' '+m[4]+':'+m[5]+':'+m[6];
+					time = m[1]+'年'+m[2]+'月'+m[3]+'日'+m[4]+'时'+m[5]+'分';
+				}
+			}
+			$('.alarm_info').html($(alarmHtml.replace('_url_',result.url).replace('_img_',img).replace('_title_',title).replace('_time_',time)).fadeIn().fadeOut().fadeIn());
 			try{
 				W.util.adPos();//在广告之前加载并初始化完成的化，此方法为undefine
 			}catch(e){}			
