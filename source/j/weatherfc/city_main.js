@@ -163,8 +163,8 @@ define(function(require){
 				title = data[0] + '气象台发布'+ title;
 				var m = /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(data[1]);
 				if(m){
-					time = m[1]+'-'+m[2]+'-'+m[3]+' '+m[4]+':'+m[5]+':'+m[6];
-					time = m[1]+'年'+m[2]+'月'+m[3]+'日'+m[4]+'时'+m[5]+'分';
+					// time = m[1]+'-'+m[2]+'-'+m[3]+' '+m[4]+':'+m[5]+':'+m[6];
+					time = m[1]+'年'+m[2]+'月'+m[3]+'日'+m[4]+'时';
 				}
 			}
 			$('.alarm_info').html($(alarmHtml.replace('_url_',result.url).replace('_img_',img).replace('_title_',title).replace('_time_',time)).fadeIn().fadeOut().fadeIn());

@@ -848,7 +848,7 @@ background-color: #FFFFFF;
 #disasterAlarm h3 span{display:block;float:left;font-weight:normal;cursor:pointer;}
 #disasterAlarm h3 .img{width:44px;padding:4px 16px;height:35px;background-color: #fff100;}
 #disasterAlarm h3 .img img{display: block;}
-#disasterAlarm h3 .title{font-size:16px;width:630px;padding-left:15px;}
+#disasterAlarm h3 .title{font-size:16px;width:660px;padding-left:15px;}
 #disasterAlarm h3 .time{font-size:12px;}
 #disasterAlarm .shadow{display:block;width:12px;height:43px;background-color:#ee7a1e;float:left;position:relative;z-index:5;margin-left:-22px;}
 #disasterAlarm .shadow i{display:block;width:0px;height:0px;overflow:hidden;border-top:6px solid #844009;border-right:6px solid #844009;border-bottom:6px solid transparent;border-left:6px solid transparent;_border-bottom:6px solid dashed;_border-left:6px solid dashed;position:absolute;bottom:-12px;right:0px;}
