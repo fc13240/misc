@@ -318,6 +318,8 @@
     background:url(../../i/dot1.gif) no-repeat 0 13px;
     padding-left:16px;
     margin-right:20px;
+    height: 30px;
+    overflow: hidden;
 }
 .relatednews li a:hover{
     text-decoration:underline;
