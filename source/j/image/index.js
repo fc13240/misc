@@ -281,17 +281,17 @@ $(document).ready(function() {
 
 	$(".morephoto_list li").mouseleave(function(){
   			/*$nowThis = $(this);
-  			$nowThis.find("p").fadeOut("fast");
-  			$nowThis.find("div").fadeOut("fast");*/
-  			$(this).find("p").fadeOut("fast").next("div").fadeOut("fast");
+  			$nowThis.find("p").stop().fadeOut("fast");
+  			$nowThis.find("div").stop().fadeOut("fast");*/
+  			$(this).find("p").stop().fadeOut("fast").next("div").stop().fadeOut("fast");
 
 	});
 
 	$(".morephoto_list li").mouseenter(function(){
   			/*$nowThis = $(this);
-  			$nowThis.find("p").fadeIn("fast");
-  			$nowThis.find("div").fadeIn("fast");*/
-  			$(this).find("p").fadeIn("fast").next("div").fadeIn("fast");
+  			$nowThis.find("p").stop().fadeIn("fast");
+  			$nowThis.find("div").stop().fadeIn("fast");*/
+  			$(this).find("p").stop().fadeIn("fast").next("div").stop().fadeIn("fast");
 
 	});
 
