@@ -397,7 +397,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #remind{margin-top:2px;background-color:#fff;padding:5px 10px;width:650px;position:relative;}
 #remind h3{font-size:20px;font-weight:normal;line-height:25px;}
 #remind p{font-size:12px;line-height:20px;}
-#remind .detail{position:absolute;right:10px;top:8px;width:500px;line-height:20px;}
+#remind .detail{position:absolute;right:10px;top:8px;width:500px;line-height:20px;font-size: 14px;}
 
 #todayliving{width:670px;}
 #todayliving .title{line-height:55px;height:55px;position:relative;}
