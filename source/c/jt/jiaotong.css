@@ -224,3 +224,22 @@ float:left;
 	width:980px;
 	margin: 0 auto;
 }
+.dbox .cbox .citysearch .locationSearch .iframeDiv .sel select{
+    background-color: #FFFFFF;
+    float: left;
+    height: 18px;
+    line-height: 20px;
+    margin-right: 6px;
+    margin-top: 2px;
+    text-align: center;
+    width: 80px;
+}
+
+.citysearch .btn {
+    background: none repeat scroll 0 0 #49B5E4;
+    color: #FFFFFF;
+    float: left;
+    height: 18px;
+    margin-top: 2px;
+    width: 53px;
+}
