@@ -16,6 +16,7 @@ body
     overflow: hidden;
     padding: 0;
     position: relative;
+    width: 1009px;
 }
 .map
 {
