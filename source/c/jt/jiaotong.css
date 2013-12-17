@@ -219,6 +219,7 @@ float:left;
 .cbox
 {
 	float:left;
+	position:relative;
 	background: #dfebf7;
 }
 .dbox
