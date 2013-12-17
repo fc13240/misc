@@ -249,3 +249,7 @@ nav{
 position:static;
 
 }
+
+nav .dropList
+{
+z-index:100;}
