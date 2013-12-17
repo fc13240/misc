@@ -6,14 +6,16 @@ body
 	
 
 #nav .bg {
-    height: 60px;
-    width: 977px;
+    height: 80px;
+    width: 1009px;
 }
 #nav{
-    height: 50px;
+    border: 0 none;
+    height: 80px;
     margin: 0 auto;
-    padding: 20px;
-    border: none;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
 }
 .map
 {
@@ -242,4 +244,8 @@ float:left;
     height: 18px;
     margin-top: 2px;
     width: 53px;
+}
+nav{
+position:static;
+
 }
