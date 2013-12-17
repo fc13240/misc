@@ -15,7 +15,7 @@ body
     margin: 0 auto;
     padding: 0;
     position: relative;
-    width: 1009px;
+    width: 100%;
 }
 .map
 {
@@ -75,7 +75,7 @@ body
 	width:670px;
 	background:url(../../i/indexfc/white_bg.png) repeat;
 	padding-right:0;
-	padding-left:0px;
+	padding-left:5px;
 	padding-bottom:10px;
 	position:relative;
 	overflow:hidden
@@ -223,7 +223,8 @@ float:left;
 }
 .dbox
 {
-	width:980px;
+	width:1009px;
+	overflow:hidden;
 	margin: 0 auto;
 }
 .dbox .cbox .citysearch .locationSearch .iframeDiv .sel select{
@@ -249,7 +250,9 @@ nav{
 position:static;
 
 }
-
+nav h1{
+margin-left: 10px;
+}
 nav .dropList
 {
 z-index:100;}
