@@ -257,3 +257,86 @@ margin-left: 10px;
 nav .dropList
 {
 z-index:100;}
+
+
+.yjbar .alarm {
+    height: auto;
+}
+
+
+.yjbar .alarm h1 {
+    background: url("/m2/i/alarm08.gif") no-repeat scroll 7px 5px #FEF1AB;
+    border: 1px solid #FBCE01;
+    color: #000000;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 2px;
+    padding-left: 35px;
+}
+
+.yjbar .alarm h1 span {
+    color: #3367BD;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+.yjbar .alarm h1 span a {
+    font-weight: bold;
+}
+
+.yjbar .alarm dl {
+    height: 30px;
+    overflow: hidden;
+}
+
+.yjbar .alarm dl dt {
+    height: 30px;
+}
+
+.yjbar .alarm dl dt a {
+    color: #3366BB;
+    font-size: 12px;
+    outline: medium none;
+    text-decoration: none;
+}
+
+.gjalarmflip dl dt img {
+    margin-top: 2px;
+}
+
+.alarm dl dd {
+    height: 30px;
+    line-height: 30px;
+    padding-top: 0;
+}
+
+.alarm dl h2 {
+    height: 30px;
+    line-height: 30px;
+}
+.alarm dl h2 a {
+    font-size: 12px;
+    font-weight: normal;
+}
+.alarm dl dd b {
+    color: #CC0000;
+    padding-right: 8px;
+}
+
+.alarm dl dd a {
+    color: #3366BB;
+    font-size: 12px;
+    outline: medium none;
+    text-decoration: none;
+}
+.linklist2
+{
+	font-size: 14px;
+}
+.linklist li{
+	font-size: 14px;
+}
