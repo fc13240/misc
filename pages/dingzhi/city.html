@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="dns-prefetch" href="http://static.zk.com">
+<meta charset="utf-8" />
+<title>中国天气网-专业天气预报、气象服务门户</title>
+<meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
+<meta name="description" content="中国天气网为您提供实时全国天气气象信息,及时发布天气预报、灾害预警、气象云图、旅游天气、台风、暴雨雪等气象信息，为我国的生产生活提供全面精确的气象服务" />
+<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<script type="text/javascript" src="http://static.zk.com/j/core.js"></script>
+<script>
+W.css("http://static.zk.com/c/core.css","http://static.zk.com/c/common.css","http://static.zk.com/c/index/index.css","http://static.zk.com/c/dingzhi/city.css");
+</script>
+<!--[if lt IE 7]>
+<script>
+W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+  DD_belatedPNG.fix(".video dl dd i,.focusImg span i");
+});
+</script>
+<![endif]-->
+</head>
+<body>
+<div id="toolBar">
+  <div class="midBlock"> <span id="time"></span> <i class="mobile"></i><b>移动客户端<i></i></b> <span class="links"><!--<a class="blue" href="#"  title="登录">登录</a>--><a id="setIndex" href="javascript:void(0);" target="_self" title="设为首页">设为首页</a><a id="collect" target="_self" href="javascript:void(0);"  title="收藏">收藏</a><a id="provice" href="javascript:void(0);"  title="省级站" target="_self"><i class="icon"></i>省级站<i class="arrow"></i></a><a id="eg" href="http://www.weather.com.cn/english/" target="_blank" title="English Version">English Version</a><a href="#"  id="dl_tw">繁體中文</a></span> </div>
+</div>
+
+
+
+<!--头-->
+<div id="search">
+  <div class="midBlock">
+    <h1><a href="#" >中国天气</a></h1>
+
+<div id="cityset">
+</div>
+
+    <p class="pp">服务社会&nbsp;&nbsp;造福人民&nbsp;&nbsp;<a title="中国气象局" href="http://www.cma.gov.cn/">中国气象局</a></p>
+
+
+<!--搜索start-->
+
+  <div class="search">
+   <div class="formBox">
+      <div id="Zip" class="Mainbox" >
+        <div id="ZipContent">
+          <input type="text" class="textinput" id="txtZip" value="输入城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="button" class="btn"
+                id="btnZip" value="" />
+        </div>
+        <div id="Zipresult" class="inforesult"> </div>
+        <div id="show">
+          <ul>
+          </ul>
+        </div>
+        <div class="suggest-additions">
+          <div id="selectsionTabs">
+            <!-- class为active: 默认选中的标签 -->
+            <!-- id是tab_hot的标签 对应id是hot的ul 依此类推 -->
+            <span class="tab active" id="tab_hot">热门</span> <span class="tab" id="tab_A_G">A-G</span> <span class="tab" id="tab_H_L">H-L</span> <span class="tab" id="tab_M_T">M-T</span> <span class="tab" id="tab_W_Z">W-Z</span> <span class="tab" id="tab_SJZ">省级站</span> <span class="tab" id="tab_COU">国际</span><span class="tab" id="tab_zx" style="color:#f00;">资讯</span> </div>
+          
+          <div id="selectsionNotice">输入城市名、全拼、简拼、电话区号、邮编查询</div>
+        </div>
+      </div>
+   </div>
+
+	</div>
+<!--搜索框end-->
+  </div>
+</div>
+
+<div class="clearfix midBlock">
+  <div class="poster">
+    <img src="http://gtms04.alicdn.com/tps/i4/T1lFYpFhVgXXbKmrHq-980-90.jpg"/>
+  </div>
+  
+  <div class="fl block-left">
+    <dl>
+      <dt>管理你的定制</dt>
+      <dd>这里是一些注释</dd>
+    </dl>
+    <div class="top3 form-container">
+      <span class="notice">始终显示的三个城市</span>
+      <div class="loading">
+        正在用绳命努力加载。。。
+      </div>
+      
+      <!-- <div class="form">
+        <div>
+          <a href="javascript:;" class="btn_dele">X</a>
+          <input type="text" class="location" placeholder="城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="text" placeholder="自定义名称"/>
+          <a class="btn_save">保存</a>
+          <a class="btn_cancel">取消</a>
+        </div>
+      </div>
+      <div class="form">
+        <div>
+          <a href="javascript:;" class="btn_dele">X</a>
+          <input type="text" class="location" placeholder="城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="text" placeholder="自定义名称"/>
+          <a class="btn_save">保存</a>
+          <a class="btn_cancel">取消</a>
+        </div>
+      </div>
+      <div class="form">
+        <div>
+          <a href="javascript:;" class="btn_dele">X</a>
+          <input type="text" class="location" placeholder="城市名、全拼、简拼、电话区号、邮编查询"/>
+          <input type="text" placeholder="自定义名称"/>
+          <a class="btn_save">保存</a>
+          <a class="btn_cancel">取消</a>
+        </div>
+      </div> -->
+    </div>
+    <div class="form-container">
+      <span class="notice">显示在更多的定制城市列表里</span>
+      <div class="loading">
+        正在用绳命努力加载。。。
+      </div>
+      <!-- <div class="form">
+        <div>
+          
+        </div>
+      </div>
+      <div class="form">
+        <div>
+          
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="fr block-right">
+    <div>
+      <img src="http://cms.weather.com.cn/site2/n/i/index/img05.jpg">
+    </div>
+  </div>
+</div>
+<div class="footer">
+      <div class="block">
+        <div class="Lcontent">
+        <h2><a href="#">中国天气</a></h2>
+        <dl>
+          <dt><h3><a>资讯</a></h3></dt>
+          <dd><p><a href="http://www.weather.com.cn/news/index.shtml">国内</a><a href="http://www.weather.com.cn/index/gjtq/index.shtml">国际</a><a href="http://www.weather.com.cn/science/index.shtml">科普</a></p><p><a href="http://www.weather.com.cn/zt/index.shtml">专题</a><a href="http://www.weather.com.cn/photo/index.shtml">图集</a><a href="http://www.weather.com.cn/video/index.shtml">视频</a></p></dd>
+        </dl>
+        <dl>
+          <dt><h3><a>服务</a></h3></dt>
+          <dd><p><a href="http://www.weather.com.cn/alarm/index.shtml">预警</a><a href="http://www.weather.com.cn/forecast/index.shtml">预报</a><a href="http://www.weather.com.cn/live/index.shtml">实况</a></p><p><a href="http://club.weather.com.cn/">社区</a><a href="http://baike.weather.com.cn/">百科</a><a href="http://www.weather.com.cn/life/index.shtml">生活</a></p></dd>
+        </dl>
+        <dl>
+          <dt><h3><a>客户端</a></h3></dt>
+          <dd><p><a href="http://3g.weather.com.cn/">中国天气通</a></p>
+          <p><a href="http://www.weather.com.cn/wzfw/wapb/index.shtml">掌中天气</a></p></dd>
+        </dl>
+        <div class="clear"></div>
+        </div>
+
+        <div class="friendLink">
+          <h3><a>友情链接</a></h3>
+          <p><a href="http://www.cma.gov.cn/" target="_blank">中国气象局</a><a href="http://tourism.weather.com.cn/" target="_blank">中国旅游天气网</a><a href="http://typhoon.weather.com.cn/" target="_blank">中国天气台风网</a></p>
+          <p><a href="http://www.xn121.com/" target="_blank">中国兴农网</a><a href="http://pmsc.cma.gov.cn/" target="_blank">中国气象局公共气象服务中心</a></p>
+        </div>
+
+        <div class="serviceinfo">
+          <p><span>客服邮箱：<a href="mailto:service@weather.com.cn">service@weather.com.cn</a></span><span>客户服务热线：<b>400-6000-121</b></span><span>京公网安备11041400134号</span></p>
+          <p><span>广告服务：<b>010-58993799</b></span><span>京ICP证010385号</span><span>增值电信业务经营许可证B2-20050053</span></p>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="aboutUs">
+        Copyright©中国气象局公共气象服务中心 All Rights Reserved (2008-2013) 版权所有 复制必究  制作维护：<a href="http://pmsc.cma.gov.cn/" target="_blank">中国气象局公共气象服务中心</a>   郑重声明：中国天气网版权所有，未经书面授权禁止使用
+      </div>
+    </div>
+<script>
+W.use('j/index/hotcity_index');
+W.use('j/dingzhi/city');
+</script>
+</body>
+</html>

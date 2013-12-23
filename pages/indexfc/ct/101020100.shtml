@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+<title>舒适度指数-上海-中国天气网-专业天气预报、气象服务门户</title>
+<meta  name="keywords" content="舒适度指数,舒适度,指数,上海天气,天气,气候,气象" />
+<meta name="description" content="中国天气网为您提供全国气象舒适度指数预报,发布3小时精细化指数预报、未来六日气象指数预报,相关指数预报等多种信息,为我国的生产生活提供全面精确的气象服务" />
+<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
+  <script>W.css("http://i.tq121.com.cn/c/core.css","http://i.tq121.com.cn/c/common.css","http://i.tq121.com.cn/c/indexfc/zs.css")</script>
+<script>
+var index3h_data=new Array();
+			index3h_data[0] = '{"it":{"it0":"201311122000","it1":"舒适度指数","it2":"co","it3":[{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311122000","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311122300","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311130200","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311130500","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311130800","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311131100","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311131400","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311131700","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311132000","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311132300","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311140200","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311140500","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311140800","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311141100","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311141400","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311141700","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311142000","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311142300","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311150200","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311150500","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311150800","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311151100","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311151400","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311151700","it34":"0"},{"it31":"舒适","it32":"天气不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。","it33":"201311152000","it34":"0"}],"it4":[{"it41":"舒适"},{"it41":"较舒适"},{"it41":"较不舒适"},{"it41":"很不舒适"},{"it41":"极不舒适"}]}}';
+		
+</script>
+  <script>
+  W(function(){
+  
+    W.use('j/indexfc/zs');
+    W.use('j/indexfc/line');
+    W.use('j/tool/slidebar');
+   }) 
+  </script>
+  <!--[if lt IE 7]>
+     <script>
+     W(function(){
+        W.use('http://i.tq121.com.cn/j/DD_belatedPNG',function(DD_belatedPNG){
+          DD_belatedPNG.fix("nav h1,#summary,#rMain h2 b,#month_avg aside table tr td b,#hotNew figure#video i,#expert .tabs ul li,#encyclopedias figure i,#encyclopedias #rBlock dl dt,#bbs ul li");
+        });
+     }) 
+     </script>
+    <![endif]-->
+  <!--[if lt IE 9]>
+    <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
+  <![endif]-->
+
+<script type="text/javascript" src="http://geoip.weather.com.cn/g/"></script>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/ad/caoyu-min.js"></script>
+</head>
+<body style="background-image:url(/n/i/indexfc/zs_bg.jpg);">
+<div class="content">
+    <nav>
+  <h1><a href="http://www1.weather.com.cn" title="中国天气网" >中国天气网</a></h1>
+  <ul>
+    <li><a href="http://www1.weather.com.cn">首页</a>|</li>
+    <li><a href="http://www.weather.com.cn/alarm/">灾难预警</a>|</li>
+    <li><a href="http://www.weather.com.cn/forecast/">天气预报</a>|</li>
+    <li><a>生活旅游</a><i></i>
+      <div class="dropList"><i></i><span><a href="http://www.weather.com.cn/life/">生活天气</a><a href="http://www.weather.com.cn/trip/">旅游天气</a></span></div>
+      |</li>
+    <li><a href="http://www.weather.com.cn/static/html/product/">服务产品</a>|</li>
+    <li><a>天气应用</a><i></i>
+      <div class="dropList"><i></i><span><a href="http://3g.weather.com.cn/">中国天气通</a><a href="http://mobile.weather.com.cn/">Mobile版</a><a href="http://3g.weather.com.cn/wzfw/zgtqtpd/pc.shtml">桌面版</a>
+        <!--<a href="#" target="_blank">气象商城</a>-->
+        </span></div>
+      |</li>
+    <li><a>互动天气</a><i></i>
+      <div class="dropList"><i></i><span><a href="http://www1.weather.com.cn/video/">天气视频</a><a href="http://club.weather.com.cn/">天气社区</a><a href="http://baike.weather.com.cn/">天气百科</a><a href="http://www.weather.com.cn/wjdc/">问卷调查</a></span></div>
+      |</li>
+    <li><a href="http://smart.weather.com.cn/">智慧气象</a></li>
+  </ul><i class="bg"></i>
+</nav>
+
+  <div id="ad_banner">
+        <div class="adposter_6242"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"PIC","files":[{"file":"http:\/\/poster.weather.com.cn\/p_files\/64\/4264.jpg","link":"http:\/\/poster1.weather.com.cn\/r.php?url=http%3A%2F%2F3g%2Eweather%2Ecom%2Ecn%2Fwzfw%2Fzgtqtpd%2Fandroid%2Eshtml&p=6242&pos=0&ch=500&ck=6742","IsFlash":"img"}],"code":"","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"980","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6242&pos=0&ch=500&act=&order=&contract=&host=&ck=6742","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+  </div>
+  <div id="zs_content">
+    <section id="container">
+      <h1>
+       舒适度指数
+            <a href="http://www.weather.com.cn/weather/101020100.shtml" target="_blank">返回城市天气页>></a></h1>
+      <div id="summary">
+      <!-- 模块1：头部——地区信息 -->
+      <!--<h2>三亚</h2><h3>海南&nbsp;&nbsp;中国</h3>-->
+            	<h2>上海</h2><h3>上海&nbsp;&nbsp;中国</h3>
+              
+      </div>
+      
+      <!-- 模块3：一天及相关指数——头部指数适宜度及建议信息 -->
+                  	      <p><b>天气网建议:</b>
+      	白天不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。
+      </p>
+      <span class="icon co"></span> <span id="level">
+      <!--强-->
+      	舒适
+      </span> 
+      	            	            	            	            	            	            	            	            	            
+            <!--实况-->
+      <!-- 模块2：头部——实时信息 -->
+<span id="info">
+	<b>温度：15摄氏度</b><b>风向：
+              	    		西北风
+              </b><b>风速：1级</b><b>相对湿度：49%</b>
+</span> 
+<span id="time">     
+      <!--发布时间：2012-03-24 10:54:10-->  
+     	 发布时间：
+ 		 		2013年11月13日&nbsp;09:35     
+</span>
+
+      
+      <!--<span id="more">订阅</span>--><!--<span class="land">您好，|<a target="_blank" href="#">我的气象台</a><a target="_blank" href="#" class="quit">退出</a></span>-->
+      <span id="share">分享：<a class="qzone" href="javascript:void(0)" title="分享到qq空间"></a><a class="sina" href="javascript:void(0)" title="分享到新浪微博"></a><a class="qqweibo" href="javascript:void(0)" title="分享到腾讯微博"></a><a class="renren" href="javascript:void(0)" title="分享到人人"></a><a class="kaixin" href="javascript:void(0)" title="分享到开心"></a></span>
+      <div class="clear"></div>
+    </section>
+  </div>
+  <section id="main">
+    <div id="lMain">
+      <div id="forecast">
+        <div id="tabs">
+          <ul>
+            <li class="on">指数预报</li>
+            <li>未来6天指数</li>
+            <!--<li class="last">历史指数查询</li>-->
+          </ul>
+          
+          <!--3小时更新时间 201307120800 -->
+          <span class="time">更新时间:
+                    11-12 20:00
+          
+          </span> 
+          
+          <!--6天更新时间 201307111200 -->
+          <span class="time" style="display:none">更新时间:
+                    11-12
+                    		 		 18
+		 			:00
+          </span>
+          </div>
+        <section class="mask">
+          <div class="items" style="display:block;">
+          	<!--new-->
+						<div class="dlArea">
+						</div>
+			<!--new-->
+            <div class="time">
+              <h5>时间</h5>
+              <div class="scroll">
+                <ul>
+                </ul>
+              </div>
+              <span class="lBtn"></span> <span class="rBtn"></span> </div>
+            <div class="sp">
+              <h5>指数色谱</h5>
+              <div class="scroll" style="width:544px;overflow:hidden;">
+              <ul>
+              </ul>
+	      </div>
+            </div>
+            <div id="svgArea"></div>
+            <div id="labelText"><span></span><b></b></div>
+          </div>
+          <div class="items" style="display:none;">
+            <section id="wllt">
+            	<ul>
+            <!-- 模块5：六天指数信息 -->
+                                      	<li><p>
+              	<!--明天 -->
+              	              	              		              		              	              	
+              	              		11月12日
+              	              	
+              	              	</p><p class="detail"><b>舒适</b>白天不冷不热，风力不大。</p></li>
+						
+			              	<li><p>
+              	<!--明天 -->
+              	              	              	
+              	              		11月13日
+              	              	
+              	              	</p><p class="detail"><b>较舒适</b>白天有雨，风力较强，有些凉意。</p></li>
+						
+			              	<li><p>
+              	<!--明天 -->
+              	              	              	
+              	              		11月14日
+              	              	
+              	              	</p><p class="detail"><b>舒适</b>白天不冷不热，风力不大。</p></li>
+						
+			              	<li><p>
+              	<!--明天 -->
+              	              	              	
+              	              		11月15日
+              	              	
+              	              	</p><p class="detail"><b>舒适</b>白天不冷不热，风力不大。</p></li>
+						
+			              	<li><p>
+              	<!--明天 -->
+              	              	              	
+              	              		11月16日
+              	              	
+              	              	</p><p class="detail"><b>较舒适</b>白天晴，风力较大，早晚偏凉，午后舒适。</p></li>
+						
+			              	<li><p>
+              	<!--明天 -->
+              	              	              	
+              	              		11月17日
+              	              	
+              	              	</p><p class="detail"><b>舒适</b>白天不冷不热，风力不大。</p></li>
+						
+						
+            	</ul>
+            </section>
+          </div>
+          <div class="items" style="display:none">
+            <div class="selLine"><span>请选择日期</span> <span id="month"><b></b><span class="Items"></span><i></i></span> <span id="day"><b></b><span class="Items"></span><i></i></span> <span id="selBtn">查询</span> </div>
+            <div class="pieArea">
+              <div id="pie"></div>
+              <dl>
+                <dt><b class="percentage"></b>可能性<br/>
+                  <b class="zsName"></b>为<b class="level"></b></dt>
+                <dd></dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+        <h3></h3>
+<!--new-->
+<!--<h3>未来某天指数提醒<span>订阅</span></h3>-->
+<!--new-->
+        
+      </div>
+  
+       
+
+<div class="block">
+<figure><a href="/news/2013/11/2002827.shtml" title="山东济南迎最美蓝天"  target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/11/12/461643022D5785ECBC7F0EDBCEC583FA.jpg" alt="山东济南迎最美蓝天" /></a><figcaption><a href="/news/2013/11/2002827.shtml" target="_blank" title="山东济南迎最美蓝天" style="color:">山东济南迎最美蓝天</a><p>11日，冷空气吹袭下，山东济南现碧空如洗的蓝天。</p></figcaption></figure><figure><a href="/news/2013/11/2002882.shtml" title="敦煌出现入冬来最强沙尘"  target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/11/12/8DEAED76BCF9C46B99FD89F4FA7A3B20.jpg" alt="敦煌出现入冬来最强沙尘" /></a><figcaption><a href="/news/2013/11/2002882.shtml" target="_blank" title="敦煌出现入冬来最强沙尘" style="color:">敦煌出现入冬来最强沙尘</a><p>近日，甘肃敦煌出现入冬以来最强沙尘天气，连续4天沙尘弥漫。</p></figcaption></figure>
+</div> 
+
+      
+      <div id="aboutZS">
+        <h2>相关指数</h2>
+        <div class="zs">
+          <ul>
+            
+      <!-- 模块4：一天的相关指数 -->
+                  	             	      		<li>
+              <section class="mask ys">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>不带伞</b>阴天，无需带雨伞。</aside>
+                    <a target="_blank" href="../ys/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../ys/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../ys/101020100.shtml">
+                  <!--过敏指数 -->
+                   雨伞指数
+                                    </a></h3>
+            </li>
+       	               	      		<li>
+              <section class="mask tr">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>适宜</b>风稍大，但仍可尽情享受大自然的风光。</aside>
+                    <a target="_blank" href="../tr/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../tr/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../tr/101020100.shtml">
+                  <!--过敏指数 -->
+                   旅游指数
+                                    </a></h3>
+            </li>
+       	               	      		<li>
+              <section class="mask gz">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>适宜</b>使用日常护肤品保持皮肤水分。</aside>
+                    <a target="_blank" href="../gz/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../gz/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../gz/101020100.shtml">
+                  <!--过敏指数 -->
+                   干燥指数
+                                    </a></h3>
+            </li>
+       	               	      		<li>
+              <section class="mask uv">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>最弱</b>辐射弱，涂擦SPF8-12防晒护肤品。</aside>
+                    <a target="_blank" href="../uv/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../uv/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../uv/101020100.shtml">
+                  <!--过敏指数 -->
+                   紫外线指数
+                                    </a></h3>
+            </li>
+       	               	      		<li>
+              <section class="mask xc">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>不宜</b>有雨，雨水和泥水会弄脏爱车。</aside>
+                    <a target="_blank" href="../xc/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../xc/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../xc/101020100.shtml">
+                  <!--过敏指数 -->
+                   洗车指数
+                                    </a></h3>
+            </li>
+       	               	      		<li>
+              <section class="mask pl">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>良</b>气象条件有利于空气污染物扩散。</aside>
+                    <a target="_blank" href="../pl/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../pl/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../pl/101020100.shtml">
+                  <!--过敏指数 -->
+                   空气污染扩散指数
+                                    </a></h3>
+            </li>
+       	               	      		<li>
+              <section class="mask fs">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>弱</b>涂抹8-12SPF防晒护肤品。</aside>
+                    <a target="_blank" href="../fs/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../fs/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../fs/101020100.shtml">
+                  <!--过敏指数 -->
+                   防晒指数
+                                    </a></h3>
+            </li>
+       	               	      		<li>
+              <section class="mask ct">
+                <section class="area">
+                  <section class="detail">
+                    <aside><b>较冷</b>建议着厚外套加毛衣等服装。</aside>
+                    <a target="_blank" href="../ct/101020100.shtml"></a></section>
+                  <section class="imgArea"><a target="_blank" href="../ct/101020100.shtml"></a></section>
+                </section>
+              </section>
+                  <h3><a target="_blank" href="../ct/101020100.shtml">
+                  <!--过敏指数 -->
+                   穿衣指数
+                                    </a></h3>
+            </li>
+       	                   </ul>
+        </div>
+      </div>
+    </div>
+    <aside id="rMain">
+    <h2 id="Statistics"><b>80%</b>用户访问了舒适度指数</h2>
+
+
+    	<div class="adposter_6217" style="background:url(/m2/i/index/loading.gif) center center no-repeat #eee">
+	<div class="adposter_6217"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22+src%3D%22http%3A%2F%2Fad.321tq.com%2Fex%3Fposid%3D10000_004_03%22%3E%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6217&pos=0&ch=500&act=1362&order=641&contract=182&host=153&ck=9055","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+	</div>
+    
+     
+ 
+    </aside>
+    <div class="clear"></div>
+  </section>
+  <div id="linksbar"> <a href="http://www.weather.com.cn/wzfw/gywm/index.shtml">关于我们</a>|<a target="_blank" href="http://marketing.weather.com.cn/">营销中心</a>|<a target="_blank" href="http://ad.weather.com.cn/">广告服务</a>|<a href="http://www.weather.com.cn/wzfw/lxwm/index.shtml">联系我们</a>|<a href="http://www.weather.com.cn/wzfw/ryzp/index.shtml">人员招聘</a>|<a href="http://www.weather.com.cn/wzfw/wzls/index.shtml">网站律师</a>|<a href="http://www.weather.com.cn/wzfw/kfzx/index.shtml">客服中心</a>|<a href="http://club.weather.com.cn/member.php?mod=reuser.php">会员注册</a>|<a href="http://3g.weather.com.cn" target="_blank">3G版</a>|<a href="http://www.weather.com.cn/wzfw/wapb/index.shtml">WAP版</a>|<a href="http://www.weather.com.cn/wzfw/sybz/index.shtml">使用帮助</a>|<a href="http://www.weather.com.cn/wzfw/wzdt/index.shtml">网站地图</a>|<a href="http://www.weather.com.cn/wzfw/bqsm/index.shtml">版权声明</a> </div>
+<footer>
+  <p>客户服务热线：<span>400-6000-121</span>客服邮箱：<span>service@weather.com.cn</span>广告服务：<span>010-58993799</span></p>
+  <p>Copyright&copy;中国气象局公共气象服务中心 All Rights Reserved (2008-2012) 版权所有 复制必究</p>
+  <p>制作维护：中国气象局公共气象服务中心</p>
+  <p>郑重声明：中国天气网版权所有，未经书面授权禁止使用</p>
+  <p class="copyIcp"><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP证010385号</a> 京公网安备11041400134号 增值电信业务经营许可证B2-20050053</p>
+</footer>
+
+  
+</div>
+
+
+<!-- START WRating v1.0 -->
+<script type="text/javascript" src="http://c.wrating.com/a1.js">
+</script>
+<script type="text/javascript">
+var vjAcc="860010-2099920100";
+var wrUrl="http://c.wrating.com/";
+vjTrack("");
+</script>
+<noscript><img src="http://c.wrating.com/a.gif?a=&c=860010-2099920100" width="1" height="1"/></noscript>
+<!-- END WRating v1.0 -->
+
+</body>
+</html>

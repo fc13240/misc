@@ -1,0 +1,2162 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <base href="http://www.weather.com.cn"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>阿勒泰天气预报-今日_明日_一周天气预报:22日星期日  晴  14/0℃  </title>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="keywords" content="阿勒泰天气预报,阿勒泰今日天气,阿勒泰明日天气,阿勒泰一周天气预报" />
+<meta name="description" content="阿勒泰天气预报，及时准确发布中央气象台天气信息，便捷查询阿勒泰今日天气，阿勒泰明日天气，阿勒泰一周天气预报，阿勒泰天气预报还提供阿勒泰各区县的生活指数、健康指数、交通指数、旅游指数，及时发布阿勒泰气象预警信号、各类气象资讯。" />
+<link  rel="icon" href="/m2/i/icon/faviconie9.ico?v=3" type="image/x-icon" />
+<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+<script type="text/javascript" src="/m2/j/public/IE9sitemode2013.js"></script>
+<script type="text/javascript" src="/m2/j/public/merge20130327.js" ></script>
+<script type="text/javascript" src="/m2/j/public/tooltips.js"></script>
+<script type="text/javascript" src="/m2/j/zs201308.js"></script>
+<script type="text/javascript" src="/m2/j/public/dltotw2013.js"></script>
+<script type="text/javascript" src="http://geoip.weather.com.cn/g/"></script>
+<script type="text/javascript" src="/m2/j/shibo/caoyu-min.js"></script>
+<script type="text/javascript" src="http://ad.321tq.com/ex2?posid=d"></script>
+<link type="text/css" href="/m2/c/index/weatherdetail201305.css" rel="stylesheet" />
+<script>
+/*!
+ * LazyWrite 1.2.1 (sha1: 4dad37cb515c671323bc5110f385585c39141301)
+ * (c) 2011 Shen Junru. MIT License.
+ * http://github.com/shenjunru/LazyWrite
+ */
+
+(function(factory, globalEval, window, document, isIE){
+    if ('function' === typeof define && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(function(){
+            return factory(globalEval, window, document, isIE, false);
+        });
+    } else {
+        // Browser globals
+        window.LazyWrite = factory(globalEval, window, document, isIE, false !== window.AUTO_LAZYWRITE);
+    }
+}(function(globalEval, window, document, isIE, autoHook, undef){
+
+    var expose,
+        seed = 1,
+        lazyType    = 'text/lazyjs',
+        lazyPrefix  = 'lazy-holder-',
+        scriptEvent = isIE ? 'onreadystatechange' : 'onload',
+        readyStates = { complete:1, loaded: 1 },
+
+        // handle IE eval() SyntaxError.
+        rFixEval = /^\s*<!--/,
+
+        // check html partial writing, like:
+        //  document.write('<script>');
+        //  document.write('alert("ok")');
+        //  document.write('<\/script>');
+        rHtmlTag = /<([a-z]+)(?:\s+[a-z]+(?:=(?:'[^']*'|"[^"]*"|[^'">\s]*))?)*\s*>/i,
+        rNoEnd   = /area|base|br|col|frame|hr|img|input|link|meta|param/i,
+        sPartial = '',
+        sHtmlTag = '',
+
+        // render helper elements
+        renderFragment = document.createDocumentFragment(),
+        renderParser   = createElement('div'),
+        scriptBlocker  = undef, // for external loading and stack executing
+        scriptHolder   = undef, // for multiple document.write in one inside script
+        previousHolder = undef, // for same render holder checking
+        parallelHolder = undef, // for render in same render holder
+
+        // data storage
+        writeStack   = [], // store the HTML that use document.write in the page
+        scriptStack  = [], // store the script and it's holder
+        currentWrite = undef, // current write item
+
+        // flags
+        started   = false,
+        continued = true,
+
+        // array join function
+        combine = [].join,
+
+        // original functions
+        originalWrite   = document.write,
+        originalWriteln = document.writeln,
+        originalOnError = window.onerror,
+        documentWrite = originalWrite.apply
+            ? function(){ originalWrite.apply(document, arguments); }
+            : /* handle IE issue */ originalWrite;
+
+
+    // error catcher
+    function logError(ex){
+        currentWrite.errors.push(ex);
+    }
+
+    // append the element to holder element
+    // return the appended element
+    function appendElement(holder, element){
+        return holder.appendChild(element);
+    }
+
+    // remove the element from the document, if it in the document
+    // return the removed element
+    function removeElement(element){
+        return element.parentNode ? element.parentNode.removeChild(element) : element;
+    }
+
+    // replace the element by the new element
+    // return the replace element
+    function replaceElement(element, other){
+        return element.parentNode.replaceChild(other, element) && other;
+    }
+
+    function createElement(tagName){
+        return document.createElement(tagName);
+    }
+
+    // return a new holder element
+    function createHolder(){
+        return createElement('span');
+    }
+
+    // clone a script element for cross browser issue
+    // return the new script element
+    function cloneScript(script){
+        var result = createElement('script');
+        result.type = script.type;
+        if (script.src) {
+            result.src  = script.src;
+        } else {
+            result.text = script.text;
+        }
+        return result;
+    }
+
+    // event handler of script.onload
+    function scriptComplete(scriptHolder, script, memo){
+        clearTimeout(memo.timeout);
+        memo.done = true;
+
+        // prevent memory leak in IE
+        script.onerror = script[scriptEvent] = '';
+
+        // remove script holder, if it still in the document
+        removeElement(scriptHolder);
+
+        if (memo === scriptBlocker) {
+            // release the script blocker
+            scriptBlocker = undef;
+            // continue the stack executing
+            executeStacks();
+        }
+    }
+
+    // load script element
+    function loadScript(scriptHolder, script){
+        if (script.src) {
+            var memo = { src: script.src };
+
+            // handle onload event
+            script[scriptEvent] = function(){
+                var state = isIE && script.readyState;
+                if (!memo.done && (!state || readyStates[state])) {
+                    if (state === 'loaded' && !memo.loaded) {
+                        // handle IE readyState issue
+                        // simulate the 'complete' readyState
+                        memo.loaded = true;
+                        setTimeout(script[scriptEvent]);
+                    } else {
+                        scriptComplete(scriptHolder, script, memo);
+                    }
+                }
+            };
+
+            // handle load exception
+            // Chrome, FireFox, IE9+: NON-EXISTS, TIMEOUT
+            // Safari: NON-EXISTS
+            script.onerror = function(event){
+                // log exception
+                logError(memo.error = event);
+                // trig onload handler
+                scriptComplete(scriptHolder, script, memo);
+            };
+
+            // postpone load the script file
+            setTimeout(function(){
+                appendElement(scriptHolder, script);
+            });
+
+            // load timeout
+            // IE<8, Opera: NON-EXISTS, TIMEOUT, RUNTIME-EXCEPTION
+            memo.timeout = setTimeout(function(){
+                logError('unknow');
+                scriptComplete(scriptHolder, script, memo);
+            }, 60500);
+
+            // set the script blocker
+            scriptBlocker = memo;
+        } else {
+            // handle FF 3.6 script non-immediate-execute issue
+            // use eval instead insert script element to document
+            try {
+                globalEval(script.text.replace(rFixEval, ''));
+            } catch (ex) {
+                logError(ex);
+            }
+
+            // remove script holder, if it still in the document
+            removeElement(scriptHolder);
+        }
+    }
+
+    // execute one item of scripts stack
+    // return continue flag
+    function executeScript(item){
+        if (item) {
+            // set the script holder as the render holder for inside 'document.write'.
+            if (!scriptBlocker) {
+                scriptHolder = item.holder;
+            }
+
+            // load / execute script
+            loadScript(item.holder, item.script = cloneScript(item.script));
+
+            // return continue flag
+            return !item.script.src;
+        }
+    }
+
+    // execute the global scripts stack
+    // return continue flag
+    function executeScripts(){
+        for (var flag; flag = executeScript(scriptStack.shift()););
+        return flag !== false && !scriptBlocker;
+    }
+
+    // render one document.write stuff
+    // return continue flag
+    function renderHTML(renderHolder, html, inside){
+        // convert HTML
+        if (isIE) {
+            // handle IE innerHTML issue
+            renderParser.innerHTML = '<img />' + html;
+            removeElement(renderParser.firstChild);
+        } else {
+            renderParser.innerHTML = html;
+        }
+
+        var stack = [], // store the the scripts and their holders over this rendering.
+            scripts = renderParser.getElementsByTagName('script'),
+            oldStack, newStack;
+
+        // replace script elements by script holders
+        while (scripts[0]) {
+            stack.push({
+                script: scripts[0],
+                holder: replaceElement(scripts[0], createHolder())
+            });
+        }
+
+        // convert to DocumentFragment
+        while (renderParser.firstChild) {
+            renderFragment.appendChild(renderParser.firstChild);
+        }
+
+        // render in the document
+        if (previousHolder === renderHolder) {
+            // append the stack after last script stack in the global script stack.
+            scriptStack = (
+                // remove executed stack item first
+                newStack = scriptStack.n.slice(scriptStack.l - scriptStack.length).concat(stack)
+            ).concat(oldStack = scriptStack.o);
+            scriptStack.n = newStack;
+            scriptStack.o = oldStack;
+
+            // insert before the parallel holder
+            parallelHolder.parentNode.insertBefore(renderFragment, parallelHolder);
+        } else {
+            // put the stack at the top of the global script stack.
+            scriptStack = stack.concat(oldStack = scriptStack);
+            scriptStack.n = stack;
+            scriptStack.o = oldStack;
+
+            // append the parallel holder
+            parallelHolder = renderFragment.appendChild(parallelHolder || createHolder());
+
+            // replace holder in the document
+            if (inside) {
+                // handle IE6 subsequent replaceChild() issue in Windows XP
+                renderHolder.parentNode.insertBefore(renderFragment, renderHolder.nextSibling);
+            } else {
+                replaceElement(renderHolder, renderFragment);
+            }
+        }
+
+        scriptStack.l = scriptStack.length;
+
+        // store current render holder as previous holder
+        previousHolder = renderHolder;
+
+        // execute scripts and return continue flag
+        if (continued && stack.length) {
+            continued = executeScripts();
+        }
+
+        // return continue flag
+        return continued;
+    }
+
+    // render one item of the global write stack
+    // return continue flag
+    function renderWrite(item){
+        return item && item.html && renderHTML(document.getElementById(item.id), item.html);
+    }
+
+    // render the global write stack
+    function renderStack(){
+        while (renderWrite(currentWrite = writeStack.shift()));
+
+        if (continued && !writeStack.length) {
+            // remove parallel holder, if it exists
+            if (parallelHolder) {
+                removeElement(parallelHolder);
+            }
+
+            // destroy objects
+            scriptBlocker
+                = scriptHolder
+                = previousHolder
+                = parallelHolder
+                = undef;
+
+            // restore original functions
+            document.write = originalWrite;
+            document.writeln = originalWriteln;
+
+            // restore flag
+            started = false;
+        }
+    }
+
+    // continue the rest stack (script and write)
+    function executeStacks(){
+        continued = true;
+        if (executeScripts()) {
+            try {
+                // execute callback function
+                if (currentWrite.callback) {
+                    currentWrite.callback(currentWrite.errors);
+                }
+            } catch (ex) {
+                logError(ex);
+            }
+
+            renderStack();
+        }
+    }
+
+    /**
+     * add content to write stack
+     *
+     * @param {String} content - content to later render
+     * @param {String} [holderId] - place holder id
+     * @param {Function} [callback] - function(errors Array)
+     */
+    function addContent(content, holderId, callback){
+        if ('function' !== typeof callback) {
+            callback = undef;
+        }
+        if ('function' === typeof holderId) {
+            callback = holderId;
+            holderId = undef;
+        }
+
+        // write a place holder in the document
+        if (!holderId) {
+            documentWrite('<span id="' + (holderId = lazyPrefix + seed++) + '"></span>');
+        }
+
+        // add to write stack
+        writeStack.push({ id: holderId, html: content, callback: callback, errors: [] });
+    }
+
+    // check html end with a opened tag
+    function tagOpened(html){
+        var index, name, match = rHtmlTag.exec(html);
+        while (match) {
+            html = html.slice(match.index + match[0].length, html.length);
+            name = match[1];
+            if (rNoEnd.test(name)) {
+                match = rHtmlTag.exec(html);
+            } else if (-1 !== (index = html.indexOf('</' + name + '>'))) {
+                match = rHtmlTag.exec(html = html.slice(index + name.length + 3));
+            } else {
+                return (sHtmlTag = name);
+            }
+        }
+    }
+
+    // check html is closed
+    function tagClosed(html){
+        return !sHtmlTag || (-1 !== html.indexOf('</' + sHtmlTag + '>'));
+    }
+
+    // lazy write
+    function lazyWrite(){
+        var html = combine.call(arguments, '');
+        if (html) {
+            if (tagOpened(html)) {
+                // html tag is not closed
+                // wait close html tag
+                sPartial += html;
+            } else if (tagClosed(html)) {
+                // html tag is closed
+
+                // get intact html
+                html = sPartial + html;
+
+                // clear status
+                sHtmlTag = sPartial = '';
+
+                if (started) {
+                    try {
+                        // render HTML directly
+                        renderHTML(scriptHolder, html, true);
+                    } catch (ex) {
+                        logError(ex);
+                    }
+                } else {
+                    addContent(html);
+                }
+            } else {
+                sPartial += html;
+            }
+        }
+    }
+
+    // replace original document.write functions by lazy write
+    function hookWrite(){
+        document.writeln = document.write = lazyWrite;
+    }
+
+    // handle srcipt load exception
+    // Chrome, IE, FireFox: RUNTIME-EXCEPTION
+    // this does not work, if IE has script debugging turned on. the default is off.
+    // see: http://msdn.microsoft.com/en-us/library/ms976144#weberrors2_topic3
+    // can't use addEventListener or attachEvent
+    window.onerror = function(message, url){
+        if (scriptBlocker && (url === scriptBlocker.src) && !scriptBlocker.error) {
+            logError(message);
+        }
+        if (originalOnError) {
+            originalOnError.apply(window, arguments);
+        }
+    };
+
+    if (autoHook) {
+        hookWrite();
+    }
+
+    return expose = {
+        /** original document.write function */
+        write: documentWrite,
+
+        /** replace original function */
+        prepare: hookWrite,
+
+        /**
+         * add content to later render
+         *
+         * @param {String} content - content to later render
+         * @param {String} [holder] - place holder id
+         * @param {Function} [callback] - function(errors Array)
+         */
+        render: addContent,
+
+        /** start to process the contents */
+        process: function(){
+            if (started) {
+                return;
+            }
+            started = true;
+            expose.prepare();
+            renderStack();
+        },
+
+        /**
+         * process all custom typed script elements
+         *
+         * @param {String} [type='text/lazyjs'] - custom script type
+         */
+        findScripts: function(type){
+            type = type || lazyType;
+
+            var scripts = document.getElementsByTagName('script'),
+                index   = scripts.length - 1,
+                matches = [],
+                script, holder, src;
+
+            for (; -1 < index; index--) {
+                if (type === scripts[index].type) {
+                    matches.push(scripts[index]);
+                }
+            }
+            for (; script = matches.pop() ;) {
+                replaceElement(script, holder = createHolder());
+                if (src = script.getAttribute('src')) {
+                    appendElement(renderParser, createElement('script')).src = src;
+                }
+                appendElement(renderParser, script);
+                addContent(renderParser.innerHTML, holder.id = lazyPrefix + seed++);
+                renderParser.innerHTML = '';
+            }
+        }
+    };
+
+}, function(){
+    eval.apply(window, arguments);
+}, window, document,false));
+</script>
+<!--[if lt IE 9]>
+<script>'section aside'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
+<![endif]-->
+
+</head><body>
+
+
+
+<div class="topSj">
+<div id="newsNav">
+	<p><a href="http://www.weather.com.cn/" title="中国天气网"><img src="/m2/i/new_logo_s.jpg" style="border:0;" onfocus="this.blur();" alt="中国天气网"></a></p>
+	<ul>
+		<li><a href="http://www.weather.com.cn/" title="首页">首页</a></li>
+		<li>-</li>
+		<li><a href="http://www.weather.com.cn/alarm/" title="灾害预警">灾害预警</a></li>
+		<li>-</li>
+		<li><a href="http://www.weather.com.cn/forecast/" title="天气预报">天气预报</a></li>
+		<li>-</li>
+		<li><a href="http://www.weather.com.cn/live/" title="现在天气">现在天气</a></li>
+		<li>-</li>
+		<li><a href="http://www.weather.com.cn/climate/" title="气候变化">气候变化</a></li>
+		<li>-</li>
+		<li><a href="http://www.weather.com.cn/news/" title="天气资讯">天气资讯</a></li>
+		<li>-</li>
+		<li><a href="http://www.weather.com.cn/life/" title="生活天气">生活天气</a></li>
+		<li>-</li>
+		<li><a href="http://www.weather.com.cn/trip/" title="旅游天气">旅游天气</a></li>
+                   <li>-</li>
+		<li><a href="http://3g.weather.com.cn/" title="中国天气通" target="_blank" style="color:#f00;">中国天气通</a></li>
+		<li>-</li>
+		<li><a href="http://club.weather.com.cn/" title="天气社区" target="_blank">天气社区</a></li>
+		<li>-</li>
+		<li><a href="http://cj.weather.com.cn/" title="天气插件">天气插件</a></li>
+	</ul>
+</div>
+
+<div class="mainNav">
+<!--Header-->
+
+  <dl>
+    <dt>
+      <a href="http://www.weather.com.cn/xinjiang/index.shtml">新疆</a>
+    </dt>
+    <dd>
+      <a href="http://xj.weather.com.cn/aletai/index.shtml"><img src="/m2/i/headpic/101131401.jpg" alt="" /></a>
+    </dd>
+  </dl>
+  <div class="navbox">
+    <ul>
+      <li id="1111"><a href="http://www.weather.com.cn/">首页</a></li><li id="5623"><a href="http://xj.weather.com.cn/">新疆首页</a></li><li id="0"><a href="http://xj.weather.com.cn/aletai/index.shtml">天气预报</a></li><li id="5626"><a href="http://xj.weather.com.cn/tqsk/index.shtml">天气实况</a></li><li id="5628"><a href="http://xj.weather.com.cn/xjly/index.shtml">新疆旅游</a></li><li id="5630"><a href="http://xj.weather.com.cn/qxys/index.shtml">气象影视</a></li><li id="5632"><a href="http://xj.weather.com.cn/nyqx/index.shtml">农业气象</a></li><li id="5631"><a href="http://xj.weather.com.cn/ldwx/index.shtml">雷达卫星</a></li><li id="5629"><a href="http://xj.weather.com.cn/qxkp/index.shtml">气象科普</a></li><li id="5634"><a href="http://xj.weather.com.cn/gywm/index.shtml">关于我们</a></li>
+    </ul>
+    <span>
+    <a href="http://www.weather.com.cn/weather/101131401.shtml">城区</a>|<a href="http://www.weather.com.cn/weather/101131402.shtml">哈巴河</a>|<a href="http://www.weather.com.cn/weather/101131405.shtml">吉木乃</a>|<a href="http://www.weather.com.cn/weather/101131406.shtml">布尔津</a>|<a href="http://www.weather.com.cn/weather/101131407.shtml">福海</a>|<a href="http://www.weather.com.cn/weather/101131408.shtml">富蕴</a>|<a href="http://www.weather.com.cn/weather/101131409.shtml">青河</a>
+    <b><a href="http://xj.weather.com.cn/gywm/101131401.shtml">阿勒泰气象局</a></b>
+    </span> </div>
+
+  
+  
+
+
+
+<div class="post_st">
+
+<div class="adposter_6125"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_001_06%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"214","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6125&pos=0&ch=9993&act=1310&order=641&contract=182&host=153&ck=18404","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+	
+
+<div class="adposter_6126"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_001_04%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"728","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6126&pos=0&ch=9993&act=1309&order=641&contract=182&host=153&ck=18404","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+
+          
+</div>
+
+
+
+
+</div>
+</div>
+
+
+<input id="colorid" type="hidden" value="0">
+<div class="weather_rdtj">
+<ul>
+<li><span>热点推荐：</span></li>
+<li><a href="http://www.weather.com.cn/news/2013/09/1972120.shtml" target="_blank">天兔致周杰伦演唱会提前</a></li><li><a href="http://www.weather.com.cn/photo/2013/09/gqt/1972047.shtml" target="_blank">菲律宾暴雨狂风肆虐</a></li><li><a href="http://www.weather.com.cn/news/2013/09/1972117.shtml" target="_blank">台风见证大熊猫圆仔成长</a></li><li><a href="http://www.weather.com.cn/video/2013/09/lssj/1971907.shtml" target="_blank">天兔打乱游客行程</a></li><li><a href="http://www.weather.com.cn/news/2013/09/1971877.shtml" target="_blank">西安等9城可获赔赏月险</a></li><li><a href="http://www.weather.com.cn/photo/2013/09/gqt/1971849.shtml" target="_blank">浙江钱江潮水凶险</a></li>	
+</ul>
+</div>
+
+
+<div class="locationSearch">
+ 
+  <span class="location"> 
+    <a href="http://www.weather.com.cn/" class="master"><strong>中国天气网</strong></a>&gt;&nbsp;<a href="http://www.weather.com.cn/xinjiang/index.shtml" class="master"><strong>新疆</strong></a>&gt;<a href="http://www.weather.com.cn/xinjiang/aletai/index.shtml" class="master"><strong>阿勒泰</strong></a>&gt;<b>城区天气预报</b>
+  </span>
+ 
+
+
+
+<div class="formBox">
+<div id="Zip" class="Mainbox" >
+  <div id="ZipContent">
+    <input type="text" class="textinput" id="txtZip" value="输入城市名、全拼、简拼、电话区号、邮编查询"/>
+    <input type="button" class="btn" id="btnZip" value="" />
+  </div>
+  <div id="Zipresult" class="inforesult"> </div>
+  <div id="show">
+    <ul>
+    </ul>
+  </div>
+  <div class="suggest-additions">
+    <div id="selectsionTabs">
+ <span class="tab active" id="tab_hot">热门</span> <span class="tab" id="tab_A_G">A-G</span> <span class="tab" id="tab_H_L">H-L</span> <span class="tab" id="tab_M_T">M-T</span> <span class="tab" id="tab_W_Z">W-Z</span> <span class="tab" id="tab_SJZ">省级站</span> <span class="tab" id="tab_COU">国际</span><span class="tab" id="tab_zx" style="color:#f00;">资讯</span> </div>
+    <div id="selectsionGroups">
+      <ul _type="i" id="hot">
+             <li style="width:20%; height: 20px;line-height: 20px; padding-left:40px;margin-top:5px;"><span style="color:#000;font-weight:bold;">海滨游:</span></li>
+<li style=" height: 20px;line-height: 20px;width:15%;margin-top:5px;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101070201.shtml#index">大连</a></span></li>
+<li style=" height: 20px;line-height: 20px;width:15%;margin-top:5px;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101120201.shtml#index">青岛</a></span></li>
+<li style=" height: 20px;line-height: 20px;width:15%;margin-top:5px;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101230201.shtml#index">厦门</a></span></li>
+<li style=" height: 20px;line-height: 20px;width:15%;margin-top:5px;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101320101.shtml#index">香港</a></span></li>
+<li style="width:20%;height: 30px;line-height: 30px; padding-left:40px;"><span style="color:#000;font-weight:bold;">登山游:</span></li>
+<li style=" height: 30px;line-height: 30px;width:15%;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101230905.shtml#index">武夷山</a></span></li>
+<li style=" height: 30px;line-height: 30px;width:15%;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101271409.shtml#index">峨眉山</a></span></li>
+<li style=" height: 30px;line-height: 30px;width:15%;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101250409.shtml#index">南岳</a></span></li>
+<li style=" height: 30px;line-height: 30px;width:20%;padding-left: 10px;text-align: left;"><span><a style="color:#000;" href="http://www.weather.com.cn/weather/101101010.shtml#index">五台山</a></span></li>
+
+
+              <li><span><a href="http://www.weather.com.cn/weather/101231001.shtml#index">钓鱼岛</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101090101.shtml#index">石家庄</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101290101.shtml#index">昆明</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101120101.shtml#index">济南</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101110101.shtml#index">西安</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101280601.shtml#index">深圳</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101200101.shtml#index">武汉</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101310101.shtml#index">海口</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101050101.shtml#index">哈尔滨</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101310201.shtml#index">三亚</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101060101.shtml#index">长春</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101300101.shtml#index">南宁</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101220101.shtml#index">合肥</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101180101.shtml#index">郑州</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101030100.shtml#index">天津</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101100101.shtml#index">太原</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101240101.shtml#index">南昌</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101140101.shtml#index">拉萨</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101150101.shtml#index">西宁</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101320101.shtml#index">香港</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101330101.shtml#index">澳门</a></span></li>
+              <li><span><a href="http://www.weather.com.cn/weather/101340101.shtml#index">台北</a></span></li>
+            </ul>
+
+      <ul _type="i" id="A_G">
+        <li><span><a href="http://www.weather.com.cn/weather/101220601.shtml">安庆</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101131401.shtml">阿勒泰</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101110701.shtml">安康</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101130801.shtml">阿克苏</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101060901.shtml">白山</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101080201.shtml">包头</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101301301.shtml">北海</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101010100.shtml">北京</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101301001.shtml">百色</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101290501.shtml">保山</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101100501.shtml">长治</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101060101.shtml">长春</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101191101.shtml">常州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101140501.shtml">昌都</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101010300.shtml">朝阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101250601.shtml">常德</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101270101.shtml">成都</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101040100.shtml">重庆</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101250101.shtml">长沙</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101080601.shtml">赤峰</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101100201.shtml">大同</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101070201.shtml">大连</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101121201.shtml">东营</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101050901.shtml">大庆</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101070601.shtml">丹东</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101290201.shtml">大理</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101160808.shtml">敦煌</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101080701.shtml">鄂尔多斯</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101201001.shtml">恩施</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101230101.shtml">福州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101220801.shtml">阜阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101260101.shtml">贵阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101300501.shtml">桂林</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101280101.shtml">广州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101272101.shtml">广元</a></span></li>
+      </ul>
+      <ul _type="i" id="H_L">
+        <li><span><a href="http://www.weather.com.cn/weather/101080101.shtml">呼和浩特</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101131201.shtml">哈密</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101050601.shtml">黑河</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101081001.shtml">海拉尔</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101050101.shtml">哈尔滨</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101310101.shtml">海口</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101221001.shtml">黄山</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101210101.shtml">杭州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101091001.shtml">邯郸</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101220101.shtml">合肥</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101110311.shtml">黄龙</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101110801.shtml">汉中</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101131301.shtml">和田</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101230509.shtml">晋江</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101070701.shtml">锦州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101240801.shtml">景德镇</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101161401.shtml">嘉峪关</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101240608.shtml">井冈山</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101120701.shtml">济宁</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101240201.shtml">九江</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101050401.shtml">佳木斯</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101120101.shtml">济南</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101130901.shtml">喀什</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101290101.shtml">昆明</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101271802.shtml">康定</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101130201.shtml">克拉玛依</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101130601.shtml">库尔勒</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101130807.shtml">库车</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101160101.shtml">兰州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101180901.shtml">洛阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101291401.shtml">丽江</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101300301.shtml">柳州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101271001.shtml">泸州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101191001.shtml">连云港</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101140101.shtml">拉萨</a></span></li>
+      </ul>
+      <ul _type="i" id="M_T">
+        <li><span><a href="http://www.weather.com.cn/weather/101050301.shtml">牡丹江</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101081010.shtml">满洲里</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101270401.shtml">绵阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101280409.shtml">梅县</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101050703.shtml">漠河</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101190101.shtml">南京</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101270501.shtml">南充</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101300101.shtml">南宁</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101180701.shtml">南阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101190501.shtml">南通</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101240101.shtml">南昌</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101210401.shtml">宁波</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101270201.shtml">攀枝花</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101211001.shtml">衢州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101091101.shtml">秦皇岛</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101160401.shtml">庆阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101130605.shtml">且末</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101050201.shtml">齐齐哈尔</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101120201.shtml">青岛</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101280501.shtml">汕头</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101280601.shtml">深圳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101090101.shtml">石家庄</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101310201.shtml">三亚</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101070101.shtml">沈阳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101020100.shtml">上海</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101260601.shtml">铜仁</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101131101.shtml">塔城</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101290506.shtml">腾冲</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101210601.shtml">台州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101160901.shtml">天水</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101030100.shtml">天津</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101080501.shtml">通辽</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101120801.shtml">泰安</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101100101.shtml">太原</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101090501.shtml">唐山</a></span></li>
+      </ul>
+      <ul _type="i" id="W_Z">
+        <li><span><a href="http://www.weather.com.cn/weather/101121301.shtml">威海</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101200101.shtml">武汉</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101300601.shtml">梧州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101290601.shtml">文山</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101190201.shtml">无锡</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101120601.shtml">潍坊</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101230905.shtml">武夷山</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101081101.shtml">乌兰浩特</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101210701.shtml">温州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101130101.shtml">乌鲁木齐</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101041300.shtml">万州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101080301.shtml">乌海</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101260901.shtml">兴义</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101271610.shtml">西昌</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101230201.shtml">厦门</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101291301.shtml">香格里拉</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101110101.shtml">西安</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101200201.shtml">襄樊</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101150101.shtml">西宁</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101080901.shtml">锡林浩特</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101190801.shtml">徐州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101210904.shtml">义乌</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101251401.shtml">永州</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101110401.shtml">榆林</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101110300.shtml">延安</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101100801.shtml">运城</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101120501.shtml">烟台</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101170101.shtml">银川</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101200901.shtml">宜昌</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101271101.shtml">宜宾</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101190701.shtml">盐城</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101060301.shtml">延吉</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101150601.shtml">玉树</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101131001.shtml">伊宁</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/101280701.shtml">珠海</a></span></li>
+      </ul>
+      <ul _type="p" id="SJZ">
+        <li><span><a style="font-weight:bold;" href="http://bj.weather.com.cn">北京</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://tj.weather.com.cn">天津</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://sh.weather.com.cn">上海</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://hebei.weather.com.cn">河北</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://henan.weather.com.cn">河南</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://ah.weather.com.cn">安徽</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://zj.weather.com.cn">浙江</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://cq.weather.com.cn">重庆</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://fj.weather.com.cn">福建</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://gs.weather.com.cn">甘肃</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://gd.weather.com.cn">广东</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://gx.weather.com.cn">广西</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://gz.weather.com.cn">贵州</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://yn.weather.com.cn">云南</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://nmg.weather.com.cn">内蒙古</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://jx.weather.com.cn">江西</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://hubei.weather.com.cn">湖北</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://sc.weather.com.cn">四川</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://nx.weather.com.cn">宁夏</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://qh.weather.com.cn">青海</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://sd.weather.com.cn">山东</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://shaanxi.weather.com.cn">陕西</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://shanxi.weather.com.cn">山西</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://xj.weather.com.cn">新疆</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://xz.weather.com.cn">西藏</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/html/province/xianggang.shtml">香港</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/html/province/taiwan.shtml">台湾</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://mo.weather.com.cn">澳门</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://hainan.weather.com.cn">海南</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://hunan.weather.com.cn">湖南</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://js.weather.com.cn">江苏</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://hlj.weather.com.cn">黑龙江</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://jl.weather.com.cn">吉林</a></span></li>
+        <li><span><a style="font-weight:bold;" href="http://ln.weather.com.cn">辽宁</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/textFC/hd.shtml">更多</a></span></li>
+      </ul>
+      <ul _type="f" id="COU">
+        <li><span><a href="http://www.weather.com.cn/weather/404130100.shtml">埃德蒙顿</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/205010100.shtml">阿姆斯特丹</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/218010100.shtml">雅典</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/106010100.shtml">曼谷</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/203010100.shtml">柏林</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/216010100.shtml">布鲁塞尔</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/301010100.shtml">开罗</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/118010100.shtml">喀布尔</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/302010100.shtml">开普敦</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/411010100.shtml">墨西哥城</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/207010100.shtml">哥本哈根</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/327010100.shtml">达喀尔</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/210020100.shtml">日内瓦</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/107010100.shtml">河内</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/114010100.shtml">伊斯兰堡</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/111010100.shtml">雅加达</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/105010100.shtml">吉隆坡</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/201010100.shtml">伦敦</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/206010100.shtml">马德里</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/208010100.shtml">莫斯科</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/317010100.shtml">内罗毕</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/113010100.shtml">新德里</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/404010100.shtml">渥太华</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/202010100.shtml">巴黎</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/127010100.shtml">平壤</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/204010100.shtml">罗马</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/102010100.shtml">首尔</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/104010100.shtml">新加坡</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/321020100.shtml">卡萨布兰卡</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/112010100.shtml">德黑兰</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/132010100.shtml">乌兰巴托</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/217010100.shtml">维也纳</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/109010100.shtml">万象</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/401010100.shtml">华盛顿特区</a></span></li>
+        <li><span><a href="http://www.weather.com.cn/weather/108010100.shtml">仰光</a></span></li>
+      </ul>
+       <ul class="dWeatherRankingBox zxbg" style="padding-top:10px; padding-left:20px;">
+<li style="background:url(/m2/i/topTen.jpg) no-repeat scroll 0 5px;"><a target="_blank" href="http://www.weather.com.cn/news/2013/09/1972700.shtml#index">台风红色预警：“天兔”逐渐向广东沿海靠近</a></li><li style="background:url(/m2/i/topTen.jpg) no-repeat scroll 0 -20px;"><a target="_blank" href="http://www.weather.com.cn/news/2013/09/1972689.shtml#index">暴雨黄色预警：福建广东等局地有大暴雨</a></li><li style="background:url(/m2/i/topTen.jpg) no-repeat scroll 0 -45px;"><a target="_blank" href="http://www.weather.com.cn/photo/2013/09/gqt/1969980.shtml#index">佛爷顶上观天人 一个人的气象站</a></li><li style="background:url(/m2/i/topTen.jpg) no-repeat scroll 0 -68px;"><a target="_blank" href="http://www.weather.com.cn/news/2013/09/1972264.shtml#index">强风暴雨高潮位聚头 “天兔”将正面袭华南</a></li><li style="background:url(/m2/i/topTen.jpg) no-repeat scroll 0 -92px;"><a target="_blank" href="http://www.weather.com.cn/news/2013/09/1972051.shtml#index">“天兔”逼近 广东台风应急响应升至Ⅱ级</a></li>
+
+</ul>
+
+    </div>
+    <div id="selectsionNotice">输入城市名、全拼、简拼、电话区号、邮编查询</div>
+  </div>
+</div>
+
+</div>
+
+<ul class="aTextLink"><li class="redian_city">热点城市：</li>
+	<li><a href="http://www.weather.com.cn/weather/101010100.shtml" title="北京" target="_blank">北京</a></li>
+	<li><a href="http://www.weather.com.cn/weather/101020100.shtml" title="上海" target="_blank">上海</a></li>
+</ul>
+
+
+</div>
+
+
+
+<div class="weatherMain">
+  <div class="weatherLeft">
+    <div class="weatherTop">
+      <h1 class="weatheH1"  id="live">
+        今天是2013年9月22日 星期日 农历八月十八
+  
+<!--today5-->
+
+        <select class="weatherSelect" onchange="MM_jumpMenu('parent',this,0)">
+          <option>相关地区</option>
+          <option value="http://www.weather.com.cn/weather/101131401.shtml">阿勒泰</option><option value="http://www.weather.com.cn/weather/101131405.shtml">吉木乃</option><option value="http://www.weather.com.cn/weather/101131406.shtml">布尔津</option><option value="http://www.weather.com.cn/weather/101131409.shtml">青河</option><option value="http://www.weather.com.cn/weather/101131408.shtml">富蕴</option><option value="http://www.weather.com.cn/weather/101131402.shtml">哈巴河</option><option value="http://www.weather.com.cn/weather/101131407.shtml">福海</option>
+        </select>
+      </h1>
+      <div class="weatherTopleft" >
+        <h1>阿勒泰<span>(Aletai)</span></h1>
+        <dl>
+          <dt>
+          <div style="width:180px;height:146px;overflow:hidden;margin-bottom:5px;margin-top:5px;">
+            <div class="groupposter_4_101131401"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"PIC","files":[{"file":"http:\/\/poster.weather.com.cn\/p_files\/base\/101131401.jpg","link":"http:\/\/poster1.weather.com.cn\/r.php?url=http%3A%2F%2Fwww%2Eweather%2Ecom%2Ecn%2Fcityintro%2F101131401%2Eshtml&p=4097&pos=4&ch=101131401&ck=101135502","IsFlash":"img"}],"code":"","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"180","height":"146","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=4097&pos=4&ch=101131401&act=&order=&contract=&host=&ck=101135502","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+            </div>
+          </dt>
+          <dd class="fenxiang">
+         <span>
+ <div class="shareto_toolbox" style="margin-top:2px;margin-left:10px;">
+<span class="shareto_button_compact st_button stico stico_shareto">天气分享：</span>
+<a href="javascript:void(0);" class="shareto_button_tsina" title="分享到新浪微博"><span class="stico st_button stico_tsina"></span></a>
+<a href="javascript:void(0);" class="shareto_button_tsohu" title="分享到搜狐微博"><span class="stico st_button stico_tsohu"></span></a>
+<a href="javascript:void(0);" class="shareto_button_t163" title="分享到网易微博"><span class="stico st_button stico_t163"></span></a>
+<a href="javascript:void(0)" onclick="postToWb();" title="分享到腾讯微博"><span class="stico_qq"></span></a>
+</div>
+<script type="text/javascript" src="http://www.weather.com.cn//m2/j/topic/shtqbbx.js" charset="utf-8"></script>     </span>
+          </dd>
+        </dl>
+      </div>
+      <script language="javaScript" type="text/javascript" src="/m2/j/sk.js" /> </script>
+	
+      
+      <div class="weatherTopright">
+        <h1>相关数据</h1>
+        <dl>
+          <dt><a>今日日出日落时间</a></dt>
+          <dd>
+            <a href="http://baike.weather.com.cn/index.php?doc-view-1263.php" style="text-decoration: none;" target="_blank"><strong style="font-size:16px;color:#000;font-weight:bold;">07:54</strong></a>
+            |
+            <a href="http://baike.weather.com.cn/index.php?doc-view-1264.php" style="text-decoration: none;" target="_blank"><strong style="font-size:16px;color:#000;font-weight:bold;">20:05</strong></a>
+          </dd>
+      	</dl>
+        <dl>
+
+          <dt><a>明日日出日落时间</a></dt>
+          <dd>
+            <a href="http://baike.weather.com.cn/index.php?doc-view-1263.php" style="text-decoration: none;"  target="_blank"><strong style="font-size:16px;color:#000;font-weight:bold;">07:55</strong></a>
+            |
+            <a href="http://baike.weather.com.cn/index.php?doc-view-1264.php" style="text-decoration: none;" target="_blank"><strong style="font-size:16px;color:#000;font-weight:bold;">20:03</strong></a>
+          </dd>
+        </dl>
+        <dl>
+       
+          <dt><a>邮政编码</a></dt>
+          <dd><b><a style="font-weight:bold;font-size:16px;color:#000;text-decoration:none;">836500</a></b></dd>
+        </dl>
+        
+      </div>
+      
+      
+      <div class="cleardiv"></div>
+      
+      
+       
+      
+      
+      
+      <div class="weatherYubao"  id="7d">
+        <h1 class="weatheH1">
+          阿勒泰天气预报 (2013-09-22&nbsp;
+          11:00发布)
+          <span>
+            <a id="weatherClickYubao" href="#">查看未来4-7天天气预报</a>
+            <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">天气图例</a>
+          </span>
+        </h1>
+        <div class="weatherYubaoBox">
+          <table class="tableTop" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="27%">日期</th>
+            <th width="28%">天气现象</th>
+            <th width="15%">气温</th>
+            <th width="15%">风向</th>
+            <th width="15%">风力</th>
+          </tr>
+          </table>
+          <!--day 1-->
+          <table class="yuBaoTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%" rowspan="2" class="t0" style="background:#f4f7fc;"><a class="cyclePrediction" title="农历八月十八 秋分">22日星期日</a></td>
+            <td width="12%" style="background:#f4f7fc;">白天</td>
+            <td width="10%">
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/d00.gif" />
+              </a>
+            </td>
+            <td width="18%"><a href ="http://baike.weather.com.cn/index.php?doc-view-767.php" target="_blank">晴</a></td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank">
+                <b>高温 <strong>14℃</strong></b>
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#f4f7fc;">夜间</td>
+            <td>
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/n00.gif" />
+              </a>
+            </td>
+            <td><a href ="http://baike.weather.com.cn/index.php?doc-view-767.php" target="_blank">晴</a></td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank">
+                <span>低温 <strong>0℃</strong></span>
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          </table>
+          <!--day 2-->
+          <table class="yuBaoTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%" rowspan="2" class="t0" style="background:#f4f7fc;"><a title="农历八月十九">23日星期一</a></td>
+            <td width="12%" style="background:#f4f7fc;">白天</td>
+            <td width="10%">
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/d00.gif" />
+              </a>
+            </td>
+            <td width="18%"><a href ="http://baike.weather.com.cn/index.php?doc-view-767.php" target="_blank">晴</a></td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank">
+                <b>高温 <strong>16℃</strong></b>
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#f4f7fc;">夜间</td>
+            <td>
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/n00.gif" />
+              </a>
+            </td>
+            <td><a href ="http://baike.weather.com.cn/index.php?doc-view-767.php" target="_blank">晴</a></td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank">
+                <span>低温 <strong>3℃</strong></span>
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          </table>
+          <!--day 3-->
+          <table class="yuBaoTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%" rowspan="2" class="t0" style="background:#f4f7fc;"><a title="农历八月二十">24日星期二</a></td>
+            <td width="12%" style="background:#f4f7fc;">白天</td>
+            <td width="10%">
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/d00.gif" />
+              </a>
+            </td>
+            <td width="18%"><a href ="http://baike.weather.com.cn/index.php?doc-view-767.php" target="_blank">晴</a></td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank">
+                <b>高温 <strong>22℃</strong></b>
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#f4f7fc;">夜间</td>
+            <td>
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/n00.gif" />
+              </a>
+            </td>
+            <td><a href ="http://baike.weather.com.cn/index.php?doc-view-767.php" target="_blank">晴</a></td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank">
+                <span>低温 <strong>8℃</strong></span>
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          </table>
+        </div>
+      </div>
+      
+      <div class="weatherYubao" id="weatherYubao2">
+        <h1 class="weatheH1">未来4-7天天气预报（2013-09-21 18:00发布）&nbsp;&nbsp;&nbsp;&nbsp;仅供参考</h1>
+        <div class="weatherYubaoBox">
+          <!--day 4-->
+          <table class="yuBaoTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%" rowspan="2" class="t0" style="background:#f4f7fc;"><a title="农历八月廿一">25日星期三</a></td>
+            <td width="12%" style="background:#f4f7fc;">白天</td>
+            <td width="10%">
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/d00.gif" />
+              </a>
+            </td>
+            <td width="18%"><a href ="http://baike.weather.com.cn/index.php?doc-view-767.php" target="_blank">晴</a></td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank">
+                <b>高温 <strong>21℃</strong></b>
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#f4f7fc;">夜间</td>
+            <td>
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/n01.gif" />
+              </a>
+            </td>
+            <td><a href ="http://baike.weather.com.cn/index.php?doc-view-769.php" target="_blank">多云</a></td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank">
+                <span>低温 <strong>9℃</strong></span>
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          </table>
+          <!--day 5-->
+          <table class="yuBaoTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%" rowspan="2" class="t0" style="background:#f4f7fc;"><a title="农历八月廿二">26日星期四</a></td>
+            <td width="12%" style="background:#f4f7fc;">白天</td>
+            <td width="10%">
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/d01.gif" />
+              </a>
+            </td>
+            <td width="18%"><a href ="http://baike.weather.com.cn/index.php?doc-view-769.php" target="_blank">多云</a></td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank">
+                <b>高温 <strong>21℃</strong></b>
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#f4f7fc;">夜间</td>
+            <td>
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/n01.gif" />
+              </a>
+            </td>
+            <td><a href ="http://baike.weather.com.cn/index.php?doc-view-769.php" target="_blank">多云</a></td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank">
+                <span>低温 <strong>8℃</strong></span>
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          </table>
+          <!--day 6-->
+          <table class="yuBaoTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%" rowspan="2" class="t0" style="background:#f4f7fc;"><a title="农历八月廿三">27日星期五</a></td>
+            <td width="12%" style="background:#f4f7fc;">白天</td>
+            <td width="10%">
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/d02.gif" />
+              </a>
+            </td>
+            <td width="18%"><a href ="http://baike.weather.com.cn/index.php?doc-view-770.php" target="_blank">阴</a></td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank">
+                <b>高温 <strong>20℃</strong></b>
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:#f4f7fc;">夜间</td>
+            <td>
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/n01.gif" />
+              </a>
+            </td>
+            <td><a href ="http://baike.weather.com.cn/index.php?doc-view-769.php" target="_blank">多云</a></td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank">
+                <span>低温 <strong>8℃</strong></span>
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td>
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+          </tr>
+          </table>
+          <!--day 7-->
+          <table class="yuBaoTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+            <td width="15%" class="t0" style="background:#f4f7fc;"><a class="cyclePrediction" title="农历八月廿四">28日星期六</a></td>
+            <!-- START WRating v1.0 -->
+<script type="text/javascript" src="http://c.wrating.com/a1.js">
+</script>
+<script type="text/javascript">
+var vjAcc="860010-2151030100";
+var wrUrl="http://c.wrating.com/";
+vjTrack("");
+</script>
+<noscript><img src="http://c.wrating.com/a.gif?a=&c=860010-2151030100" width="1" height="1"/></noscript>
+<!-- END WRating v1.0 -->
+            
+            
+            
+            <td width="12%" style="background:#f4f7fc;">白天</td>
+            <td width="10%">
+              <a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank">
+                <img src="/m2/i/icon_weather/29x20/d07.gif" />
+              </a>
+            </td>
+            <td width="18%"><a href ="http://baike.weather.com.cn/index.php?doc-view-612.php" target="_blank">小雨</a></td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank">
+                <b>高温 <strong>19℃</strong></b>
+              </a>
+            </td>
+            <td width="15%">
+              <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                无持续风向
+              </a>
+            </td>
+            <td width="15%">
+            <a href="http://baike.weather.com.cn/index.php?doc-view-778.php" target="_blank">
+                微风
+              </a>
+            </td>
+	  </tr>
+          </table>
+        </div>
+      </div>
+</div>
+      
+      
+<script type="text/javascript" src="http://m.weather.com.cn/a1.js">
+</script>
+<script type="text/javascript">
+var vjAcc="860010-2099040100";
+var wrUrl=" http://c.wrating.com/";
+var splitUrl = document.location.toString().split("?");
+if(splitUrl.length == 2)
+{
+if(splitUrl[1].indexOf('from') > -1)
+{
+var search_key = document.location.search.toString().replace("?from=",'');
+if(search_key != 'baidu' && search_key != 'coop' && search_key != 'hao123')
+{
+search_key = 'weather';
+}
+vjSetReferrer("http://flash."+search_key+".com.cn/come/from/flash.html");
+}
+}
+vjTrack("");
+</script>
+<noscript><img src="http://c.wrating.com/a.gif?a=&c=860010-2099040100" width="1" height="1"/></noscript>
+
+<script type="text/javascript" src="http://click.wrating.com/c3.js">;
+</script> 
+<script type="text/javascript">
+var vjClickAcc="860010-2099040100";
+var wrUrl="http://click.wrating.com/";
+vjPattern[0] = "http://www.weather.com.cn/html/weather/101190101.shtml";
+initMouseClick();
+</script> 
+      
+<div class="adposter_6122"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%27text%2Fjavascript%27%3E%0D%0ATQ_FillSlot%28%2710000_001_03%27%29%3B%0D%0A%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"650","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6122&pos=0&ch=9993&act=1291&order=641&contract=182&host=153&ck=18382","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+     
+
+</div>
+
+
+<div class="weatherRight">
+
+
+<div class="adposter_6116" style="background:url(/m2/i/index/loading.gif) center center no-repeat #eee">
+<div class="adposter_6116"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%27text%2Fjavascript%27%3E%0D%0ATQ_FillSlot%28%2710000_001_02%27%29%3B%0D%0A%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6116&pos=0&ch=9993&act=1389&order=641&contract=182&host=153&ck=18474","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+ </div>    
+
+
+  
+  <script type="text/javascript">
+	var urlSTATIONNAME="阿勒泰";
+	var urlCITY="阿勒泰";
+	var urlPROVINCE="新疆";
+	</script> 
+        
+        <script type="text/javascript" src="/m2/j/alamr_new/stationalarm_120907.js?areaid=101131401"></script>
+        
+        
+        <script src="/m2/j/weather/fcmodules.js" type="text/javascript"></script>
+        
+        <img src="http://poster.weather.com.cn/c.gif" width="1" height="1" style="display:none"/>
+        
+        
+        
+      
+
+     <!--<div class="rightWeatherImg">
+<a href="http://www.weather.com.cn/zt/tqzt/711469.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/09/20/6141723B06E09F1C9DCF46A2846EF2B0.jpg"></a> 
+</div>-->
+
+      <!--焦点图-->
+      <div class="RadarSatellit fcd" style="height:235px;">
+<ul>
+<li class="moverad"><a>焦点图片</a></li>
+<li class=""><a>高清图集</a></li>
+</ul>
+<div class="RadarSatelliteim" style="display: block;">
+<dl><dt><a href="http://www.weather.com.cn/news/2013/09/1972650.shtml" title="追风：天兔狰狞初现" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/09/22/55D85F200677256D745C2A5DDD9C8957.jpg" height="90" width="120" alt="追风：天兔狰狞初现"/></a></dt><dd><a href="http://www.weather.com.cn/news/2013/09/1972650.shtml" title="追风：天兔狰狞初现" target="_blank" >追风：天兔狰狞初现</a></dd></dl><dl><dt><a href="http://www.weather.com.cn/photo/2013/09/gqt/1971385.shtml" title="超强台风天兔卫星云图" target="_blank"><img src="http://pic.weather.com.cn/images/cn/photo/2013/09/19/BA6D6C1D2059F8AB4E5A2453410DE28E.jpg" height="90" width="120" alt="超强台风天兔卫星云图"/></a></dt><dd><a href="http://www.weather.com.cn/photo/2013/09/gqt/1971385.shtml" title="超强台风天兔卫星云图" target="_blank" >超强台风天兔卫星云图</a></dd></dl><div style="clear:both;"></div><p><a href="http://www.weather.com.cn/life/2013/09/gdt/1972234.shtml" target="_blank" style="color:" >地铁线加班为首都缓堵</a><a href="http://www.weather.com.cn/news/2013/09/1972440.shtml" target="_blank" style="color:" >深圳学校停课景区停业</a></p><p><a href="http://www.weather.com.cn/news/2013/09/1971877.shtml" target="_blank" style="color:" >因雨可获赔中秋赏月险</a><a href="http://www.weather.com.cn/video/2013/09/lssj/1972498.shtml" target="_blank" style="color:" >天兔降临台湾狂风暴雨</a></p><p><a href="http://www.weather.com.cn/news/2013/09/1972186.shtml" target="_blank" style="color:" >福建修整“隐患”树木</a><a href="http://www.weather.com.cn/news/2013/09/1972656.shtml" target="_blank" style="color:" >黑龙江局地将降温10℃</a></p> 
+</div>
+<div class="RadarSatelliteim" style="display: none;">
+<dl><dt><a href="http://www.weather.com.cn/photo/2013/09/gqt/1972680.shtml" title="天兔逼近福州乌云压境" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/09/22/CE9C6D0CC846DFCDCBCA46ED2EDCD69B.jpg" height="90" width="120" alt="天兔逼近福州乌云压境"/></a></dt><dd><a href="http://www.weather.com.cn/photo/2013/09/gqt/1972680.shtml" title="天兔逼近福州乌云压境" target="_blank" >天兔逼近福州乌云压境</a></dd></dl><dl><dt><a href="http://www.weather.com.cn/photo/2013/09/gqt/1972751.shtml" title="雾锁黄河" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/09/22/2D49091F2B8B9FBB36317577D1EAB6B0.jpg" height="90" width="120" alt="雾锁黄河"/></a></dt><dd><a href="http://www.weather.com.cn/photo/2013/09/gqt/1972751.shtml" title="雾锁黄河" target="_blank" >雾锁黄河</a></dd></dl><div style="clear:both;"></div><p><a href="http://www.weather.com.cn/photo/2013/09/gqt/1972301.shtml" target="_blank" style="color:" >天兔携狂风暴雨袭台湾</a><a href="http://www.weather.com.cn/photo/2013/09/gqt/1972047.shtml" target="_blank" style="color:" >天兔袭菲律宾风雨肆虐</a></p><p><a href="http://www.weather.com.cn/photo/2013/09/gqt/1970846.shtml" target="_blank" style="color:" >福建20余渔船葬身火海</a><a href="http://www.weather.com.cn/photo/2013/09/gqt/1971849.shtml" target="_blank" style="color:" >浙江钱江潮水惊退游客</a></p><p><a href="http://www.weather.com.cn/photo/2013/09/gqt/1971422.shtml" target="_blank" style="color:" >印尼出现火山闪电现象</a><a href="http://www.weather.com.cn/photo/2013/09/gqt/1971447.shtml" target="_blank" style="color:" >中秋佳节各地赏月美图</a></p>
+</div>
+</div>
+
+      
+      
+        <div class="adposter_6117"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%27text%2Fjavascript%27%3E%0D%0ATQ_FillSlot%28%2710000_001_05%27%29%3B%0D%0A%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6117&pos=0&ch=9993&act=1127&order=641&contract=182&host=153&ck=18213","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+      
+     <!--热点排行-->
+     
+
+
+
+
+
+
+<div class="dWeatherRanking">
+  <h2 class="dWeatherRankingH1">热点排行</h2>
+  <ul class="dWeatherRankingBox">
+
+<li><a href="http://www.weather.com.cn/news/2013/09/1972700.shtml" target="_blank"  style="color:">台风红色预警：“天兔”逐渐向广东沿海靠近</a></li><li><a href="http://www.weather.com.cn/news/2013/09/1972689.shtml" target="_blank"  style="color:">暴雨黄色预警：福建广东等局地有大暴雨</a></li><li><a href="http://www.weather.com.cn/photo/2013/09/gqt/1969980.shtml" target="_blank"  style="color:">佛爷顶上观天人 一个人的气象站</a></li><li><a href="http://www.weather.com.cn/news/2013/09/1972264.shtml" target="_blank"  style="color:">强风暴雨高潮位聚头 “天兔”将正面袭华南</a></li><li><a href="http://www.weather.com.cn/news/2013/09/1972051.shtml" target="_blank"  style="color:">“天兔”逼近 广东台风应急响应升至Ⅱ级</a></li>
+
+    </ul>
+</div>
+
+
+      
+     <div class="adposter_6118"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3E%0D%0A%2F%2A300%2A250%EF%BC%8C%E5%88%9B%E5%BB%BA%E4%BA%8E2012-3-9%2A%2F%0D%0Avar+cpro_id+%3D+%22u799812%22%3B%0D%0A%3C%2Fscript%3E%0D%0A%3Cscript+src%3D%22http%3A%2F%2Fcpro.baidustatic.com%2Fcpro%2Fui%2Fc.js%22+type%3D%22text%2Fjavascript%22%3E%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6118&pos=0&ch=9993&act=1314&order=640&contract=181&host=154&ck=18400","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+
+    
+    
+    
+
+<!--生活旅游和气候科普-->      
+     <div class="lifeTravel" style="height:140px;overflow:hidden;"> 
+     	<ul class="lifeTravelNav" id="lifeTravelNav">
+          <li class="move"><a>生活旅游</a></li>
+          <li><a>气候科普</a></li>
+        </ul> 
+    <div> 
+<dl>
+<dt>
+<span><a href="http://www.weather.com.cn/life/index.shtml" title="让暴雨不再成灾" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/09/05/BC9CA27F6453A6555859EB77293C6BE2.jpg" alt="让暴雨不再成灾" style="width:88px;height:68px;" alter="让暴雨不再成灾"/></a><a href="http://www.weather.com.cn/life/index.shtml" title="让暴雨不再成灾" target="_blank"  style="color:" >让暴雨不再成灾</a></span></dt><dd><ul class="listNews"><li><a href="http://www.weather.com.cn/life/2013/09/gdt/1972739.shtml" target="_blank" style="color:" >23日秋分 天气渐冷莫忘添衣</a></li><li><a href="http://tourism.weather.com.cn/index/lytqkx/2013/09/1972730.shtml" target="_blank" style="color:" >权威发布：海滨浴场出游提示</a></li><li><a href="http://www.weather.com.cn/life/2013/09/gdt/1972560.shtml" target="_blank" style="color:" >天兔致航空公司大量取消航班</a></li><li><a href="http://tourism.weather.com.cn/index/lytqkx/2013/09/1972555.shtml" target="_blank" style="color:" >今明天是钱塘江最佳看潮时间</a></li></ul></dd>
+      </dl>
+    </div>
+
+    <div style="display:none;">   	 
+<dl class="dquwen"><dt style="height:85px;width:120px;"><a href="http://www.weather.com.cn/climate/2013/09/qhbhyw/1968753.shtml" title="美发射太空太阳能卫星" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/09/22/987B66A2B343561655D52BBE20FDAF58.jpg" alt="美发射太空太阳能卫星"  style="height:80px;width:120px;"  alter="美发射太空太阳能卫星"/></a></dt><dd><a href="http://www.weather.com.cn/climate/2013/09/qhbhyw/1968753.shtml" title="美发射太空太阳能卫星" target="_blank"style="color:">美发射太空太阳能卫星</a></dd></dl><dl class="dquwen"><dt style="height:85px;width:120px;"><a href="http://www.weather.com.cn/climate/2013/09/qhbhyw/1970103.shtml" title="变暖让乌鱼“失约”" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2013/09/22/41CAC6D147717B50EB0EB4165A794480.jpg" alt="变暖让乌鱼“失约”"  style="height:80px;width:120px;"  alter="变暖让乌鱼“失约”"/></a></dt><dd><a href="http://www.weather.com.cn/climate/2013/09/qhbhyw/1970103.shtml" title="变暖让乌鱼“失约”" target="_blank"style="color:">变暖让乌鱼“失约”</a></dd></dl>
+</div>
+
+     </div>
+     
+     
+     
+        
+   
+     
+      
+      
+      <div class="adposter_6119"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_005_05%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6119&pos=0&ch=9993&act=1302&order=640&contract=181&host=154&ck=18389","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+            
+      
+      <!--专家在线-->
+      <div class="life">
+  <h1 class="mainBoxh1">专家在线 <span class="moredd"><a href="http://www.weather.com.cn/index/zjzx/index.shtml" title="更多" target="_blank">更多</a></span></h1>
+<dl><dt><a href="http://www.weather.com.cn/news/2013/09/1972764.shtml" title="下半年来最强冷空气来袭" target="_blank"><img src="http://i.weather.com.cn/images/cn/index/2013/09/22/7FCD8EB0ED77618C1135581457BF45CC.jpg"alt="下半年来最强冷空气来袭" style="height:68px;width:88px;"></a></dt><dd><h2><a href="http://www.weather.com.cn/news/2013/09/1972764.shtml" title="下半年来最强冷空气来袭" target="_blank">下半年来最强冷空气来袭</a></h2>今年下半年以来最强的一股冷空气在新疆发起攻势，受其影响，华北至黄淮大部地区将进入气象意义的秋季。 </dd></dl><ul class="listNews"><li><a href="http://www.weather.com.cn/news/2013/09/1972264.shtml"target="_blank" >凶猛“天兔”将正面袭华南</a></li><li><a href="http://www.weather.com.cn/news/2013/09/1971249.shtml"target="_blank" >“天兔”风雨闹中秋</a></li><li><a href="http://www.weather.com.cn/news/2013/09/1969656.shtml"target="_blank" >北京走出汛期 期待中秋月</a></li>
+</ul> 
+</div>
+
+      
+      
+     <div class="adposter_6120"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_005_03%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6120&pos=0&ch=9993&act=1243&order=640&contract=181&host=154&ck=18331","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+     
+      
+      <div class="leida_weixing">
+<h1>气象产品</h1>
+<ul class="wei_one">
+<li><a href="http://www.weather.com.cn/html/radar/JC_RADAR_AZ9990_JB.shtml" target="_blank">克拉玛依基本反射率单站雷达图</a></li>
+<li><a href="http://www.weather.com.cn/html/radar/JC_YT_DL_WXZXCSYT.shtml" target="_blank">中国大陆区域彩色云图</a></li>
+</ul>
+<ul>
+<li><a href="http://www.weather.com.cn/index/zxqxgg/wlstyb.shtml" target="_blank">未来三天天气趋势预报</a></li>
+<li><a href="http://www.weather.com.cn/static/product.php?class=YB_WD_ZD24" target="_blank">全国最低气温分布</a></li>
+<li><a href="http://www.weather.com.cn/index/zxqxgg/wlshtyb.shtml" target="_blank">未来十天天气趋势预报</a></li>
+<li><a href="http://www.weather.com.cn/static/product.php?class=YB_WD_ZG24"  target="_blank">全国最高气温分布</a></li>
+<li><a href="http://www.weather.com.cn/static/product.php?class=JC_JSL_02405" target="_blank">全国降水量实况</a></li>
+<li><a href="http://www.weather.com.cn/static/product.php?class=YB_GL_SJL_24H" target="_blank">全国公路降水量预报</a></li>
+<li><a href="http://www.weather.com.cn/static/product.php?class=YB_JSL_024" target="_blank">全国降水量预报</a></li>
+<li><a href="http://www.weather.com.cn/static/product.php?class=YB_ZSLQ_KQWRKSTJ" target="_blank">重点城市空气质量预报</a></li>
+</ul>
+</div>
+
+<div class="adposter_6121"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_005_04%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6121&pos=0&ch=9993&act=1248&order=640&contract=181&host=154&ck=18337","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+
+
+  </div>
+  <div class="weatherLeft">
+
+    <!-- Live start-->
+    <div class="live">
+      <iframe name="surf" src="http://flash.weather.com.cn/sk2/shikuang.swf?id=101131401" scrolling="no" width="650" height="240"  frameborder="0"></iframe>
+    </div>
+    <!-- Live end-->
+ 
+ 
+     <!--IndexFc start-->
+    <div id="aboutZS" style="overflow:hidden;width:650px;">
+    
+    <h2 class="weatheH1" style="position:relative;">
+      今日生活指数(2013-09-22 11:00发布)
+      <span style="position:absolute; right:4px;top:0px;*top:33px;"><a href="javascript:void(0)" class="ckqbs" style="color:#000;font-weight:bold;">热门指数</a><a href="javascript:void(0)" class="ckqbs">其它指数</a></span></h2>
+      <div class="zs" id="zs0">
+      <ul>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail ag">
+                <aside><b>
+                  不易发
+                  </b>
+                  除特殊体质，无需担心过敏问题。
+                </aside>
+                <a target="_blank" href="http://www.weather.com.cn/zt/kpzt/ag_index.shtml"></a></section>
+              <section class="imgArea"><a title="过敏指数" target="_blank" href="http://www.weather.com.cn/zt/kpzt/ag_index.shtml"><img alt="过敏指数" src="/m2/i/zs/zs_pic/18.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+                不易发
+                </span>
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://www.weather.com.cn/zt/kpzt/ag_index.shtml"><b>过敏指数</b></a></h3>
+          <span class="xsm"></span> </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail yd">
+                <aside><b>
+                  较不宜
+                  </b>
+                  天气寒冷，推荐您进行室内运动。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1395.php"></a></section>
+              <section class="imgArea"><a  title="运动指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1395.php"><img alt="运动指数" src="/m2/i/zs/zs_pic/1.jpg"></a>
+               <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+               较不宜
+              </span>
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1395.php"><b>运动指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail xc">
+                <aside><b>
+                  适宜
+                  </b>
+                  天气较好，适合擦洗汽车。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1393.php"></a></section>
+              <section class="imgArea"><a title="洗车指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1393.php"><img alt="洗车指数" src="/m2/i/zs/zs_pic/3.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+                适宜
+		</span>             
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1393.php"><b>洗车指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail pp">
+                <aside><b>
+                  滋润保湿
+                  </b>
+                  请选用滋润保湿型化妆品。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1397.php"></a>
+                </section>
+              <section class="imgArea"><a title="化妆指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1397.php"><img alt="化妆指数" src="/m2/i/zs/zs_pic/6.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+                滋润保湿
+			
+		</span>	
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1397.php"><b>化妆指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail gm">
+                <aside><b>
+                  易发
+                  </b>
+                  昼夜温差大，易感冒。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1391.php"></a>
+                </section>
+              <section class="imgArea"><a title="感冒指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1391.php"><img alt="感冒指数" src="/m2/i/zs/zs_pic/19.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+                易发
+
+		</span>	
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1391.php"><b>感冒指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail uv">
+                <aside><b>
+                  中等
+                  </b>
+                  涂擦SPF大于15、PA+防晒护肤品。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1387.php"></a>
+                </section>
+              <section class="imgArea"><a title="紫外线指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1387.php"><img alt="紫外线指数"  src="/m2/i/zs/zs_pic/20.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              中等
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1387.php"><b>紫外线指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail tr">
+                <aside><b>
+                  适宜
+                  </b>
+                  天气较好，可尽情地享受大自然的风光。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1396.php"></a></section>
+              <section class="imgArea"><a title="旅游指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1396.php"><img alt="旅游指数" src="/m2/i/zs/zs_pic/12.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+               适宜
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1396.php"><b>旅游指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail pl">
+                <aside><b>
+                  中
+                  </b>
+                  易感人群应适当减少室外活动。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1388.php"></a></section>
+              <section class="imgArea"><a title="空气污染扩散条件指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1388.php"><img alt="空气污染扩散条件指数" src="/m2/i/zs/zs_pic/2.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              中
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1388.php"><b>空气污染扩散指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail ct">
+                <aside><b>
+                  冷
+                  </b>
+                  建议着棉衣加羊毛衫等冬季服装。
+                </aside>
+                <a target="_blank" href="http://www.weather.com.cn/indexfc/ct/101131401.shtml"></a></section>
+              <section class="imgArea"><a title="穿衣指数" target="_blank" href="http://www.weather.com.cn/indexfc/ct/101131401.shtml"><img alt="穿衣指数" src="/m2/i/zs/zs_pic/5.jpg"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              冷
+			
+		</span>		
+              
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://www.weather.com.cn/indexfc/ct/101131401.shtml"><b>穿衣指数</b></a></h3>
+          <span class="ytw"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="zs yinc" id="zs1" style="display:none;">
+      <ul>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail gj">
+                <aside><b>
+                  适宜
+                  </b>
+                  这种好天气去逛街可使身心畅快放松。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1404.php"></a></section>
+              <section class="imgArea"><a title="逛街指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1404.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              适宜
+              </span>	
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1404.php"><b>逛街指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail co">
+                <aside><b>
+                  舒适
+                  </b>
+                  白天不冷不热，风力不大。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1051.php"></a></section>
+              <section class="imgArea"><a title="舒适度指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1051.php"></a>
+               <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              舒适
+			
+		</span>	
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1051.php"><b>舒适度指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail mf">
+                <aside><b>
+                  适宜
+                  </b>
+                  建议选择含防晒滋润成分的护发品。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1405.php"></a></section>
+              <section class="imgArea"><a title="美发指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1405.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              适宜
+			
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1405.php"><b>美发指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail ys">
+                <aside><b>
+                  不带伞
+                  </b>
+                  天气较好，不用带雨伞。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1400.php"></a></section>
+              <section class="imgArea"><a title="雨伞指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1400.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              不带伞
+			
+              </span>
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1400.php"><b>雨伞指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail jt">
+                <aside><b>
+                  良好
+                  </b>
+                  气象条件良好，车辆可以正常行驶。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1392.php"></a></section>
+              <section class="imgArea"><a title="交通指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1392.php"></a>
+               <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+               良好
+		</span>	
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1392.php"><b>交通指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail lk">
+                <aside><b>
+                  干燥
+                  </b>
+                  天气较好，路面比较干燥，路况较好。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1401.php"></a></section>
+              <section class="imgArea"><a title="路况指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1401.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              干燥
+		</span>	
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1401.php"><b>路况指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail cl">
+                <aside><b>
+                  较适宜
+                  </b>
+                  建议晨练着装不要过于单薄，以防感冒。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1390.php"></a></section>
+              <section class="imgArea"><a title="晨练指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1390.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              较适宜
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1390.php"><b>晨练指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail dy">
+                <aside><b>
+                  较适宜
+                  </b>
+                  天气稍凉会对垂钓产生一定影响。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1398.php"></a></section>
+              <section class="imgArea"><a title="钓鱼指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1398.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+               较适宜
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1398.php"><b>钓鱼指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail hc">
+                <aside><b>
+                  较适宜
+                  </b>
+                  气温低注意及时添衣，小心着凉。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1402.php"></a></section>
+              <section class="imgArea"><a title="划船指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1402.php"></a>
+               <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              较适宜
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1402.php"><b>划船指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail yh">
+                <aside><b>
+                  适宜
+                  </b>
+                  天气较好，适宜约会。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1399.php"></a></section>
+              <section class="imgArea"><a title="约会指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1399.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+              适宜
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1399.php"><b>约会指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail ls">
+                <aside><b>
+                  基本适宜
+                  </b>
+                  天气不错，抓紧时机让衣物晒太阳吧。
+                </aside>
+                <a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1394.php"></a></section>
+              <section class="imgArea"><a title="晾晒指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1394.php"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+               基本适宜
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1394.php"><b>晾晒指数</b></a></h3>
+        </li>
+        <li>
+          <section class="mask">
+            <section class="area">
+              <section class="detail fs">
+                <aside><b>
+                  中等
+                  </b>
+                  适合涂擦SPF大于15，PA+护肤品。
+                </aside>
+                <a target="_blank" href="http://www.weather.com.cn/indexfc/fs/101131401.shtml"></a></section>
+              <section class="imgArea"><a title="防晒指数" target="_blank" href="http://www.weather.com.cn/indexfc/fs/101131401.shtml"></a>
+              <span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;">
+               中等
+		</span>		
+              </section>
+            </section>
+          </section>
+          <h3><a target="_blank" href="http://www.weather.com.cn/indexfc/fs/101131401.shtml"><b>防晒指数</b></a></h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+ 
+ 
+ 
+    <div class="adposter_6123"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_005_01%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"650","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6123&pos=0&ch=9993&act=1274&order=640&contract=181&host=154&ck=18365","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    <!--RelaCity start-->
+    <div class="forecast">
+      <h1 class="weatheH1">
+        周边地区今日天气(2013-09-22&nbsp;&nbsp;11:00发布)
+        </h1>
+        <div class="forecastBox" id="forecastID">
+        <dl><dt><a href = "http://www.weather.com.cn/weather/101130101.shtml" target="_blank" title="乌鲁木齐天气预报">乌鲁木齐</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>12℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>4℃</b></a></dd></dl><dl><dt><a href = "http://www.weather.com.cn/weather/101130301.shtml" target="_blank" title="石河子天气预报">石河子</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>17℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>1℃</b></a></dd></dl><dl><dt><a href = "http://www.weather.com.cn/weather/101130201.shtml" target="_blank" title="克拉玛依天气预报">克拉玛依</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>16℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>6℃</b></a></dd></dl><dl><dt><a href = "http://www.weather.com.cn/weather/101130401.shtml" target="_blank" title="昌吉天气预报">昌吉</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>16℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>1℃</b></a></dd></dl><dl><dt><a href = "http://www.weather.com.cn/weather/101131101.shtml" target="_blank" title="塔城天气预报">塔城</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>17℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>5℃</b></a></dd></dl><dl><dt><a href = "http://www.weather.com.cn/weather/101131402.shtml" target="_blank" title="哈巴河天气预报">哈巴河</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>15℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>0℃</b></a></dd></dl><dl><dt><a href = "http://www.weather.com.cn/weather/101131406.shtml" target="_blank" title="布尔津天气预报">布尔津</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>15℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>-2℃</b></a></dd></dl><dl><dt><a href = "http://www.weather.com.cn/weather/101131407.shtml" target="_blank" title="福海天气预报">福海</a></dt><dd><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/d00.gif"  /></a><a href="http://www.weather.com.cn/static/html/legend.shtml" target="_blank"><img src="/m2/i/icon_weather/21x15/n00.gif"  /></a><a href="http://baike.weather.com.cn/index.php?doc-view-1148.php" target="_blank"><span>15℃</span></a>/<a href="http://baike.weather.com.cn/index.php?doc-view-1386.php" target="_blank"><b>0℃</b></a></dd></dl>
+        </div>
+    </div>
+    <!--RelaCity end-->
+    
+
+
+
+
+
+    
+
+    
+    
+      
+     
+
+ 
+<div class="adpos">   
+<div class="adposter_6124"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22%3ETQ_FillSlot%28%2710000_005_02%27%29%3B%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"650","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6124&pos=0&ch=9993&act=1275&order=640&contract=181&host=154&ck=18367","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+</div>
+
+    <!--include virtual="/pubmodel/left_sf.htm"-->
+    
+    <!--include virtual="/pub/left_topic_rec.htm"-->
+     
+    <!--include virtual="/pubmodel/left_prov_rec.htm"-->
+    
+    
+  <div class="lts">
+  <h1 class="weatheH1">社区互动</h1>
+  
+
+
+
+<div class="lesa"> 	 
+<dl><dt><a href="http://club.weather.com.cn/thread-526365-1-1.html" title="发现罕见紫鳗虾虎鱼" target="_blank"><img src="http://i.weather.com.cn/images/cn/life/2013/09/18/55F8B13A288AB7C1CC114936A5E12A1C.jpg" alt="发现罕见紫鳗虾虎鱼" width="120" height="90" alter="发现罕见紫鳗虾虎鱼"/></a></dt><dd><a href="http://club.weather.com.cn/thread-526365-1-1.html" title="发现罕见紫鳗虾虎鱼" target="_blank"  style="color:">发现罕见紫鳗虾虎鱼</a></dd></dl><dl><dt><a href="http://club.weather.com.cn/thread-526663-1-1.html" title="京最大铜铸观音菩萨像" target="_blank"><img src="http://i.weather.com.cn/images/cn/life/2013/09/22/9B0901761A67EAC9CA63B76909B1123A.jpg" alt="京最大铜铸观音菩萨像" width="120" height="90" alter="京最大铜铸观音菩萨像"/></a></dt><dd><a href="http://club.weather.com.cn/thread-526663-1-1.html" title="京最大铜铸观音菩萨像" target="_blank"  style="color:">京最大铜铸观音菩萨像</a></dd></dl><div style="clear:both;"></div><p><a href="http://club.weather.com.cn/thread-525871-1-1.html" target="_blank"  style="color:">中国天气网社区中秋踢楼送奖活动开始啦</a></p><p><a href="http://photo.weather.com.cn/photoUp/2013sy_autumn.php" target="_blank"  style="color:">2013年中国天气网秋季摄影大赛火热征集</a></p><p><a href="http://club.weather.com.cn/thread-525171-1-1.html" target="_blank"  style="color:">科学家在亚马逊丛林发现不明物体</a></p><p><a href="http://club.weather.com.cn/thread-524817-1-1.html" target="_blank"  style="color:">美教师记录阿拉斯加冰川消融绝美过程</a></p>
+</div>
+
+  <div class="relight">
+    <h2>一周热帖排行</h2>
+    <ul>
+
+<li><a href="http://club.weather.com.cn/thread-525871-1-1.html" target="_blank"  style="color:">中国天气网社区中秋踢楼送奖活动开始啦</a></li><li><a href="http://3g.weather.com.cn/wzfw/zgtqtpd/watch.shtml" target="_blank"  style="color:">中国天气通进驻三星首款智能手表Galaxy Gear</a></li><li><a href="http://www.weather.com.cn/photo/09/1965595.shtml" target="_blank"  style="color:">2013年夏季摄影大赛优秀天气生活类作品展示</a></li><li><a href="http://www.weather.com.cn/photo/09/1965638.shtml" target="_blank"  style="color:">2013年夏季摄影大赛天气新闻类优秀作品展示</a></li><li><a href="http://photo.weather.com.cn/photoUp/2013sy_autumn.php" target="_blank"  style="color:">2013年中国天气网秋季摄影大赛火热征集</a></li><li><a href="http://club.weather.com.cn/thread-517569-1-1.html" target="_blank"  style="color:">湖南重旱区受旱人口翻倍 水库干涸酷似荒漠</a></li>
+
+    </ul>
+</div>
+
+
+  
+  <p class="retie"><span>热门版块</span><a href="http://club.weather.com.cn/forum-91-1.html" target="_blank">图片征集</a><a href="http://club.weather.com.cn/forum-67-1.html" target="_blank">天气插件</a><a href="http://club.weather.com.cn/forum-61-1.html" target="_blank">降水乐园</a><a href="http://club.weather.com.cn/forum-62-1.html" target="_blank">生活天气</a><a href="http://club.weather.com.cn/forum-63-1.html" target="_blank">旅游天气</a><a href="http://club.weather.com.cn/forum-64-1.html" target="_blank">天气科普</a></p>
+</div>
+
+
+
+
+<div class="tjztsa">
+  <h1 class="weatheH1">近期重大天气事件</h1>
+  <div class="tjztLeft">
+  <p>9月22日</p><p>9月22日</p><p>9月21日</p><p>9月21日</p>
+
+</div>
+<div class="tjztRight">
+
+<div class="tjztdl"><dl><dt><a href="/index/2013/09/jqzdtqsj/1972766.shtml" title="“天兔”登陆在即 广东启动一级应急" target="_blank"><img src="http://i.weather.com.cn/images/cn/news/2013/09/22/46576BDED2499CD8727CA617A93C269A_s.jpg" alt="“天兔”登陆在即 广东启动一级应急" width="120" height="90" alter="“天兔”登陆在即 广东启动一级应急"/></a><dd><a href="/index/2013/09/jqzdtqsj/1972766.shtml" title="“天兔”登陆在即 广东启动一级应急" target="_blank">“天兔”登陆在即 广东启动一级应急</a><br />预计，今天傍晚到夜间，“天兔”将在广东惠来到台山一带沿海上岸。广东省气象局已于昨晚20时，将二级应急响应提升为一级。<a href="/index/2013/09/jqzdtqsj/1972766.shtml" title="“天兔”登陆在即 广东启动一级应急" target="_blank" class="xq">【详情】</a></dd></dl></div><div class="tjztdl"><dl><dt><a href="/photo/2013/09/gqt/1972301.shtml" title="超强台风“天兔”携狂风暴雨袭击台湾" target="_blank"><img src="http://pic.weather.com.cn/images/cn/photo/2013/09/21/37AADFF2FF8EDCFC534B4E1C405603D2_s.jpg" alt="超强台风“天兔”携狂风暴雨袭击台湾" width="120" height="90" alter="超强台风“天兔”携狂风暴雨袭击台湾"/></a><dd><a href="/photo/2013/09/gqt/1972301.shtml" title="超强台风“天兔”携狂风暴雨袭击台湾" target="_blank">超强台风“天兔”携狂风暴雨袭击台湾</a><br />受台风影响，台湾多个县市21日停班停课。花莲县政府下令将泥石流危险区域内的民众全数撤离。<a href="/photo/2013/09/gqt/1972301.shtml" title="超强台风“天兔”携狂风暴雨袭击台湾" target="_blank" class="xq">【详情】</a></dd></dl></div><div class="tjztdl"><dl><dt><a href="/index/2013/09/jqzdtqsj/1972149.shtml" title="超强台风“天兔”袭台 见证大熊猫圆仔成长" target="_blank"><img src="http://i.weather.com.cn/images/cn/news/2013/09/21/993CA18760ABFA50ED0CCC579A6617CD_s.jpg" alt="超强台风“天兔”袭台 见证大熊猫圆仔成长" width="120" height="90" alter="超强台风“天兔”袭台 见证大熊猫圆仔成长"/></a><dd><a href="/index/2013/09/jqzdtqsj/1972149.shtml" title="超强台风“天兔”袭台 见证大熊猫圆仔成长" target="_blank">超强台风“天兔”袭台 见证大熊猫圆仔成长</a><br />20日夜间，超强台风“天兔”外围云系已开始影响台湾，作为台北市动物园的明星动物，熊猫圆仔已经见怪不怪。据台北动物园方公布的视频资料，圆仔自出生至今，已是第四次经历台风天气，每一次都记录着它的成长。<a href="/index/2013/09/jqzdtqsj/1972149.shtml" title="超强台风“天兔”袭台 见证大熊猫圆仔成长" target="_blank" class="xq">【详情】</a></dd></dl></div><div class="tjztdl"><dl><dt><a href="/index/2013/09/jqzdtqsj/1972148.shtml" title="中秋赏月险揭晓：西安等9座城市因阴雨天气可获赔" target="_blank"><img src="http://i.weather.com.cn/images/cn/index/jqzdtqsj/2013/09/21/081A8DE8E8255B823E63B428C2271753_s.jpg" alt="中秋赏月险揭晓：西安等9座城市因阴雨天气可获赔" width="120" height="90" alter="中秋赏月险揭晓：西安等9座城市因阴雨天气可获赔"/></a><dd><a href="/index/2013/09/jqzdtqsj/1972148.shtml" title="中秋赏月险揭晓：西安等9座城市因阴雨天气可获赔" target="_blank">中秋赏月险揭晓：西安等9座城市因阴雨天气可获赔</a><br />在9月19日20时至9月20日凌晨2时的时间里，共有9个城市出现阴雨天气，可以获得赏月险赔付，其余32个城市均因晴天或多云天气无缘赏月理赔。<a href="/index/2013/09/jqzdtqsj/1972148.shtml" title="中秋赏月险揭晓：西安等9座城市因阴雨天气可获赔" target="_blank" class="xq">【详情】</a></dd></dl></div>
+
+  </div>
+</div>
+
+   
+  
+  </div>
+	
+</div>
+
+
+
+
+  
+  <div class="cleardiv"></div>
+</div>
+
+
+
+
+
+<div class="adposter_6127"> 
+ <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%27text%2Fjavascript%27%3E%0D%0ATQ_FillSlot%28%2710000_001_07%27%29%3B%0D%0A%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6127&pos=0&ch=9993&act=1278&order=641&contract=182&host=153&ck=18374","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script> 
+ </div> 
+
+
+
+
+
+
+
+
+<div class="bottomFooter"> <span class="footerNav"> <a href="http://www.weather.com.cn/wzfw/gywm/index.shtml">关于我们</a>-<a target="_blank" href="http://marketing.weather.com.cn/">营销中心</a>-<a target="_blank" href="http://ad.weather.com.cn/">广告服务</a>-<a href="http://www.weather.com.cn/wzfw/lxwm/index.shtml">联系我们</a>-<a href="http://www.weather.com.cn/wzfw/ryzp/index.shtml">人员招聘</a>-<a href="http://www.weather.com.cn/wzfw/wzls/index.shtml">网站律师</a>-<a href="http://www.weather.com.cn/wzfw/kfzx/index.shtml">客服中心</a>-<a href="http://club.weather.com.cn/member.php?mod=reuser.php">会员注册</a>-<a href="http://3g.weather.com.cn" target="_blank" style="color:#ffea00;font-weight:bold;">中国天气通</a>-<a href="http://www.weather.com.cn/wzfw/wapb/index.shtml">WAP版</a>-<a href="http://www.weather.com.cn/wzfw/sybz/index.shtml">使用帮助</a>-<a href="http://www.weather.com.cn/wzfw/wzdt/index.shtml">网站地图</a>-<a href="http://www.weather.com.cn/wzfw/bqsm/index.shtml" >版权声明</a></span>
+  <p> 客户服务热线：400-6000-121     客服邮箱：<a href="mailto:service@weather.com.cn">service@weather.com.cn</a>　广告服务：010-62134569<br />
+     Copyright&copy;中国气象局公共气象服务中心 All Rights Reserved (2008-2013) 版权所有 复制必究<br />
+    制作维护：中国气象局公共气象服务中心、阿勒泰地区气象局<br />
+    郑重声明：中国天气网<a href="http://www.weather.com.cn/wzfw/bqsm/index.shtml">版权所有</a>，未经书面授权禁止使用</p>
+  <span class="copyIcp"> 京ICP证010385号 京公网安备11041400134号 增值电信业务经营许可证B2-20050053 </span> </div>
+<script type="text/javascript">
+try{
+var cvalue=document.getElementById("colorid").value;
+document.getElementById(cvalue).className="move";
+}catch(e){}
+</script>
+
+
+
+<div id="ab">
+<img border="0" usemap="#Map" src="http://www.weather.com.cn/m2/i/xuanfu_new.jpg" title="中国天气通客户端" alt="中国天气通客户端">
+<map name="Map">
+	<area href="http://3g.weather.com.cn/" coords="6,111,105,213" shape="rect">
+	<area href="#" coords="19,10,80,27" shape="rect">
+	<area class="er_close" href="javascript:void(0)" coords="89,9,105,24" shape="rect">
+         <area shape="rect" coords="10,264,102,360" href="http://www.weather.com.cn/wzfw/weixin.shtml" />
+</map></div>
+
+
+<script type="text/javascript" src="http://www.weather.com.cn/m2/j/iphone_tan.js"></script>
+<script>LazyWrite.process();</script>
+</body>
+</html>
+
+
+<!--Generated By TurboCMS.Java V6.0 Build6002,Sun Sep 22 12:18:45 CST 2013,http://www.TurboCMS.com-->

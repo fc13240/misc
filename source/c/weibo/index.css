@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*共用部分*/
+.box{ margin:0 auto; width:1000px;}
+.box4col{width: 1340px;}
+.box5col{width: 1680px;}
+.borderBg{border:1px solid #ECECEC;width: 318px; border-radius:10px 10px 10px 10px; box-shadow:0 1px 3px rgba(0, 0, 0, 0.3); background:#fff;}
+
+/*顶部导航*/
+.toolBar{ background:url(../../i/weibo/icon.png) repeat-x 0 -186px; height:59px; z-index:2}
+.toolBar_logo{ background:url(../../i/weibo/icon.png) 0 7px no-repeat; height:60px; width:150px; display:block;}
+.toolBar_nav{ }
+.toolBarA,.toolBar_nav_hover{ color:#fff; font-size:16px; padding:0 18px;line-height:60px; float:left;}
+a.toolBarA:hover{ background:#F8F8F8; color:#2267A2;}
+.toolBar_nav i{ background:#72C4D9; width:1px; height:60px; display:block; float:left}
+.toolBar_nav_hover{ background:url(../../i/weibo/icon.png) no-repeat 4px -119px; text-indent:42px; width:109px;position:relative;}
+.hoverStyle{ background:url(../../i/weibo/icon.png) no-repeat -2px -55px; z-index:10;color:#2267A2; font-size:16px; padding:0 18px;line-height:60px; float:left; text-indent:42px; width:109px;position:relative;}
+a.hoverStyle:hover{color:#2267a2;}
+
+.cityBoardFather{ background:#F8F8F8; width:100%; box-shadow:0px 3px 10px 0px #bbb;display: none; position:absolute; top:60px; z-index:1;*border-bottom:2px solid #ccc;}
+.cityBoard li{ overflow:hidden; zoom:1; height:50%;}
+.cityBoard .borderBottom{ border-bottom:1px solid #eee;}
+.cityBoard li ul li{ float:left; padding:19px 0 19px 70px; *padding:19px 0 18px 70px;}
+.cityBoard a{ float:left; width:55px; padding-left:10px; color:#2267A2; font-size:16px; line-height:26px;}
+.cityBoard .huadong,.huabei,.xibei,.xinan{width:210px; }
+.cityBoard .huazhong,.huanan,.dongbei,.gangaotai{width:145px;}
+.cityBoard .huadong{ background:url(../../i/weibo/icon.png) no-repeat 1px -295px;}
+.cityBoard .huabei{ background:url(../../i/weibo/icon.png) no-repeat 1px -623px;}
+.cityBoard .huazhong{ background:url(../../i/weibo/icon.png) no-repeat 1px -388px;}
+.cityBoard .huanan{ background:url(../../i/weibo/icon.png) no-repeat 1px -703px;}
+.cityBoard .xibei{ background:url(../../i/weibo/icon.png) no-repeat 1px -468px;}
+.cityBoard .xinan{ background:url(../../i/weibo/icon.png) no-repeat 1px -785px;}
+.cityBoard .dongbei{ background:url(../../i/weibo/icon.png) no-repeat 1px -545px;}
+.cityBoard .gangaotai{ background:url(../../i/weibo/icon.png) no-repeat 1px -865px;}
+
+
+
+/*内容部分*/
+
+.content{ background:url(../../i/weibo/body_bg.png) fixed repeat-x  top #fff; padding-top:24px;}
+.conLeft,
+.conCenter{ margin-right:20px;}
+
+/*天气预报*/
+.weather{height:auto; padding: 10px 0;text-align: center;}
+/*左侧标签与公告框*/
+/*.tagNav{ margin-bottom:20px;}*/
+.tagNav h1{ background:url(../../i/weibo/icon.png) no-repeat 6px -249px;padding:17px 17px 17px 59px;  font-size:18px; line-height:18px; font-weight:bold;}
+.tagNavCon{ padding:17px; border-top:1px solid #DBDBDD; overflow:hidden;  }
+.tagNavCon a{ background:#ECEDF1; border-radius:3px 3px 3px 3px; border:1px solid #ccc;  margin:0 10px 12px 0;padding:0 15px; white-space:normal; display:inline-block}
+.tagNavCon a:hover{ background:#fff;}
+.explain{border-top:1px solid #dbdbdb; padding:17px; font-size:16px;}
+.expTitle{font-size:16px; font-weight:bold;}
+.hintTitle,.hintCon{ color:#EE2A6A; font-size:16px; font-weight:normal; margin-top:5px;}
+/*微博列表*/
+.BlogFather{ display:inline; float:left; width:320px;padding: 1px 0;}
+.BlogFather li{ margin-bottom:20px;}
+.blogName{ background:#0577AD; border:1px solid #fff; border-radius:10px 10px 0 0; color:#fff; height:54px;}
+.blogName img,.blogName span{ margin:10px 0 10px 13px; float:left;}
+.blogName img{width: 35px;height: 35px;}
+.blogName span{color:#fff; font-size:18px; padding-top:2px;}
+.blogNews{padding:0 12px;margin-top:1px;border-top:1px solid #eee;}
+.blogNews li{ margin-top:12px; padding-bottom:12px;}
+.blogNews li a{ color:#0078b6;}
+.blogNews li a:hover{ color:red;}
+.blogNews li .img img{ max-width: 40%;margin-top:10px; }
+.blogNews li i{color:#76a7be; margin-top:10px; display:block; font-style:normal;}
+.blogNews li em{ height:40px; width:90%; margin:0 auto; background:#eee;}
+.blogNews .blogNewsLine{ border-bottom:1px solid #ddd;}
+/*拖拽样式*/
+
+/*页尾*/
+.footer{border-top:1px solid #eee7e7;background-color:#eee;zoom:1}
+.footer .block{padding:20px 0 0;margin-bottom:0;height:auto; position:relative; width:980px; margin:0 auto 10px;}
+.footer h2{width:145px;height:38px;background:url(../../i/weibo/index_icons.png) no-repeat -160px 3px;float:left;margin:10px 3px 3px 0;overflow:hidden}
+.footer h2 a{display:block;width:145px;height:38px;text-indent:-9999px}
+.footer .Lcontent{width:592px}
+.footer dl{width:115px;padding:15px;background-color:#f9f9f9;float:left;margin:0 3px 3px 0}
+.footer dl dt{line-height:30px;padding-bottom:5px}
+.footer dl dt h3,.friendLink h3{font-weight:normal;font-size:20px}
+.footer dl dd p,.friendLink p{line-height:25px}
+.footer dl p a,.friendLink p a{padding-right:10px;color:#959595}
+.footer dl p a:hover,.friendLink p a:hover{color:#ee842f}
+.friendLink{width:358px;position:absolute;right:0;top:20px;background-color:#f9f9f9;padding:15px 15px 13px 15px}
+.friendLink h3{padding-bottom:5px}
+.footer .last{border-top:1px solid #ebebeb;margin-top:5px;padding-top:5px}
+.serviceinfo{padding:20px 0;font-size:12px;line-height:20px}
+.serviceinfo p{height:20px}
+.serviceinfo p span{display:block;width:265px;float:left}
+.serviceinfo a,.serviceinfo b{color:#076ea8;font-weight:normal}
+.aboutUs{background-color:#7d7d7d;color:#fff;height:45px;line-height:45px;text-align:center;font-size:12px;min-width:980px}

@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <base href="http://www.weather.com.cn"/>
+  <title>北京天气预报</title>
+  <meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
+  <meta name="description" content="中国天气网为您提供实时全国天气气象信息,及时发布天气预报、灾害预警、气象云图、旅游天气、台风、暴雨雪等气象信息，为我国的生产生活提供全面精确的气象服务" />
+  <meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  
+  <link rel="stylesheet" href="http://static.zk.com/c/core.css" />
+  <link rel="stylesheet" href="http://static.zk.com/c/weatherfc/common.css" />
+  <link rel="stylesheet" href="http://static.zk.com/c/weatherfc/city.css" />
+  <base target="_blank"/>
+  <script type="text/javascript" language="JavaScript" src="http://static.zk.com/j/core.js"></script>
+  <!--[if lt IE 7]>
+  <script>
+  W(function(){
+    W.use('j/DD_belatedPNG',function(DD_belatedPNG){
+      DD_belatedPNG.fix(".content,nav h1,#liveWeather #detail #detail_fl,#loacation #Rlocation #searchbox,.video .topOne figure a i");
+    });
+  }) 
+  </script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
+  <![endif]-->
+</head>
+<body style="background-image:url(http://static.zk.com/i/weatherfc/city_bg.jpg);">
+  <!--顶部日期及导航start-->
+  <div id="toolBar">
+    <div class="midBlock">
+      <span id="time"></span> <i class="mobile"></i> <b>移动客户端 <i></i></b> 
+      <span class="links">
+        <!--<a class="blue" href="#"  title="登录">登录</a>-->
+        <a id="setIndex" href="javascript:void(0);" target="_self" title="设为首页">设为首页</a>
+        <a id="collect" target="_self" href="javascript:void(0);"  title="收藏">收藏</a>
+        <a id="provice" href="javascript:void(0);"  title="省级站" target="_self">
+          <i class="icon"></i>
+          省级站
+          <i class="arrow"></i>
+        </a>
+        <a id="eg" href="http://www.weather.com.cn/english/" target="_blank" title="English Version">English Version</a>
+        <a href="#"  id="dl_tw">繁體中文</a>
+      </span>
+    </div>
+  </div>
+
+  <nav>
+    <h1>
+      <a href="http://www.weather.com.cn" title="中国天气网" alt="中国天气网">中国天气网</a>
+    </h1>
+    <ul>
+      <li><a href="http://www.weather.com.cn">首页</a>|</li>
+      <li><a href="http://www.weather.com.cn/alarm/">灾难预警</a>|</li>
+      <li><a href="http://www.weather.com.cn/forecast/">天气预报</a>|</li>
+      <li><a href="http://www.weather.com.cn/life/">生活旅游</a><i></i>
+        <div class="dropList"><i></i><span><a href="http://tourism.weather.com.cn/" target="_blank">中国旅游天气网</a><a href="http://www.weather.com.cn/life/">生活天气</a><a href="http://www.weather.com.cn/trip/">旅游天气</a></span></div>
+        |</li>
+      <li><a href="http://www.weather.com.cn/static/html/product/">服务产品</a>|</li>
+      <li><a href="http://3g.weather.com.cn/">天气应用</a><i></i>
+        <div class="dropList"><i></i><span><a href="http://3g.weather.com.cn/">中国天气通</a><a href="http://mobile.weather.com.cn/">Mobile版</a><a href="http://3g.weather.com.cn/wzfw/zgtqtpd/pc.shtml">桌面版</a><!--<a href="#" target="_blank">气象商城</a>--></span></div>
+        |</li>
+      <li><a>互动天气</a><i></i>
+        <div class="dropList"><i></i><span><a href="http://www.weather.com.cn/video/">天气视频</a><a href="http://club.weather.com.cn/">天气社区</a><a href="http://baike.weather.com.cn/">天气百科</a><a href="http://www.weather.com.cn/wjdc/">问卷调查</a></span></div>
+        |</li>
+      <li><a href="http://baike.weather.com.cn/">知识天气</a></li>
+    </ul>
+    <i class="bg"></i>
+  </nav>
+  <!--顶部日期及导航end-->
+
+  <div id="ad_banner">
+    <div class="adposter_6216">
+      <script type="test">WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22+src%3D%22http%3A%2F%2Fad.321tq.com%2Fex%3Fposid%3D10000_002_07%22%3E%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"980","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6216&pos=0&ch=500&act=1361&order=641&contract=182&host=153&ck=9053","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script>
+    </div>
+  </div>
+
+  <div class="toolBanner">
+    <div class="top">
+      <!--城市信息 start -->  
+      <h2>
+        北京<span>北京,国内</span>
+      </h2>
+      <!-- 城市信息 end -->  
+      <div class="right">
+        <span id="selAroundCity">查看周边区县</span>
+        <div class="search">
+          <div class="formBox">
+            <div id="Zip" class="Mainbox" >
+              <div id="ZipContent">
+                <input type="text" class="textinput" id="txtZip" value="输入城市名、全拼、简拼、电话区号、邮编查询"/>
+                <input type="button" class="btn" id="btnZip" value="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <i class="bg"></i>
+    </div>
+    <p class="bottom">
+      <span>
+        热点城市：
+        <a href="http://www.weather.com.cn/weatherfc/main/101020100.shtml" target="_blank">上海</a>
+        <a href="http://www.weather.com.cn/weatherfc/main/101280601.shtml" target="_blank">深圳</a>
+        <a href="http://www.weather.com.cn/weatherfc/main/101280101.shtml" target="_blank">广州</a>
+      </span>
+    </p>
+    <!--微博分享start--> 
+    <div class="fenxiang">
+      <span>
+        <div class="shareto_toolbox" style="margin-top:2px;margin-left:10px;">
+          <span class="shareto_button_compact st_button stico stico_shareto">天气分享：</span>
+          <a href="javascript:void(0);" class="shareto_button_tsina" title="分享到新浪微博">
+            <span class="stico st_button stico_tsina"></span>
+          </a>
+          <a href="javascript:void(0);" class="shareto_button_tsohu" title="分享到搜狐微博">
+            <span class="stico st_button stico_tsohu"></span>
+          </a>
+          <a href="javascript:void(0);" class="shareto_button_t163" title="分享到网易微博">
+            <span class="stico st_button stico_t163"></span>
+          </a>
+          <a href="javascript:void(0)" onclick="postToWb();" title="分享到腾讯微博">
+            <span class="stico_qq"></span>
+          </a>
+        </div>
+        <!--<script type="text/javascript" src="http://www.weather.com.cn//m2/j/topic/shtqbbx.js" charset="utf-8"></script>
+      -->
+      </span>
+    </div>
+    <i class="bg"></i>
+    <!--周边县区模块 start-->  
+    <ul class="Cities">
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010100.shtml">
+          <span class="name">北京</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/4℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010500.shtml">
+          <span class="name">怀柔</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/2℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010900.shtml">
+          <span class="name">丰台</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/4℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101011200.shtml">
+          <span class="name">房山</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/3℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010400.shtml">
+          <span class="name">顺义</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/3℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101011100.shtml">
+          <span class="name">大兴</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/3℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101011500.shtml">
+          <span class="name">平谷</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/2℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010300.shtml">
+          <span class="name">朝阳</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/4℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101011000.shtml">
+          <span class="name">石景山</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/4℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101011400.shtml">
+          <span class="name">门头沟</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/4℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010600.shtml">
+          <span class="name">通州</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/5℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010800.shtml">
+          <span class="name">延庆</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">14℃/0℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010200.shtml">
+          <span class="name">海淀</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/4℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101011300.shtml">
+          <span class="name">密云</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/0℃</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.weather.com.cn/weatherfc/101010700.shtml">
+          <span class="name">昌平</span>
+          <span class="weather">阴转晴</span>
+          <span class="temp">15℃/4℃</span>
+        </a>
+      </li>
+    </ul>
+    <!--周边县区模块 end-->  
+  </div>
+
+  <div class="liveWeather">
+    <!--实况start-->  
+    <div id="detail">
+      <h2 name="">
+        <script>var flAngle = 49;</script>
+        今日实况
+        <a href="http://www.weather.com.cn/static/radar_video_v1.php?class=JC_RADAR_AZ9010_JB" target="_blank">雷达</a>
+      </h2>
+      <p id="detail_wd"> <b>13</b>
+        ℃
+      </p>
+      <p id="detail_sd">相对湿度&nbsp;30%</p>
+      <p>16:25</p>
+      <p id="detail_fl">
+        3级
+        <span id="flHolder"></span>
+      </p>
+    </div>
+    <!--实况end-->  
+
+    <div id="week">
+      <div class="scroll">
+        <!--七天 start-->  
+        <ul>
+          <li data-role="0" class="today on current">
+            <p class="day">10月14日&nbsp;星期一</p>
+            <p>农历九月初十</p>
+            <p class="wd">
+              <span>
+                <a href="#"> <i class="d02"></i>
+                </a>
+                <a href="#">15℃</a>
+              </span>
+              <span>
+                <a href="#"> <i class="n00"></i>
+                </a>
+                <a href="#">4℃</a>
+              </span>
+            </p>
+          </li>
+
+          <li data-role="1">
+            <p class="day">10月15日&nbsp;星期二</p>
+            <p>农历九月十一</p>
+            <p class="wd">
+              <span>
+                <a href="#">
+                  <i class="d00"></i>
+                </a>
+                <a href="#">16℃</a>
+              </span>
+              <span>
+                <a href="#">
+                  <i class="n00"></i>
+                </a>
+                <a href="#">4℃</a>
+              </span>
+            </p>
+          </li>
+
+          <li data-role="2">
+            <p class="day">10月16日&nbsp;星期三</p>
+            <p>农历九月十二</p>
+            <p class="wd">
+              <span>
+                <a href="#">
+                  <i class="d00"></i>
+                </a>
+                <a href="#">20℃</a>
+              </span>
+              <span>
+                <a href="#">
+                  <i class="n00"></i>
+                </a>
+                <a href="#">7℃</a>
+              </span>
+            </p>
+          </li>
+
+          <li data-role="3">
+            <p class="day">10月17日&nbsp;星期四</p>
+            <p>农历九月十三</p>
+            <p class="wd">
+              <span>
+                <a href="#">
+                  <i class="d00"></i>
+                </a>
+                <a href="#">18℃</a>
+              </span>
+              <span>
+                <a href="#">
+                  <i class="n01"></i>
+                </a>
+                <a href="#">8℃</a>
+              </span>
+            </p>
+          </li>
+
+          <li data-role="4">
+            <p class="day">10月18日&nbsp;星期五</p>
+            <p>农历九月十四</p>
+            <p class="wd">
+              <span>
+                <a href="#">
+                  <i class="d02"></i>
+                </a>
+                <a href="#">18℃</a>
+              </span>
+              <span>
+                <a href="#">
+                  <i class="n02"></i>
+                </a>
+                <a href="#">9℃</a>
+              </span>
+            </p>
+          </li>
+
+          <li data-role="5">
+            <p class="day">10月19日&nbsp;星期六</p>
+            <p>农历九月十五</p>
+            <p class="wd">
+              <span>
+                <a href="#">
+                  <i class="d01"></i>
+                </a>
+                <a href="#">18℃</a>
+              </span>
+              <span>
+                <a href="#">
+                  <i class="n00"></i>
+                </a>
+                <a href="#">6℃</a>
+              </span>
+            </p>
+          </li>
+
+          <li data-role="6">
+            <p class="day">10月20日&nbsp;星期日</p>
+            <p>农历九月十六</p>
+            <p class="wd">
+              <span>
+                <a href="#">
+                  <i class="d00"></i>
+                </a>
+                <a href="#">20℃</a>
+              </span>
+            </p>
+          </li>
+        </ul>
+        <!--七天 end --> </div>
+      <span class="lBtn">
+        <i></i>
+      </span>
+      <span class="RBtn">
+        <i></i>
+      </span>
+    </div>
+
+    <i class="bg"></i>
+  </div>
+
+  <div class="block">
+    <div class="block_content">
+      <div id="forecast">
+        <!-- 预报发布时间 start -->
+        <h2>
+          预报 <i>(2013-10-14&nbsp;11:00发布)</i> 
+        </h2>
+        <!-- 预报发布时间  end -->
+        <div class="scroll">
+          <div class="tabContent">
+            <ul class="detail">
+
+              <!--6小时 start -->
+              <li data-role="0">
+                <p class="day">14日</p>
+                <p>8时～14时</p>
+                <p>
+                  <a class="legend d01" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">多云</a>
+                </p>
+                <p class="blue">
+                  <a href="#">25</a>
+                  /
+                  <a href="#">30℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">南风小于3</a>
+                </p>
+              </li>
+              <li data-role="0">
+                <p class="day">14日</p>
+                <p>14时～20时</p>
+                <p>
+                  <a class="legend d01" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">多云</a>
+                </p>
+                <p class="blue">
+                  <a href="#">25</a>
+                  /
+                  <a href="#">30℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">南风小于3</a>
+                </p>
+              </li>
+              <li data-role="1">
+                <p class="day">14日</p>
+                <p>20时～15日2时</p>
+                <p>
+                  <a class="legend n01" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">多云</a>
+                </p>
+                <p class="blue">
+                  <a href="#">25</a>
+                  /
+                  <a href="#">30℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">南风小于3</a>
+                </p>
+              </li>
+              <li data-role="1">
+                <p class="day">15日</p>
+                <p>2时～8时</p>
+                <p>
+                  <a class="legend n01" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">多云</a>
+                </p>
+                <p class="blue">
+                  <a href="#">25</a>
+                  /
+                  <a href="#">30℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">南风小于3</a>
+                </p>
+              </li>
+              <li data-role="2">
+                <p class="day">16日前12小时</p>
+                <p>
+                  <a class="legend d00" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">晴</a>
+                </p>
+                <p class="blue">
+                  <a href="#">白天最高温20℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">微风小于3</a>
+                </p>
+              </li>
+              <li data-role="2">
+                <p class="day">16日后12小时</p>
+                <p>
+                  <p>
+                    <a class="legend n00" href="#"></a>
+                  </p>
+                  <p class="blue">
+                    <a href="#">晴</a>
+                  </p>
+                  <p class="blue">
+                    <a href="#">夜间最低温7℃</a>
+                  </p>
+                  <p class="blue">
+                    <a href="#">微风小于3</a>
+                  </p>
+              </li>
+              <li data-role="3">
+                <p class="day">17日前12小时</p>
+                <p>
+                  <a class="legend d00" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">晴</a>
+                </p>
+                <p class="blue">
+                  <a href="#">白天最高温18℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">微风小于3</a>
+                </p>
+              </li>
+              <li data-role="3">
+                <p class="day">17日后12小时</p>
+                <p>
+                  <a class="legend n01" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">多云</a>
+                </p>
+                <p class="blue">
+                  <a href="#">夜间最低温8℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">微风小于3</a>
+                </p>
+              </li>
+              <li data-role="4">
+                <p class="day">18日前12小时</p>
+                <p>
+                  <a class="legend d02" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">阴</a>
+                </p>
+                <p class="blue">
+                  <a href="#">白天最高温18℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">微风小于3</a>
+                </p>
+              </li>
+              <li data-role="4">
+                <p class="day">18日后12小时</p>
+                <p>
+                  <a class="legend n02" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">阴</a>
+                </p>
+                <p class="blue">
+                  <a href="#">夜间最低温9℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">微风小于3</a>
+                </p>
+              </li>
+              <li data-role="5">
+                <p class="day">19日前12小时</p>
+                <p>
+                  <a class="legend d01" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">多云</a>
+                </p>
+                <p class="blue">
+                  <a href="#">白天最高温18℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">北风3-4</a>
+                </p>
+              </li>
+              <li data-role="5">
+                <p class="day">19日后12小时</p>
+                <p>
+                  <a class="legend n00" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">晴</a>
+                </p>
+                <p class="blue">
+                  <a href="#">夜间最低温6℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">微风小于3</a>
+                </p>
+              </li>
+              <li data-role="6">
+                <p class="day">20日前12小时</p>
+                <p>
+                  <a class="legend d00" href="#"></a>
+                </p>
+                <p class="blue">
+                  <a href="#">晴</a>
+                </p>
+                <p class="blue">
+                  <a href="#">白天最高温20℃</a>
+                </p>
+                <p class="blue">
+                  <a href="#">微风小于3</a>
+                </p>
+              </li>
+              <!--6小时 end --> 
+            </ul>
+          </div>
+          <span class="rBtn" style="right: 0px;">
+            <i></i> <b>天气相关信息</b>
+          </span>
+          <div class="relateWeather">
+            <!--当前城市相关气象信息，日出/日落时间等模块 start-->
+            <ul>
+              <li>
+                <i>日出</i>
+                <i>日落</i>
+              </li>
+              <li> <b>今</b>
+                <span>6:42</span>
+                <span>17:46</span>
+              </li>
+              <li>
+                <b>明</b>
+                <span>6:43</span>
+                <span>17:46</span>
+              </li>
+              <li class="nongli">农历九月初十</li>
+              <li class="jieri"></li>
+            </ul>
+            <!--当前城市相关气象信息，日出/日落时间等模块 end--> 
+          </div>
+        </div>
+      </div>
+      <div class="ad rightEl">
+        <div class="adposter_6116">
+          <script type="test">WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%27text%2Fjavascript%27%3E%0D%0ATQ_FillSlot%28%2710000_001_02%27%29%3B%0D%0A%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6116&pos=0&ch=9993&act=1389&order=641&contract=182&host=153&ck=18474","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script>
+        </div>
+      </div>
+      <!--每日天气提醒start-->
+      <!--每日天气一句话提醒 模块-->
+      <div id="remind">
+        <h3>每日天气提醒</h3>
+        <p>北京17时发布</p>
+        <p class="detail">
+          北京：今夜多云转晴，北风三四级转一二级，明天白天晴间多云，北转南风二三级，4到16℃。明晨气温低，注意保暖。市气象台17时发布
+        </p>
+      </div>
+      <!--每日天气提醒end-->
+      <!--热点指数start-->
+      <!--热点参数模块-->      
+      <div id="todayliving">
+        <div class="title">
+          <span data-role="all">
+            <h2>热点指数</h2>
+          </span>
+          <span data-role="life">生活</span>
+          <span data-role="trav">旅游</span>
+          <span data-role="busi">商务</span>
+          <span data-role="male">男人</span>
+          <span data-role="fema">女人</span>
+          <span data-role="chil">儿童</span>
+          <span data-role="elde">老人</span>
+          <a href="#" class="subscribe">订阅</a>
+        </div>
+        <div class="tabContent">
+          <div class="zs">
+            <ul>
+              <li>
+                <section class="mask xc">
+                  <section class="area">
+                    <section class="detail">
+                      <aside> <b>较不宜</b>
+                        路面有积水，车子易被溅上泥水。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/xc/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/xc/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/xc/101010100.shtml">洗车指数</a>
+                </h3>
+              </li>
+              <li>
+                <section class="mask tr">
+                  <section class="area">
+                    <section class="detail">
+                      <aside> <b>适宜</b>
+                        风稍大，但仍可尽情享受大自然的风光。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml">旅游指数</a>
+                </h3>
+              </li>
+              <li>
+                <section class="mask ct">
+                  <section class="area">
+                    <section class="detail">
+                      <aside>
+                        <b>冷</b>
+                        建议着棉衣加羊毛衫等冬季服装。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml">穿衣指数</a>
+                </h3>
+              </li>
+              <li>
+                <section class="mask gz">
+                  <section class="area">
+                    <section class="detail">
+                      <aside>
+                        <b>适宜</b>
+                        使用日常护肤品保持皮肤水分。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/gz/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/gz/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/gz/101010100.shtml">干燥指数</a>
+                </h3>
+              </li>
+              <li>
+                <section class="mask co">
+                  <section class="area">
+                    <section class="detail">
+                      <aside>
+                        <b>较舒适</b>
+                        白天阴，风力较强，有点凉。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/co/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/co/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/co/101010100.shtml">舒适度指数</a>
+                </h3>
+              </li>
+              <li>
+                <section class="mask pl">
+                  <section class="area">
+                    <section class="detail">
+                      <aside>
+                        <b>良</b>
+                        气象条件有利于空气污染物扩散。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/pl/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/pl/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/pl/101010100.shtml">空气污染扩散指数</a>
+                </h3>
+              </li>
+              <li>
+                <section class="mask uv">
+                  <section class="area">
+                    <section class="detail">
+                      <aside>
+                        <b>最弱</b>
+                        辐射弱，涂擦SPF8-12防晒护肤品。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/uv/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/uv/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/uv/101010100.shtml">紫外线指数</a>
+                </h3>
+              </li>
+              <li>
+                <section class="mask fs">
+                  <section class="area">
+                    <section class="detail">
+                      <aside>
+                        <b>弱</b>
+                        涂抹8-12SPF防晒护肤品。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml">防晒指数</a>
+                </h3>
+              </li>
+
+              <li>
+                <section class="mask ys">
+                  <section class="area">
+                    <section class="detail">
+                      <aside>
+                        <b>不带伞</b>
+                        阴天，无需带雨伞。
+                      </aside>
+                      <a href="http://www.weather.com.cn/indexfc/ys/101010100.shtml"></a>
+                    </section>
+                    <section class="imgArea">
+                      <a href="http://www.weather.com.cn/indexfc/ys/101010100.shtml"></a>
+                    </section>
+                  </section>
+                </section>
+                <h3>
+                  <a href="http://www.weather.com.cn/indexfc/ys/101010100.shtml">雨伞指数</a>
+                </h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--热点指数end-->
+      
+      <div class="hotNews">
+        <div class="tabs">
+          <ul><li class="on">要闻</li><li>旅游</li><li>生活</li></ul>
+          <span></span>
+        </div>
+        <div class="tabContent">
+        <div class="news on">
+          <section class="topOne">
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <div class="clear"></div>
+          </section>
+          <ul>
+            <li><a href="#" target="_blank">要闻款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="news">
+          <section class="topOne lv">
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <div class="clear"></div>
+          </section>
+          <ul class="lv">
+            <li><a href="#" target="_blank">旅游款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="news">
+          <section class="topOne">
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_19.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <figure><a href="#" target="_blank" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"><img src="images/city_test/img_20.jpg" title="震撼壮美的“超级细胞”风暴" alt="震撼壮美的“超级细胞”风暴"></a><figcaption><a href="#" target="_blank">震撼壮美的壮美的</a></figcaption></figure>
+            <div class="clear"></div>
+          </section>
+          <ul>
+            <li><a href="#" target="_blank">生活要闻款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+            <li><a href="#" target="_blank">款防晒隔离霜皮肤防火</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <i class="bg"></i>
+  </div>
+</body>
+</html>

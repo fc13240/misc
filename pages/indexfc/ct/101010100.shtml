@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="http://www.weather.com.cn"><!--[if lte IE 6]></base><![endif]-->
+  <meta charset="utf-8" />
+  <link rel="dns-prefetch" href="http://61.4.185.223">
+  <title>穿衣指数-北京-中国天气网-专业天气预报、气象服务门户</title>
+  <meta  name="keywords" content="穿衣指数,穿衣,指数,北京天气,气候,气象" />
+  <meta name="description" content="中国天气网为您提供全国气象穿衣指数预报,发布3小时精细化指数预报、未来六日气象指数预报,相关指数预报等多种信息,为我国的生产生活提供全面精确的气象服务" />
+  <meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <link rel="stylesheet" href="http://i.tq121.com.cn/c/core.css" />
+  <link rel="stylesheet" href="http://i.tq121.com.cn/c/indexfc/common.css" />
+  <link rel="stylesheet" href="http://i.tq121.com.cn/c/indexfc/zs.css" />
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
+
+  <!--
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/jquery-1.8.2.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/zsLevel.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/color.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/raphael-min.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/common.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/zs.js"></script>
+
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/line.js"></script>
+  
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/province.js"></script>
+  <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/init.js"></script>
+  -->
+
+  
+  <!--<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/zsGetData.js"></script>
+  -->
+  <!--<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/indexfc/pie.js"></script>
+  -->
+  <script>
+  var index3h_data=new Array();
+        index3h_data[0] = '{"it":{"it0":"201310130800","it1":"穿衣指数","it2":"ct","it3":[{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310130800","it34":"5"},{"it31":"较舒适","it32":"建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄毛衣等。","it33":"201310131100","it34":"4"},{"it31":"较舒适","it32":"建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄毛衣等。","it33":"201310131400","it34":"4"},{"it31":"较舒适","it32":"建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄毛衣等。","it33":"201310131700","it34":"4"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310132000","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310132300","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310140200","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310140500","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310140800","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310141100","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310141400","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310141700","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310142000","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310142300","it34":"5"},{"it31":"冷","it32":"天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。","it33":"201310150200","it34":"6"},{"it31":"寒冷","it32":"天气寒冷，建议着厚羽绒服、毛皮大衣加厚毛衣等隆冬服装。年老体弱者尤其要注意保暖防冻。","it33":"201310150500","it34":"7"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310150800","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310151100","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310151400","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310151700","it34":"5"},{"it31":"较冷","it32":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。","it33":"201310152000","it34":"5"},{"it31":"冷","it32":"天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。","it33":"201310152300","it34":"6"},{"it31":"冷","it32":"天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。","it33":"201310160200","it34":"6"},{"it31":"冷","it32":"天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。","it33":"201310160500","it34":"6"},{"it31":"冷","it32":"天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。","it33":"201310160800","it34":"6"}],"it4":[{"it41":"炎热"},{"it41":"热"},{"it41":"舒适"},{"it41":"较舒适"},{"it41":"较冷"},{"it41":"冷"},{"it41":"寒冷"}]}}';
+        index3h_data[1] = '{"it":{"it0":"201310130800","it1":"穿衣指数","it2":"ct","it3":[{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310130800","it34":"5"},{"it31":"较舒适","it32":"可以为小朋友选择较厚的棉质T恤衫加外套的着装。","it33":"201310131100","it34":"4"},{"it31":"较舒适","it32":"可以为小朋友选择较厚的棉质T恤衫加外套的着装。","it33":"201310131400","it34":"4"},{"it31":"较舒适","it32":"可以为小朋友选择较厚的棉质T恤衫加外套的着装。","it33":"201310131700","it34":"4"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310132000","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310132300","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310140200","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310140500","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310140800","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310141100","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310141400","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310141700","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310142000","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310142300","it34":"5"},{"it31":"冷","it32":"天气冷，小朋友出门要全副武装了，致密的防风棉质外套是必不可少的，内衣尽量选择三层保暖套装，活动量大的小朋友家长要防止孩子运动出汗后立即脱衣，避免感冒。","it33":"201310150200","it34":"6"},{"it31":"寒冷","it32":"天气寒冷，小朋友可选择穿着长至膝下、有束口的轻便羽绒服装或厚棉衣，以及防滑棉鞋方便活动，同时出门须佩戴口罩。","it33":"201310150500","it34":"7"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310150800","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310151100","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310151400","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310151700","it34":"5"},{"it31":"较冷","it32":"天气较冷，您的宝贝外出要穿好保暖的衣物了，可选择致密的防风棉质外套、棉质袜子，内衣可穿三层保暖套装。","it33":"201310152000","it34":"5"},{"it31":"冷","it32":"天气冷，小朋友出门要全副武装了，致密的防风棉质外套是必不可少的，内衣尽量选择三层保暖套装，活动量大的小朋友家长要防止孩子运动出汗后立即脱衣，避免感冒。","it33":"201310152300","it34":"6"},{"it31":"冷","it32":"天气冷，小朋友出门要全副武装了，致密的防风棉质外套是必不可少的，内衣尽量选择三层保暖套装，活动量大的小朋友家长要防止孩子运动出汗后立即脱衣，避免感冒。","it33":"201310160200","it34":"6"},{"it31":"冷","it32":"天气冷，小朋友出门要全副武装了，致密的防风棉质外套是必不可少的，内衣尽量选择三层保暖套装，活动量大的小朋友家长要防止孩子运动出汗后立即脱衣，避免感冒。","it33":"201310160500","it34":"6"},{"it31":"冷","it32":"天气冷，小朋友出门要全副武装了，致密的防风棉质外套是必不可少的，内衣尽量选择三层保暖套装，活动量大的小朋友家长要防止孩子运动出汗后立即脱衣，避免感冒。","it33":"201310160800","it34":"6"}],"it4":[{"it41":"炎热"},{"it41":"热"},{"it41":"舒适"},{"it41":"较舒适"},{"it41":"较冷"},{"it41":"冷"},{"it41":"寒冷"}]}}';
+        index3h_data[2] = '{"it":{"it0":"201310130800","it1":"穿衣指数","it2":"ct","it3":[{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310130800","it34":"5"},{"it31":"较舒适","it32":"建议女士穿着质地较厚的裙子、长袖套装、卫衣等春秋过渡装。体质较弱者宜增加一件外套。","it33":"201310131100","it34":"4"},{"it31":"较舒适","it32":"建议女士穿着质地较厚的裙子、长袖套装、卫衣等春秋过渡装。体质较弱者宜增加一件外套。","it33":"201310131400","it34":"4"},{"it31":"较舒适","it32":"建议女士穿着质地较厚的裙子、长袖套装、卫衣等春秋过渡装。体质较弱者宜增加一件外套。","it33":"201310131700","it34":"4"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310132000","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310132300","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310140200","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310140500","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310140800","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310141100","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310141400","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310141700","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310142000","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310142300","it34":"5"},{"it31":"冷","it32":"天气冷，建议女士穿着棉衣、羊毛衫，佩戴帽子、围巾等冬季服装。体质较弱者宜着厚棉衣或冬大衣。","it33":"201310150200","it34":"6"},{"it31":"寒冷","it32":"天气寒冷，建议女士穿着厚羽绒服、毛皮大衣、加厚毛衣等隆冬服装。体质较弱者尤其要注意保暖防冻。","it33":"201310150500","it34":"7"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310150800","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310151100","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310151400","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310151700","it34":"5"},{"it31":"较冷","it32":"天气凉，建议女士穿着厚外套、毛衣、加厚牛仔裤等春秋服装。体质较弱者宜增加围巾、帽子等保暖措施。","it33":"201310152000","it34":"5"},{"it31":"冷","it32":"天气冷，建议女士穿着棉衣、羊毛衫，佩戴帽子、围巾等冬季服装。体质较弱者宜着厚棉衣或冬大衣。","it33":"201310152300","it34":"6"},{"it31":"冷","it32":"天气冷，建议女士穿着棉衣、羊毛衫，佩戴帽子、围巾等冬季服装。体质较弱者宜着厚棉衣或冬大衣。","it33":"201310160200","it34":"6"},{"it31":"冷","it32":"天气冷，建议女士穿着棉衣、羊毛衫，佩戴帽子、围巾等冬季服装。体质较弱者宜着厚棉衣或冬大衣。","it33":"201310160500","it34":"6"},{"it31":"冷","it32":"天气冷，建议女士穿着棉衣、羊毛衫，佩戴帽子、围巾等冬季服装。体质较弱者宜着厚棉衣或冬大衣。","it33":"201310160800","it34":"6"}],"it4":[{"it41":"炎热"},{"it41":"热"},{"it41":"舒适"},{"it41":"较舒适"},{"it41":"较冷"},{"it41":"冷"},{"it41":"寒冷"}]}}';
+      
+  </script>
+  <script>
+    W.use(['j/indexfc/zs','j/indexfc/line']);
+  </script>
+  <!--[if lt IE 7]>
+     <script>
+        W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+          DD_belatedPNG.fix("nav h1,#summary,#rMain h2 b,#month_avg aside table tr td b,#hotNew figure#video i,#expert .tabs ul li,#encyclopedias figure i,#encyclopedias #rBlock dl dt,#bbs ul li");
+        });
+     </script>
+    <![endif]-->
+  <!--[if lt IE 9]>
+    <script>'section header nav aside article footer figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
+  <![endif]-->
+
+  <script type="text/javascript" src="http://geoip.weather.com.cn/g/"></script>
+  <script type="text/javascript" src="/m2/j/shibo/caoyu-min.js"></script>
+</head>
+<body style="background-image:url(http://www.weather.com.cn/n/i/indexfc/zs_bg.jpg);">
+<div class="content">
+<nav>
+  <h1>
+    <a href="http://www.weather.com.cn" title="中国天气网" alt="中国天气网">中国天气网</a>
+  </h1>
+  <ul>
+    <li>
+      <a href="http://www.weather.com.cn">首页</a>|
+    </li>
+    <li>
+      <a href="http://www.weather.com.cn/alarm/">灾难预警</a>|
+    </li>
+    <li>
+      <a href="http://www.weather.com.cn/forecast/">天气预报</a>|
+    </li>
+    <li>
+      <a href="http://www.weather.com.cn/life/">生活旅游</a> <i></i>
+      <div class="dropList"> <i></i>
+        <span>
+          <a href="http://tourism.weather.com.cn/" target="_blank">中国旅游天气网</a>
+          <a href="http://www.weather.com.cn/life/">生活天气</a>
+          <a href="http://www.weather.com.cn/trip/">旅游天气</a>
+        </span>
+      </div>
+      |
+    </li>
+    <li>
+      <a href="http://www.weather.com.cn/static/html/product/">服务产品</a>
+      |
+    </li>
+    <li>
+      <a href="http://3g.weather.com.cn/">天气应用</a>
+      <i></i>
+      <div class="dropList">
+        <i></i>
+        <span>
+          <a href="http://3g.weather.com.cn/">中国天气通</a>
+          <a href="http://mobile.weather.com.cn/">Mobile版</a>
+          <a href="http://3g.weather.com.cn/wzfw/zgtqtpd/pc.shtml">桌面版</a>
+          <!--<a href="#" target="_blank">气象商城</a>
+        -->
+      </span>
+    </div>
+    |
+  </li>
+  <li>
+    <a>互动天气</a>
+    <i></i>
+    <div class="dropList">
+      <i></i>
+      <span>
+        <a href="http://www.weather.com.cn/video/">天气视频</a>
+        <a href="http://club.weather.com.cn/">天气社区</a>
+        <a href="http://baike.weather.com.cn/">天气百科</a>
+        <a href="http://www.weather.com.cn/wjdc/">问卷调查</a>
+      </span>
+    </div>
+    |
+  </li>
+  <li>
+    <a href="http://baike.weather.com.cn/">知识天气</a>
+  </li>
+</ul>
+<i class="bg"></i>
+</nav>
+
+<div id="ad_banner">
+<div class="adposter_6216">
+  <script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22+src%3D%22http%3A%2F%2Fad.321tq.com%2Fex%3Fposid%3D10000_002_07%22%3E%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"980","height":"90","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6216&pos=0&ch=500&act=1361&order=641&contract=182&host=153&ck=9053","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script>
+</div>
+
+</div>
+<div id="zs_content">
+<section id="container">
+  <h1>
+    穿衣指数
+    <a href="http://www.weather.com.cn/weather/101010100.shtml" target="_blank">返回城市天气页>></a>
+  </h1>
+  <div id="summary">
+    <!-- 模块1：头部——地区信息 -->
+    <!--<h2>三亚</h2>
+  <h3>海南&nbsp;&nbsp;中国</h3>
+  -->
+  <h2>北京</h2>
+  <h3>北京&nbsp;&nbsp;中国</h3>
+
+</div>
+
+<!-- 模块3：一天及相关指数——头部指数适宜度及建议信息 -->
+<p> <b>天气网建议:</b>
+  天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。
+</p>
+<span class="icon ct"></span>
+<span id="level">
+  <!--强-->冷</span>
+
+<!--实况-->
+<!-- 模块2：头部——实时信息 -->
+<span id="info"> <b>温度：15摄氏度</b>
+  <b>风向：
+                        东北风</b> 
+  <b>风速：2级</b>
+  <b>相对湿度：54%</b>
+</span>
+<span id="time">
+  <!--发布时间：2012-03-24 10:54:10-->
+  发布时间：
+        2013年10月14日&nbsp;08:30
+</span>
+
+<!--<span id="more">订阅</span>
+-->
+<!--<span class="land">
+您好，李昶|
+<a target="_blank" href="#">我的气象台</a>
+<a target="_blank" href="#" class="quit">退出</a>
+</span>
+-->
+<span id="share">
+分享：
+<a class="qzone" href="javascript:void(0)" title="分享到qq空间"></a>
+<a class="sina" href="javascript:void(0)" title="分享到新浪微博"></a>
+<a class="qqweibo" href="javascript:void(0)" title="分享到腾讯微博"></a>
+<a class="renren" href="javascript:void(0)" title="分享到人人"></a>
+<a class="kaixin" href="javascript:void(0)" title="分享到开心"></a>
+</span>
+<div class="clear"></div>
+</section>
+</div>
+<section id="main">
+<div id="lMain">
+<div id="forecast">
+<div id="tabs">
+<ul>
+  <li class="on">指数预报</li>
+  <li>未来6天指数</li>
+  <!--<li class="last">历史指数查询</li>
+-->
+</ul>
+
+<!--3小时更新时间 201307120800 -->
+<span class="time">
+更新时间:
+                    10-13 08:00
+</span>
+
+<!--6天更新时间 201307111200 -->
+<span class="time" style="display:none">
+更新时间:
+                    10-14
+                             08
+          :00
+</span>
+</div>
+<section class="mask">
+<div class="items" style="display:block;">
+<!--new-->
+<div class="dlArea"></div>
+<!--new-->
+<div class="time">
+  <h5>时间</h5>
+  <div class="scroll">
+    <ul></ul>
+  </div>
+  <span class="lBtn"></span>
+  <span class="rBtn"></span>
+</div>
+<div class="sp">
+  <h5>指数色谱</h5>
+  <div class="scroll" style="width:544px;overflow:hidden;">
+    <ul></ul>
+  </div>
+</div>
+<div id="svgArea"></div>
+<div id="labelText">
+  <span></span>
+  <b></b>
+</div>
+</div>
+<div class="items" style="display:none;">
+<section id="wllt">
+  <ul>
+    <!-- 模块5：六天指数信息 -->
+    <li>
+      <p>
+        <!--明天 -->今天</p>
+      <p class="detail">
+        <b>冷</b>
+        建议着棉衣加羊毛衫等冬季服装。
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <!--明天 -->明天</p>
+      <p class="detail">
+        <b>较冷</b>
+        建议着厚外套加毛衣等服装。
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <!--明天 -->后天</p>
+      <p class="detail">
+        <b>较冷</b>
+        建议着厚外套加毛衣等服装。
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <!--明天 -->10月17日</p>
+      <p class="detail">
+        <b>较冷</b>
+        建议着厚外套加毛衣等服装。
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <!--明天 -->10月18日</p>
+      <p class="detail">
+        <b>较舒适</b>
+        建议穿薄外套或牛仔裤等服装。
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <!--明天 -->10月19日</p>
+      <p class="detail">
+        <b>较冷</b>
+        建议着厚外套加毛衣等服装。
+      </p>
+    </li>
+
+  </ul>
+</section>
+</div>
+<div class="items" style="display:none">
+<div class="selLine">
+  <span>请选择日期</span>
+  <span id="month">
+    <b></b>
+    <span class="Items"></span>
+    <i></i>
+  </span>
+  <span id="day">
+    <b></b>
+    <span class="Items"></span>
+    <i></i>
+  </span>
+  <span id="selBtn">查询</span>
+</div>
+<div class="pieArea">
+  <div id="pie"></div>
+  <dl>
+    <dt>
+      <b class="percentage"></b>
+      可能性
+      <br/>
+      <b class="zsName"></b>
+      为
+      <b class="level"></b>
+    </dt>
+    <dd></dd>
+  </dl>
+</div>
+</div>
+</section>
+
+<h3></h3>
+</div>
+
+<div class="block">
+<figure>
+<a href="/news/2013/10/1986256.shtml" title="百合逼近西沙 渔船回港避风"  target="_blank">
+<img src="http://i.weather.com.cn/images/cn/public/2013/10/13/12DC1E0F6FCDF7432E66FB9103E365F1.jpg" alt="百合逼近西沙 渔船回港避风" />
+</a>
+<figcaption>
+<a href="/news/2013/10/1986256.shtml" target="_blank" title="百合逼近西沙 渔船回港避风" style="color:">百合逼近西沙 渔船回港避风</a>
+<p>“百合”逼近，三沙防风工作紧张进行中，渔船全部回港。</p>
+</figcaption>
+</figure>
+<figure>
+<a href="/news/2013/10/1986440.shtml" title="上海今年或创史上最长夏天 "  target="_blank">
+<img src="http://i.weather.com.cn/images/cn/news/2013/10/13/8E6A6EAE343467B020097911E4D3F435.jpg" alt="上海今年或创史上最长夏天 " />
+</a>
+<figcaption>
+<a href="/news/2013/10/1986440.shtml" target="_blank" title="上海今年或创史上最长夏天 " style="color:">上海今年或创史上最长夏天</a>
+<p>截至今天上海夏天日数达156天，未来或突破记录达史上最长夏天。</p>
+</figcaption>
+</figure>
+</div>
+
+<div class="block02">
+<div class="tabs">
+<ul>
+<li class="on" name="tjpc">穿搭导航</li>
+<!--<li name="jqbg">缤纷服饰</li>
+-->
+</ul>
+</div>
+<section class="mask">
+<section class="tabs_content">
+
+<section class="tabs_Item" name="jqbg">
+<h3>
+  DIY
+  <span>
+    <a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://news.yintai.com/">更多&gt;&gt;</a>
+  </span>
+</h3>
+<figure>
+  <a alt="周年庆购物清单炙手可热" title="周年庆购物清单炙手可热" target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://promotion.yintai.com/20131009/dress/index.html" >
+    <img alt="周年庆购物清单炙手可热" title="周年庆购物清单炙手可热" src="http://i.weather.com.cn/images/cn/indexfc/2013/10/11/6B5D59E2F70534568910E0E5EA1CC379.jpg" ></a>
+  <figcaption>
+    <a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://promotion.yintai.com/20131009/dress/index.html">周年庆购物清单炙手可热</a>
+    <p>第一波，第二波没有赶上已成浮云，第三波“泰”给利，第四波“决不一样”你还等什么？</p>
+  </figcaption>
+</figure>
+<ul>
+  <li>
+    <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://promotion.yintai.com/20131009/moco/index.html" target="_blank"  style="color:">美剧女主角都穿什么？</a>
+  </li>
+  <li>
+    <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://goelia.yintai.com/" target="_blank"  style="color:">纽约时装周新款首发</a>
+  </li>
+  <li>
+    <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://promotion.yintai.com/20131009/veromoda/index.html" target="_blank"  style="color:">时尚编辑环球之旅的穿衣经</a>
+  </li>
+  <li>
+    <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://news.yintai.com/FashionMix/detail?o=29&pageid=565" target="_blank"  style="color:">羊绒宝贝“软黄金”不怕冷</a>
+  </li>
+</ul>
+
+<aside>
+  <h3>
+    保养
+    <span>
+      <a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://promotion.yintai.com/20131009/beauty/index.html">更多&gt;&gt;</a>
+    </span>
+  </h3>
+  <figure>
+    <a alt="主：60秒！净透美肌如初新生" title="主：60秒！净透美肌如初新生" target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/product/search.aspx?keyword=%E7%A7%91%E8%8E%B1%E4%B8%BD" >
+      <img alt="主：60秒！净透美肌如初新生" title="主：60秒！净透美肌如初新生" src="http://i.weather.com.cn/images/cn/indexfc/2013/10/11/9C60A7402F7DDB8963823A61DF88A6A1.jpg" ></a>
+    <figcaption>
+      <a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/product/search.aspx?keyword=%E7%A7%91%E8%8E%B1%E4%B8%BD">主：60秒！净透美肌如初新生</a>
+      <p>经历了黄金周的疯狂享乐你的脸上是不是多了几分暗沉？</p>
+    </figcaption>
+  </figure>
+  <ul>
+    <li>
+      <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/store/store-50000249.html" target="_blank"  style="color:">节后暗沉扫光美白动起来</a>
+    </li>
+    <li>
+      <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/store/store-50000258.html" target="_blank"  style="color:">让“水”来调整失衡肌肤</a>
+    </li>
+    <li>
+      <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/store/store-50000243.html" target="_blank"  style="color:">一夜水润 肌肤深度“解渴”</a>
+    </li>
+    <li>
+      <a href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/store/store-50000237.html" target="_blank"  style="color:">明星御用皮肤“伪装术”</a>
+    </li>
+  </ul>
+</aside>
+</section>
+
+</section>
+</section>
+</div>
+
+<iframe src="http://y.tpimg.cn/yt/left_1.htm" width="670" height="1786" frameborder="0" scrolling="no"></iframe>
+
+<div id="aboutZS">
+<h2>相关指数</h2>
+<div class="zs">
+<ul>
+
+<!-- 模块4：一天的相关指数 -->
+<li>
+<section class="mask co">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>较舒适</b>
+        白天阴，风力较强，有点凉。
+      </aside>
+      <a target="_blank" href="../co/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../co/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../co/101010100.shtml">
+    <!--过敏指数 -->舒适度指数</a>
+</h3>
+</li>
+<li>
+<section class="mask ys">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>不带伞</b>
+        阴天，无需带雨伞。
+      </aside>
+      <a target="_blank" href="../ys/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../ys/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../ys/101010100.shtml">
+    <!--过敏指数 -->雨伞指数</a>
+</h3>
+</li>
+<li>
+<section class="mask tr">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>适宜</b>
+        风稍大，但仍可尽情享受大自然的风光。
+      </aside>
+      <a target="_blank" href="../tr/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../tr/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../tr/101010100.shtml">
+    <!--过敏指数 -->旅游指数</a>
+</h3>
+</li>
+<li>
+<section class="mask gz">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>适宜</b>
+        使用日常护肤品保持皮肤水分。
+      </aside>
+      <a target="_blank" href="../gz/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../gz/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../gz/101010100.shtml">
+    <!--过敏指数 -->干燥指数</a>
+</h3>
+</li>
+<li>
+<section class="mask uv">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>最弱</b>
+        辐射弱，涂擦SPF8-12防晒护肤品。
+      </aside>
+      <a target="_blank" href="../uv/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../uv/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../uv/101010100.shtml">
+    <!--过敏指数 -->紫外线指数</a>
+</h3>
+</li>
+<li>
+<section class="mask xc">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>较不宜</b>
+        路面有积水，车子易被溅上泥水。
+      </aside>
+      <a target="_blank" href="../xc/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../xc/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../xc/101010100.shtml">
+    <!--过敏指数 -->洗车指数</a>
+</h3>
+</li>
+<li>
+<section class="mask pl">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>良</b>
+        气象条件有利于空气污染物扩散。
+      </aside>
+      <a target="_blank" href="../pl/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../pl/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../pl/101010100.shtml">
+    <!--过敏指数 -->空气污染扩散指数</a>
+</h3>
+</li>
+<li>
+<section class="mask fs">
+  <section class="area">
+    <section class="detail">
+      <aside>
+        <b>弱</b>
+        涂抹8-12SPF防晒护肤品。
+      </aside>
+      <a target="_blank" href="../fs/101010100.shtml"></a>
+    </section>
+    <section class="imgArea">
+      <a target="_blank" href="../fs/101010100.shtml"></a>
+    </section>
+  </section>
+</section>
+<h3>
+  <a target="_blank" href="../fs/101010100.shtml">
+    <!--过敏指数 -->防晒指数</a>
+</h3>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<aside id="rMain">
+<h2 id="Statistics">
+<b>80%</b>
+用户访问了穿衣指数
+</h2>
+
+<div class="wngd">
+<dl>
+<dt>
+<a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://promotion.yintai.com/20131009/dress/index.html" style="color:">3周年店庆欲望清单 “泰”给利</a>
+</dt>
+<dd>秋冬季富于个性的短夹克设计花样选择繁多。从充满摇滚风情的机车夹克、到包含着小优雅的西装式夹克。</dd>
+</dl>
+<dl>
+<dt>
+<a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/product/list-50000036-10000702.html?N=8010050" style="color:">修饰完美腿型</a>
+</dt>
+<dd>在秋季总是会纠结于如何穿搭才能做到完美修饰腿部比例的问题，搭配方法建议是：裙长靴低、裙靴反向、裙短靴高。</dd>
+</dl>
+<dl>
+<dt>
+<a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/product/list-50002148-10000702.html?N=8010050" style="color:">轻松修饰身材，摩登又好搭！</a>
+</dt>
+<dd>
+想像超模一样潇洒帅气又不失亲和感？军装迷彩衬衫外搭软皮革上衣，翻出的旧款牛仔热裤也很登对，可是你会选择哪款美鞋来搭配整个Look呢？
+</dd>
+</dl>
+<dl>
+<dt>
+<a target="_blank" href="http://cps.yintai.com/Websource.aspx?source=mj12&subSource=mj1220131011&url=http://www.yintai.com/product/list-50000021-10000702.html?N=8010050" style="color:">打造简单、实穿的时尚职场气场！</a>
+</dt>
+<dd>
+想要知道如何在大多数需要无色系着装搭配的职场造型中展现魅力吗？又拥有足够摩登魅力的秋季职场搭配，感兴趣的Girl不妨尝试下。
+</dd>
+</dl>
+</div>
+
+<div class="adposter_6217" style="background:url(/m2/i/index/loading.gif) center center no-repeat #eee">
+<div class="adposter_6217">
+<script>WR_PARAMETER.WR_AD_DATA={"show":"true","type":"CODE","files":[{"file":null,"link":"","IsFlash":"img"}],"code":"%3Cscript+type%3D%22text%2Fjavascript%22+src%3D%22http%3A%2F%2Fad.321tq.com%2Fex%3Fposid%3D10000_004_03%22%3E%3C%2Fscript%3E","closebutton":true,"closetime":false,"under_file":true,"under_or_up":true,"toppx":40,"width":"300","height":"250","width_under":20,"pagewidth":960,"min_screen_w":1024,"opacity":0.9,"staytime":5,"speed":2,"videotitle":"","bgcolor":"000","bdcolor":"000","filepath":"http:\/\/poster.weather.com.cn\/p_files\/player\/player.swf","autostart":true,"repeat":"none","ratingimg":"http:\/\/poster.weather.com.cn\/a.gif?i=&p=6217&pos=0&ch=500&act=1362&order=641&contract=182&host=153&ck=9055","direct":[]};WRATING.PLAY.ACTION(WR_PARAMETER.WR_AD_DATA);</script>
+</div>
+
+</div>
+
+<iframe src="http://y.tpimg.cn/yt/right_1.htm" width="300" height="1910" frameborder="0" scrolling="no"></iframe>
+
+</aside>
+<div class="clear"></div>
+</section>
+<div id="linksbar">
+<a href="http://www.weather.com.cn/wzfw/gywm/index.shtml">关于我们</a>
+|
+<a target="_blank" href="http://marketing.weather.com.cn/">营销中心</a>
+|
+<a target="_blank" href="http://ad.weather.com.cn/">广告服务</a>
+|
+<a href="http://www.weather.com.cn/wzfw/lxwm/index.shtml">联系我们</a>
+|
+<a href="http://www.weather.com.cn/wzfw/ryzp/index.shtml">人员招聘</a>
+|
+<a href="http://www.weather.com.cn/wzfw/wzls/index.shtml">网站律师</a>
+|
+<a href="http://www.weather.com.cn/wzfw/kfzx/index.shtml">客服中心</a>
+|
+<a href="http://club.weather.com.cn/member.php?mod=reuser.php">会员注册</a>
+|
+<a href="http://3g.weather.com.cn" target="_blank">3G版</a>
+|
+<a href="http://www.weather.com.cn/wzfw/wapb/index.shtml">WAP版</a>
+|
+<a href="http://www.weather.com.cn/wzfw/sybz/index.shtml">使用帮助</a>
+|
+<a href="http://www.weather.com.cn/wzfw/wzdt/index.shtml">网站地图</a>
+|
+<a href="http://www.weather.com.cn/wzfw/bqsm/index.shtml">版权声明</a>
+</div>
+
+<footer>
+<p>
+客户服务热线：
+<span>400-6000-121</span>
+客服邮箱：
+<span>service@weather.com.cn</span>
+广告服务：
+<span>010-58993799</span>
+</p>
+<p>
+Copyright&copy;中国气象局公共气象服务中心 All Rights Reserved (2008-2012) 版权所有 复制必究
+</p>
+<p>制作维护：中国气象局公共气象服务中心</p>
+<p>郑重声明：中国天气网版权所有，未经书面授权禁止使用</p>
+<p class="copyIcp">京ICP证010385号 京公网安备11041400134号 增值电信业务经营许可证B2-20050053</p>
+</footer>
+
+</div>
+<div class="icons">
+<ul>
+<li class="icon1">
+<a href="http://mobile.weather.com.cn" target="_blank">移动天气</a>
+</li>
+<li class="icon2">
+<a href="http://www.weather.com.cn/alarm/" target="_blank">灾难预警</a>
+</li>
+<!--<li class="icon3">
+<a href="http://bj.weather.com.cn" target="_blank">北京首页</a>
+</li>
+-->
+<li class="icon4 product">
+<a href="http://www.weather.com.cn/static/html/product/index.shtml" target="_blank">服务产品</a>
+</li>
+</ul>
+<ul class="products">
+<li class="icon1">
+<a href="http://www.weather.com.cn/live/" target="_blank">现在天气</a>
+</li>
+<!--<li class="icon2">
+<a href="#" target="_blank">十天气温</a>
+</li>
+<li class="icon3">
+<a href="#" target="_blank">降雨量</a>
+</li>
+-->
+</ul>
+</div>
+
+<!-- START WRating v1.0 -->
+<script type="text/javascript" src="http://c.wrating.com/a1.js"></script>
+<script type="text/javascript">
+var vjAcc="860010-2099920100";
+var wrUrl="http://c.wrating.com/";
+vjTrack("");
+</script>
+<noscript>
+<img src="http://c.wrating.com/a.gif?a=&c=860010-2099920100" width="1" height="1"/>
+</noscript>
+<!-- END WRating v1.0 -->
+</body>
+</html>
