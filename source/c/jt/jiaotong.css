@@ -333,13 +333,7 @@ z-index:100;}
     outline: medium none;
     text-decoration: none;
 }
-.linklist2
-{
-	font-size: 14px;
-}
-.linklist li{
-	font-size: 14px;
-}
+
 
 #alarm h2{font-size:12px;height:34px;line-height:34px;background-color:#fffac2}
 #alarm h2 i{display:block;float:left;background:url(../../i/index/index_icons.png) no-repeat -42px -110px;width:34px;height:34px;margin-right:10px}
