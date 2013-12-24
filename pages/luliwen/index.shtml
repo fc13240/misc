@@ -58,7 +58,7 @@ window.setInterval("reinitIframe()", 200);
 <base target="_blank">
 </head>
 <body>
-<!--#include file="http://61.4.185.14/static/class/templates/newhead2013.html"-->
+{include file="http://61.4.185.14/static/class/templates/newhead2013.html"}
 
 {parser->run name="date" id="date" param="" assign="output"}
 
@@ -136,12 +136,12 @@ window.setInterval("reinitIframe()", 200);
       </ul>-->
     </div>
     <div class="forecast" >
-      <Iframe id="new" onload=this.height=930;reinitIframe(); style="MARGIN:7px;width:100%"  src=  "/static/productframe2013.php?class=JB_ZYTQ_SLHXDJ" frameBorder="0"  name="contain" scrolling="no" align="left" background-color="#FFFFFF"></Iframe>
+      <Iframe id="new" onload=this.height=930;reinitIframe(); style="MARGIN:7px;width:100%"  src=  "http://61.4.185.14/static/productframe2013.php?class=JB_ZYTQ_SLHXDJ" frameBorder="0"  name="contain" scrolling="no" align="left" background-color="#FFFFFF"></Iframe>
     </div>
   </div>
 </div>
 
-<!--#include file="http://61.4.185.14/static/class/templates/foot2013.html"-->
+{include file="http://61.4.185.14/static/class/templates/foot2013.html"}
 {liter
 <script>
 			var cityid = "101080100";
