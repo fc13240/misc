@@ -74,14 +74,14 @@ h1,h,h3,h4,h5,h6{font-weight:normal;}
 #provice .icon{background:url(../images/index_icons.png) no-repeat -66px 0px;display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
 #provice .arrow{border-top:6px solid #2d6ca6;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:10px;top:20px;}
 
-.footer{border-top:1px solid #eee7e7;background-color:#eeeeee;min-width:100%;}
+.footer{border-top:1px solid #eee7e7;background-color:#eeeeee;width:100%;}
 
-.footer .block{padding:20px 0px 0px;margin-bottom:0;height:auto;width:980px;}
+.footer .block{padding:20px 0px 0px;margin-bottom:0;height:auto;}
 .block {
     position: relative;
     width: 980px;
 }
-.footer h2{width:145px;height:38px;background:url(../images/index_icons.png) no-repeat -160px -35px;float:left;margin:10px 3px 3px 0px;overflow:hidden;}
+.footer h2{width:145px;height:38px;background:url(http://i.tq121.com.cn/i/product/index_icons.png) no-repeat -160px 3px;float:left;margin:10px 3px 3px 0px;overflow:hidden;}
 .footer h2 a{display:block;width:145px;height:38px;text-indent:-9999px;}
 .footer .Lcontent{width:592px;}
 .footer dl{width:115px;padding:15px;background-color:#f9f9f9;float:left;margin:0px 3px 3px 0px;}

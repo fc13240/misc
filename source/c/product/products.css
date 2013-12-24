@@ -9,7 +9,7 @@ a:hover{color:#ee842f;}
 nav{display:block;}
 
 nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px ;position:relative;z-index:100;}
-nav h1{background:url(../images/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
+nav h1{background:url(http://i.tq121.com.cn/i/product/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
 nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:999;}
 nav ul li{float:left;line-height:28px;height:28px;position:relative;}
 .bg {
