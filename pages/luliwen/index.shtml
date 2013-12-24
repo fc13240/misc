@@ -2,6 +2,7 @@
 <!--[30,131,1] published at 2013-12-19 15:37:16 from #150 by system-->
 <html>
 <head>
+<link rel="dns-prefetch" href="http://i.tq121.com.cn">
 <meta charset="utf-8">
 <title>中国天气网-专业天气预报、气象服务门户</title>
 <meta content="天气,天气预报,北京天气,天气在线,气候,气象" name="keywords">
@@ -11,15 +12,10 @@
 <meta content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
 <meta content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
 <meta content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
-
-<script src="http://i.tq121.com.cn/j/product/core.js" type="text/javascript"></script>
-	
-
-	<script>
-		W.css('http://i.tq121.com.cn/c/product/core.css','http://i.tq121.com.cn/c/product/products.css');
-	</script>
-   
-
+<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/product/core.js"></script>
+    <script>W.css('http://i.tq121.com.cn/c/product/core.css','http://i.tq121.com.cn/c/product/products.css')</script>
+    
+{literal}
 <script type="text/javascript">
 
 function reinitIframe(){
@@ -45,7 +41,8 @@ Iframe.height = height;
 window.setInterval("reinitIframe()", 200);
 
 </script>
-
+{/literal}
+{literal}
 <!--[if lt IE 7]>
 		<script type="text/javascript" src="../yj/js/DD_belatedPNG.js"></script>
 		 <script>DD_belatedPNG.fix("nav h1,#warn_content .detail #share");</script>
@@ -53,16 +50,48 @@ window.setInterval("reinitIframe()", 200);
 <!--[if lt IE 9]>
 		<script>'nav figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
 		<![endif]-->
-
-
+{/literal}
+<base target="_blank">
 </head>
 <body>
-{include file="http://61.4.185.14/static/class/templates/newhead2013.html"}
+<!--<!--#include file="61.4.185.14/static/class/templates/newhead2013.html"-->-->
 
 {parser->run name="date" id="date" param="" assign="output"}
+<div id="toolBar">
+  <div class="midBlock"> <span id="time">{$output.all}</span> <i class="mobile"></i><b>移动客户端<i></i></b> <span class="links"><a title="登录" href="#" class="blue">登录</a><a title="设为首页" target="_self" href="javascript:void(0);" id="setIndex">设为首页</a><a title="收藏" href="javascript:void(0);" target="_self" id="collect">收藏</a><a target="_self" title="省级站" href="javascript:void(0);" id="provice"><i class="icon"></i>省级站<i class="arrow"></i></a><a title="English Version" href="#" id="eg">English Version</a><a href="#" id="dl_tw">繁體中文</a></span> </div>
+</div>
+<div class="content clearfix">
+  <nav>
+    <h1><a alt="中国天气网" title="中国天气网" href="#">中国天气网</a></h1>
+    <ul>
+      <li><a href="www.weather.com.cn">首页</a>|</li>
+      <li><a href="#">灾难预警</a>|</li>
+      <li><a href="#">天气预报</a>|</li>
+      <li><a href="#">生活旅游</a><i></i>
+        <div class="dropList"><i></i><span><a href="#">中国旅游天气网</a><a href="#">生活天气</a><a href="#">旅游天气</a></span></div>
+        |</li>
+      <li><a href="#">服务产品</a>|</li>
+      <li><a href="#">天气应用</a><i></i>
+        <div class="dropList"><i></i><span><a href="#">中国天气通</a><a href="#">Mobile版</a><a href="#">桌面版</a><a href="#">气象商城</a></span></div>
+        |</li>
+      <li><a href="#">互动天气</a><i></i>
+        <div class="dropList"><i></i><span><a href="#">天气视频</a><a href="#">天气社区</a><a href="#">天气百科</a><a href="#">问卷调查</a></span></div>
+        |</li>
+      <li><a href="#">知识天气</a></li>
+    </ul>
+  </nav>
+  <div class="location clearfix">
+    <ul>
+      <li>当前位置：</li>
+      <li><a href="#">首页</a>&gt;&gt;</li>
+      <li><a href="#">强对流天气预报</a>&gt;&gt;</li>
+      <li><a href="#">强对流天气落区</a></li>
+    </ul>
+    <div class="search"> <span class="label">城市天气查询</span> <span class="province"> <b>选择省</b> <span class="provinceItem"></span> <i>&nbsp;</i> </span> <span class="city"> <b data-role="0">选择市</b> <span class="cityItem"></span> <i>&nbsp;</i> </span> <span class="area"> <b data-role="0">选择县/区</b> <span class="areaItem"></span> <i>&nbsp;</i> </span> <span class="searchBtn">搜索</span> </div>
+  </div>
 
   <div class="col_left">
-
+{literal}
 <script>
 //window.onload=function(){
 //	var oU = document.getElementById("navLink");
@@ -78,7 +107,7 @@ window.setInterval("reinitIframe()", 200);
 //
 //
 </script>
-  
+ {/literal} 
     <ul id="navLink">
       <li class="oneLevelMenu"> <a href="javascript:void(0);" target="_self">预报</a>
         <div class="subMenu">
@@ -135,40 +164,161 @@ window.setInterval("reinitIframe()", 200);
       </ul>-->
     </div>
     <div class="forecast" >
-      <Iframe id="new" onload=this.height=930;reinitIframe(); style="MARGIN:7px;width:100%"  src=  "http://61.4.185.14/static/productframe2013.php?class=JB_ZYTQ_SLHXDJ" frameBorder="0"  name="contain" scrolling="no" align="left" background-color="#FFFFFF"></Iframe>
+      <Iframe id="new" onload=this.height=930;reinitIframe(); style="MARGIN:7px;width:100%"  src=  "/static/productframe2013.php?class=JB_ZYTQ_SLHXDJ" frameBorder="0"  name="contain" scrolling="no" align="left" background-color="#FFFFFF"></Iframe>
     </div>
   </div>
 </div>
-
-{include file="http://61.4.185.14/static/class/templates/foot2013.html"}
-
+<div class="footer">
+  <div class="block">
+    <div class="Lcontent">
+      <h2><a href="#">中国天气</a></h2>
+      <dl>
+        <dt>
+          <h3><a href="#">资讯</a></h3>
+        </dt>
+        <dd>
+          <p><a href="#">国内</a><a href="#">国际</a><a href="#">国内</a></p>
+          <p><a href="#">国际</a><a href="#">机场</a><a href="#">景区</a></p>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <h3><a href="#">服务</a></h3>
+        </dt>
+        <dd>
+          <p><a href="#">国内</a><a href="#">国际</a><a href="#">国内</a></p>
+          <p><a href="#">国际</a><a href="#">机场</a><a href="#">景区</a></p>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <h3><a href="#">产品</a></h3>
+        </dt>
+        <dd>
+          <p><a href="#">国内</a><a href="#">国际</a><a href="#">国内</a></p>
+          <p><a href="#">国际</a><a href="#">机场</a><a href="#">景区</a></p>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <h3><a href="#">资讯</a></h3>
+        </dt>
+        <dd>
+          <p><a href="#">国内</a><a href="#">国际</a><a href="#">国内</a></p>
+          <p><a href="#">国际</a><a href="#">机场</a><a href="#">景区</a></p>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <h3><a href="#">资讯</a></h3>
+        </dt>
+        <dd>
+          <p><a href="#">国内</a><a href="#">国际</a><a href="#">国内</a></p>
+          <p><a href="#">国际</a><a href="#">机场</a><a href="#">景区</a></p>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <h3><a href="#">服务</a></h3>
+        </dt>
+        <dd>
+          <p><a href="#">国内</a><a href="#">国际</a><a href="#">国内</a></p>
+          <p><a href="#">国际</a><a href="#">机场</a><a href="#">景区</a></p>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <h3><a href="#">产品</a></h3>
+        </dt>
+        <dd>
+          <p><a href="#">国内</a><a href="#">国际</a><a href="#">国内</a></p>
+          <p><a href="#">国际</a><a href="#">机场</a><a href="#">景区</a></p>
+        </dd>
+      </dl>
+      <div class="clear"></div>
+    </div>
+    <div class="friendLink">
+      <h3><a href="#">友情链接</a></h3>
+      <p><a href="#">中国旅游天气网</a><a href="#">中国天气台风网</a><a href="#">中国气象局</a></p>
+      <p><a href="#">国家减灾网</a><a href="#">中国政府网</a><a href="#">国家气象卫星中心</a><a href="#">气象报社</a></p>
+      <p><a href="#">中国气象科技研究院</a><a href="#">中国旅游天气网</a><a href="#">中国国家气象局</a></p>
+      <p><a href="#">中国旅游天气网</a><a href="#">中国天气台风网</a><a href="#">中国气象局</a></p>
+      <p class="last"><a href="#">中国政府网</a><a href="#">新浪</a><a href="#">搜狐</a><a href="#">网易</a><a href="#">MSN</a><a href="#">凤凰网</a><a href="#">人民网</a><a href="#">新华网</a><a href="#">环球</a><a href="#">中国网</a></p>
+    </div>
+    <div class="serviceinfo">
+      <p><span>客服邮箱：<a href="mailto:service@weather.com.cn">service@weather.com.cn</a></span><span>客户服务热线：<b>400-6000-121</b></span><span>京公网安备11041400134号</span></p>
+      <p><span>广告服务：<b>010-58993799</b></span><span>京ICP证010385号</span><span>增值电信业务经营许可证B2-20050053</span></p>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="aboutUs"> Copyright&copy;中国气象局公共气象服务中心 All Rights Reserved (2008-2012) 版权所有 复制必究  制作维护：中国气象局公共气象服务中心、北京市气象局   郑重声明：中国天气网版权所有，未经书面授权禁止使用 </div>
+</div>
+<div class="provinceLinks">
+  <div class="midBlock">
+    <dl>
+      <dt><a href="#">华东地区</a></dt>
+      <dd>
+        <p><a href="#">山东</a><a href="#">江苏</a><a href="#">安徽</a></p>
+        <p><a href="#">浙江</a><a href="#">福建</a><a href="#">上海</a></p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><a href="#">华北地区</a></dt>
+      <dd>
+        <p><a href="#">北京</a><a href="#">天津</a><a href="#">河北</a></p>
+        <p><a href="#">山西</a><a href="#">内蒙古</a></p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><a href="#">华中地区</a></dt>
+      <dd>
+        <p><a href="#">湖北</a><a href="#">湖南</a></p>
+        <p><a href="#">河南</a><a href="#">江西</a></p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><a href="#">华南地区</a></dt>
+      <dd>
+        <p><a href="#">广东</a><a href="#">广西</a></p>
+        <p><a href="#">海南</a></p>
+      </dd>
+    </dl>
+    <div class="line"></div>
+    <dl>
+      <dt><a href="#">西北地区</a></dt>
+      <dd>
+        <p><a href="#">宁夏</a><a href="#">新疆</a><a href="#">青海</a></p>
+        <p><a href="#">陕西</a><a href="#">甘肃</a></p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><a href="#">西南地区</a></dt>
+      <dd>
+        <p><a href="#">四川</a><a href="#">云南</a><a href="#">贵州</a></p>
+        <p><a href="#">西藏</a><a href="#">重庆</a></p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><a href="#">东北地区</a></dt>
+      <dd>
+        <p><a href="#">辽宁</a><a href="#">吉林</a></p>
+        <p><a href="#">黑龙江</a></p>
+      </dd>
+    </dl>
+    <dl>
+      <dt class="last"><a href="#">台港澳地区</a></dt>
+      <dd>
+        <p><a href="#">台湾</a><a href="#">香港</a></p>
+        <p><a href="#">澳门</a></p>
+      </dd>
+    </dl>
+  </div>
+</div>
+<div class="app"> <span><a href="#">中国天气通</a><a href="#">掌中天气</a></span> <i></i> </div>
 <script>
 			var cityid = "101080100";
 			//页面普通模块
 			W.use('../m/c/product1212/js/products_main.js');
- 
-	/*site global variable*/
-    var cityid = "101080100";
-
-	W(function(){
-		W.use(['j/base.js','j/tool/nav.js','j/image/index.js']);
-	});
-	W.use('j/m_city',function(City){
-		  var city = new City({
-		    'prov': $('#prov'),
-		    'city': $('#district'),
-		    'county': $('#city')
-  		});
-	  	$('#weatherselect').click(function(){
-		    var id = city.getValue() || '101010001';
-		    window.open('http://www.weather.com.cn/weather/'+id+'.shtml');
-	  	});
-	});
-	W.use('j/plugs/jquery.lazyload.js',function(){
-		$('img.lazy').lazyload();
-
-	});
-         W.use('j/tool/slidebar');
 </script>
 </body>
 </html>
