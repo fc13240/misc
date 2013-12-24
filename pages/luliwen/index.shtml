@@ -19,7 +19,7 @@
 		W.css('http://i.tq121.com.cn/c/product/core.css','http://i.tq121.com.cn/c/product/products.css','http://i.tq121.com.cn/c/product/warn.css');
 	</script>
    
-{literal}
+
 <script type="text/javascript">
 
 function reinitIframe(){
@@ -45,8 +45,7 @@ Iframe.height = height;
 window.setInterval("reinitIframe()", 200);
 
 </script>
-{/literal}
-{literal}
+
 <!--[if lt IE 7]>
 		<script type="text/javascript" src="../yj/js/DD_belatedPNG.js"></script>
 		 <script>DD_belatedPNG.fix("nav h1,#warn_content .detail #share");</script>
@@ -54,8 +53,8 @@ window.setInterval("reinitIframe()", 200);
 <!--[if lt IE 9]>
 		<script>'nav figure figcaption'.replace(/\w+/g, function (n) { document.createElement(n) })</script>
 		<![endif]-->
-{/literal}
-<base target="_blank">
+
+
 </head>
 <body>
 {include file="http://61.4.185.14/static/class/templates/newhead2013.html"}
@@ -63,7 +62,7 @@ window.setInterval("reinitIframe()", 200);
 {parser->run name="date" id="date" param="" assign="output"}
 
   <div class="col_left">
-{literal}
+
 <script>
 //window.onload=function(){
 //	var oU = document.getElementById("navLink");
@@ -79,7 +78,7 @@ window.setInterval("reinitIframe()", 200);
 //
 //
 </script>
- {/literal} 
+  
     <ul id="navLink">
       <li class="oneLevelMenu"> <a href="javascript:void(0);" target="_self">预报</a>
         <div class="subMenu">
@@ -142,7 +141,7 @@ window.setInterval("reinitIframe()", 200);
 </div>
 
 {include file="http://61.4.185.14/static/class/templates/foot2013.html"}
-{liter
+
 <script>
 			var cityid = "101080100";
 			//页面普通模块
@@ -170,6 +169,6 @@ window.setInterval("reinitIframe()", 200);
 
 	});
          W.use('j/tool/slidebar');
-	</script>
+</script>
 </body>
 </html>
