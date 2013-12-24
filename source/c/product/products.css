@@ -33,6 +33,9 @@ nav ul li{float:left;line-height:28px;height:28px;position:relative;}
     color: #FFFFFF;
     height: 33px;
 }
+.breadcrumb_search a {
+    color: #FFFFFF;
+}
 .breadcrumb_search .breadcrumb {
     float: left;
     padding-left: 35px;
