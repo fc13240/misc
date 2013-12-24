@@ -16,7 +16,7 @@
 	
 
 	<script>
-		W.css('http://i.tq121.com.cn/c/product/core.css','http://i.tq121.com.cn/c/product/products.css','http://i.tq121.com.cn/c/product/warn.css');
+		W.css('http://i.tq121.com.cn/c/product/core.css','http://i.tq121.com.cn/c/product/products.css');
 	</script>
    
 
@@ -146,7 +146,7 @@ window.setInterval("reinitIframe()", 200);
 			var cityid = "101080100";
 			//页面普通模块
 			W.use('../m/c/product1212/js/products_main.js');
-
+ 
 	/*site global variable*/
     var cityid = "101080100";
 
