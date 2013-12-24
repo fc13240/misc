@@ -56,7 +56,7 @@ nav{display:block;}
 table{border-collapse:collapse;}
 h1,h,h3,h4,h5,h6{font-weight:normal;}
 .clearfix{zoom:1}
-.clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
+
 
 
 
@@ -74,8 +74,13 @@ h1,h,h3,h4,h5,h6{font-weight:normal;}
 #provice .icon{background:url(../images/index_icons.png) no-repeat -66px 0px;display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
 #provice .arrow{border-top:6px solid #2d6ca6;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:10px;top:20px;}
 
-.footer{border-top:1px solid #eee7e7;background-color:#eeeeee;min-width:980px;}
-.footer .block{padding:20px 0px 0px;margin:0px auto;height:auto;width:980px;position:relative;}
+.footer{border-top:1px solid #eee7e7;background-color:#eeeeee;min-width:100%;}
+
+.footer .block{padding:20px 0px 0px;margin-bottom:0;height:auto;width:980px;}
+.block {
+    position: relative;
+    width: 980px;
+}
 .footer h2{width:145px;height:38px;background:url(../images/index_icons.png) no-repeat -160px -35px;float:left;margin:10px 3px 3px 0px;overflow:hidden;}
 .footer h2 a{display:block;width:145px;height:38px;text-indent:-9999px;}
 .footer .Lcontent{width:592px;}
@@ -85,7 +90,7 @@ h1,h,h3,h4,h5,h6{font-weight:normal;}
 .footer dl dd p,.friendLink p{line-height:25px;}
 .footer dl p a,.friendLink p a{padding-right:10px;color:#959595;}
 .footer dl p a:hover,.friendLink p a:hover{color:#ee842f;}
-.friendLink{width:358px;position:absolute;right:0px;top:20px;background-color:#f9f9f9;padding:15px 15px 20px 15px;}
+.friendLink{width:358px;position:absolute;right:0px;top:20px;background-color:#f9f9f9;padding:15px 15px 13px 15px;}
 .friendLink h3{padding-bottom:5px;}
 .footer .last{border-top:1px solid #ebebeb;margin-top:5px;padding-top:5px;}
 .serviceinfo{padding:20px 0px;font-size:12px;line-height:20px;}
@@ -107,7 +112,15 @@ h1,h,h3,h4,h5,h6{font-weight:normal;}
 .app span{display:block;width:100px;height:50px;position:absolute;left:0px;top:0px;z-index:5;padding:10px;}
 .app span a{display:block;height:25px;line-height:25px;}
 
-.icons{position:absolute;right:50%;margin-right:-565px;bottom:40px;width:65px;z-index:100;}
+
+.icons {
+    left: 50%;
+    margin-left: 500px;
+    position: fixed;
+    top: 50%;
+    width: 65px;
+    z-index: 100;
+}
 .icons ul li{width:65px;height:70px;margin-bottom:5px;background:#076ea8 url(../images/app_icons.gif) no-repeat;}
 .icons ul li.icon1{background-position:23px 8px;}
 .icons ul li.icon2{background-position:-38px 8px;}
