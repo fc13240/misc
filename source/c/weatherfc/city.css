@@ -52,6 +52,13 @@ nav .bg{height:75px;}
 
 .toolBanner .bottom{height:35px;background-color:#fff;position:absolute;z-index:5;bottom:10px;left:10px;width:970px;padding-left:10px;line-height:35px;overflow:hidden;}
 .toolBanner .bottom a{color:#076ea8;padding:0px 2px;}
+/*liu 2013-12-19 begin*/
+.toolBanner .bottom i{font-style:normal;color:#076EA8;cursor:pointer;margin:auto 4px;float:left;}
+.toolBanner .bottom span{float:left;}
+.toolBanner .bottom .zbSpan{width:610px;overflow:hidden;position:relative;height:35px;}
+.toolBanner .bottom .zbSpan span{white-space:nowrap;position:absolute;left:0;}
+/*liu 2013-12-19 end*/
+
 .toolBanner .bottom a:hover,.bottom .user a{color:#ee842f;}
 .bottom .share{margin-left:90px;background:url(../../i/weatherfc/city_icons.png) no-repeat 20px 0px;}
 .bottom .share a{padding:0px 8px;margin:0px 4px; }
