@@ -3,14 +3,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ÖÐ¹úÌìÆøÍø-×¨ÒµÌìÆøÔ¤±¨¡¢ÆøÏó·þÎñÃÅ»§</title>
-<meta content="ÌìÆø,ÌìÆøÔ¤±¨,±±¾©ÌìÆø,ÌìÆøÔÚÏß,Æøºò,ÆøÏó" name="keywords">
-<meta content="ÖÐ¹úÌìÆøÍøÎªÄúÌá¹©ÊµÊ±È«¹úÌìÆøÆøÏóÐÅÏ¢,¼°Ê±·¢²¼ÌìÆøÔ¤±¨¡¢ÔÖº¦Ô¤¾¯¡¢ÆøÏóÔÆÍ¼¡¢ÂÃÓÎÌìÆø¡¢Ì¨·ç¡¢±©ÓêÑ©µÈÆøÏóÐÅÏ¢£¬ÎªÎÒ¹úµÄÉú²úÉú»îÌá¹©È«Ãæ¾«È·µÄÆøÏó·þÎñ" name="description">
-<meta content="name=ÌìÆø×ÊÑ¶;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
-<meta content="name=Éú»îÌìÆø;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
-<meta content="name=ÆøÏó¿ÆÆÕ;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
-<meta content="name=ÔÖº¦Ô¤¾¯;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
-<meta content="name=ÂÃÓÎÌìÆø;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
+<title>ä¸­å›½å¤©æ°”ç½‘-ä¸“ä¸šå¤©æ°”é¢„æŠ¥ã€æ°”è±¡æœåŠ¡é—¨æˆ·</title>
+<meta content="å¤©æ°”,å¤©æ°”é¢„æŠ¥,åŒ—äº¬å¤©æ°”,å¤©æ°”åœ¨çº¿,æ°”å€™,æ°”è±¡" name="keywords">
+<meta content="ä¸­å›½å¤©æ°”ç½‘ä¸ºæ‚¨æä¾›å®žæ—¶å…¨å›½å¤©æ°”æ°”è±¡ä¿¡æ¯,åŠæ—¶å‘å¸ƒå¤©æ°”é¢„æŠ¥ã€ç¾å®³é¢„è­¦ã€æ°”è±¡äº‘å›¾ã€æ—…æ¸¸å¤©æ°”ã€å°é£Žã€æš´é›¨é›ªç­‰æ°”è±¡ä¿¡æ¯ï¼Œä¸ºæˆ‘å›½çš„ç”Ÿäº§ç”Ÿæ´»æä¾›å…¨é¢ç²¾ç¡®çš„æ°”è±¡æœåŠ¡" name="description">
+<meta content="name=å¤©æ°”èµ„è®¯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
+<meta content="name=ç”Ÿæ´»å¤©æ°”;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
+<meta content="name=æ°”è±¡ç§‘æ™®;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
+<meta content="name=ç¾å®³é¢„è­¦;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
+<meta content="name=æ—…æ¸¸å¤©æ°”;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
 
 <script src="http://i.tq121.com.cn/j/product/core.js" type="text/javascript"></script>
 	
@@ -28,13 +28,13 @@ var Iframe = document.getElementById("new");
 
 try{
 
-// ÉùÃ÷±äÁ¿È¡Öµ
+// å£°æ˜Žå˜é‡å–å€¼
 
 var bHeight = Iframe.contentWindow.document.body.scrollHeight;
 
 vardHeight=Iframe.contentWindow.document.documentElement.scrollHeight;
 
-var height = Math.max(bHeight, dHeight); // È¡×î´óÖµ
+var height = Math.max(bHeight, dHeight); // å–æœ€å¤§å€¼
 
 Iframe.height = height;
 
@@ -71,7 +71,7 @@ window.setInterval("reinitIframe()", 200);
 //	aLi[0].onclick=function(){
 //		var oE = document.createElement('ul');
 //		var oDF = document.getElementById("navLinkFat");
-//		oE.innerHTML='<li><a href="#">É­ÁÖ»ðÏÕÌìÆøÔ¤±¨</a></li><li><a href="#">º£ÑóÆøÏó</a></li><li><a href="#">ÌìÆøÇ÷ÊÆÔ¤±¨</a></li>';
+//		oE.innerHTML='<li><a href="#">æ£®æž—ç«é™©å¤©æ°”é¢„æŠ¥</a></li><li><a href="#">æµ·æ´‹æ°”è±¡</a></li><li><a href="#">å¤©æ°”è¶‹åŠ¿é¢„æŠ¥</a></li>';
 //		oDF.appendChild(oE);
 //		return;
 //	}
@@ -81,58 +81,58 @@ window.setInterval("reinitIframe()", 200);
 </script>
  {/literal} 
     <ul id="navLink">
-      <li class="oneLevelMenu"> <a href="javascript:void(0);" target="_self">Ô¤±¨</a>
+      <li class="oneLevelMenu"> <a href="javascript:void(0);" target="_self">é¢„æŠ¥</a>
         <div class="subMenu">
           <ul>
-            <li><a href="#">É­ÁÖ»ðÏÕÌìÆøÔ¤±¨</a></li>
-            <li><a href="#">º£ÑóÆøÏó</a></li>
-            <li><a href="#">ÌìÆøÇ÷ÊÆÔ¤±¨</a></li>
+            <li><a href="#">æ£®æž—ç«é™©å¤©æ°”é¢„æŠ¥</a></li>
+            <li><a href="#">æµ·æ´‹æ°”è±¡</a></li>
+            <li><a href="#">å¤©æ°”è¶‹åŠ¿é¢„æŠ¥</a></li>
           </ul>
         </div>
       </li>
-      <li><a href="#">ÆøÏóÔÖº¦Ô¤¾¯</a></li>
-      <li><a href="#">ÌìÆøÊµ¿ö</a></li>
-      <li class="oneLevelMenu"> <a target="_self" href="javascript:void(0);">Ç¿¶ÔÁ÷ÌìÆøÔ¤±¨</a>
+      <li><a href="#">æ°”è±¡ç¾å®³é¢„è­¦</a></li>
+      <li><a href="#">å¤©æ°”å®žå†µ</a></li>
+      <li class="oneLevelMenu"> <a target="_self" href="javascript:void(0);">å¼ºå¯¹æµå¤©æ°”é¢„æŠ¥</a>
         <div class="subMenu">
           <ul>
-            <li><a href="#">Ç¿¶ÔÁ÷ÌìÆøÂäÇø</a></li>
-            <li><a href="#">Ç¿¶ÔÁ÷ÌìÆø·ÖÎö</a></li>
-            <li><a href="#">Ç¿¶ÔÁ÷ÌìÆøÕï¶Ï</a></li>
-            <li><a href="#">Ç¿¶ÔÁ÷ÌìÆø¼à²â</a></li>
+            <li><a href="#">å¼ºå¯¹æµå¤©æ°”è½åŒº</a></li>
+            <li><a href="#">å¼ºå¯¹æµå¤©æ°”åˆ†æž</a></li>
+            <li><a href="#">å¼ºå¯¹æµå¤©æ°”è¯Šæ–­</a></li>
+            <li><a href="#">å¼ºå¯¹æµå¤©æ°”ç›‘æµ‹</a></li>
           </ul>
         </div>
       </li>
-      <li><a href="#">1-3Ìì½µË®Á¿Ô¤±¨</a></li>
-      <li><a href="#">1-3ÌìÆøÎÂÔ¤±¨</a></li>
-      <li><a href="#">Îíö²Ô¤±¨</a></li>
-      <li><a href="#">½µÎÂ´ó·çÉ³³¾Ô¤±¨</a></li>
-      <li><a href="#">Ì¨·ç</a></li>
-      <li><a href="#">ÖÐÆÚÌìÆøÔ¤±¨</a></li>
-      <li><a href="#">³ÇÊÐÌìÆøÔ¤±¨</a></li>
-      <li><a href="#">¹úÍâÌìÆøÔ¤±¨</a></li>
-      <li><a href="#">º£ÑóÆøÏó</a></li>
-      <li><a href="#">Å©ÒµÆøÏó</a></li>
-      <li><a href="#">Ë®ÎÄÆøÏó</a></li>
-      <li><a href="#">½»Í¨ÆøÏó</a></li>
-      <li><a href="#">µØÖÊÔÖº¦</a></li>
-      <li><a href="#">»·¾³ÆøÏó</a></li>
-      <li><a href="#">º½¿ÕÆøÏó</a></li>
-      <li><a href="#">ÎÄ×Ö²úÆ·</a></li>
-      <li><a href="#">ÊýÖµÔ¤±¨</a></li>
-      <li><a href="#">Ä£Ê½¼ìÑé</a></li>
-      <li><a href="#">ÌìÆøÔ¤±¨¼¼Êõ×Ü½á×¨¿¯</a></li>
-      <li><a href="#">½»Á÷ÂÛÌ³</a></li>
-      <li><a href="#">ÊÖ»úWAP</a></li>
-      <li><a href="#">ÊÖ»úÓ¦ÓÃ</a></li>
-      <li><a href="#">ÆøÏó±à¼­²¿</a></li>
+      <li><a href="#">1-3å¤©é™æ°´é‡é¢„æŠ¥</a></li>
+      <li><a href="#">1-3å¤©æ°”æ¸©é¢„æŠ¥</a></li>
+      <li><a href="#">é›¾éœ¾é¢„æŠ¥</a></li>
+      <li><a href="#">é™æ¸©å¤§é£Žæ²™å°˜é¢„æŠ¥</a></li>
+      <li><a href="#">å°é£Ž</a></li>
+      <li><a href="#">ä¸­æœŸå¤©æ°”é¢„æŠ¥</a></li>
+      <li><a href="#">åŸŽå¸‚å¤©æ°”é¢„æŠ¥</a></li>
+      <li><a href="#">å›½å¤–å¤©æ°”é¢„æŠ¥</a></li>
+      <li><a href="#">æµ·æ´‹æ°”è±¡</a></li>
+      <li><a href="#">å†œä¸šæ°”è±¡</a></li>
+      <li><a href="#">æ°´æ–‡æ°”è±¡</a></li>
+      <li><a href="#">äº¤é€šæ°”è±¡</a></li>
+      <li><a href="#">åœ°è´¨ç¾å®³</a></li>
+      <li><a href="#">çŽ¯å¢ƒæ°”è±¡</a></li>
+      <li><a href="#">èˆªç©ºæ°”è±¡</a></li>
+      <li><a href="#">æ–‡å­—äº§å“</a></li>
+      <li><a href="#">æ•°å€¼é¢„æŠ¥</a></li>
+      <li><a href="#">æ¨¡å¼æ£€éªŒ</a></li>
+      <li><a href="#">å¤©æ°”é¢„æŠ¥æŠ€æœ¯æ€»ç»“ä¸“åˆŠ</a></li>
+      <li><a href="#">äº¤æµè®ºå›</a></li>
+      <li><a href="#">æ‰‹æœºWAP</a></li>
+      <li><a href="#">æ‰‹æœºåº”ç”¨</a></li>
+      <li><a href="#">æ°”è±¡ç¼–è¾‘éƒ¨</a></li>
     </ul>
   </div>
   <div class="col_right">
-    <div class="warn_detail"> <span><a href="#"><img src="m/c/product1212/images/warn_icons/01.gif"></a></span> <span>2013Äê05ÔÂ22ÈÕ17Ê±¹ã¶«Ê¡½â³ý±©Óê»ÆÉ«Ô¤¾¯</span> <span class="more"><a href="#">¸ü¶àÔ¤¾¯</a></span> </div>
+    <div class="warn_detail"> <span><a href="#"><img src="m/c/product1212/images/warn_icons/01.gif"></a></span> <span>2013å¹´05æœˆ22æ—¥17æ—¶å¹¿ä¸œçœè§£é™¤æš´é›¨é»„è‰²é¢„è­¦</span> <span class="more"><a href="#">æ›´å¤šé¢„è­¦</a></span> </div>
     <div class="menu clearfix" id="navLinkFat">
       <!--<ul>
-        <li class="current"><a href="#">Ô¤±¨</a></li>
-        <li><a href="#">É­ÁÖ»ðÏÕÆøÏóÔ¤±¨</a></li>
+        <li class="current"><a href="#">é¢„æŠ¥</a></li>
+        <li><a href="#">æ£®æž—ç«é™©æ°”è±¡é¢„æŠ¥</a></li>
       </ul>-->
     </div>
     <div class="forecast" >
@@ -145,7 +145,7 @@ window.setInterval("reinitIframe()", 200);
 {liter
 <script>
 			var cityid = "101080100";
-			//Ò³ÃæÆÕÍ¨Ä£¿é
+			//é¡µé¢æ™®é€šæ¨¡å—
 			W.use('../m/c/product1212/js/products_main.js');
 
 	/*site global variable*/
