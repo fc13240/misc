@@ -1,0 +1,116 @@
+body{background-color:#EEEEEE;background-attachment:fixed;background-position:center top;background-repeat:no-repeat;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
+*{padding:0px;margin:0px;border:0;}
+ul{list-style:none;}
+a{text-decoration:none;color:#252525;}
+a:hover{color:#ee842f;}
+.clear{clear:both;height:0px;overflow:hidden;}
+nav{display:block;}
+.bg{width:1000px;position:absolute;left:0px;top:0px;background-color:#fff;opacity:0.8;filter:alpha(opacity=80);}
+
+nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px;position:relative;z-index:80;}
+nav h1{background:url(../images/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
+nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:10;}
+nav ul li{float:left;line-height:28px;height:28px;position:relative;}
+nav .dropList{position:absolute;left:0px;top:28px;line-height:30px;z-index:10;display:none;}
+nav .dropList i{position:absolute;left:0px;top:0px;background-color:#ffffff;opacity:0.95;filter:alpha(opacity=95);width:120px;height:100px;display:block;border:none;}
+nav .dropList span{position:absolute;top:0px;left:0px;padding:5px 0px;}
+nav .dropList a{font-size:14px;line-height:30px;display:block;text-align:left;white-space:nowrap;}
+nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-height:28px;}
+nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;vertical-align:middle;}
+nav .bg{height:75px;}
+
+#ad_banner{width:980px;height:90px;padding:0px 10px;position:relative;margin:0 auto;}
+#ad_banner span{position:absolute;display:block;height:90px;top:0px;z-index:5;}
+#ad_banner #ad1{width:115px;left:10px;}
+#ad_banner #ad2{width:730px;left:135px;}
+#ad_banner #ad3{width:115px;right:10px;}
+#ad_banner .bg{height:90px;}
+
+#warn_content{width:980px;height:160px;padding:10px;position:relative;margin:0 auto;}
+#warn_content h2{font-size:36px;line-height:36px;height:36px;padding:10px 0px 20px 106px;font-weight:normal;color:#f0f0f0;position:absolute;z-index:5;}
+#warn_content h3{position:absolute;z-index:5;font-weight:normal;font-size:14px;padding:56px 0px 0px 106px;}
+#warn_content h3 a{color:#f0f0f0;}
+#warn_content h3 #city{font-size:18px;}
+#warn_content p{color:#ffffff;font-size:16px;line-height:20px;position:absolute;z-index:5;padding:125px 0px 0px 15px;width:440px;}
+#warn_content p a{position:absolute;bottom:0px;right:0px;color:#f0ac08;cursor:pointer;}
+#warn_content .icon{width:81px;height:65px;position:absolute;left:25px;top:25px;z-index:5;}
+#warn_content .detail{width:430px;border-left:1px solid #ffffff;position:absolute;padding-left:30px;right:40px;top:25px;z-index:5;height:130px;color:#ffffff;}
+#warn_content .detail h4{font-size:18px;font-weight:normal;line-height:24px;}
+#warn_content .detail p{padding:0px;line-height:24px;width:430px;}
+#warn_content .detail #share{background:url(../images/warn_icons.png) no-repeat 40px -43px;display:block;height:20px;line-height:20px;width:150px;position:absolute;right:0px;bottom:0px;}
+#warn_content #share a{display:inline-block;vertical-align:top;width:21px;height:19px;overflow:hidden;_background:url(../images/warn.png) no-repeat;}
+#warn_content #share .qzone{_background-position:0px -82px;}
+#warn_content #share .sina{_background-position:-22px -82px;}
+#warn_content #share .qqweibo{_background-position:-44px -82px;}
+#warn_content #share .renren{_background-position:-66px -82px;}
+#warn_content #share .kaixin{_background-position:-88px -82px;}
+#warn_content .bg{height:180px;}
+.bg_black{width:980px;height:160px;position:absolute;left:10px;top:10px;background-color:#000;opacity:0.75;filter:alpha(opacity=75);}
+
+.block{width:980px;height:1000px;padding:0px 10px;position:relative;margin:0 auto;}
+.block .block_content{position:absolute;width:980px;z-index:5;top:0px;left:10px;}
+.block h2{width:670px;height:80px;line-height:80px;font-size:34px;color:#fff;background-color:#c30e23;font-weight:normal;text-align:center;}
+.imgNews{width:650px;height:77px;padding:10px;background-color:#fff;margin-top:10px;}
+.imgNews figure{width:325px;height:77px;float:left;position:relative;}
+.imgNews figure img{width:100px;height:75px;border:1px solid #959595;}
+.imgNews figure figcaption{width:203px;position:absolute;right:10px;top:0px;font-size:14px;line-height:20px;}
+.imgNews figure p{font-size:12px;padding-top:10px;}
+.advice{width:240px;height:215px;padding:20px 30px;background-color:#076ea8;color:#fff;position:absolute;right:0px;top:0px;line-height:21px;}
+.advice h3{font-size:30px;font-weight:normal;line-height:32px;}
+.advice ul{padding-top:15px;}
+.event{width:670px;margin-top:10px;}
+.event h3,.cartoon h3,.gallery h3,.knowledge h3{font-size:24px;color:#252525;font-weight:normal;line-height:30px;}
+.imgArea{width:680px;padding-top:10px;}
+.imgArea a{display:block;width:160px;height:120px;margin:0px 10px 10px 0px;position:relative;float:left;}
+.imgArea a img{width:160px;height:120px;}
+.imgArea a b{width:160px;height:30px;line-height:30px;text-align:center;color:#fff;position:absolute;left:0px;bottom:0px;font-weight:normal;z-index:5;}
+.imgArea a i{width:160px;height:30px;position:absolute;left:0px;bottom:0px;background-color:#000000;opacity:0.9;filter:alpha(opacity=90);}
+.ad{width:300px;height:250px;position:absolute;right:0px;top:265px;}
+.ability{width:670px;margin-top:10px;}
+.ability .lBlock{width:330px;float:left;margin-right:10px;}
+.ability .rBlock{width:330px;float:left;}
+.ability h3{height:40px;line-height:40px;font-size:24px;color:#fff;padding-left:10px;font-weight:normal;background-color:#076ea8;position:relative;}
+.ability h3 a{color:#fff;}
+.ability h3 span{font-size:14px;position:absolute;right:10px;top:0px;}
+.ability dl{padding:10px;background-color:#fff;margin-bottom:1px;}
+.ability dt{font-size:18px;}
+.ability dt a{color:#076ea8;}
+.radar{width:300px;position:absolute;top:525px;right:0px;}
+.radar h3{height:35px;line-height:35px;background-color:#076ea8;padding-left:10px;color:#fff;font-size:18px;font-weight:normal;}
+.radar .radarCont{width:300px;height:315px;overflow:hidden;}
+.cartoon{width:670px;overflow:hidden;margin-top:10px;}
+.cartoon .imgArea a,.cartoon .imgArea img{width:160px;height:145px;}
+.cartoon .imgArea a b,.cartoon .imgArea a i{height:35px;line-height:35px;}
+.expert{width:300px;border-top:3px solid #076ea8;position:absolute;right:0px;top:885px;background-color:#fff;}
+.expert h3{height:30px;line-height:30px;background-color:#e8e8e8;padding-left:10px;font-size:18px;font-weight:normal;}
+.expert h3 span{position:absolute;top:0px;right:10px;font-size:12px;}
+.expert h3 span a{color:#076ea8;}
+.expert dl{width:280px;padding:15px 10px;height:68px;}
+.expert dl img,.expert dl dd{width:70px;height:68px;}
+.expert dl dd{float:left;}
+.expert dl dt{width:200px;padding-left:10px;float:left;}
+.expert dl dt a{color:#076ea8;line-height:20px;}
+.expert dl dt a:hover{color:#ee842f;}
+.expert dl dt p{font-size:12px;line-height:18px;background-color:#fff;height:auto;}
+.expert ul{background-color:#e8e8e8;padding:10px;}
+.gallery{width:670px;margin-top:10px;overflow:hidden;}
+.gallery .imgArea{width:675px;font-size:16px;}
+.gallery .imgArea a{width:220px;height:150px;margin:0px 5px 5px 0px;}
+.gallery .imgArea a img{width:220px;height:150px;}
+.gallery .imgArea a b,.gallery .imgArea a i{width:220px;}
+.knowledge{width:300px;position:absolute;right:0px;top:1103px;}
+.knowledge h3{height:40px;line-height:40px;margin-bottom:5px;}
+.knowledge dl{width:300px;height:80px;background-color:#e6f8ff;border-bottom:2px solid #fff;}
+.knowledge dt{width:55px;height:48px;background-color:#bdeafd;float:left;font-size:24px;line-height:24px;padding:16px 15px;text-align:center;}
+.knowledge dd{padding:10px 10px 10px 95px;font-size:12px;}
+.knowledge dd a{padding:0px 5px;}
+.knowledge .last{border-bottom:none;}
+.hotLine{width:300px;position:absolute;right:0px;top:1489px;}
+.hotLine h3{height:40px;line-height:40px;font-size:20px;font-weight:normal;}
+.hotLine dl{background-color:#ebebeb;padding-left:20px;}
+.hotLine dl dt{color:#076ea8;line-height:30px;}
+.hotLine .first{padding-top:10px;}
+.hotLine .last{padding-bottom:10px;}
+.block .bg{height:1000px;}
+
+.footer h2{width:145px;height:38px;float:left;margin:10px 3px 3px 0px;overflow:hidden;background-color:#EEEEEE;}
