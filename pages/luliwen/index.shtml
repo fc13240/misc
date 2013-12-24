@@ -153,7 +153,7 @@ window.setInterval("reinitIframe()", 200);
     </ul>
   </div>
   <div class="col_right">
-    <div class="warn_detail"> <span><a href="#"><img src="m/c/product1212/images/warn_icons/01.gif"></a></span> <span>2013年05月22日17时广东省解除暴雨黄色预警</span> <span class="more"><a href="#">更多预警</a></span> </div>
+    <div class="warn_detail"> <span><a href="#"><img src="http://i.tq121.com.cn/i/product/warn_icons/01.gif"></a></span> <span>2013年05月22日17时广东省解除暴雨黄色预警</span> <span class="more"><a href="#">更多预警</a></span> </div>
     <div class="menu clearfix" id="navLinkFat">
       <!--<ul>
         <li class="current"><a href="#">预报</a></li>
