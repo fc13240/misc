@@ -6,7 +6,7 @@ define(function(require){
 		'county': null,
 		'selectedId': ''
 	}
-	var dataUrl = 'http://i.tq121.com.cn/pages/luliwen/city3jdata';
+	var dataUrl = 'http://i.tq121.com.cn/pages/luliwen/city3jdata/';
 	var CODE_RE = /^(\d{5})(\d{2})(\d{2})$/
 	function City(config){
 		this._conf = config = $.extend({},defaultConfig,config);
