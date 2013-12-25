@@ -78,7 +78,7 @@ window.setInterval("reinitIframe()", 200);
 		<ul class="breadcrumb">
 			
 		<li><a href="http://www.weather.com.cn/">中国天气网</a></li>
-		<li class="divider">&gt;</li> <li><a href="/photo/index.shtml">图片库</a></li> <li class="divider">&gt;</li> <li><a href="/photo/gqt/index.shtml">高清图</a></li>
+		<li class="divider">&gt;</li> <li><a href="/photo/index.shtml">预报</a></li> <li class="divider">&gt;</li> <li><a href="/photo/gqt/index.shtml">森林火险气象预报</a></li>
 		</ul>
 		
 
