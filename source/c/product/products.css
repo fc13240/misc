@@ -88,7 +88,7 @@ nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-hei
 nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;vertical-align:middle;}
 nav .bg{height:75px;}
 #provice{background-color:#0c2a46;color:#fff;}
-#provice .icon{background:url(http://i.tq121.com.cn/i/product/index_icons.png) no-repeat 0px 0px;}
+#provice .icon{background:url(http://i.tq121.com.cn/i/product/index_icons.png) no-repeat -660px 0px;}
 #provice .arrow{border-color:#fff transparent transparent;}
 
 .content{width:1000px;margin:0 auto;padding-bottom:20px;background-color:#f8f8f8;}
