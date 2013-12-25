@@ -8,10 +8,76 @@ a:hover{color:#ee842f;}
 .clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
 nav{display:block;}
 
-nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:42px 10px 12px;position:relative;z-index:80;}
-nav h1{background:url(../images/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
-nav ul{position:absolute;height:28px;top:50px;left:195px;font-size:18px;z-index:10;}
+nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px ;position:relative;z-index:100;}
+nav h1{background:url(http://i.tq121.com.cn/i/product/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
+nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:999;}
 nav ul li{float:left;line-height:28px;height:28px;position:relative;}
+.bg {
+    background-color: #FFFFFF;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    width: 1000px;
+}
+.image_container {
+    background: none repeat scroll 0 0 #F8F8F8;
+    margin: 0 auto;
+    width: 1000px;
+}
+.image_container .breadcrumb_search {
+    margin: 0 10px;
+}
+.breadcrumb_search {
+    background: none repeat scroll 0 0 #252525;
+    color: #FFFFFF;
+    height: 33px;
+}
+.breadcrumb_search a {
+    color: #FFFFFF;
+}
+.breadcrumb_search .breadcrumb {
+    float: left;
+    padding-left: 35px;
+}
+.breadcrumb_search .breadcrumb li {
+    float: left;
+    line-height: 33px;
+}
+.breadcrumb_search .breadcrumb li.divider {
+    padding: 0 10px;
+}
+.citysearch {
+    float: right;
+    padding-right: 7px;
+}
+.citysearch label, .citysearch button {
+    float: left;
+}
+.citysearch label {
+    line-height: 31px;
+    padding-right: 13px;
+}
+.citysearch .locationSearch .iframeDiv {
+    float: left;
+    height: 22px;
+    margin-top: 5px;
+}
+.citysearch .locationSearch .iframeDiv .sel select {
+    background-color: #EAEAEA;
+    float: left;
+    height: 22px;
+    line-height: 20px;
+    margin-right: 1px;
+    text-align: center;
+    width: 60px;
+}
+.citysearch .btn {
+    float: left;
+    height: 20px;
+    margin-top: 1px;
+    width: 53px;
+}
 nav .dropList{position:absolute;left:0px;top:28px;line-height:30px;z-index:10;display:none;}
 nav .dropList i{position:absolute;left:0px;top:0px;background-color:#ffffff;opacity:0.95;filter:alpha(opacity=95);width:120px;height:100px;display:block;border:none;}
 nav .dropList span{position:absolute;top:0px;left:0px;padding:5px 0px;}
@@ -24,7 +90,7 @@ nav .bg{height:75px;}
 #provice .arrow{border-color:#fff transparent transparent;}
 
 .content{width:1000px;margin:0 auto;padding-bottom:20px;background-color:#f8f8f8;}
-.location{width:938px;margin:0px 10px;padding:0px 7px 0px 35px;background-color:#252525;color:#fff;height:33px;line-height:33px;position:relative;z-index:10;}
+<!---->.location{width:938px;margin:0px 10px;padding:0px 7px 0px 35px;background-color:#252525;color:#fff;height:33px;line-height:33px;position:relative;z-index:10;}
 .location ul,.location ul li{float:left;}
 .location ul li a{color:#fff;}
 .location .search{float:right;height:25px;line-height:25px;padding-top:4px;}
