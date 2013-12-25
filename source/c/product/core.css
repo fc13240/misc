@@ -64,19 +64,19 @@ h1,h,h3,h4,h5,h6{font-weight:normal;}
 .midBlock{width:980px;margin:0 auto;}
 #toolBar .midBlock{height:43px;line-height:43px;position:relative;color:#fff;}
 #time{display:block;height:43px;line-height:43px;float:left;}
-.mobile{display:block;width:20px;height:43px;background:url(../images/index_icons.png) no-repeat 0px 0px;float:left;margin:0px 5px;}
+.mobile{display:block;width:20px;height:43px;background:url(http://i.tq121.com.cn/i/product/index_icons.png) no-repeat 0px 0px;float:left;margin:0px 5px;}
 #toolBar b{font-weight:normal;color:#f06600;cursor:pointer;display:block;height:43px;padding-right:20px;line-height:43px;position:relative;float:left;}
 #toolBar b i{border-top:6px solid #adadad;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:0px;top:20px;}
 .links{display:block;height:43px;line-height:43px;position:absolute;right:0px;top:0px;}
 .links a{color:#fff;display:block;height:43px;line-height:43px;float:left;padding:0px 10px;}
 .links #setIndex,.links #eg{border-right:1px solid #275885;}
 #provice{background-color:#ebebeb;color:#2d6ca6;padding-left:50px;padding-right:30px;position:relative;}
-#provice .icon{background:url(../images/index_icons.png) no-repeat -66px 0px;display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
+#provice .icon{background:url(http://i.tq121.com.cn/i/product/index_icons.png) no-repeat -66px 0px;display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
 #provice .arrow{border-top:6px solid #2d6ca6;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:10px;top:20px;}
 
 .footer{border-top:1px solid #eee7e7;background-color:#eeeeee;width:100%;}
 
-.footer .block{padding:20px 0px 0px;margin-bottom:0;height:auto;}
+.footer .block{padding:20px 0px 0px;margin-bottom:0;height:auto;margin:0 auto;}
 .block {
     position: relative;
     width: 980px;

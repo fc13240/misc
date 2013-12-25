@@ -24,6 +24,8 @@ nav ul li{float:left;line-height:28px;height:28px;position:relative;}
     background: none repeat scroll 0 0 #F8F8F8;
     margin: 0 auto;
     width: 1000px;
+	overflow:hidden;
+
 }
 .image_container .breadcrumb_search {
     margin: 0 10px;
@@ -90,7 +92,7 @@ nav .bg{height:75px;}
 #provice .arrow{border-color:#fff transparent transparent;}
 
 .content{width:1000px;margin:0 auto;padding-bottom:20px;background-color:#f8f8f8;}
-<!---->.location{width:938px;margin:0px 10px;padding:0px 7px 0px 35px;background-color:#252525;color:#fff;height:33px;line-height:33px;position:relative;z-index:10;}
+
 .location ul,.location ul li{float:left;}
 .location ul li a{color:#fff;}
 .location .search{float:right;height:25px;line-height:25px;padding-top:4px;}
