@@ -82,22 +82,21 @@ define(function(require){
 		var $ir = $('<i>>></i>');
 		$z.before($il);
 		$z.after($ir);
+		if($zc[0].offsetLeft>0 || $zc[0].offsetLeft==0){
+			$il.stop().click(function(){
+				$zc.stop(true,true);
+				if($zc[0].offsetLeft<0){
+					$zc.stop().animate({left: "+=100px"}, 600);	
+				}
+			})
+			$ir.stop().click(function(){
+				$zc.stop(true,true);
+				if(600-$zc[0].offsetLeft<$zc[0].offsetWidth){
+					$zc.stop().animate({left: "-=100px"}, 600);
+				}
+			})
+		}
 	}
-	if($zc[0].offsetLeft>0 || $zc[0].offsetLeft==0){
-		$il.stop().click(function(){
-			$zc.stop(true,true);
-			if($zc[0].offsetLeft<0){
-				$zc.stop().animate({left: "+=100px"}, 600);	
-			}
-		})
-		$ir.click(function(){
-			$zc.stop(true,true);
-			if(600-$zc[0].offsetLeft<$zc[0].offsetWidth){
-				$zc.stop().animate({left: "-=100px"}, 600);
-			}
-		})
-	}
-	
 	
 	//分享
 	$(".sina").click(function(){
