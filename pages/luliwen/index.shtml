@@ -154,12 +154,6 @@ window.setInterval("reinitIframe()", 200);
   </div>
   <div class="col_right">
     <div class="warn_detail"> <span><a href="#"><img src="http://i.tq121.com.cn/i/product/warn_icons/01.gif"></a></span> <span>2013年05月22日17时广东省解除暴雨黄色预警</span> <span class="more"><a href="#">更多预警</a></span> </div>
-    <div class="menu clearfix" id="navLinkFat">
-      <!--<ul>
-        <li class="current"><a href="#">预报</a></li>
-        <li><a href="#">森林火险气象预报</a></li>
-      </ul>-->
-    </div>
     <div class="forecast" >
     <Iframe id="new" onload=this.height=960;reinitIframe(); style="MARGIN:7px;width:100%"  src=  "http://61.4.185.14/static/productframe2013.php?class=JB_ZYTQ_SLHXDJ" frameBorder="0"  name="contain" scrolling="no" align="left" background-color="#FFFFFF"></Iframe>
     </div>
