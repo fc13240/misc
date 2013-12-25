@@ -279,7 +279,7 @@ window.setInterval("reinitIframe()", 200);
 	W(function(){
 		W.use(['j/base.js','j/tool/nav.js','j/image/index.js']);
 	});
-	W.use('http://i.tq121.com.cn/j/product/m_city',function(City){
+	W.use('http://i.tq121.com.cn/j/product/m_city.js',function(City){
 		  var city = new City({
 		    'prov': $('#prov'),
 		    'city': $('#district'),
