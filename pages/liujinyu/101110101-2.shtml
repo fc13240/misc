@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+		<link rel="dns-prefetch" href="http://localhost/source">
 		<meta charset="utf-8" />
 		<title>西安天气预报-今日_明日_一周天气预报:12月5日星期四 晴 13/0℃ </title>
 		<meta  name="keywords" content="西安天气预报,西安今日天气,西安明日天气,西安一周天气预报" />
@@ -11,8 +11,8 @@
 		<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 		<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 		<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
-<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
-    <script>W.css('http://i.tq121.com.cn/c/core.css','http://i.tq121.com.cn/c/common.css','http://i.tq121.com.cn/c/weatherfc/city.css','http://i.tq121.com.cn/c/jquery-ui-1.10.3.custom.min.css')</script>
+<script type="text/javascript" language="JavaScript" src="http://localhost/source/j/core.js"></script>
+    <script>W.css('http://localhost/source/c/core.css','http://localhost/source/c/common.css','http://localhost/source/c/weatherfc/city.css','http://localhost/source/c/jquery-ui-1.10.3.custom.min.css')</script>
     <script type="text/javascript" language="JavaScript" src="http://geoip.weather.com.cn/g/"></script>
 
     <!--[if lt IE 7]>
@@ -271,7 +271,7 @@
 				<!--<span class="rBtn" style="right: 0px;"><i></i><b>天气相关信息</b></span>-->
 				<div class="relateWeather">
 <!--当前城市相关气象信息，日出/日落时间等模块 start-->
-					<img  src="http://i.tq121.com.cn/i/weatherfc/beijing1.jpg" title="" alt="" style="position:absolute;left:0px;top:0px;border:none"><a href="http://scxx.xn121.com/searchprice/beijing/beijing/beijing/index.html" style="position:absolute;background:url(#);width:100px;height:30px;bottom:5px;left:80px;"></a>
+					<img  src="http://localhost/source/i/weatherfc/beijing1.jpg" title="" alt="" style="position:absolute;left:0px;top:0px;border:none"><a href="http://scxx.xn121.com/searchprice/beijing/beijing/beijing/index.html" style="position:absolute;background:url(#);width:100px;height:30px;bottom:5px;left:80px;"></a>
 <!--当前城市相关气象信息，日出/日落时间等模块 end-->
 				</div>
 				</div>
@@ -541,12 +541,12 @@ var observe24h_data = {"od":{"od0":"201312051500","od1":"西安","od2":[{"od21":
 <div class="figures">
 	<figure><a alt="天气预报" title="天气预报" href="http://www.weather.com.cn/video/tqyb/05/508815.shtml"><img alt="天气预报" title="天气预报" src="http://i.weather.com.cn/images/cn/index/2011/02/28/5ED9B31E31ADAE5663A4B2495F6C8920.jpg"></a><figcaption><a href="#">天气预报</a></figcaption></figure>
 	<ul>
-		<li><a alt="宋英杰" title="宋英杰" href="http://baike.weather.com.cn/index.php?doc-view-1114.php"><img alt="宋英杰" title="宋英杰" src="http://i.tq121.com.cn/i/index/img38.jpg"></a></li>
-		<li><a alt="赵红艳" title="赵红艳" href="http://baike.weather.com.cn/index.php?doc-view-1289.php"><img alt="赵红艳" title="赵红艳" src="http://i.tq121.com.cn/i/index/img12.jpg"></a></li>
-		<li><a alt="裴新华" title="裴新华" href="http://baike.weather.com.cn/index.php?doc-view-1124.php"><img alt="裴新华" title="裴新华" src="http://i.tq121.com.cn/i/index/img09.jpg"></a></li>
-		<li><a alt="杨丹" title="杨丹" href="http://baike.weather.com.cn/index.php?doc-view-1290.php"><img alt="杨丹" title="杨丹" src="http://i.tq121.com.cn/i/index/img10.jpg"></a></li>
-		<li><a alt="冯殊" title="冯殊" href="http://baike.weather.com.cn/index.php?doc-view-1296.php"><img alt="冯殊" title="冯殊" src="http://i.tq121.com.cn/i/index/img11.jpg"></a></li>
-		<li><a alt="王蓝一" title="王蓝一" href="http://baike.weather.com.cn/index.php?doc-view-1298.php"><img alt="王蓝一" title="王蓝一" src="http://i.tq121.com.cn/i/index/img14.jpg"></a></li>
+		<li><a alt="宋英杰" title="宋英杰" href="http://baike.weather.com.cn/index.php?doc-view-1114.php"><img alt="宋英杰" title="宋英杰" src="http://localhost/source/i/index/img38.jpg"></a></li>
+		<li><a alt="赵红艳" title="赵红艳" href="http://baike.weather.com.cn/index.php?doc-view-1289.php"><img alt="赵红艳" title="赵红艳" src="http://localhost/source/i/index/img12.jpg"></a></li>
+		<li><a alt="裴新华" title="裴新华" href="http://baike.weather.com.cn/index.php?doc-view-1124.php"><img alt="裴新华" title="裴新华" src="http://localhost/source/i/index/img09.jpg"></a></li>
+		<li><a alt="杨丹" title="杨丹" href="http://baike.weather.com.cn/index.php?doc-view-1290.php"><img alt="杨丹" title="杨丹" src="http://localhost/source/i/index/img10.jpg"></a></li>
+		<li><a alt="冯殊" title="冯殊" href="http://baike.weather.com.cn/index.php?doc-view-1296.php"><img alt="冯殊" title="冯殊" src="http://localhost/source/i/index/img11.jpg"></a></li>
+		<li><a alt="王蓝一" title="王蓝一" href="http://baike.weather.com.cn/index.php?doc-view-1298.php"><img alt="王蓝一" title="王蓝一" src="http://localhost/source/i/index/img14.jpg"></a></li>
 	</ul>
 	<div class="clear"></div>
 </div>	
@@ -775,7 +775,7 @@ var observe24h_data = {"od":{"od0":"201312051500","od1":"西安","od2":[{"od21":
 			var cityid = "101110101";
 			W.use(['j/weatherfc/city_main','j/tool/slidebar']);
 		</script>
-	<script>W.js("http://i.tq121.com.cn/j/ad/caoyu-min.js")</script>
+	<script>W.js("http://localhost/source/j/ad/caoyu-min.js")</script>
     <script type="text/javascript" src="http://ad.321tq.com/ex2?posid=d"></script>
     <div class="ad-container">
 	  <div class="adposter_pos" data-posid="top_left_ad">
