@@ -267,11 +267,11 @@ window.setInterval("reinitIframe()", 200);
 				<li class="addCity"><a href="/profile/city.shtml" style="display:block;"><strong>+</strong>定制城市</a></li>
 			</ul>
 
-<script>
+<!--<script>
 			var cityid = "101080100";
 			//页面普通模块
 			W.use('http://i.tq121.com.cn/j/product/products_main.js');
-</script>
+</script>-->
 <script>
 	/*site global variable*/
     var cityid = "101080100";
