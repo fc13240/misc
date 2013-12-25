@@ -273,6 +273,12 @@ window.setInterval("reinitIframe()", 200);
 			W.use('http://i.tq121.com.cn/j/product/products_main.js');
 </script>-->
 <script>
+define(function(require){
+	require('j/base');
+$(".col_left .oneLevelMenu").click(function(){
+		$(this).find(".subMenu").toggle();
+	})
+});
 	/*site global variable*/
     var cityid = "101080100";
 
