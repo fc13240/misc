@@ -24,6 +24,8 @@ nav ul li{float:left;line-height:28px;height:28px;position:relative;}
     background: none repeat scroll 0 0 #F8F8F8;
     margin: 0 auto;
     width: 1000px;
+	overflow:hidden;
+
 }
 .image_container .breadcrumb_search {
     margin: 0 10px;
@@ -85,12 +87,40 @@ nav .dropList a{font-size:14px;line-height:30px;display:block;text-align:left;wh
 nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-height:28px;}
 nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;vertical-align:middle;}
 nav .bg{height:75px;}
-#provice{background-color:#0c2a46;color:#fff;}
-#provice .icon{background:url(../images/products.png) no-repeat 0px 0px;}
-#provice .arrow{border-color:#fff transparent transparent;}
+#provice {
+    background-color: #EBEBEB;
+    color: #2D6CA6;
+    padding-left: 50px;
+    padding-right: 30px;
+    position: relative;
+}
+#provice .icon {
+    background: url("http://i.tq121.com.cn/i/product/index_icons.png") no-repeat scroll -66px 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 43px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 40px;
+}
+#provice .arrow {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+.arrow {
+    border-color: #2D6CA6 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-style: solid dashed dashed;
+    border-width: 6px;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
 
 .content{width:1000px;margin:0 auto;padding-bottom:20px;background-color:#f8f8f8;}
-<!---->.location{width:938px;margin:0px 10px;padding:0px 7px 0px 35px;background-color:#252525;color:#fff;height:33px;line-height:33px;position:relative;z-index:10;}
+
 .location ul,.location ul li{float:left;}
 .location ul li a{color:#fff;}
 .location .search{float:right;height:25px;line-height:25px;padding-top:4px;}
