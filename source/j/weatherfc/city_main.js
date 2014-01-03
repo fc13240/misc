@@ -75,29 +75,28 @@ define(function(require){
 	})
 
 	//查看周边地区左右滚动效果 liu
-	;(function(){
-		var $z = $("#zbSpan");
-		var $zc = $z.children('span');
-		if($zc.width() > 600){
-			var $il = $('<i><<</i>');
-			var $ir = $('<i>>></i>');
-			$z.before($il);
-			$z.after($ir);
-			$il.click(function(){
-				$zc.stop(true,true);
-				if($zc.position().left<0){
-					$zc.animate({left: "+=100px"}, 600);	
-				}
-			});
-			var width = $zc.width();
-			$ir.click(function(){
-				$zc.stop(true,true);
-				if(600-$zc.position().left < width){
-					$zc.animate({left: "-=100px"}, 600);	
-				}
-			})
-		}
-	})();
+	var $z = $("#zbSpan");
+	var $zc = $z.children('span');
+	if($zc.width() > 600){
+		var $il = $('<i><<</i>');
+		var $ir = $('<i>>></i>');
+		$z.before($il);
+		$z.after($ir);
+		$il.click(function(){
+			$zc.stop(true,true);
+			if($zc.position().left<0){
+				$zc.animate({left: "+=100px"}, 600);	
+			}
+		});
+		var width = $zc.width();
+		$ir.click(function(){
+			$zc.stop(true,true);
+			if(600-$zc.position().left < width){
+				$zc.animate({left: "-=100px"}, 600);	
+			}
+		})
+	}
+	
 	
 	//分享
 	$(".sina").click(function(){
