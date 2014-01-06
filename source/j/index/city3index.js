@@ -17,24 +17,33 @@ define(function(require){
 		$.each(arr,function(i,v){
 			var item = v.split('|');
 			var cityId = item[0];
+			var counter = 0；
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
 				$loadingh3.remove();
 				var zsData = data.zs;
-				var zsTime = parseInt(zsData.date.substr(8,2));
-				var tempTime = '';
-				if(11<=zsTime<17){
-					tempTime='11:00';
-				}else if(17<=zsTime<=23 ){
-					tempTime='18:00';  
-				}else if(0<=zsTime<7){
-					tempTime='18:00'; 
-				}else if(7<=zsTime<11){
-					tempTime='08:00'; 
+				if(counter == 0){
+					var zsTime = parseInt(zsData.date.substr(8,2));
+					var tempTime = '';
+					if(11<=zsTime<17){
+						tempTime='11:00';
+					}else if(17<=zsTime<=23 ){
+						tempTime='18:00';  
+					}else if(0<=zsTime<7){
+						tempTime='18:00'; 
+					}else if(7<=zsTime<11){
+						tempTime='08:00'; 
+					}else{
+						tempTime='08:00'; 
+					}
+					var html = '<h3>我的城市指数预报( '+tempTime+' 更新)</h3>';
+					counter ++;
+
 				}else{
-					tempTime='08:00'; 
+
+					var html = '';
 				}
-				var html = '<h3>我的城市指数预报( '+tempTime+' 更新)</h3>';
+
 				html += '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
