@@ -12,20 +12,37 @@ define(function(require){
 		var $myZS = $('.myZS');
 		var valInCookie = cookie.get(STORAGE_NAME) || '101010100|北京||ys-xc-uv,101020100|上海||tr-pl-gz,101280601|深圳||fs-ct-co';
 		var $loading = $('.zs-loading');
+		var $loadingh3 = $('.myZS h3');
 		var arr = valInCookie.split(',');
 		$.each(arr,function(i,v){
 			var item = v.split('|');
 			var cityId = item[0];
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
-				var html = '<dl>'+
+				$loadingh3.remove();
+				var zsData = data.zs;
+				var zsTime = parseInt(zsData.date.substr(8,2));
+				var tempTime = '';
+				if(11<=zsTime<17){
+					tempTime='11:00';
+				}else if(17<=zsTime<=23 ){
+					tempTime='18:00';  
+				}else if(0<=zsTime<7){
+					tempTime='18:00'; 
+				}else if(7<=zsTime<11){
+					tempTime='08:00'; 
+				}else{
+					tempTime='08:00'; 
+				}
+				var html = '<h3>我的城市指数预报( '+tempTime+' 更新)</h3>';
+				html += '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
 						        '<a class="btn-dz" href="'+dingzhiUrl+'">[定制]</a>'+
 						      '</dt>'+
 						      '<dd>';
 				var zsArr = item[3].split('-');
-				var zsData = data.zs;
+
 				$.each(zsArr,function(ii,vv){
 					var zsName = zsData[vv+'_name'];
 					var hint = zsData[vv+'_hint'];
