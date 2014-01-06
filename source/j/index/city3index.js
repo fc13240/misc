@@ -17,34 +17,13 @@ define(function(require){
 		$.each(arr,function(i,v){
 			var item = v.split('|');
 			var cityId = item[0];
-			var counter = 0；
+			var zsTime = 0;
+			var tempTime = '';	
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
-				$loadingh3.remove();
 				var zsData = data.zs;
-				if(counter == 0){
-					var zsTime = parseInt(zsData.date.substr(8,2));
-					var tempTime = '';
-					if(11<=zsTime<17){
-						tempTime='11:00';
-					}else if(17<=zsTime<=23 ){
-						tempTime='18:00';  
-					}else if(0<=zsTime<7){
-						tempTime='18:00'; 
-					}else if(7<=zsTime<11){
-						tempTime='08:00'; 
-					}else{
-						tempTime='08:00'; 
-					}
-					var html = '<h3>我的城市指数预报( '+tempTime+' 更新)</h3>';
-					counter ++;
-
-				}else{
-
-					var html = '';
-				}
-
-				html += '<dl>'+
+				zsTime = parseInt(zsData.date.substr(8,2))
+				var html = '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
 						        '<a class="btn-dz" href="'+dingzhiUrl+'">[定制]</a>'+
@@ -60,6 +39,23 @@ define(function(require){
 				});
 				$myZS.append($(html).fadeIn());
 			});
+		
+					$loadingh3.empty();
+					if(11<=zsTime<17){
+						tempTime='11:00';
+					}else if(17<=zsTime<=23 ){
+						tempTime='18:00';  
+					}else if(0<=zsTime<7){
+						tempTime='18:00'; 
+					}else if(7<=zsTime<11){
+						tempTime='08:00'; 
+					}else{
+						tempTime='08:00'; 
+					}
+					$loadingh3.append('我的城市指数预报( '+tempTime+' 更新)');
+					
+
+				
 		});
 	})
 });
