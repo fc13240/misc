@@ -52,7 +52,7 @@ define(function(require){
 					}else{
 						tempTime='08:00'; 
 					}
-					$loadingh3.append('我的城市指数预报( '+tempTime+' 更新)');
+					$loadingh3.append('我的城市指数预报（'+tempTime+'更新）');
 					
 
 				
