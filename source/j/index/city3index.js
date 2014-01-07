@@ -28,19 +28,19 @@ define(function(require){
 				console.log(zsTime);
 				$loadingh3.empty();
 				console.log(zsTime);
-				if(11<=zsTime<17){
+				if(11 <= zsTime && zsTime < 17){
 					tempTime='11:00';
-				}else if(17<=zsTime<=23 ){
+				}else if(17<=zsTime && zsTime<=23 ){
 					tempTime='18:00';  
-				}else if(0<=zsTime<7){
+				}else if(0<=zsTime && zsTime<7){
 					tempTime='18:00'; 
-				}else if(7<=zsTime<11){
+				}else if(7<=zsTime && zsTime<11){
 					tempTime='08:00'; 
 				}else{
 					tempTime='08:00'; 
 				}
 				$loadingh3.append('我的城市指数预报（'+tempTime+'更新）');
-				
+
 				var html = '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
