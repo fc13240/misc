@@ -22,7 +22,7 @@ define(function(require){
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
 				var zsData = data.zs;
-				zsTime = parseInt(zsData.date.substr(8,2))
+				zsTime = parseInt(zsData.date.substr(8,2));
 				var html = '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
@@ -41,7 +41,7 @@ define(function(require){
 			});
 		
 					$loadingh3.empty();
-					alert(zsTime);
+					console.log(zsTime);
 					if(11<=zsTime<17){
 						tempTime='11:00';
 					}else if(17<=zsTime<=23 ){
