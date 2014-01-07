@@ -14,6 +14,7 @@ define(function(require){
 		var $loading = $('.zs-loading');
 		var $loadingh3 = $('.myZS h3');
 		var arr = valInCookie.split(',');
+		var counterTemp = 0;
 		$.each(arr,function(i,v){
 			var item = v.split('|');
 			var cityId = item[0];
@@ -21,25 +22,25 @@ define(function(require){
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
 				var zsData = data.zs;
-				var zsTime = 0;
-				var tempTime = '';	
-				//console.log(zsData.date);
-				zsTime = parseInt(zsData.date.substr(8,2));
-				//console.log(zsTime);
-				$loadingh3.empty();
-				//console.log(zsTime);
-				if(11 <= zsTime && zsTime < 17){
-					tempTime='11:00';
-				}else if(17<=zsTime && zsTime<=23 ){
-					tempTime='18:00';  
-				}else if(0<=zsTime && zsTime<7){
-					tempTime='18:00'; 
-				}else if(7<=zsTime && zsTime<11){
-					tempTime='08:00'; 
-				}else{
-					tempTime='08:00'; 
+				if(counterTemp < 1){
+					var zsTime = 0;
+					var tempTime = '';	
+					zsTime = parseInt(zsData.date.substr(8,2));
+					$loadingh3.empty();
+					if(11 <= zsTime && zsTime < 17){
+						tempTime='11:00';
+					}else if(17<=zsTime && zsTime<=23 ){
+						tempTime='18:00';  
+					}else if(0<=zsTime && zsTime<7){
+						tempTime='18:00'; 
+					}else if(7<=zsTime && zsTime<11){
+						tempTime='08:00'; 
+					}else{
+						tempTime='08:00'; 
+					}
+					$loadingh3.append('我的城市指数预报（'+tempTime+'更新）');
+					counterTemp++;
 				}
-				$loadingh3.append('我的城市指数预报（'+tempTime+'更新）');
 				var html = '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
