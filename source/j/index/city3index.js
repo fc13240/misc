@@ -41,6 +41,7 @@ define(function(require){
 			});
 		
 					$loadingh3.empty();
+					alert(zsTime);
 					if(11<=zsTime<17){
 						tempTime='11:00';
 					}else if(17<=zsTime<=23 ){
