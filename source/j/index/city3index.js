@@ -26,6 +26,7 @@ define(function(require){
 					var zsTime = 0;
 					var tempTime = '';	
 					zsTime = parseInt(zsData.date.substr(8,2));
+					console.log(zsTime);
 					$loadingh3.empty();
 					if(11 <= zsTime && zsTime < 17){
 						tempTime='11:00';
