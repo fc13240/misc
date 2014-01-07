@@ -22,11 +22,11 @@ define(function(require){
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
 				var zsData = data.zs;
+				// output updating time(just once)
 				if(counterTemp < 1){
 					var zsTime = 0;
 					var tempTime = '';	
 					zsTime = parseInt(zsData.date.substr(8,2));
-					console.log(zsTime);
 					$loadingh3.empty();
 					if(11 <= zsTime && zsTime < 17){
 						tempTime='11:00';
@@ -42,6 +42,7 @@ define(function(require){
 					$loadingh3.append('我的城市指数预报（'+tempTime+'更新）');
 					counterTemp++;
 				}
+				// output index metro (3 city)
 				var html = '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
