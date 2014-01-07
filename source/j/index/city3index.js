@@ -23,8 +23,9 @@ define(function(require){
 				$loading.remove();
 				var zsData = data.zs;
 				console.log(zsData.date);
-				console.log(zsData.date.substr(8,2));
+				
 				zsTime = parseInt(zsData.date.substr(8,2));
+				console.log(zsTime);
 				var html = '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
