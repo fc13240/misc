@@ -22,6 +22,8 @@ define(function(require){
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
 				var zsData = data.zs;
+				console.log(zsData.date);
+				console.log(zsData.date.substr(8,2));
 				zsTime = parseInt(zsData.date.substr(8,2));
 				var html = '<dl>'+
 						      '<dt>'+
@@ -41,7 +43,7 @@ define(function(require){
 			});
 		
 					$loadingh3.empty();
-					console.log(zsTime);
+					//console.log(zsTime);
 					if(11<=zsTime<17){
 						tempTime='11:00';
 					}else if(17<=zsTime<=23 ){
