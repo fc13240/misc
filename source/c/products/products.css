@@ -9,7 +9,7 @@ a:hover{color:#ee842f;}
 
 nav{display:block;}
 nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px ;position:relative;z-index:100;}
-nav h1{background:url(http://i.tq121.com.cn/i/product/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
+nav h1{background:url(../i/products/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
 nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:999;}
 nav ul li{float:left;line-height:28px;height:28px;position:relative;}
 .bg {
@@ -95,7 +95,7 @@ nav .bg{height:75px;}
     position: relative;
 }
 #provice .icon {
-    background: url("http://i.tq121.com.cn/i/index_icons.png") no-repeat scroll -66px 0 rgba(0, 0, 0, 0);
+    background: url("../i/index_icons.png") no-repeat scroll -66px 0 rgba(0, 0, 0, 0);
     display: block;
     height: 43px;
     left: 10px;
@@ -120,7 +120,7 @@ nav .bg{height:75px;}
 
 
 nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px;position:relative;z-index:80;}
-nav h1{background:url("http://localhost/source/i/product/warn_icons.png") no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
+nav h1{background:url("../../i/products/warn_icons.png") no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
 nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:10;}
 nav ul li{float:left;line-height:28px;height:28px;position:relative;}
 nav .dropList{position:absolute;left:0px;top:28px;line-height:30px;z-index:10;display:none;}
@@ -131,7 +131,7 @@ nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-hei
 nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;vertical-align:middle;}
 nav .bg{height:75px;}
 #provice{background-color:#0c2a46;color:#fff;}
-#provice .icon{background:url("http://localhost/source/i/product/products.png") no-repeat 0px 0px;}
+#provice .icon{background:url("../../i/products/products.png") no-repeat 0px 0px;}
 #provice .arrow{border-color:#fff transparent transparent;}
 
 .content{width:1000px;margin:0 auto;padding-bottom:20px;background:#eee;}
@@ -154,7 +154,7 @@ nav .bg{height:75px;}
 .search .provinceItem a:hover,.search .cityItem a:hover,.search .areaItem a:hover{height:35px;line-height:35px;color:#fff;background-color:#98cb55;text-align:left;}
 .search .shortname{width:68px;height:32px;line-height:32px;float:left;padding:0px 5px;margin-right:3px;}
 .search a{float:left;display:block;width:292px;height:35px;line-height:35px;}
-.search .searchBtn{width:44px;height:25px;line-height:25px;color:#fff;background:url("http://localhost/source/i/product/products.png") 0px -54px;cursor:pointer;text-indent:-9999px;}
+.search .searchBtn{width:44px;height:25px;line-height:25px;color:#fff;background:url("../../i/products/products.png") 0px -54px;cursor:pointer;text-indent:-9999px;}
 .col_left{float:left;margin:15px 10px 10px 10px;background-color:#fff;padding-bottom:10px;_margin:15px 10px 10px 5px;_width:175px;}
 .col_left ul li{font-size:18px;line-height:45px;position:relative;height:45px;_display:inline}
 .col_left ul li a{display:block;padding:0px 20px;white-space:nowrap;height:45px;}
@@ -164,7 +164,7 @@ nav .bg{height:75px;}
 .col_left .oneLevelMenu{background:#C5E4F0;}
 .col_left .oneLevelMenu a{color:#000;}
 .col_left a.yj,.col_left a.js,.col_left a.qw,.col_left a.jt,.col_left a.hj,.col_left a.ld,.col_left a.tqld,.col_left a.qxwx,.col_left a.jc,.col_left a.yb,.col_left a.sp,.col_left a.szcp{
-	background:url("http://localhost/source/i/product/product_icon.png") no-repeat;_background:url("http://localhost/source/i/product/product_icon.gif") no-repeat;padding-left:75px;}
+	background:url("../../i/products/product_icon.png") no-repeat;_background:url("../../i/products/product_icon.gif") no-repeat;padding-left:75px;}
 .col_left a.yj{background-position:0 2px;}
 .col_left a.js{background-position:0 -49px;}
 .col_left a.qw{background-position:0 -105px;}
