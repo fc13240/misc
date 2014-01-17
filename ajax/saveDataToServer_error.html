@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/jquery-1.8.2.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>保存数据到服务器,成功时显示信息,未成功 Error</title>
+<script>
+$.ajax({
+   type: "POST",
+   url: "http://10.14.85.90/ajax/Data.php",
+   data: "name=John&location=Boston",
+   success: function(msg){
+     alert( "Data Saved: " + msg );
+   }
+});
+
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

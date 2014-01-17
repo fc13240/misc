@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/jquery-1.8.2.js"></script>
+
+<head> 
+    <title>jQuery Ajax - Load</title> 
+    
+<script type="text/javascript">
+    $(function(){
+        //格式用法 $.getScript('url',function(){})
+        //Returns: XMLHttpRequest
+        //等同于 $.get(url, null, [callback], "script")
+        
+            $("#go").click(function(){
+				$(".block").animate({backgroundColor:blue},2000);
+            });
+
+       
+
+//        $.ajax({
+//            type: "GET",  
+//            url: 'alert11.js',
+//            dataType: "script",   
+//            //dataType参数是指data数据的类型,"xml","html","script","json","jsonp","text".默认为"html".
+//            cache:false,
+//            async:false,
+//            success:function(){}
+//        })
+	})
+</script>
+
+</head> 
+<body> 
+<div class="block" style="width:100px;height:100px; background-color:red;"></div>
+<input type="button" value="变色" id="go" />
+</body> 
+</html> 
