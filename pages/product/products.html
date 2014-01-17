@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+		<meta charset="utf-8" />
+		<title>中国天气网-专业天气预报、气象服务门户</title>
+		<meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
+		<meta name="description" content="中国天气网为您提供实时全国天气气象信息,及时发布天气预报、灾害预警、气象云图、旅游天气、台风、暴雨雪等气象信息，为我国的生产生活提供全面精确的气象服务" />
+		<meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+		<meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+		<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+		<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+		<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+		<script type="text/javascript" src="http://localhost/source/j/core.js"></script>
+		<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/jquery-1.8.2.js"></script>
+        <script>W.css("http://i.tq121.com.cn/c/core.css","http://i.tq121.com.cn/c/common.css","http://i.tq121.com.cn/c/image/index.css","http://localhost/source/c/product/products.css")</script>
+		<script>W.use('j/product/products.js');</script>
+        <base target="_blank" />
+	</head>
+	<body>
+		<div id="toolBar">
+ 			 <div class="midBlock"> <span id="time">2013年12月17日 星期二  癸巳年 冬月十五</span> <i class="mobile"></i><b>移动气象<i></i></b> <span class="links"><!--<a class="blue" href="#" title="登录">登录</a>--><a title="设为首页" target="_self" href="javascript:void(0);" id="setIndex">设为首页</a><a title="收藏" href="javascript:void(0);" target="_self" id="collect">收藏</a><a target="_self" title="省级站" href="javascript:void(0);" id="provice"><i class="icon"></i>省级站<i class="arrow"></i></a><a title="English Version" target="_blank" href="http://www.weather.com.cn/english/" id="eg">English Version</a><a id="dl_tw" href="#">繁體中文</a></span> </div>
+        </div>
+		<div class="content clearfix">
+        <i style="opacity:0.8;width:100%;height:100%;background:#fff;"></i>
+		<nav>
+  <h1><a title="中国天气网" href="http://www.weather.com.cn">中国天气网</a></h1>
+  <ul>
+    <li><a href="http://www.weather.com.cn">首页</a>|</li>
+    <li><a href="http://www.weather.com.cn/alarm/">灾害预警</a>|</li>
+    <li><a href="http://www.weather.com.cn/forecast/">天气预报</a>|</li>
+    <li><a>生活旅游</a><i></i>
+      <div class="dropList"><i></i><span><a href="http://www.weather.com.cn/life/">生活天气</a><a href="http://www.weather.com.cn/trip/">旅游天气</a></span></div>
+      |</li>
+    <li><a href="http://www.weather.com.cn/static/html/product/">服务产品</a>|</li>
+    <li><a>天气应用</a><i></i>
+      <div class="dropList"><i></i><span><a href="http://3g.weather.com.cn/">中国天气通</a><a href="http://mobile.weather.com.cn/">Mobile版</a><a href="http://3g.weather.com.cn/wzfw/zgtqtpd/pc.shtml">桌面版</a> 
+        <!--<a href="#" target="_blank">气象商城</a>--> 
+        </span></div>
+      |</li>
+    <li><a>互动天气</a><i></i>
+      <div class="dropList" style="display: none;"><i></i><span><a href="http://www.weather.com.cn/video/">天气视频</a><a href="http://club.weather.com.cn/">天气社区</a><a href="http://baike.weather.com.cn/">天气百科</a><a href="http://www.weather.com.cn/wjdc/">问卷调查</a></span></div>
+      |</li>
+    <li><a href="http://smart.weather.com.cn/">智慧气象</a></li>
+  </ul>
+  <i class="bg"></i> </nav>
+		<div class="location clearfix">
+			<ul>
+				<li>当前位置：</li>
+				<li><a href="#">首页</a>>></li>
+				<li><a href="#">强对流天气预报</a>>></li>
+				<li><a href="#">强对流天气落区</a></li>
+			</ul>
+			<div class="search">
+				<span class="label">城市天气查询</span>
+				<span class="province">
+							<b>选择省</b>
+							<span class="provinceItem"></span>
+							<i>&nbsp;</i>
+						</span>
+						<span class="city">
+							<b data-role="0">选择市</b>
+							<span class="cityItem"></span>
+							<i>&nbsp;</i>
+						</span>
+						<span class="area">
+							<b data-role="0">选择县/区</b>
+							<span class="areaItem"></span>
+							<i>&nbsp;</i>
+						</span>
+						<span class="searchBtn">搜索</span>
+			</div>
+		</div>
+		<div class="col_left">
+			<ul>
+				<li>
+                	<a class="yj" href="#">预警</a>
+                	<ul>
+                    	<li>	
+                        	<a href="#">海上大风预警</a>
+                        </li>
+                    	<li>	
+                        	<a href="#">大雾预警</a>
+                        </li>
+                    </ul>
+                </li>            
+				<li>
+                	<a class="js" href="#">降水</a>
+                	<ul>
+                    	<li>	
+                        	<a href="#">全国降水量预报图</a>
+                            <ul>
+                                <li>
+                                    <a href="###">全国24小时降水量预报</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国48小时降水量预报</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国降水量实况图</a>
+                            <ul>
+                                <li>
+                                    <a href="###">全国近10天降水量实况</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国近20天降水量实况</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国近30天降水量实况</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国降水距平百分率</a>
+                            <ul>
+                                <li>
+                                    <a href="###">全国10天降水距平</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国20天降水距平</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国30天降水距平</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+				<li>
+                	<a class="qw" href="#">气温</a>
+                	<ul>
+                    	<li>	
+                        	<a href="#">全国最高气温分布图 </a>
+                            <ul>
+                            	<li>
+                                	<a href="###">全国10天最高气温分布</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国20天最高气温分布</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国30天最高气温分布</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国最低气温分布图</a>
+                            <ul>
+                                <li>
+                                    <a href="###">全国10天最低气温分布</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国20天最低气温分布</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国30天最低气温分布</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国平均温度距平</a>
+                            <ul>
+                                <li>
+                                    <a href="###">全国10天平均温度距平</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国20天平均温度距平</a>
+                                </li>
+                                <li>
+                                    <a href="###">全国30天平均温度距平</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+				<li>
+                	<a class="jt" href="#">交通</a>
+                	<ul>
+                        <li>    
+                            <a href="#">全国道路降水量预报</a>
+                            <ul>
+                                <li>
+                                    <a href="###">公路24小时降水量预报</a>
+                                </li>
+                                <li>
+                                    <a href="###">铁路24小时降水量预报</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国道路降水量实况</a>
+                            <ul>
+                                <li>
+                                    <a href="###">公路逐小时降水实况</a>
+                                </li>
+                                <li>
+                                    <a href="###">铁路逐小时降水实况</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国道路积雪深度</a>
+                            <ul>
+                                <li>
+                                    <a href="###">公路沿线积雪深度实况</a>
+                                </li>
+                                <li>
+                                    <a href="###">铁路沿线积雪深度实况</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国道路温度况</a>
+                            <ul>
+                                <li>
+                                    <a href="###">公路逐小时温度实况</a>
+                                </li>
+                                <li>
+                                    <a href="###">铁路逐小时温度实况</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国道路能见度实况</a>
+                            <ul>
+                                <li>
+                                    <a href="###">公路逐小时能见度实况</a>
+                                </li>
+                                <li>
+                                    <a href="###">铁路逐小时能见度实况</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">全国道路风场实况</a>
+                            <ul>
+                                <li>
+                                    <a href="###">公路逐小时风场实况</a>
+                                </li>
+                                <li>
+                                    <a href="###">铁路逐小时风场实况</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hj" href="###">环境</a>
+                    <ul>    
+                        <li>
+                            <a href="###">空气污染气象条件预报</a>
+                        </li>
+
+                    </ul>
+                </li>
+				<li>
+                	<a class="ld" href="#">雷电</a>
+                	<ul>
+                    	<li>	
+                        	<a href="#">预报</a>
+                            <ul>
+                            	<li>
+                                	<a href="###">北京雷电移动趋势预报</a>
+                                </li>
+                            	<li>
+                                	<a href="###">雷电临近预报(15-30min)</a>
+                                </li>
+                            	<li>
+                                	<a href="###">雷电临近预报(30-45min)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>	
+                        	<a href="#">实况</a>
+                            <ul>
+                            	<li>
+                                	<a href="###">全国地闪实时监测(1h)</a>
+                                </li>
+                            	<li>
+                                	<a href="###">半小时雷电图</a>
+                                </li>
+                            	<li>
+                                	<a href="###">三小时雷电图</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="tqld" href="###">天气雷达</a>
+                </li>
+                <li>
+                    <a class="qxwx" href="###">气象卫星</a>
+                </li>
+				<li>
+                	<a class="jc" href="#">监测</a>
+                	<ul>
+                		<li>
+                			<a href="###">土壤相对湿度图</a>
+                		</li>
+                		<li>
+                			<a href="###">中国舒适度监测图</a>
+                		</li>
+                        <li>	
+                        	<a href="#">天气图分析</a>
+                            <ul>
+                            	<li>
+                                	<a href="###">地面分析</a>
+                                </li>
+                            	<li>
+                                	<a href="###">500百帕分析</a>
+                                </li>
+                            	<li>
+                                	<a href="###">700百帕分析</a>
+                                </li>
+                            	<li>
+                                	<a href="###">850百帕分析</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<a href="###">环境监测</a>
+                        </li>
+                    </ul>
+                </li>
+				<li>
+					<a class="yb" href="###">预报</a>
+                	<ul>
+                		<li>
+                			<a href="###">天气趋势预报</a>
+                            <ul>
+                            	<li>
+                                	<a href="###">未来三天</a>
+                                </li>
+                            	<li>
+                                	<a href="###">未来十天</a>
+                                </li>
+                            	<li>
+                                	<a href="###">国外天气预报</a>
+                                </li>
+                            </ul>
+                		</li>
+                		<li>
+                			<a href="###">海洋预报</a>
+                            <ul>
+                            	<li>
+                                	<a href="###">海洋天气预报</a>
+                                </li>
+                            	<li>
+                                	<a href="###">全球海事公报</a>
+                                </li>
+                            	<li>
+                                	<a href="###">海平面气压场分析</a>
+                                </li>
+                            	<li>
+                                	<a href="###">500mpa高度场分析</a>
+                                </li>
+                            	<li>
+                                	<a href="###">海平面海况形势</a>
+                                </li>
+                            	<li>
+                                	<a href="###">500mpa海况形势</a>
+                                </li>
+                            </ul>
+                		</li>
+                        <li>
+                        	<a href="###">环境</a>
+                        </li>
+                        <li>	
+                        	<a href="#">地质水文气象</a>
+                            <ul>
+                            	<li>
+                                	<a href="###">地质灾害气象等级</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>	
+                        	<a href="#">火险等级短期预报</a>
+                            <ul>
+                            	<li>
+                                	<a href="###">森林火险</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>	
+                	<a class="sp" href="#">视频</a>
+                    <ul>
+                    	<li>
+                        	<a href="###">中国卫星云图</a>
+                        </li>
+                    	<li>
+                        	<a href="###">交通出行GIS服务</a>
+                        </li>
+                    	<li>
+                        	<a href="###">最新台风实况路径动画 </a>
+                        </li>
+                    	<li>
+                        	<a href="###">全国气象灾害预警 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>	
+                	<a class="szcp" href="#">数值产品</a>
+                    <ul>
+                    	<li>
+                        	<a href="###">中期指数</a>
+                        </li>
+                    	<li>
+                        	<a href="###">沙尘模式</a>
+                        </li>
+                    	<li>
+                        	<a href="###">人影模式 </a>
+                        </li>
+                    	<li>
+                        	<a href="###">MM5模式 </a>
+                        </li>
+                    	<li>
+                        	<a href="###">海浪模式 </a>
+                        </li>
+                    </ul>
+                </li>
+			</ul>
+            <div class="line"></div>
+            <div>
+                <h1><span>新</span>产品推荐
+                    <ul>
+                        <li>
+                            <a href="###">最高气温预报分布图</a>
+                        </li>
+                        <li>
+                            <a href="###">最低气温预报分布图</a>
+                        </li>
+                        <li>
+                            <a href="###">平均气温预报分布图</a>
+                        </li>
+                        <li>
+                            <a href="###">平均气温实况分布图</a>
+                        </li>
+                        <li>
+                            <a href="###" title='全国最高气温实况分布图'>全国最高气温实况分布图</a>
+                        </li>
+                        <li>
+                            <a href="###" title='全国最低气温实况分布图'>全国最低气温实况分布图</a>
+                        </li>
+                    </ul>
+                </h1>
+                <h1><span>最</span>新更新
+                    <ul>
+                        <li>
+                            <a href="###">全国24小时降水量预报</a>
+                        </li>
+                        <li>
+                            <a href="###">全国48小时降水量预报</a>
+                        </li>
+                        <li>
+                            <a href="###">全国72小时降水量预报</a>
+                        </li>
+                        <li>
+                            <a href="###">逐小时全国气温实况</a>
+                        </li>
+                        <li>
+                            <a href="###">逐小时降水量实况</a>
+                        </li>
+                        <li>
+                            <a href="###">逐小时极大风速实况</a>
+                        </li>
+                        <li>
+                            <a href="###">半小时雷电图</a>
+                        </li>
+                        <li>
+                            <a href="###">24小时近海海区预报</a>
+                        </li>
+                        <li>
+                            <a href="###" title='72小时最高气温变化预报'>72小时最高气温变化预报</a>
+                        </li>
+                        <li>
+                            <a href="###">今日最高气温变化预报</a>
+                        </li>
+                    </ul>
+                </h1>
+                <h1><span>推</span>荐浏览
+                    <ul>
+                        <li>
+                            <a href="###">今日最低气温变化预报</a>
+                        </li>
+                        <li>
+                            <a href="###">今日最高气温变化预报</a>
+                        </li>
+                        <li>
+                            <a href="###">旬全国地表温度图</a>
+                        </li>
+                        <li>
+                            <a href="###">全国降水量实况</a>
+                        </li>
+                        <li>
+                            <a href="###">全国24小时降水量预报</a>
+                        </li>
+                        <li>
+                            <a href="###">全国48小时降水量预报</a>
+                        </li>
+                        <li>
+                            <a href="###">全国10天降水距平</a>
+                        </li>
+                    </ul>
+                </h1>
+            </div>
+		</div>
+		<div class="col_right">
+			<div class="menu clearfix">
+				<ul>
+                    <li class="current"><a href="#">海洋天气预报</a></li>
+                    <li><a href="#">全球海事公报</a></li>
+                    <li><a href="#">海平面气压场分析</a></li>
+                    <li class="current"><a href="#">500mpa高度场分析</a></li>
+                    <li><a href="#">海平面海况形势</a></li>
+                    <li><a href="#">500mpa海况形势</a></li>
+				</ul>
+			</div>
+			<div class="forecast">
+				<h2>全国近10天降水量实况</h2>
+                <p class="clearfix">
+                	<span class="time">
+                    	<strong>发布时间：</strong><i>2014年01月14日09时00分</i>
+                    </span>
+                    <span class="level">
+                    	<strong>层次：</strong><i>地面或水面特性</i>
+                    </span>
+					<span class="effect">
+                    	<strong>产品时效：</strong><i>024</i></p>
+                    </span>
+				
+				<p class="imgArea"><img width='600' src="http://localhost/source/i/product/test/img01.jpg"></p>
+			</div>
+
+			<div class="productsList">
+				<h4>相关服务产品</h4>
+				<ul>
+                    <li><a href="#">全国降水量预报图(01月14日 09时00分)</a></li>
+                    <li><a href="#">全国降水量实况图(01月14日 08时00分)</a></li>
+					<li><a href="#">全国降水量距平百分率(01月14日 08时00分) </a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		</div>
+		<div class="footer">
+  <div class="block">
+    <div class="Lcontent">
+      <h2><a title="中国天气网" href="http://www1.weather.com.cn">中国天气</a></h2>
+      <dl style="width:240px;">
+        <dt>
+          <h3><a>网站服务</a></h3>
+        </dt>
+        <dd>
+          <p><a href="http://www.weather.com.cn/wzfw/gywm/">关于我们</a><a href="http://www.weather.com.cn/wzfw/gywm/">联系我们</a><a href="http://www.weather.com.cn/wzfw/sybz/">帮助</a><a href="http://www.weather.com.cn/wzfw/ryzp/">人员招聘</a></p>
+          <p><a href="http://www.weather.com.cn/wzfw/kfzx/">客服中心</a><a href="http://www.weather.com.cn/wzfw/bqsm/">版权声明</a><a href="http://www.weather.com.cn/wzfw/wzls/">律师</a><a href="http://www.weather.com.cn/wzfw/wzdt/">网站地图</a></p>
+        </dd>
+      </dl>
+      <dl style="width:138px;">
+        <dt>
+          <h3><a>营销中心</a></h3>
+        </dt>
+        <dd>
+          <p><a href="http://marketing.weather.com.cn/gyxfwcphz/">公益服务</a><a href="http://marketing.weather.com.cn/zyqxfw/">专业服务</a></p>
+          <p><a href="http://marketing.weather.com.cn/wxzdhz/">无线合作</a><a href="http://marketing.weather.com.cn/wzhz/">网站合作</a></p>
+        </dd>
+      </dl>
+      <div class="clear"></div>
+    </div>
+    <div class="friendLink">
+      <h3><a>友情链接</a></h3>
+      <p><a target="_blank" href="http://www.cma.gov.cn/">中国气象局</a><a target="_blank" href="http://www.tourweather.com.cn/">中国旅游天气网</a><a target="_blank" href="http://typhoon.weather.com.cn/">中国天气台风网</a></p>
+      <p><a target="_blank" href="http://www.xn121.com/">中国兴农网</a><a target="_blank" href="http://pmsc.cma.gov.cn/">中国气象局公共气象服务中心</a></p>
+    </div>
+    <div class="serviceinfo">
+      <p><span>客服邮箱：<a href="mailto:service@weather.com.cn">service@weather.com.cn</a></span><span>客户服务热线：<b>400-6000-121</b></span><span>京公网安备11041400134号</span></p>
+      <p><span>广告服务：<b>010-62134569</b></span><span><a target="_blank" href="http://www.miibeian.gov.cn/">京ICP证010385号</a></span><span>增值电信业务经营许可证B2-20050053</span></p>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="aboutUs"> Copyright&copy;<a target="_blank" href="http://pmsc.cma.gov.cn/">中国气象局公共气象服务中心</a> All Rights Reserved (2008-2014) 版权所有 复制必究 郑重声明：中国天气网版权所有，未经书面授权禁止使用 </div>
+</div>
+		<div class="provinceLinks">
+			<div class="midBlock">
+				<dl>
+					<dt><a href="#">华东地区</a></dt>
+					<dd><p><a href="#">山东</a><a href="#">江苏</a><a href="#">安徽</a></p><p><a href="#">浙江</a><a href="#">福建</a><a href="#">上海</a></p></dd>
+				</dl>
+				<dl>
+					<dt><a href="#">华北地区</a></dt>
+					<dd><p><a href="#">北京</a><a href="#">天津</a><a href="#">河北</a></p><p><a href="#">山西</a><a href="#">内蒙古</a></p></dd>
+				</dl>
+				<dl>
+					<dt><a href="#">华中地区</a></dt>
+					<dd><p><a href="#">湖北</a><a href="#">湖南</a></p><p><a href="#">河南</a><a href="#">江西</a></p></dd>
+				</dl>
+				<dl>
+					<dt><a href="#">华南地区</a></dt>
+					<dd><p><a href="#">广东</a><a href="#">广西</a></p><p><a href="#">海南</a></p></dd>
+				</dl>
+				<div class="line"></div>
+				<dl>
+					<dt><a href="#">西北地区</a></dt>
+					<dd><p><a href="#">宁夏</a><a href="#">新疆</a><a href="#">青海</a></p><p><a href="#">陕西</a><a href="#">甘肃</a></p></dd>
+				</dl>
+				<dl>
+					<dt><a href="#">西南地区</a></dt>
+					<dd><p><a href="#">四川</a><a href="#">云南</a><a href="#">贵州</a></p><p><a href="#">西藏</a><a href="#">重庆</a></p></dd>
+				</dl>
+				<dl>
+					<dt><a href="#">东北地区</a></dt>
+					<dd><p><a href="#">辽宁</a><a href="#">吉林</a></p><p><a href="#">黑龙江</a></p></dd>
+				</dl>
+				<dl>
+					<dt class="last"><a href="#">台港澳地区</a></dt>
+					<dd><p><a href="#">台湾</a><a href="#">香港</a></p><p><a href="#">澳门</a></p></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="app">
+			<span><a href="#">中国天气通</a><a href="#">掌中天气</a></span>
+			<i></i>
+		</div>
+		<script>
+			var cityid = "101080100";
+			//页面普通模块
+			W.use('../yj/js/products_main');
+		</script>
+	</body>
+</html>
