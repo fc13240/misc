@@ -12,7 +12,7 @@
 <meta content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
 <meta content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
 <meta content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" name="msapplication-task">
-<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/product/core.js"></script>
+<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
     <script>W.css('http://i.tq121.com.cn/c/product/core.css','http://i.tq121.com.cn/c/product/products.css')</script>
     
 
@@ -48,7 +48,7 @@ window.setInterval("reinitIframe()", 200);
 <body>
 
 <div id="toolBar">
-  <div class="midBlock"> <span id="time">2013.12.24 </span> <i class="mobile"></i><b>移动气象<i></i></b> <span class="links"><!--<a class="blue" href="#" title="登录">登录</a>--><a id="setIndex" href="javascript:void(0);" target="_self" title="设为首页">设为首页</a><a id="collect" target="_self" href="javascript:void(0);"  title="收藏">收藏</a><a id="provice" href="javascript:void(0);"  title="省级站" target="_self"><i class="icon"></i>省级站<i class="arrow"></i></a><a id="eg" href="http://www.weather.com.cn/english/" target="_blank" title="English Version">English Version</a><a href="#"  id="dl_tw">繁體中文</a></span> </div>
+  <div class="midBlock"> <span id="time"> 2013年12月24日 星期二 癸巳年 冬月廿二 </span> <i class="mobile"></i><b>移动气象<i></i></b> <span class="links"><!--<a class="blue" href="#" title="登录">登录</a>--><a id="setIndex" href="javascript:void(0);" target="_self" title="设为首页">设为首页</a><a id="collect" target="_self" href="javascript:void(0);"  title="收藏">收藏</a><a id="provice" href="javascript:void(0);"  title="省级站" target="_self"><i class="icon"></i>省级站<i class="arrow"></i></a><a id="eg" href="http://www.weather.com.cn/english/" target="_blank" title="English Version">English Version</a><a href="#"  id="dl_tw">繁體中文</a></span> </div>
 </div>
 	<nav>
   <h1><a href="http://www.weather.com.cn" title="中国天气网" >中国天气网</a></h1>
@@ -78,7 +78,7 @@ window.setInterval("reinitIframe()", 200);
 		<ul class="breadcrumb">
 			
 		<li><a href="http://www.weather.com.cn/">中国天气网</a></li>
-		<li class="divider">&gt;</li> <li><a href="/photo/index.shtml">图片库</a></li> <li class="divider">&gt;</li> <li><a href="/photo/gqt/index.shtml">高清图</a></li>
+		<li class="divider">&gt;</li> <li><a href="/photo/index.shtml">预报</a></li> <li class="divider">&gt;</li> <li><a href="/photo/gqt/index.shtml">森林火险气象预报</a></li>
 		</ul>
 		
 
@@ -154,14 +154,8 @@ window.setInterval("reinitIframe()", 200);
   </div>
   <div class="col_right">
     <div class="warn_detail"> <span><a href="#"><img src="http://i.tq121.com.cn/i/product/warn_icons/01.gif"></a></span> <span>2013年05月22日17时广东省解除暴雨黄色预警</span> <span class="more"><a href="#">更多预警</a></span> </div>
-    <div class="menu clearfix" id="navLinkFat">
-      <!--<ul>
-        <li class="current"><a href="#">预报</a></li>
-        <li><a href="#">森林火险气象预报</a></li>
-      </ul>-->
-    </div>
     <div class="forecast" >
-    <Iframe id="new" onload=this.height=930;reinitIframe(); style="MARGIN:7px;width:100%"  src=  "http://61.4.185.14/static/productframe2013.php?class=JB_ZYTQ_SLHXDJ" frameBorder="0"  name="contain" scrolling="no" align="left" background-color="#FFFFFF"></Iframe>
+    <Iframe id="new" onload=this.height=960;reinitIframe(); style="MARGIN:7px;width:100%"  src=  "http://61.4.185.14/static/productframe2013.php?class=JB_ZYTQ_SLHXDJ" frameBorder="0"  name="contain" scrolling="no" align="left" background-color="#FFFFFF"></Iframe>
     </div>
   </div>
 </div>
@@ -273,6 +267,41 @@ window.setInterval("reinitIframe()", 200);
 				<li class="addCity"><a href="/profile/city.shtml" style="display:block;"><strong>+</strong>定制城市</a></li>
 			</ul>
 
+<!--<script>
+			var cityid = "101080100";
+			//页面普通模块
+			W.use('http://i.tq121.com.cn/j/product/products_main.js');
+</script>-->
+<script>
+define(function(require){
+	require('j/base');
+$(".col_left .oneLevelMenu").click(function(){
+		$(this).find(".subMenu").toggle();
+	})
+});
+	/*site global variable*/
+    var cityid = "101080100";
 
+	W(function(){
+		W.use(['j/base.js','j/tool/nav.js','j/image/index.js']);
+	});
+	W.use('http://i.tq121.com.cn/j/m_city.js',function(City){
+		  var city = new City({
+		    'prov': $('#prov'),
+		    'city': $('#district'),
+		    'county': $('#city')
+  		});
+	  	$('#weatherselect').click(function(){
+		    var id = city.getValue() || '101010001';
+		    window.open('http://www.weather.com.cn/weather/'+id+'.shtml');
+	  	});
+	});
+	W.use('j/plugs/jquery.lazyload.js',function(){
+		$('img.lazy').lazyload();
+
+	});
+         W.use('j/tool/slidebar');
+
+	</script>
 </body>
 </html>

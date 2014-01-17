@@ -12,12 +12,37 @@ define(function(require){
 		var $myZS = $('.myZS');
 		var valInCookie = cookie.get(STORAGE_NAME) || '101010100|北京||ys-xc-uv,101020100|上海||tr-pl-gz,101280601|深圳||fs-ct-co';
 		var $loading = $('.zs-loading');
+		var $loadingh3 = $('.myZS h3');
 		var arr = valInCookie.split(',');
+		var counterTemp = 0;
 		$.each(arr,function(i,v){
 			var item = v.split('|');
 			var cityId = item[0];
+			
 			$.getJSON(dataUrl.replace('_id_',cityId),function(data){
 				$loading.remove();
+				var zsData = data.zs;
+				// output updating time(just once)
+				if(counterTemp < 1){
+					var zsTime = 0;
+					var tempTime = '';	
+					zsTime = parseInt(zsData.date.substr(8,2));
+					$loadingh3.empty();
+					if(11 <= zsTime && zsTime < 17){
+						tempTime='11:00';
+					}else if(17<=zsTime && zsTime<=23 ){
+						tempTime='18:00';  
+					}else if(0<=zsTime && zsTime<7){
+						tempTime='18:00'; 
+					}else if(7<=zsTime && zsTime<11){
+						tempTime='08:00'; 
+					}else{
+						tempTime='08:00'; 
+					}
+					$loadingh3.append('我的城市指数预报（'+tempTime+'更新）');
+					counterTemp++;
+				}
+				// output index metro (3 city)
 				var html = '<dl>'+
 						      '<dt>'+
 						        '<a href="/weather/'+cityId+'.shtml">'+(item[2]||item[1])+'</a>'+
@@ -25,15 +50,15 @@ define(function(require){
 						      '</dt>'+
 						      '<dd>';
 				var zsArr = item[3].split('-');
-				var zsData = data.zs;
+
 				$.each(zsArr,function(ii,vv){
 					var zsName = zsData[vv+'_name'];
 					var hint = zsData[vv+'_hint'];
 					var desc = zsData[vv+'_des'];
-					html += '<a '+(havePageConf[vv]?'href="'+zsUrl.replace('_zs_',vv).replace('_id_',cityId)+'"':'')+' title="'+desc+'"><span>'+zsName+'</span><b>'+hint+'</b></a>';
+					html += '<a target="_blank" '+(havePageConf[vv]?'href="'+zsUrl.replace('_zs_',vv).replace('_id_',cityId)+'"':'')+' title="'+desc+'"><span>'+zsName+'</span><b>'+hint+'</b></a>';
 				});
 				$myZS.append($(html).fadeIn());
-			});
+			});		
 		});
 	})
 });
