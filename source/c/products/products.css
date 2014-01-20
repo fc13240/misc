@@ -78,14 +78,13 @@ nav .bg{height:75px;}
 .col_left div ul{display:none;position:absolute;left:167px;bottom:0;background:#D7EEF7;}
 .col_left div.line{height:1px;border-top:1px solid #aaa;margin:20px 10px 10px 10px;}
 
-body{background:#fff;}
-.col_right{width:795px;float:left;margin-top:15px;display:inline;background:#fff;}
+.col_right{width:775px;float:left;margin-top:15px;display:inline;background:#fff;padding:0 15px;}
 .warn_detail{background-color:#f06600;color:#fff;height:34px;width:710px;padding:8px 15px;line-height:34px;font-size:16px;position:relative;}
 .warn_detail span{display:block;height:34px;line-height:34px;float:left;margin-right:15px;}
 .warn_detail img{width:42px;height:34px;}
 .warn_detail span a:hover,.warn_detail span a{color:#fff;}
 .warn_detail .more{position:absolute;right:0px;top:10px;}
-.col_right .menu{padding-left:15px;padding-top:5px;}
+.col_right .menu{padding-top:5px;}
 .col_right .menu ul li{float:left;margin-right:3px;margin-top:3px;}
 .col_right .menu ul li a{color:#fff;background-color:#ec8f4a;padding:8px 24px;display:block;white-space:nowrap;}
 .col_right .menu .current{background-color:#6f6f6f;}
