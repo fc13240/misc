@@ -12,111 +12,7 @@ nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px ;po
 nav h1{background:url(../i/products/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
 nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:999;}
 nav ul li{float:left;line-height:28px;height:28px;position:relative;}
-.bg {
-    background-color: #FFFFFF;
-    left: 0;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    width: 1000px;
-}
-.image_container {
-    background: none repeat scroll 0 0 #F8F8F8;
-    margin: 0 auto;
-    width: 1000px;
-	overflow:hidden;
-
-}
-.image_container .breadcrumb_search {
-    margin: 0 10px;
-}
-.breadcrumb_search {
-    background: none repeat scroll 0 0 #252525;
-    color: #FFFFFF;
-    height: 33px;
-}
-.breadcrumb_search a {
-    color: #FFFFFF;
-}
-.breadcrumb_search .breadcrumb {
-    float: left;
-    padding-left: 35px;
-}
-.breadcrumb_search .breadcrumb li {
-    float: left;
-    line-height: 33px;
-}
-.breadcrumb_search .breadcrumb li.divider {
-    padding: 0 10px;
-}
-.citysearch {
-    float: right;
-    padding-right: 7px;
-}
-.citysearch label, .citysearch button {
-    float: left;
-}
-.citysearch label {
-    line-height: 31px;
-    padding-right: 13px;
-}
-.citysearch .locationSearch .iframeDiv {
-    float: left;
-    height: 22px;
-    margin-top: 5px;
-}
-.citysearch .locationSearch .iframeDiv .sel select {
-    background-color: #EAEAEA;
-    float: left;
-    height: 22px;
-    line-height: 20px;
-    margin-right: 1px;
-    text-align: center;
-    width: 60px;
-}
-.citysearch .btn {
-    float: left;
-    height: 20px;
-    margin-top: 1px;
-    width: 53px;
-}
-nav .dropList{position:absolute;left:0px;top:28px;line-height:30px;z-index:10;display:none;}
-nav .dropList i{position:absolute;left:0px;top:0px;background-color:#ffffff;opacity:0.95;filter:alpha(opacity=95);width:120px;height:100px;display:block;border:none;}
-nav .dropList span{position:absolute;top:0px;left:0px;padding:5px 0px;}
-nav .dropList a{font-size:14px;line-height:30px;display:block;text-align:left;white-space:nowrap;}
-nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-height:28px;}
-nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;vertical-align:middle;}
-nav .bg{height:75px;}
-#provice {
-    background-color: #EBEBEB;
-    color: #2D6CA6;
-    padding-left: 50px;
-    padding-right: 30px;
-    position: relative;
-}
-#provice .icon {
-    background: url("../i/index_icons.png") no-repeat scroll -66px 0 rgba(0, 0, 0, 0);
-    display: block;
-    height: 43px;
-    left: 10px;
-    position: absolute;
-    top: 0;
-    width: 40px;
-}
-#provice .arrow {
-    position: absolute;
-    right: 10px;
-    top: 20px;
-}
-.arrow {
-    border-color: #2D6CA6 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-    border-style: solid dashed dashed;
-    border-width: 6px;
-    display: block;
-    height: 0;
-    overflow: hidden;
-    width: 0;
-}
+.bg{background-color:#FFF;left:0;opacity:0.6;position:absolute;top:0;width:1000px;} .image_container{background:none repeat scroll 0 0 #F8F8F8;width:1000px;overflow:hidden;margin:0 auto;} .image_container .breadcrumb_search{margin:0 10px;} .breadcrumb_search{background:none repeat scroll 0 0 #252525;color:#FFF;height:33px;} .breadcrumb_search a{color:#FFF;} .breadcrumb_search .breadcrumb{float:left;padding-left:35px;} .breadcrumb_search .breadcrumb li{float:left;line-height:33px;} .breadcrumb_search .breadcrumb li.divider{padding:0 10px;} .citysearch{float:right;padding-right:7px;} .citysearch label,.citysearch button{float:left;} .citysearch label{line-height:31px;padding-right:13px;} .citysearch .locationSearch .iframeDiv{float:left;height:22px;margin-top:5px;} .citysearch .locationSearch .iframeDiv .sel select{background-color:#EAEAEA;float:left;height:22px;line-height:20px;margin-right:1px;text-align:center;width:60px;} .citysearch .btn{float:left;height:20px;margin-top:1px;width:53px;} nav .dropList{position:absolute;left:0;top:28px;line-height:30px;z-index:10;display:none;} nav .dropList i{position:absolute;left:0;top:0;background-color:#fff;opacity:0.95;filter:alpha(opacity=95);width:120px;height:100px;display:block;border:none;} nav .dropList span{position:absolute;top:0;left:0;padding:5px 0;} nav .dropList a{font-size:14px;line-height:30px;display:block;text-align:left;white-space:nowrap;} nav ul li a{background-color:transparent;color:#3f3f3f;line-height:28px;padding:0 10px;} nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0;height:0;overflow:hidden;cursor:pointer;vertical-align:middle;} nav .bg{height:75px;} #provice{background-color:#EBEBEB;color:#2D6CA6;padding-left:50px;padding-right:30px;position:relative;} #provice .icon{background:url(../i/index_icons.png) no-repeat scroll -66px 0 rgba(0,0,0,0);display:block;height:43px;left:10px;position:absolute;top:0;width:40px;} #provice .arrow{position:absolute;right:10px;top:20px;} .arrow{display:block;height:0;overflow:hidden;width:0;border-color:#2D6CA6 rgba(0,0,0,0) rgba(0,0,0,0);border-style:solid dashed dashed;border-width:6px;}
 
 
 nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px;position:relative;z-index:80;}
@@ -156,7 +52,7 @@ nav .bg{height:75px;}
 .search a{float:left;display:block;width:292px;height:35px;line-height:35px;}
 .search .searchBtn{width:44px;height:25px;line-height:25px;color:#fff;background:url("../../i/products/products.png") 0px -54px;cursor:pointer;text-indent:-9999px;}
 .col_left{float:left;margin:15px 10px 10px 10px;background-color:#fff;padding-bottom:10px;_margin:15px 10px 10px 5px;_width:175px;}
-.col_left ul li{font-size:18px;line-height:45px;position:relative;height:45px;_display:inline}
+.col_left ul li{font-size:18px;line-height:45px;position:relative;height:45px;_display:inline;cursor:pointer;}
 .col_left ul li a{display:block;padding:0px 20px;white-space:nowrap;height:45px;}
 .col_left ul li ul{background:#D7EEF7;display:none;position:absolute;width:230px;top:0px;z-index:10;left:165px;_left:175px;}
 .col_left ul li ul li ul{left:230px;}
@@ -182,7 +78,7 @@ nav .bg{height:75px;}
 .col_left div ul{display:none;position:absolute;left:167px;bottom:0;background:#D7EEF7;}
 .col_left div.line{height:1px;border-top:1px solid #aaa;margin:20px 10px 10px 10px;}
 
-
+body{background:#fff;}
 .col_right{width:795px;float:left;margin-top:15px;display:inline;background:#fff;}
 .warn_detail{background-color:#f06600;color:#fff;height:34px;width:710px;padding:8px 15px;line-height:34px;font-size:16px;position:relative;}
 .warn_detail span{display:block;height:34px;line-height:34px;float:left;margin-right:15px;}
@@ -194,7 +90,7 @@ nav .bg{height:75px;}
 .col_right .menu ul li a{color:#fff;background-color:#ec8f4a;padding:8px 24px;display:block;white-space:nowrap;}
 .col_right .menu .current{background-color:#6f6f6f;}
 .col_right .menu .current a,.col_right .menu ul li a:hover{background-color:#ed751d;}
-.forecast{padding:0px 15px 15px 15px;}
+.forecast{}
 .forecast h2{font-size:30px;line-height:80px;height:80px;font-weight:normal;border-bottom:2px solid #aaa;margin-bottom:20px;}
 .forecast p{line-height:26px;text-indent:2em;}
 .forecast p span{float:left;}

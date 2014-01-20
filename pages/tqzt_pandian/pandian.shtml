@@ -12,9 +12,8 @@
     <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
     <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 	<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
-    <script type="text/javascript" src="http://i.tq121.com.cn/j/jquery-1.8.2.js"></script>
-    <script>W.css("http://i.tq121.com.cn/c/tqzt_pandian/pandian.css")</script>
-    <script>W.use("http://i.tq121.com.cn/j/tqzt_pandian/pandian.js")</script>
+    <script>W.css("c/tqzt_pandian/pandian.css")</script>
+    <script>W(function(){W.use('j/tqzt_pandian/pandian.js')})</script>
     <base target="_blank" />
 </head>
 
