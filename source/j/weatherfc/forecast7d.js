@@ -83,6 +83,11 @@ define(function(require){
 		}
 	})
 	
+	function resetAdPos(){
+		try{
+		    W.util.adPos();
+		}catch(e){}
+	}
 	var $btnRight = $("#week .RBtn").click(function(){
 		var itemSum = 0;
 		week_scroll.go(1);
@@ -105,6 +110,7 @@ define(function(require){
 				$(this).addClass("col3");
 			})
 		}
+		resetAdPos();
 	})
 	var $btnLeft = $("#week .lBtn").click(function(){
 		var itemSum = 0;
@@ -128,6 +134,7 @@ define(function(require){
 				$(this).addClass("col3");
 			})
 		}
+		resetAdPos();
 	})
 	  //预报
 	$("#forecast .scroll .detail").each(function(){
