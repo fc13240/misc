@@ -1,6 +1,11 @@
-body{background-color:#dfdfdf;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
+body{background-color:#EEEEEE;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
+*{padding:0px;margin:0px;border:0;}
+ul{list-style:none;}
 a{text-decoration:none;color:#252525;}
 a:hover{color:#ee842f;}
+.clear{clear:both;height:0px;overflow:hidden;}
+.clearfix{zoom:1}
+.clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
 
 nav{display:block;}
 nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px ;position:relative;z-index:100;}
