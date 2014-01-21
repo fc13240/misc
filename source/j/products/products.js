@@ -14,7 +14,7 @@ function getSrc(str){
 	ifr.src = ifr.src.replace(ifr.src.substring(ifr.src.indexOf("class=")+6),str)
 	
 	switch(str){
-		case 'JB_ZYTQ_M': $(".menu").empty().append("<a class=\'current\' onClick=\'getSrc(\"JB_ZYTQ_M\")\'>全国24小时降水量预报</a><a onClick=\'getSrc(\"JB_ZYTQ_DW\")\'>全国48小时降水量预报</a>");break;
+		case 'JB_ZYTQ_M': $(".col_right .menu").empty().append("<a class=\'current\' onClick=\'getSrc(\"JB_ZYTQ_M\")\'>全国24小时降水量预报</a><a onClick=\'getSrc(\"JB_ZYTQ_DW\")\'>全国48小时降水量预报</a>");break;
 		case 'JB_ZYTQ_DW': alert(22);break;
 	}
 }
