@@ -12,10 +12,9 @@
 		<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 		<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 		<script type="text/javascript" src="http://localhost/source/j/core.js"></script>
-		<script type="text/javascript" language="JavaScript" src="http://localhost/source/j/jquery-1.8.2.js"></script>
-        <script>W.css("http://localhost/source/c/core.css","http://localhost/source/c/common.css","http://localhost/source/c/products/products.css")</script>
-		<script>W.use('j/products/products.js');</script>
-        <base target="_blank" />
+        <script>W.css("c/core.css","c/common.css","c/products/products.css")</script>
+		<script>W(function(){W.use('j/products/products.js')})</script>
+
 	</head>
 	<body>
 		<div id="toolBar">
@@ -424,7 +423,7 @@
                     </ul>
                 </li>
 			</ul>
-            <div class="line"></div>
+            <div class="line "></div>
             <div>
                 <h1><span>新</span>产品推荐
                     <ul>
@@ -511,15 +510,12 @@
 		</div>
 		<div class="col_right">
 			<div class="menu clearfix">
-				<ul>
-                    <li class="current"><a href="#">海洋天气预报</a></li>
-                    <li><a href="#">全球海事公报</a></li>
-                    <li><a href="#">海平面气压场分析</a></li>
-                    <li class="current"><a href="#">500mpa高度场分析</a></li>
-                    <li><a href="#">海平面海况形势</a></li>
-                    <li><a href="#">500mpa海况形势</a></li>
-				</ul>
+                <a class="current" onClick="getSrc('JB_ZYTQ_M')">全国24小时降水量预报</a>
 			</div>
+            <script>
+					
+
+			</script>
 			<div class="forecast">
 				<h2>全国近10天降水量实况</h2>
                 <p class="clearfix">
@@ -530,9 +526,9 @@
                     	<strong>层次：</strong><i>地面或水面特性</i>
                     </span>
 					<span class="effect">
-                    	<strong>产品时效：</strong><i>024</i></p>
+                    	<strong>产品时效：</strong><i>024</i>
                     </span>
-				
+				</p>
 				<p class="imgArea"><img width='600' src="http://localhost/source/i/products/test/img01.jpg"></p>
 			</div>
 

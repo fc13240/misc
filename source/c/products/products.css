@@ -1,11 +1,6 @@
 body{background-color:#dfdfdf;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
-*{padding:0px;margin:0px;border:0;}
-ul{list-style:none;}
 a{text-decoration:none;color:#252525;}
 a:hover{color:#ee842f;}
-.clear{clear:both;height:0px;overflow:hidden;}
-.clearfix{zoom:1}
-.clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
 
 nav{display:block;}
 nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px ;position:relative;z-index:100;}
@@ -52,9 +47,10 @@ nav .bg{height:75px;}
 .search a{float:left;display:block;width:292px;height:35px;line-height:35px;}
 .search .searchBtn{width:44px;height:25px;line-height:25px;color:#fff;background:url("../../i/products/products.png") 0px -54px;cursor:pointer;text-indent:-9999px;}
 .col_left{float:left;margin:15px 10px 10px 10px;background-color:#fff;padding-bottom:10px;_margin:15px 10px 10px 5px;_width:175px;}
-.col_left ul li{font-size:18px;line-height:45px;position:relative;height:45px;_display:inline;cursor:pointer;}
+.col_left ul{*width:175px;}
+.col_left ul li{font-size:18px;line-height:45px;position:relative;height:45px;*display:inline;cursor:pointer;}
 .col_left ul li a{display:block;padding:0px 20px;white-space:nowrap;height:45px;}
-.col_left ul li ul{background:#D7EEF7;display:none;position:absolute;width:230px;top:0px;z-index:10;left:165px;_left:175px;}
+.col_left ul li ul{background:#D7EEF7;display:none;position:absolute;width:230px;top:0px;z-index:10;left:165px;*left:175px;}
 .col_left ul li ul li ul{left:230px;}
 .col_left ul li ul li ul li{height:auto;_height:45px;}
 .col_left .oneLevelMenu{background:#C5E4F0;}
@@ -73,10 +69,10 @@ nav .bg{height:75px;}
 .col_left a.yb{background-position:0 -493px;}
 .col_left a.sp{background-position:0 -556px;}
 .col_left a.szcp{background-position:0 -617px;}
-.col_left div h1{font-size:18px;font-weight:normal;color:#F06600;padding-left:20px;cursor:pointer;color:#D25744;line-height:55px;height:55px;position:relative;}
+.col_left div h1{font-size:18px;font-weight:normal;color:#F06600;padding-left:20px;cursor:pointer;color:#D25744;line-height:55px;height:55px;position:relative;*width:155px}
 .col_left div h1 span{font-size:30px; letter-spacing:2px;}
-.col_left div ul{display:none;position:absolute;left:167px;bottom:0;background:#D7EEF7;}
-.col_left div.line{height:1px;border-top:1px solid #aaa;margin:20px 10px 10px 10px;}
+.col_left div ul{display:none;position:absolute;left:167px;bottom:0;background:#D7EEF7;*width:245px;}
+.col_left .line{height:2px;border-top:1px solid #aaa;margin:20px 10px 10px 10px;display:block;width:147px;}
 
 .col_right{width:775px;float:left;margin-top:15px;display:inline;background:#fff;padding:0 15px;}
 .childBogy{background:#fff;}
@@ -86,10 +82,8 @@ nav .bg{height:75px;}
 .warn_detail span a:hover,.warn_detail span a{color:#fff;}
 .warn_detail .more{position:absolute;right:0px;top:10px;}
 .col_right .menu{padding-top:5px;}
-.col_right .menu ul li{float:left;margin-right:3px;margin-top:3px;}
-.col_right .menu ul li a{color:#fff;background-color:#ec8f4a;padding:8px 24px;display:block;white-space:nowrap;}
-.col_right .menu .current{background-color:#6f6f6f;}
-.col_right .menu .current a,.col_right .menu ul li a:hover{background-color:#ed751d;}
+.col_right .menu a{float:left;color:#fff;background-color:#ec8f4a;padding:8px 24px;display:block;white-space:nowrap;margin-right:3px;margin-top:3px;cursor:pointer;}
+.col_right .menu a.current,.col_right .menu a:hover{background-color:#ED751D;}
 .forecast{}
 .forecast h2{font-size:30px;line-height:80px;height:80px;font-weight:normal;border-bottom:2px solid #aaa;margin-bottom:20px;}
 .forecast p{line-height:26px;text-indent:2em;}
