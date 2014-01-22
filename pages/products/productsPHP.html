@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    	<link rel="dns-prefetch" href="http://localhost/source">
+    	<link rel="dns-prefetch" href="http://i.tq121.com.cn">
 		<meta charset="utf-8" />
 		<title>中国天气网-专业天气预报、气象服务门户</title>
 		<meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
@@ -11,8 +11,7 @@
 		<meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 		<meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 		<meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
-		<script type="text/javascript" src="http://localhost/source/j/core.js"></script>
-		<script type="text/javascript" src="http://localhost/source/j/products/bottom.js"></script>
+		<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
         <script>W.css("c/core.css","c/common.css","c/products/products.css")</script>
 		<script>W(function(){W.use('j/products/products.js')})</script>
 	
@@ -24,28 +23,22 @@ function getSrc(str){
 }
 
 
-//function reinitIframe(){
-//var Iframe = document.getElementById('new');
-//
-//
-//// 声明变量取值
-//
-//var bHeight = Iframe.contentWindow.document.body.scrollHeight;
-//alert(bHeight)
-//
-//var dHeight=Iframe.contentWindow.document.documentElement.scrollHeight;
-//
-//var height = Math.max(bHeight, dHeight); // 取最大值
-//
-//Iframe.height = height;
-//}
-function iFrameHeight() {
-var ifm= document.getElementById("new");
-var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
-if(ifm != null && subWeb != null) {
-ifm.height = subWeb.body.scrollHeight;
+function reinitIframe(){
+var Iframe = document.getElementById('new');
+
+
+// 声明变量取值
+
+var bHeight = Iframe.contentWindow.document.body.scrollHeight;
+alert(bHeight)
+
+var dHeight=Iframe.contentWindow.document.documentElement.scrollHeight;
+
+var height = Math.max(bHeight, dHeight); // 取最大值
+
+Iframe.height = height;
 }
-} 
+
 
 
 </script>
@@ -60,7 +53,7 @@ ifm.height = subWeb.body.scrollHeight;
     </script>
     <![endif]-->
 	<!--[if lt IE 9]>
-	<script>W.js('http://localhost/source/j/tool/html5shiv.js')</script>
+	<script>W.js('http://i.tq121.com.cn/j/tool/html5shiv.js')</script>
 	<![endif]-->
 
 
@@ -585,7 +578,7 @@ ifm.height = subWeb.body.scrollHeight;
 				
 		</div>
     <div class="forecast" >
-      <Iframe id="new" width="100%" height="2500" onload='iFrameHeight()' src="http://10.14.85.90/pages/products/products_form.html" frameBorder="0"  name="contain" scrolling="no" align="left"></Iframe>
+      <Iframe id="new" width="100%" height="2500" onload='reinitIframe()' src="http://10.14.85.90/pages/products/products_form.html" frameBorder="0"  name="contain" scrolling="no" align="left"></Iframe>
     </div>
   </div>
 </div>

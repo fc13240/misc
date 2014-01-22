@@ -1,7 +1,7 @@
 body{background:#051D37;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
 *{padding:0px;margin:0px;border:0;}
 ul{list-style:none;}
-a{text-decoration:none;color:#252525;}
+a{text-decoration:none;color:#252525;cursor:pointer;}
 a:hover{color:#ee842f;}
 .clear{clear:both;height:0px;overflow:hidden;}
 .clearfix{zoom:1}
@@ -25,7 +25,7 @@ a:hover{color:#ee842f;}
 .content .banner{background:url(../../i/tqzt_pandian//banner.jpg) no-repeat;height:224px;display:block;}
 .content .bannerBottom{background:url(../../i/tqzt_pandian/bannerBottom.jpg) no-repeat;height:29px;display:block;}
 .content .pdShow{position:relative;height:853px;}
-.content .pdShow a{position:absolute;overflow:hidden;display:block;zoom:1;}
+.content .pdShow a{position:absolute;overflow:hidden;display:block;zoom:1;background:#051D37;}
 .content .pdShow img{float:left}
 .content .pdShow a div{position:absolute;}
 .content .pdShow .img1{top:0px;left:3px;width:235px;height:417px;}
