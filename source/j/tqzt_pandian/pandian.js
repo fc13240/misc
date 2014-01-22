@@ -14,14 +14,14 @@ $(function(){
 	
 	$(".pdShow .img1,.pdShow .img2,.pdShow .img5,.pdShow .img7,.pdShow .img9").hover(function(){
 		var w=$(this).width();
-		$(this).children("div").stop(true,true).animate({left:'-'+w},400);
+		$(this).children("a").stop(true,true).animate({left:'-'+w},400);
 	},function(){
-		$(this).children("div").stop(true,true).animate({left:0},400);
+		$(this).children("a").stop(true,true).animate({left:0},400);
 	})
 	$(".pdShow .img3,.pdShow .img6,.pdShow .img8,.pdShow .img4").hover(function(){
 		var h=$(this).height();
-		$(this).children("div").stop(true,true).animate({top:'-'+h},400);
+		$(this).children("a").stop(true,true).animate({top:'-'+h},400);
 	},function(){
-		$(this).children("div").stop(true,true).animate({top:0},400);
+		$(this).children("a").stop(true,true).animate({top:0},400);
 	})
 })
