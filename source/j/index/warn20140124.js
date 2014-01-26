@@ -43,7 +43,7 @@ define(function(require){
 					$.each(alarminfo.gj, function(i, k) {
 						$('<a href="' + k.http + '" class="df" style="background:url(http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg) no-repeat scroll 5px 5px">中央气象台发布' + k.name + '</a>').appendTo($gjdiv);
 					});
-					$('<a target="_blank" href="http://www.weather.com.cn/alarm/newalarmlist.shtml">更多预警<b>(' + alarminfo.count + '</b>个)</a>').appendTo($appparent);
+					$('<a target="_blank" href="http://www.weather.com.cn/alarm/newalarmlist.shtml">更多预警<b>(' + alarminfo.count + '</b>个)</a>').appendTo($gjdiv);
 					$.each(alarminfo.pr, function(i, k) {
 						$filename = k[1];
 						$pos = $filename.lastIndexOf('-');
