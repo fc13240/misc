@@ -35,7 +35,7 @@ define(function(require){
 			success: function() {
 				$appparent = $('#alarm');
 				$appparent.empty();
-				$('<span class="more"><a target="_blank" href="http://www.weather.com.cn/alarm/newalarmlist.shtml">更多预警<b>(' + alarminfo.count + '</b>个)</a></span>').appendTo($appparent);
+				$('<span class="more"><a target="_blank" href="http://www.weather.com.cn/alarm/newalarmlist.shtml">更多预警(<b>' + alarminfo.count + '</b>个)</a></span>').appendTo($appparent);
 
 				if(alarminfo.gj.length > 0 || alarminfo.pr.length > 0){
 					
