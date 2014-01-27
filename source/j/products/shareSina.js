@@ -25,7 +25,7 @@ $(document).ready(function(){
 	});
 	$("#share_weibo").click(function(){
 		var title = "";
-		$("#conBody p").each(function(k,v){
+		$("#conBody p").each(function(){
 			if($(this).text().length > 0){
 				title = $(this).text();
 				return false;

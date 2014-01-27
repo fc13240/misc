@@ -1,3 +1,4 @@
+// JavaScript Document
 var Check=function(){
 	
 
@@ -309,10 +310,6 @@ $(function(){
 //			makeFlag($(this).text());
 //		}
 //	})
-	
-	
-	
-	
 	$('.col_left ul li,.col_left>div>h1').hover(function(){
 		$(this).addClass("oneLevelMenu");
 		$(this).children("ul").stop(true,true).show();	
@@ -321,8 +318,6 @@ $(function(){
 		$(this).children("ul").stop(true,true).hide();
 	})	
 	$('a.getText').live('click',Check);
-	
-	
 })
 
 function getSrc(str){
