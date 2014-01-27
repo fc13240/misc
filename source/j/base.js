@@ -416,6 +416,12 @@ function Lunar(objDate) {
   $("#collect").click(function() {
    W.util.addFav();
   })
+
+
+  $(".fav").click(function() {
+   W.util.addFav();
+  })
+  
   //设为首页
   $("#setIndex").click(function() {
     W.util.setHome();
