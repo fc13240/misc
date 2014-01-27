@@ -38,7 +38,7 @@ define(function(require){
 				$('<span class="more"><a target="_blank" href="http://www.weather.com.cn/alarm/newalarmlist.shtml">更多预警(<b>' + alarminfo.count + '</b>个)</a></span>').appendTo($appparent);
 
 				if(alarminfo.gj.length > 0 || alarminfo.pr.length > 0){
-					
+					$pppp = $("<p></p>");
 					$gjdiv = $("<span></span>");
 					$.each(alarminfo.gj, function(i, k) {
 						$('<a href="' + k.http + '" class="df" style="background:url(http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg) no-repeat scroll 5px 5px">中央气象台发布' + k.name + '</a>').appendTo($gjdiv);
@@ -56,10 +56,10 @@ define(function(require){
 						if ($lb > 90 || $jb > 90) $img = '0000';
 						if ($lb > 90) $textlb = $gdlb[parseInt($lb, 10) - 91];
 						if ($jb > 90) $textyc = $gdyc[parseInt($jb, 10) - 91];
-						$('<img src="http://www.weather.com.cn/m/i/alarm_s/' + $img + '.gif"><a target="_blank" class="df"   href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=' + $filename + '">' + k[0] + '气象台发布' + $textlb + $textyc + '预警</a>').appendTo($gjdiv);
+						$('<a target="_blank" src="http://www.weather.com.cn/m/i/alarm_s/' + $img + '.gif"  class="df"   href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=' + $filename + '"><img src="http://www.weather.com.cn/m/i/alarm_s/' + $img + '.gif"> ' + k[0] + '气象台发布' + $textlb + $textyc + '预警</a>').appendTo($gjdiv);
 					});
-					$gjdiv.appendTo($appparent);
-					
+					$gjdiv.appendTo($pppp);
+					$pppp.appendTo($appparent);
 					try{
 						W.util.adPos();//在广告之前加载并初始化完成的化，此方法为undefine
 					}catch(e){}	
