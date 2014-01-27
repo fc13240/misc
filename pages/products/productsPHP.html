@@ -15,26 +15,8 @@
 <script>W.css("c/core.css","c/common.css","c/products/products.css")</script>
 <script>W(function(){W.use('j/products/products.js')})</script>
 <script type="text/javascript">
-//function getSrc(str){
-//	var ifr = document.getElementById('new');
-//	ifr.src = ifr.src.replace(ifr.src.substring(ifr.src.indexOf("class=")+6),str)
-//}
 
 
-function reinitIframe(){
-var Iframe = document.getElementById('new');
-
-
-// 声明变量取值
-
-var bHeight = Iframe.contentWindow.document.body.scrollHeight;
-
-var dHeight=Iframe.contentWindow.document.documentElement.scrollHeight;
-
-var height = Math.max(bHeight, dHeight); // 取最大值
-
-Iframe.height = height;
-}
 
 
 
@@ -49,7 +31,7 @@ Iframe.height = height;
     </script>
     <![endif]-->
 <!--[if lt IE 9]>
-	<script>W.js('http://i.tq121.com.cn/j/tool/html5shiv.js')</script>
+	<script>W.js('http://localhost/source/j/tool/html5shiv.js')</script>
 	<![endif]-->
 
 </head>
@@ -84,239 +66,237 @@ Iframe.height = height;
   <div class="breadcrumb_search clearfix">
     <ul class="breadcrumb">
       <li><a href="http://www.weather.com.cn/">中国天气网</a></li>
-      <li class="divider">&gt;</li>
-      <li><a href="/photo/index.shtml">预报</a></li>
-      <li class="divider">&gt;</li>
-      <li><a href="/photo/gqt/index.shtml">森林火险气象预报</a></li>
     </ul>
     <div class="citysearch">
-      <div class="locationSearch"> 
-      	<label>城市天气查询</label>
+      <div class="locationSearch">
+        <label>城市天气查询</label>
         <div class="iframeDiv"> 
-     	   <iframe id="cityCheck" allowtransparency="true" width="280" scrolling="no" height="22" frameborder="0" marginheight="0" marginwidth="0" src="http://www.weather.com.cn/pubmodel/inquires2.htm"></iframe>
-    	</div>
+          <!-- 载入的二级页面 begin -->
+          <iframe id="cityCheck" allowtransparency="true" width="280" scrolling="no" height="22" frameborder="0" marginheight="0" marginwidth="0" src="http://www.weather.com.cn/pubmodel/inquires2.htm"></iframe>
+          <!-- 载入的二级页面 end --> 
+        </div>
       </div>
     </div>
   </div>
   <div class="clearfix">
-	<div class="col_left">
-    <ul>
-      <li> <a class="getText yj" >预警</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('JB_ZYTQ_M')">霾预警</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JB_ZYTQ_DW')">大雾预警</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JB_ZYTQ_HSDF')">海上大风预警</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_M_24')">24小时霾预报</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_W_24')">24小时大雾预报</a> </li>
-        </ul>
-      </li>
-      <li> <a class="getText js" target="_self" onclick="getSrc('JC_JSL_02405')">降水</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_024')">全国降水量预报图</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_024')">全国24小时降水量预报</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_048')">全国48小时降水量预报</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_072')">全国72小时降水量预报</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_02405')">全国降水量实况图</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_10')">全国近10天降水量实况</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_20')">全国近20天降水量实况</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_30')">全国近30天降水量实况</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL10')">全国降水距平百分率</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL10')">全国10天降水距平</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL20')">全国20天降水距平</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL30')">全国30天降水距平</a> </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li> <a class="getText qw" target="_self" onclick="getSrc('JC_WDSK_GW_24')">气温</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_GW_24')">全国最高气温分布图 </a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZG10')">全国10天最高气温分布</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZG20')">全国20天最高气温分布</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZG30')">全国30天最高气温分布</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_DW_24')">全国最低气温分布图</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZD10')">全国10天最低气温分布</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZD20')">全国20天最低气温分布</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZD30')">全国30天最低气温分布</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP10')">全国平均温度距平</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP10')">全国10天平均温度距平</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP20')">全国20天平均温度距平</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP30')">全国30天平均温度距平</a> </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li> <a class="getText jt" target="_self" onclick="getSrc('YB_GL_SJL_24H')">交通</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_GL_SJL_24H')">全国道路降水量预报</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_GL_SJL_24H')">公路24小时降水量预报</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_TL_SJL_24H')">铁路24小时降水量预报</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JS_ZH')">全国道路降水量实况</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JS_ZH')">公路逐小时降水实况</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_JS_ZH')">铁路逐小时降水实况</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JX_ZH')">全国道路积雪深度实况</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JX_ZH')">公路沿线积雪深度实况</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_JX_ZH')">铁路沿线积雪深度实况</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_WD_ZH')">全国道路温度实况</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_WD_ZH')">公路逐小时温度实况</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_WD_ZH')">铁路逐小时温度实况</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_NJD_ZH')">全国道路能见度实况</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_NJD_ZH')">公路逐小时能见度实况</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_NJD_ZH')">铁路逐小时能见度实况</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_FC_ZH')">全国道路风场实况</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_FC_ZH')">公路逐小时风场实况</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_FC_ZH')">铁路逐小时风场实况</a> </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li> <a class="getText hj" target="_self" onclick="getSrc('YB_KQWR_24')">环境</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_KQWR_24')">空气污染气象条件预报</a> </li>
-        </ul>
-      </li>
-      <li> <a class="getText ld" target="_self" onclick="getSrc('JC_LD_CHN')">雷电</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_LD_CHN')">全国地闪实时监测(1h)</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_LD_HH')">半小时雷电图</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_LD_3H')">三小时雷电图</a> </li>
-        </ul>
-      </li>
-      <li> <a class="getText tqld" href="/static/html/product_wx.shtml" target="_blank">天气雷达</a> </li>
-      <li> <a class="getText qxwx" href="/static/html/product_ld.shtml" target="_blank">气象卫星</a> </li>
-      <li> <a class="getText jc" target="_self" onclick="getSrc('JC_QH_TRXDSD')">监测</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_QH_TRXDSD')">土壤相对湿度图</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_DM')">天气图分析</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_DM')">地面分析</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_500hPa')">500百帕分析</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_700hPa')">700百帕分析</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_850hPa')">850百帕分析</a> </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li> <a class="getText yb" target="_self" onclick="getSrc('YB_TQQS_3D')">预报</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_3D')">天气趋势预报</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_3D')">未来三天</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_10D')">未来十天</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_GW')">国外天气预报</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_HY_TQYB')">海洋预报</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_HY_TQYB')">海洋天气预报</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_HY_HSGB')">全球海事公报</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_HY_HPM_SK')">海平面气压场分析</a> </li>
-              <li> <a class="getText" target="_self" onclick="getSrc('JC_HY_500Pha_SK')">500mpa高度场分析</a> </li>
-              <li> <a target="_self" onclick="getSrc('YB_HY_HPM_24H')">海平面海况形势</a> </li>
-              <li> <a target="_self" onclick="getSrc('YB_HY_500Pha_24H')">500mpa海况形势</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_DZZH_24')">地质水文气象</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_DZZH_24')">地质灾害气象等级</a> </li>
-            </ul>
-          </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_HXDJ_SL')">火险等级短期预报</a>
-            <ul>
-              <li> <a class="getText" target="_self" onclick="getSrc('YB_HXDJ_SL')">森林火险</a> </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li> <a class="getText szcp" target="_self" onclick="getSrc('SZ_ZQSZ_SD_200HPA_12H')">数值产品</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('SZ_ZQSZ_SD_200HPA_12H')">中期指数</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('SZ_SC_3H')">沙尘模式</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('SZ_RY_BJHL_400HPA_3H')">人影模式</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('SZ_MM5_12XSLJJS_ZG_12H')">MM5模式</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('SZ_HL_DXY_12H')">海浪模式</a> </li>
-        </ul>
-      </li>
-    </ul>
-    <div class="line"></div>
-    <div>
-      <h1><a class='getText LBnav'><span>新</span>产品推荐</a>
-        <ul>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_WD_ZG24')">最高气温预报分布图</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_WD_ZD24')">最低气温预报分布图</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('YB_WD_PJ24')">平均气温预报分布图</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJ')">平均气温实况分布图</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_GW_24')">全国最高气温实况分布图</a> </li>
-          <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_DW_24')">全国最低气温实况分布图</a> </li>
-        </ul>
-      </h1>
-      <h1><a class='getText LBnav'><span>最</span>新更新</a>
-        <ul>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_024')">全国24小时降水量预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_048')">全国48小时降水量预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_072')">全国72小时降水量预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_1HT')">逐小时全国气温实况</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_1HR')">逐小时降水量实况</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_1HW')">逐小时极大风速实况</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('JC_LD_HH')">半小时雷电图</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_HY_JHHQYB')">24小时近海海区预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_TQQS_3D')">72小时最高气温变化预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_BW_ZG24')">今日最高气温变化预报</a> </li>
-        </ul>
-      </h1>
-      <h1><a class='getText LBnav'><span>推</span>荐浏览</a>
-        <ul>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_BW_ZD24')">今日最低气温变化预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_BW_ZG24')">今日最高气温变化预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('JC_WX_DBWD')">旬全国地表温度图</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_02405')">全国降水量实况</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_024')">全国24小时降水量预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_048')">全国48小时降水量预报</a> </li>
-          <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_JPL10')">全国10天降水距平</a> </li>
-        </ul>
-      </h1>
+    <div class="col_left">
+      <ul>
+        <li> <a class="getText yj" >预警</a>
+          <ul>
+            <li> <a class="getText"  onclick="getSrc('JB_ZYTQ_M')">霾预警</a> </li>
+            <li> <a class="getText"  onclick="getSrc('JB_ZYTQ_DW')">大雾预警</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JB_ZYTQ_HSDF')">海上大风预警</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_M_24')">24小时霾预报</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_W_24')">24小时大雾预报</a> </li>
+          </ul>
+        </li>
+        <li> <a class="getText js"  onclick="getSrc('JC_JSL_02405')">降水</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_024')">全国降水量预报图</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_024')">全国24小时降水量预报</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_048')">全国48小时降水量预报</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_JSL_072')">全国72小时降水量预报</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_02405')">全国降水量实况图</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_10')">全国近10天降水量实况</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_20')">全国近20天降水量实况</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_30')">全国近30天降水量实况</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL10')">全国降水距平百分率</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL10')">全国10天降水距平</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL20')">全国20天降水距平</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_JSL_JPL30')">全国30天降水距平</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> <a class="getText qw" target="_self" onclick="getSrc('JC_WDSK_GW_24')">气温</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_GW_24')">全国最高气温分布图 </a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZG10')">全国10天最高气温分布</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZG20')">全国20天最高气温分布</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZG30')">全国30天最高气温分布</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_DW_24')">全国最低气温分布图</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZD10')">全国10天最低气温分布</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZD20')">全国20天最低气温分布</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_ZD30')">全国30天最低气温分布</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP10')">全国平均温度距平</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP10')">全国10天平均温度距平</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP20')">全国20天平均温度距平</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJJP30')">全国30天平均温度距平</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> <a class="getText jt" target="_self" onclick="getSrc('YB_GL_SJL_24H')">交通</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_GL_SJL_24H')">全国道路降水量预报</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_GL_SJL_24H')">公路24小时降水量预报</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_TL_SJL_24H')">铁路24小时降水量预报</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JS_ZH')">全国道路降水量实况</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JS_ZH')">公路逐小时降水实况</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_JS_ZH')">铁路逐小时降水实况</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JX_ZH')">全国道路积雪深度实况</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_JX_ZH')">公路沿线积雪深度实况</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_JX_ZH')">铁路沿线积雪深度实况</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_WD_ZH')">全国道路温度实况</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_WD_ZH')">公路逐小时温度实况</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_WD_ZH')">铁路逐小时温度实况</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_NJD_ZH')">全国道路能见度实况</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_NJD_ZH')">公路逐小时能见度实况</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_NJD_ZH')">铁路逐小时能见度实况</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_FC_ZH')">全国道路风场实况</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_GL_FC_ZH')">公路逐小时风场实况</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TL_FC_ZH')">铁路逐小时风场实况</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> <a class="getText hj" target="_self" onclick="getSrc('YB_KQWR_24')">环境</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_KQWR_24')">空气污染气象条件预报</a> </li>
+          </ul>
+        </li>
+        <li> <a class="getText ld" target="_self" onclick="getSrc('JC_LD_CHN')">雷电</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_LD_CHN')" data-id="JC_LD_CHN">全国地闪实时监测(1h)</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_LD_HH')">半小时雷电图</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_LD_3H')">三小时雷电图</a> </li>
+          </ul>
+        </li>
+        <li> <a class="getText tqld" href="/static/html/product_wx.shtml" target="_blank">天气雷达</a> </li>
+        <li> <a class="getText qxwx" href="/static/html/product_ld.shtml" target="_blank">气象卫星</a> </li>
+        <li> <a class="getText jc" target="_self" onclick="getSrc('JC_QH_TRXDSD')">监测</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_QH_TRXDSD')">土壤相对湿度图</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_DM')">天气图分析</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_DM')">地面分析</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_500hPa')">500百帕分析</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_700hPa')">700百帕分析</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_TQFX_850hPa')">850百帕分析</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> <a class="getText yb" target="_self" onclick="getSrc('YB_TQQS_3D')">预报</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_3D')">天气趋势预报</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_3D')">未来三天</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_10D')">未来十天</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_TQQS_GW')">国外天气预报</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_HY_TQYB')">海洋预报</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_HY_TQYB')">海洋天气预报</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_HY_HSGB')">全球海事公报</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_HY_HPM_SK')">海平面气压场分析</a> </li>
+                <li> <a class="getText" target="_self" onclick="getSrc('JC_HY_500Pha_SK')">500mpa高度场分析</a> </li>
+                <li> <a target="_self" onclick="getSrc('YB_HY_HPM_24H')">海平面海况形势</a> </li>
+                <li> <a target="_self" onclick="getSrc('YB_HY_500Pha_24H')">500mpa海况形势</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_DZZH_24')">地质水文气象</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_DZZH_24')">地质灾害气象等级</a> </li>
+              </ul>
+            </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_HXDJ_SL')">火险等级短期预报</a>
+              <ul>
+                <li> <a class="getText" target="_self" onclick="getSrc('YB_HXDJ_SL')">森林火险</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> <a class="getText szcp" target="_self" onclick="getSrc('SZ_ZQSZ_SD_200HPA_12H')">数值产品</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('SZ_ZQSZ_SD_200HPA_12H')">中期指数</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('SZ_SC_3H')">沙尘模式</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('SZ_RY_BJHL_400HPA_3H')">人影模式</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('SZ_MM5_12XSLJJS_ZG_12H')">MM5模式</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('SZ_HL_DXY_12H')">海浪模式</a> </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="line"></div>
+      <div>
+        <h1><a class='getText LBnav'><span>新</span>产品推荐</a>
+          <ul>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_WD_ZG24')">最高气温预报分布图</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_WD_ZD24')">最低气温预报分布图</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('YB_WD_PJ24')">平均气温预报分布图</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_WD_PJ')">平均气温实况分布图</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_GW_24')">全国最高气温实况分布图</a> </li>
+            <li> <a class="getText" target="_self" onclick="getSrc('JC_WDSK_DW_24')">全国最低气温实况分布图</a> </li>
+          </ul>
+        </h1>
+        <h1><a class='getText LBnav'><span>最</span>新更新</a>
+          <ul>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_024')">全国24小时降水量预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_048')">全国48小时降水量预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_072')">全国72小时降水量预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_1HT')">逐小时全国气温实况</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_1HR')">逐小时降水量实况</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_1HW')">逐小时极大风速实况</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('JC_LD_HH')">半小时雷电图</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_HY_JHHQYB')">24小时近海海区预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_TQQS_3D')">72小时最高气温变化预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_BW_ZG24')">今日最高气温变化预报</a> </li>
+          </ul>
+        </h1>
+        <h1><a class='getText LBnav'><span>推</span>荐浏览</a>
+          <ul>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_BW_ZD24')">今日最低气温变化预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_BW_ZG24')">今日最高气温变化预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('JC_WX_DBWD')">旬全国地表温度图</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_02405')">全国降水量实况</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_024')">全国24小时降水量预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('YB_JSL_048')">全国48小时降水量预报</a> </li>
+            <li> <a class='getText' target="_self" onclick="getSrc('JC_JSL_JPL10')">全国10天降水距平</a> </li>
+          </ul>
+        </h1>
+      </div>
     </div>
-  </div>  	
-	<div class="col_right"> 
-    <div class="menu clearfix">
-     <a href="#">全国近10天降况</a>
-     <a href="#">全国近10天降水量实况</a>
-     <a href="#">全国近10天降水量实况</a>
-      <a href="#">全国近20天降水量实况</a>
-       <a href="#">全国近30天降水量实况</a>
-     </div>
-      <Iframe id="new" name="new" width="100%" height="1200" onload='reinitIframe()' src="http://10.14.85.90/pages/products/products_text.html" frameBorder="0"  name="contain" scrolling="no" align="left"></Iframe>
-  </div>
+    <div class="col_right">
+      <div class="menu clearfix"> <a class="getText" onClick="getSrc1('http://localhost/pages/products/products_form.html')">全国近10天降况</a> <a href="#" onClick="getSrc1('http://localhost/pages/products/products_text.html')">全国近10天降水量实况</a> <a href="#">全国近10天降水量实况</a> <a href="#">全国近20天降水量实况</a> <a href="#">全国近30天降水量实况</a> </div>
+
+      	<Iframe id="new" name="new" width="100%" frameBorder="0"  name="contain" scrolling="no" align="left">
+      	</Iframe>      
+		<script>
+	    //alert(document.getElementById('new').contentWindow.document.body.scrollHeight)
+	  </script>
+
+    </div>
   </div>
 </div>
 <div class="footer">

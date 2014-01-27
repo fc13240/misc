@@ -1,5 +1,6 @@
 var Check=function(){
 	
+
 	switch($(this).text()){
 	
 		//////////////////////////降水 begin
@@ -278,7 +279,40 @@ var Check=function(){
 			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国10天降水距平</a>");break;
 	}
 }
+
+//function makeFlag(str){
+//	$('ul.breadcrumb').append("<li><a>&nbsp;>&nbsp;"+str+"</a></li>");	
+//}
+//
+//function makeBtn(str){
+//	$('.col_right .menu').append("<a>"+str+"</a>");
+//}
+
 $(function(){
+//	
+//	$('ul li a').click(function(){
+//		$('ul.breadcrumb li:gt(0)').remove();
+//		if($(this).parent().parent().parent().attr('class')=='col_left'){
+//			var $l = $(this).next().children('li')
+//			var $a = $(this).next().children('li').children('a')
+//			alert($l.eq(0).children('a').text());
+//			for(i=0;i<$a.length;i++){
+//				$l.eq(0).children('a').text()
+//			}
+//			makeFlag($(this).text());
+//		}else if($(this).parent().parent().parent().parent().parent().attr('class')=='col_left'){
+//			makeFlag($(this).parent().parent().prev().text());
+//			makeFlag($(this).text());
+//		}else if($(this).parent().parent().parent().parent().parent().parent().parent().attr('class')=='col_left'){
+//			makeFlag($(this).parent().parent().parent().parent().prev().text());
+//			makeFlag($(this).parent().parent().prev().text());
+//			makeFlag($(this).text());
+//		}
+//	})
+	
+	
+	
+	
 	$('.col_left ul li,.col_left>div>h1').hover(function(){
 		$(this).addClass("oneLevelMenu");
 		$(this).children("ul").stop(true,true).show();	
@@ -286,9 +320,15 @@ $(function(){
 		$(this).removeClass('oneLevelMenu');
 		$(this).children("ul").stop(true,true).hide();
 	})	
-	
-	//$(document.frames('new').document).find('a.getText').live('click',Check($(window.parent.document).find("ul.breadcrumb"),Check($(window.parent.document).find(".col_right .menu"))));
-	//$(document.frames['new'].document).find('a').click(function(){alert(111)})
-
 	$('a.getText').live('click',Check);
+	
+	
 })
+
+function getSrc(str){
+	$('#new').attr('src',"http://www.weather.com.cn/static/productframe2013.php?class="+str);
+}
+
+$('#new').load(function(){         
+    $(this).height($(this).contents().find("body").height() + 40);  
+}).attr('src','http://www.weather.com.cn/static/productframe2013.php?class=JC_JSL_02405');   
