@@ -56,7 +56,7 @@ define(function(require){
 						if ($lb > 90 || $jb > 90) $img = '0000';
 						if ($lb > 90) $textlb = $gdlb[parseInt($lb, 10) - 91];
 						if ($jb > 90) $textyc = $gdyc[parseInt($jb, 10) - 91];
-						$('<a target="_blank" src="http://www.weather.com.cn/m/i/alarm_s/' + $img + '.gif"  class="df"   href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=' + $filename + '">' + k[0] + '气象台发布' + $textlb + $textyc + '预警</a>').appendTo($gjdiv);
+						$('<a target="_blank" src="http://www.weather.com.cn/m/i/alarm_s/' + $img + '.gif"  class="df"   href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=' + $filename + '"><img src="http://www.weather.com.cn/m/i/alarm_s/' + $img + '.gif"> ' + k[0] + '气象台发布' + $textlb + $textyc + '预警</a>').appendTo($gjdiv);
 					});
 					$gjdiv.appendTo($pppp);
 					$pppp.appendTo($appparent);
