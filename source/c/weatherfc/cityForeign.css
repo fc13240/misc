@@ -5,7 +5,7 @@ a{text-decoration:none;color:#252525;}
 a:hover{color:#ee842f;}
 .clear{clear:both;height:0px;overflow:hidden;}
 nav,section,aside,figure,figcaption{display:block;} 
-.bg{width:1000px;position:absolute;left:0px;top:0px;background-color:#fff;opacity:0.8;filter:alpha(opacity=80);}
+.bg{width:1000px;position:absolute;left:0px;top:0px;background-color:#fff;opacity:0.8;filter:alpha(opacity=80);z-index:-1;}
 
 nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px;z-index:80;position:relative;}
 nav h1{background:url(../../i/weatherfc/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
@@ -294,8 +294,8 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #week .wd span{display:block;line-height:32px;height:40px;}
 .liveWeather .bg{height:155px;}
 
-.block{width:980px;height:700px;padding:10px;margin:0px auto;position:relative;}
-.block .block_content{width:980px;height:700px;position:absolute;left:10px;top:0px;z-index:5;}
+.block{width:980px;padding:10px;margin:0px auto;position:relative;}
+.block .block_content{width:980px;}
 #forecast{width:650px;padding:10px;background-color:#fff;}
 #forecast h2{height:40px;line-height:40px;color:#333333;font-size:18px;padding-left:10px;font-weight:normal;position:relative;}
 #forecast h2 i{font-size:14px;font-style:normal;padding-left:15px;}
@@ -725,7 +725,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 
 
 .tabContent .on{display:block;}
-.block .bg{height:720px;}
+.block .bg{height:100%;}
 
 .top .right #txtZip {
     background-color: transparent;
