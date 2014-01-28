@@ -959,3 +959,90 @@ body.tq_n31{
 /*头部和底部在移动设备上处理*/
 #toolBar,
 .footer{min-width: 1000px;}
+
+
+
+
+
+
+
+
+
+
+#forecast .scroll li{width:650px; height: 70px;float:none; border-bottom: 1px solid #e2e2e2;}
+        #forecast .scroll li p{width:120px;float: left;}
+        #forecast .scroll li p.pic{width: 50px;}
+        #forecast .scroll .col2{padding:0;}
+        #forecast .scroll .day{font-size: 16px;height: 70px; line-height: 70px;}
+        #forecast .scroll .blue, #forecast .scroll .blue a{font-size: 16px; line-height: 70px;}
+        #forecast h2 span a{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 5px; color: #8e8e8e;padding:6px 5px; padding-left: 40px;}
+        #forecast h2 span a.s{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 -24px; }
+        #forecast .scroll .legend{background: url(../../i/weatherfc/legend35X35.gif) no-repeat;  height: 35px;width: 35px;margin-top: 15px; float: left; margin-left: 25px; display: inline;}
+
+
+        #forecast .scroll .d00{background-position:0px 0px;}
+        #forecast .scroll .d01{background-position:-35px 0px;}
+        #forecast .scroll .d02{background-position:-70px 0px;}
+        #forecast .scroll .d03{background-position:-105px 0px;}
+        #forecast .scroll .d04{background-position:-140px 0px;}
+        #forecast .scroll .d05{background-position:-175px 0px;}
+        #forecast .scroll .d06{background-position:-210px 0px;}
+        #forecast .scroll .d07{background-position:-245px 0px;}
+        #forecast .scroll .d08{background-position:-280px 0px;}
+        #forecast .scroll .d09{background-position:0px -35px;}
+        #forecast .scroll .d10{background-position:-35px -35px;}
+        #forecast .scroll .d11{background-position:-70px -35px;}
+        #forecast .scroll .d12{background-position:-105px -35px;}
+        #forecast .scroll .d13{background-position:-140px -35px;}
+        #forecast .scroll .d14{background-position:-175px -35px;}
+        #forecast .scroll .d15{background-position:-210px -35px;}
+        #forecast .scroll .d16{background-position:-245px -35px;}
+        #forecast .scroll .d17{background-position:-280px -35px;}
+        #forecast .scroll .d18{background-position:0px -70px;}
+        #forecast .scroll .d19{background-position:-35px -70px;}
+        #forecast .scroll .d20{background-position:-70px -70px;}
+        #forecast .scroll .d21{background-position:-105px -70px;}
+        #forecast .scroll .d22{background-position:-140px -70px;}
+        #forecast .scroll .d23{background-position:-175px -70px;}
+        #forecast .scroll .d24{background-position:-210px -70px;}
+        #forecast .scroll .d25{background-position:-245px -70px;}
+        #forecast .scroll .d26{background-position:-280px -70px;}
+        #forecast .scroll .d27{background-position:0px -105px;}
+        #forecast .scroll .d28{background-position:-35px -105px;}
+        #forecast .scroll .d29{background-position:-70px -105px;}
+        #forecast .scroll .d30{background-position:-105px -105px;}
+        #forecast .scroll .d31{background-position:-140px -105px;}
+        #forecast .scroll .d53{background-position:-175px -105px;}
+        #forecast .scroll .n00{background-position:0px -140px;}
+        #forecast .scroll .n01{background-position:-35px -140px;}
+        #forecast .scroll .n02{background-position:-70px -140px;}
+        #forecast .scroll .n03{background-position:-105px -140px;}
+        #forecast .scroll .n04{background-position:-140px -140px;}
+        #forecast .scroll .n05{background-position:-175px -140px;}
+        #forecast .scroll .n06{background-position:-210px -140px;}
+        #forecast .scroll .n07{background-position:-245px -140px;}
+        #forecast .scroll .n08{background-position:-280px -140px;}
+        #forecast .scroll .n09{background-position:0px -175px;}
+        #forecast .scroll .n10{background-position:-35px -175px;}
+        #forecast .scroll .n11{background-position:-70px -175px;}
+        #forecast .scroll .n12{background-position:-105px -175px;}
+        #forecast .scroll .n13{background-position:-140px -175px;}
+        #forecast .scroll .n14{background-position:-175px -175px;}
+        #forecast .scroll .n15{background-position:-210px -175px;}
+        #forecast .scroll .n16{background-position:-245px -175px;}
+        #forecast .scroll .n17{background-position:-280px -175px;}
+        #forecast .scroll .n18{background-position:0px -210px;}
+        #forecast .scroll .n19{background-position:-35px -210px;}
+        #forecast .scroll .n20{background-position:-70px -210px;}
+        #forecast .scroll .n21{background-position:-105px -210px;}
+        #forecast .scroll .n22{background-position:-140px -210px;}
+        #forecast .scroll .n23{background-position:-175px -210px;}
+        #forecast .scroll .n24{background-position:-210px -210px;}
+        #forecast .scroll .n25{background-position:-245px -210px;}
+        #forecast .scroll .n26{background-position:-280px -210px;}
+        #forecast .scroll .n27{background-position:0px -245px;}
+        #forecast .scroll .n28{background-position:-35px -245px;}
+        #forecast .scroll .n29{background-position:-70px -245px;}
+        #forecast .scroll .n30{background-position:-105px -245px;}
+        #forecast .scroll .n31{background-position:-140px -245px;}
+        #forecast .scroll .n53{background-position:-175px -245px;}
