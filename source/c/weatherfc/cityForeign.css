@@ -294,7 +294,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #week .wd span{display:block;line-height:32px;height:40px;}
 .liveWeather .bg{height:155px;}
 
-.block{width:980px;padding:10px;margin:0px auto;position:relative;}
+.block{width:980px;padding:10px;margin:0px auto;position:relative; min-height: 680px;}
 .block .block_content{width:980px;}
 #forecast{width:650px;padding:10px;background-color:#fff;}
 #forecast h2{height:40px;line-height:40px;color:#333333;font-size:18px;padding-left:10px;font-weight:normal;position:relative;}
@@ -959,7 +959,7 @@ body.tq_n31{
 /*头部和底部在移动设备上处理*/
 #toolBar,
 .footer{min-width: 1000px;}
-
+.footer .block{min-height: 200px;}
 
 
 
