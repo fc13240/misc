@@ -959,7 +959,7 @@ body.tq_n31{
 /*头部和底部在移动设备上处理*/
 #toolBar,
 .footer{min-width: 1000px;}
-
+.footer .block{min-height: 200px;}
 
 
 
