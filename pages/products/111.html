@@ -4,20 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="http://localhost/source/j/jquery-1.8.2.js"></script>
 <title>无标题文档</title>
-<script>
-	//$("img",document.frames('new').document).click(function(){alert(222)});
-	//$(window.frames['new'].document).find('img').hide();
-	$('#new').load(function(){
-		alert($(this).contents().find('body').height()+40)
-	})
-
-</script>
 
 
 </head>
 
 <body>
-<input type="button" value="点我试试" /><br />
-<iframe id="new" name="new" onload="" width='600' height="1000" src="http://localhost/pages/products/products_text.html" scrolling="no" frameborder="0"></iframe>
+<input id="btn" type="button" value="点我试试" /><br />
+<a id="a"><span style="font-size:40px;">新</span>产品推荐</a>
+<script>
+$("#btn").toggle(function(){$('#new').attr('src','http://localhost/pages/products/products_text1.html')},function(){$('#new').attr('src','http://localhost/pages/products/products_text.html')})
+$("#a").click(function(e){
+	var a=$(e.target).text();
+	alert(a)
+})
+
+</script>
+
 </body>
 </html>
