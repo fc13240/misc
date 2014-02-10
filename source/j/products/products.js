@@ -35,13 +35,11 @@ $(function(){
 		$(SN.btnObj).empty();
 		//给一级目录添加data-id属性，值为第一子级的data-id
 		$(".navLeftT .navLink>li>a,.LBnav").attr('data-id',$(this).next('ul').children('li:first').children("a").attr("data-id"));
-
 		var T=$(this);
 		var U=T.closest('ul');
 		var U1=U.parents('ul');
 		var D=$(this).attr('data-id');
 		var A=T.next().children('li');
-
 		//遍历目标子级目录 对应生产右侧按钮 
 		for(i=0;i<A.length;i++){
 			makeBtn(A.eq(i).children('a').attr('data-id'),A.eq(i).children('a').text());	
@@ -59,7 +57,6 @@ $(function(){
 		//iframe
 		getSrc(D);
 	})
-	
 	//面包屑、选项按钮点击刷新
 	$(SN.liveDomObj).live('click',function(e){
 		$(SN.trackObj).empty();
@@ -77,15 +74,15 @@ $(function(){
 	$('#new').load(function(){
 		$(this).contents().find('.productsList a').click(function(){
 			var A=$(SN.navMainObj);
-			for(i=0;i<A.length;i++){			
-				if(A.eq(i).attr('data-id')==$(this).attr('data-id')){
-					A.eq(i).click();
-					return false;
-				}else{
+			
 					$(SN.trackObj).empty();		
 					$(SN.btnObj).empty();
 					makeFlag($(this).attr('data-id'),$(this).text());
 					getSrc($(this).attr('data-id'));
+
+			for(i=0;i<A.length;i++){			
+				if(A.eq(i).attr('data-id')==$(this).attr('data-id')){
+					A.eq(i).click();
 					return false;
 				}
 			}
