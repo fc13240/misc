@@ -26,7 +26,7 @@ function getSrc(str){
 }
 $(SN.ifrObj).load(function(){         
     $(this).height($(this).contents().find("body").height() + 40); 
-}).attr('src',SN.ifrSrc+'JC_JSL_02405');   
+})//.attr('src',SN.ifrSrc+'JC_JSL_02405');   
 
 $(function(){
 	//给左侧导航栏事件	
@@ -80,6 +80,12 @@ $(function(){
 			for(i=0;i<A.length;i++){			
 				if(A.eq(i).attr('data-id')==$(this).attr('data-id')){
 					A.eq(i).click();
+					return false;
+				}else{
+					$(SN.trackObj).empty();		
+					$(SN.btnObj).empty();
+					makeFlag($(this).attr('data-id'),$(this).text());
+					getSrc($(this).attr('data-id'));
 					return false;
 				}
 			}
