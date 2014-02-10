@@ -101,12 +101,10 @@ $(function(){
 		$(this).children("ul").stop(true,true).hide();
 	})
 	
+	//省级站下拉菜单效果
 	$('#provice').toggle(function(){
 		$(this).css({'background-color':'#EBEBEB','color':'#2D6CA6'}).children(':first').css('background','url("http://i.tq121.com.cn/i/index_icons.png") -66px 0').next('.arrow').css('border-color','#2D6CA6 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)');
-		$('.provinceLinks').slideDown();
 	},function(){
-		$('.provinceLinks').slideUp(function(){
 			$('#provice').css({'background-color':'#0C2A46','color':'#fff'}).children(':first').css({'background': "url(http://i.tq121.com.cn/i/products/products.png) 0 0"}).next().css('border-color','#FFFFFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)');
-		});
 	})
 })
