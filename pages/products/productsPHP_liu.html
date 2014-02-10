@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+<link rel="dns-prefetch" href="http://localhost/source">
 <meta charset="utf-8" />
 <title>中国天气网-专业天气预报、气象服务门户</title>
 <meta  name="keywords" content="天气,天气预报,北京天气,天气在线,气候,气象" />
@@ -11,16 +11,9 @@
 <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
 <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
-<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
-<script>W.css("c/core.css","c/common.css","c/products/products.css")</script>
+<script type="text/javascript" src="http://localhost/source/j/core.js"></script>
+<script>W.css("c/core.css","c/common.css","c/index/index.css","c/products/products.css")</script>
 <script>W(function(){W.use('j/products/products.js')})</script>
-<script type="text/javascript">
-
-
-
-
-
-</script>
 
 <!--[if lt IE 7]>
 
@@ -31,7 +24,7 @@
     </script>
     <![endif]-->
 <!--[if lt IE 9]>
-	<script>W.js('http://i.tq121.com.cn/j/tool/html5shiv.js')</script>
+	<script>W.js('http://localhost/source/j/tool/html5shiv.js')</script>
 	<![endif]-->
 
 </head>
@@ -46,16 +39,16 @@
     <li><a href="http://www.weather.com.cn/alarm/">灾害预警</a>|</li>
     <li><a href="http://www.weather.com.cn/forecast/">天气预报</a>|</li>
     <li><a>生活旅游</a><i></i>
-      <div class="dropList"><i></i><span><a href="http://www.weather.com.cn/life/">生活天气</a><a href="http://www.weather.com.cn/trip/">旅游天气</a></span></div>
+      <div class="dropList"><i style="height:70px"></i><span><a href="http://www.weather.com.cn/life/">生活天气</a><a href="http://www.weather.com.cn/trip/">旅游天气</a></span></div>
       |</li>
     <li><a href="http://www.weather.com.cn/static/html/product/">服务产品</a>|</li>
     <li><a>天气应用</a><i></i>
-      <div class="dropList"><i></i><span><a href="http://3g.weather.com.cn/">中国天气通</a><a href="http://mobile.weather.com.cn/">Mobile版</a><a href="http://3g.weather.com.cn/wzfw/zgtqtpd/pc.shtml">桌面版</a> 
+      <div class="dropList"><i style="height:100px"></i><span><a href="http://3g.weather.com.cn/">中国天气通</a><a href="http://mobile.weather.com.cn/">Mobile版</a><a href="http://3g.weather.com.cn/wzfw/zgtqtpd/pc.shtml">桌面版</a> 
         <!--<a href="#" target="_blank">气象商城</a>--> 
         </span></div>
       |</li>
     <li><a>互动天气</a><i></i>
-      <div class="dropList"><i></i><span><a href="http://www.weather.com.cn/video/">天气视频</a><a href="http://club.weather.com.cn/">天气社区</a><a href="http://baike.weather.com.cn/">天气百科</a><a href="http://www.weather.com.cn/wjdc/">问卷调查</a></span></div>
+      <div class="dropList"><i style="height:130px;"></i><span><a href="http://www.weather.com.cn/video/">天气视频</a><a href="http://club.weather.com.cn/">天气社区</a><a href="http://baike.weather.com.cn/">天气百科</a><a href="http://www.weather.com.cn/wjdc/">问卷调查</a></span></div>
       |</li>
     <li><a href="http://smart.weather.com.cn/">智慧气象</a></li>
   </ul>
@@ -259,7 +252,7 @@
       <div class="navLeftB">
       	<ul class="navLink">
         <li><a class='LBnav'><span>新</span>产品推荐</a>
-          <ul class="navLink">
+          <ul>
             <li> <a data-id="YB_WD_ZG24">最高气温预报分布图</a> </li>
             <li> <a data-id="YB_WD_ZD24">最低气温预报分布图</a> </li>
             <li> <a data-id="YB_WD_PJ24">平均气温预报分布图</a> </li>
@@ -269,7 +262,7 @@
           </ul>
         </li>
         <li><a class='LBnav'><span>最</span>新更新</a>
-          <ul class="navLink">
+          <ul>
             <li> <a data-id="YB_JSL_024">全国24小时降水量预报</a> </li>
             <li> <a data-id="YB_JSL_048">全国48小时降水量预报</a> </li>
             <li> <a data-id="YB_JSL_072">全国72小时降水量预报</a> </li>
@@ -283,7 +276,7 @@
           </ul>
         </li>
         <li><a class='LBnav'><span>推</span>荐浏览</a>
-          <ul class="navLink">
+          <ul>
             <li> <a data-id="YB_BW_ZD24">今日最低气温变化预报</a> </li>
             <li> <a data-id="YB_BW_ZG24">今日最高气温变化预报</a> </li>
             <li> <a data-id="JC_WX_DBWD">旬全国地表温度图</a> </li>
@@ -297,9 +290,13 @@
       </div>
     </div>
     <div class="col_right">
+       <!-- 预警 end --> 
+   	   <div class="rightBlock">
+        <div style="margin-top:10px;" id="alarm"></div>
+      </div> 
       <div class="menu clearfix"><a data-id="YB_JSL_024">全国24小时降水量预报</a><a data-id="YB_JSL_048">全国48小时降水量预报</a><a data-id="YB_JSL_072">全国72小时降水量预报</a></div>
 
-      	<Iframe id="new" name="new" width="100%" frameBorder="0" src="" scrolling="no" align="left">
+      	<Iframe id="new" name="new" style="z-index:-1;" width="100%" height="1000" frameBorder="0" src="http://localhost/pages/products/products_text.html" scrolling="no" align="left">
       	</Iframe>      
 
     </div>
@@ -342,6 +339,7 @@
   </div>
   <div class="aboutUs"> Copyright&copy;<a href="http://pmsc.cma.gov.cn/" target="_blank">中国气象局公共气象服务中心</a> All Rights Reserved (2008-2014) 版权所有 复制必究 郑重声明：中国天气网版权所有，未经书面授权禁止使用 </div>
 </div>
+<!--顶部省级 begin-->
 <div class="provinceLinks">
   <div class="midBlock">
     <dl>
@@ -404,9 +402,25 @@
   </div>
 </div>
 <div class="app"> <span><a href="http://3g.weather.com.cn/" target="_blank">中国天气通</a> <a href="http://mobile.weather.com.cn/" target="_blank">Mobile版</a></span> <i></i> </div>
+<!--顶部省级end-->
 <div class="icons">
 <ul class="citylist">
   <li class="addCity"><a href="/profile/city.shtml" style="display:block;"><strong>+</strong>定制</a></li>
 </ul>
+<script>
+     
+      W.use('j/index/index_main111.js');
+</script> 
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080dabacb001ad3dc8b9b9049b36d43b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46054715-1', 'weather.com.cn');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>
