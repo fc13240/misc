@@ -2,7 +2,7 @@ body{background-color:#ccc;padding:0px;margin:0px;border:0;font: 14px/1.6 "Micro
 *{padding:0px;margin:0px;border:0;}
 ul{list-style:none;}
 a{text-decoration:none;color:#252525;cursor:pointer;}
-a:hover{color:#000;}
+a:hover{}
 .clear{clear:both;height:0px;overflow:hidden;}
 .clearfix{zoom:1}
 .clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
@@ -83,6 +83,7 @@ nav .bg{height:75px;}
 .col_left ul li{font-size:18px;line-height:45px;position:relative;height:45px;*display:inline;cursor:pointer;_zoom:1;_width:167px;}
 .col_left ul li a{display:block;padding:0px 20px;white-space:nowrap;height:45px;}
 .col_left .navLeftT ul li ul{background:#D7EEF7;display:none;position:absolute;top:0px;z-index:10;width:230px;left:167px;*left:165px;_left:167px;}
+.col_left .navLeftT ul a:hover{color:#000;}
 .col_left .navLeftT ul li ul li{_width:100%}
 .col_left .navLeftT ul li ul li ul{left:230px;}
 .col_left .navLeftT ul li ul li ul li{height:auto;_height:45px;}
@@ -107,6 +108,7 @@ nav .bg{height:75px;}
 .col_left .navLeftB ul ul{display:none;position:absolute;background:#D7EEF7;bottom:0px;left:167px;*width:245px;*left:165px;_left:167px;z-index:88;}
 .col_left .navLeftB ul ul li{*width:100%}
 .col_left .navLeftB ul ul li a{height:56px;}
+.col_left .navLeftB ul ul li a:hover{color:#000;}
 .col_left .line{height:2px;border-top:1px solid #aaa;margin:20px 10px 10px 10px;display:block;width:147px;}
 
 .col_right{width:772px;float:left;margin-top:15px;display:inline;background:#fff;padding:0 15px;}
