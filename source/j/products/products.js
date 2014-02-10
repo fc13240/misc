@@ -26,7 +26,7 @@ function getSrc(str){
 }
 $(SN.ifrObj).load(function(){         
     $(this).height($(this).contents().find("body").height() + 40); 
-})//.attr('src',SN.ifrSrc+'JC_JSL_02405');   
+}).attr('src',SN.ifrSrc+'JC_JSL_02405');   
 
 $(function(){
 	//给左侧导航栏事件	
