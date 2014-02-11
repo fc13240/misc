@@ -33,6 +33,7 @@ $(function(){
 	$(SN.navMainObj).click(function(e){
 		$(SN.trackObj).empty();
 		$(SN.btnObj).empty();
+		$('.'+SN.stopClass+'>li').removeClass('current');
 		//给一级目录添加data-id属性，值为第一子级的data-id
 		$(".navLeftT .navLink>li>a,.LBnav").attr('data-id',$(this).next('ul').children('li:first').children("a").attr("data-id"));
 		var T=$(this);
@@ -48,11 +49,15 @@ $(function(){
 		if(U.attr("class")!=SN.stopClass){
 			makeFlag(D,T.text());
 			makeFlag(D,U.prev().text());
+			U.parent().addClass('current');
 			if(U1.attr("class")!=SN.stopClass){
 				makeFlag(D,U1.prev().text());
+				U.parent().removeClass('current');
+				U1.parent('li').addClass('current');
 			}
 		}else{
 			makeFlag(D,T.text());
+			T.parent().addClass('current');
 		}
 		//iframe
 		getSrc(D);

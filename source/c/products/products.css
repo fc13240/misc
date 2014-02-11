@@ -1,84 +1,22 @@
-body{background-color:#ccc;padding:0px;margin:0px;border:0;font: 14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
-*{padding:0px;margin:0px;border:0;}
-ul{list-style:none;}
-a{text-decoration:none;color:#252525;cursor:pointer;}
-a:hover{}
-.clear{clear:both;height:0px;overflow:hidden;}
-.clearfix{zoom:1}
-.clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
+body{background-color:#ccc;font:14px/1.6 "Microsoft Yahei","Tahoma","SimSun";}
+a{cursor:pointer;color:#252525; text-decoration:none;}
 
-nav{display:block;}
-nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px ;position:relative;z-index:100;}
-nav a{}
-nav h1{background:url(../i/products/warn_icons.png) no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
-nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:999;}
-nav ul li{float:left;line-height:28px;height:28px;position:relative;}
-.bg{background-color:#FFF;left:0;opacity:0.6;position:absolute;top:0;width:1000px;} 
-.image_container{background:none repeat scroll 0 0 #eee;width:1000px;overflow:hidden;margin:0 auto;padding-bottom:15px;} 
-.image_container .breadcrumb_search{margin:0 auto;width:980px;} 
-.breadcrumb_search{background:none repeat scroll 0 0 #252525;color:#FFF;height:33px;} 
-.breadcrumb_search a{color:#FFF;} 
-.breadcrumb_search .breadcrumb{float:left;padding-left:35px;} 
-.breadcrumb_search .breadcrumb li{float:left;line-height:33px;} 
-.breadcrumb_search .breadcrumb li.divider{padding:0 8px;} 
-.breadcrumb_search .breadcrumb ul{padding-left:0px;} 
-.citysearch{float:right;padding-right:7px;position:relative;} 
-.citysearch label,.citysearch button{} 
-.citysearch label{line-height:33px;float:left;} 
-.citysearch .locationSearch .iframeDiv{background:red;} 
-.citysearch .locationSearch .iframeDiv .sel select{background-color:#EAEAEA;float:left;height:22px;line-height:20px;margin-right:1px;text-align:center;width:60px;} 
-.citysearch .btn{float:left;height:20px;margin-top:1px;width:53px;} 
-nav .dropList{position:absolute;left:0;top:28px;line-height:30px;z-index:10;display:none;} 
-nav .dropList i{position:absolute;left:0;top:0;background-color:#fff;opacity:0.95;filter:alpha(opacity=95);width:120px;height:100px;display:block;border:none;} 
-nav .dropList span{position:absolute;top:0;left:0;padding:5px 0;} 
-nav .dropList a{font-size:14px;line-height:30px;display:block;text-align:left;white-space:nowrap;}
-nav ul li a{background-color:transparent;color:#3f3f3f;line-height:28px;padding:0 10px;} 
-nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0;height:0;overflow:hidden;cursor:pointer;vertical-align:middle;} 
-nav .bg{height:75px;} 
-#provice{background-color:#EBEBEB;color:#2D6CA6;padding-left:50px;padding-right:30px;position:relative;} 
-#provice .icon{background:url(../i/index_icons.png) no-repeat scroll -66px 0 rgba(0,0,0,0);display:block;height:43px;left:10px;position:absolute;top:0;width:40px;} 
-#provice .arrow{position:absolute;right:10px;top:20px;} 
-.arrow{display:block;height:0;overflow:hidden;width:0;border-color:#2D6CA6 rgba(0,0,0,0) rgba(0,0,0,0);border-style:solid dashed dashed;border-width:6px;}
-
-
-nav{height:35px;line-height:35px;width:980px;margin:0 auto;padding:20px 10px;position:relative;z-index:80;}
-nav h1{background:url("../../i/products/warn_icons.png") no-repeat 0px 0px;float:left;width:160px;height:35px;float:left;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
-nav ul{position:absolute;height:28px;top:25px;left:195px;font-size:18px;z-index:10;}
-nav ul li{float:left;line-height:28px;height:28px;position:relative;}
-nav .dropList{position:absolute;left:0px;top:28px;line-height:30px;z-index:999;display:none;}
-nav .dropList i{position:absolute;left:0px;top:0px;background-color:#ffffff;opacity:0.95;filter:alpha(opacity=95);width:120px;height:100px;display:block;border:none;}
-nav .dropList span{position:absolute;top:0px;left:0px;padding:5px 0px;}
-nav .dropList a{font-size:14px;line-height:30px;display:block;text-align:left;white-space:nowrap;}
-nav ul li a{background-color:transparent;color:#3f3f3f;padding:0px 10px;line-height:28px;}
-nav ul li i{border-top:5px solid #959595;border-right:5px dashed transparent;border-bottom:5px dashed transparent;border-left:5px dashed transparent;display:inline-block;width:0px;height:0px;overflow:hidden;cursor:pointer;vertical-align:middle;}
-nav .bg{height:75px;}
+/*nav 省级站*/
 #provice{background-color:#0c2a46;color:#fff;}
 #provice .icon{background:url("../../i/products/products.png") no-repeat 0px 0px;}
 #provice .arrow{border-color:#fff transparent transparent;}
 
-.content{width:1000px;margin:0 auto;padding-bottom:20px;background:#eee;}
-.locationSearch{position:absolute;top:0px;right:5px;width:370px;}
-.locationSearch #cityCheck{margin-top:7px;width:270px;float:left;}
-.location{width:938px;margin:0px 10px;padding:0px 7px 0px 35px;background-color:#222;color:#fff;height:33px;line-height:33px;position:relative;z-index:10;}
-.location ul,.location ul li{float:left;}
-.location ul li a{color:#fff;}
-.location .search{float:right;height:25px;line-height:25px;padding-top:4px;}
-.location .search span{display:block;float:left;}
-.location .search .label{padding-right:13px;}
-.search .province,.search .city{width:50px;height:18px;line-height:18px;cursor:pointer;padding-left:0px;border:1px solid #d7d7d7;font-size:12px;padding:3px 15px 2px 5px;display:block;float:left;margin-right:1px;position:relative;background-color:#fff;}
-.search .province b,.search .city b,.search .area b{font-weight:normal;font-size:12px;color:#252525;line-height:16px;}
-.search .province .provinceItem,.search .city .cityItem{width:65px;padding:5px 10px;height:170px;overflow-y:auto;overflow-x:hidden;position:absolute;background-color:#fff;left:-1px;top:30px;z-index:10;border:1px solid #d7d7d7;color:#d7d7d7;font-size:12px;padding:3px 5px 2px 0px;float:left;margin-right:10px;display:none;}
-.search .city .cityItem{width:105px;}
-.search .area{width:100px;height:18px;line-height:18px;margin-right:0px;padding-left:0px;border:1px solid #d7d7d7;font-size:12px;padding:3px 5px 2px 5px;display:block;float:left;position:relative;background-color:#fff;margin-right:3px;cursor:pointer;margin-right:0px;}
-.search .area .areaItem{width:110px;height:170px;padding-left:0px;border:1px solid #d7d7d7;color:#d7d7d7;font-size:12px;float:left;margin-right:10px;position:absolute;left:-1px;top:30px;background-color:#fff;overflow-y:auto;overflow-x:hidden;display:none;z-index:10;}
-.search .province i,.search .city i,.search .area i{border-top:6px solid #959595;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:4px;top:10px;}
-.search .provinceItem a,.search .cityItem a,.search .areaItem a{display:block;height:35px;line-height:35px;border-bottom:1px solid #d9d9d9;padding-left:10px;color:#252525;width:55px;text-align:left;}
-.search .cityItem a{width:95px;}
-.search .areaItem a{width:93px;}
-.search .provinceItem a:hover,.search .cityItem a:hover,.search .areaItem a:hover{height:35px;line-height:35px;color:#fff;background-color:#98cb55;text-align:left;}
-.search .shortname{width:68px;height:32px;line-height:32px;float:left;padding:0px 5px;margin-right:3px;}
-.search a{float:left;display:block;width:292px;height:35px;line-height:35px;}
-.search .searchBtn{width:44px;height:25px;line-height:25px;color:#fff;background:url("../../i/products/products.png") 0px -54px;cursor:pointer;text-indent:-9999px;}
+/*content*/
+.image_container{background:none repeat scroll 0 0 #eee;width:1000px;overflow:hidden;margin:0 auto;padding-bottom:15px;} 
+/*面包屑和城市查询*/
+.breadcrumb_search{margin:0 auto;width:980px;} 
+.breadcrumb_search a:hover{color:#fff; text-decoration:underline;}
+.breadcrumb_search .breadcrumb li.divider{padding:0 8px;} 
+.citysearch .locationSearch .iframeDiv{float:left;} 
+.citysearch .locationSearch{width:370px;}
+.citysearch .locationSearch label{float:left;}
+.citysearch .locationSearch #cityCheck{margin-top:7px;width:270px;}
+/*左侧导航*/
 .col_left{float:left;margin:15px 10px 10px 10px;background-color:#fff;padding-bottom:10px;_margin:15px 10px 10px 5px;*width:165px;}
 .col_left ul{*width:165px;}
 .col_left ul li{font-size:18px;line-height:45px;position:relative;height:45px;*display:inline;cursor:pointer;_zoom:1;_width:167px;}
@@ -89,20 +27,21 @@ nav .bg{height:75px;}
 .col_left .navLeftT ul li ul li ul{left:230px;}
 .col_left .navLeftT ul li ul li ul li{height:auto;_height:45px;}
 .col_left .oneLevelMenu{background:#C5E4F0;}
-.col_left a.yj,.col_left a.js,.col_left a.qw,.col_left a.jt,.col_left a.hj,.col_left a.ld,.col_left a.tqld,.col_left a.qxwx,.col_left a.jc,.col_left a.yb,.col_left a.sp,.col_left a.szcp{
+.col_left .yj,.col_left .js,.col_left .qw,.col_left .jt,.col_left .hj,.col_left .ld,.col_left .tqld,.col_left .qxwx,.col_left .jc,.col_left .yb,.col_left .sp,.col_left .szcp{
 	background:url("../../i/products/product_icon.png") no-repeat;_background:url("../../i/products/product_icon.gif") no-repeat;padding-left:75px;}
-.col_left a.yj{background-position:0 2px;}
-.col_left a.js{background-position:0 -49px;}
-.col_left a.qw{background-position:0 -105px;}
-.col_left a.jt{background-position:0 -161px;}
-.col_left a.hj{background-position:0 -210px;}
-.col_left a.ld{background-position:0 -264px;}
-.col_left a.tqld{background-position:0 -319px;}
-.col_left a.qxwx{background-position:0 -374px;}
-.col_left a.jc{background-position:0 -432px;}
-.col_left a.yb{background-position:0 -493px;}
-.col_left a.sp{background-position:0 -556px;}
-.col_left a.szcp{background-position:0 -617px;}
+.col_left .yj{background-position:0 2px;}
+.col_left .js{background-position:0 -49px;}
+.col_left .qw{background-position:0 -105px;}
+.col_left .jt{background-position:0 -161px;}
+.col_left .hj{background-position:0 -210px;}
+.col_left .ld{background-position:0 -264px;}
+.col_left .tqld{background-position:0 -319px;}
+.col_left .qxwx{background-position:0 -374px;}
+.col_left .jc{background-position:0 -432px;}
+.col_left .yb{background-position:0 -493px;}
+.col_left .sp{background-position:0 -556px;}
+.col_left .szcp{background-position:0 -617px;}
+.col_left .current{background:#C5E4F0;}
 .col_left .navLeftB li{cursor:default;line-height:56px;height:56px;position:relative;zoom:1;*width:167px}
 .col_left .navLeftB li a.LBnav{color:#D25744;padding:0 0 0 20px;height:56px;}
 .col_left .navLeftB li span{font-size:30px; letter-spacing:2px;}
@@ -111,38 +50,15 @@ nav .bg{height:75px;}
 .col_left .navLeftB ul ul li a{height:56px;}
 .col_left .navLeftB ul ul li a:hover{color:#000;}
 .col_left .line{height:2px;border-top:1px solid #aaa;margin:20px 10px 10px 10px;display:block;width:147px;}
-
+/*正文*/
 .col_right{width:772px;float:left;margin-top:15px;display:inline;background:#fff;padding:0 15px;}
 .childBody{background:#fff;}
-.warn_detail{background-color:#f06600;color:#fff;height:34px;width:710px;padding:8px 15px;line-height:34px;font-size:16px;position:relative;}
-.warn_detail span{display:block;height:34px;line-height:34px;float:left;margin-right:15px;}
-.warn_detail img{width:42px;height:34px;}
-.warn_detail span a:hover,.warn_detail span a{color:#fff;}
-.warn_detail .more{position:absolute;right:0px;top:10px;}
 .col_right .menu{padding-top:5px;}
 .col_right .menu a{float:left;color:#fff;background-color:#ec8f4a;padding:8px 24px;display:block;white-space:nowrap;margin-right:3px;margin-top:3px;cursor:pointer;}
 .col_right .menu a.current,.col_right .menu a:hover{background-color:#eb6707;}
-.forecast{}
-.forecast h2{font-size:30px;line-height:80px;height:80px;font-weight:normal;border-bottom:2px solid #aaa;margin-bottom:20px;}
-.forecast p{line-height:26px;text-indent:2em;}
-.forecast p span{float:left;}
-.forecast p span.time{width:280px;}
-.forecast p span.level{width:200px;}
-.forecast p span.effect{width:150px;}
-.forecast p i{font-style:normal;}
-.forecast .summary{background-color:#555;color:#fff;height:30px;line-height:30px;padding:0px 10px;margin:8px 0px;}
-.forecast .imgArea{text-align:center;margin:20px 0px 15px;text-indent:0;}
-.knowledge,.productsList{margin-top:25px;padding:10px;overflow:hidden;}
-.knowledge dt{background-color:#c5e4f0;width:105px;height:62px;line-height:62px;text-align:center;font-size:18px;float:left;color:#363636;}
-.knowledge dd{background-color:#d7eef7;width:610px;height:42px;padding:10px;line-height:21px;float:left;margin-left:5px;color:#363636;}
-.productsList h4{font-size:24px;font-weight:normal;padding-left:25px;height:40px;line-height:40px;}
-.productsList ul{margin-top:5px;overflow:hidden;}
-.productsList ul li{background-color:#1caed3;font-size:18px;float:left;display:inline;margin:5px 0 0 5px; }
-.productsList ul li a{color:#fff;padding:10px 30px;display:block;float:left;white-space:nowrap;display:inline-block;}
-.productsList ul li a:hover{color:#fff;background:#019fcd;}
 
 
-.Content{}
+/*iframe二级页*/
 .Content .tool{font-size:12px;text-align:right;padding:15px 20px 0 0;}
 .Content .tool span{margin-right:5px;}
 .Content .tool span a{text-decoration:underline;}
@@ -155,18 +71,9 @@ nav .bg{height:75px;}
 .conBody p{margin-top:15px;}
 .conBody .writing p{text-indent:2em;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.productsList{margin-top:25px;padding:10px;overflow:hidden;}
+.productsList h4{font-size:24px;font-weight:normal;padding-left:25px;height:40px;line-height:40px;}
+.productsList ul{margin-top:5px;overflow:hidden;}
+.productsList ul li{background-color:#1caed3;font-size:18px;float:left;display:inline;margin:5px 0 0 5px; }
+.productsList ul li a{color:#fff;padding:10px 30px;display:block;float:left;white-space:nowrap;display:inline-block;}
+.productsList ul li a:hover{color:#fff;background:#019fcd;}
