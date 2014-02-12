@@ -60,7 +60,7 @@ _left:167px; z-index:88; }
 .col_left .line { height:2px; border-top:1px solid #aaa; margin:20px 10px 10px 10px; display:block; width:147px; }
 /*正文*/
 .col_right { width:772px; float:left; margin-top:15px; display:inline; background:#fff; padding:0 15px; }
-.childBody { background:#fff; }
+.childBody,.childBogy { background:#fff; }
 .col_right .menu { padding-top:8px; }
 .col_right .menu a { float:left; color:#fff; background-color:#ec8f4a; padding:8px 24px; display:block; white-space:nowrap; margin-right:3px; margin-top:3px; cursor:pointer; }
 .col_right .menu a.current, .col_right .menu a:hover { background-color:#eb6707; }
