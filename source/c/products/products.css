@@ -61,7 +61,7 @@ _left:167px; z-index:88; }
 /*正文*/
 .col_right { width:772px; float:left; margin-top:15px; display:inline; background:#fff; padding:0 15px; }
 .childBody { background:#fff; }
-.col_right .menu { padding-top:5px; }
+.col_right .menu { padding-top:8px; }
 .col_right .menu a { float:left; color:#fff; background-color:#ec8f4a; padding:8px 24px; display:block; white-space:nowrap; margin-right:3px; margin-top:3px; cursor:pointer; }
 .col_right .menu a.current, .col_right .menu a:hover { background-color:#eb6707; }
 /*iframe二级页*/
@@ -84,7 +84,7 @@ _left:167px; z-index:88; }
 .productsList ul li a { color:#fff; padding:10px 30px; display:block; float:left; white-space:nowrap; display:inline-block; }
 .productsList ul li a:hover { color:#fff; background:#019fcd; }
 /*预警滚动条*/
-#alarm { background-color:#f9316e; color:#fff; height:34px; width:746px; padding:8px 15px; line-height:34px; font-size:16px; position:relative; box-shadow:0px 1px 2px #aaa; }
+#alarm { background-color:#f9316e; color:#fff; height:34px; width:746px; padding:8px 15px; line-height:34px; font-size:16px; position:relative; box-shadow:0px 2px 3px #aaa; }
 #alarm span { display:block; height:34px; line-height:34px; float:left; margin-right:25px; }
 #alarm img { width:39px; height:30px; margin-right:5px;}
 #alarm p { font-size: 15px; height: 34px; line-height: 34px; overflow: hidden; background:#f9316e; }
