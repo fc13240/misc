@@ -84,12 +84,12 @@ _left:167px; z-index:88; }
 .productsList ul li a { color:#fff; padding:10px 30px; display:block; float:left; white-space:nowrap; display:inline-block; }
 .productsList ul li a:hover { color:#fff; background:#019fcd; }
 /*预警滚动条*/
-#alarm { background-color:#f9316e; color:#fff; height:34px; width:746px; padding:8px 15px; line-height:34px; font-size:16px; position:relative; box-shadow:0px 2px 3px #aaa; }
-#alarm span { display:block; height:34px; line-height:34px; float:left; margin-right:25px; }
+#alarm { background-color:#f9316e; color:#fff; height:34px; width:746px; padding:8px 15px; line-height:34px; font-size:16px;  box-shadow:0px 2px 3px #aaa;}
+#alarm span { height:34px; line-height:34px;  }
 #alarm img { width:39px; height:30px; margin-right:5px;}
-#alarm p { font-size: 15px; height: 34px; line-height: 34px; overflow: hidden; background:#f9316e; }
+#alarm p { font-size: 15px; height: 34px; line-height: 34px; overflow: hidden; background:#f9316e; width:510px; float:left; }
 #alarm p span { display: block; }
-#alarm p a { color:#FFFFFF; display: block; height: 34px; line-height: 34px; padding-left: 0px; width:400px; font-size:16px; font-weight:bold; letter-spacing:1px; }
-#alarm .more { position:absolute; right:0px; top:10px; font-weight:bold; }
+#alarm p a { color:#FFFFFF; display: block; height: 34px; line-height: 34px; padding-left: 0px; width:500px; font-size:16px; font-weight:bold; letter-spacing:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#alarm .more { font-weight:bold;float:right;}
 #alarm .more a { color:#fff; }
 #alarm .more b { color:#fcd290; }
