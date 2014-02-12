@@ -5,6 +5,11 @@ img{border:0;}
 #provice { background-color:#0c2a46; color:#fff; }
 #provice .icon { background:url("../../i/products/products.png") no-repeat 0px 0px; }
 #provice .arrow { border-color:#fff transparent transparent; }
+* html nav .dropList iframe{_width:100%;_height:100%;_filter:alpha(opacity=0);_border:0;_position:absolute;_top:0;_left:0;_z-index:-1;}
+nav .yingyong{width:120px;height:100px;}
+nav .hudong{width:120px;height:130px;}
+nav .dropList i{height:100%;z-index:-1;}
+nav .dropList span{display:block;position:static;}
 /*content*/
 .image_container { background:none repeat scroll 0 0 #eee; width:1000px; overflow:hidden; margin:0 auto; padding-bottom:15px; }
 /*面包屑和城市查询*/
@@ -79,12 +84,12 @@ _left:167px; z-index:88; }
 .productsList ul li a { color:#fff; padding:10px 30px; display:block; float:left; white-space:nowrap; display:inline-block; }
 .productsList ul li a:hover { color:#fff; background:#019fcd; }
 /*预警滚动条*/
-#alarm { background-color:#f9316e; color:#fff; height:34px; width:746px; padding:8px 15px; line-height:34px; font-size:16px; position:relative; }
+#alarm { background-color:#f9316e; color:#fff; height:34px; width:746px; padding:8px 15px; line-height:34px; font-size:16px; position:relative; box-shadow:0px 1px 2px #aaa; }
 #alarm span { display:block; height:34px; line-height:34px; float:left; margin-right:25px; }
 #alarm img { width:39px; height:30px; margin-right:5px;}
 #alarm p { font-size: 15px; height: 34px; line-height: 34px; overflow: hidden; background:#f9316e; }
 #alarm p span { display: block; }
-#alarm p a { color:#FFFFFF; display: block; height: 34px; line-height: 34px; padding-left: 0px; width:400px; }
-#alarm .more { position:absolute; right:0px; top:10px; }
+#alarm p a { color:#FFFFFF; display: block; height: 34px; line-height: 34px; padding-left: 0px; width:400px; font-size:16px; font-weight:bold; letter-spacing:1px; }
+#alarm .more { position:absolute; right:0px; top:10px; font-weight:bold; }
 #alarm .more a { color:#fff; }
-#alarm .more b { color:#2A57CE; }
+#alarm .more b { color:#fcd290; }
