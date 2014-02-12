@@ -5,7 +5,7 @@ img{border:0;}
 #provice { background-color:#0c2a46; color:#fff; }
 #provice .icon { background:url("../../i/products/products.png") no-repeat 0px 0px; }
 #provice .arrow { border-color:#fff transparent transparent; }
-* html nav .dropList iframe{_width:100%;_height:100%;_filter:alpha(opacity=0);_border:0;_position:absolute;_top:0;_left:0;_z-index:-1;}
+* html nav .dropList iframe,.provinceLinks iframe{_width:100%;_height:100%;_filter:alpha(opacity=0);_border:0;_position:absolute;_top:0;_left:0;_z-index:-1;}
 nav .yingyong{width:120px;height:100px;}
 nav .hudong{width:120px;height:130px;}
 nav .dropList i{height:100%;z-index:-1;}
