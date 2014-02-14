@@ -87,7 +87,7 @@ _left:167px; z-index:88; }
 #alarm { background-color:#f9316e; color:#fff; height:34px; width:746px; padding:8px 15px; line-height:34px; font-size:16px;  box-shadow:0px 2px 3px #aaa;}
 #alarm span { height:34px; line-height:34px;  }
 #alarm img { width:39px; height:30px; margin-right:5px;}
-#alarm p { font-size: 15px; height: 34px; line-height: 34px; overflow: hidden; background:#f9316e; width:510px; float:left; }
+#alarm p { font-size: 15px; height: 34px; line-height: 34px; overflow: hidden; background:#f9316e; width:625px; float:left; }
 #alarm p span { display: block; }
 #alarm p a { color:#FFFFFF; display: block; height: 34px; line-height: 34px; padding-left: 0px; width:500px; font-size:16px; font-weight:bold; letter-spacing:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 #alarm .more { font-weight:bold;float:right;}
