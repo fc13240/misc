@@ -977,7 +977,7 @@ body.tq_n31{
         #forecast .scroll .blue, #forecast .scroll .blue a{font-size: 16px; line-height: 70px;width:105px;}
         #forecast h2 span a{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 5px; color: #8e8e8e;padding:6px 5px; padding-left: 40px;}
         #forecast h2 span a.s{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 -24px; }
-        #forecast .scroll .legend{background: url(../../i/weatherfc/legend35X35.gif) no-repeat;  height: 35px;width: 35px;margin-top: 15px; float: left; margin-left: 25px; display: inline;}
+        #forecast .scroll .legend{background: url(../../i/weatherfc/legend35X35.gif) no-repeat;  height: 35px;width: 35px;margin:0 auto;margin-top: 15px; }
 
 
         #forecast .scroll .d00{background-position:0px 0px;}
