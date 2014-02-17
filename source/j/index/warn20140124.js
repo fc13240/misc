@@ -41,7 +41,7 @@ define(function(require){
 					$pppp = $("<p></p>");
 					$gjdiv = $("<span></span>");
 					$.each(alarminfo.gj, function(i, k) {
-						$('<a href="' + k.http + '" class="df" target="_blank" src="http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg" >中央气象台发布' + k.name + '</a>').appendTo($gjdiv);
+						$('<a href="' + k.http + '" class="df" target="_blank" ><img src="http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg">中央气象台发布' + k.name + '</a>').appendTo($gjdiv);
 					});
 					
 					$.each(alarminfo.pr, function(i, k) {
