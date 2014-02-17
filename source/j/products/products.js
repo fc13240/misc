@@ -1,334 +1,119 @@
-var Check=function(){
-	
-
-	switch($(this).text()){
-	
-		//////////////////////////降水 begin
-		case '降水':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			$(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>全国降水量预报图</a><a class='getText current' onClick=\'getSrc(\"JC_JSL_02405\")\'>全国降水量实况图</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国降水距平百分率</a>");break;
-		
-		case '全国降水量预报图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_072\")\'>全国72小时降水量预报</a>");break;
-		case '全国降水量实况图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");	
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_10\")\'>全国近10天降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_20\")\'>全国近20天降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_30\")\'>全国近30天降水量实况</a>");break;
-		case '全国降水距平百分率':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国10天降水距平</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL20\")\'>全国20天降水距平</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL30\")\'>全国30天降水距平</a>");break;
-
-		case '全国24小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>全国降水量预报图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_072\")\'>全国72小时降水量预报</a>");break;
-		case '全国48小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>全国降水量预报图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a><a class='getText current' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_072\")\'>全国72小时降水量预报</a>");break;
-		case '全国72小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>全国降水量预报图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a><a class='getText current' onClick=\'getSrc(\"YB_JSL_072\")\'>全国72小时降水量预报</a>");break;
-
-		case '全国近10天降水量实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>全国降水量实况图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_10\")\'>全国近10天降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_20\")\'>全国近20天降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_30\")\'>全国近30天降水量实况</a>");break;
-		case '全国近20天降水量实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>全国降水量实况图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_JSL_10\")\'>全国近10天降水量实况</a><a class='getText current' onClick=\'getSrc(\"JC_JSL_20\")\'>全国近20天降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_30\")\'>全国近30天降水量实况</a>");break;
-		case '全国近30天降水量实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>全国降水量实况图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_JSL_10\")\'>全国近10天降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_20\")\'>全国近20天降水量实况</a><a class='getText current' onClick=\'getSrc(\"JC_JSL_30\")\'>全国近30天降水量实况</a>");break;
-
-		case '全国10天降水距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国降水距平百分率</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国10天降水距平</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL20\")\'>全国20天降水距平</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL30\")\'>全国30天降水距平</a>");break;
-		case '全国20天降水距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国降水距平百分率</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国10天降水距平</a><a class='getText current' onClick=\'getSrc(\"JC_JSL_JPL20\")\'>全国20天降水距平</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL30\")\'>全国30天降水距平</a>");break;
-		case '全国30天降水距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>降水</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国降水距平百分率</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国10天降水距平</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL20\")\'>全国20天降水距平</a><a class='getText current' onClick=\'getSrc(\"JC_JSL_JPL30\")\'>全国30天降水距平</a>");break;
-		
-		//////////////////////////气温 begin
-		
-		case '气温':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			$(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>全国最高气温分布图 </a><a class='getText' onClick=\'getSrc(\"JC_WDSK_DW_24\")\'>全国最低气温分布图</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国平均温度距平</a>");break;
-		
-		case '全国最高气温分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WD_ZG10\")\'>全国10天最高气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZG20\")\'>全国20天最高气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZG30\")\'>全国30天最高气温分布</a>");break;
-		case '全国最低气温分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");	
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WD_ZD10\")\'>全国10天最低气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZD20\")\'>全国20天最低气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZD30\")\'>全国30天最低气温分布</a>");break;
-		case '全国平均温度距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国10天平均温度距平</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP20\")\'>全国20天平均温度距平</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP30\")\'>全国30天平均温度距平</a>");break;
-
-		case '全国10天最高气温分布':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>全国最高气温分布图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WD_ZG10\")\'>全国10天最高气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZG20\")\'>全国20天最高气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZG30\")\'>全国30天最高气温分布</a>");break;
-		case '全国20天最高气温分布':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>全国最高气温分布图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_WD_ZG10\")\'>全国10天最高气温分布</a><a class='getText current' onClick=\'getSrc(\"JC_WD_ZG20\")\'>全国20天最高气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZG30\")\'>全国30天最高气温分布</a>");break;
-		case '全国30天最高气温分布':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>全国最高气温分布图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_WD_ZG10\")\'>全国10天最高气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZG20\")\'>全国20天最高气温分布</a><a class='getText current' onClick=\'getSrc(\"JC_WD_ZG30\")\'>全国30天最高气温分布</a>");break;
-
-		case '全国10天最低气温分布':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_DW_24\")\'>全国最低气温分布图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WD_ZD10\")\'>全国10天最低气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZD20\")\'>全国20天最低气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZD30\")\'>全国30天最低气温分布</a>");break;
-		case '全国20天最低气温分布':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_DW_24\")\'>全国最低气温分布图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_WD_ZD10\")\'>全国10天最低气温分布</a><a class='getText current' onClick=\'getSrc(\"JC_WD_ZD20\")\'>全国20天最低气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZD30\")\'>全国30天最低气温分布</a>");break;
-		case '全国30天最低气温分布':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_DW_24\")\'>全国最低气温分布图</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_WD_ZD10\")\'>全国10天最低气温分布</a><a class='getText' onClick=\'getSrc(\"JC_WD_ZD20\")\'>全国20天最低气温分布</a><a class='getText current' onClick=\'getSrc(\"JC_WD_ZD30\")\'>全国30天最低气温分布</a>");break;
-
-		case '全国10天平均温度距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国平均温度距平</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国10天平均温度距平</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP20\")\'>全国20天平均温度距平</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP30\")\'>全国30天平均温度距平</a>");break;
-		case '全国20天平均温度距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国平均温度距平</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国10天平均温度距平</a><a class='getText current' onClick=\'getSrc(\"JC_WD_PJJP20\")\'>全国20天平均温度距平</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP30\")\'>全国30天平均温度距平</a>");break;
-		case '全国30天平均温度距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>气温</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国平均温度距平</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_WD_PJJP10\")\'>全国10天平均温度距平</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJJP20\")\'>全国20天平均温度距平</a><a class='getText current' onClick=\'getSrc(\"JC_WD_PJJP30\")\'>全国30天平均温度距平</a>");break;
-
-		//////////////////////////交通 begin
-
-		case '交通':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			$(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>全国道路降水量预报 </a><a class='getText' onClick=\'getSrc(\"JC_GL_JS_ZH\")\'>全国道路降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_GL_JX_ZH\")\'>全国道路积雪深度实况</a><a class='getText' onClick=\'getSrc(\"JC_GL_WD_ZH\")\'>全国道路温度实况</a><a class='getText' onClick=\'getSrc(\"JC_GL_NJD_ZH\")\'>全国道路能见度实况</a><a class='getText' onClick=\'getSrc(\"JC_GL_FC_ZH\")\'>全国道路风场实况</a>");break;
-
-		case '全国道路降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>公路24小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_TL_SJL_24H\")\'>铁路24小时降水量预报</a>");break;
-		case '全国道路降水量实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_JS_ZH\")\'>公路逐小时降水实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_JS_ZH\")\'>铁路逐小时降水实况</a>");break;
-		case '全国道路积雪深度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_JX_ZH\")\'>公路沿线积雪深度实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_JX_ZH\")\'>铁路沿线积雪深度实况</a>");break;
-		case '全国道路温度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_WD_ZH\")\'>公路逐小时温度实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_WD_ZH\")\'>铁路逐小时温度实况</a>");break;
-		case '全国道路能见度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_NJD_ZH\")\'>公路逐小时能见度实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_NJD_ZH\")\'>铁路逐小时能见度实况</a>");break;
-		case '全国道路风场实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_FC_ZH\")\'>公路逐小时风场实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_FC_ZH\")\'>铁路逐小时风场实况</a>");break;
-
-		case '公路24小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>全国道路降水量预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>公路24小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_TL_SJL_24H\")\'>铁路24小时降水量预报</a>");break;
-		case '铁路24小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>全国道路降水量预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>公路24小时降水量预报</a><a class='getText current' onClick=\'getSrc(\"YB_TL_SJL_24H\")\'>铁路24小时降水量预报</a>");break;
-
-		case '公路逐小时降水实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_JS_ZH\")\'>全国道路降水量实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_JS_ZH\")\'>公路逐小时降水实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_JS_ZH\")\'>铁路逐小时降水实况</a>");break;
-		case '铁路逐小时降水实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_JS_ZH\")\'>全国道路降水量实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_GL_JS_ZH\")\'>公路逐小时降水实况</a><a class='getText current' onClick=\'getSrc(\"JC_TL_JS_ZH\")\'>铁路逐小时降水实况</a>");break;
-
-		case '公路沿线积雪深度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_JX_ZH\")\'>全国道路积雪深度实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_JX_ZH\")\'>公路沿线积雪深度实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_JX_ZH\")\'>铁路沿线积雪深度实况</a>");break;
-		case '铁路沿线积雪深度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_JX_ZH\")\'>全国道路积雪深度实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_GL_JX_ZH\")\'>公路沿线积雪深度实况</a><a class='getText current' onClick=\'getSrc(\"JC_TL_JX_ZH\")\'>铁路沿线积雪深度实况</a>");break;
-
-		case '公路逐小时温度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_WD_ZH\")\'>公路逐小时温度实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_GL_WD_ZH\")\'>公路逐小时温度实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_WD_ZH\")\'>铁路逐小时温度实况</a>");break;
-		case '铁路逐小时温度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_WD_ZH\")\'>公路逐小时温度实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_WD_ZH\")\'>公路逐小时温度实况</a><a class='getText current' onClick=\'getSrc(\"JC_TL_WD_ZH\")\'>铁路逐小时温度实况</a>");break;
-
-		case '公路逐小时能见度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_NJD_ZH\")\'>全国道路能见度实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_NJD_ZH\")\'>公路逐小时能见度实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_NJD_ZH\")\'>铁路逐小时能见度实况</a>");break;
-		case '铁路逐小时能见度实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_NJD_ZH\")\'>全国道路能见度实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_NJD_ZH\")\'>公路逐小时能见度实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_NJD_ZH\")\'>铁路逐小时能见度实况</a>");break;
-
-		case '公路逐小时风场实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_FC_ZH\")\'>全国道路风场实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_GL_FC_ZH\")\'>公路逐小时风场实况</a><a class='getText' onClick=\'getSrc(\"JC_TL_FC_ZH\")\'>铁路逐小时风场实况</a>");break;
-		case '铁路逐小时风场实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_GL_SJL_24H\")\'>交通</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_GL_FC_ZH\")\'>全国道路风场实况</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_GL_FC_ZH\")\'>公路逐小时风场实况</a><a class='getText current' onClick=\'getSrc(\"JC_TL_FC_ZH\")\'>铁路逐小时风场实况</a>");break;
-
-		//////////////////////////环境 begin
-
-		case '环境':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			$(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_KQWR_24\")\'>空气污染气象条件预报</a>");break;
-
-		case '空气污染气象条件预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_KQWR_24\")\'>环境</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			$(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_KQWR_24\")\'>空气污染气象条件预报</a>");break;
-
-
-		//////////////////////////雷电 begin
-
-		case '雷电':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_LD_CHN\")\'>全国地闪实时监测(1h)</a><a class='getText' onClick=\'getSrc(\"JC_LD_HH\")\'>半小时雷电图</a><a class='getText' onClick=\'getSrc(\"JC_LD_3H\")\'>三小时雷电图</a>");break;
-
-		case '全国地闪实时监测(1h)':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_LD_CHN\")\'>雷电</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_LD_CHN\")\'>全国地闪实时监测(1h)</a><a class='getText' onClick=\'getSrc(\"JC_LD_HH\")\'>半小时雷电图</a><a class='getText' onClick=\'getSrc(\"JC_LD_3H\")\'>三小时雷电图</a>");break;
-		case '半小时雷电图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_LD_CHN\")\'>雷电</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_LD_CHN\")\'>全国地闪实时监测(1h)</a><a class='getText current' onClick=\'getSrc(\"JC_LD_HH\")\'>半小时雷电图</a><a class='getText' onClick=\'getSrc(\"JC_LD_3H\")\'>三小时雷电图</a>");break;
-		case '三小时雷电图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_LD_CHN\")\'>雷电</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_LD_CHN\")\'>全国地闪实时监测(1h)</a><a class='getText' onClick=\'getSrc(\"JC_LD_HH\")\'>半小时雷电图</a><a class='getText current' onClick=\'getSrc(\"JC_LD_3H\")\'>三小时雷电图</a>");break;
-
-		//////////////////////////监测 begin
-
-		case '监测':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>土壤相对湿度图</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>天气图分析</a>");break;
-
-		case '土壤相对湿度图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>监测</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>土壤相对湿度图</a>");break;
-		case '天气图分析':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>监测</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_TQFX_DM\")\'>地面分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_500hPa\")\'>500百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_700hPa\")\'>700百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_850hPa\")\'>850百帕分析</a>");break;
-
-
-		case '地面分析':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>监测</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>天气图分析</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_TQFX_DM\")\'>地面分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_500hPa\")\'>500百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_700hPa\")\'>700百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_850hPa\")\'>850百帕分析</a>");break;
-		case '500百帕分析':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>监测</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>天气图分析</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>地面分析</a><a class='getText current' onClick=\'getSrc(\"JC_TQFX_500hPa\")\'>500百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_700hPa\")\'>700百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_850hPa\")\'>850百帕分析</a>");break;
-		case '700百帕分析':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>监测</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>天气图分析</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>地面分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_500hPa\")\'>500百帕分析</a><a class='getText current' onClick=\'getSrc(\"JC_TQFX_700hPa\")\'>700百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_850hPa\")\'>850百帕分析</a>");break;
-		case '850百帕分析':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_QH_TRXDSD\")\'>监测</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>天气图分析</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"JC_TQFX_DM\")\'>地面分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_500hPa\")\'>500百帕分析</a><a class='getText' onClick=\'getSrc(\"JC_TQFX_700hPa\")\'>700百帕分析</a><a class='getText current' onClick=\'getSrc(\"JC_TQFX_850hPa\")\'>850百帕分析</a>");break;
-
-		//////////////////////////预报 begin
-
-		case '预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_TQQS_3D\")\'>天气趋势预报</a><a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋预报</a><a class='getText' onClick=\'getSrc(\"YB_DZZH_24\")\'>地质水文气象</a><a class='getText' onClick=\'getSrc(\"YB_HXDJ_SL\")\'>火险等级短期预报</a>");break;
-
-		case '天气趋势预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_TQQS_3D\")\'>未来三天</a><a class='getText' onClick=\'getSrc(\"YB_TQQS_10D\")\'>未来十天</a><a class='getText' onClick=\'getSrc(\"YB_TQQS_GW\")\'>国外天气预报</a>");break;
-		case '海洋预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋天气预报</a><a class='getText' onClick=\'getSrc(\"YB_HY_HSGB\")\'>全球海事公报</a><a class='getText' onClick=\'getSrc(\"JC_HY_HPM_SK\")\'>海平面气压场分析</a><a class='getText' onClick=\'getSrc(\"JC_HY_500Pha_SK\")\'>500mpa高度场分析</a><a class='getText' onClick=\'getSrc(\"YB_HY_HPM_24H\")\'>海平面海况形势</a><a class='getText' onClick=\'getSrc(\"YB_HY_500Pha_24H\")\'>500mpa海况形势</a>");break;
-		case '地质水文气象':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_DZZH_24\")\'>地质灾害气象等级</a>");break;
-		case '火险等级短期预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_HXDJ_SL\")\'>森林火险</a>");break;
-
-		case '未来三天':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>天气趋势预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_TQQS_3D\")\'>未来三天</a><a class='getText' onClick=\'getSrc(\"YB_TQQS_10D\")\'>未来十天</a><a class='getText' onClick=\'getSrc(\"YB_TQQS_GW\")\'>国外天气预报</a>");break;
-		case '未来十天':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>天气趋势预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>未来三天</a><a class='getText current' onClick=\'getSrc(\"YB_TQQS_10D\")\'>未来十天</a><a class='getText' onClick=\'getSrc(\"YB_TQQS_GW\")\'>国外天气预报</a>");break;
-		case '国外天气预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>天气趋势预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>未来三天</a><a class='getText' onClick=\'getSrc(\"YB_TQQS_10D\")\'>未来十天</a><a class='getText current' onClick=\'getSrc(\"YB_TQQS_GW\")\'>国外天气预报</a>");break;
-
-		case '海洋天气预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋天气预报</a><a class='getText' onClick=\'getSrc(\"YB_HY_HSGB\")\'>全球海事公报</a><a class='getText' onClick=\'getSrc(\"JC_HY_HPM_SK\")\'>海平面气压场分析</a><a class='getText' onClick=\'getSrc(\"JC_HY_500Pha_SK\")\'>500mpa高度场分析</a><a class='getText' onClick=\'getSrc(\"YB_HY_HPM_24H\")\'>海平面海况形势</a><a class='getText' onClick=\'getSrc(\"YB_HY_500Pha_24H\")\'>500mpa海况形势</a>");break;
-		case '全球海事公报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋天气预报</a><a class='getText current' onClick=\'getSrc(\"YB_HY_HSGB\")\'>全球海事公报</a><a class='getText' onClick=\'getSrc(\"JC_HY_HPM_SK\")\'>海平面气压场分析</a><a class='getText' onClick=\'getSrc(\"JC_HY_500Pha_SK\")\'>500mpa高度场分析</a><a class='getText' onClick=\'getSrc(\"YB_HY_HPM_24H\")\'>海平面海况形势</a><a class='getText' onClick=\'getSrc(\"YB_HY_500Pha_24H\")\'>500mpa海况形势</a>");break;
-		case '海平面气压场分析':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋天气预报</a><a class='getText' onClick=\'getSrc(\"YB_HY_HSGB\")\'>全球海事公报</a><a class='getText current' onClick=\'getSrc(\"JC_HY_HPM_SK\")\'>海平面气压场分析</a><a class='getText' onClick=\'getSrc(\"JC_HY_500Pha_SK\")\'>500mpa高度场分析</a><a class='getText' onClick=\'getSrc(\"YB_HY_HPM_24H\")\'>海平面海况形势</a><a class='getText' onClick=\'getSrc(\"YB_HY_500Pha_24H\")\'>500mpa海况形势</a>");break;
-		case '500mpa高度场分析':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋天气预报</a><a class='getText' onClick=\'getSrc(\"YB_HY_HSGB\")\'>全球海事公报</a><a class='getText' onClick=\'getSrc(\"JC_HY_HPM_SK\")\'>海平面气压场分析</a><a class='getText current' onClick=\'getSrc(\"JC_HY_500Pha_SK\")\'>500mpa高度场分析</a><a class='getText' onClick=\'getSrc(\"YB_HY_HPM_24H\")\'>海平面海况形势</a><a class='getText' onClick=\'getSrc(\"YB_HY_500Pha_24H\")\'>500mpa海况形势</a>");break;
-		case '海平面海况形势':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋天气预报</a><a class='getText' onClick=\'getSrc(\"YB_HY_HSGB\")\'>全球海事公报</a><a class='getText' onClick=\'getSrc(\"JC_HY_HPM_SK\")\'>海平面气压场分析</a><a class='getText' onClick=\'getSrc(\"JC_HY_500Pha_SK\")\'>500mpa高度场分析</a><a class='getText current' onClick=\'getSrc(\"YB_HY_HPM_24H\")\'>海平面海况形势</a><a class='getText' onClick=\'getSrc(\"YB_HY_500Pha_24H\")\'>500mpa海况形势</a>");break;
-		case '500mpa海况形势':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText' onClick=\'getSrc(\"YB_HY_TQYB\")\'>海洋天气预报</a><a class='getText' onClick=\'getSrc(\"YB_HY_HSGB\")\'>全球海事公报</a><a class='getText' onClick=\'getSrc(\"JC_HY_HPM_SK\")\'>海平面气压场分析</a><a class='getText' onClick=\'getSrc(\"JC_HY_500Pha_SK\")\'>500mpa高度场分析</a><a class='getText' onClick=\'getSrc(\"YB_HY_HPM_24H\")\'>海平面海况形势</a><a class='getText current' onClick=\'getSrc(\"YB_HY_500Pha_24H\")\'>500mpa海况形势</a>");break;
-
-		case '地质灾害气象等级':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_DZZH_24\")\'>地质水文气象</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_DZZH_24\")\'>地质灾害气象等级</a>");break;
-
-		case '森林火险':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_TQQS_3D\")\'>预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_HXDJ_SL\")\'>火险等级短期预报</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_HXDJ_SL\")\'>森林火险</a>");break;
-
-		//////////////////////////数值产品 begin
-
-		case '数值产品':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>中期指数</a><a class='getText' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>沙尘模式</a><a class='getText' onClick=\'getSrc(\"SZ_RY_BJHL_400HPA_3H\")\'>人影模式</a><a class='getText' onClick=\'getSrc(\"SZ_MM5_12XSLJJS_ZG_12H\")\'>MM5模式</a><a class='getText' onClick=\'getSrc(\"SZ_HL_DXY_12H\")\'>海浪模式</a>");break;
-
-		case '中期指数':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>数值产品</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>中期指数</a>");break;
-		case '沙尘模式':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>数值产品</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"SZ_SC_3H\")\'>沙尘模式</a>");break;
-		case '人影模式':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>数值产品</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"SZ_RY_BJHL_400HPA_3H\")\'>人影模式</a>");break;
-		case 'MM5模式':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>数值产品</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"SZ_MM5_12XSLJJS_ZG_12H\")\'>MM5模式</a>");break;
-		case '海浪模式':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"SZ_ZQSZ_SD_200HPA_12H\")\'>数值产品</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"SZ_HL_DXY_12H\")\'>海浪模式</a>");break;
-
-		//////////////////////////新产品推荐 begin
-
-		case '新产品推荐':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_WD_ZG24\")\'>最高气温预报分布图</a><a class='getText' onClick=\'getSrc(\"YB_WD_ZD24\")\'>最低气温预报分布图</a><a class='getText' onClick=\'getSrc(\"YB_WD_PJ24\")\'>平均气温预报分布图</a><a class='getText' onClick=\'getSrc(\"JC_WD_PJ\")\'>平均气温实况分布图</a><a class='getText' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>全国最高气温实况分布图</a><a class='getText' onClick=\'getSrc(\"JC_WDSK_DW_24\")\'>全国最低气温实况分布图</a>");break;
-
-		case '最高气温预报分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_WD_ZG24\")\'>新产品推荐</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_WD_ZG24\")\'>最高气温预报分布图</a>");break;
-		case '最低气温预报分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_WD_ZG24\")\'>新产品推荐</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_WD_ZD24\")\'>最低气温预报分布图</a>");break;
-		case '平均气温预报分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_WD_ZG24\")\'>新产品推荐</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_WD_PJ24\")\'>平均气温预报分布图</a>");break;
-		case '平均气温实况分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_WD_ZG24\")\'>新产品推荐</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WD_PJ\")\'>平均气温实况分布图</a>");break;
-		case '全国最高气温实况分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_WD_ZG24\")\'>新产品推荐</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WDSK_GW_24\")\'>全国最高气温实况分布图</a>");break;
-		case '全国最低气温实况分布图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_WD_ZG24\")\'>新产品推荐</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WDSK_DW_24\")\'>全国最低气温实况分布图</a>");break;
-
-		//////////////////////////最新更新 begin
-
-		case '最新更新':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_072\")\'>全国72小时降水量预报</a><a class='getText' onClick=\'getSrc(\"JC_JSL_1HT\")\'>逐小时全国气温实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_1HR\")\'>逐小时降水量实况</a><a class='getText' onClick=\'getSrc(\"JC_JSL_1HW\")\'>逐小时极大风速实况</a><a class='getText' onClick=\'getSrc(\"JC_LD_HH\")\'>半小时雷电图</a><a class='getText' onClick=\'getSrc(\"YB_HY_JHHQYB\")\'>24小时近海海区预报</a><a class='getText' onClick=\'getSrc(\"YB_BW_ZG24\")\'>72小时最高气温变化预报</a><a class='getText' onClick=\'getSrc(\"YB_BW_ZG24\")\'>今日最高气温变化预报</a>");break;
-
-		case '全国24小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a>");break;
-		case '全国48小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a>");break;
-		case '全国72小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_072\")\'>全国72小时降水量预报</a>");break;
-		case '逐小时全国气温实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_1HT\")\'>逐小时全国气温实况</a>");break;
-		case '逐小时降水量实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_1HR\")\'>逐小时降水量实况</a>");break;
-		case '逐小时极大风速实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_1HW\")\'>逐小时极大风速实况</a>");break;
-		case '半小时雷电图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_LD_HH\")\'>半小时雷电图</a>");break;
-		case '24小时近海海区预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_HY_JHHQYB\")\'>24小时近海海区预报</a>");break;
-		case '72小时最高气温变化预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_BW_ZG24\")\'>72小时最高气温变化预报</a>");break;
-		case '今日最高气温变化预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>最新更新</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_BW_ZG24\")\'>今日最高气温变化预报</a>");break;
-
-
-		//////////////////////////推荐浏览 begin
-
-		case '推荐浏览':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_BW_ZD24\")\'>今日最低气温变化预报</a><a class='getText' onClick=\'getSrc(\"YB_BW_ZG24\")\'>今日最高气温变化预报</a><a class='getText' onClick=\'getSrc(\"JC_WX_DBWD\")\'>旬全国地表温度图</a><a class='getText' onClick=\'getSrc(\"JC_JSL_02405\")\'>全国降水量实况</a><a class='getText' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a><a class='getText' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a><a class='getText' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国10天降水距平</a>");break;
-
-		case '今日最低气温变化预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_BW_ZD24\")\'>推荐浏览</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_BW_ZD24\")\'>今日最低气温变化预报</a>");break;
-		case '今日最高气温变化预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_BW_ZD24\")\'>推荐浏览</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_BW_ZG24\")\'>今日最高气温变化预报</a>");break;
-		case '旬全国地表温度图':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_BW_ZD24\")\'>推荐浏览</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_WX_DBWD\")\'>旬全国地表温度图</a>");break;
-		case '全国降水量实况':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_BW_ZD24\")\'>推荐浏览</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_02405\")\'>全国降水量实况</a>");break;
-		case '全国24小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_BW_ZD24\")\'>推荐浏览</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_024\")\'>全国24小时降水量预报</a>");break;
-		case '全国48小时降水量预报':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_BW_ZD24\")\'>推荐浏览</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"YB_JSL_048\")\'>全国48小时降水量预报</a>");break;
-		case '全国10天降水距平':$("ul.breadcrumb").empty().append("<li><a href='http://www.weather.com.cn/'>中国天气网</a></li><li class=\"divider\">&gt;</li><li><a class='getText' onClick=\'getSrc(\"YB_BW_ZD24\")\'>推荐浏览</a></li><li class=\"divider\">&gt;</li><li><a class='getText'>"+$(this).text()+"</a></li>");
-			 $(".col_right .menu").empty().append("<a class='getText current' onClick=\'getSrc(\"JC_JSL_JPL10\")\'>全国10天降水距平</a>");break;
-	}
+// JavaScript Document
+var SN={
+	'trackObj':'ul.breadcrumb_c',  //定义面包屑的容器元素
+	'btnObj':'.col_right .menu',   //定义右侧按钮的容器元素
+	'ifrObj':'#new',               //iframe对象
+	'ifrSrc':'http://www.weather.com.cn/static/productframe2013.php?class=',  //iframe的src不变的前缀
+	'navMainObj':'ul.navLink a',   //导航栏click触发的事件对象
+	'stopClass':'navLink',         //遍历截至的dom元素
+	'liveDomObj':'.menu a,.breadcrumb_c a',             //live 面包屑，btn点击事件对象
+	'navHoverObj':'.col_left ul li,.col_left>div>h1',   //导航栏hover效果 绑定对象
+	'navHoverClass':'oneLevelMenu'      			    //导航栏hover后触发 效果class
 }
 
-//function makeFlag(str){
-//	$('ul.breadcrumb').append("<li><a>&nbsp;>&nbsp;"+str+"</a></li>");	
-//}
-//
-//function makeBtn(str){
-//	$('.col_right .menu').append("<a>"+str+"</a>");
-//}
+//面包屑 生产函数
+function makeFlag(dataId,str){
+	$(SN.trackObj).prepend("<li>&nbsp;>&nbsp;<a data-id="+dataId+">"+str+"</a></li>");	
+}
+//子目录选项按钮 生产函数
+function makeBtn(dataId,str){
+	$(SN.btnObj).append("<a data-id="+dataId+">"+str+"</a>");
+}
+
+//iframe 
+function getSrc(str){
+	$(SN.ifrObj).attr('src',SN.ifrSrc+str);
+}
+$(SN.ifrObj).load(function(){         
+    $(this).height($(this).contents().find("body").height() + 40); 
+}).attr('src',SN.ifrSrc+'JC_JSL_02405');   
 
 $(function(){
-//	
-//	$('ul li a').click(function(){
-//		$('ul.breadcrumb li:gt(0)').remove();
-//		if($(this).parent().parent().parent().attr('class')=='col_left'){
-//			var $l = $(this).next().children('li')
-//			var $a = $(this).next().children('li').children('a')
-//			alert($l.eq(0).children('a').text());
-//			for(i=0;i<$a.length;i++){
-//				$l.eq(0).children('a').text()
-//			}
-//			makeFlag($(this).text());
-//		}else if($(this).parent().parent().parent().parent().parent().attr('class')=='col_left'){
-//			makeFlag($(this).parent().parent().prev().text());
-//			makeFlag($(this).text());
-//		}else if($(this).parent().parent().parent().parent().parent().parent().parent().attr('class')=='col_left'){
-//			makeFlag($(this).parent().parent().parent().parent().prev().text());
-//			makeFlag($(this).parent().parent().prev().text());
-//			makeFlag($(this).text());
-//		}
-//	})
+	//给左侧导航栏事件	
+	$(SN.navMainObj).click(function(e){
+		$(SN.trackObj).empty();
+		$(SN.btnObj).empty();
+		$('.'+SN.stopClass+'>li').removeClass('current');
+		//给一级目录添加data-id属性，值为第一子级的data-id
+		$(".navLeftT .navLink>li>a,.LBnav").attr('data-id',$(this).next('ul').children('li:first').children("a").attr("data-id"));
+		var T=$(this);
+		var U=T.closest('ul');
+		var U1=U.parents('ul');
+		var D=$(this).attr('data-id');
+		var A=T.next().children('li');
+		//遍历目标子级目录 对应生产右侧按钮 
+		for(i=0;i<A.length;i++){
+			makeBtn(A.eq(i).children('a').attr('data-id'),A.eq(i).children('a').text());	
+		}
+		//刷新面包屑
+		if(U.attr("class")!=SN.stopClass){
+			makeFlag(D,T.text());
+			makeFlag(D,U.prev().text());
+			U.parent().addClass('current');
+			if(U1.attr("class")!=SN.stopClass){
+				makeFlag(D,U1.prev().text());
+				U.parent().removeClass('current');
+				U1.parent('li').addClass('current');
+			}
+		}else{
+			makeFlag(D,T.text());
+			T.parent().addClass('current');
+		}
+		//iframe
+		getSrc(D);
+	})
+	//面包屑、选项按钮点击刷新
+	$(SN.liveDomObj).live('click',function(e){
+		$(SN.trackObj).empty();
+		$(SN.btnObj).empty();
+		
+		var A=$(SN.navMainObj);
+		for(i=0;i<A.length;i++){			
+			if(A.eq(i).text()==$(e.target).text()){
+				A.eq(i).click();
+				return false;
+			}
+		}
+	})
+	//iframe内相关服务产品点击刷新
+	$('#new').load(function(){
+		$(this).contents().find('.productsList a').click(function(){
+			var A=$(SN.navMainObj);
+			
+					$(SN.trackObj).empty();		
+					$(SN.btnObj).empty();
+					makeFlag($(this).attr('data-id'),$(this).text());
+					getSrc($(this).attr('data-id'));
+
+			for(i=0;i<A.length;i++){			
+				if(A.eq(i).attr('data-id')==$(this).attr('data-id')){
+					A.eq(i).click();
+					return false;
+				}
+			}
+		})
+	})
 	
-	
-	
-	
-	$('.col_left ul li,.col_left>div>h1').hover(function(){
-		$(this).addClass("oneLevelMenu");
+	//左侧导航hover效果
+	$(SN.navHoverObj).hover(function(){
+		$(this).addClass(SN.navHoverClass);
 		$(this).children("ul").stop(true,true).show();	
 	},function(){
-		$(this).removeClass('oneLevelMenu');
+		$(this).removeClass(SN.navHoverClass);
 		$(this).children("ul").stop(true,true).hide();
-	})	
-	$('a.getText').live('click',Check);
+	})
 	
-	
+	//省级站下拉菜单效果
+	$('#provice').toggle(function(){
+		$(this).css({'background-color':'#EBEBEB','color':'#2D6CA6'}).children(':first').css('background','url("http://i.tq121.com.cn/i/index_icons.png") -66px 0').next('.arrow').css('border-color','#2D6CA6 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)');
+	},function(){
+			$('#provice').css({'background-color':'#0C2A46','color':'#fff'}).children(':first').css({'background': "url(http://i.tq121.com.cn/i/products/products.png) 0 0"}).next().css('border-color','#FFFFFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)');
+	});
+	$('nav ul li').hover(function(){
+		$(this).click(function(){
+			$(this).children('div').show();
+		})
+	},function(){
+		$(this).children('div').hide();
+	})
 })
-
-function getSrc(str){
-	$('#new').attr('src',"http://www.weather.com.cn/static/productframe2013.php?class="+str);
-}
-
-$('#new').load(function(){         
-    $(this).height($(this).contents().find("body").height() + 40);  
-}).attr('src','http://www.weather.com.cn/static/productframe2013.php?class=JC_JSL_02405');   
