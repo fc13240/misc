@@ -973,7 +973,7 @@ body.tq_n31{
         #forecast .scroll li p{width:120px;float: left;}
         #forecast .scroll li p.pic{width: 50px;}
         #forecast .scroll .col2{padding:0;}
-        #forecast .scroll .day{font-size: 16px;height: 70px; line-height: 70px;width:140px}
+        #forecast .scroll .day{font-size: 16px;height: 70px; line-height: 70px;width:160px}
         #forecast .scroll .blue, #forecast .scroll .blue a{font-size: 16px; line-height: 70px;width:105px;}
         #forecast h2 span a{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 5px; color: #8e8e8e;padding:6px 5px; padding-left: 40px;}
         #forecast h2 span a.s{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 -24px; }
