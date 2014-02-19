@@ -482,7 +482,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 .hotNews .news .topOne figure,.video .topOne figure,.interact .topOne figure{width:140px;padding-left:7px;text-align:center;float:left;}
 .hotNews .news .topOne figure img,.video .topOne figure img,.interact .topOne figure img{width:120px;height:90px;}
 .hotNews .news .topOne figure figcaption,.video .topOne figure figcaption,.interact .topOne figure figcaption{font-size:14px;height:30px;line-height:30px;width:140px;overflow:hidden;}
-.hotNews .news ul,.interact .news ul{width:260px;padding:10px 0px;margin:0px 20px; margin-left:17px;border-top:1px solid #D9D9D9;}
+.hotNews .news ul,.interact .news ul{width:260px;padding:10px 0px;margin:0px 20px; margin-left:17px;border-top:1px solid #D9D9D9; clear:both;}
 .hotNews .news ul.lv{border-top:none;padding-top:0px;}
 .hotNews .news ul li,.interact .news ul li{line-height:30px;padding-left:0px;width:260px;overflow:hidden;height:30px;}
 
@@ -973,11 +973,11 @@ body.tq_n31{
         #forecast .scroll li p{width:120px;float: left;}
         #forecast .scroll li p.pic{width: 50px;}
         #forecast .scroll .col2{padding:0;}
-        #forecast .scroll .day{font-size: 16px;height: 70px; line-height: 70px;width:170px}
+        #forecast .scroll .day{font-size: 16px;height: 70px; line-height: 70px;width:160px}
         #forecast .scroll .blue, #forecast .scroll .blue a{font-size: 16px; line-height: 70px;width:105px;}
         #forecast h2 span a{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 5px; color: #8e8e8e;padding:6px 5px; padding-left: 40px;}
         #forecast h2 span a.s{background: url(../../i/weatherfc/rcrln.jpg) no-repeat 0 -24px; }
-        #forecast .scroll .legend{background: url(../../i/weatherfc/legend35X35.gif) no-repeat;  height: 35px;width: 35px;margin-top: 15px; float: left; margin-left: 25px; display: inline;}
+        #forecast .scroll .legend{background: url(../../i/weatherfc/legend35X35.gif) no-repeat;  height: 35px;width: 35px;margin:0 auto;margin-top: 15px; }
 
 
         #forecast .scroll .d00{background-position:0px 0px;}

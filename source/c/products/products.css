@@ -79,7 +79,7 @@ _left:167px; z-index:88; }
 .conBody .writing p { text-indent:2em; }
 .productsList { margin-top:25px; padding:10px; overflow:hidden; }
 .productsList h4 { font-size:24px; font-weight:normal; height:40px; line-height:40px; margin:0; }
-.productsList ul { margin-top:10px; overflow:hidden; padding-left:20px;}
+.productsList ul { margin-top:10px; overflow:hidden; padding-left:20px; *padding-left:0;}
 .productsList ul li { background-color:#1caed3; font-size:18px; float:left; display:inline; margin:5px 0 0 5px; }
 .productsList ul li a { color:#fff; padding:10px 30px; display:block; float:left; white-space:nowrap; display:inline-block; }
 .productsList ul li a:hover { color:#fff; background:#019fcd; }
