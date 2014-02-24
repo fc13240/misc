@@ -319,72 +319,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #forecast .scroll .last{width:40px;}
 #forecast .scroll .day{font-size:20px;height:40px;line-height:40px;}
 #forecast .scroll .legend{display:block;width:129px;height:50px;background-image:url(../../i/weatherfc/legend129X50.gif);background-repeat:no-repeat;}
-#forecast .scroll .d00{background-position:0px 0px;}
-#forecast .scroll .d01{background-position:-129px 0px;}
-#forecast .scroll .d02{background-position:-258px 0px;}
-#forecast .scroll .d03{background-position:-387px 0px;}
-#forecast .scroll .d04{background-position:-516px 0px;}
-#forecast .scroll .d05{background-position:-645px 0px;}
-#forecast .scroll .d06{background-position:0px -50px;}
-#forecast .scroll .d07{background-position:-129px -50px;}
-#forecast .scroll .d08{background-position:-258px -50px;}
-#forecast .scroll .d09{background-position:-387px -50px;}
-#forecast .scroll .d10{background-position:-516px -50px;}
-#forecast .scroll .d11{background-position:-645px -50px;}
-#forecast .scroll .d12{background-position:0px -100px;}
-#forecast .scroll .d13{background-position:-129px -100px;}
-#forecast .scroll .d14{background-position:-258px -100px;}
-#forecast .scroll .d15{background-position:-387px -100px;}
-#forecast .scroll .d16{background-position:-516px -100px;}
-#forecast .scroll .d17{background-position:-645px -100px;}
-#forecast .scroll .d18{background-position:0px -150px;}
-#forecast .scroll .d19{background-position:-129px -150px;}
-#forecast .scroll .d20{background-position:-258px -150px;}
-#forecast .scroll .d21{background-position:-387px -150px;}
-#forecast .scroll .d22{background-position:-516px -150px;}
-#forecast .scroll .d23{background-position:-645px -150px;}
-#forecast .scroll .d24{background-position:0px -200px;}
-#forecast .scroll .d25{background-position:-129px -200px;}
-#forecast .scroll .d26{background-position:-258px -200px;}
-#forecast .scroll .d27{background-position:-387px -200px;}
-#forecast .scroll .d28{background-position:-516px -200px;}
-#forecast .scroll .d29{background-position:-645px -200px;}
-#forecast .scroll .d30{background-position:0px -250px;}
-#forecast .scroll .d31{background-position:-129px -250px;}
-#forecast .scroll .d53{background-position:-258px -250px;}
-#forecast .scroll .n00{background-position:0px -300px;}
-#forecast .scroll .n01{background-position:-129px -300px;}
-#forecast .scroll .n02{background-position:-258px -300px;}
-#forecast .scroll .n03{background-position:-387px -300px;}
-#forecast .scroll .n04{background-position:-516px -300px;}
-#forecast .scroll .n05{background-position:-645px -300px;}
-#forecast .scroll .n06{background-position:0px -350px;}
-#forecast .scroll .n07{background-position:-129px -350px;}
-#forecast .scroll .n08{background-position:-258px -350px;}
-#forecast .scroll .n09{background-position:-387px -350px;}
-#forecast .scroll .n10{background-position:-516px -350px;}
-#forecast .scroll .n11{background-position:-645px -350px;}
-#forecast .scroll .n12{background-position:0px -400px;}
-#forecast .scroll .n13{background-position:-129px -400px;}
-#forecast .scroll .n14{background-position:-258px -400px;}
-#forecast .scroll .n15{background-position:-387px -400px;}
-#forecast .scroll .n16{background-position:-516px -400px;}
-#forecast .scroll .n17{background-position:-645px -400px;}
-#forecast .scroll .n18{background-position:0px -450px;}
-#forecast .scroll .n19{background-position:-129px -450px;}
-#forecast .scroll .n20{background-position:-258px -450px;}
-#forecast .scroll .n21{background-position:-387px -450px;}
-#forecast .scroll .n22{background-position:-516px -450px;}
-#forecast .scroll .n23{background-position:-645px -450px;}
-#forecast .scroll .n24{background-position:0px -500px;}
-#forecast .scroll .n25{background-position:-129px -500px;}
-#forecast .scroll .n26{background-position:-258px -500px;}
-#forecast .scroll .n27{background-position:-387px -500px;}
-#forecast .scroll .n28{background-position:-516px -500px;}
-#forecast .scroll .n29{background-position:-645px -500px;}
-#forecast .scroll .n30{background-position:0px -550px;}
-#forecast .scroll .n31{background-position:-129px -550px;}
-#forecast .scroll .n53{background-position:-258px -550px;}
+
 
 #forecast .scroll .blue,#forecast .scroll .blue a{color:#076ea8;line-height:28px;}
 #forecast .scroll .rBtn{display:block;cursor:pointer;width:45px;height:200px;background-color:#edfaff;position:absolute;right:0px;top:10px;}
