@@ -321,7 +321,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #forecast .scroll .legend{display:block;}
 
 
-#forecast .scroll .blue,#forecast .scroll .blue a{color:#076ea8;line-height:28px;}
+#forecast .scroll .blue,#forecast .scroll .blue a{color:#076ea8;}
 #forecast .scroll .rBtn{display:block;cursor:pointer;width:45px;height:200px;background-color:#edfaff;position:absolute;right:0px;top:10px;}
 #forecast .scroll .rBtn i{background:url(../../i/weatherfc/city_icons.png) no-repeat -170px -72px;display:block;width:45px;height:45px;border-bottom:1px solid #fff;}
 #forecast .scroll .lBtn i{background:url(../../i/weatherfc/city_icons.png) no-repeat -218px -72px;display:block;width:45px;height:45px;border-bottom:1px solid #fff;}
