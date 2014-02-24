@@ -314,10 +314,10 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #forecast .scroll ul{height:auto;}
 #forecast .scroll .on{display:block;}
 #forecast .scroll li{width:129px;padding:0px 4px;height:200px;border-right:1px solid #D9D9D9;float:left;text-align:center;overflow:hidden;display:none;}
-#forecast .scroll .col2{padding:0px 38px;}
+
 #forecast .scroll .noBorder{border-right:none;}
 #forecast .scroll .last{width:40px;}
-#forecast .scroll .day{font-size:20px;height:40px;line-height:40px;}
+
 #forecast .scroll .legend{display:block;}
 
 
