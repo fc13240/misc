@@ -219,7 +219,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #week .lBtn{background:url(../../i/weatherfc/city_icons.png) no-repeat -130px 0px;height:19px;width:17px;position:absolute;left:14px;top:68px;display:block;}
 #week .scroll{width:735px;height:155px;float:left;overflow:hidden;position:relative;}
 #week .scroll ul{height:155px;width:1148px;}
-#week .scroll ul li{width:143px;height:125px;padding:10px 10px 20px 10px;border-left:1px solid #fff;float:left;text-align:center;}
+#week .scroll ul li{width:143px;height:125px;padding:10px 10px 20px 10px;border-left:1px solid #fff;float:left;text-align:center; cursor: pointer;}
 #week .scroll .today{background-color:#8abb4a;}
 #week .scroll .current{background-color:#fff;color:#333333;}
 #week .current p{color:#333333;}
