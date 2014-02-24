@@ -297,11 +297,11 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 .block{width:980px;padding:10px;margin:0px auto;position:relative; min-height: 680px;}
 .block .block_content{width:980px;}
 #forecast{width:650px;padding:10px;background-color:#fff;}
-#forecast h2{height:40px;line-height:40px;color:#333333;font-size:18px;padding-left:10px;font-weight:normal;position:relative;}
+#forecast h2{height:30px;line-height:30px;color:#333333;font-size:18px;padding-left:10px;font-weight:normal;position:relative;}
 #forecast h2 i{font-size:14px;font-style:normal;padding-left:15px;}
 #forecast h2 span{position:absolute;top:5px;right:10px;display:block;font-size:12px;height:30px;line-height:30px;padding:0px 10px;cursor:pointer;}
 #forecast h2 span a{background-color:#49b4e5;color:#fff;margin-left:5px;padding:2px 5px;}
-#forecast .scroll{width:650px;padding:10px 0px;height:auto;overflow:hidden;position:relative;}
+#forecast .scroll{width:650px;padding:0px;height:auto;overflow:hidden;position:relative;}
 #forecast .scroll ul{height:auto;}
 #forecast .scroll .on{display:block;}
 #forecast .scroll li{width:129px;padding:0px 4px;height:200px;border-right:1px solid #D9D9D9;float:left;text-align:center;overflow:hidden;display:none;}
