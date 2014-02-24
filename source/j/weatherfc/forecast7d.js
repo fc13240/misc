@@ -53,6 +53,13 @@ define(function(require){
 			}
 		}
 	}
+
+    function resetAdPos(){
+		try{
+		    W.util.adPos();
+		}catch(e){}
+	}
+
 	var week_scroll = new W.scroll({container:'#week .scroll ul',el:'li',flag:5});
 	$("#week .scroll ul li").live("click",function(){
 		if(isTouching){return}
@@ -81,13 +88,12 @@ define(function(require){
 				$(this).addClass("col3");
 			})
 		}
+        resetAdPos();
+
+
 	})
 	
-	function resetAdPos(){
-		try{
-		    W.util.adPos();
-		}catch(e){}
-	}
+	
 	var $btnRight = $("#week .RBtn").click(function(){
 		var itemSum = 0;
 		week_scroll.go(1);
