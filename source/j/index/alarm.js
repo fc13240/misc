@@ -18,7 +18,7 @@ define(function(require){
 		// var alarmdivid = attrs.divid == undefined ? 'alarm-' + new Date().getTime() : 'alarm-' + attrs.divid;
 		// document.write("<div class=\"alarm\" id=" + alarmdivid + "><p></p></div>");
 		$yjlb = ['台风', '暴雨', '暴雪', '寒潮', '大风', '沙尘暴', '高温', '干旱', '雷电', '冰雹', '霜冻', '大雾', '霾', '道路结冰'];
-		$gdlb = ['寒冷', '灰霾', '雷雨大风', '森林火险', '降温', '道路冰雪'];
+		$gdlb = ['寒冷', '灰霾', '雷雨大风', '森林火险', '降温', '道路冰雪','干热风','低温','冰冻'];
 		$yjyc = ['蓝色', '黄色', '橙色', '红色'];
 		$gdyc = ['白色'];
 		$ifurl = 'http://product.weather.com.cn/alarm/newIndexalarm.php?count=' + alarmcount;
