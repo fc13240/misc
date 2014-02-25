@@ -6,9 +6,9 @@
     <title>中国天气网2013年终盘点</title>
     <meta  name="keywords" content="" />
     <meta name="description" content="" />
-	<script type="text/javascript" src="http://localhost/source/j/core.js"></script>
-    <script>W.css("c/tqzt/pandian.css")</script>
-    <script>W(function(){W.use('j/tqzt/pandian.js')})</script>
+	<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+    <script>W.css("c/tqzt_pandian/pandian.css")</script>
+    <script>W(function(){W.use('j/tqzt_pandian/pandian.js')})</script>
     <base target="_blank" />
 </head>
 
