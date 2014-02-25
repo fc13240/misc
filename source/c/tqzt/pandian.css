@@ -12,18 +12,18 @@ a:hover{color:#ee842f;}
 .top .box{text-align:right;}
 .top .box a{color:#fff;}
 .top .box a:hover{text-decoration:underline;}
-.top .box .logo{background:url(../../i/tqzt_pandian/logo.jpg) no-repeat;float:left;width:131px;height:34px;}
+.top .box .logo{background:url(../../i/tqzt/pandian/logo.jpg) no-repeat;float:left;width:131px;height:34px;}
 .top .box div{float:right;}
 
 
-/*.top{background:url(../../i/tqzt_pandian/topbg.jpg) repeat-x;height:34px;}
+/*.top{background:url(../../i/tqzt/pandian/topbg.jpg) repeat-x;height:34px;}
 .top ul{float:right;widht:636px;line-height:34px}
 .top ul li{float:left;}
 .top ul li a{padding:2px;}
 */
 .content{background:#;}
-.content .banner{background:url(../../i/tqzt_pandian//banner.jpg) no-repeat;height:224px;display:block;}
-.content .bannerBottom{background:url(../../i/tqzt_pandian/bannerBottom.jpg) no-repeat;height:29px;display:block;}
+.content .banner{background:url(../../i/tqzt/pandian//banner.jpg) no-repeat;height:224px;display:block;}
+.content .bannerBottom{background:url(../../i/tqzt/pandian/bannerBottom.jpg) no-repeat;height:29px;display:block;}
 .content .pdShow{position:relative;height:853px;}
 .content .pdShow div{overflow:hidden;position:absolute;}
 .content .pdShow img{float:left}
