@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="dns-prefetch" href="http://localhost/source">
+    <meta charset="utf-8" />
+    <title>中国天气网2013年终盘点</title>
+    <meta  name="keywords" content="" />
+    <meta name="description" content="" />
+	<script type="text/javascript" src="http://localhost/source/j/core.js"></script>
+    <script>W.css('c/core.css','c/common.css',"c/tqzt/lintan.css")</script>
+    <!--[if lt IE 7]>
+    <script>
+    W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+      DD_belatedPNG.fix(".img img,.title i");
+    });
+    </script>
+    <![endif]-->
+    <base target="_blank" />
+</head>
+
+<body>
+    <div class="box banner">
+   	</div>
+    <div class="line"></div>
+    <div class="show clearfix">
+    	<div class="l fl">
+        	<img src="../../source/i/tqzt/lintan/img.jpg" width="478" height="359" title="" alt="" >
+        </div> 
+        <div class="c fl">
+        	<h1><i></i>活动介绍</h1>
+            <p>气候变化是指气候平均状态随时间的变化，即气候平均状态和离差（距平）两者中的一个或两个一起出现了统计意义上的显著变化。离差值越大，表明气候变化的幅度越大，气候状态越不稳定。统计意义上的显著变化。离差值越大，表明气候变化的幅度越大，气候状态越不稳定。大，表明气候变化的幅度越大，气候状态越不稳定。
+            <a href="#" title="">【详细】</a>
+            </p>
+        </div>
+        <div class="t fl">
+            <img class="img1" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
+            <img class="img2" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
+            <img class="img3" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
+            <img class="img4" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
+        </div>
+        <div class="r fl">
+        	<h1><i></i>嘉宾致辞</h1>
+            <ul>	
+            	<li>	
+                	<h2>气候变化</h2>
+                    <p>气候变化是指气候平均状态随时间的变化，即气候平均状态和离差（距平）两者中的一个或两个一起出现了统计意</p>
+                </li>	
+            	<li>	
+                	<h2>气候变化</h2>
+                    <p>气候变化是指气候平均状态随时间的变化，即气候平均状态和离差（距平）两者中的一个或两个一起出现了统计意</p>
+                </li>	
+            	<li>	
+                	<h2>气候变化</h2>
+                    <p>气候变化是指气候平均状态随时间的变化，即气候平均状态和离差（距平）两者中的一个或两个一起出现了统计意</p>
+                </li>	
+            	<li>	
+                	<h2>气候变化</h2>
+                    <p>气候变化是指气候平均状态随时间的变化，即气候平均状态和离差（距平）两者中的一个或两个一起出现了统计意</p>
+                </li>	
+            </ul>
+        </div>
+    </div>
+    <div class="peo">
+    	<div class="peo1">
+        	<p class="title">
+            	<span class="name">田成川</span>
+                <i></i>
+                <span class="text">解读应对气候变化宏观政策</span>
+            </p>
+        	<div class="con">
+            	<div class="img fr">
+                    <img src="../../source/i/tqzt/lintan/people1.png" title="" alt="">
+                </div>
+                <div class="text">
+                    <p>目前的气候变化，全球科学家的共识是：有90%以上的可能是人类自己的责任，人类今日所作的决定和选择，会影响气候变化的走向。今日，地球比过去两千年都要热。如果情况持续恶化，于本世纪末，地球气温将攀升至二百万年来的高位。</p>
+                    <p>过去一百多年间，人类一直依赖石油煤炭等化石燃料来提供生产生活所需的能源，燃烧这些化石能源排放的二氧化碳等温室气体是使得温室效应增强、进而引发全球气候变化的主要原因。还有约1/5的温室气体是由于破坏森林、减少了吸收二氧化碳的能力而排放的。另外，一些特别的工业过程、农业畜牧业也会有少许温室气体排放。</p>
+                    <p>在中国，煤炭在能源消费总量中占主导地位。1979年至2005年，煤炭资源消费在总能源消费中的平均比重为72.4%。在各种能源消费量的相对变化上，虽然煤炭占总能源消费量的比重呈现缓慢下降的趋势，但其绝对消费量却在不断上升，目前，煤炭消费占约67%，加之中国能源效率并不高，如此高度依靠煤炭发展是不可持续的，面对日益严重的全球变暖问题，人们只有一个选择：必须立即采取行动。</p>
+           		</div>			
+           	</div>
+            <div class="peo_bg"></div>
+        </div>
+    </div>
+    <div class="peo peo2mt">
+    	<div class="peo1 peo2">
+        	<p class="title">
+            	<span class="note">国家林业局气候办常务副主任中国绿色碳汇基金会秘书长</span>
+            	<span class="name">李怒云</span>
+                <i></i>
+                <span class="text">林业碳汇管理</span>
+            </p>
+        	<div class="con">
+            	<div class="img fl">
+                    <img src="../../source/i/tqzt/lintan/people2.png" title="" alt="">
+                </div>
+                <div class="text">
+                    <p>目前的气候变化，全球科学家的共识是：有90%以上的可能是人类自己的责任，人类今日所作的决定和选择，会影响气候变化的走向。今日，地球比过去两千年都要热。如果情况持续恶化，于本世纪末，地球气温将攀升至二百万年来的高位。</p>
+                    <p>过去一百多年间，人类一直依赖石油煤炭等化石燃料来提供生产生活所需的能源，燃烧这些化石能源排放的二氧化碳等温室气体是使得温室效应增强、进而引发全球气候变化的主要原因。还有约1/5的温室气体是由于破坏森林、减少了吸收二氧化碳的能力而排放的。另外，一些特别的工业过程、农业畜牧业也会有少许温室气体排放。</p>
+                    <p>在中国，煤炭在能源消费总量中占主导地位。1979年至2005年，煤炭资源消费在总能源消费中的平均比重为72.4%。在各种能源消费量的相对变化上，虽然煤炭占总能源消费量的比重呈现缓慢下降的趋势，但其绝对消费量却在不断上升，目前，煤炭消费占约67%，加之中国能源效率并不高，如此高度依靠煤炭发展是不可持续的，面对日益严重的全球变暖问题，人们只有一个选择：必须立即采取行动。</p>
+           		</div>			
+           	</div>
+            <div class="peo_bg"></div>
+        </div>
+    </div>
+    <div class="peo peo3mt">
+    	<div class="peo1 peo2 peo3">
+        	<p class="title">
+            	<span class="name">李铁铮</span>
+                <i></i>
+                <span class="text">我国绿色碳汇传播现状分析及对策</span>
+            </p>
+        	<div class="con">
+            	<div class="img fr">
+                    <img src="../../source/i/tqzt/lintan/people3.png" title="" alt="">
+                    <p>李铁铮</p>
+                </div>
+                <div class="text">
+                    <p>气候变化是指长时期内气候状态的变化。通常用不同时期的温度和降水等气候要素的统计量的差异来反映。变化的时间长度从最长的几十亿年至最短的年际变化。</p>
+                    <p>气候变化（Climate change）是指气候平均状态统计学意义上的巨大改变或者持续较长一段时间（典型的为30年或更长）的气候变动。[1]气候变化不但包括平均值的变化，也包括变率的变化。气候变化一词在政府间气候变化专门委员会（IPCC）的使用中，是指气候随时间的任何变化，无论其原因是自然变率，还是人类活动的结果。这有别于《联合国气候变化框架公约》中的用法。在公约中，气候变化是指“经过相当一段时间的观察，在自然气候变化之外由人类活动直接或间接地改变全球大气组成所导致的气候改变。”</p>
+                    <p>气候变化（Climate change）是指气候平均状态统计学意义上的巨大改变或者持续较长一段时间（典型的为30年或更长）的气候变动。[1]气候变化不但包括平均值的变化，也包括变率的变化。气候变化一词在政府间气候变化专门委员会（IPCC）的使用中，是指气候随时间的任何变化，无论其原因是自然变率，还是人类活动的结果。这有别于《联合国气候变化框架公约》中的用法。在公约中，气候变化是指“经过相当一段时间的观察，在自然气候变化之外由人类活动直接
+或间接地改变全球大气  组成所导致的气候改变。”</p>
+           		</div>			
+           	</div>
+            <div class="peo_bg"></div>
+        </div>
+    </div>
+    <div class="foot clearfix">
+    	<div class="l fl">
+            <h1>
+                <i></i>往期回顾
+            </h1>
+            <div class="img">
+                <img src="../../source/i/tqzt/lintan/1.jpg" title="" alt="" >
+                <img src="../../source/i/tqzt/lintan/2.jpg" title="" alt="" >
+                <img src="../../source/i/tqzt/lintan/3.jpg" title="" alt="" >
+            </div>
+    	</div>
+        <div class="r fl">
+        	<p><span>监 制：</span>卫晓莉</p>
+        	<p><span>策 划：</span>窦莉新</p>
+        	<p><span>制 作：</span>某某某  某某某</p>
+        	<p><span>设 计：</span>某某某  某某某</p>
+        	<p><span>出 品：</span>中国天气网气候变化频道</p>
+        	<p><span>联 系：</span>窦莉新 010-58991854</p>
+        </div>
+    </div>
+    
+    
+	<script type="text/javascript" src="http://c.wrating.com/a1.js"></script>
+    <script type="text/javascript" src="/site2/html/tongji/topic.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body{background:url(../../i/tqzt/lintan/111.jpg) no-repeat -8px 0; height:2200px;}
+.box{width:1047px;margin:0 auto;height:100%;}
+
+.banner{background:url(../../i/tqzt/lintan/banner.jpg) no-repeat;height:280px;}
+
+.line{background:#2D77B6;height:43px;width:100%}
+
+.show{background:url(../../i/tqzt/lintan/show_bg.png) repeat;width:960px;height:400px;margin:15px auto;}
+.show .l{width:478px; margin:19px;}
+.show .c,.show .r{ width:170px;margin-top:20px;}
+.show .c h1,.show .r h1{font-size:22px; color:#0082c7;position:relative; text-indent:30px; letter-spacing:4px; line-height:22px; padding-bottom:12px;height:22px;}
+.show .c h1 i,.show .r h1 i{height:20px;width:20px;background-color:#9DFF30;position:absolute;top:3px;left:2px; zoom:1; display:inline-block;float:left;}
+.show .c p{ height:316px; overflow:hidden;}
+.show .t{background:url(../../i/tqzt/lintan/line.jpg) no-repeat;position:relative; width:19px; height:401px;margin-left:28px;}
+.show .t img{position:absolute;}
+.show .t .img1{left:-26px;top:57px;}
+.show .t .img2{left:-26px;top:140px;}
+.show .t .img3{left:-26px;top:224px;}
+.show .t .img4{left:-26px;top:308px;}
+.show .r{ width:181px; margin-left:36px;}
+.show .r h1{text-indent:0;padding-bottom:8px;}
+.show .r h1 i{left:-30px;}
+.show .r ul li{height:75px;font-size:10px;color:#666;margin-top:9px;}
+.show .r ul li h2{color:#0082c7;font-size:14px;}
+
+
+.peo{width:100%;height:43px;background:#2D77B6;margin-top:70px}
+.peo1{margin:0 auto;width:960px;height:100%;position:relative;}
+.peo1 .title{font-size:30px; line-height:43px; padding-left:36px; color:#fff; background:#2D77B6}
+.peo1 .title .name{ font-weight:bold; color:#fff;}
+.peo1 .title .text{color:#99ff33;margin-left:50px;}
+.peo1 .title i{ background:url(../../i/tqzt/lintan/1.png) no-repeat; height:105px; width:62px; position:absolute;top:-45px; left:125px; }
+.peo1 .con,.peo1 .peo_bg{width:960px;height:373px;position:absolute; top:-52px; left:0; }
+.peo1 .con .img{margin-right:30px;margin-top:9px;}
+.peo1 .con .text{padding-top:112px;padding-left:24px; color:#333;} 
+.peo1 .peo_bg{background:url(../../i/tqzt/lintan/show_bg.png) repeat;z-index:-1;}
+
+.peo2mt{ margin-top:587px}
+.peo2 .con{top:-291px; height:360px}
+.peo2 .con .img{margin:70px 10px 0 28px;}
+.peo2 .con .text{padding-top:24px; }
+.peo2 .title .note{width:209px; letter-spacing:2px; margin-left:-7px; font-size:14px; line-height:14px; display:inline-block;}
+.peo2 .peo_bg{top:-291px; height:360px;}
+.peo2 .title .name{padding-left:50px;}
+.peo2 .title i{ background:url(../../i/tqzt/lintan/2.png) no-repeat;height:107px; width:101px; top:-52px; left:368px; }
+.peo2 .title .text{margin-left:86px;}
+
+.peo3mt{ margin-top:366px}
+.peo3 .con{top:-322px; height:360px}
+.peo3 .peo_bg{top:-322px}
+.peo3 .con .img{margin:40px 10px 0 28px;}
+.peo3 .con .img p{ text-align:center; width:225px; margin-top:5px; font-size:14px; color:#333;}
+.peo3 .title i{ background:url(../../i/tqzt/lintan/3.png) no-repeat;height:109px; width:100px; top:-64px; left:124px; }
+.peo3 .title .name{ padding-left:0;}
+
+.foot{width:960px; margin:15px auto; background:#fff;}
+.foot .l,.foot .r{width:658px;background:url(../../i/tqzt/lintan/show_bg.png) repeat; padding:20px 10px 20px 20px;height:160px;}
+.foot .l .img img{margin-right:10px;margin-left:0;}
+.foot .l h1{font-size:22px; color:#0082c7;position:relative; text-indent:30px; letter-spacing:4px; line-height:22px; padding-bottom:15px;height:22px;}
+.foot .l h1 i{height:20px;width:20px;background-color:#9DFF30;position:absolute;top:3px;left:2px; zoom:1; display:inline-block;float:left;}
+.foot .r{margin-left:20px;width:221px;}
+.foot .r p{ line-height:27px;color:#333;}
+.foot .r p span{ color:#0082c7;}
+
+
+
+.peo1 .title{ background:url(../../i/tqzt/lintan/line1.png) no-repeat; height:43px;}
+.peo2 .title{ background:url(../../i/tqzt/lintan/line2.png) no-repeat; height:43px;}
+.peo3 .title{ background:url(../../i/tqzt/lintan/line3.png) no-repeat; height:43px;}
