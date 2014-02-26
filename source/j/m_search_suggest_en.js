@@ -198,7 +198,7 @@
 					content = content.join('-').replace(tempReg,function(match){
 						return '<b>'+match+'</b>';
 					});
-					$temp = $temp.add($('<li>').data(arr).html(content));
+					$temp = $temp.add($('<li>').data('d',arr).html(content));
 				});
 			}else{
 				$temp = $temp.add($('<b class="no-data">'+noDataNotice+'</b>'));
