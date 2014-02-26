@@ -100,10 +100,6 @@ img{border:0;}
 
 
 
-<!--搜索框start-->
-    
-    <input type="submit" id="" value="提交">
-<!--搜索框end-->
 
 
 
@@ -160,6 +156,25 @@ img{border:0;}
         }
         ,'maxnum': 6
     });
+      var $btnSubmit=$(".button");
+     if($btnSubmit && $btnSubmit.length){
+            $btnSubmit.click(function(){
+                var toUrl = $("#text_fuza").data('url');
+                if(toUrl){
+                    window.open(toUrl);
+                }else{
+                    alert('输入城市名、全拼、简拼、电话区号、邮编查询');
+                    $("#text_fuza").focus();
+                }
+            });
+        }
+
+
+
+
+
+
+
 
 });
 </script>
