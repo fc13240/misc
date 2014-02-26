@@ -99,6 +99,7 @@ img{border:0;}
 
 <!--搜索框start-->
     <input id="text_fuza" value="请输入内容" type="text">
+    <input type="submit" id="btnZip" value="提交">
 <!--搜索框end-->
 
 
@@ -129,7 +130,9 @@ img{border:0;}
         ,'onSelect': function(data){
 
             alert(data[0]);
-            Window.location.href="http://www.weather.com.cn/";
+            var inputText = $('#text_fuza');
+            var btnZip = $('#btnZip');   
+            search(inputText,btnZip);   
             $textBox.val(data[2]+data[0]);
 
            
