@@ -128,7 +128,29 @@ img{border:0;}
         ,'textBox': $textBox
         ,'bindEvent': false
         ,'onSelect': function(data){
-            $textBox.val(data[2]+data[0]);
+             var cityName = data[2];
+             $("#text_fuza").val(cityName);
+             var toUrl = '';
+              if(data.length == 20){
+                    var enName = conf[cityName];
+                    if(~enName.indexOf('.')){
+                        toUrl += '/html/province/'+enName;
+                    }else{
+                        toUrl += 'http://'+enName+'.'+host;
+                    }
+                }else{
+                    toUrl += '/weather/'+data[0]+'.shtml';
+                }
+
+
+
+
+
+
+
+
+
+
         }
         ,'maxnum': 6
     });
