@@ -128,6 +128,7 @@ img{border:0;}
         ,'bindEvent': false
         ,'onSelect': function(data){
              var cityName = data[2];
+             alert(cityName);
              $("#text_fuza").val(cityName);
              var toUrl = '';
               if(data.length == 20){
