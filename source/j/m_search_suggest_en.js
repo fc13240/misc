@@ -178,7 +178,6 @@
 					}
 					var arr = item.ref.split('~');
 					var content = [arr[2]];	//加入城市名
-					alert(content);
 					arr[9] && content.push(arr[9]); //加入省名
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
@@ -206,7 +205,7 @@
 						tempReg.lastIndex = 0;
 					}
 					content = content.join('-').replace(tempReg,function(match){
-						return '<b>'+match+'</b>';
+						return '<b>fff'+match+'</b>';
 					});
 					$temp = $temp.add($('<li>').data('d',arr).html(content));
 				});
