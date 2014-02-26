@@ -109,7 +109,7 @@ img{border:0;}
 
 <script>
      
-     W.use('j/m_search_suggest',function(Suggest){
+     W.use('j/m_search_suggest_en',function(Suggest){
     var text = "请输入内容";
     var $textBox = $('#text_fuza').focus(function(){
         if($(this).val() == text){
@@ -144,15 +144,6 @@ img{border:0;}
 
                  $("#text_fuza").data('url',toUrl);
                 window.open(toUrl);
-
-
-
-
-
-
-
-
-
         }
         ,'maxnum': 6
     });
@@ -163,19 +154,11 @@ img{border:0;}
                 if(toUrl){
                     window.open(toUrl);
                 }else{
-                    alert('输入城市名、全拼、简拼、电话区号、邮编查询');
+                    alert('Enter city name or zip code');
                     $("#text_fuza").focus();
                 }
             });
         }
-
-
-
-
-
-
-
-
 });
 </script>
 </body>
