@@ -99,7 +99,7 @@ img{border:0;}
 
 <!--搜索框start-->
     <input id="text_fuza" value="请输入内容" type="text">
-    <input type="submit" id="btnZip" value="提交">
+
 <!--搜索框end-->
 
 
@@ -129,10 +129,8 @@ img{border:0;}
         ,'bindEvent': false
         ,'onSelect': function(data){
 
-            //alert(data[0]);
-            var inputText = $('#text_fuza');
-            var btnZip = $('#btnZip');   
-            Suggest(inputText,btnZip);   
+            alert(data[1]);
+              
             $textBox.val(data[2]+data[0]);
 
            
