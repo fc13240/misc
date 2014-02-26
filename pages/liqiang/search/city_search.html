@@ -127,9 +127,11 @@ img{border:0;}
         ,'textBox': $textBox
         ,'bindEvent': false
         ,'onSelect': function(data){
-            var areaid=$textBox.val(data[2]+data[0]);
 
-            window.location="http://www.weather.com.cn/weather/"+areaid+".shtml
+            alert(data[0]);
+            $textBox.val(data[2]+data[0]);
+
+           
         }
         ,'maxnum': 6
     });
