@@ -132,12 +132,13 @@ img{border:0;}
              $("#text_fuza").val(cityName);
              var toUrl = '';
               if(data.length == 20){
-                    var enName = conf[cityName];
-                    if(~enName.indexOf('.')){
-                        toUrl += '/html/province/'+enName;
-                    }else{
-                        toUrl += 'http://'+enName+'.'+host;
-                    }
+                    //var enName = conf[cityName];
+                   //if(~enName.indexOf('.')){
+                     //   toUrl += '/html/province/'+enName;
+                    //}else{
+                    //   toUrl += 'http://'+enName+'.'+host;
+                   //}
+                   alert("无省级站");
                 }else{
                     toUrl += '/en/weather/'+data[0]+'.shtml';
                 }
