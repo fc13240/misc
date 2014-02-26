@@ -11,7 +11,7 @@
 			,'maxnum': 12		//最大条数
 		};
 		var searchNotice = "输入城市名、全拼、简拼、电话区号、邮编查询";
-		var noDataNotice = "对不起，未找到您查询的城市天气!";
+		var noDataNotice = "No results found. Try your search again!";
 		var CLASS_SUGGEST_LIST = 'suggest_list';
 		var CLASS_ON = 'on';
 		var CLASS_ON_JQ = '.'+CLASS_ON;
