@@ -145,18 +145,7 @@ img{border:0;}
                 window.open(toUrl);
             }
     });
-    //给指定按钮绑定事件
-        if($btnSubmit && $btnSubmit.length){
-            $btnSubmit.click(function(){
-                var toUrl = $inputText.data('url');
-                if(toUrl){
-                    window.open(toUrl);
-                }else{
-                    alert('输入城市名、全拼、简拼、电话区号、邮编查询');
-                    $inputText.focus();
-                }
-            });
-        }
+    
 });
 </script>
 </body>
