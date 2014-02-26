@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="dns-prefetch" href="http://localhost/source">
+    <link rel="dns-prefetch" href="http://i.tq121.com.cn">
     <meta charset="utf-8" />
-    <title>中国天气网2013年终盘点</title>
+    <title>应对气候变化</title>
     <meta  name="keywords" content="" />
     <meta name="description" content="" />
-	<script type="text/javascript" src="http://localhost/source/j/core.js"></script>
+	<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
     <script>W.css('c/core.css','c/common.css',"c/tqzt/lintan.css")</script>
     <!--[if lt IE 7]>
     <script>
@@ -20,11 +20,12 @@
 
 <body>
     <div class="box banner">
+    	<img src="http://i.tq121.com.cn/i/tqzt/lintan/banner.jpg" width="1047" height="280" >
    	</div>
     <div class="line"></div>
     <div class="show clearfix">
     	<div class="l fl">
-        	<img src="../../source/i/tqzt/lintan/img.jpg" width="478" height="359" title="" alt="" >
+        	<img src="http://i.tq121.com.cn/i/tqzt/lintan/img.jpg" width="478" height="359" title="" alt="" >
         </div> 
         <div class="c fl">
         	<h1><i></i>活动介绍</h1>
@@ -33,10 +34,10 @@
             </p>
         </div>
         <div class="t fl">
-            <img class="img1" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
-            <img class="img2" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
-            <img class="img3" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
-            <img class="img4" src="../../source/i/tqzt/lintan/yuan.png" title="" alt="" >
+            <img class="img1" src="http://i.tq121.com.cn/i/tqzt/lintan/yuan.png" title="" alt="" >
+            <img class="img2" src="http://i.tq121.com.cn/i/tqzt/lintan/yuan.png" title="" alt="" >
+            <img class="img3" src="http://i.tq121.com.cn/i/tqzt/lintan/yuan.png" title="" alt="" >
+            <img class="img4" src="http://i.tq121.com.cn/i/tqzt/lintan/yuan.png" title="" alt="" >
         </div>
         <div class="r fl">
         	<h1><i></i>嘉宾致辞</h1>
@@ -63,13 +64,13 @@
     <div class="peo">
     	<div class="peo1">
         	<p class="title">
-            	<span class="name">田成川</span>
+            	
                 <i></i>
-                <span class="text">解读应对气候变化宏观政策</span>
+               
             </p>
         	<div class="con">
             	<div class="img fr">
-                    <img src="../../source/i/tqzt/lintan/people1.png" title="" alt="">
+                    <img src="http://i.tq121.com.cn/i/tqzt/lintan/people1.png" title="" alt="">
                 </div>
                 <div class="text">
                     <p>目前的气候变化，全球科学家的共识是：有90%以上的可能是人类自己的责任，人类今日所作的决定和选择，会影响气候变化的走向。今日，地球比过去两千年都要热。如果情况持续恶化，于本世纪末，地球气温将攀升至二百万年来的高位。</p>
@@ -83,14 +84,13 @@
     <div class="peo peo2mt">
     	<div class="peo1 peo2">
         	<p class="title">
-            	<span class="note">国家林业局气候办常务副主任中国绿色碳汇基金会秘书长</span>
-            	<span class="name">李怒云</span>
+            
                 <i></i>
-                <span class="text">林业碳汇管理</span>
+              
             </p>
         	<div class="con">
             	<div class="img fl">
-                    <img src="../../source/i/tqzt/lintan/people2.png" title="" alt="">
+                    <img src="http://i.tq121.com.cn/i/tqzt/lintan/people2.png" title="" alt="">
                 </div>
                 <div class="text">
                     <p>目前的气候变化，全球科学家的共识是：有90%以上的可能是人类自己的责任，人类今日所作的决定和选择，会影响气候变化的走向。今日，地球比过去两千年都要热。如果情况持续恶化，于本世纪末，地球气温将攀升至二百万年来的高位。</p>
@@ -104,13 +104,13 @@
     <div class="peo peo3mt">
     	<div class="peo1 peo2 peo3">
         	<p class="title">
-            	<span class="name">李铁铮</span>
+            	
                 <i></i>
-                <span class="text">我国绿色碳汇传播现状分析及对策</span>
+
             </p>
         	<div class="con">
             	<div class="img fr">
-                    <img src="../../source/i/tqzt/lintan/people3.png" title="" alt="">
+                    <img src="http://i.tq121.com.cn/i/tqzt/lintan/people3.png" title="" alt="">
                     <p>李铁铮</p>
                 </div>
                 <div class="text">
@@ -129,9 +129,9 @@
                 <i></i>往期回顾
             </h1>
             <div class="img">
-                <img src="../../source/i/tqzt/lintan/1.jpg" title="" alt="" >
-                <img src="../../source/i/tqzt/lintan/2.jpg" title="" alt="" >
-                <img src="../../source/i/tqzt/lintan/3.jpg" title="" alt="" >
+                <img src="http://i.tq121.com.cn/i/tqzt/lintan/1.jpg" title="" alt="" >
+                <img src="http://i.tq121.com.cn/i/tqzt/lintan/2.jpg" title="" alt="" >
+                <img src="http://i.tq121.com.cn/i/tqzt/lintan/3.jpg" title="" alt="" >
             </div>
     	</div>
         <div class="r fl">

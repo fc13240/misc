@@ -63,9 +63,9 @@
     <div class="peo">
     	<div class="peo1">
         	<p class="title">
-            	
+            	<span class="name">田成川</span>
                 <i></i>
-               
+                <span class="text">解读应对气候变化宏观政策</span>
             </p>
         	<div class="con">
             	<div class="img fr">
@@ -83,9 +83,10 @@
     <div class="peo peo2mt">
     	<div class="peo1 peo2">
         	<p class="title">
-            
+            	<span class="note">国家林业局气候办常务副主任中国绿色碳汇基金会秘书长</span>
+            	<span class="name">李怒云</span>
                 <i></i>
-              
+                <span class="text">林业碳汇管理</span>
             </p>
         	<div class="con">
             	<div class="img fl">
@@ -103,9 +104,9 @@
     <div class="peo peo3mt">
     	<div class="peo1 peo2 peo3">
         	<p class="title">
-            	
+            	<span class="name">李铁铮</span>
                 <i></i>
-
+                <span class="text">我国绿色碳汇传播现状分析及对策</span>
             </p>
         	<div class="con">
             	<div class="img fr">
