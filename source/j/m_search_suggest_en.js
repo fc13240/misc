@@ -178,7 +178,7 @@
 					}
 					var arr = item.ref.split('~');
 					var content = [arr[3]];	//加入城市名
-					arr[5] && content.push(arr[5]); //加入省名
+					arr[5] && content.push(arr[1]); //加入省名
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
 						var areaCode = arr[6];
