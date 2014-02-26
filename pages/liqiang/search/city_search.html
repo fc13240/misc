@@ -98,16 +98,7 @@ img{border:0;}
 
 
 <!--搜索框start-->
-        <div class="search">
-           <div class="formBox">
-            <div id="Zip" class="Mainbox">
-                  <div id="ZipContent">
-                    <input type="text" class="textinput" id="txtZip" placeholder="输入城市名、全拼、简拼、电话区号、邮编查询">
-                    <input type="button" class="btn" id="btnZip" value="">
-                  </div>
-                </div>
-           </div>
-        </div>
+    <input id="text_fuza" value="请输入内容" type="text">
 <!--搜索框end-->
 
 
@@ -118,10 +109,28 @@ img{border:0;}
 
 <script>
      
-      W.use('j/tool/search',function(search){
-    var inputText = $('#txtZip');
-    var btnZip = $('#btnZip');
-    search(inputText,btnZip);
+     W.use('j/m_search_suggest',function(Suggest){
+    var text = "请输入内容";
+    var $textBox = $('#text_fuza').focus(function(){
+        if($(this).val() == text){
+            $(this).val('');
+        }
+    }).blur(function(){
+        if(!$(this).val()){
+            $(this).val(text)
+        }
+    });
+    new Suggest({
+        'url': 'http://toy1.weather.com.cn/search'
+        ,'key': 'cityname'
+        ,'cbName': 'callback'
+        ,'textBox': $textBox
+        ,'bindEvent': false
+        ,'onSelect': function(data){
+            $textBox.val(data[2]+data[0]);
+        }
+        ,'maxnum': 6
+    });
 });
 </script>
 </body>
