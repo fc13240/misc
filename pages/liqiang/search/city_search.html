@@ -82,5 +82,46 @@ img{border:0;}
                     </div>
 	</div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--搜索框start-->
+        <div class="search">
+           <div class="formBox">
+            <div id="Zip" class="Mainbox">
+                  <div id="ZipContent">
+                    <input type="text" class="textinput" id="txtZip" placeholder="输入城市名、全拼、简拼、电话区号、邮编查询">
+                    <input type="button" class="btn" id="btnZip" value="">
+                  </div>
+                </div>
+           </div>
+        </div>
+<!--搜索框end-->
+
+
+
+
+
+
+
+<script>
+     
+      W.use('j/tool/search',function(search){
+    var inputText = $('#txtZip');
+    var btnZip = $('#btnZip');
+    search(inputText,btnZip);
+});
+</script>
 </body>
 </html>
