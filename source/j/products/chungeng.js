@@ -9,5 +9,10 @@ $(function(){
 		}
 	},function(){
 		$(".con>div").hide();
-	})                                                              
+	})    
+	$('.con>div').hover(function(){
+		$(this).show();
+	},function(){
+		$(this).hide();
+	})                                                       
 })
