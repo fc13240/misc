@@ -127,7 +127,8 @@ img{border:0;}
         ,'textBox': $textBox
         ,'bindEvent': false
         ,'onSelect': function(data){
-             var cityName = data[2];
+             var cityName = data[5];
+            //alert(cityName);
              $("#text_fuza").val(cityName);
              var toUrl = '';
               if(data.length == 20){
@@ -139,7 +140,7 @@ img{border:0;}
                    //}
                    alert("无省级站");
                 }else{
-                    toUrl += '/en/weather/'+data[0]+'.shtml';
+                    toUrl += 'http://www.weather.com.cn/en/weather/'+data[0]+'.shtml';
                 }
 
                  $("#text_fuza").data('url',toUrl);
