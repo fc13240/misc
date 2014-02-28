@@ -8,7 +8,7 @@
     <meta name="description" content="" />
 	<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
     <script>W.css('c/core.css','c/common.css',"c/products/chungeng.css")</script>
-	<script>W(function(){W.use('j/products/chungeng.js')})</script>    
+	<script>W(function(){W.use('j/products/chungeng.js')})</script> 
     <base target="_blank" />
 </head>
 
@@ -60,7 +60,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -85,7 +85,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -110,7 +110,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -135,7 +135,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -160,7 +160,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -185,7 +185,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -210,7 +210,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -235,7 +235,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -260,7 +260,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -285,7 +285,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -310,7 +310,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -335,7 +335,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -360,7 +360,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -385,7 +385,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -410,7 +410,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -435,7 +435,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -460,7 +460,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -485,7 +485,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -510,7 +510,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -535,7 +535,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -560,7 +560,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -585,7 +585,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -610,7 +610,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -634,7 +634,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -659,7 +659,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -684,7 +684,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -709,7 +709,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -734,7 +734,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -759,7 +759,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -784,7 +784,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -809,7 +809,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -834,7 +834,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -859,7 +859,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -884,7 +884,7 @@
                 <p>作物应注意</p>
             </div>
             <div class="r fl">
-            	<h1>当前实况</h1>
+            	<h1>当前实况</h1><h1 class="time"></h1>
                 <ul>
                 	<li>温度</li>
                 	<li>风向</li>
@@ -900,7 +900,19 @@
          </div>
          <div class="bg"></div>
    	</div>
-    
+    <script type="text/javascript">
+		var time = function(){
+			var data = new Date();
+			return add_0(data.getHours())+":"+add_0(data.getMinutes());
+			function add_0(n){
+				if(n<10) return '0'+n;
+					else return n;
+			}
+		}
+		W(function(){
+			$(".time").html(time())
+		})
+	</script>
 </div>
 
 </body>

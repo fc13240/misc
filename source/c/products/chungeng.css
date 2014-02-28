@@ -1,12 +1,12 @@
-.con { background:url(../../i/products/chungeng/bg1.jpg) no-repeat; height:420px; width:650px; position:relative; }
+.con {  height:420px; width:650px; position:relative; font-size:12px;}
 .con .m { position:absolute; border:1px solid #08b162; padding:10px; overflow:hidden; z-index:10; display:none; }
 .con .m .t { zoom:1; display:inline }
 .con .m .t .l { width:80px; padding-right:5px; border-right:1px solid #bfbebe; }
 .con .m .t .l h2 { font-size:12px; padding-bottom:6px; }
-.con .m .t .l p { padding:5px 0; font-size:12px; line-height:14px; }
-.con .m .t .r { padding-left:10px; }
+.con .m .t .l p { padding:5px 0;  line-height:14px; }
+.con .m .t .r { padding-left:10px; width:70px; }
 .con .m .t .r h1 { font-size:12px; width:60px }
-.con .m .t .r ul { margin-top:20px; }
+.con .m .t .r ul { margin-top:5px; }
 .con .m .t .r ul li { line-height:16px; }
 .con .m .b { border-top:1px solid #bfbebe; text-align:center; margin-top:8px; padding-top:3px; margin-bottom:-5px; }
 .con .m .b strong { line-height:28px; display:block; }
