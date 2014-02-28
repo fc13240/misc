@@ -58,7 +58,7 @@ body{background:#fff}
 .foot .l .img img{margin-right:10px;margin-left:0;}
 .foot .l h1{font-size:22px; color:#0082c7;position:relative; text-indent:30px; letter-spacing:4px; line-height:22px; padding-bottom:15px;height:22px;}
 .foot .l h1 i{height:20px;width:20px;background-color:#9DFF30;position:absolute;top:3px;left:2px; zoom:1; display:inline-block;float:left; font-size:0;}
-.foot .r{margin-left:20px;width:221px;}
+.foot .r{margin-left:20px;width:221px; padding:0;}
 .foot .r p{ line-height:27px;color:#333;}
 .foot .r p span{ color:#0082c7;}
 
