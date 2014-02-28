@@ -309,7 +309,7 @@ height:85px;line-height:85px;text-align:center;right:0px;top:50px;color:#fff;fon
 #forecast .scroll .noBorder{border-right:none;}
 #forecast .scroll .last{width:40px;}
 
-#forecast .scroll .legend{display:block;}
+#forecast .scroll .legend{display:block;float:left;}
 
 
 #forecast .scroll .blue,#forecast .scroll .blue a{color:#076ea8;line-height:28px;}
