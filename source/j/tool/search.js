@@ -79,12 +79,12 @@ define(function(require){
 	            if(data.length == 20){
 	            	var enName = conf[cityName];	   
 	                if(~enName.indexOf('.')){
-	                	toUrl += 'http://www.weather.com.cn/html/province/'+enName;
+	                	toUrl += '/html/province/'+enName;
 	                }else{
 	                	toUrl += 'http://'+enName+'.'+host;
 	                }
 	            }else{
-	                toUrl += '/weather/'+data[0]+'.shtml';
+	                toUrl += 'http:www.weather.com.cn/weather/'+data[0]+'.shtml';
 	            }
 	            $inputText.data('url',toUrl);
 	            window.open(toUrl);
