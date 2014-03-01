@@ -84,7 +84,7 @@ define(function(require){
 	                	toUrl += 'http://'+enName+'.'+host;
 	                }
 	            }else{
-	                toUrl += 'http:www.weather.com.cn/weather/'+data[0]+'.shtml';
+	                toUrl += 'http://www.weather.com.cn/weather/'+data[0]+'.shtml';
 	            }
 	            $inputText.data('url',toUrl);
 	            window.open(toUrl);
