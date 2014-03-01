@@ -77,10 +77,9 @@ define(function(require){
 	        	$inputText.val(cityName);
 	        	var toUrl = '';
 	            if(data.length == 20){
-	            	var enName = conf[cityName];
-	            	alert(enName);
+	            	var enName = conf[cityName];	   
 	                if(~enName.indexOf('.')){
-	                	toUrl += '/html/province/'+enName;
+	                	toUrl += 'http://www.weather.com.cn/html/province/'+enName;
 	                }else{
 	                	toUrl += 'http://'+enName+'.'+host;
 	                }
