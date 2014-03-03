@@ -33,11 +33,12 @@ body{background:#fff}
 .peo1 .con,.peo1 .peo_bg{width:960px;height:373px;position:absolute; top:-52px; left:0; }
 .peo1 .con .img{margin-right:30px;margin-top:9px;}
 .peo1 .con .text{padding-top:112px;padding-left:24px; color:#333;} 
+.peo1 .con .text p,.peo1 .con .text p{ text-indent:2em;} 
 .peo1 .peo_bg{background:url(../../i/tqzt/lintan/show_bg.png) repeat;z-index:-1;}
 
 .peo2mt{ margin-top:587px}
 .peo2 .con{top:-291px; height:360px}
-.peo2 .con .img{margin:70px 10px 0 28px;}
+.peo2 .con .img{margin:8px 10px 0;}
 .peo2 .con .text{padding-top:24px; }
 .peo2 .title .note{width:209px; letter-spacing:2px; margin-left:-7px; font-size:14px; line-height:14px; display:inline-block;}
 .peo2 .peo_bg{top:-291px; height:360px;}
@@ -48,7 +49,7 @@ body{background:#fff}
 .peo3mt{ margin-top:366px}
 .peo3 .con{top:-322px; height:360px}
 .peo3 .peo_bg{top:-322px}
-.peo3 .con .img{margin:40px 10px 0 28px;}
+.peo3 .con .img{margin:24px 10px 0 28px;}
 .peo3 .con .img p{ text-align:center; width:225px; margin-top:5px; font-size:14px; color:#333;}
 .peo3 .title i{ background:url(../../i/tqzt/lintan/3.png) no-repeat;height:109px; width:100px; top:-64px; left:124px; }
 .peo3 .title .name{ padding-left:0;}
