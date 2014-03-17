@@ -9,7 +9,6 @@ a:hover { color:#F60; text-decoration:underline; }
 .main
 {
 	margin:0 auto;
-	height:3000px;
 	background:#fff;
 	width:960px;}
 .main .nav
@@ -139,3 +138,5 @@ a:hover { color:#F60; text-decoration:underline; }
 .act #showBig .bottom ul li.on{ background-position:-5px -130px;}
 .act #showBig .showLeft,.act #showBig .showRight{ display:block; background:url(../../i/tqzt/worldMetDay_2014/icon.png) no-repeat 0 -48px; cursor:pointer;  width:29px; height:45px; position:absolute; left:15px; top:250px; opacity:0.3; filter:alpha(opacity=30);}
 .act #showBig .showRight{ background:url(../../i/tqzt/worldMetDay_2014/icon.png) no-repeat 0 0; left:893px;}
+
+.microBlogs .blog{ margin-top:0;}
