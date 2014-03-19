@@ -42,9 +42,9 @@ i { font-style:normal; }
 .con .l .localWeather ul li h1 { height:46px; line-height:46px; font-size:16px; font-weight:bold; text-align:center; }
 .con .l .localWeather ul li div img { margin-left:24px; float:left; }
 .con .l .localWeather ul li div span { width:65px; _width:70px; float:left; text-align:center; font-size:35px; line-height:30px; height:30px; }
-.con .l .localWeather ul li div dl { float:right; margin-right:20px; _margin-right:0; _width:94px; }
+.con .l .localWeather ul li div dl { float:right; _margin-right:0; width:90px; }
 .con .l .localWeather ul li div dl dt { height:20px; line-height:20px; }
-.con .l .localWeather ul li div dl dd { margin-top:-2px; }
+.con .l .localWeather ul li div dl dd { margin-top:-2px;  }
 .con .l .localWeather ul li div dl dd i { font-size:18px; }
 .con .l .video { height:305px; background:#f0f0f0; clear:both; }
 .con .l .video h1 { height:35px; text-indent:13px; line-height:35px; font-size:24px; }

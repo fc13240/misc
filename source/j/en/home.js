@@ -1,16 +1,24 @@
 // JavaScript Document
 $(function(){
+
+	//get cookie
+	var defaultCityHistory = '101010100,101020100,101280601';
+	cityHistory = $.cookie('cityHistory') || defaultCityHistory;
+	var chNum = cityHistory.split(',');
+	for(var i=0;i<chNum.length;i++){
+		var url='http://61.4.185.111/fc_24_en/'+chNum[i]+'.html';
+		setWeather(i,url);
+		if(setWeather(i,url)){
+			setWeather(i,'http://61.4.185.111/fc_24_en/'+chNum[i+1]+'.html')
+		}
+		
+	};
 	
-	//“local weather”
-	var id = 101010100;
-	var url='http://61.4.185.111/fc_24_en/'+id+'.html';
-	var $wLi = $(".localWeather ul li");
 	
-	for(var i=0;i<3;i++){
-		setWea(i,url);
-	}
 	
-	function setWea(i,url){
+	//local weather
+	var $wLi = $(".localWeather ul li");	
+	function setWeather(i,url){
 		$.ajax({
 			type:'GET',
 			url:url,
@@ -21,12 +29,14 @@ $(function(){
 				var $li = $wLi.eq(i);
 				$li.children('h1').html(fc_24_en.weatherinfo.city);
 				$li.find("img").attr('src','http://localhost/source/i/en/home/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
+				tool_pngfix()
 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.tempF1));
-				$li.find("i").html(parseInt(fc_24_en.weatherinfo.tempF2))	
+				//setWeather(i+1,'http://61.4.185.111/fc_24_en/'+(i+1)+'.html')
+				//$li.find("i").html(parseInt())
+				return 1;
 			}
 		})
 	}
-	
 	
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 	var $uSL = $("#ulStyle li");
