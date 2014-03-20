@@ -115,5 +115,6 @@ _height:200px; }
 .con .conBgr { background-position:-22px 0; left:100%; }
 .footer .footerNav { margin-top:30px; background-color: #3466BB; color: #FFFFFF; display: block; height: 25px; line-height: 25px; margin-bottom: 10px; text-align: center; }
 .footer .footerNav a{color:#fff;}
+.footer .footerNav a:hover{ text-decoration:underline;}
 .footer p { color: #020202; line-height: 18px; margin: 0; padding: 0; text-align: center }
 .footer .copyIcp { background: url("http://www.weather.com.cn/m2/i/icp07.gif") no-repeat left top ; display: block; line-height: 43px; margin: 0 auto; padding-left: 38px; text-align: center; width: 560px; }
