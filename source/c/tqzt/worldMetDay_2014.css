@@ -78,6 +78,7 @@ a:hover { color:#F60; text-decoration:underline; }
 	font-size:14px;}
 .zhaiYao ul li
 {
+	overflow: hidden;
 	background:url(../../i/tqzt/worldMetDay_2014/dian.jpg) no-repeat 0px 10px;
 	line-height:30px;
 	padding-left:10px;
