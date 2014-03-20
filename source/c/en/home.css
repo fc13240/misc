@@ -41,7 +41,7 @@ i { font-style:normal; }
 .con .l .localWeather h1 { font-size:20px; height:50px; line-height:50px; text-indent:7px; }
 .con .l .localWeather ul li { width:250px; height:100px; background:#3466bb; margin-bottom:9px; color:#fff; }
 .con .l .localWeather ul li h1 { height:40px; line-height:46px; font-size:16px; font-weight:bold; text-align:center; }
-.con .l .localWeather ul li div img { margin-left:24px; float:left; }
+.con .l .localWeather ul li div img { margin-left:24px; float:left; width:40px; height:40px;}
 .con .l .localWeather ul li div span { width:65px; _width:70px; margin-top:6px; float:left; text-align:center; font-size:35px; line-height:30px; height:30px; }
 .con .l .localWeather ul li div dl { float:right; _margin-right:0; width:95px; }
 .con .l .localWeather ul li div dl dt { height:20px; line-height:20px; }
