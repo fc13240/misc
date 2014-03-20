@@ -18,6 +18,7 @@ i { font-style:normal; }
 .top .cen .searchBox .search .r { background:url(../../i/en/home/icon.jpg) no-repeat -5px -42px; left:325px; }
 .top .type { padding:16px 0 0 95px; font-size:14px; }
 .top .type a.typeOn { background:url(../../i/en/home/icon.jpg) no-repeat 64px -401px; display:block; width:23px; height:22px; color:#3466bb; width:100px; line-height:23px; }
+.top .type a.down { background:url(../../i/en/home/icon.jpg) no-repeat 64px -422px; }
 .top .type ul { border:1px solid #ddd; display:none; }
 .top .type ul li a { color:#3466bb; line-height:30px; padding:0 5px; width:89px; height:30px; display:block; }
 .top .type ul li a:hover { background:#3466bb; color:#fff; }
@@ -67,15 +68,16 @@ text-indent:12px; font-size:20px; }
 .con .l .chWea ul li.c { background:#cdd9ee; }
 .con .l .chWea ul li.ml { margin-left:10px; }
 .con .l .chWea ul li.mt { margin-top:10px; }
-.con .l .chWea ul li span { width:190px; display:inline-block; float:left; overflow:hidden; white-space:normal; text-overflow:ellipsis; }
-.con .l .chWea ul li i { width:40px; display:inline-block; text-align:right; }
-.con .l .chWea ul li img { width:37px; height:29px; }
+.con .l .chWea ul li span { width:190px; display:inline-block; float:left; overflow:hidden; white-space:normal; text-overflow:ellipsis; _width:180px; }
+.con .l .chWea ul li i { width:50px; display:inline-block; text-align:right; }
+.con .l .chWea ul li img { width:37px; height:29px; margin-left:5px; }
 .con .l .chWea p { color:#666; text-align:right; height:40px; line-height:40px; padding-right:5px }
 .con .r { padding-left:10px; _padding-left:11px; float:left; }
-.con .r .alarm { width:298px; height:285px; border:1px solid #ffcc00; margin-top:13px; }
-.con .r .alarm h1 { font-size:16px; height:40px; line-height:40px; padding-left:9px; background:#ffcc00; }
+.con .r .alarm { width:298px; height:80px; border:1px solid #ffcc00; margin-top:13px; overflow:hidden;}
+.con .r .alarm h1 { font-size:16px; height:40px; line-height:40px; padding-left:9px; background:#ffcc00; cursor:pointer; }
 .con .r .alarm h1 em { background:url(../../i/en/home/alarm.png) no-repeat; margin-right:15px; width:30px; height:26px; display:inline-block; margin-top:6px; float:left; }
-.con .r .alarm h1 i { background:url(../../i/en/home/icon.jpg) no-repeat 0 -427px; height:19px; width:22px; margin-right:12px; margin-top:10px; float:right; }
+.con .r .alarm h1 i { background:url(../../i/en/home/icon.jpg) no-repeat 0 -470px; height:19px; width:22px; margin-right:12px; margin-top:10px; float:right; }
+.con .r .alarm h1 i.down { background:url(../../i/en/home/icon.jpg) no-repeat 0 -452px;}
 .con .r .alarm ul { padding-top:1px; _padding-top:12px; }
 .con .r .alarm ul li { text-indent:10px; height:35px; line-height:35px; padding-right:10px; *width:278px;
 overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
