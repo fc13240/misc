@@ -17,8 +17,8 @@ i { font-style:normal; }
 .top .cen .searchBox .search .l, .top .cen .searchBox .search .r { background:url(../../i/en/home/icon.jpg) no-repeat 1px -5px; height:30px; width:20px; position:absolute; top:0; _top:2px; left:-9px; }
 .top .cen .searchBox .search .r { background:url(../../i/en/home/icon.jpg) no-repeat -5px -42px; left:325px; }
 .top .type { padding:16px 0 0 95px; font-size:14px; }
-.top .type a.typeOn { background:url(../../i/en/home/icon.jpg) no-repeat 64px -401px; display:block; width:23px; height:22px; color:#3466bb; width:100px; line-height:23px; }
-.top .type a.down { background:url(../../i/en/home/icon.jpg) no-repeat 64px -422px; }
+.top .type a.typeOn { background:url(../../i/en/home/icon.jpg) no-repeat 64px -422px; display:block; width:23px; height:22px; color:#3466bb; width:100px; line-height:23px; }
+.top .type a.down { background:url(../../i/en/home/icon.jpg) no-repeat 64px -401px; }
 .top .type ul { border:1px solid #ddd; display:none; }
 .top .type ul li a { color:#3466bb; line-height:30px; padding:0 5px; width:89px; height:30px; display:block; }
 .top .type ul li a:hover { background:#3466bb; color:#fff; }
