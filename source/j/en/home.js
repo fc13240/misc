@@ -5,7 +5,7 @@ $(function(){
 	$("#weaUnit li:first").click(function(){
 		$(this).siblings().removeClass('on');
 		$(this).addClass('on');
-		//weaTypeFunS();
+		weaTypeFunS();
 	}).click()
 	$("#weaUnit li:last").click(function(){
 		$(this).siblings().removeClass('on');
