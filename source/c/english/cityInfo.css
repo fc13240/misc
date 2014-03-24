@@ -83,10 +83,11 @@ a:hover { text-decoration:underline; }
 .con .left .day7 { }
 .con .left .day7 h1 { line-height:45px; font-size:18px; }
 .con .left .day7 h1 i { text-indent:20px; width:450px; display:inline-block; float:left; }
-.con .left .day7 h1 span { background-image:url(../../i/english/cityInfo/icon.png); cursor:pointer; background-repeat:no-repeat; text-indent:30px; float:right; width:80px; font-size:16px; color:#3466bb; }
+.con .left .day7 h1 span { background-image:url(../../i/english/cityInfo/icon.png); opacity:0.5; filter:alpha(opacity=50); cursor:pointer; background-repeat:no-repeat; text-indent:30px; float:right; width:80px; font-size:16px; color:#3466bb; }
 .con .left .day7 h1 span.gra { background-position:7px -148px; }
 .con .left .day7 h1 span.tab { background-position:6px -118px; }
-.con .left .day7 .graph { background:#f0f5fb; display:none; margin-left:10px;}
+.con .left .day7 h1 span.on {   opacity:1; filter:alpha(opacity=100);}
+.con .left .day7 .graph { background:#f0f5fb; margin-left:10px;}
 .con .left .day7 .graph ul.t { border-bottom:2px solid #cedef1; }
 .con .left .day7 .graph ul.t li { float:left; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
 .con .left .day7 .graph ul.t li i { background-image:url(../../i/english/cityInfo/icon.png); background-position:0px -87px; font:0; position:absolute; left:42%; top:39px; _top:41px; height:14px; _height:10px; width:14px; display:block; }
@@ -109,7 +110,7 @@ a:hover { text-decoration:underline; }
 .con .left .day7 .graph .b div.n { color: #2e51a5; }
 .con .left .day7 .graph .b .rollLeft, .con .left .day7 .graph .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -189px; cursor:pointer; width:30px; height:40px; display:block; position:absolute; top:36px; left:19px; }
 .con .left .day7 .graph .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -228px; left:581px; cursor:pointer;}
-.con .left .day7 table{ margin-left:10px; text-align:center; color:#2d51a7;}
+.con .left .day7 table{ display:none; margin-left:10px; text-align:center; color:#2d51a7;}
 .con .left .day7 table tr{height:40px; font-size:14px; line-height:20px; border:2px solid #fff;}
 .con .left .day7 table tr.tit{ background:#3466bb; color:#fff; font-size:16px; height:40px;}
 .con .left .day7 table .head{background:#d6e3f3;margin-top:1px;}

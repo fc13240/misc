@@ -20,8 +20,50 @@ $(function(){
 	
 	$(".wF").hide();
 	
-	$(".cityName span").hover(function(){
-		var a=$(this).index();
-		alert(a)
+	$(".cityName span").click(function(){
+		var that = $(this);
+		hoverClass(that,"span")
+		var index=$(this).index();
+		switch(index){
+			case 2:$(".livIndex,.hour6").hide();$('.act').fadeIn('slow');break;
+			case 3:$(".act,.hour6").hide();$('.livIndex').fadeIn("slow");break;
+			case 4:$(".act,.livIndex").hide();$('.hour6').fadeIn("slow");break;
+		}
 	})
+	
+	$(".day7 h1 span").click(function(){
+		var that = $(this);
+		hoverClass(that,"span")
+		var index=$(this).index();
+		$(".graph,.table").hide();
+		switch(index){
+			case 1:$(".day7").children().eq(2).show();break;
+			case 2:$(".day7").children().eq(1).show();break;
+		}
+	})
+	
+	$(".livIndex h1 a").hover(function(){
+		var that=$(this);
+		hoverClass(that,'a');
+	})
+	
+	$(".livIndex li").hover(function(){
+		$(this).children('em').show();
+	},function(){
+		$(this).children('em').hide();
+	})
+	
+	$(".near h1 span").click(function(){
+		var that = $(this);
+		var index = $(this).index();
+		hoverClass(that,'span');
+		$(".near").children('ul').hide();
+		$(".near").children('ul').eq(index).fadeIn("slow");
+	})
+	
+	function hoverClass(that,obj){
+		that.siblings(obj).removeClass('on');
+		that.addClass('on')
+	}
+	
 })
