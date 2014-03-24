@@ -76,6 +76,7 @@ a:hover { text-decoration:underline; }
 .con .left .hour6 li p.tem em{ font-size:18px; line-height:36px; vertical-align:top;}
 .con .left .hour6 li p{ line-height:23px;}
 .con .left .hour6 li p i{ font-size:18px; font-weight:bold;}
+.con .left .hour6 li p em{ font-size:18px; }
 .con .left .hour6 li.on { background:#ffd02c; border:1px solid #ffd02c; color:#000;}
 .con .left .hour6 li.on h1{ background:#ffe795;}
 
@@ -129,6 +130,7 @@ a:hover { text-decoration:underline; }
 .con .left .near .mt { margin-top:10px; }
 .con .left .near .ml { margin-left:10px; }
 .con .left .near .c { background:#CDD9EE; }
+.con .left .near #nearAttr {display:none; }
 
 
 .con .right{ width:300px; margin-left:12px; color:#333;}

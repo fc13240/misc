@@ -1,17 +1,22 @@
 // JavaScript Document
 $(function(){
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
-	var $uSL = $("#nearUl li");
+	var $uCL = $("#nearCity li");
+	var $uAL = $("#nearAttr li");
 	var colorNum = [0,3,4,7,8];
 	
 	for(var i=1;i<12;i+=2){
-		$uSL.eq(i).addClass("ml");
+		$uCL.eq(i).addClass("ml");
+		$uAL.eq(i).addClass("ml");
 	};
 	for(var i=2;i<12;i++){
-		$uSL.eq(i).addClass("mt");
+		$uCL.eq(i).addClass("mt");
+		$uAL.eq(i).addClass("mt");
 	}
 	for(var i=0;i<colorNum.length;i++){
-		$uSL.eq(colorNum[i]).addClass('c');
+		$uCL.eq(colorNum[i]).addClass('c');
+		$uAL.eq(colorNum[i]).addClass('c');
 	}
-
+	
+	$(".wF").hide();
 })
