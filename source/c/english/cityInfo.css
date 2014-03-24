@@ -15,7 +15,7 @@ a:hover { text-decoration:underline; }
 .con .left .alarm strong {float:left text-indent:15px; line-height:33px; width:202px; float:left; text-indent:10px; overflow:hidden; height:33px; }
 .con .left .alarm i { background:url(../../i/english/alarm/alarm.jpg); margin-top:6px; float:left; width:25px; height:21px; }
 .con .left .alarm span { text-indent:13px; line-height:33px; float:left; height:33px; width:350px; overflow:hidden; }
-.con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff; display:none;}
+.con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff;}
 .con .left .act li { float:left; padding-top:16px; }
 .con .left .act li.sk { background:#2e51a5; width:200px; }
 .con .left .act li.sk h1 { height:20px; line-height:20px; font-size:20px; }
@@ -64,7 +64,7 @@ a:hover { text-decoration:underline; }
 .con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div{border:none}
 .con .left .livIndex ul .li1 .m a{ background-position:0px -922px;}
 
-.con .left .hour6{ margin-top:10px;;text-align:center;}
+.con .left .hour6{ margin-top:10px; display:none;text-align:center;}
 .con .left .hour6 li{ background:#e2ecf6;margin-left:8px;float:left;color:#3564bc; border:1px solid #e2ecf6; width:150px; height:281px;}
 .con .left .hour6 li h1{background:#f7fbfe;height:59px; }
 .con .left .hour6 li h1 p{ font-size:20px; height:40px; line-height:40px;}
