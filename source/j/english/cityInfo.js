@@ -19,4 +19,9 @@ $(function(){
 	}
 	
 	$(".wF").hide();
+	
+	$(".cityName span").hover(function(){
+		var a=$(this).index();
+		alert(a)
+	})
 })
