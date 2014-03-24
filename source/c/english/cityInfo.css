@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body { background:url(../../i/english/cityInfo/22.jpg) -25px 0; }
+body { _background:url(../../i/english/cityInfo/22.jpg) -25px 0; }
 a:hover { text-decoration:underline; }
 .con .left { width:640px; }
 .con .left .cityName { height:69px; background:#e2ecf7; }
