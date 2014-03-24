@@ -10,12 +10,12 @@ a:hover { text-decoration:underline; }
 .con .left .cityName h1 { font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
 .con .left .cityName span { height:40px; color:#3466bb; line-height:40px; display:inline-block; width:155px; font-size:18px; font-weight:bold; text-align:center; }
 .con .left .cityName span.on { background:#fff; color:#000; }
-.con .left .alarm { display:none; padding-left:9px; margin-top:11px; margin-left:11px; height:33px; border:1px solid #ffd02c; background:#ffe795; }
+.con .left .alarm { padding-left:9px; margin-top:11px; margin-left:11px; height:33px; border:1px solid #ffd02c; background:#ffe795; }
 .con .left .alarm em { background:url(../../i/english/alarm/alarm.png); float:left; width:30px; height:26px; margin-top:3px; }
 .con .left .alarm strong {float:left text-indent:15px; line-height:33px; width:202px; float:left; text-indent:10px; overflow:hidden; height:33px; }
 .con .left .alarm i { background:url(../../i/english/alarm/alarm.jpg); margin-top:6px; float:left; width:25px; height:21px; }
 .con .left .alarm span { text-indent:13px; line-height:33px; float:left; height:33px; width:350px; overflow:hidden; }
-.con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff; display:none;}
+.con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff;}
 .con .left .act li { float:left; padding-top:16px; }
 .con .left .act li.sk { background:#2e51a5; width:200px; }
 .con .left .act li.sk h1 { height:20px; line-height:20px; font-size:20px; }
@@ -45,7 +45,7 @@ a:hover { text-decoration:underline; }
 .con .left .act li.yb .num span { font-size: 12px; line-height: 30px; padding-left: 16px; }
 .con .left .act li.yb .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -32px; padding-right: 7px; }
 .con .left .act li.yb .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -49px ); padding-left: 19px; }
-.con .left .livIndex{ height:500px; background:##3466bb; margin-top:12px; margin-left:11px; color:#fff;}
+.con .left .livIndex{ display:none; height:500px; background:##3466bb; margin-top:12px; margin-left:11px; color:#fff;}
 .con .left .livIndex h1{ height:40px;}
 .con .left .livIndex h1 span{ float:left; width:200px;  font-size:20px;text-indent:15px;line-height:40px; }
 .con .left .livIndex h1 a{ color:#809fd4; margin-top:10px; font-size:16px; width:90px; float:right; height:23px; text-align:center;}
