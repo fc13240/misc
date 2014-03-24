@@ -42,7 +42,7 @@ a:hover
 	background:#F0F0F0;
 	top:0px;
 	float:left;
-	margin-left:15px;}
+	}
 .sumb dl dt
 {
 	background:url(../../i/en/home/index_m.jpg) no-repeat;
@@ -58,5 +58,5 @@ a:hover
 	font-size:14px;
 	word-break:break-all;
 	color:#333333;
-	margin-bottom:20px;
+	margin-bottom:5px;
 	line-height:18px;}

@@ -27,7 +27,7 @@
 .con .l .sumb dl dt .ir { background:url(../../i/english/home/icon.jpg) no-repeat -10px -143px; }
 .con .l .sumb dl dd { font-size:14px; word-break:break-all; color:#333333; margin-bottom:20px; line-height:18px; }
 .con .l .chWea { }
-.con .l .chWea h1 { height:47px; line-height:10px; *line-height:47px;
+.con .l .chWea h1 { height:47px; line-height:47px; *line-height:47px;
 text-indent:12px; font-size:20px; }
 .con .l .chWea ul { }
 .con .l .chWea ul li { background:#e1e8f5; width:283px; height:49px; font-size:16px; line-height:49px; padding:0 13px; float:left; }
