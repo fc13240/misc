@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body { _background:url(../../i/english/cityInfo/22.jpg) -25px 0; }
+body { background:#fff; }
 a:hover { text-decoration:underline; }
 .con .left { width:640px; }
 .con .left .cityName { height:69px; background:#e2ecf7; }
@@ -8,14 +8,14 @@ a:hover { text-decoration:underline; }
 .con .left .cityName ul li { float:left; height:30px; line-height:30px; }
 .con .left .cityName ul li a { color:#2e51a5; margin:0 5px; }
 .con .left .cityName h1 { font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
-.con .left .cityName span { height:40px; color:#3466bb; line-height:40px; display:inline-block; width:155px; font-size:18px; font-weight:bold; text-align:center; }
+.con .left .cityName span { height:40px; cursor:pointer; color:#3466bb; line-height:40px; display:inline-block; width:152px; font-size:18px;text-align:center; }
 .con .left .cityName span.on { background:#fff; color:#000; }
-.con .left .alarm { padding-left:9px; margin-top:11px; margin-left:11px; height:33px; border:1px solid #ffd02c; background:#ffe795; }
+.con .left .alarm {padding-left:9px; margin-top:11px; margin-left:11px; height:33px; border:1px solid #ffd02c; background:#ffe795; }
 .con .left .alarm em { background:url(../../i/english/alarm/alarm.png); float:left; width:30px; height:26px; margin-top:3px; }
 .con .left .alarm strong {float:left text-indent:15px; line-height:33px; width:202px; float:left; text-indent:10px; overflow:hidden; height:33px; }
 .con .left .alarm i { background:url(../../i/english/alarm/alarm.jpg); margin-top:6px; float:left; width:25px; height:21px; }
 .con .left .alarm span { text-indent:13px; line-height:33px; float:left; height:33px; width:350px; overflow:hidden; }
-.con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff;}
+.con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff; display:none;}
 .con .left .act li { float:left; padding-top:16px; }
 .con .left .act li.sk { background:#2e51a5; width:200px; }
 .con .left .act li.sk h1 { height:20px; line-height:20px; font-size:20px; }
@@ -45,51 +45,78 @@ a:hover { text-decoration:underline; }
 .con .left .act li.yb .num span { font-size: 12px; line-height: 30px; padding-left: 16px; }
 .con .left .act li.yb .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -32px; padding-right: 7px; }
 .con .left .act li.yb .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -49px ); padding-left: 19px; }
-.con .left .livIndex{ display:none; height:500px; background:##3466bb; margin-top:12px; margin-left:11px; color:#fff;}
-.con .left .livIndex h1{ height:40px;}
+
+.con .left .livIndex{ background:#3466bb; display:none; margin-top:12px; margin-left:11px; color:#fff;}
+.con .left .livIndex h1{ height:40px; padding-right:10px;}
 .con .left .livIndex h1 span{ float:left; width:200px;  font-size:20px;text-indent:15px;line-height:40px; }
 .con .left .livIndex h1 a{ color:#809fd4; margin-top:10px; font-size:16px; width:90px; float:right; height:23px; text-align:center;}
-.con .left .livIndex h1 a.on{ background:#ffd02c; color:#2e51a5;}
-.con .left .livIndex ul{}
-.con .left .livIndex ul li{}
-.con .left .livIndex ul li h2{}
+.con .left .livIndex h1 a:hover,.con .left .livIndex h1 a.on{ background:#ffd02c; color:#2e51a5; text-decoration:none;}
+.con .left .livIndex ul{padding:0 10px;}
+.con .left .livIndex ul li{ float:left; cursor:pointer; position:relative; width:190px; height:105px; padding:18px 0 18px 10px; border-bottom:1px solid #688dcc;}
+.con .left .livIndex ul li h2{ font-size:16px; height:16px; line-height:16px;}
 .con .left .livIndex ul li .m{}
-.con .left .livIndex ul li .m a{}
-.con .left .livIndex ul li .m span{}
-.con .left .livIndex ul li .m p{}
+.con .left .livIndex ul li .m a{ background-image:url("../../i/english/cityInfo/index.gif"); width:87px; height:55px; float:left;}
+.con .left .livIndex ul li .m span{ float:left; font-size:20px; margin-top:11px;}
+.con .left .livIndex ul li p{font-size:12px; line-height:14px; height:30px;}
+.con .left .livIndex ul li .mouseOn{ background:#2e51a5; display:none; padding:10px; font-size:14px; line-height:18px; position:absolute; left:0; top:0; width:180px; height:121px;}
+.con .left .livIndex ul li div{padding-right:10px; border-right:1px solid #688dcc}
+.con .left .livIndex ul li .m{ border:none;}
+.con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div{border:none}
+.con .left .livIndex ul .li1 .m a{ background-position:0px -922px;}
 
-
+.con .left .hour6{ margin-top:10px;;text-align:center;}
+.con .left .hour6 li{ background:#e2ecf6;margin-left:8px;float:left;color:#3564bc; border:1px solid #e2ecf6; width:150px; height:281px;}
+.con .left .hour6 li h1{background:#f7fbfe;height:59px; }
+.con .left .hour6 li h1 p{ font-size:20px; height:40px; line-height:40px;}
+.con .left .hour6 li h1 i{ display:block; font-size:14px; line-height:14px; height:14px;}
+.con .left .hour6 li img{ margin:0 auto; display:block;}
+.con .left .hour6 li p.wea{line-height:44px; font-weight:bold; }
+.con .left .hour6 li p.tem span{ font-size:12px; margin-right:5px; line-height:47px; padding-right:5px; vertical-align:bottom;}
+.con .left .hour6 li p.tem i{ font-size:30px; font-weight:normal; line-height:46px;}
+.con .left .hour6 li p.tem em{ font-size:18px; line-height:36px; vertical-align:top;}
+.con .left .hour6 li p{ line-height:23px;}
+.con .left .hour6 li p i{ font-size:18px; font-weight:bold;}
+.con .left .hour6 li.on { background:#ffd02c; border:1px solid #ffd02c; color:#000;}
+.con .left .hour6 li.on h1{ background:#ffe795;}
 
 .con .left .day7 { }
-.con .left .day7 h1 { line-height:45px; font-size:24px; }
+.con .left .day7 h1 { line-height:45px; font-size:18px; }
 .con .left .day7 h1 i { text-indent:20px; width:450px; display:inline-block; float:left; }
-.con .left .day7 h1 span { background-image:url(../../i/english/cityInfo/icon.png); background-repeat:no-repeat; text-indent:30px; float:right; width:80px; font-size:16px; color:#3466bb; }
-.con .left .day7 h1 span.graph { background-position:7px -148px; }
-.con .left .day7 h1 span.table { background-position:6px -118px; }
-.con .left .day7 div.dcon { background:#f0f5fb; }
-.con .left .day7 div { margin-left:10px; }
-.con .left .day7 ul.t { border-bottom:2px solid #cedef1; }
-.con .left .day7 ul.t li { float:left; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
-.con .left .day7 ul.t li i { background-image:url(../../i/english/cityInfo/icon.png); background-position:0px -87px; font:0; position:absolute; left:42%; top:39px; _top:41px; height:14px; _height:10px; width:14px; display:block; }
-.con .left .day7 ul.t li.on i { background-position:16px -103px; }
-.con .left .day7 ul.t li.on { background:#dbe7f5; }
-.con .left .day7 .b { height:110px; margin:0; position:relative; }
-.con .left .day7 .bBox { margin:0 auto; width:518px; height:110px; overflow:hidden; }
-.con .left .day7 .b ul { width:3626px }
-.con .left .day7 .b ul li { width:518px; float:left; }
-.con .left .day7 .b ul li div { width:50%; margin:0; }
-.con .left .day7 .b ul li div .l { padding-top:14px; width:156px; text-align:center; color:#2e51a5; font-weight:bold; }
-.con .left .day7 .b ul li div .l p { height:36px; }
-.con .left .day7 .b ul li div .r { width:100px; padding-top:35px; }
-.con .left .day7 .b ul li div .r p { font-size:18px; }
-.con .left .day7 .b ul li div .r p span { color: #999999; font-size: 12px; line-height: 36px; padding-right: 5px; vertical-align: bottom; }
-.con .left .day7 .b ul li div .r p i { font-size:24px; color:#c4111a; margin:0 5px; }
-.con .left .day7 .b ul li div .r p em { font-size: 18px; color:#2e51a5; line-height: 30px; vertical-align: top; }
-.con .left .day7 .b ul li div .r p.fen { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0 -66px; padding-left: 30px; font-size:12px; color:#3466bb; font-weight:bold; }
-.con .left .day7 .b div.n { background:#dbe7f5; }
-.con .left .day7 .b div.n { color: #2e51a5; }
-.con .left .day7 .b .rollLeft, .con .left .day7 .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -189px; cursor:pointer; width:30px; height:40px; display:block; position:absolute; top:36px; left:19px; }
-.con .left .day7 .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -228px; left:581px; cursor:pointer;}
+.con .left .day7 h1 span { background-image:url(../../i/english/cityInfo/icon.png); cursor:pointer; background-repeat:no-repeat; text-indent:30px; float:right; width:80px; font-size:16px; color:#3466bb; }
+.con .left .day7 h1 span.gra { background-position:7px -148px; }
+.con .left .day7 h1 span.tab { background-position:6px -118px; }
+.con .left .day7 .graph { background:#f0f5fb; display:none; margin-left:10px;}
+.con .left .day7 .graph ul.t { border-bottom:2px solid #cedef1; }
+.con .left .day7 .graph ul.t li { float:left; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
+.con .left .day7 .graph ul.t li i { background-image:url(../../i/english/cityInfo/icon.png); background-position:0px -87px; font:0; position:absolute; left:42%; top:39px; _top:41px; height:14px; _height:10px; width:14px; display:block; }
+.con .left .day7 .graph ul.t li.on i { background-position:16px -103px; }
+.con .left .day7 .graph ul.t li.on { background:#dbe7f5; }
+.con .left .day7 .graph .b { height:110px; position:relative; }
+.con .left .day7 .graph .bBox { margin:0 auto; width:518px; height:110px; overflow:hidden; }
+.con .left .day7 .graph .b ul { width:3626px }
+.con .left .day7 .graph .b ul li { width:518px; float:left; }
+.con .left .day7 .graph .b ul li div { width:50%; margin:0; }
+.con .left .day7 .graph .b ul li div .l { padding-top:14px; width:156px; text-align:center; color:#2e51a5; font-weight:bold; }
+.con .left .day7 .graph .b ul li div .l p { height:36px; }
+.con .left .day7 .graph .b ul li div .r { width:100px; padding-top:35px; }
+.con .left .day7 .graph .b ul li div .r p { font-size:18px; }
+.con .left .day7 .graph .b ul li div .r p span { color: #999999; font-size: 12px; line-height: 36px; padding-right: 5px; vertical-align: bottom; }
+.con .left .day7 .graph .b ul li div .r p i { font-size:24px; color:#c4111a; margin:0 5px; }
+.con .left .day7 .graph .b ul li div .r p em { font-size: 18px; color:#2e51a5; line-height: 30px; vertical-align: top; }
+.con .left .day7 .graph .b ul li div .r p.fen { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0 -66px; padding-left: 30px; font-size:12px; color:#3466bb; font-weight:bold; }
+.con .left .day7 .graph .b div.n { background:#dbe7f5; }
+.con .left .day7 .graph .b div.n { color: #2e51a5; }
+.con .left .day7 .graph .b .rollLeft, .con .left .day7 .graph .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -189px; cursor:pointer; width:30px; height:40px; display:block; position:absolute; top:36px; left:19px; }
+.con .left .day7 .graph .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -228px; left:581px; cursor:pointer;}
+.con .left .day7 table{ margin-left:10px; text-align:center; color:#2d51a7;}
+.con .left .day7 table tr{height:40px; font-size:14px; border:2px solid #fff;}
+.con .left .day7 table tr.tit{ background:#3466bb; color:#fff; font-size:16px; height:40px;}
+.con .left .day7 table .head{background:#d6e3f3;margin-top:1px;}
+.con .left .day7 table .head em{ font-size:20px; display:block; color:#2e51a5;}
+.con .left .day7 table .head i{ font-size:12px; font-weight:bold; color:#3466bb; display:block;}
+.con .left .day7 table .bg{background:#f0f0f0; border-bottom:1px;}
+.con .left .day7 table .red{color:#a92f2f;}
+
 .con .left .near { padding-top:10px; }
 .con .left .near h1 { line-height:42px; padding-left:11px; font-size:20px; }
 .con .left .near h1 span { margin:0 16px; color:#2e51a5; cursor:pointer; }
