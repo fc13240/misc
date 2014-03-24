@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+body { background:url(../../i/english/cityInfo/22.jpg) -25px 0; }
+a:hover { text-decoration:underline; }
+.con .left { width:640px; }
+.con .left .cityName { height:69px; background:#e2ecf7; }
+.con .left .cityName ul { padding-left:7px; }
+.con .left .cityName ul li { float:left; height:30px; line-height:30px; }
+.con .left .cityName ul li a { color:#2e51a5; margin:0 5px; }
+.con .left .cityName h1 { font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
+.con .left .cityName span { height:40px; color:#3466bb; line-height:40px; display:inline-block; width:155px; font-size:18px; font-weight:bold; text-align:center; }
+.con .left .cityName span.on { background:#fff; color:#000; }
+.con .left .alarm { display:none; padding-left:9px; margin-top:11px; margin-left:11px; height:33px; border:1px solid #ffd02c; background:#ffe795; }
+.con .left .alarm em { background:url(../../i/english/alarm/alarm.png); float:left; width:30px; height:26px; margin-top:3px; }
+.con .left .alarm strong {float:left text-indent:15px; line-height:33px; width:202px; float:left; text-indent:10px; overflow:hidden; height:33px; }
+.con .left .alarm i { background:url(../../i/english/alarm/alarm.jpg); margin-top:6px; float:left; width:25px; height:21px; }
+.con .left .alarm span { text-indent:13px; line-height:33px; float:left; height:33px; width:350px; overflow:hidden; }
+.con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff; display:none;}
+.con .left .act li { float:left; padding-top:16px; }
+.con .left .act li.sk { background:#2e51a5; width:200px; }
+.con .left .act li.sk h1 { height:20px; line-height:20px; font-size:20px; }
+.con .left .act li.sk img { width:110px; margin:0 auto; }
+.con .left .act li.sk p { }
+.con .left .act li.sk .tem { font-size:20px; }
+.con .left .act li.sk .tem i { font-size:60px; line-height:50px; }
+.con .left .act li.sk .tem em { line-height:25px; vertical-align:top; }
+.con .left .act li.sk .wea { font-size:20px; padding-top:11px; }
+.con .left .act li.sk .felike { color:#bccde8; font-size:12px; line-height:12px; }
+.con .left .act li.sk .felike i { font-size:18px; margin-left:3px; }
+.con .left .act li.sk .num { padding-top:20px; }
+.con .left .act li.sk .num span { font-size: 12px; line-height: 30px; padding-left: 20px; }
+.con .left .act li.sk .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -1px; padding-right: 14px; }
+.con .left .act li.sk .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -18px; padding-left: 21px; }
+.con .left .act li.yb { background:#f0f5fb; height:288px; width:142px; padding-top:16px; color:#2e51a5; border-left:1px solid #e9f1f9; }
+.con .left .act li.yb h1 { font-size:20px; line-height:22px; }
+.con .left .act li.yb h2 { font-size:14px; line-height:14px; padding-top:7px }
+.con .left .act li.yb img { margin-top:20px; }
+.con .left .act li.yb .wea { font-weight:bold; line-height:50px; margin-top:9px; }
+.con .left .act li.yb .tem { font-size:18px; }
+.con .left .act li.yb .tem span { color:#999; font-size:12px; vertical-align:bottom; padding-right:5px; line-height:36px; }
+.con .left .act li.yb .tem i { font-size:30px; }
+.con .left .act li.yb .tem em { font-size:18px; vertical-align:top; line-height:30px; }
+.con .left .act li.yb .felike { color:#3466bb; }
+.con .left .act li.yb .felike i { font-size:18px; margin-left:3px; }
+.con .left .act li.yb .num span { font-size: 12px; line-height: 30px; padding-left: 16px; }
+.con .left .act li.yb .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -32px; padding-right: 7px; }
+.con .left .act li.yb .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -49px ); padding-left: 19px; }
+.con .left .livIndex{ height:500px; background:##3466bb; margin-top:12px; margin-left:11px; color:#fff;}
+.con .left .livIndex h1{ height:40px;}
+.con .left .livIndex h1 span{ float:left; width:200px;  font-size:20px;text-indent:15px;line-height:40px; }
+.con .left .livIndex h1 a{ color:#809fd4; margin-top:10px; font-size:16px; width:90px; float:right; height:23px; text-align:center;}
+.con .left .livIndex h1 a.on{ background:#ffd02c; color:#2e51a5;}
+.con .left .livIndex ul{}
+.con .left .livIndex ul li{}
+.con .left .livIndex ul li h2{}
+.con .left .livIndex ul li .m{}
+.con .left .livIndex ul li .m a{}
+.con .left .livIndex ul li .m span{}
+.con .left .livIndex ul li .m p{}
+
+
+
+.con .left .day7 { }
+.con .left .day7 h1 { line-height:45px; font-size:24px; }
+.con .left .day7 h1 i { text-indent:20px; width:450px; display:inline-block; float:left; }
+.con .left .day7 h1 span { background-image:url(../../i/english/cityInfo/icon.png); background-repeat:no-repeat; text-indent:30px; float:right; width:80px; font-size:16px; color:#3466bb; }
+.con .left .day7 h1 span.graph { background-position:7px -148px; }
+.con .left .day7 h1 span.table { background-position:6px -118px; }
+.con .left .day7 div.dcon { background:#f0f5fb; }
+.con .left .day7 div { margin-left:10px; }
+.con .left .day7 ul.t { border-bottom:2px solid #cedef1; }
+.con .left .day7 ul.t li { float:left; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
+.con .left .day7 ul.t li i { background-image:url(../../i/english/cityInfo/icon.png); background-position:0px -87px; font:0; position:absolute; left:42%; top:39px; _top:41px; height:14px; _height:10px; width:14px; display:block; }
+.con .left .day7 ul.t li.on i { background-position:16px -103px; }
+.con .left .day7 ul.t li.on { background:#dbe7f5; }
+.con .left .day7 .b { height:110px; margin:0; position:relative; }
+.con .left .day7 .bBox { margin:0 auto; width:518px; height:110px; overflow:hidden; }
+.con .left .day7 .b ul { width:3626px }
+.con .left .day7 .b ul li { width:518px; float:left; }
+.con .left .day7 .b ul li div { width:50%; margin:0; }
+.con .left .day7 .b ul li div .l { padding-top:14px; width:156px; text-align:center; color:#2e51a5; font-weight:bold; }
+.con .left .day7 .b ul li div .l p { height:36px; }
+.con .left .day7 .b ul li div .r { width:100px; padding-top:35px; }
+.con .left .day7 .b ul li div .r p { font-size:18px; }
+.con .left .day7 .b ul li div .r p span { color: #999999; font-size: 12px; line-height: 36px; padding-right: 5px; vertical-align: bottom; }
+.con .left .day7 .b ul li div .r p i { font-size:24px; color:#c4111a; margin:0 5px; }
+.con .left .day7 .b ul li div .r p em { font-size: 18px; color:#2e51a5; line-height: 30px; vertical-align: top; }
+.con .left .day7 .b ul li div .r p.fen { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0 -66px; padding-left: 30px; font-size:12px; color:#3466bb; font-weight:bold; }
+.con .left .day7 .b div.n { background:#dbe7f5; }
+.con .left .day7 .b div.n { color: #2e51a5; }
+.con .left .day7 .b .rollLeft, .con .left .day7 .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -189px; cursor:pointer; width:30px; height:40px; display:block; position:absolute; top:36px; left:19px; }
+.con .left .day7 .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -228px; left:581px; cursor:pointer;}
+.con .left .near { padding-top:10px; }
+.con .left .near h1 { line-height:42px; padding-left:11px; font-size:20px; }
+.con .left .near h1 span { margin:0 16px; color:#2e51a5; cursor:pointer; }
+.con .left .near h1 span.on { color:#000; }
+.con .left .near ul { padding-left:13px; }
+.con .left .near ul li { background: none repeat scroll 0 0 #E1E8F5; float: left; font-size: 16px; height: 49px; line-height: 49px; padding: 0 13px; width: 282px; }
+.con .left .near ul li span { display: inline-block; float: left; overflow: hidden; text-overflow: ellipsis; white-space: normal; width: 138px; }
+.con .left .near ul li i, .con .left .near ul li em { color:#c4111a; width:40px; display:inline-block; text-align:right; }
+.con .left .near ul li em { color:#000033; margin-right:10px; }
+.con .left .near .mt { margin-top:10px; }
+.con .left .near .ml { margin-left:10px; }
+.con .left .near .c { background:#CDD9EE; }
+
+
+.con .right{ width:300px; margin-left:12px; color:#333;}
+.con .right .r{ width:120px;}
+.con .right h1{ font-size:20px; line-height:38px;}
+.con .right .video{}
+.con .right .video h1{}
+.con .right  .r .txt{ padding-left:12px; height:54px; overflow:hidden; }
+.con .right  .r .time{height:45px; padding-left:34px; color:#666; padding-top:8px;}
+.con .right  .r a{ font-size:16px; float:right; color:#3466bb; line-height:20px;}
+.con .right .map2{ margin-top:10px;}
+.con .right .ad1{ margin-top:10px;}
+.con .right .ad2{ margin-top:10px;}

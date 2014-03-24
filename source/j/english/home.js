@@ -54,7 +54,7 @@ $(function(){
 				success:function(){
 					var $li = $("#ulStyle li").eq(weaConArr_index);
 					$li.children('span').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
-					$li.children('i').html(fc_24_en.weatherinfo.temp1)
+					$li.children('i').html(parseInt(fc_24_en.weatherinfo.temp1)+"°")
 					$li.children('img').attr('src','http://i.tq121.com.cn/i/english/weaIcon/blue/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png')			
 					tool_pngfix();
 					if(weaConArr_index<weaConArr.length){
@@ -106,7 +106,7 @@ $(function(){
 				success:function(){
 					var $li = $("#ulStyle li").eq(weaConArr_index);
 					$li.children('span').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
-					$li.children('i').html(parseInt(fc_24_en.weatherinfo.tempF1)+"°F")
+					$li.children('i').html(parseInt(fc_24_en.weatherinfo.tempF1)+"°")
 					$li.children('img').attr('src','http://i.tq121.com.cn/i/english/weaIcon/blue/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png')			
 					tool_pngfix();
 					if(weaConArr_index<weaConArr.length){

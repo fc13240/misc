@@ -1,39 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-body {font-family: Arial, Helvetica, sans-serif; background:#fff; color:#000; font-size:12px; font-style:normal; }
-.box { width:965px; margin:0 auto; }
-i { font-style:normal; }
-.top { height:160px; }
-.top .logo { padding:24px 0 0 1px; }
-.top .cen { font-weight:bold; padding-left:107px; height:100%; width:334px; }
-.top .cen .localTime { height:60px; line-height:60px; color:#888; font-size:14px; }
-.top .cen .searchBox { }
-.top .cen .searchBox p { color:#3466bb; font-size:16px; height:34px; line-height:34px; padding-top:10px; }
-.top .cen .searchBox p a { color:#9bb4dd; font-size:12px; margin:0 5px; }
-.top .cen .searchBox p a:hover { text-decoration:underline; }
-.top .cen .searchBox .search { position:relative; }
-.top .cen .searchBox .search .txt { margin-left:4px; border:none; background:#9bb4dd; height:30px; line-height:30px; color:#fff; padding:0 40px 0 10px; width:280px; }
-.top .cen .searchBox .search .btn { background:url(../../i/english/home/icon.jpg) no-repeat 0 -374px; width:21px; height:22px; position:absolute; top:5px; left:310px; z-index:1; cursor:pointer }
-.top .cen .searchBox .search .l, .top .cen .searchBox .search .r { background:url(../../i/english/home/icon.jpg) no-repeat 1px -5px; height:30px; width:20px; position:absolute; top:0; _top:2px; left:-9px; }
-.top .cen .searchBox .search .r { background:url(../../i/english/home/icon.jpg) no-repeat -5px -42px; left:325px; }
-.top .type { padding:16px 0 0 95px; font-size:14px; }
-.top .type a.typeOn { background:url(../../i/english/home/icon.jpg) no-repeat 64px -422px; display:block; width:23px; height:22px; color:#3466bb; width:100px; line-height:23px; }
-.top .type a.down { background:url(../../i/english/home/icon.jpg) no-repeat 64px -401px; }
-.top .type ul { border:1px solid #ddd; display:none; }
-.top .type ul li a { color:#3466bb; line-height:30px; padding:0 5px; width:89px; height:30px; display:block; }
-.top .type ul li a:hover { background:#3466bb; color:#fff; }
-.nav { width:100%; height:50px; background:#3466bb; }
-.nav .box { position:relative; }
-.nav ul.navlink li { float:left; }
-.nav ul.navlink li a { color:#fff; font-size:20px; line-height:50px; height:50px; padding:0 55px; display:inline-block; }
-.nav ul.navlink li.on, .nav ul.navlink li a:hover { background:#2e51a5; }
-.nav ul.weaUnit { position:absolute; left:92%; top:15px; }
-.nav ul.weaUnit li { width:30px; height:20px; float:left; line-height:20px; text-indent:7px; font-weight:bold; background:#e6ecf6; }
-.nav ul.weaUnit li a { color:#2e51a5; width:100%; height:100%; display:block; }
-.nav ul.weaUnit li.on { background:#2e51a5; }
-.nav ul.weaUnit li.on a { color:#fff; }
-.con { background:url(../../i/english/home/bodyBg.jpg) repeat-x; }
-.con .box { background:#fff; position:relative; }
 .con .l { width:630px; float:left; margin-left:13px; _margin-left:7px; }
 .con .l .rader { width:367px; float:left; }
 .con .l .rader h1 { font-size:20px; height:50px; line-height:50px; text-indent:7px; }
@@ -111,10 +77,3 @@ _height:200px; }
 .con .r .hot ul li ul.index5 li { background-position:0 -350px; }
 .con .r .hot ul li ul.index5 li .on li { background-position:0 -335px; }
 .con .r .ad { margin-top:10px; }
-.con .conBgl, .con .conBgr { background-image:url(../../i/english/home/conBg.jpg); background-position:0 0; width:8px; height:1100px; position:absolute; left:-8px; top:0; }
-.con .conBgr { background-position:-22px 0; left:100%; }
-.footer .footerNav { margin-top:30px; background-color: #3466BB; color: #FFFFFF; display: block; height: 25px; line-height: 25px; margin-bottom: 10px; text-align: center; }
-.footer .footerNav a{color:#fff;}
-.footer .footerNav a:hover{ text-decoration:underline;}
-.footer p { color: #020202; line-height: 18px; margin: 0; padding: 0; text-align: center }
-.footer .copyIcp { background: url("http://www.weather.com.cn/m2/i/icp07.gif") no-repeat left top ; display: block; line-height: 43px; margin: 0 auto; padding-left: 38px; text-align: center; width: 560px; }

@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="http://i.tq121.com.cn/c/core.css"  />
+<link type="text/css" rel="stylesheet" href="http://i.tq121.com.cn/c/english/common.css"  />
+<link type="text/css" rel="stylesheet" href="http://i.tq121.com.cn/c/english/cityInfo.css"  />
+<script type="text/javascript" src="http://i.tq121.com.cn/j/jquery-1.8.2.js" ></script>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/english/jq-cookie.js" ></script>
+
+<script type="text/javascript" src="http://i.tq121.com.cn/j/english/tool_pngfix.js" ></script>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/english/cityInfo.js" ></script>
+<!--<script type="text/javascript" src="http://i.tq121.com.cn/j/english/broHistory.js" ></script>
+--><title>WuHu</title>
+</head>
+
+<body>
+<div class="top box clearfix">
+	<div class="logo fl">
+		<a href="###"><img src="http://i.tq121.com.cn/i/english/home/logo.jpg" width="275" height="135" title="Weather China" alt="Weather China" /></a>
+	</div>
+    <div class="cen fl">
+    	<p id="localTime" class="localTime">Local Time 09:30 2013-03-12</p>
+        <div class="searchBox">
+        	<p>Weather Forecast<a href="###" title="" >beijing</a><a href="###" title="" >qingdao</a><a href="###" title="" >shanghai</a><a href="###" title="" >>></a></p>
+       		<div class="search">
+            	<input class="txt" type="text" value="Enter Your City,ST or ZIP Code" onfocus="if(this.value=='Enter Your City,ST or ZIP Code')this.value=''" onblur="if(this.value=='')this.value='Enter Your City,ST or ZIP Code'"  />
+                <input class="btn" type="submit" value=""  />
+                <i class="l"></i>
+                <i class="r"></i>
+            </div>
+        </div>
+    </div>
+    <div class="type fl">
+        <a id="lanType" class="typeOn" title="">English</a>
+        <ul>
+            <li><a href="###" title="English">English</a></li>
+            <li><a href="http://www1.weather.com.cn" title="中文">中文</a></li>
+        </ul>
+    </div>
+    
+</div>
+<div class="nav">
+    <div class="box">
+        <ul class="navlink clearfix">
+            <li class="on"><a href="#">Home</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Rader&Maps </a></li>
+            <li><a href="#">News&Video </a></li>
+        </ul>
+        <ul id="weaUnit" class="weaUnit">
+            <li class="on"><a href="###">°C</a></li>
+            <li><a href="###" >°F</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="con">
+    <div class="box clearfix">
+		<div class="left fl">
+        	<!--面包屑  城市名称 begin-->
+        	<div class="cityName">
+            	<ul class="clearfix">
+                	<li><a href="#">Home</a>></li>
+                	<li><a href="#">Wuhu</a></li>
+                </ul>
+                <h1>Wuhu</h1>
+                <span class="on">Today</span>
+                <span>Living Index</span>
+            </div>
+            <!--面包屑  城市名称 end-->
+        	<!--预警 begin-->
+            <div class="alarm">
+            	<em></em>
+                <strong>Weather Warnings</strong>
+                <i></i>
+                <span>中央气象台发布霾黄色预警</span>
+            </div>
+        	<!--预警 end-->
+        	<!--实况加36小时预报 begin-->
+            <ul class="act clearfix">
+            	<li class="sk">
+                    <h1>Right Now</h1>
+                    <img src="http://i.tq121.com.cn/i/english/weaIcon/white_110/d02.png" />
+                    <p class="tem"><i>34</i><em>°F</em></p>
+                    <p class="wea">Cloudy</p>
+                    <p class="felike">Feels Like<i>40</i>°F</p>
+                    <p class="num">
+                        <span class="n1">17%</span>
+                        <span class="n2">NE 9 mph</span>
+                    </p>
+				</li>
+                <li class="yb">
+                    <h1>Today</h1>
+                    <h2>Mar10</h2>
+                    <img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png" width="80"  />
+                    <p class="wea">Mostly Cloudy / Wind</p>
+                    <p class="tem"><span>height</span><i>58</i><em>°F</em></p>
+                    <p class="felike">Feels Like<i>50°F</i></p>
+                    <p class="num">
+                        <span class="n1">17%</span>
+                        <span class="n2">NE 9 mph</span>
+                    </p>
+                </li>
+                <li class="yb">
+                    <h1>Today</h1>
+                    <h2>Mar10</h2>
+                    <img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png" width="80"  />
+                    <p class="wea">Mostly Cloudy / Wind</p>
+                    <p class="tem"><span>height</span><i>58</i><em>°F</em></p>
+                    <p class="felike">Feels Like<i>50°F</i></p>
+                    <p class="num">
+                        <span class="n1">17%</span>
+                        <span class="n2">NE 9 mph</span>
+                    </p>
+                </li>
+                <li class="yb">
+                    <h1>Today</h1>
+                    <h2>Mar10</h2>
+                    <img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png" width="80"  />
+                    <p class="wea">Mostly Cloudy / Wind</p>
+                    <p class="tem"><span>height</span><i>58</i><em>°F</em></p>
+                    <p class="felike">Feels Like<i>50°F</i></p>
+                    <p class="num">
+                        <span class="n1">17%</span>
+                        <span class="n2">NE 9 mph</span>
+                    </p>
+                </li>
+            </ul>
+        	<!--实况加36小时预报 end-->
+        	<!--指数 begin-->
+            <div class="livIndex">
+            	<h1 class="clearfix"><span>Living Index</span><a class="fr" href="###">All Index</a><a class="fr on" href="###">Hot Index</a></h1>
+                <ul class="clearfix">
+                	<li class="li1">
+                    	<h2>Morning exercise index</h2>
+                        <div class="m">
+                        	<a class="fl" href="###"></a>
+                            <span>Suitable</span>
+                        </div>
+                        <p> The morning cold weather Joe, advised to avoid outdoor ...</p>
+                    </li>
+                </ul>
+            </div>
+        	<!--指数 end-->
+        	<!--七天预报 图例版 begin-->
+        	<div class="day7">
+            	<h1 class="clearfix"><i>7-Day Forecast</i><span class="table">Table</span><span class="graph">Graph</span></h1>
+                <div class="dcon">
+                	<ul class="t clearfix">
+                    	<li>Fri<i></i></li>
+                    	<li>Fri<i></i></li>
+                    	<li class="on">Fri<i></i></li>
+                    	<li>Fri<i></i></li>
+                    	<li>Fri<i></i></li>
+                    	<li>Fri<i></i></li>
+                    	<li>Fri<i></i></li>
+                    </ul>
+                    <div class="b">
+                        <div class="bBox">
+                            <ul class="clearfix">
+                                <li class="clearfix">
+                                    <div class="fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Mostly Cloudy / Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                    <div class="fl clearfix n">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Mostly Cloudy / Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                    <div class="n fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Mostly Cloudy / Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                    <div class="n fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Mostly Cloudy / Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                    <div class="n fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Mostly Cloudy / Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                    <div class="n fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Mostly Cloudy / Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                    <div class="n fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Mostly Cloudy / Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                    <div class="n fl clearfix">
+                                        <div class="fl l">
+                                            <img src="http://i.tq121.com.cn/i/english/weaIcon/blue_80/d01.png" width="60" />
+                                            <p>Wind</p>
+                                        </div> 
+                                        <div class="fl r">
+                                            <p><span>High</span><i>58</i><em>°F</em></p>
+                                            <p class="fen">NE 9 mph</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <i class="rollLeft"></i>
+                        <i class="rollRight"></i>
+                	</div>
+                </div>
+            </div>
+        	<!--七天预报 图例版 end-->
+        	<!--周边城市 begin-->
+            <div class="near">
+            	<h1><span class="on">Nearby Cities</span>|<span>Nearby Attractions</span></h1>
+                <ul id="nearUl" class="clearfix">
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d04.png" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                    <li><span>None</span><i>45°↑</i><em>38°↓</em><img src="" width="40" height="30" /></li>
+                </ul>
+            </div>
+        	<!--七天预报 图例版 end-->
+        </div>
+        <div class="right fl">
+        	<!--天气视频 begin-->
+        	<div class="video">
+            	<h1>Video Weather Forecast</h1>
+                <div class="m clearfix">
+                	<img class="fl" src="http://i.tq121.com.cn/i/english/home/video.jpg" width="180" height="125" />
+                    <div class="fl r">
+                    	<p class="txt">Provide weather information all-round the world.</p>
+                        <div class="time">
+                            <p>10.March 2014</p>
+                        </div>
+                        <a href="###">More > </a>
+                    </div>
+                </div>
+            </div>
+        	<!--天气视频 end-->
+        	<!--weather map begin-->
+            <div class="map">
+            	<h1>Weather Maps</h1>
+                <div class="map1 clearfix">
+                	<img class="fl" src="http://i.tq121.com.cn/i/english/cityInfo/map1.jpg" width="180" height="125" />
+                    <div class="fl r">
+                        <p class="txt">Radar for Beijing</p>
+                        <div class="time">
+                            <p>10:30am</p>
+                            <p>10.March 2014</p>
+                        </div>
+                	</div>
+                </div>
+                <div class="map2 clearfix">
+                	<img class="fl" src="http://i.tq121.com.cn/i/english/cityInfo/map2.jpg" width="180" height="125" />
+                    <div class="fl r">
+                        <p class="txt">China Sathellites Images</p>
+                        <div class="time">
+                            <p>10.March 2014</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        	<!--weather map end-->
+        	<!--广告位 begin-->
+            <div class="ad1">
+            	<img src="http://i.tq121.com.cn/i/english/cityInfo/ad1.jpg" width="300" height="250" />
+            </div>
+            <div class="ad2">
+            	<img src="http://i.tq121.com.cn/i/english/cityInfo/ad2.jpg" width="300" height="250" />
+            </div>
+            <!--广告位 end-->
+        </div>    	  
+      
+        <i class="conBgl"></i>
+        <i class="conBgr"></i>
+    </div>
+</div>
+<!--<div class="footer">
+    <span class="footerNav"><a href="/wzfw/gywm/index.shtml">About Us</a> - <a target="_blank" href="http://marketing.weather.com.cn/">Contact Us</a> - <a target="_blank" href="http://ad.weather.com.cn/">Job Offer</a> - <a href="/wzfw/lxwm/index.shtml">Customer Service</a> - <a href="/wzfw/ryzp/index.shtml">Registration</a> - <a href="/wzfw/sybz/index.shtml" >Q&A </a> - <a href="/wzfw/wapb/index.shtml" >WAP</a> - <a href="/wzfw/wzdt/index.shtml">Site Map</a></span>
+    <p> Copyright@The Public Weather Service Center of CMA All Rights Reserved (2008-2012)</p>
+    <p>Important Notice:The distribution of the weather information from www.weather.com.cn is forbidden without warranty.</p>
+    <p class="copyIcp">京ICP证010385号 京公网安备11041400134 Value-added Telecom Business License B2-20050053</p>
+</div>
+--></body>
+</html>
