@@ -75,7 +75,7 @@ $(function(){
 	$()
 	
 	//七天预报
-	$(".day7 h1 span").click(function(){
+	$(".day7 h1 span").css('opacity',0.5).click(function(){
 		var that = $(this);
 		hoverClass(that,"span")
 		var index=$(this).index();
@@ -100,5 +100,5 @@ $(function(){
 		that.siblings(obj).removeClass('on');
 		that.addClass('on')
 	}
-	
+	tool_pngfix();
 })
