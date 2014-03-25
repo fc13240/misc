@@ -34,12 +34,12 @@ i { font-style:normal; }
 .nav ul.weaUnit li.on a { color:#fff; }
 
 .con { background:url(../../i/english/home/bodyBg.jpg) repeat-x; }
-.con .box { background:#fff; position:relative; }
-.con .conBgl, .con .conBgr { background-image:url(../../i/english/home/conBg.jpg); background-position:0 0; width:8px; height:1100px; position:absolute; left:-8px; top:0; }
+.con .box { background:#fff; position:relative;_box-shadow:0 5px 10px #666666; padding-bottom:30px;}
+.con .conBgl, .con .conBgr { background-image:url(../../i/english/home/conBg.jpg); background-repeat:no-repeat; background-position:0 0; width:8px; height:100%; position:absolute; left:-8px; top:0; }
 .con .conBgr { background-position:-22px 0; left:100%; }
 
 
-.footer .footerNav { margin-top:30px; background-color: #3466BB; color: #FFFFFF; display: block; height: 25px; line-height: 25px; margin-bottom: 10px; text-align: center; }
+.footer .footerNav { background-color: #3466BB; color: #FFFFFF; display: block; height: 25px; line-height: 25px; margin-bottom: 10px; text-align: center; }
 .footer .footerNav a{color:#fff;}
 .footer .footerNav a:hover{ text-decoration:underline;}
 .footer p { color: #020202; line-height: 18px; margin: 0; padding: 0; text-align: center }

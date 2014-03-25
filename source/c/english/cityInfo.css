@@ -1,7 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-body { background:#fff; }
-a:hover { text-decoration:underline; }
+body { background:#fff;}
+.con .conBgl, .con .conBgr { background-image:url(../../i/english/cityInfo/conBg.jpg); }
+
 .con .left { width:640px; }
 .con .left .cityName { height:69px; background:#e2ecf7; }
 .con .left .cityName ul { padding-left:7px; }
@@ -17,20 +18,23 @@ a:hover { text-decoration:underline; }
 .con .left .alarm span { text-indent:13px; line-height:33px; float:left; height:33px; width:350px; overflow:hidden; }
 .con .left .act { text-align:center; margin-left:11px; margin-top:7px; color:#fff;}
 .con .left .act li { float:left; padding-top:16px; }
-.con .left .act li.sk { background:#2e51a5; width:200px; }
+.con .left .act li.sk { background:#2e51a5; width:200px; position:relative; }
 .con .left .act li.sk h1 { height:20px; line-height:20px; font-size:20px; }
 .con .left .act li.sk img { width:110px; margin:0 auto; }
 .con .left .act li.sk p { }
 .con .left .act li.sk .tem { font-size:20px; }
 .con .left .act li.sk .tem i { font-size:60px; line-height:50px; }
 .con .left .act li.sk .tem em { line-height:25px; vertical-align:top; }
-.con .left .act li.sk .wea { font-size:20px; padding-top:11px; }
+.con .left .act li.sk .wea { font-size:20px; padding-top:0px; }
 .con .left .act li.sk .felike { color:#bccde8; font-size:12px; line-height:12px; }
 .con .left .act li.sk .felike i { font-size:18px; margin-left:3px; }
-.con .left .act li.sk .num { padding-top:20px; }
-.con .left .act li.sk .num span { font-size: 12px; line-height: 30px; padding-left: 20px; }
+.con .left .act li.sk .num { padding-top:5px; }
+.con .left .act li.sk .num span { font-size: 12px; line-height: 14px; padding-left: 20px; }
 .con .left .act li.sk .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -1px; padding-right: 14px; }
 .con .left .act li.sk .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -18px; padding-left: 21px; }
+.con .left .act li.sk .cityAlarm{ background:url(../../i/english/alarm/cityAlarm.png) no-repeat; width:27px;height:27px; position:absolute; top:56px; left:123px;}
+.con .left .act li.sk a{ background:#ffd02c; height:26px; line-height:26px; width:180px; display:block; margin:5px auto; cursor:pointer;}
+.con .left .act li.sk a:hover{ color:#252525;}
 .con .left .act li.yb { background:#f0f5fb; height:288px; width:142px; padding-top:16px; color:#2e51a5; border-left:1px solid #e9f1f9; }
 .con .left .act li.yb h1 { font-size:20px; line-height:22px; }
 .con .left .act li.yb h2 { font-size:14px; line-height:14px; padding-top:7px }
@@ -47,10 +51,10 @@ a:hover { text-decoration:underline; }
 .con .left .act li.yb .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -49px ); padding-left: 19px; }
 
 .con .left .livIndex{ background:#3466bb; display:none; margin-top:12px; margin-left:11px; color:#fff;}
-.con .left .livIndex h1{ height:40px; padding-right:10px;}
+.con .left .livIndex h1{ height:40px; padding-right:10px; border-bottom:1px solid #688DCC;}
 .con .left .livIndex h1 span{ float:left; width:200px;  font-size:20px;text-indent:15px;line-height:40px; }
 .con .left .livIndex h1 a{ color:#809fd4; margin-top:10px; font-size:16px; width:90px; float:right; height:23px; text-align:center;}
-.con .left .livIndex h1 a:hover,.con .left .livIndex h1 a.on{ background:#ffd02c; color:#2e51a5; text-decoration:none;}
+.con .left .livIndex h1 a.on{ background:#ffd02c; color:#2e51a5; text-decoration:none;}
 .con .left .livIndex ul{padding:0 10px;}
 .con .left .livIndex ul li{ float:left; cursor:pointer; position:relative; width:190px; height:105px; padding:18px 0 18px 10px; border-bottom:1px solid #688dcc;}
 .con .left .livIndex ul li h2{ font-size:16px; height:16px; line-height:16px;}
@@ -61,7 +65,7 @@ a:hover { text-decoration:underline; }
 .con .left .livIndex ul li .mouseOn{ background:#2e51a5; display:none; padding:10px; font-size:14px; line-height:18px; position:absolute; left:0; top:0; width:180px; height:121px;}
 .con .left .livIndex ul li div{padding-right:10px; border-right:1px solid #688dcc}
 .con .left .livIndex ul li .m{ border:none;}
-.con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div{border:none}
+.con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div,.con .left .livIndex .li12 div,.con .left .livIndex .li15 div,.con .left .livIndex .li18 div{border:none}
 .con .left .livIndex ul .li1 .m a{ background-position:0px -922px;}
 
 .con .left .hour6{ margin-top:10px; display:none;text-align:center;}
