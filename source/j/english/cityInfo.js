@@ -50,9 +50,9 @@ $(function(){
 		hoverClass(that,"span")
 		var index=$(this).index();
 		switch(index){
-			case 2:$(".livIndex,.hour6").hide();$('.act').fadeIn('slow');break;
-			case 3:$(".act,.livIndex").hide();$('.hour6').fadeIn("slow");break;
-			case 4:$(".act,.hour6").hide();$('.livIndex').fadeIn("slow");break;
+			case 2:$(".livIndex,.hour6").hide();$('.act').show();break;
+			case 3:$(".act,.livIndex").hide();$('.hour6').show();break;
+			case 4:$(".act,.hour6").hide();$('.livIndex').show();break;
 		}
 	})
 	//指数hot index & all index
@@ -75,15 +75,15 @@ $(function(){
 	$()
 	
 	//七天预报
-	$(".day7 h1 span").css('opacity',0.5).click(function(){
-		var that = $(this);
-		hoverClass(that,"span")
-		var index=$(this).index();
-		$(".graph,.table").hide();
-		switch(index){
-			case 1:$(".day7").children().eq(2).show();break;
-			case 2:$(".day7").children().eq(1).show();break;
-		}
+	$(".day7 h1 span").click(function(){
+		$('.tab,.gra').removeClass('on');
+//		var that = $(this);
+//		hoverClass(that,"span")
+//		var index=$(this).index();
+//		switch(index){
+//			case 1:$(".graph,.table").hide();$(".day7").children().eq(2).show();break;
+//			case 2:$(".graph,.table").hide();$(".day7").children().eq(1).show();break;
+//		}
 	})
 	
 	//周边城市 周边景点
@@ -92,7 +92,7 @@ $(function(){
 		var index = $(this).index();
 		hoverClass(that,'span');
 		$(".near").children('ul').hide();
-		$(".near").children('ul').eq(index).fadeIn("slow");
+		$(".near").children('ul').eq(index).show();
 	})
 	
 	//mouse hover function
