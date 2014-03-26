@@ -43,7 +43,7 @@
 .con .r .alarm h1 em { background:url(../../i/english/home/alarm.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/english/home/alarm.png");  margin-right:15px; width:30px; height:26px; display:inline-block; margin-top:6px; float:left; }
 .con .r .alarm h1 i { background:url(../../i/english/home/icon.jpg) no-repeat 0 -470px; height:19px; width:22px; margin-right:12px; margin-top:10px; float:right; }
 .con .r .alarm h1 i.down { background:url(../../i/english/home/icon.jpg) no-repeat 0 -452px;}
-.con .r .alarm ul { padding-top:1px; _padding-top:12px; }
+.con .r .alarm ul { padding-top:1px; _padding-top:12px; overflow:hidden;}
 .con .r .alarm ul li { text-indent:10px; height:35px; line-height:35px; padding-right:10px; *width:278px;
 overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
 .con .r .alarm ul li img { margin-right:10px; }

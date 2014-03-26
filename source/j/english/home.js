@@ -134,8 +134,8 @@ define(function(require){
 			var gradeObj={"01":'blue','02':'yellow','03':'orange','04':'red','91':'white'};
 			var kindObj = {'01':'typhoon','02':'torrential rain','03':'snowstorm',"04":'cold spell',"05":'strong wind',"06":'sandstorm',"07":'high temperature',"08":'drought',"09":'thunderbolt',"10":'hail',"11":'frost',"12":'heavy fog',"13":'haze',"14":'icy road',"91":'cold',"92":'dust-haze',"93":'thunderstorm and gale',"94":'forest fire warning',"95":'temperature drop',"96":'snow and ice road',"97":'dry-hot wind',"98":'low temperature',"99":'freeze'};
 			for(var j=0;j<alarminfo.gj.length;j++){
-				var aLink =  alarminfo.gj[i].http;
-				var txt = alarminfo.gj[i].name+"Warning for National Meteorological Center"
+				var aLink =  alarminfo.gj[j].http;
+				var txt = alarminfo.gj[j].name+"Warning for National Meteorological Center"
 				var $li = $("<li><img src=\"http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg\" width=\"25\" height=\"25\"/><a href="+aLink +" target=\"_blank\">"+txt+"</a></li>");
 				$li.appendTo($alarmU);
 			}
@@ -149,11 +149,14 @@ define(function(require){
 				var $li = $("<li><img src=\"http://i.tq121.com.cn/i/alarm_icon/"+kind+grade+".gif\" width=\"25\" height=\"20\"/><a href="+aLink +" target=\"_blank\">"+txt+"</a></li>");
 				$li.appendTo($alarmU);
 			}
-			return alarmUh=$(".alarm ul").height()+70;
+			alarmUh = $(".alarm ul").height()>210?210:$(".alarm ul").height();
+			$('.alarm ul').css('height',alarmUh);
+			return alarmUh;
 		}
 	})
+	//
 	$(".alarm h1").toggle(function(){
-		$(this).parent().animate({height:alarmUh+'px'},400);
+		$(this).parent().animate({height:alarmUh+70+'px'},400);
 		$(this).children('i').addClass('down');
 		
 	},function(){
