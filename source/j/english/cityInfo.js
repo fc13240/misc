@@ -77,13 +77,14 @@ $(function(){
 	//七天预报
 	$(".day7 h1 span").click(function(){
 		$('.tab,.gra').removeClass('on');
-//		var that = $(this);
-//		hoverClass(that,"span")
-//		var index=$(this).index();
-//		switch(index){
-//			case 1:$(".graph,.table").hide();$(".day7").children().eq(2).show();break;
-//			case 2:$(".graph,.table").hide();$(".day7").children().eq(1).show();break;
-//		}
+		$('.day7 h1 span i').css('opacity',0.5);
+		$(this).children('i').css('opacity',1);
+		var that = $(this);
+		hoverClass(that,"span")
+		var index=$(this).index()==2?0:1;
+		$(".day7").children('div').hide();
+		$(".day7").children('div').eq(index).show();
+		
 	})
 	
 	//周边城市 周边景点
