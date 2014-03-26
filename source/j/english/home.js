@@ -1,8 +1,8 @@
 // JavaScript Document
 define(function(require){	
-	require('jquery');
+	require('../jquery-1.8.2');
 	require('./jq-cookie');
-	require('../tool/tool_pngfix');
+	require('../tool/tool_pngfix');	
 
 	//温度格式切换
 	$("#weaUnit li:first").click(function(){
