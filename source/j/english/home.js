@@ -118,15 +118,41 @@ $(function(){
 		}weaConFun();
 	}
 	//预警
+
+	$.ajax({
+		type:'GET',
+		url:"http://product.weather.com.cn/alarm/Indexalarm_en.php",
+		dataType:'script',
+		cache:false,
+		async:false,
+		success:function(){
+			var $alarmU = $(".alarm ul");		
+			var l=alarminfo.pr.length;
+			var gradeObj={"01":'blue','02':'yellow','03':'orange','04':'red','91':'white'};
+			var kindObj = {'01':'typhoon','02':'torrential rain','03':'snowstorm',"04":'cold spell',"05":'strong wind',"06":'sandstorm',"07":'high temperature',"08":'drought',"09":'thunderbolt',"10":'hail',"11":'frost',"12":'heavy fog',"13":'haze',"14":'icy road',"91":'cold',"92":'dust-haze',"93":'thunderstorm and gale',"94":'forest fire warning',"95":'temperature drop',"96":'snow and ice road',"97":'dry-hot wind',"98":'low temperature',"99":'freeze'};
+			$alarmU.empty();
+			for(var i=0;i<l;i++){
+				var fileName = alarminfo.pr[i][1];
+				var point = fileName.lastIndexOf('-');
+				var kind = fileName.substr(point + 1, 2);
+				var grade = fileName.substr(point + 3, 2);
+				var txt = alarminfo.pr[i][0]+" Observatory issued a "+gradeObj[grade]+" "+kindObj[kind];
+				var aLink = 'http://www.weather.com.cn/alarm/newalarmcontent.shtml?file='+alarminfo.pr[i][1];
+				var $li = $("<li><img src=\"http://i.tq121.com.cn/i/alarm_icon/"+kind+grade+".gif\" width=\"25\" height=\"20\"/><a href="+aLink +" target=\"_blank\">"+txt+"</a></li>");
+				$li.appendTo($alarmU);
+			}
+			return alarmUh=$(".alarm ul").height()+70;
+		}
+	})
 	$(".alarm h1").toggle(function(){
-		$(this).parent().animate({height:'280px'},400);
+		$(this).parent().animate({height:alarmUh+'px'},400);
 		$(this).children('i').addClass('down');
 		
 	},function(){
 		$(this).parent().animate({height:'80px'},400);
 		$(this).children('i').removeClass();
 	})
-	//
+	
 	
 	
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
