@@ -1,6 +1,6 @@
 // JavaScript Document
 define(function(require){	
-	require('../jquery-1.8.2');
+	require('jquery');
 	require('./jq-cookie');
 	require('../tool/tool_pngfix');	
 
