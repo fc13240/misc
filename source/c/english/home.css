@@ -13,7 +13,7 @@
 .con .l .localWeather ul li div dl dt { margin-top:12px; height:14px; line-height:14px; text-indent:6px;}
 .con .l .localWeather ul li div dl dd { height:14px; line-height:14px;}
 .con .l .localWeather ul li div dl dd i { font-size:18px; }
-.con .l .video { height:305px; background:#f0f0f0; clear:both; }
+.con .l .video { height:305px; background:#f0f0f0; clear:both; overflow:hidden; }
 .con .l .video h1 { height:35px; text-indent:13px; line-height:35px; font-size:24px; }
 .con .l .video .vid { width:605px; margin:0 auto; }
 .con .l .video .vid dl.v dd { padding-bottom:10px; color:#666666; position:relative; width:325px; line-height:16px; }
