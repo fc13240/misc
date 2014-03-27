@@ -39,6 +39,9 @@
  * @cat Plugins/Cookie
  * @author Klaus Hartl/klaus.hartl@stilbuero.de
  */
+
+define(function(require){	
+	require('jquery');
 	
 	jQuery.cookie = function(name, value, options) {
 		if (typeof value != 'undefined') { // name and value given, set cookie
@@ -78,3 +81,4 @@
 			return cookieValue;
 		}
 	};
+})
