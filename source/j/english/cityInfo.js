@@ -2,6 +2,7 @@
 define(function(require){	
 	require('jquery');
 	require('./jq-cookie');
+	//require('./broHistory');
 	require('../tool/tool_pngfix');	
 
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
@@ -91,35 +92,25 @@ define(function(require){
 	})
 	//七天预报图例版 左右滚动效果
 	function _roll(){
-		var $dUl = $(".day7 .bBox ul")
+		var $dUl = $(".day7 .bBox ul");
 		var $dLi = $dUl.children('li');
 		var dUlW = $dLi.width()*$dLi.length;
 		var liIndex = 0;
 		var $iRoll = $('.day7 div.b i');
 		$(".rollLeft").hide();
-		$dUl.width(dUlW)
+		$dUl.width(dUlW);
 		$iRoll.click(function(){
-			$dUl.stop(true,true);
 			var iIndex=$(this).index();
-			
 			liIndex += (iIndex ==1||iIndex==3)?-1:1; //兼容ie6 index
-			
-			$(".rollLeft,.rollRight").show();
-			if(liIndex==0){
-				$(".rollLeft").hide();
-			}
-			if(liIndex>=$tLi.length-1){
-				$(".rollRight").hide();
-			}
-			$tLi.removeClass('on');
-			$tLi.eq(liIndex).addClass('on');
-			$dUl.animate({left: -518*liIndex+"px"}, 600);
-			return liIndex;
+			return liIndex=_roll(liIndex);
 		})
 		var $tLi = $('.day7 .graph ul.t li');
 		$tLi.click(function(){
+			var iIndex = $(this).index();
+			return liIndex=_roll(iIndex);
+		})
+		var _roll = function(iIndex){
 			$dUl.stop(true,true);
-			var iIndex = $(this).index();	
 			$(".rollLeft,.rollRight").show();		
 			if(iIndex==0){
 				$(".rollLeft").hide();
@@ -130,8 +121,8 @@ define(function(require){
 			$tLi.removeClass('on');
 			$tLi.eq(iIndex).addClass('on');
 			$dUl.animate({left: -518*iIndex+"px"}, 600);
-			return liIndex=iIndex;
-		})
+			return iIndex;
+		}
 	}_roll()
 	
 	//周边城市 周边景点

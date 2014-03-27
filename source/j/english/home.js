@@ -2,7 +2,7 @@
 define(function(require){	
 	require('jquery');
 	require('./jq-cookie');
-	require('./broHistory');
+	//require('./broHistory');
 	require('../tool/tool_pngfix');	
 
 	//温度格式切换
@@ -24,7 +24,7 @@ define(function(require){
 		var chNum = cityHistory.split(',')
 		var cityHis_index = 0;	
 		$(".localWeather dt").html("°C")
-		function setWeather(){
+		function setWeather(){  //递归法 解决for循环 异步执行 数据覆盖问题
 			$.ajax({
 				type:'GET',
 				url:"http://61.4.185.111/fc_24_en/"+chNum[cityHis_index]+".html",
@@ -38,7 +38,7 @@ define(function(require){
 					tool_pngfix();
 					$li.find("span").html(parseInt(fc_24_en.weatherinfo.temp1))
 					if(cityHis_index < chNum.length){
-						cityHis_index++;
+						cityHis_index++;   //递归
 						setWeather()
 					}
 				}
@@ -126,8 +126,8 @@ define(function(require){
 		type:'GET',
 		url:"http://product.weather.com.cn/alarm/Indexalarm_en.php",
 		dataType:'script',
-		cache:false,
-		async:false,
+		cache:true,
+		async:true,
 		success:function(){
 			var $alarmU = $(".alarm ul");		
 			var l=alarminfo.pr.length;
@@ -165,7 +165,16 @@ define(function(require){
 	
 	//雷达图
 	//url="http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_"+obj.fn+"_l88_pi_"+obj.ft+".gif"
-	
+	$.ajax({
+		type:'GET',
+		url:"http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html",
+		dataType:'script',
+		cache:true,
+		async:true,
+		success:function(){
+			alert(readerinfo.cn)
+		}
+	})
 	
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 	var $uSL = $("#ulStyle li");
