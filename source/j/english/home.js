@@ -165,16 +165,16 @@ define(function(require){
 	
 	//雷达图
 	//url="http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_"+obj.fn+"_l88_pi_"+obj.ft+".gif"
-	$.ajax({
-		type:'GET',
-		url:"http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html",
-		dataType:'script',
-		cache:true,
-		async:true,
-		success:function(){
-			alert(readerinfo.cn)
-		}
-	})
+//	$.ajax({
+//		type:'GET',
+//		url:"http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html",
+//		dataType:'script',
+//		cache:true,
+//		async:true,
+//		success:function(){
+//			//alert(readerinfo.cn)
+//		}
+//	})
 	
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 	var $uSL = $("#ulStyle li");
