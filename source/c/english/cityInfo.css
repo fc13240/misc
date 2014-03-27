@@ -37,7 +37,7 @@ body { background:#fff;}
 .con .left .act li.sk a:hover{ color:#252525; background:#EFC01C}
 .con .left .act li.yb { background:#f0f5fb;  width:142px; padding-top:16px; color:#2e51a5; border-left:1px solid #e9f1f9; }
 .con .left .act li.yb h1 { font-size:20px; line-height:22px; }
-.con .left .act li.yb h2 { font-size:14px; line-height:14px; padding-top:7px; font-weight:normal;}
+.con .left .act li.yb h2 { font-size:14px; line-height:14px; padding-top:7px; font-weight:bold; font-family:'Trebuchet MS';}
 .con .left .act li.yb img { margin-top:9px; }
 .con .left .act li.yb .wea { font-weight:bold; line-height:50px; }
 .con .left .act li.yb .tem { font-size:18px; }
@@ -80,7 +80,7 @@ body { background:#fff;}
 .con .left .hour6 li p.tem i{ font-size:30px; font-weight:normal; line-height:46px;}
 .con .left .hour6 li p.tem em{ font-size:18px; line-height:36px; vertical-align:top;}
 .con .left .hour6 li p.temLow{ height: 30px; margin-top: -10px;}
-.con .left .hour6 li p.temLow span{line-height: 43px;}
+.con .left .hour6 li p.temLow span{line-height: 43px; margin-right:5px;}
 .con .left .hour6 li p.temLow i{font-size: 18px; margin-right: 2px; display: inline;}
 .con .left .hour6 li p.temLow em{line-height: 47px; display: inline;}
 
@@ -105,7 +105,7 @@ body { background:#fff;}
 
 .con .left .day7 .graph { background:#f0f5fb; margin-left:10px;}
 .con .left .day7 .graph ul.t { border-bottom:2px solid #cedef1; }
-.con .left .day7 .graph ul.t li { float:left; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
+.con .left .day7 .graph ul.t li { float:left; cursor:pointer; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
 .con .left .day7 .graph ul.day8 li{ width:78px;}
 .con .left .day7 .graph ul.t li i { background-image:url(../../i/english/cityInfo/icon.png);_background-image:url(../../i/english/cityInfo/icon.gif); background-position:0px -87px; font:0; position:absolute; left:42%; top:39px; _top:41px; height:14px; _height:10px; width:14px; display:block; }
 .con .left .day7 .graph ul.t li.on { background:#dbe7f5; }

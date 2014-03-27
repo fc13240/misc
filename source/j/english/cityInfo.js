@@ -1,6 +1,6 @@
 // JavaScript Document
 define(function(require){	
-	require('../jquery');
+	require('jquery');
 	require('./jq-cookie');
 	require('../tool/tool_pngfix');	
 
@@ -90,35 +90,49 @@ define(function(require){
 		$(".day7").children('div').eq(index).show();
 	})
 	//七天预报图例版 左右滚动效果
-	var $dUl = $(".day7 .bBox ul")
-	var $dLi = $dUl.children('li');
-	var dUlW = $dLi.width()*$dLi.length;
-	$dUl.width(dUlW)
-
-	
-	var liIndex = 0;
-	var $iRoll = $('.day7 div.b i');
-	$(".rollLeft").hide();
-
-	$iRoll.click(function(){
-		$dUl.stop(true,true);
-		var iIndex=$(this).index();
+	function _roll(){
+		var $dUl = $(".day7 .bBox ul")
+		var $dLi = $dUl.children('li');
+		var dUlW = $dLi.width()*$dLi.length;
+		var liIndex = 0;
+		var $iRoll = $('.day7 div.b i');
+		$(".rollLeft").hide();
+		$dUl.width(dUlW)
+		$iRoll.click(function(){
+			$dUl.stop(true,true);
+			var iIndex=$(this).index();
+			
+			liIndex += (iIndex ==1||iIndex==3)?-1:1; //兼容ie6 index
+			
+			$(".rollLeft,.rollRight").show();
+			if(liIndex==0){
+				$(".rollLeft").hide();
+			}
+			if(liIndex>=$tLi.length-1){
+				$(".rollRight").hide();
+			}
+			$tLi.removeClass('on');
+			$tLi.eq(liIndex).addClass('on');
+			$dUl.animate({left: -518*liIndex+"px"}, 600);
+			return liIndex;
+		})
 		var $tLi = $('.day7 .graph ul.t li');
-		liIndex += (iIndex ==1||iIndex==3)?-1:1; //兼容ie6 index
-		
-		$(".rollLeft,.rollRight").show();
-		if(liIndex==0){
-			$(".rollLeft").hide();
-		}
-		if(liIndex>=$tLi.length-1){
-			$(".rollRight").hide();
-		}
-		$tLi.removeClass('on');
-		$tLi.eq(liIndex).addClass('on');
-		$dUl.animate({left: -518*liIndex+"px"}, 600);
-		
-	})
-	
+		$tLi.click(function(){
+			$dUl.stop(true,true);
+			var iIndex = $(this).index();	
+			$(".rollLeft,.rollRight").show();		
+			if(iIndex==0){
+				$(".rollLeft").hide();
+			}
+			if(iIndex>=$tLi.length-1){
+				$(".rollRight").hide();
+			}
+			$tLi.removeClass('on');
+			$tLi.eq(iIndex).addClass('on');
+			$dUl.animate({left: -518*iIndex+"px"}, 600);
+			return liIndex=iIndex;
+		})
+	}_roll()
 	
 	//周边城市 周边景点
 	$(".near h1 span").click(function(){
