@@ -1,5 +1,9 @@
 // JavaScript Document
-$(function(){
+define(function(require){	
+	require('../jquery');
+	require('./jq-cookie');
+	require('../tool/tool_pngfix');	
+
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 	var $uCL = $("#nearCity li");
 	var $uAL = $("#nearAttr li");
@@ -84,8 +88,37 @@ $(function(){
 		var index=$(this).index()==2?0:1;
 		$(".day7").children('div').hide();
 		$(".day7").children('div').eq(index).show();
+	})
+	//七天预报图例版 左右滚动效果
+	var $dUl = $(".day7 .bBox ul")
+	var $dLi = $dUl.children('li');
+	var dUlW = $dLi.width()*$dLi.length;
+	$dUl.width(dUlW)
+
+	
+	var liIndex = 0;
+	var $iRoll = $('.day7 div.b i');
+	$(".rollLeft").hide();
+
+	$iRoll.click(function(){
+		$dUl.stop(true,true);
+		var iIndex=$(this).index();
+		var $tLi = $('.day7 .graph ul.t li');
+		liIndex += (iIndex ==1||iIndex==3)?-1:1; //兼容ie6 index
+		
+		$(".rollLeft,.rollRight").show();
+		if(liIndex==0){
+			$(".rollLeft").hide();
+		}
+		if(liIndex>=$tLi.length-1){
+			$(".rollRight").hide();
+		}
+		$tLi.removeClass('on');
+		$tLi.eq(liIndex).addClass('on');
+		$dUl.animate({left: -518*liIndex+"px"}, 600);
 		
 	})
+	
 	
 	//周边城市 周边景点
 	$(".near h1 span").click(function(){

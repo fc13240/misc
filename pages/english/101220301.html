@@ -2,17 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link type="text/css" rel="stylesheet" href="http://10.14.85.90/source/c/core.css"  />
-<link type="text/css" rel="stylesheet" href="http://10.14.85.90/source/c/english/common.css"  />
-<link type="text/css" rel="stylesheet" href="http://10.14.85.90/source/c/english/cityInfo.css"  />
-<script type="text/javascript" src="http://10.14.85.90/source/j/jquery-1.8.2.js" ></script>
-<script type="text/javascript" src="http://10.14.85.90/source/j/english/jq-cookie.js" ></script>
-<script type="text/javascript" src="http://10.14.85.90/source/j/english/tool_pngfix.js" ></script>
-<script type="text/javascript" src="http://10.14.85.90/source/j/english/cityInfo.js" ></script>
-<!--[if lte IE 6]><script src="http://10.14.85.90/source/j/english/DD_belatedPNG.js" type="text/javascript"></script><script type="text/javascript">
-    DD_belatedPNG.fix('em,span,i');
-</script>
+<script type="text/javascript" src="http://10.14.85.90/source/j/core.js" ></script>
+<script>W.css("c/core.css","c/english/common.css","c/english/cityInfo.css")</script>
+<script>W(function(){W.use("j/english/cityInfo")})</script>
+
+<!--[if IE 6]>
+<script type="text/javascript">
+    W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+        DD_belatedPNG.fix('em,span,i');
+    })
+</script> 
 <![endif]--> 
+
+
 <title>WuHu</title>
 </head>
 
@@ -453,9 +455,9 @@
                 <!--图例版 begin-->
                 <div class="graph">
                 	<ul class="t clearfix">
-                    	<li>Fri<i></i></li>
-                    	<li>Fri<i></i></li>
                     	<li class="on">Fri<i></i></li>
+                    	<li>Fri<i></i></li>
+                    	<li>Fri<i></i></li>
                     	<li>Fri<i></i></li>
                     	<li>Fri<i></i></li>
                     	<li>Fri<i></i></li>

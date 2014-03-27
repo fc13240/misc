@@ -1,5 +1,7 @@
 // JavaScript Document
-$(function(){
+define(function(require){
+	require('./jq-cookie');
+	
 	//有新城市浏览，刷新cookie - cityHistory
 	var defaultCityHistory = '101010100,101020100,101280601';
 	var url = document.URL;
