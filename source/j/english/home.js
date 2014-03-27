@@ -126,8 +126,8 @@ define(function(require){
 		type:'GET',
 		url:"http://product.weather.com.cn/alarm/Indexalarm_en.php",
 		dataType:'script',
-		cache:true,
-		async:true,
+		cache:false,
+		async:false,
 		success:function(){
 			var $alarmU = $(".alarm ul");		
 			var l=alarminfo.pr.length;
@@ -136,7 +136,7 @@ define(function(require){
 			for(var j=0;j<alarminfo.gj.length;j++){
 				var aLink =  alarminfo.gj[j].http;
 				var txt = alarminfo.gj[j].name+"Warning for National Meteorological Center"
-				var $li = $("<li><img src=\"http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg\" width=\"25\" height=\"25\"/><a href="+aLink +" target=\"_blank\">"+txt+"</a></li>");
+				var $li=$('<li><img src="http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg" width="25" height="25"/><a title="' + txt + '" href="' + aLink + '">' + txt + '</a></li>');
 				$li.appendTo($alarmU);
 			}
 			for(var i=0;i<l;i++){
@@ -146,7 +146,7 @@ define(function(require){
 				var grade = fileName.substr(point + 3, 2);
 				var txt = gradeObj[grade]+" "+kindObj[kind]+" Warning for "+alarminfo.pr[i][0];
 				var aLink = 'http://www.weather.com.cn/alarm/newalarmcontent.shtml?file='+alarminfo.pr[i][1];
-				var $li = $("<li><img src=\"http://i.tq121.com.cn/i/alarm_icon/"+kind+grade+".gif\" width=\"25\" height=\"20\"/><a href="+aLink +" target=\"_blank\">"+txt+"</a></li>");
+				var $li = $('<li><img src="http://i.tq121.com.cn/i/alarm_icon/'+kind+grade+'.gif" width="25" height="20"/><a href='+ aLink +' title="'+ txt +'" target="_blank">'+txt+'</a></li>');
 				$li.appendTo($alarmU);
 			}
 			alarmUh = $(".alarm ul").height()>210?210:$(".alarm ul").height();
@@ -164,17 +164,33 @@ define(function(require){
 	})
 	
 	//雷达图
-	//url="http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_"+obj.fn+"_l88_pi_"+obj.ft+".gif"
-//	$.ajax({
-//		type:'GET',
-//		url:"http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html",
-//		dataType:'script',
-//		cache:true,
-//		async:true,
-//		success:function(){
-//			//alert(readerinfo.cn)
-//		}
-//	})
+	//var jsonUrl = 'http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html';
+	var jsonUrl='http://i.weather.com.cn/i/product/json/jsl/JC_JSL_02405.html'
+
+
+	function readerinfo(json){
+		var	tab = json.jsl.length-1;
+		//var imgUrl='http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif'
+
+		$(".rader a img").attr("src", 'http://i.weather.com.cn/i/product/pic/m/' + json.jsl[tab].fn );;
+	}
+	
+	function ajaxJsonp(jsonUrl){
+		$.ajax({
+			type: "GET",
+			url: jsonUrl + '?jsoncallback=readerinfo',
+			dataType: 'jsonp',
+			success:function(){
+				alert(11)	
+			},
+			error: function() {
+				$(".rader a img").attr("src", "http://product.weather.com.cn/m/i/tqld/no_product.jpg");
+			}
+		});
+	}
+	$(document).ready(function(){
+		ajaxJsonp(jsonUrl);
+	})
 	
 	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 	var $uSL = $("#ulStyle li");
@@ -210,7 +226,7 @@ define(function(require){
 	function time(){
 	  var date=new Date();
 	  var weatherDate=date_0_9(date.getHours())+":"+date_0_9(date.getMinutes())+"&nbsp; "+date.getFullYear()+"-"+date_0_9(date.getMonth()+1)+"-"+date_0_9(date.getDate());
-	  $T.html("Local Time &nbsp; "+weatherDate);
+	  $T.html("Local Time in China &nbsp; "+weatherDate);
 	}
 	time();
 	setInterval(time,60000);
