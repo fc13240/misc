@@ -5,7 +5,6 @@
 <script type="text/javascript" src="http://i.tq121.com.cn/j/core.js" ></script>
 <script>W.css("c/core.css","c/english/common.css","c/english/home.css")</script>
 <script>W.use("j/english/home")</script>
-
 <title>Weather</title>
 </head>
 
@@ -55,7 +54,7 @@
       <div class="l">
           <div class="rader">
              <h1>Weather Rader For China</h1>
-             <p><a href="#"><img src="http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_ebref_achn_l88_pi_20140327235000001.gif" width="367" height="315" /></a></p>
+             <p><a href="#"><img src="http://product.weather.com.cn/m/i/tqld/no_product.jpg" width="367" height="315" /></a></p>
           </div>
           <div class="localWeather">
               <h1>Local Weather</h1>
@@ -224,4 +223,22 @@
     <p class="copyIcp">京ICP证010385号 京公网安备11041400134 Value-added Telecom Business License B2-20050053</p>
 </div>
 </body>
+<script>
+function readerinfo(json) {
+		tab = json.radars.length - 1;
+		var imgUrl = 'http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif';
+		$(".rader a img").attr("src", imgUrl);	
+	}
+W(function(){
+	(function(xmlfile){
+		$.ajax({
+			type: "GET",
+			cache: false,
+			async: false,
+			url: xmlfile + '?jsoncallback=readerinfo',
+			dataType: 'jsonp'	
+		})
+	})('http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html')
+})
+</script>
 </html>
