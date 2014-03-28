@@ -49,27 +49,26 @@ define(function(require){
 		$(this).next().hide();
 	})
 	
-	//alert(document.URL)
-	
-	htmlIndex = document.URL.substring(document.URL.indexOf('?index=')+7);
-	
-	switch(htmlIndex){
-		case 1:$(".livIndex,.hour6").hide();$('.act').show();break;
-		case 2:$(".act,.hour6").hide();$('.livIndex').show();break;
-		case 3:$(".act,.livIndex").hide();$('.hour6').show();break;
-	}
 	
 	//实况、六小时预报、指数 选项卡
 	$(".cityName span").click(function(){
 		var that = $(this);
-		hoverClass(that,"span")
-		var index=$(this).index();
+		hoverClass(that,"span");
+		var index=that.index();
 		switch(index){
 			case 2:$(".livIndex,.hour6").hide();$('.act').show();break;
 			case 3:$(".act,.livIndex").hide();$('.hour6').show();break;
 			case 4:$(".act,.hour6").hide();$('.livIndex').show();break;
 		}
 	})
+	//?index
+	htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7));		
+	switch(htmlIndex){
+		case 1:$(".cityName span:eq(0)").click();break;
+		case 2:$(".cityName span:eq(2)").click();break;
+		case 3:$(".cityName span:eq(1)").click();break;
+	}
+	
 	//指数hot index & all index
 	$('.livIndex ul li:gt(8)').hide();
 	$(".livIndex h1 a").click(function(){
