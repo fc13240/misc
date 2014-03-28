@@ -227,7 +227,7 @@
 function readerinfo(json) {
 		tab = json.radars.length - 1;
 		var imgUrl = 'http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif';
-		$(".rader a img").attr("src",imgUrl).load(function(){ $(this).width(367).height(315).css('padding-top',0)});	
+		$('.rader a').attr('target',"_blank").attr('href',imgUrl).children('img').attr("src",imgUrl).load(function(){ $(this).width(367).height(315).css('padding-top',0)});
 	}
 W(function(){
 	(function(xmlfile){

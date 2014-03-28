@@ -57,11 +57,13 @@ define(function(require){
 		$(".cityName span").eq(htmlIndex-1).addClass('on');	
 		var $obj = $(".livIndex,.hour6,.act");
 		switch(htmlIndex){
-			case 1:$obj.hide();$('.act').show();break;
-			case 2:$obj.hide();$('.hour6').show();break;
-			case 3:$obj.hide();$('.livIndex').show();break;
+			case 1:$obj.hide();$('.act').show();$("#changeBox").height(304);break;
+			case 2:$obj.hide();$('.hour6').show();$("#changeBox").height(284);break;
+			case 3:$obj.hide();$('.livIndex').show();$("#changeBox").height(467);break;
 		}
 	}_htmlIndex();
+
+
 	
 	//指数hot index & all index
 	$('.livIndex ul li:gt(8)').hide();

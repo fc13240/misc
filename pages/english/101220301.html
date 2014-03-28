@@ -83,6 +83,7 @@
                 <span>中央气象台发布霾黄色预警</span>
             </div>
         	<!--预警 end-->
+            <div id="changeBox">
         	<!--实况加36小时预报 begin-->
             <ul class="act clearfix">
             	<li class="sk">
@@ -453,6 +454,17 @@
                 </li>
             </ul>
         	<!--六小时预报 end-->
+            </div>
+<script>
+
+	htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7)) || 1;	
+	switch(htmlIndex){
+		case 1:$("#changeBox").height(304);break;
+		case 2:$("#changeBox").height(284);break;
+		case 3:$("#changeBox").height(467);break;
+	}
+
+</script>
         	<!--七天预报 图例版 begin-->
         	<div class="day7">
             	<h1 class="clearfix"><i>7-Day Forecast</i><span class="tab clearfix"><i></i><em>Table</em></span><span class="gra clearfix on"><i></i><em>Graph</em></span></h1>
