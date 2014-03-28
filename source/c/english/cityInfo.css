@@ -18,7 +18,7 @@ body { background:#fff;}
 .con .left .alarm strong {float:left text-indent:15px; line-height:33px; width:202px; float:left; text-indent:10px; overflow:hidden; height:33px; }
 .con .left .alarm i { background:url(../../i/english/alarm/alarm.jpg); margin-top:6px; float:left; width:25px; height:21px; }
 .con .left .alarm span { text-indent:13px; line-height:33px; float:left; height:33px; width:350px; overflow:hidden; }
-.con .left .act { text-align:center; margin-left:11px; margin-top:11px; color:#fff;}
+.con .left .act { display:none; text-align:center; margin-left:11px; margin-top:11px; color:#fff;}
 .con .left .act li { float:left; padding-top:16px; height:288px;}
 .con .left .act li.sk { background:#2e51a5; width:200px; position:relative; }
 .con .left .act li.sk h1 { height:20px; line-height:20px; font-size:20px; }

@@ -50,24 +50,18 @@ define(function(require){
 	})
 	
 	
-	//实况、六小时预报、指数 选项卡
-	$(".cityName span").click(function(){
-		var that = $(this);
-		hoverClass(that,"span");
-		var index=that.index();
-		switch(index){
-			case 2:$(".livIndex,.hour6").hide();$('.act').show();break;
-			case 3:$(".act,.livIndex").hide();$('.hour6').show();break;
-			case 4:$(".act,.hour6").hide();$('.livIndex').show();break;
+	//实况、六小时预报、指数 ?index
+	function _htmlIndex(){
+		htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7)) || 1;
+		$(".cityName span").removeClass('on');
+		$(".cityName span").eq(htmlIndex-1).addClass('on');	
+		var $obj = $(".livIndex,.hour6,.act");
+		switch(htmlIndex){
+			case 1:$obj.hide();$('.act').show();break;
+			case 2:$obj.hide();$('.hour6').show();break;
+			case 3:$obj.hide();$('.livIndex').show();break;
 		}
-	})
-	//?index
-	htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7));		
-	switch(htmlIndex){
-		case 1:$(".cityName span:eq(0)").click();break;
-		case 2:$(".cityName span:eq(2)").click();break;
-		case 3:$(".cityName span:eq(1)").click();break;
-	}
+	}_htmlIndex();
 	
 	//指数hot index & all index
 	$('.livIndex ul li:gt(8)').hide();
