@@ -164,15 +164,18 @@ define(function(require){
 	})
 	
 	//雷达图
-	//var jsonUrl = 'http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html';
-	var jsonUrl='http://i.weather.com.cn/i/product/json/jsl/JC_JSL_02405.html'
+	var jsonUrl = 'http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html';
+	//var jsonUrl='http://i.weather.com.cn/i/product/json/jsl/JC_JSL_02405.html'
 
 
 	function readerinfo(json){
 		var	tab = json.jsl.length-1;
 		//var imgUrl='http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif'
+		var imgUrl='http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_ebref_achn_l88_pi_20140327235000001.gif'
 
-		$(".rader a img").attr("src", 'http://i.weather.com.cn/i/product/pic/m/' + json.jsl[tab].fn );;
+		$(".rader a img").attr("src",imgUrl);
+		//$(".rader a img").attr("src", 'http://i.weather.com.cn/i/product/pic/m/' + json.jsl[tab].fn );
+		
 	}
 	
 	function ajaxJsonp(jsonUrl){
@@ -181,10 +184,11 @@ define(function(require){
 			url: jsonUrl + '?jsoncallback=readerinfo',
 			dataType: 'jsonp',
 			success:function(){
-				alert(11)	
+				//alert(11)	
+				$(".rader a img").attr("src", imgUrl);
 			},
 			error: function() {
-				$(".rader a img").attr("src", "http://product.weather.com.cn/m/i/tqld/no_product.jpg");
+				$(".rader a img").attr("src", imgUrl);
 			}
 		});
 	}

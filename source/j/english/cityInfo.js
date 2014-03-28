@@ -49,6 +49,15 @@ define(function(require){
 		$(this).next().hide();
 	})
 	
+	//alert(document.URL)
+	
+	htmlIndex = document.URL.match(/\?index=.*/).join().replace(/\?index=/,"");
+	
+	switch(htmlIndex){
+		case 1:$(".livIndex,.hour6").hide();$('.act').show();break;
+		case 2:$(".act,.hour6").hide();$('.livIndex').show();break;
+		case 3:$(".act,.livIndex").hide();$('.hour6').show();break;
+	}
 	//实况、六小时预报、指数 选项卡
 	$(".cityName span").click(function(){
 		var that = $(this);
