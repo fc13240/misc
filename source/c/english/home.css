@@ -50,6 +50,7 @@
 overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
 .con .r .alarm ul li img { margin-right:10px; }
 .con .r .alarm p { text-align:right; margin-right:15px; font-size:14px; height:28px; _margin-top:-6px }
+.con .r .alarm a:hover { color:#000}
 .con .r .cheWea { margin-top:10px; }
 .con .r .hot { margin-top:10px; width:298px; border:1px solid #9bb4dd; color:#3466bb; display:block; *height:266px;
 _height:200px; }
