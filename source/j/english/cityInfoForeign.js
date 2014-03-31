@@ -56,7 +56,7 @@ define(function(require){
 	
 	//国外城市
 	function _day1_3(){
-		var $a = $("#day1_3_t a:not(:first)");
+		var $a = $("#day1_3_t a:not(:last)");
 		var $tA = $('.day7>.graph p a');
 		
 
@@ -78,15 +78,28 @@ define(function(require){
 			return liIndex=_roll(liIndex);
 		})
 		
+		var id = parseInt(document.URL.substring(document.URL.indexOf('id=')+3))||1;
+		for(var i=0;i<id;i++){
+			$('#day1_3_t a[data-id='+i+']').remove();
+		}
+		
+		
+		
 		$a.click(function(){
 			var iIndex = $(this).index();
+			var dataId = $(this).attr("data-id");
+			if(dataId!=id){
+				window.open('?id='+dataId,'_self');
+			}
+			
 			$tA.removeClass('move move1');
 			$(this).addClass("move").next().addClass('move1');
+			
+			
 			if(!((iIndex)%6)){
-				if(iIndex/6){
-					
+				
 					$("#day1_3_t p").animate({left: -$a.width()*iIndex+35+'px'},'slow');
-				}
+				
 			};
 			return liIndex=_roll(iIndex);
 		})
@@ -98,7 +111,6 @@ define(function(require){
 		
 		
 		
-		var id = parseInt(document.URL.substring(document.URL.indexOf('id=')+3))||1;
 		if(id==1){
 			$(".rollLeft").hide();
 		}

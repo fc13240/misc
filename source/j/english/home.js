@@ -157,11 +157,8 @@ define(function(require){
 		}
 	})
 	$(".alarm h1").toggle(function(){
-<<<<<<< HEAD
+
 		$(this).parent().animate({height:alarmUh+45+'px'},400);
-=======
-		$(this).parent().animate({height:alarmUh+50+'px'},400);
->>>>>>> 95f3d840af375bda755a820f0734bc46ed9eb8ad
 		$(this).children('i').addClass('down');
 		
 	},function(){
