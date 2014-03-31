@@ -13,44 +13,30 @@ define(function(require){
 		cache:true,
 		async:true,
 		success:function(){
-			
 			var gradeObj={"01":'blue','02':'yellow','03':'orange','04':'red','91':'white'};
 			var kindObj = {'01':'typhoon','02':'torrential rain','03':'snowstorm',"04":'cold spell',"05":'strong wind',"06":'sandstorm',"07":'high temperature',"08":'drought',"09":'thunderbolt',"10":'hail',"11":'frost',"12":'heavy fog',"13":'haze',"14":'icy road',"91":'cold',"92":'dust-haze',"93":'thunderstorm and gale',"94":'forest fire warning',"95":'temperature drop',"96":'snow and ice road',"97":'dry-hot wind',"98":'low temperature',"99":'freeze'};
 			var localId = parseInt(document.URL.substr(document.URL.indexOf('english/')+8)).toString();   //提取当前页面的 9 位 站号
-			
-			
-			
 			for(var i=0;i<alarminfo.data.length;i++){
 				var fullName = alarminfo.data[i][0];
 				var alarmNum = alarminfo.data[i][1].split('-');
 				var cityId =  alarmNum[0]  //json数据正在预警城市的站号
 				var kind = alarmNum[2].substr(0,2);
 				var grade = alarmNum[2].substr(2,2);
-				
-				if(cityId == localId || cityId == (localId.substr(0,7)) || cityId == (localId.substr(0,5))){//如果县等级满足alert(localId)
-							var imgSrc = 'http://i.tq121.com.cn/i/alarm_icon/'+kind+grade+'.gif';
-							var txt = gradeObj[grade]+' '+kindObj[kind]+" for "+fullName;
-							$(".alarm span").text(txt);
-							$(".alarm img").attr("src",imgSrc);
-						
-				};
-				
 				if(cityId == localId){//如果县等级满足alert(localId)
-					addHtml();
-				}else if(cityId == localId.substr(0,7)){
-					addHtml();
-				}else if(cityId == localId.substr(0,5)){
-					addHtml();
+					addAlarm();return false;
+				}else if(cityId == localId.substr(0,7)){ //市级预警
+					addAlarm();return false;
+				}else if(cityId == localId.substr(0,5)){ //省级预警
+					addAlarm();return false;
 				};
-
-				function addHtml(){	
-					$('.cityAlarm').show();
-					$(".alarm").show();			
-					var imgSrc = 'http://i.tq121.com.cn/i/alarm_icon/'+kind+grade+'.gif';
-					var txt = gradeObj[grade]+' '+kindObj[kind]+" for "+fullName;
-					$(".alarm span").text(txt);
-					$(".alarm img").attr("src",imgSrc);
-				}
+			}
+			function addAlarm(){	
+				$('.cityAlarm').show();
+				$(".alarm").show();			
+				var imgSrc = 'http://i.tq121.com.cn/i/alarm_icon/'+kind+grade+'.gif';
+				var txt = gradeObj[grade]+' '+kindObj[kind]+" for "+fullName;
+				$(".alarm span").text(txt);
+				$(".alarm img").attr("src",imgSrc);
 			}
 		}
 	})
