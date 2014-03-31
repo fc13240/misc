@@ -147,7 +147,7 @@ body { background:#fff;}
 .con .left .near ul li span { display: inline-block; float: left; overflow: hidden; text-overflow: ellipsis; white-space: normal; width: 128px;  }
 .con .left .near ul li i, .con .left .near ul li em { background-image:url(../../i/english/cityInfo/icon.png); background-repeat:no-repeat; padding-right:7px; color:#c4111a; width:40px;display:inline-block; text-align:right; }
 .con .left .near ul li i{ background-position:18px -366px;_background-position:8px -366px;}
-.con .left .near ul li em { background-position:17px -397px;_background-position:8px -398px; color:#000033; margin-right:10px;_margin-right:0px; }
+.con .left .near ul li em { background-position:17px -399px;_background-position:8px -398px; color:#000033; margin-right:10px;_margin-right:0px; }
 .con .left .near ul li img{ width:40px; height:30px;}
 .con .left .near .mt { margin-top:10px; }
 .con .left .near .ml { margin-left:10px; }
