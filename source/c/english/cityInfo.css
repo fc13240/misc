@@ -71,8 +71,15 @@ body { background:#fff;}
 .con .left .livIndex ul li .mouseOn{ overflow: hidden; background:#2e51a5; display:none; padding:10px; font-size:14px; line-height:18px; position:absolute; left:0; top:0; width:180px; height:121px;}
 .con .left .livIndex ul li div{ border-right:1px solid #688dcc}
 .con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div,.con .left .livIndex .li12 div,.con .left .livIndex .li15 div,.con .left .livIndex .li18 div{border:none}
-.con .left .livIndex ul .li1 .m a{ background-position:-4x -602px;}
-.con .left .livIndex ul .li2 .m a{ background-position:-4x -602px;}
+.con .left .livIndex ul .li1 .m a{ background-position:0px -601px;}
+.con .left .livIndex ul .li2 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li3 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li4 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li5 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li6 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li7 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li8 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li9 .m a{ background-position:1px -1540px;}
 
 .con .left .hour6{ margin-top:11px; display:none;text-align:center;}
 .con .left .hour6 li{ background:#e2ecf6;margin-left:8px;_margin-left:6px;float:left;color:#3564bc; border:1px solid #e2ecf6; width:150px; height:281px;}
