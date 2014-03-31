@@ -7,7 +7,7 @@ define(function(require){
 	var defaultCityHistory = '101010100,101020100,101280601';
 	var url = document.URL;
 
-	cityId = url.match(/weather\/.*?\.shtml/).join().replace(/weather\//,"").replace(/\.html/,"");
+	cityId = url.match(/main\/.*?\.shtml/).join().replace(/main\//,"").replace(/\.shtml/,"");
 	
 	cityHistory = $.cookie('cityHistory') || defaultCityHistory;
 	city_3 = cityHistory.split(',');

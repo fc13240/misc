@@ -267,7 +267,9 @@ body { background:#fff;}
 
 #day1_3_t{ position:relative;}
 #day1_3_t p{ position:absolute; height:35px;}
-
+#day1_3_t i{ position:absolute; top:0px; height:35px; width:35px; display:block;}
+#day1_3_t i.coverLeft{ left:0;}
+#day1_3_t i.coverRight{left:595px;}
 /*
 #day1_3_t span{ position:absolute; top:0px; left:0px; display:block;}
 

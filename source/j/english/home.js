@@ -157,7 +157,7 @@ define(function(require){
 		}
 	})
 	$(".alarm h1").toggle(function(){
-		$(this).parent().animate({height:alarmUh+70+'px'},400);
+		$(this).parent().animate({height:alarmUh+45+'px'},400);
 		$(this).children('i').addClass('down');
 		
 	},function(){
