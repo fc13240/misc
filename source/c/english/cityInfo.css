@@ -71,8 +71,15 @@ body { background:#fff;}
 .con .left .livIndex ul li .mouseOn{ overflow: hidden; background:#2e51a5; display:none; padding:10px; font-size:14px; line-height:18px; position:absolute; left:0; top:0; width:180px; height:121px;}
 .con .left .livIndex ul li div{ border-right:1px solid #688dcc}
 .con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div,.con .left .livIndex .li12 div,.con .left .livIndex .li15 div,.con .left .livIndex .li18 div{border:none}
-.con .left .livIndex ul .li1 .m a{ background-position:-4x -602px;}
-.con .left .livIndex ul .li2 .m a{ background-position:-4x -602px;}
+.con .left .livIndex ul .li1 .m a{ background-position:0px -601px;}
+.con .left .livIndex ul .li2 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li3 .m a{ background-position:-9px -991px;}
+.con .left .livIndex ul .li4 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li5 .m a{ background-position:-3px -419px;}
+.con .left .livIndex ul .li6 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li7 .m a{ background-position:-8px -481px;}
+.con .left .livIndex ul .li8 .m a{ background-position:1px -1540px;}
+.con .left .livIndex ul .li9 .m a{ background-position:1px -77px;}
 
 .con .left .hour6{ margin-top:11px; display:none;text-align:center;}
 .con .left .hour6 li{ background:#e2ecf6;margin-left:8px;_margin-left:6px;float:left;color:#3564bc; border:1px solid #e2ecf6; width:150px; height:281px;}
@@ -117,9 +124,9 @@ body { background:#fff;}
 .con .left .day7 .graph .b ul { width:3626px; position:absolute; top:0px; left:0px;}
 .con .left .day7 .graph .b ul li { width:518px; float:left; }
 .con .left .day7 .graph .b ul li div { width:50%; margin:0; height:110px; }
-.con .left .day7 .graph .b ul li div .l { padding-top:14px;_padding-top:0; width:156px; text-align:center; color:#2e51a5; font-weight:bold; }
+.con .left .day7 .graph .b ul li div .l { padding-top:14px;_padding-top:0; width:106px; text-align:center; color:#2e51a5; font-weight:bold; }
 .con .left .day7 .graph .b ul li div .l p { height:36px; line-height:17px; _line-height:14px; padding-right:10px; overflow:hidden; }
-.con .left .day7 .graph .b ul li div .r { width:100px; padding-top:15px; }
+.con .left .day7 .graph .b ul li div .r { width:130px; padding-top:25px; }
 .con .left .day7 .graph .b ul li div .r p { font-size:18px; }
 .con .left .day7 .graph .b ul li div .r p span { color: #999999; font-size: 12px; line-height: 36px; padding-right: 5px; vertical-align: bottom; }
 .con .left .day7 .graph .b ul li div .r p i { font-size:24px; color:#c4111a; margin:0 5px; }
