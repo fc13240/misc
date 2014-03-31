@@ -56,18 +56,25 @@ define(function(require){
 	
 	//国外城市
 	function _day1_3(){
-		var $a = $("#day1_3_t a:not(:last)");
-		var $tA = $('.day7>.graph p a');
 		
-
+		var $tA = $('.day7>.graph p a');
 		var $dUl = $(".day7 .bBox div ul");
-		var $dLi = $dUl.children('li');
-		var dUlW = 211*$dLi.length;
 		var liIndex = 0;
 		var $iRoll = $('.day7 div.b i');
 		
+		var id = parseInt(document.URL.substring(document.URL.indexOf('id=')+3))||1;
+		for(var i=0;i<id;i++){			//清除
+			$('#day1_3_t a[data-id='+i+']').remove();  
+			$('#day1_3_b>.bBox ul li[data-id='+i+']').remove();
+		}		
+		var $a = $("#day1_3_t a");
+		var $dLi = $dUl.children('li');
+		var dUlW = 211*$dLi.length;
 		
-		var tAWidth=$a.width()*($a.length+1);
+		$a.eq(0).addClass('move').next().addClass('move1');     //添加默认 class  ”move”
+		$dLi.eq(0).addClass("move")
+		
+		var tAWidth=$a.width()*($a.length+1);   //设置容器宽
 		$("#day1_3_t p").width(tAWidth)
 		$dUl.width(dUlW);
 		
@@ -78,12 +85,6 @@ define(function(require){
 			return liIndex=_roll(liIndex);
 		})
 		
-		var id = parseInt(document.URL.substring(document.URL.indexOf('id=')+3))||1;
-		for(var i=0;i<id;i++){
-			$('#day1_3_t a[data-id='+i+']').remove();
-		}
-		
-		
 		
 		$a.click(function(){
 			var iIndex = $(this).index();
@@ -92,9 +93,8 @@ define(function(require){
 				window.open('?id='+dataId,'_self');
 			}
 			
-			$tA.removeClass('move move1');
-			$(this).addClass("move").next().addClass('move1');
 			
+			$tA.eq(iIndex).addClass("move").next().addClass('move1');alert(iIndex)
 			
 			if(!((iIndex)%6)){
 				
@@ -130,7 +130,7 @@ define(function(require){
 			}
 			$tA.removeClass('move move1');
 			$dLi.removeClass('move');
-			$tA.eq(iIndex).addClass("move").next().addClass('move1');
+			//$tA.eq(iIndex).addClass("move").next().addClass('move1');alert(iIndex)
 			$dLi.eq(iIndex).addClass("move");
 			if(iIndex<=$tA.length-4){
 				$dUl.animate({left: -211*iIndex+"px"}, 600);
