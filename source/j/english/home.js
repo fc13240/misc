@@ -39,7 +39,9 @@ define(function(require){
 					$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 					tool_pngfix();
 					$li.find("span").html(parseInt(fc_24_en.weatherinfo.temp1));
-					$li.find('i').html(parseInt(fc_24_en.weatherinfo.indexval)+"°");
+					var indexVal = parseInt(fc_24_en.weatherinfo.indexval);
+					var indexVal = indexVal?indexVal+'°':'';
+					$li.find('i').html(indexVal);
 					if(cityHis_index < chNum.length){
 						cityHis_index++;   //递归
 						setWeather()
@@ -93,7 +95,9 @@ define(function(require){
 					$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 					tool_pngfix();
 					$li.find("span").html(parseInt(fc_24_en.weatherinfo.tempF1));
-					$li.find('i').html(parseInt(fc_24_en.weatherinfo.indexvalf)+"°");
+					var indexValf = parseInt(fc_24_en.weatherinfo.indexvalf);
+					var indexValf = indexValf?indexValf+'°':'';
+					$li.find('i').html(indexValf);
 					if(cityHis_index < chNum.length){
 						cityHis_index++;
 						setWeather()
