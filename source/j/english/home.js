@@ -28,7 +28,7 @@ define(function(require){
 		function setWeather(){  //递归法 解决for循环 异步执行 数据覆盖问题
 			$.ajax({
 				type:'GET',
-				url:"http://61.4.185.111/fc_24_en/"+chNum[cityHis_index]+".html",
+				url:"http://d1.weather.com.cn/fc_24_en/"+chNum[cityHis_index]+".html",
 				dataType:'script',
 				cache:false,
 				async:false,
@@ -53,7 +53,7 @@ define(function(require){
 			var id = weaConArr[weaConArr_index];
 			$.ajax({
 				type:'GET',
-				url:'http://61.4.185.111/fc_24_en/'+id+'.html',
+				url:'http://d1.weather.com.cn/fc_24_en/'+id+'.html',
 				dataType:'script',
 				cache:false,
 				async:false,
@@ -81,7 +81,7 @@ define(function(require){
 		function setWeather(){
 			$.ajax({
 				type:'GET',
-				url:"http://61.4.185.111/fc_24_en/"+chNum[cityHis_index]+".html",
+				url:"http://d1.weather.com.cn/fc_24_en/"+chNum[cityHis_index]+".html",
 				dataType:'script',
 				cache:false,
 				async:false,
@@ -106,7 +106,7 @@ define(function(require){
 			var id = weaConArr[weaConArr_index];
 			$.ajax({
 				type:'GET',
-				url:'http://61.4.185.111/fc_24_en/'+id+'.html',
+				url:'http://d1.weather.com.cn/fc_24_en/'+id+'.html',
 				dataType:'script',
 				cache:false,
 				async:false,
