@@ -173,8 +173,8 @@ body { background:#fff;}
 .con .right  .r a{ font-size:16px; float:right; color:#3466bb; line-height:20px;}
 .con .right  .r a:hover{ text-decoration:underline;}
 .con .right .map2{ margin-top:10px;}
-.con .right .ad1{ margin-top:10px;}
-.con .right .ad2{ margin-top:10px;}
+.con .right .ad1,cheWea{ margin-top:10px;}
+.con .right .ad2,ad{ margin-top:10px;}
 
 /*国外 li*/
 .lcoalcity { height:auto; }

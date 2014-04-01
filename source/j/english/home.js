@@ -20,7 +20,7 @@ define(function(require){
 	//浏览历史 最近3个城市 Local Weather 模块 cookie
 	function weaTypeFunS(){
 		//local weather
-		var defaultCityHistory = '101010100,101020100,101280601';  //默认城市
+		var defaultCityHistory = '101010100,101020100,101280101';  //默认城市
 		cityHistory = $.cookie('cityHistory') || defaultCityHistory;  //get cookie
 		var chNum = cityHistory.split(',')
 		var cityHis_index = 0;	
@@ -38,7 +38,7 @@ define(function(require){
 					$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 					tool_pngfix();
 					$li.find("span").html(parseInt(fc_24_en.weatherinfo.temp1));
-					$li.find('i').html(parseInt(fc_24_en.weatherinfo.indexval));
+					$li.find('i').html(parseInt(fc_24_en.weatherinfo.indexval)+"°");
 					if(cityHis_index < chNum.length){
 						cityHis_index++;   //递归
 						setWeather()
@@ -73,7 +73,7 @@ define(function(require){
 	}
 	function weaTypeFunF(){
 		//local weather
-		var defaultCityHistory = '101010100,101020100,101280601';  //默认城市
+		var defaultCityHistory = '101010100,101020100,101280101';  //默认城市
 		cityHistory = $.cookie('cityHistory') || defaultCityHistory;  //get cookie
 		var chNum = cityHistory.split(',')
 		var cityHis_index = 0;	
@@ -91,7 +91,7 @@ define(function(require){
 					$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 					tool_pngfix();
 					$li.find("span").html(parseInt(fc_24_en.weatherinfo.tempF1));
-					$li.find('i').html(parseInt(fc_24_en.weatherinfo.indexvalf));
+					$li.find('i').html(parseInt(fc_24_en.weatherinfo.indexvalf)+"°");
 					if(cityHis_index < chNum.length){
 						cityHis_index++;
 						setWeather()
