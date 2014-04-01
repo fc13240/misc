@@ -85,14 +85,14 @@
         	<!--预警 end-->
             <div id="changeBox">
 <script>
-
+W(function(){
 	htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7)) || 1;	
 	switch(htmlIndex){
 		case 1:$("#changeBox").height(304);break;
 		case 2:$("#changeBox").height(284);break;
 		case 3:$("#changeBox").height(467);break;
 	}
-
+})
 </script>
 
         	<!--实况加36小时预报 begin-->

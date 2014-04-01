@@ -62,6 +62,7 @@ define(function(require){
 		var $iRoll = $('.day7 div.b i');
 		
 		var id = parseInt(document.URL.substring(document.URL.indexOf('id=')+3))||1;
+		//默认内容
 		for(var i=0;i<id;i++){			//清除之前的<a> 和 <li>
 			$('#day1_3_t a[data-id='+i+']').remove();  
 			$('#day1_3_b>.bBox ul li[data-id='+i+']').remove();
@@ -77,9 +78,12 @@ define(function(require){
 		$("#day1_3_t p").width(tAWidth)
 		$dUl.width(dUlW);
 		
+		$('.day7 div table[data-id='+id+']').show();  // 显示table 表格
+
+		//点击事件
 		$iRoll.click(function(){		
 			var iIndex=$(this).index();
-			liIndex += (iIndex ==1||iIndex==3)?-1:1;//兼容ie6 indexa
+			liIndex += (iIndex ==1||iIndex==3)?-1:1;//兼容ie6 index
 			$("#day1_3_t p").stop(true,true).animate({left: '-='+$a.width()*((iIndex ==1||iIndex==3)?-1:1)+'px'},'slow');
 			return liIndex=_roll(liIndex);
 		})
@@ -91,13 +95,7 @@ define(function(require){
 			};
 			return liIndex=_roll(iIndex);
 		})
-		
-		
-		
-		
-		
-		
-		
+				
 		
 		if(id==1){
 			$(".rollLeft").hide();
