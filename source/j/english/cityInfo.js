@@ -2,7 +2,7 @@
 define(function(require){	
 	require('jquery');
 	require('./jq-cookie');
-	//require('./broHistory');
+	require('./broHistory');
 	require('../tool/tool_pngfix');	
 
 	//预警
