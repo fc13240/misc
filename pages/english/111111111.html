@@ -1,17 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js" ></script>
+<script type="text/javascript" src="http://10.14.85.90/source/j/core.js" ></script>
 <script>W.css("c/core.css","c/english/common.css","c/english/cityInfo.css")</script>
 <script>W(function(){W.use("j/english/cityInfoForeign")})</script>
-<!--[if lt IE 7]>
-<script>
-	W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
-		DD_belatedPNG.fix(".localWeather img,.alarm em");
-	})
-</script>
-<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript">
+    W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
+        DD_belatedPNG.fix('em,span,i');
+    })
+</script> 
+<![endif]--> 
 
 <title>Weather</title>
 </head>
@@ -69,76 +68,74 @@
 					<li><a href="?id=4">4-7 Day Forecast</a></li>
 				</ul>
 			 </div>
-			 <div class="sant yubao">
-			 <ul class="clearfix">
-			 	<li>
-                    <h1>Sun</h1>
-                    <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
-                    <p class="wea">Thundershower</p>
-                    <p class="tem">Hight<span class="hight">53</span><i>°F</i>Low<span>53</span><i>°F</i></p>
-                    <p class="num">
-                        <span class="n2">NE 9 mph</span>
-                    </p>
-                </li>
-				<li>
-                    <h1>Sun</h1>
-                    <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
-                    <p class="wea">Thundershower</p>
-                    <p class="tem"><span class="hight">53</span><i>°F</i>Low<span>53</span><i>°F</i></p>
-                    <p class="num">
-                        <span class="n2">NE 9 mph</span>
-                    </p>
-                </li>
-				<li>
-                    <h1>Sun</h1>
-                    <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
-                    <p class="wea">Thundershower</p>
-                    <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
-                    <p class="num">
-                        <span class="n2">NE 9 mph</span>
-                    </p>
-                </li>
-				</ul>
-			 </div>
-			 <div class="yubao">
-			 <ul class="clearfix">
-			 <li class="move">
-					<h1>Thurs</h1>
-                    <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
-                    <p class="wea">Thundershower</p>
-                    <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
-                    <p class="num">
-                        <span class="n2">NE 9 mph</span>
-                    </p>
-                </li>
-				<li>
-                    <h1>Fri</h1>
-                    <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
-                    <p class="wea">Thundershower</p>
-                    <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
-                    <p class="num">
-                        <span class="n2">NE 9 mph</span>
-                    </p>
-                </li>
-				<li>
-                    <h1>Sat</h1>
-                   <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
-                    <p class="wea">Thundershower</p>
-                    <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
-                    <p class="num">
-                        <span class="n2">NE 9 mph</span>
-                    </p>
-                </li>
-				<li>
-                    <h1>Sun</h1>
-                    <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
-                    <p class="wea">Thundershower</p>
-                    <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
-                    <p class="num">
-                        <span class="n2">NE 9 mph</span>
-                    </p>
-                </li>
-			 </ul>
+			 <div id="yubao">
+                 <ul class="clearfix sant yubao">
+                    <li>
+                        <h1>Sun</h1>
+                        <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+                        <p class="wea">Thundershower</p>
+                        <p class="tem">Hight<span class="hight">53</span><i>°F</i>Low<span>53</span><i>°F</i></p>
+                        <p class="num">
+                            <span class="n2">NE 9 mph</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Sun</h1>
+                        <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+                        <p class="wea">Thundershower</p>
+                        <p class="tem"><span class="hight">53</span><i>°F</i>Low<span>53</span><i>°F</i></p>
+                        <p class="num">
+                            <span class="n2">NE 9 mph</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Sun</h1>
+                        <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+                        <p class="wea">Thundershower</p>
+                        <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
+                        <p class="num">
+                            <span class="n2">NE 9 mph</span>
+                        </p>
+                    </li>
+                </ul>
+                 <ul class="clearfix yubao">
+                	 <li>
+                        <h1>Thurs</h1>
+                        <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+                        <p class="wea">Thundershower</p>
+                        <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
+                        <p class="num">
+                            <span class="n2">NE 9 mph</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Fri</h1>
+                        <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+                        <p class="wea">Thundershower</p>
+                        <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
+                        <p class="num">
+                            <span class="n2">NE 9 mph</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Sat</h1>
+                       <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+                        <p class="wea">Thundershower</p>
+                        <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
+                        <p class="num">
+                            <span class="n2">NE 9 mph</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Sun</h1>
+                        <img width="80" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+                        <p class="wea">Thundershower</p>
+                        <p class="tem"><span class="hight">53</span><i>°F</i><span>53</span><i>°F</i></p>
+                        <p class="num">
+                            <span class="n2">NE 9 mph</span>
+                        </p>
+                    </li>
+                 </ul>
 			 </div>
 			 
 			 
@@ -796,7 +793,8 @@
                 </ul>
             </div>          
 		  <!--周边城市 end-->
-      </div>
+		  <!--周边城市 begin-->
+     </div>
       <div class="right fl">
         
         <div class="cheWea">

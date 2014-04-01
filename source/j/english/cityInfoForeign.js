@@ -138,34 +138,34 @@ define(function(require){
 		
 		
 		//about URL index  '  ?id=  '  
-		var $div = $(".lcoalcity>div.yubao");
-		var $div_0 = $div.eq(0);
-		var $div_1 = $div.eq(1);
-		var $div_0_li = $div_0.find("li");
-		var $div_1_li = $div_1.find("li");
+		var $div = $(".lcoalcity>div#yubao");
+		var $ul_0 = $div.children('ul:first');
+		var $ul_1 = $div.children('ul:last');
+		var $ul_0_li = $ul_0.find("li");
+		var $ul_1_li = $ul_1.find("li");
 		var $tit = $(".lcoalcity>.local>ul>li");
 		
 		$tit.removeClass('move');
 		$div.find('li').removeClass('on move');
 		
-		$div_0_li.click(function(){
+		$ul_0_li.click(function(){
 			var index = $(this).index()+1;
 			window.open('?id='+index,'_self')
 		})
-		$div_1_li.click(function(){
+		$ul_1_li.click(function(){
 			var index = $(this).index()+4;
 			window.open('?id='+index,'_self')
 		})
 		
 		
 		switch(id){
-			case 1: $div_0.show();$div_0_li.eq(0).addClass("on");$tit.eq(0).addClass('move');break;
-			case 2: $div_0.show();$div_0_li.eq(1).addClass("on");$tit.eq(0).addClass('move');break;
-			case 3: $div_0.show();$div_0_li.eq(2).addClass("on");$tit.eq(0).addClass('move');break;
-			case 4: $div_1.show();$div_1_li.eq(0).addClass("move");$tit.eq(1).addClass('move'); break;
-			case 5: $div_1.show();$div_1_li.eq(1).addClass("move");$tit.eq(1).addClass('move'); break;
-			case 6: $div_1.show();$div_1_li.eq(2).addClass("move");$tit.eq(1).addClass('move'); break;
-			case 7: $div_1.show();$div_1_li.eq(3).addClass("move");$tit.eq(1).addClass('move'); break;
+			case 1: $ul_0.show();$ul_0_li.eq(0).addClass("on");$tit.eq(0).addClass('move');break;
+			case 2: $ul_0.show();$ul_0_li.eq(1).addClass("on");$tit.eq(0).addClass('move');break;
+			case 3: $ul_0.show();$ul_0_li.eq(2).addClass("on");$tit.eq(0).addClass('move');break;
+			case 4: $ul_1.show();$ul_1_li.eq(0).addClass("move");$tit.eq(1).addClass('move'); break;
+			case 5: $ul_1.show();$ul_1_li.eq(1).addClass("move");$tit.eq(1).addClass('move'); break;
+			case 6: $ul_1.show();$ul_1_li.eq(2).addClass("move");$tit.eq(1).addClass('move'); break;
+			case 7: $ul_1.show();$ul_1_li.eq(3).addClass("move");$tit.eq(1).addClass('move'); break;
 		}
 		
 		

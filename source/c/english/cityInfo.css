@@ -194,32 +194,33 @@ body { background:#fff;}
 .days { width:315px; float:left; }
 .nights { width:315px; background:#2e51a5; height:77px; float:left; }
 .ds p { color:#f1c936; font-size:14px; height:24px; line-height:24px; text-indent:29px; }
-.yubao { height:auto; overflow:hidden; position:relative; display:none; width:630px; margin-left:10px; }
-.yubao ul li { margin-right:7px; position:relative; cursor:pointer; background:#e2ecf7; position:relative; height:230px; width:150px; color:#2e51a5; border:1px solid #e2ecf7; text-align:center; float:left; }
-.yubao ul li.on{ background:#FFD02C; border:1px solid #FFD02C; color:#000;}
-.yubao ul li.on h1{ background:#ffe795;}
-.yubao ul li.on em,.yubao ul li.move em{ background:url('../../i/english/cityInfo/tri.jpg'); z-index:11; width:34px; height:16px; display:block; position:absolute; top:100%; left:50%;margin-top:1px; margin-left:-17px;}
-.yubao ul li.move em {margin-top:0;}
-.yubao ul li h1 { background:#fff; font-size:20px; line-height:30px }
-.yubao ul li h2 { font-size:14px; background:#fff; line-height:30px; }
-.yubao ul li img { margin-top:20px }
-.yubao ul li .wea { font-weight:bold; line-height:30px; margin-top:9px }
-.yubao ul li .tem { font-size:18px }
-.yubao ul li .tem span { font-size:24px; vertical-align:bottom; padding-right:5px; line-height:36px }
-.yubao ul li .tem i { font-size:12px; position:relative; top:-20px; }
-.yubao ul li .tem span.hight { color:#ca3d46; }
-.yubao ul li .tem em { font-size:18px; vertical-align:top; line-height:30px }
-.yubao ul li .felike { }
-.yubao ul li .felike i { font-size:18px; margin-left:3px }
-.yubao ul li .num span { font-size:12px; line-height:30px; padding-left:16px }
-.yubao ul li .num .n1 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -32px; padding-right:7px }
-.yubao ul li .num .n2 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -49px); padding-left:19px }
-.yubao ul li.move { background:#ffd02c; color:#000; }
-.yubao ul li.move h1 { background:#ffe795; }
-.yubao ul li.move h2 { background:#ffe795; }
+.yubao {  overflow:hidden; position:relative;width:640px;}
+.yubao {display:none; }
+.yubao  li { margin-left:7px;_margin-left:6px; position:relative; cursor:pointer; background:#e2ecf7; position:relative; height:230px; width:150px; color:#2e51a5; border:1px solid #e2ecf7; text-align:center; float:left; }
+.yubao  li.on{ background:#FFD02C; border:1px solid #FFD02C; color:#000;}
+.yubao  li.on h1{ background:#ffe795;}
+.yubao  li.on em,.yubao  li.move em{ background:url('../../i/english/cityInfo/tri.jpg'); z-index:11; width:34px; height:16px; display:block; position:absolute; top:100%; left:50%;margin-top:1px; margin-left:-17px;}
+.yubao  li.move em {margin-top:0;}
+.yubao  li h1 { background:#fff; font-size:20px; line-height:30px }
+.yubao  li h2 { font-size:14px; background:#fff; line-height:30px; }
+.yubao  li img { margin-top:20px }
+.yubao  li .wea { font-weight:bold; line-height:30px; margin-top:9px }
+.yubao  li .tem { font-size:18px }
+.yubao  li .tem span { font-size:24px; vertical-align:bottom; padding-right:5px; line-height:36px }
+.yubao  li .tem i { font-size:12px; position:relative; top:-20px; }
+.yubao  li .tem span.hight { color:#ca3d46; }
+.yubao  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
+.yubao  li .felike { }
+.yubao  li .felike i { font-size:18px; margin-left:3px }
+.yubao  li .num span { font-size:12px; line-height:30px; padding-left:16px }
+.yubao  li .num .n1 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -32px; padding-right:7px }
+.yubao  li .num .n2 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -49px); padding-left:19px }
+.yubao  li.move { background:#ffd02c; color:#000; }
+.yubao  li.move h1 { background:#ffe795; }
+.yubao  li.move h2 { background:#ffe795; }
+#yubao{ height:233px;}
 .ljt { background:url(lrjt.jpg) no-repeat 0px 0px; width:30px; height:50px; position:absolute; top:140px; left:0; cursor:pointer; }
 .rjt { background:url(lrjt.jpg) no-repeat -30px 0px; width:30px; height:50px; position:absolute; top:140px; right:0; cursor:pointer; }
-.yubao ul { width:2000px; }
 .con .left .lcoalcity .day7 div.dcon { background:#DBE7F5; }
 .con .left .lcoalcity .day7 ul.t li { width:78px; }
 .con .left .lcoalcity .day7 .graph { position:relative; background:#dbe7f5; overflow:hidden; *width:630px;}
@@ -244,25 +245,25 @@ body { background:#fff;}
 .lins_am span.f { margin-left:312px; }
 .lins_am span.v { margin-left:390px; }
 .lins_am span.x { margin-left:468px; }
-.sant { height:auto; overflow:hidden; position:relative; width:630px; margin-left:10px; }
-.sant ul li { margin-right:7px; cursor:pointer; background:#e2ecf7; position:relative; height:230px; width:201px; color:#2e51a5; border:1px solid #e2ecf7; text-align:center; float:left; }
-.sant ul li h1 { background:#fff; font-size:20px; line-height:30px }
-.sant ul li h2 { font-size:14px; background:#fff; line-height:30px; }
-.sant ul li img { margin-top:20px }
-.sant ul li .wea { font-weight:bold; line-height:30px; margin-top:9px }
-.sant ul li .tem { font-size:18px }
-.sant ul li .tem span { font-size:24px; vertical-align:bottom; padding-right:5px; line-height:36px }
-.sant ul li .tem i { font-size:12px; position:relative; top:-20px; }
-.sant ul li .tem span.hight { color:#ca3d46; }
-.sant ul li .tem em { font-size:18px; vertical-align:top; line-height:30px }
-.sant ul li .felike { }
-.sant ul li .felike i { font-size:18px; margin-left:3px }
-.sant ul li .num span { font-size:12px; line-height:30px; padding-left:16px }
-.sant ul li .num .n1 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -32px; padding-right:7px }
-.sant ul li .num .n2 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -49px); padding-left:19px }
-.sant ul li.move { background:#ffd02c; color:#000; }
-.sant ul li.move h1 { background:#ffe795; }
-.sant ul li.move h2 { background:#ffe795; }
+.sant {overflow:hidden; position:relative; width:640px; }
+.sant  li { margin-left:9px; _margin-left:7px; cursor:pointer; background:#e2ecf7; position:relative; height:230px; width:201px; color:#2e51a5; border:1px solid #e2ecf7; text-align:center; float:left; }
+.sant  li h1 { background:#fff; font-size:20px; line-height:30px }
+.sant  li h2 { font-size:14px; background:#fff; line-height:30px; }
+.sant  li img { margin-top:20px }
+.sant  li .wea { font-weight:bold; line-height:30px; margin-top:9px }
+.sant  li .tem { font-size:18px }
+.sant  li .tem span { font-size:24px; vertical-align:bottom; padding-right:5px; line-height:36px }
+.sant  li .tem i { font-size:12px; position:relative; top:-20px; }
+.sant  li .tem span.hight { color:#ca3d46; }
+.sant  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
+.sant  li .felike { }
+.sant  li .felike i { font-size:18px; margin-left:3px }
+.sant  li .num span { font-size:12px; line-height:30px; padding-left:16px }
+.sant  li .num .n1 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -32px; padding-right:7px }
+.sant  li .num .n2 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -49px); padding-left:19px }
+.sant  li.move { background:#ffd02c; color:#000; }
+.sant  li.move h1 { background:#ffe795; }
+.sant  li.move h2 { background:#ffe795; }
 .graph div.t { height:35px; line-height:35px; padding:0 35px; border-bottom:3px solid #3465ba; }
 .graph div.t a { width:80px; height:100%; cursor:pointer; float:left; position:relative; }
 .graph div.t a:hover { color:#000; }
