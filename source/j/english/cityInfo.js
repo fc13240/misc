@@ -121,7 +121,7 @@ define(function(require){
 	$()
 	
     var ide=$(".con .left .act li.yb:first .wea").text();
-	$("p.xianx").html(ide);
+	$(".con .left .act li.sk p.wea").html(ide);
 
 	//七天预报
 	$(".day7 h1 span").click(function(){
