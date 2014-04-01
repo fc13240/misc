@@ -136,7 +136,8 @@ body { background:#fff;}
 .con .left .day7 .graph .b div.n { background:#dbe7f5; color: #2e51a5;}
 .con .left .day7 .graph .b .rollLeft, .con .left .day7 .graph .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -189px; cursor:pointer; width:30px; height:40px; display:block; position:absolute; top:36px; left:19px; }
 .con .left .day7 .graph .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -228px; left:581px; cursor:pointer;}
-.con .left .day7 table{ margin-left:10px; text-align:center; color:#2d51a7; display:none;}
+.con .left .day7 table{ margin-left:10px; text-align:center; color:#2d51a7; }
+.con .left .lcoalcity .day7 table{display:none;}
 .con .left .day7 table tr{height:40px; font-size:14px; line-height:20px; border:2px solid #fff;}
 .con .left .day7 table tr.tit{ background:#3466bb; color:#fff; font-size:16px; height:40px;}
 .con .left .day7 table .head{background:#d6e3f3;margin-top:1px;}
