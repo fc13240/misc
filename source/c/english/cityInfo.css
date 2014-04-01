@@ -227,9 +227,9 @@ body { background:#fff;}
 .con .left .lcoalcity .day7 .graph { position:relative; background:#dbe7f5; overflow:hidden; *width:630px;}
 .con .left .lcoalcity .day7 .graph ul.t li i { left:30px; background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat 0px -282px; }
 .con .left .lcoalcity .day7 .graph ul.t li.on i { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat -10px -305px; }
-.con .left .lcoalcity .day7 .graph .b ul li { width:191px; float:left; cursor:pointer; background:url(http://i.tq121.com.cn/i/english/cityInfo/line.png) no-repeat right #f0f5fb; color:#3466bb; padding-left:20px; height:111px; font-size:14px; }
+.con .left .lcoalcity .day7 .graph .b ul li { width:201px; float:left; cursor:pointer; background:url(http://i.tq121.com.cn/i/english/cityInfo/line.png) no-repeat right #f0f5fb; color:#3466bb; padding-left:10px; height:111px; font-size:14px; }
 .con .left .lcoalcity .day7 .graph .b ul li p { text-align:center; height:40px; line-height:40px; color:#000033 }
-.con .left .lcoalcity .day7 .graph .b ul li span { display:block; text-align:center; width:92px; overflow:hidden; float:left; }
+.con .left .lcoalcity .day7 .graph .b ul li span { display:block; text-align:center; width:96px; overflow:hidden; float:left; }
 .con .left .lcoalcity .day7 .graph .bBox { margin-left:0px; width:630px; }
 .con .left .lcoalcity .day7 .graph .b ul li span i { font-size:20px; }
 .con .left .lcoalcity .day7 .graph .b .rollLeft { z-index:100; left:7px; }
