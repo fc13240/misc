@@ -31,16 +31,16 @@ define(function(require){
 		$(this).next().hide();
 	})
 
-	//七天预报
+	//七天预报 图例版 和 列表版 切换
 	$(".day7 h1 span").click(function(){
 		$('.tab,.gra').removeClass('on');
 		$('.day7 h1 span i').css('opacity',0.5);
 		$(this).children('i').css('opacity',1);
 		var that = $(this);
 		hoverClass(that,"span")
-		var index=$(this).index()==0?2:3;alert($(this).index())
-		//$(".day7").children('div').hide();
-		//$(".day7").children('div').eq(index).hide();
+		var index=$(this).index()==1?0:1;
+		$(".day7").children('div').hide();
+		$(".day7").children('div').eq(index).show();
 	})
 
 	//Local Time
@@ -57,13 +57,12 @@ define(function(require){
 	//国外城市
 	function _day1_3(){
 		
-		var $tA = $('.day7>.graph p a');
 		var $dUl = $(".day7 .bBox div ul");
 		var liIndex = 0;
 		var $iRoll = $('.day7 div.b i');
 		
 		var id = parseInt(document.URL.substring(document.URL.indexOf('id=')+3))||1;
-		for(var i=0;i<id;i++){			//清除
+		for(var i=0;i<id;i++){			//清除之前的<a> 和 <li>
 			$('#day1_3_t a[data-id='+i+']').remove();  
 			$('#day1_3_b>.bBox ul li[data-id='+i+']').remove();
 		}		
@@ -85,21 +84,10 @@ define(function(require){
 			return liIndex=_roll(liIndex);
 		})
 		
-		
-		$a.click(function(){
+		$a.click(function(){  
 			var iIndex = $(this).index();
-			var dataId = $(this).attr("data-id");
-			if(dataId!=id){
-				window.open('?id='+dataId,'_self');
-			}
-			
-			
-			$tA.eq(iIndex).addClass("move").next().addClass('move1');alert(iIndex)
-			
 			if(!((iIndex)%6)){
-				
 					$("#day1_3_t p").animate({left: -$a.width()*iIndex+35+'px'},'slow');
-				
 			};
 			return liIndex=_roll(iIndex);
 		})
@@ -118,32 +106,40 @@ define(function(require){
 		var _roll = function(iIndex){
 			$dUl.stop(true,true);
 			$(".rollLeft,.rollRight").show();	
-			
-			if(iIndex==$tA.length-2 && id==7){
+			if(iIndex==$a.length-2 && id==7){
 				$(".rollRight").hide();
 			}
 			if(iIndex==-1){
 				window.open('?id='+(id-1),'_self');
 			}
-			if(iIndex==$tA.length-1){
-				window.open('?id='+(id+1),'_self');
-			}
-			$tA.removeClass('move move1');
+			// if(iIndex==$a.length-1){
+			// 	window.open('?id='+(id+1),'_self');
+			// }
+			$a.removeClass('move move1');
 			$dLi.removeClass('move');
-			//$tA.eq(iIndex).addClass("move").next().addClass('move1');alert(iIndex)
+			$a.eq(iIndex).addClass("move").next().addClass('move1');
 			$dLi.eq(iIndex).addClass("move");
-			if(iIndex<=$tA.length-4){
+
+
+			if(iIndex<=$a.length-4){
 				$dUl.animate({left: -211*iIndex+"px"}, 600);
-			}else if(iIndex>$tA.length-4&&iIndex<$tA.length-1){
-				$dUl.animate({left: -211*($tA.length-4)+"px"}, 600);
+			}else if(iIndex>$a.length-4&&iIndex<$a.length-1){
+				$dUl.animate({left: -211*($a.length-4)+"px"}, 600);
 			}
+
+			var dataId = $dLi.eq(iIndex).attr('data-id');
+			if(dataId==undefined){
+				dataId = id-1;
+			}else if(dataId!=id){
+				window.open('?id='+dataId,'_self');
+			};
 			return iIndex;
 		}
 		
 		
 		
 		
-		
+		//about URL index  '  ?id=  '  
 		var $div = $(".lcoalcity>div.yubao");
 		var $div_0 = $div.eq(0);
 		var $div_1 = $div.eq(1);
@@ -178,7 +174,30 @@ define(function(require){
 
 	}_day1_3();
 
-	
+	//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
+	var $uCL = $("#nearCity li");
+	var $uAL = $("#nearAttr li");
+	var colorNum = [0,3,4,7,8];
+	for(var i=1;i<12;i+=2){
+		$uCL.eq(i).addClass("ml");
+		$uAL.eq(i).addClass("ml");
+	};
+	for(var i=2;i<12;i++){
+		$uCL.eq(i).addClass("mt");
+		$uAL.eq(i).addClass("mt");
+	}
+	for(var i=0;i<colorNum.length;i++){
+		$uCL.eq(colorNum[i]).addClass('c');
+		$uAL.eq(colorNum[i]).addClass('c');
+	}
+	//周边城市 周边景点
+	$(".near h1 span").click(function(){
+		var that = $(this);
+		var index = $(this).index();
+		hoverClass(that,'span');
+		$(".near").children('ul').hide();
+		$(".near").children('ul').eq(index).show();
+	})
 	
 	
 	//mouse hover function

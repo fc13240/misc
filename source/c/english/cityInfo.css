@@ -195,10 +195,11 @@ body { background:#fff;}
 .nights { width:315px; background:#2e51a5; height:77px; float:left; }
 .ds p { color:#f1c936; font-size:14px; height:24px; line-height:24px; text-indent:29px; }
 .yubao { height:auto; overflow:hidden; position:relative; display:none; width:630px; margin-left:10px; }
-.yubao ul li { margin-right:7px; position:relative; cursor:pointer; background:#e2ecf7; position:relative; height:230px; width:150px; color:#2e51a5; border:1px solid #e2ecf7; text-align:center; margin-bottom:15px; float:left; }
+.yubao ul li { margin-right:7px; position:relative; cursor:pointer; background:#e2ecf7; position:relative; height:230px; width:150px; color:#2e51a5; border:1px solid #e2ecf7; text-align:center; float:left; }
 .yubao ul li.on{ background:#FFD02C; border:1px solid #FFD02C; color:#000;}
 .yubao ul li.on h1{ background:#ffe795;}
-.yubao ul li.on em{ background:url('../../i/english/cityInfo/tri.jpg'); width:34px; height:16px; display:block; position:absolute; top:100%; left:50%;margin-top:1px; margin-left:-17px;}
+.yubao ul li.on em,.yubao ul li.move em{ background:url('../../i/english/cityInfo/tri.jpg'); z-index:11; width:34px; height:16px; display:block; position:absolute; top:100%; left:50%;margin-top:1px; margin-left:-17px;}
+.yubao ul li.move em {margin-top:0;}
 .yubao ul li h1 { background:#fff; font-size:20px; line-height:30px }
 .yubao ul li h2 { font-size:14px; background:#fff; line-height:30px; }
 .yubao ul li img { margin-top:20px }
@@ -275,9 +276,9 @@ body { background:#fff;}
 
 #day1_3_t{ position:relative;}
 #day1_3_t p{ position:absolute; height:35px;}
-#day1_3_t i{ position:absolute; top:0px; height:35px; width:35px; display:block;}
-#day1_3_t i.coverLeft{ left:0;}
-#day1_3_t i.coverRight{left:595px;}
+#day1_3_t i{ position:absolute; top:0px; height:43px; width:70px; display:block; z-index:11; }
+#day1_3_t i.coverLeft{ left:0;width:45px;}
+#day1_3_t i.coverRight{left:585px;width:45px;}
 /*
 #day1_3_t span{ position:absolute; top:0px; left:0px; display:block;}
 
