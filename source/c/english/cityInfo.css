@@ -62,24 +62,24 @@ body { background:#fff;}
 .con .left .livIndex h1 a.on{ background:#ffd02c; color:#2e51a5; text-decoration:none;}
 .con .left .livIndex ul{padding:0 10px;}
 .con .left .livIndex ul li{ float:left; cursor:pointer; position:relative; width:190px; height:105px; padding:18px 0 18px 10px;*padding:18px 0 7px 10px;*height:116px; border-bottom:1px solid #688dcc;}
-.con .left .livIndex ul li h2{ font-size:16px; height:26px; line-height:14px; *margin-top:-6px;}
-.con .left .livIndex ul li .m{ height:63px; width:100%; border:none; }
+.con .left .livIndex ul li h2{ font-size:16px; height:26px; line-height:14px; *margin-top:0px;}
+.con .left .livIndex ul li .m{ height:70px; width:100%; border:none; }
 .con .left .livIndex ul li .m a{ background-image:url("../../i/english/cityInfo/index.jpg"); width:70px; height:52px; float:left; margin-top:8px;}
 .con .left .livIndex ul li .m span{ float:left; font-size:20px; display:table; height:100%;width:110px; *position:relative;}
-.con .left .livIndex ul li .m span i{ vertical-align:middle;line-height:19px; display:table-cell; *position:absolute; *top:0px;}
-.con .left .livIndex ul li p{font-size:12px; line-height:14px; height:30px; width:100%; overflow:hidden;}
+.con .left .livIndex ul li .m span i{ vertical-align:middle;line-height:19px; display:table-cell; *position:absolute; *top:10px;}
+.con .left .livIndex ul li p{font-size:12px; line-height:14px; height:14px; width:100%; overflow:hidden;}
 .con .left .livIndex ul li .mouseOn{ overflow: hidden; background:#2e51a5; display:none; padding:10px; font-size:14px; line-height:18px; position:absolute; left:0; top:0; width:180px; height:121px;}
 .con .left .livIndex ul li div{ border-right:1px solid #688dcc}
 .con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div,.con .left .livIndex .li12 div,.con .left .livIndex .li15 div,.con .left .livIndex .li18 div{border:none}
-.con .left .livIndex ul .li1 .m a{ background-position:0px -601px;}
-.con .left .livIndex ul .li2 .m a{ background-position:1px -1540px;}
-.con .left .livIndex ul .li3 .m a{ background-position:-9px -991px;}
-.con .left .livIndex ul .li4 .m a{ background-position:-5px -834px;}
-.con .left .livIndex ul .li5 .m a{ background-position:-3px -419px;}
-.con .left .livIndex ul .li6 .m a{ background-position:-4px -1813px;}
-.con .left .livIndex ul .li7 .m a{ background-position:-8px -481px;}
-.con .left .livIndex ul .li8 .m a{ background-position:-2px -1219px;}
-.con .left .livIndex ul .li9 .m a{ background-position:1px -77px;}
+.con .left .livIndex ul .li1 .m a{ background-position:0px -606px;}
+.con .left .livIndex ul .li2 .m a{ background-position:1px -1543px;}
+.con .left .livIndex ul .li3 .m a{ background-position:-9px -994px;}
+.con .left .livIndex ul .li4 .m a{ background-position:-5px -837px;}
+.con .left .livIndex ul .li5 .m a{ background-position:-3px -421px;}
+.con .left .livIndex ul .li6 .m a{ background-position:-4px -1822px;}
+.con .left .livIndex ul .li7 .m a{ background-position:-8px -487px;}
+.con .left .livIndex ul .li8 .m a{ background-position:-2px -1223px;}
+.con .left .livIndex ul .li9 .m a{ background-position:1px -81px;}
 
 .con .left .hour6{ margin-top:11px; display:none;text-align:center;}
 .con .left .hour6 li{ background:#e2ecf6;margin-left:8px;_margin-left:6px;float:left;color:#3564bc; border:1px solid #e2ecf6; width:150px; height:281px;}
