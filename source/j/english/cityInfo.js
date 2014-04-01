@@ -93,12 +93,12 @@ define(function(require){
 	function _htmlIndex(){
 		htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7)) || 1;
 		$(".cityName span").removeClass('on');
-		$(".cityName span").eq(htmlIndex-1).addClass('on');	
+		var $span = $(".cityName span");
 		var $obj = $(".livIndex,.hour6,.act");
 		switch(htmlIndex){
-			case 1:$obj.hide();$('.act').show();$("#changeBox").height(304);break;
-			case 2:$obj.hide();$('.hour6').show();$("#changeBox").height(284);break;
-			case 3:$obj.hide();$('.livIndex').show();$("#changeBox").height(467);break;
+			case 1:$obj.hide();$('.act').show();$(".cityName span:contains('Today')").addClass('on');break;
+			case 2:$obj.hide();$('.hour6').show();$(".cityName span:contains('6-Hour Forecast')").addClass('on');break;
+			case 3:$obj.hide();$('.livIndex').show();$(".cityName span:contains('Living Index')").addClass('on');break;
 		}
 	}_htmlIndex();
 

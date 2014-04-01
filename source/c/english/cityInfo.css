@@ -67,7 +67,7 @@ body { background:#fff;}
 .con .left .livIndex ul li .m a{ background-image:url("../../i/english/cityInfo/index.jpg"); width:70px; height:55px; float:left; margin-top:8px;}
 .con .left .livIndex ul li .m span{ float:left; font-size:20px; display:table; height:100%;width:110px; *position:relative;}
 .con .left .livIndex ul li .m span i{ vertical-align:middle;line-height:25px; display:table-cell; *position:absolute; *top:11px;}
-.con .left .livIndex ul li p{font-size:12px; line-height:14px; height:30px; overflow:hidden;}
+.con .left .livIndex ul li p{font-size:12px; line-height:14px; height:30px; overflow:hidden; display:table;}
 .con .left .livIndex ul li .mouseOn{ overflow: hidden; background:#2e51a5; display:none; padding:10px; font-size:14px; line-height:18px; position:absolute; left:0; top:0; width:180px; height:121px;}
 .con .left .livIndex ul li div{ border-right:1px solid #688dcc}
 .con .left .livIndex .li3 div,.con .left .livIndex .li6 div,.con .left .livIndex .li9 div,.con .left .livIndex .li12 div,.con .left .livIndex .li15 div,.con .left .livIndex .li18 div{border:none}
