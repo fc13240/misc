@@ -62,6 +62,7 @@ define(function(require){
 		var $iRoll = $('.day7 div.b i');
 		
 		var id = parseInt(document.URL.substring(document.URL.indexOf('id=')+3))||1;
+		var id = id>7?1:id;
 		//默认内容
 		for(var i=0;i<id;i++){			//清除之前的<a> 和 <li>
 			$('#day1_3_t a[data-id='+i+']').remove();  
@@ -88,7 +89,7 @@ define(function(require){
 			return liIndex=_roll(liIndex);
 		})
 		
-		$a.click(function(){  
+		$("#day1_3_t a:not(:last)").click(function(){  
 			var iIndex = $(this).index();
 			if(!((iIndex)%6)){
 					$("#day1_3_t p").animate({left: -$a.width()*iIndex+35+'px'},'slow');
