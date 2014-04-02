@@ -3,7 +3,7 @@ define(function(require){
 	//require('./jq-cookie');
 
 	//有新城市浏览，刷新cookie - cityHistory
-	var defaultCityHistory = '101010100,101020100,101280601';
+	var defaultCityHistory = '101010100,101020100,101280101';
 //	var url = document.URL;
 //	cityId = url.match(/english\/.*?\.html/).join().replace(/english\//,"").replace(/\.html/,"");	
 	var reg = /\d{9}/;
