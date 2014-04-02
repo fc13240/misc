@@ -206,10 +206,10 @@ body { background:#fff;}
 .yubao  li.move em {margin-top:0;}
 .yubao  li h1 { background:#fff; font-size:20px; line-height:30px }
 .yubao  li h2 { font-size:14px; background:#fff; line-height:30px; }
-.yubao  li img { margin-top:10px; height: 60px; width: 60px; }
+.yubao  li img { margin-top:20px; height: 60px; width: 60px; }
 .yubao  li .wea { font-weight:bold; line-height:30px; margin-top:0px }
 .yubao  li .tem { font-size:18px }
-.yubao  li .tem span { font-size:24px; vertical-align:bottom; padding-right:5px; line-height:36px }
+.yubao  li .tem span { font-size:24px; vertical-align:bottom; padding-right:0px; line-height:36px }
 .yubao  li .tem i { font-size:12px; position:relative; top:-20px; }
 .yubao  li .tem span.hight { color:#ca3d46; }
 .yubao  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
