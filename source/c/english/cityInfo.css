@@ -11,9 +11,10 @@ body { background:#fff;}
 .con .left .cityName ul li a { color:#2e51a5; margin:0 5px; }
 .con .left .cityName h1 { font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
 .con .left .cityName span { height:40px; cursor:pointer; color:#3466bb; line-height:40px; display:inline-block; width:152px; font-size:18px;text-align:center; }
-.con .left .cityName span a{ height:100%; width:100%; display:block;}
-.con .left .cityName span a:hover{ color:#000;}
+.con .left .cityName span a{ height:100%; width:100%; display:block;color:#3466bb;}
+.con .left .cityName span a:hover{ color:#3466bb;}
 .con .left .cityName span.on { background:#fff; color:#000; }
+.con .left .cityName span.on a{color:#000; }
 .con .left .alarm {padding-left:9px; display:none; margin-top:11px; margin-left:11px; height:33px; border:1px solid #ffd02c; background:#ffe795; }
 .con .left .alarm em { background:url(../../i/english/alarm/alarm.png); float:left; width:30px; height:26px; margin-top:3px; }
 .con .left .alarm strong {float:left text-indent:15px; line-height:33px; width:202px; float:left; text-indent:10px; overflow:hidden; height:33px; }
@@ -41,7 +42,7 @@ body { background:#fff;}
 .con .left .act li.sk a:hover{ color:#252525; background:#EFC01C}
 .con .left .act li.yb { background:#f0f5fb;  width:142px; padding-top:16px; color:#2e51a5; border-left:1px solid #e9f1f9; }
 .con .left .act li.yb h1 { font-size:20px; line-height:22px; }
-.con .left .act li.yb h2 { font-size:14px; line-height:14px; padding-top:7px; font-weight:bold; font-family:'Trebuchet MS';}
+.con .left .act li.yb h2 { font-size:14px; line-height:14px; padding-top:7px; font-weight:normal;}
 .con .left .act li.yb img { margin-top:9px; }
 .con .left .act li.yb .wea { font-weight:bold; line-height:50px; }
 .con .left .act li.yb .tem { font-size:18px; }
@@ -51,7 +52,7 @@ body { background:#fff;}
 .con .left .act li.yb .felike { color:#3466bb; }
 .con .left .act li.yb .felike i { font-size:18px; margin-left:3px; }
 .con .left .act li.yb .num  { padding-top:5px; }
-.con .left .act li.yb .num span { font-size: 12px; padding-left: 16px; height:12px; }
+.con .left .act li.yb .num span { font-size: 12px; padding-left: 16px; height:12px; color:#a7bde1; }
 .con .left .act li.yb .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -32px;_background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -30px; padding-right: 7px; }
 .con .left .act li.yb .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -50px;_background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -48px; padding-left: 19px; }
 
@@ -62,7 +63,7 @@ body { background:#fff;}
 .con .left .livIndex h1 a.on{ background:#ffd02c; color:#2e51a5; text-decoration:none;}
 .con .left .livIndex ul{padding:0 10px;}
 .con .left .livIndex ul li{ float:left; cursor:pointer; position:relative; width:190px; height:105px; padding:18px 0 18px 10px;*padding:18px 0 7px 10px;*height:116px; border-bottom:1px solid #688dcc;}
-.con .left .livIndex ul li h2{ font-size:16px; height:26px; line-height:14px; *margin-top:0px;}
+.con .left .livIndex ul li h2{ font-size:16px; height:26px; line-height:14px; *margin-top:0px; font-weight:normal;}
 .con .left .livIndex ul li .m{ height:70px; width:100%; border:none; }
 .con .left .livIndex ul li .m a{ background-image:url("../../i/english/cityInfo/index.jpg"); width:70px; height:52px; float:left; margin-top:8px;}
 .con .left .livIndex ul li .m span{ float:left; font-size:20px; display:table; height:100%;width:110px; *position:relative;}
@@ -114,7 +115,7 @@ body { background:#fff;}
 
 .con .left .day7 .graph { background:#f0f5fb; margin-left:10px;}
 .con .left .day7 .graph ul.t { border-bottom:2px solid #cedef1; }
-.con .left .day7 .graph ul.t li { float:left; cursor:pointer; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
+.con .left .day7 .graph ul.t li { float:left; cursor:pointer; color:#3466bb; height:45px; z-index:1; position:relative; width:90px; font-size:18px; text-align:center; line-height:48px; }
 .con .left .day7 .graph ul.day8 li{ width:78px;}
 .con .left .day7 .graph ul.t li i { background-image:url(../../i/english/cityInfo/icon.png);_background-image:url(../../i/english/cityInfo/icon.gif); background-position:0px -87px; font:0; position:absolute; left:42%; top:39px; _top:41px; height:14px; _height:10px; width:14px; display:block; }
 .con .left .day7 .graph ul.t li.on { background:#dbe7f5; }
@@ -131,7 +132,7 @@ body { background:#fff;}
 .con .left .day7 .graph .b ul li div .r p span { color: #999999; font-size: 12px; line-height: 36px; padding-right: 5px; vertical-align: bottom; }
 .con .left .day7 .graph .b ul li div .r p i { font-size:24px; color:#c4111a; margin:0 5px; }
 .con .left .day7 .graph .b ul li div .r p em { font-size: 18px; color:#2e51a5; line-height: 30px; vertical-align: top; }
-.con .left .day7 .graph .b ul li div .r p.fen { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0 -66px; padding-left: 30px; font-size:12px; color:#3466bb; font-weight:bold; }
+.con .left .day7 .graph .b ul li div .r p.fen { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0 -66px; padding-left: 30px; font-size:12px; color:#3466bb;}
 .con .left .day7 .graph .b ul li div.n .r p.fen { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0 -346px;  }
 .con .left .day7 .graph .b div.n { background:#dbe7f5; color: #2e51a5;}
 .con .left .day7 .graph .b .rollLeft, .con .left .day7 .graph .b .rollRight { background:url(../../i/english/cityInfo/icon.png) 0px -189px; cursor:pointer; width:30px; height:40px; display:block; position:absolute; top:36px; left:19px; }
@@ -168,13 +169,13 @@ body { background:#fff;}
 .con .right h1{ font-size:20px; line-height:38px;}
 .con .right .video{}
 .con .right .video h1{}
-.con .right  .r .txt{ padding-left:12px; height:54px; overflow:hidden; }
+.con .right  .r .txt{ padding-left:12px; height:54px; overflow:hidden; color:#333;}
 .con .right  .r .time{height:45px; padding-left:34px; color:#666; padding-top:8px;}
-.con .right  .r a{ font-size:16px; float:right; color:#3466bb; line-height:20px;}
+.con .right  .r a{ font-size:14px; float:right; color:#3466bb; line-height:20px;}
 .con .right  .r a:hover{ text-decoration:underline;}
 .con .right .map2{ margin-top:10px;}
-.con .right .ad1,cheWea{ margin-top:10px;}
-.con .right .ad2,ad{ margin-top:10px;}
+.con .right .ad1,cheWea{ margin-top:10px; border:1px solid #ccc;}
+.con .right .ad2,ad{ margin-top:10px; border:1px solid #ccc;}
 
 /*国外 li*/
 .lcoalcity { height:auto; }
