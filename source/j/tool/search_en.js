@@ -9,7 +9,7 @@ define(function(require){
 	//新闻的内容地址
 	var newsUrl = '/'+(isWWW?'':'data/')+'pubmodel/header_rdph_json.html';
 	//提示面板内容地址
-	var additionUrl = '/'+(isWWW?'profile':'examples/search_suggest')+'/search_addition.html';
+	//var additionUrl = '/'+(isWWW?'profile':'examples/search_suggest')+'/search_addition.html';
 	var $addition;
 	var isLoading = false;
 	function show($inputText){
@@ -23,50 +23,50 @@ define(function(require){
 	function hide(){
 		$addition.hide();
 	}
-	return function($inputText,$btnSubmit){
-		$inputText.placeholder();
-		var isEnter = false;//鼠标是否移上addition
+	//return function($inputText,$btnSubmit){
+		//$inputText.placeholder();
+		//var isEnter = false;//鼠标是否移上addition
 		//提示面板和输入提示逻辑
-		$inputText.focus(function(){
-			var $this = $(this);
-			if(!$this.val()){
-				if(!$addition && !isLoading){
-					isLoading = true;
-					$.get(additionUrl,function(html){
-						isLoading = false;
-						$addition = $(html).appendTo($('body')).mouseleave(function(){
-							hide();
-							isEnter = false;
-						}).mouseenter(function(){
-							isEnter = true;
-						});
-						var className = 'active';
-						var $items = $('#selectsionGroups').find('ul');
-						var $tabs = $addition.find('.tab').click(function(){
-							$tabs.removeClass(className);
-							var $this = $(this).addClass(className);
-							$items.hide();
-							$('#'+$this.attr('id').replace('tab_','')).show();
-						});
-						show($inputText);
-						var $zx = $('#zx');
-						$.getJSON(newsUrl,function(data){
-							if($.isArray(data)){
-								$.each(data,function(i,v){
-									$zx.append('<li class="num'+(i+1)+'"><a target="_blank" href="'+v[0]+'">'+v[1]+'</a></li>');
-								})
-							}
-						});
-					});
-				}else{
-					show($inputText);
-				}
-			}
-		}).blur(function(e){
-			if(!isEnter){
-				hide();
-			}
-		});
+		//$inputText.focus(function(){
+		//	var $this = $(this);
+		//	if(!$this.val()){
+			//	if(!$addition && !isLoading){
+			//		isLoading = true;
+				//	$.get(additionUrl,function(html){
+					//	isLoading = false;
+					//	$addition = $(html).appendTo($('body')).mouseleave(function(){
+					//		hide();
+					//		isEnter = false;
+					//	}).mouseenter(function(){
+					//		isEnter = true;
+					//	});
+					//	var className = 'active';
+					//	var $items = $('#selectsionGroups').find('ul');
+					//	var $tabs = $addition.find('.tab').click(function(){
+						//	$tabs.removeClass(className);
+						//	var $this = $(this).addClass(className);
+						//	$items.hide();
+						//	$('#'+$this.attr('id').replace('tab_','')).show();
+						//});
+						//show($inputText);
+						//var $zx = $('#zx');
+						//$.getJSON(newsUrl,function(data){
+							//if($.isArray(data)){
+							//	$.each(data,function(i,v){
+								//	$zx.append('<li class="num'+(i+1)+'"><a target="_blank" href="'+v[0]+'">'+v[1]+'</a></li>');
+								//})
+							//}
+						//});
+					//});
+				//}else{
+					//show($inputText);
+				//}
+			//}
+		//}).blur(function(e){
+			//if(!isEnter){
+			//	hide();
+			//}
+		//});
 		$inputText.keydown(hide);
 		new Suggest({
 			'textBox': $inputText
@@ -74,6 +74,7 @@ define(function(require){
 	        ,'bindEvent': false
 	        ,'onSelect': function(data){
 	        	var cityName = data[2];
+	        	alert(cityName);
 	        	$inputText.val(cityName);
 	        	var toUrl = '';
 	            if(data.length == 20){
