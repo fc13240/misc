@@ -217,7 +217,7 @@ body { background:#fff;}
 .yubao  li .felike i { font-size:18px; margin-left:3px }
 .yubao  li .num span { font-size:12px; line-height:30px; padding-left:16px }
 .yubao  li .num .n1 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -32px; padding-right:7px }
-.yubao  li .num .n2 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -49px); padding-left:19px }
+.yubao  li .num .n2 { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat scroll 0 -49px); padding-left:0px }
 .yubao  li.move { background:#ffd02c; color:#000; }
 .yubao  li.move h1 { background:#ffe795; }
 .yubao  li.move h2 { background:#ffe795; }
