@@ -98,7 +98,7 @@
 				currentIndex = $this.index();
 				$this.removeClass(CLASS_ON);
 			}).delegate('li','click',function(){
-				_this.hide();alert('en_test:'+$(this).data('d'));
+				_this.hide();
 				selectCallback($(this).data('d'));
 			}).mouseenter(function(){
 				_this._clTT();
