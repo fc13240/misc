@@ -73,8 +73,8 @@ define(function(require){
 			// ,'url': 'http://localhost:8010/search'
 	        ,'bindEvent': false
 	        ,'onSelect': function(data){
-	        	var cityName = data[2];
-	        	alert(cityName);
+	        	var cityName = data[0];
+	        	
 	        	$inputText.val(cityName);
 	        	var toUrl = '';
 	            if(data.length == 20){
