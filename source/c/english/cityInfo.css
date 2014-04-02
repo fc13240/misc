@@ -118,7 +118,7 @@ body { background:#fff;}
 .con .left .day7 .graph ul.day8 li{ width:78px;}
 .con .left .day7 .graph ul.t li i { background-image:url(../../i/english/cityInfo/icon.png);_background-image:url(../../i/english/cityInfo/icon.gif); background-position:0px -87px; font:0; position:absolute; left:42%; top:39px; _top:41px; height:14px; _height:10px; width:14px; display:block; }
 .con .left .day7 .graph ul.t li.on { background:#dbe7f5; }
-.con .left .day7 .graph ul.t li.on i { background-position:16px -103px; }
+.con .left .day7 .graph ul.t li.on i { background-position:14px -103px; }
 .con .left .day7 .graph .b { height:110px; position:relative; }
 .con .left .day7 .graph .bBox { margin:0 auto; width:518px; height:110px; overflow:hidden; position:relative;}
 .con .left .day7 .graph .b ul { width:3626px; position:absolute; top:0px; left:0px;}
