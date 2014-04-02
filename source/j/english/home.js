@@ -40,7 +40,7 @@ define(function(require){
 					$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 					tool_pngfix();
 					$li.find("span").html(parseInt(fc_24_en.weatherinfo.temp1));
-					//var indexVal = parseInt(fc_24_en.weatherinfo.indexval);
+					var indexVal = parseInt(fc_24_en.weatherinfo.indexval);
 					var indexVal = indexVal ? indexVal+'°':'';
 					$li.find('i').html(indexVal); 
 					if(cityHis_index < chNum.length-1){
