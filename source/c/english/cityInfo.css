@@ -174,13 +174,9 @@ body { background:#fff;}
 .con .right  .r a{ font-size:14px; float:right; color:#3466bb; line-height:20px;}
 .con .right  .r a:hover{ text-decoration:underline;}
 .con .right .map2{ margin-top:10px;}
-<<<<<<< HEAD
-.con .right .ad1,cheWea{ margin-top:10px; border:1px solid #ccc;}
-.con .right .ad2,ad{ margin-top:10px; border:1px solid #ccc;}
-=======
+
 .con .right .ad1,.cheWea{ margin-top:10px;}
 .con .right .ad2,.ad{ margin-top:10px;}
->>>>>>> 71e05254b4f22ac8730554c4ee544568c3a97991
 
 /*国外 li*/
 .lcoalcity { height:auto; }
