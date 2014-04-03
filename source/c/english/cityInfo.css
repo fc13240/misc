@@ -211,7 +211,8 @@ body { background:#fff;}
 
 
 
-.yubao  li .tem span.hight { color:#ca3d46; }
+.yubao  li .tem span.hight { color:#ca3d46; font-size: 24px; padding-left: 4px; }
+.yubao  li .tem span.wC { font-size: 24px; padding-left: 4px; }
 .yubao  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
 .yubao .sant li .wea{font-size: 14px;}
 .yubao  li .felike { }
@@ -271,7 +272,7 @@ body { background:#fff;}
 .sant  li.move { background:#ffd02c; color:#000; }
 .sant  li.move h1 { background:#ffe795; }
 .sant  li.move h2 { background:#ffe795; }
-.yubao  li .tem i { font-size:12px; position:relative; top:-13px; }
+.yubao  li .tem i { font-size:12px; position:relative; top:-8px; }
 .yubao  li .wea { font-weight:bold; line-height:40px; margin-top:0px; margin-bottom: 5px; font-size: 14px; }
 .yubao li .num .n2{padding: 0;}
 .graph div.t { height:35px; line-height:35px; padding:0 35px; border-bottom:3px solid #3465ba; }
