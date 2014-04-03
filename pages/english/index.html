@@ -226,11 +226,14 @@
     <p class="copyIcp">京ICP证010385号 京公网安备11041400134 Value-added Telecom Business License B2-20050053</p>
 </div>
 </body>
+<script type="text/javascript">
+
+</script>
 <script>
 function readerinfo(json) {
 		tab = json.radars.length - 1;
-		var imgUrl = 'http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif';
-		$('.rader a').attr('target',"_blank").attr('href',imgUrl).children('img').attr("src",imgUrl).load(function(){ $(this).width(369).height(317).css('padding-top',0)});
+		var imgUrl = 'http://i.weather.com.cn/i/product/pic/l/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif';
+		$('.rader a').attr('target',"_blank").attr('href',imgUrl).children('img').attr("src",imgUrl);
 	}
 W(function(){
 	(function(xmlfile){
