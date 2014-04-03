@@ -272,7 +272,8 @@ body { background:#fff;}
 .sant  li.move h1 { background:#ffe795; }
 .sant  li.move h2 { background:#ffe795; }
 .yubao  li .tem i { font-size:12px; position:relative; top:-13px; }
-.yubao  li .wea { font-weight:bold; line-height:30px; margin-top:0px; font-size: 14px; }
+.yubao  li .wea { font-weight:bold; line-height:40px; margin-top:0px; margin-bottom: 5px; font-size: 14px; }
+.yubao li .num .n2{padding: 0;}
 .graph div.t { height:35px; line-height:35px; padding:0 35px; border-bottom:3px solid #3465ba; }
 .graph div.t a { width:80px; height:100%; cursor:pointer; float:left; position:relative; }
 .graph div.t a:hover { color:#000; }
