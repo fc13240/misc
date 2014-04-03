@@ -177,13 +177,13 @@
 						return;
 					}
 					var arr = item.ref.split('~');
-					var content = [arr[1]];	//加入城市名
+					var content = [arr[3]];	//加入城市名
 				  
 					//arr[1] && content.push(arr[1]); //加入省名
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
 						var areaCode = arr[6];
-						var postCode = arr[3];
+						var postCode = arr[7];
 						if(tempReg.test(areaCode)){
 							content.push(areaCode);
 						}
