@@ -178,7 +178,7 @@
 					}
 					var arr = item.ref.split('~');
 					var content = [arr[1]];	//加入城市名
-				
+				  
 					//arr[1] && content.push(arr[1]); //加入省名
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
@@ -194,7 +194,7 @@
 						tempReg.lastIndex = 0;
 					}else if(isLetter){var tempReg = new RegExp(key,'ig');
 						var wholeLetter = arr[1];
-						var simpleLetter = arr[3];
+						var simpleLetter = arr[5];
 						if(tempReg.test(wholeLetter)){
 							content.push(wholeLetter);
 						}
