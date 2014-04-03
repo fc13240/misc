@@ -48,7 +48,7 @@ define(function(require){
 		var $uCL = $("#nearCity li");
 		var $uAL = $("#nearAttr li");
 		var colorNum = [0,3,4,7,8];
-		for(var i=1;i<12;i+=2){
+		for(var i=1;i<20;i+=2){
 			$uCL.eq(i).addClass("ml");
 			$uAL.eq(i).addClass("ml");
 		};
