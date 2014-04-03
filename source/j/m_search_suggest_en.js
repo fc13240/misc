@@ -177,13 +177,11 @@
 						return;
 					}
 					var arr = item.ref.split('~');
-					var content = [arr[5]];	//加入城市名
-				  //alert(content);
-					arr[5] && content.push(arr[5]); //加入省名
+					var content = [arr[2]];	//加入城市名
+					arr[9] && content.push(arr[9]); //加入省名
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
 						var areaCode = arr[6];
-						alert(areaCode);
 						var postCode = arr[7];
 						if(tempReg.test(areaCode)){
 							content.push(areaCode);
@@ -194,8 +192,8 @@
 						}
 						tempReg.lastIndex = 0;
 					}else if(isLetter){var tempReg = new RegExp(key,'ig');
-						var wholeLetter = arr[1];
-						var simpleLetter = arr[3];
+						var wholeLetter = arr[5];
+						var simpleLetter = arr[8];
 						if(tempReg.test(wholeLetter)){
 							content.push(wholeLetter);
 						}
