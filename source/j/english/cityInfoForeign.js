@@ -109,9 +109,6 @@ define(function(require){
 				if(iIndex==$a.length-2 && id==7){
 					$(".rollRight").hide();
 				}
-				if(iIndex==-1){
-					window.open('?id='+(id-1),'_self');
-				}
 				// if(iIndex==$a.length-1){
 				// 	window.open('?id='+(id+1),'_self');
 				// }
@@ -128,16 +125,19 @@ define(function(require){
 				}
 
 				var dataId = $dLi.eq(iIndex).attr('data-id');
-				if(dataId==undefined){
-					dataId = id-1;
+				// if(dataId==undefined){
+				// 	dataId = id-1;
+				// }
+				// if(dataId==id+1){
+				// 	window.open('?id='+dataId,'_self');
+				// };
+				if(iIndex==-1){
+					window.open('?id='+(id-1),'_self');
 				}else if(dataId!=id){
-					window.open('?id='+dataId,'_self');
-				};
+					window.open('?id='+(dataId),'_self');
+				}
 				return iIndex;
 			}
-			
-			
-			
 			
 			//about URL index  '  ?id=  '  
 			var $div = $(".lcoalcity>div#yubao");
@@ -159,7 +159,6 @@ define(function(require){
 				window.open('?id='+index,'_self')
 			})
 			
-			
 			switch(id){
 				case 1: $ul_0.show();$ul_0_li.eq(0).addClass("on");$tit.eq(0).addClass('move');break;
 				case 2: $ul_0.show();$ul_0_li.eq(1).addClass("on");$tit.eq(0).addClass('move');break;
@@ -169,10 +168,10 @@ define(function(require){
 				case 6: $ul_1.show();$ul_1_li.eq(2).addClass("move");$tit.eq(1).addClass('move'); break;
 				case 7: $ul_1.show();$ul_1_li.eq(3).addClass("move");$tit.eq(1).addClass('move'); break;
 			}
-			
-			
 
 		}_day1_3();
+
+
 
 		//头部推荐的三个城市切换
 		$('.searchBox p a.rollRight').click(function(){
