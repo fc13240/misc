@@ -148,7 +148,7 @@ body { background:#fff;}
 .con .left .day7 table .red{color:#a92f2f;}
 .con .left .day7 table tr td img{ width:40px; height:30px;}
 
-.con .left .near { padding-top:10px; }
+.con .left .near { padding-top:10px; height: 330px; overflow: hidden; }
 .con .left .near h1 { line-height:42px; padding-left:11px; font-size:20px; }
 .con .left .near h1 span { margin:0 16px; color:#2e51a5; cursor:pointer; }
 .con .left .near h1 span.on { color:#000; }
