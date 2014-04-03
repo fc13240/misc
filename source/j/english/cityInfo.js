@@ -52,7 +52,7 @@ define(function(require){
 			$uCL.eq(i).addClass("ml");
 			$uAL.eq(i).addClass("ml");
 		};
-		for(var i=2;i<12;i++){
+		for(var i=2;i<20;i++){
 			$uCL.eq(i).addClass("mt");
 			$uAL.eq(i).addClass("mt");
 		}
