@@ -191,7 +191,19 @@ define(function(require){
 		 for(var i=0;i<colorNum.length;i++){
 		 	$uSL.eq(colorNum[i]).addClass('c');
 		 }
-			
+		
+		//头部推荐的三个城市切换
+
+		$('.searchBox p a.rollRight').click(function(){
+			$('.searchBox p a:lt(4)').hide();
+			$('.searchBox p a:gt(3)').show();
+		})
+		$('.searchBox p a.rollLeft').click(function(){
+			$('.searchBox p a:lt(4)').show();
+			$('.searchBox p a:gt(3)').hide();
+		})
+
+
 		//中英文切换
 		$('#lanType').hover(function(){
 			$(this).addClass('down').next().show();

@@ -4,7 +4,7 @@ define(function(require){
 	require('./jq-cookie');
 	require('./broHistory');
 	require('../tool/tool_pngfix');	
-		
+
 	$(function(){	
 		//摄氏度和华氏度切换
 		$('.wF').hide();
@@ -173,6 +173,17 @@ define(function(require){
 			
 
 		}_day1_3();
+
+		//头部推荐的三个城市切换
+		$('.searchBox p a.rollRight').click(function(){
+			$('.searchBox p a:lt(4)').hide();
+			$('.searchBox p a:gt(3)').show();
+		})
+		$('.searchBox p a.rollLeft').click(function(){
+			$('.searchBox p a:lt(4)').show();
+			$('.searchBox p a:gt(3)').hide();
+		})
+
 
 		//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 		var $uCL = $("#nearCity li");
