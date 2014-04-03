@@ -183,7 +183,7 @@
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
 						var areaCode = arr[6];
-						var postCode = arr[7];
+						var postCode = arr[3];
 						if(tempReg.test(areaCode)){
 							content.push(areaCode);
 						}
@@ -194,7 +194,7 @@
 						tempReg.lastIndex = 0;
 					}else if(isLetter){var tempReg = new RegExp(key,'ig');
 						var wholeLetter = arr[1];
-						var simpleLetter = arr[5];
+						var simpleLetter = arr[3];
 						if(tempReg.test(wholeLetter)){
 							content.push(wholeLetter);
 						}
