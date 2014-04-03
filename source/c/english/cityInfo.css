@@ -210,7 +210,7 @@ body { background:#fff;}
 .yubao  li .wea { font-weight:bold; line-height:30px; margin-top:0px }
 
 
-.yubao  li .tem i { font-size:12px; position:relative; top:-20px; }
+
 .yubao  li .tem span.hight { color:#ca3d46; }
 .yubao  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
 .yubao .sant li .wea{font-size: 14px;}
@@ -258,7 +258,7 @@ body { background:#fff;}
 .sant  li .wea { font-weight:bold; line-height:30px; margin-top:9px }
 .sant  li .tem { font-size:18px }
 .sant  li .tem span { font-size:24px; vertical-align:bottom; padding-right:5px; line-height:36px }
-#yubao .sant li .tem span { font-size:18px; vertical-align:bottom; padding-right:0px; line-height:36px; padding-left: 5px; }
+#yubao .sant li .tem span { font-size:24px; vertical-align:bottom; padding-right:0px; line-height:36px; padding-left: 5px; }
 .yubao  li .tem { font-size:12px }
 .sant  li .tem i { font-size:12px; position:relative; top:-20px; }
 .sant  li .tem span.hight { color:#ca3d46; }
@@ -271,7 +271,7 @@ body { background:#fff;}
 .sant  li.move { background:#ffd02c; color:#000; }
 .sant  li.move h1 { background:#ffe795; }
 .sant  li.move h2 { background:#ffe795; }
-
+.yubao  li .tem i { font-size:12px; position:relative; top:-13px; }
 .graph div.t { height:35px; line-height:35px; padding:0 35px; border-bottom:3px solid #3465ba; }
 .graph div.t a { width:80px; height:100%; cursor:pointer; float:left; position:relative; }
 .graph div.t a:hover { color:#000; }
