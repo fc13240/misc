@@ -208,11 +208,13 @@ body { background:#fff;}
 .yubao  li h2 { font-size:14px; background:#fff; line-height:30px; }
 .yubao  li img { margin-top:20px; height: 60px; width: 60px; margin-right: 4px; }
 .yubao  li .wea { font-weight:bold; line-height:30px; margin-top:0px }
-.yubao  li .tem { font-size:18px }
+.yubao  li .tem { font-size:12px }
 .yubao  li .tem span { font-size:18px; vertical-align:bottom; padding-right:0px; line-height:36px }
 .yubao  li .tem i { font-size:12px; position:relative; top:-20px; }
 .yubao  li .tem span.hight { color:#ca3d46; }
 .yubao  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
+.yubao .sant li .wea{font-size: 14px;}
+.yubao .sant li .tem span{padding-left: 5px; padding-right: 0;}
 .yubao  li .felike { }
 .yubao  li .felike i { font-size:18px; margin-left:3px }
 .yubao  li .num span { font-size:12px; line-height:30px; padding-left:16px }
