@@ -289,7 +289,7 @@ body { background:#fff;}
 
 
 #day1_3_t{ position:relative;}
-#day1_3_t p{ position:absolute; height:35px;}
+#day1_3_t p{ position:absolute; height:35px; width: 1000px;}
 #day1_3_t i{ position:absolute; top:0px; height:43px; width:70px; display:block; z-index:11; }
 #day1_3_t i.coverLeft{ left:0;width:45px;}
 #day1_3_t i.coverRight{left:585px;width:45px;}
