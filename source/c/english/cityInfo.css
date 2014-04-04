@@ -168,7 +168,7 @@ body { background:#fff;}
 .con .left .near ul { padding-left:13px; }
 .con .left .near ul li { overflow: hidden; background: none repeat scroll 0 0 #E1E8F5; float: left; font-size: 16px; height: 49px; line-height: 49px; padding: 0 13px; width: 282px; }
 .con .left .near ul li span { display: inline-block; float: left; overflow: hidden; text-overflow: ellipsis; white-space: normal; width: 128px;  }
-.con .left .near ul li i, .con .left .near ul li em { background-image:url(../../i/english/cityInfo/icon.png); background-repeat:no-repeat; padding-right:7px; color:#c4111a; width:40px;display:inline-block; text-align:right; }
+.con .left .near ul li i, .con .left .near ul li em {/* background-image:url(../../i/english/cityInfo/icon.png); background-repeat:no-repeat;*/ padding-right:7px; color:#c4111a; width:40px;display:inline-block; text-align:right; }
 .con .left .near ul li i{ background-position:18px -366px;_background-position:8px -366px;}
 .con .left .near ul li em { background-position:17px -399px;_background-position:8px -398px; color:#000033; margin-right:10px;_margin-right:0px; }
 .con .left .near ul li img{ width:40px; height:30px;}
