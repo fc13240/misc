@@ -79,9 +79,13 @@ define(function(require){
 		 			cache:false,
 		 			async:false,
 		 			success:function(type){
-		 				var $li = $(".localWeather ul li").eq(cityHis_index-1);
-		 				var $h1_a = '<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank">'+fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1)+'</a>';
-		 				$li.children('h1').html($h1_a);
+		 				var $li = $(".localWeather ul li").eq(cityHis_index);
+		 				$li.click(function(){
+		 					window.open('http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml','_blank')
+		 				})
+		 				//var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
+		 				//$li.append($li_a);
+		 				$li.children('h1').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
 		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 		 				tool_pngfix();
 		 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.temp1));
@@ -137,8 +141,9 @@ define(function(require){
 		 			async:false,
 		 			success:function(){
 		 				var $li = $(".localWeather ul li").eq(cityHis_index);
-		 				var $h1_a = '<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank">'+fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1)+'</a>';
-		 				$li.children('h1').html($h1_a);
+		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
+		 				$li.append($li_a);
+		 				$li.children('h1').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
 		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 		 				tool_pngfix();
 		 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.tempF1));
@@ -191,7 +196,18 @@ define(function(require){
 		 for(var i=0;i<colorNum.length;i++){
 		 	$uSL.eq(colorNum[i]).addClass('c');
 		 }
-			
+		
+		//头部推荐的三个城市切换
+		$('.searchBox p a.rollRight').click(function(){
+			$('.searchBox p a:lt(4)').hide();
+			$('.searchBox p a:gt(3)').show();
+		})
+		$('.searchBox p a.rollLeft').click(function(){
+			$('.searchBox p a:lt(4)').show();
+			$('.searchBox p a:gt(3)').hide();
+		})
+
+
 		//中英文切换
 		$('#lanType').hover(function(){
 			$(this).addClass('down').next().show();

@@ -10,7 +10,7 @@ i { font-style:normal; }
 .top .cen .searchBox { }
 .top .cen .searchBox p { color:#3466bb; font-size:16px; height:34px; line-height:34px; padding-top:10px; }
 .top .cen .searchBox p a { color:#9bb4dd; font-size:12px; margin-left:8px; }
-.top .cen .searchBox p a:hover { text-decoration:underline; }
+.top .cen .searchBox p a:hover {  }
 .top .cen .searchBox .search { position:relative; }
 .top .cen .searchBox .search .txt { margin-left:4px; border:none; background:#9bb4dd; height:30px; line-height:30px; color:#fff; padding:0 40px 0 10px; width:280px; }
 .top .cen .searchBox .search .btn { background:url(../../i/english/home/icon.jpg) no-repeat 0 -374px; width:21px; height:22px; position:absolute; top:5px; left:310px; z-index:1; cursor:pointer }

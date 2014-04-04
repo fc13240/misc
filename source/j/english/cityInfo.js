@@ -4,7 +4,7 @@ define(function(require){
 	require('./jq-cookie');
 	require('./broHistory');
 	require('../tool/tool_pngfix');	
-	
+
 	$(function(){
 		//预警
 		$.ajax({
@@ -48,11 +48,11 @@ define(function(require){
 		var $uCL = $("#nearCity li");
 		var $uAL = $("#nearAttr li");
 		var colorNum = [0,3,4,7,8];
-		for(var i=1;i<12;i+=2){
+		for(var i=1;i<20;i+=2){
 			$uCL.eq(i).addClass("ml");
 			$uAL.eq(i).addClass("ml");
 		};
-		for(var i=2;i<12;i++){
+		for(var i=2;i<20;i++){
 			$uCL.eq(i).addClass("mt");
 			$uAL.eq(i).addClass("mt");
 		}
@@ -90,14 +90,18 @@ define(function(require){
 		
 		//实况、六小时预报、指数 ?index
 		function _htmlIndex(){
-			htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7)) || 1;
+			var htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7)) || 1;
+			var htmlIndex = htmlIndex>3||htmlIndex<1?1:htmlIndex;
+			var $cityName = $('.cityName');
+			var $spanT = $cityName.find('span:contains("Today")');
+			var $span6 = $cityName.find('span:contains("6-Hour Forecast")');
+			var $spanL = $cityName.find('span:contains("Living Index")');
 			$(".cityName span").removeClass('on');
-			var $span = $(".cityName span");
 			var $obj = $(".livIndex,.hour6,.act");
 			switch(htmlIndex){
-				case 1:$obj.hide();$('.act').show();$(".cityName span:contains('Today')").addClass('on');break;
-				case 2:$obj.hide();$('.hour6').show();$(".cityName span:contains('6-Hour Forecast')").addClass('on');break;
-				case 3:$obj.hide();$('.livIndex').show();$(".cityName span:contains('Living Index')").addClass('on');break;
+				case 1:$obj.hide();$('.act').show();$spanT.addClass("on");break;
+				case 2:$obj.hide();$('.hour6').show();$span6.addClass('on');break;
+				case 3:$obj.hide();$('.livIndex').show();$spanL.addClass('on');break;
 			}
 		}_htmlIndex();
 
@@ -170,7 +174,22 @@ define(function(require){
 				return iIndex;
 			}
 		}_roll()
+
+		//七天图例版的 奇偶行头部背景色 
+		$('.table tr:eq(3) td:first,.table tr:eq(7) td:first,.table tr:eq(11) td:first').css('backgroundColor','#c5dbf3')
 		
+		//$('.table tr:eq(3)').hide()
+
+		//头部推荐的三个城市切换
+		$('.searchBox p a.rollRight').click(function(){
+			$('.searchBox p a:lt(4)').hide();
+			$('.searchBox p a:gt(3)').show();
+		})
+		$('.searchBox p a.rollLeft').click(function(){
+			$('.searchBox p a:lt(4)').show();
+			$('.searchBox p a:gt(3)').hide();
+		})
+
 		//周边城市 周边景点
 		$(".near h1 span").click(function(){
 			var that = $(this);
