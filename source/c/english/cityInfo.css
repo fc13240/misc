@@ -214,7 +214,7 @@ body { background:#fff;}
 
 /*国外 li*/
 .lcoalcity { height:auto; }
-.local { height:70px; margin-bottom:10px; background:#e2ecf7; overflow:hidden; position:relative; }
+.local { height:90px; margin-bottom:10px; background:#e2ecf7; overflow:hidden; position:relative; }
 .local p { padding-left:10px; height:30px; line-height:30px; color:#2e51a5; }
 .local p a { color:#2e51a5; font-size:14px; }
 .local ul li a{ color:#000; height:100%; width:100%; display:block;}
