@@ -34,7 +34,26 @@ body { background:#fff;}
 .con .left .act li.sk .felike { color:#bccde8; font-size:12px; line-height:12px; }
 .con .left .act li.sk .felike i { font-size:18px; margin-left:3px; }
 .con .left .act li.sk .num { padding-top:5px; }
-.con .left .act li.sk .num span { font-size: 12px; line-height: 14px; padding-left: 20px; }
+.con .left .act li.sk .num span { font-size: 12px; line-height: 14px; padding-left: 20px; background:url(../../i/english/weaIcon/fx/flx.png) no-repeat; }
+
+
+
+.con .left .act li.sk .num span.n_1{ background-position: 0px -32px;}
+.con .left .act li.sk .num span.ne_1{background-position: 0px -56px;}
+.con .left .act li.sk .num span.e_1{background-position: 0px -9px;}
+.con .left .act li.sk .num span.nowind_1{background-position: 0px -80px;}
+.con .left .act li.sk .num span.nw_1{background-position: 0px -104px;}
+.con .left .act li.sk .num span.s_1{background-position: 0px -128px;}
+.con .left .act li.sk .num span.se_1{background-position: 0px -155px;}
+.con .left .act li.sk .num span.sw_1{background-position: 0px -182px;}
+.con .left .act li.sk .num span.w_1{background-position: 0px -208px;}
+
+
+
+
+
+
+
 .con .left .act li.sk .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat 0 -1px; padding-right: 14px; }
 .con .left .act li.sk .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -18px; padding-left: 21px; }
 .con .left .act li.sk .cityAlarm{ display:none; background:url(../../i/english/alarm/cityAlarm.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/english/alarm/cityAlarm.png"); width:27px;height:27px; position:absolute; top:56px; left:123px;}
