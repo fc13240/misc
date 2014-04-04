@@ -44,7 +44,7 @@ body { background:#fff;}
 .con .left .act li.yb h1 { font-size:20px; line-height:22px; }
 .con .left .act li.yb h2 { font-size:14px; line-height:14px; padding-top:7px; font-weight:normal;}
 .con .left .act li.yb img { margin-top:9px; }
-.con .left .act li.yb .wea { font-weight:bold; line-height:50px; }
+.con .left .act li.yb .wea { font-weight:bold; line-height:50px; font-size: 14px; }
 .con .left .act li.yb .tem { font-size:18px; }
 .con .left .act li.yb .tem span { color:#999; font-size:12px; vertical-align:bottom; padding-right:5px; line-height:36px; }
 .con .left .act li.yb .tem i { font-size:30px; }
