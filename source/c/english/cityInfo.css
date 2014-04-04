@@ -52,9 +52,22 @@ body { background:#fff;}
 .con .left .act li.yb .felike { color:#3466bb; }
 .con .left .act li.yb .felike i { font-size:18px; margin-left:3px; }
 .con .left .act li.yb .num  { padding-top:5px; }
-.con .left .act li.yb .num span { font-size: 12px; padding-left: 16px; height:12px; color:#a7bde1; }
+.con .left .act li.yb .num span { font-size: 12px; padding-left: 16px; height:12px; color:#a7bde1; background:url(../../i/english/weaIcon/fx/fx.png) no-repeat; }
 .con .left .act li.yb .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -32px;_background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -30px; padding-right: 7px; }
 .con .left .act li.yb .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -50px;_background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -48px; padding-left: 19px; }
+.con .left .act li.yb .num span.n{ background-position: 0px 0px;};
+.con .left .act li.yb .num span.ne{};
+.con .left .act li.yb .num span.e{};
+.con .left .act li.yb .num span.nowind{};
+.con .left .act li.yb .num span.nw{};
+.con .left .act li.yb .num span.s{}
+.con .left .act li.yb .num span.se{};
+.con .left .act li.yb .num span.sw{};
+.con .left .act li.yb .num span.w{};
+
+
+
+
 
 .con .left .livIndex{ background:#3466bb; display:none; margin-top:11px; margin-left:11px; color:#fff;}
 .con .left .livIndex h1{ height:40px; padding-right:10px; border-bottom:1px solid #688DCC;}
