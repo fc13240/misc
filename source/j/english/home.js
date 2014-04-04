@@ -80,8 +80,9 @@ define(function(require){
 		 			async:false,
 		 			success:function(type){
 		 				var $li = $(".localWeather ul li").eq(cityHis_index);
-		 				var $h1_a = '<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank">'+fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1)+'</a>';
-		 				$li.children('h1').html($h1_a);
+		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
+		 				$li.append($li_a);
+		 				$li.children('h1').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
 		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 		 				tool_pngfix();
 		 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.temp1));
@@ -137,8 +138,9 @@ define(function(require){
 		 			async:false,
 		 			success:function(){
 		 				var $li = $(".localWeather ul li").eq(cityHis_index);
-		 				var $h1_a = '<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank">'+fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1)+'</a>';
-		 				$li.children('h1').html($h1_a);
+		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
+		 				$li.append($li_a);
+		 				$li.children('h1').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
 		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 		 				tool_pngfix();
 		 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.tempF1));
