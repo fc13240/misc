@@ -198,7 +198,8 @@ define(function(require){
 			$(".near").children('ul').hide();
 			$(".near").children('ul').eq(index).show();
 		})
-		
+		$('.near h1 span:last').click();
+
 		//mouse hover function
 		function hoverClass(that,obj){
 			that.siblings(obj).removeClass('on');

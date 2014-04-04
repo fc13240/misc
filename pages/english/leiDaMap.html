@@ -19,7 +19,7 @@
     <div class="cen fl">
     	<p id="localTime" class="localTime"></p>
         <div class="searchBox">
-        	<p>Weather Forecast<a href="###" title="" >beijing</a><a href="###" title="" >qingdao</a><a href="###" title="" >shanghai</a><a href="###" title="" >>></a></p>
+        	<p>Weather Forecast<a href="http://en.weather.com.cn/weather/101010100.shtml" title="">beijing</a><a href="http://en.weather.com.cn/weather/101120201.shtml" title="">qingdao</a><a href="http://en.weather.com.cn/weather/101020100.shtml" title="">shanghai</a><a title="" href="javascript:void(0)" class="rollRight"> &gt;&gt;</a><a title="" href="javascript:void(0)" style="display:none" class="rollLeft">&lt;&lt;</a><a href="http://en.weather.com.cn/weather/401110101.shtml" style="display:none">NewYork</a><a href="http://en.weather.com.cn/weather/202010100.shtml" style="display:none">Paris</a><a href="http://en.weather.com.cn/weather/103010100.shtml" style="display:none">Tokyo</a></p>
        		<div class="search">
             	<input class="txt" type="text" value="Enter Your City,ST or ZIP Code" onfocus="if(this.value=='Enter Your City,ST or ZIP Code')this.value=''" onblur="if(this.value=='')this.value='Enter Your City,ST or ZIP Code'"  />
                 <input class="btn" type="submit" value=""  />
@@ -52,172 +52,38 @@
         </ul>
     </div>
 </div>
+
+
+
+
+
 <div class="con">
-    <div class="box clearfix">
-      <div class="l">
-          <div class="rader">
-             <h1>Weather Rader For China</h1>
-             <p><a href="#"><img src="http://product.weather.com.cn/m/i/tqld/radar_video_logging.gif" width="100" height="9" /></a></p>
-          </div>
-          <div class="localWeather">
-              <h1>Local Weather</h1>
-              <ul>
-                  <li>
-                  	<h1 class="cityName">None</h1>
-                  	<div class="clearfix">
-                    	<img src="" width="50" height="50" />
-                        <span>?</span>
-                        <dl>
-                        	<dt>°C</dt>
-                            <dd>Feels like <i>?</i></dd>
-                       	</dl>
-                    </div>
-                  </li>
-                  <li>
-                  	<h1 class="cityName">None</h1>
-                  	<div>
-                    	<img src="" width="50" height="50" />
-                        <span>?</span>
-                        <dl>
-                        	<dt>°C</dt>
-                            <dd>Feels like <i>?</i></dd>
-                       	</dl>
-                    </div>
-                  </li>
-                  <li>
-                  	<h1 class="cityName">None</h1>
-                  	<div>
-                    	<img src="" width="50" height="50" />
-                        <span>?</span>
-                        <dl>
-                        	<dt>°C</dt>
-                            <dd>Feels like <i>?</i></dd>
-                       	</dl>
-                    </div>
-                  </li>
-              </ul>
-          </div>
-          <div class="video">
-              <h1>Video Weather Forecast</h1>
-              <div class="vid clearfix">
-                  <dl class="v">
-                      <dt><a href="#"><img src="http://i.tq121.com.cn/i/english/home/video.jpg" width="325" height="225" /></a></dt>
-                      <dd>Mar 10, 2014; 7:35 PM <br />Weather forecast overview for China<a href="#">See All Videos</a></dd>
-                  </dl>
-                  <div class="sumb">
-                    <dl>
-                      <dt><i class="il"></i><span>3 -Day  Forecast</span><i class="ir"></i></dt>
-                      <dd>In the coming 3 days, cold air will influence most places of China. On March 10, cold air will influence northern Xinjiang, central and eastern Northwest China and central and western Inner Mongolia.  ...</dd>
-                    </dl>
-                       <dl>
-                      <dt><i class="il"></i><span>10 -Day  Forecast</span><i class="ir"></i></dt>
-                      <dd>In the coming 3 days, cold air will influence most places of China. On March 10, cold air will influence northern Xinjiang, central and eastern Northwest China and central and western Inner Mongolia.  ...</dd>
-                    </dl>
-                  </div>
-              </div>
-          </div>
-          <div class="chWea">
-            <h1>China Weather Conditions</h1>
-            <ul id="ulStyle" class="clearfix">
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-                <li><span>None</span><i>??℃</i><img src="" width="40" height="30" /></li>
-            </ul>
-            <p><a href="###" >more Chine Weather Forecasts ></a></p>
-          </div>
+  <div class="box clearfix">
+    <div class="l">
+      <!--面包屑  城市名称 begin-->
+      <div class="cityName">
+        <ul class="clearfix">
+            <li><a href="#">Home</a>></li>
+            <li><a href="#">Wuhu</a></li>
+        </ul>            
+        <span><a href="?index=1" >Radar</a></span>
+        <span><a href="?index=2" >Satellite</a></span>
+        <span><a href="?index=3" >Forecast Maps</a></span>
+        <span><a href="?index=3" >Severe</a></span>
       </div>
-      <div class="r">
-        <div class="alarm" >
-            <h1><em></em><span class="fl">Weather Warnings</span><i></i></h1>
-            <ul>
-            </ul>
-            <p><a title="More" >More ></a></p>
-        </div>
-        <div class="cheWea">
-        	<img src="http://i.tq121.com.cn/i/english/home/ad.jpg" width="299" height="249" title="Check the weather before you go out on the water" alt="Check the weather before you go out on the water" />
-        </div>
-        <div class="hot">
-        	<h1><a href="###" title="" >Hot Scenic Spots</a></h1>
-            <p><i>Spots</i><span>Weather</span><em>Travel Index</em></p>
-            <ul class="f">
-            	<li>
-                	<span>Tian'an Men SquareTian'an Men Square</span>
-                    <i>45°</i>
-                    <ul class="index index1 fr clearfix">
-                    	<li></li><li></li><li></li><li></li><li></li>
-                        <li class="ulbox">
-                            <ul class="on clearfix">
-                                <li></li><li></li><li></li><li></li><li></li>  <!--这里的li个数表示当前指数-->
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            	<li>
-                	<span>Tian'an Men Square</span>
-                    <i>45°</i>
-                    <ul class="index index2 fr clearfix">
-                    	<li></li><li></li><li></li><li></li><li></li>
-                        <li class="ulbox">
-                            <ul class="on clearfix">
-                                <li></li><li></li><li></li><li></li> <!--这里的li个数表示当前指数-->
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            	<li>
-                	<span>Tian'an Men Square</span>
-                    <i>45°</i>
-                    <ul class="index index3 fr clearfix">
-                    	<li></li><li></li><li></li><li></li><li></li>
-                        <li class="ulbox">
-                            <ul class="on clearfix">
-                                <li></li><li></li><li></li>   <!--这里的li个数表示当前指数-->
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            	<li>
-                	<span>Tian'an Men Square</span>
-                    <i>45°</i>
-                    <ul class="index index4 fr clearfix">
-                    	<li></li><li></li><li></li><li></li><li></li>
-                        <li class="ulbox">
-                            <ul class="on clearfix">
-                                <li></li><li></li>  <!--这里的li个数表示当前指数-->
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            	<li>
-                	<span>Tian'an Men Square</span>
-                    <i>45°</i>
-                    <ul class="index index5 fr clearfix">
-                    	<li></li><li></li><li></li><li></li><li></li>
-                        <li class="ulbox">
-                            <ul class="on clearfix">
-                                <li></li>   <!--这里的li个数表示当前指数-->
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="ad">
-        	<img src="http://i.tq121.com.cn/i/english/home/img1.jpg" width="300" height="249"  />
+      <!--面包屑  城市名称 begin-->
+      <div id="page">
+        <div class="wrapper">
+          <h1>title</h1>
+          <div class="content">
+            <p>hello world</p>
+          </div>
         </div>
       </div>
-      <i class="conBgl"></i>
-      <i class="conBgr"></i>
-    </div>
+
+<div></div>
+
+
 </div>
 <div class="footer">
     <span class="footerNav"><a href="/wzfw/gywm/index.shtml">About Us</a> - <a target="_blank" href="http://marketing.weather.com.cn/">Contact Us</a> - <a target="_blank" href="http://ad.weather.com.cn/">Job Offer</a> - <a href="/wzfw/lxwm/index.shtml">Customer Service</a> - <a href="/wzfw/ryzp/index.shtml">Registration</a> - <a href="/wzfw/sybz/index.shtml" >Q&A </a> - <a href="/wzfw/wapb/index.shtml" >WAP</a> - <a href="/wzfw/wzdt/index.shtml">Site Map</a></span>
