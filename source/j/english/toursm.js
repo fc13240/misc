@@ -25,7 +25,7 @@ define(function(require){
   
 $(".ming ul li:odd").css("background-color","#fff");
 
-
+$(".nav ul li").removeClass('on');
   $(".nav ul li[id="+$("#colorid").val()+"]").addClass("on");
         
 
