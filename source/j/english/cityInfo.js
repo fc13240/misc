@@ -176,7 +176,7 @@ define(function(require){
 		}_roll()
 
 		//七天图例版的 奇偶行头部背景色 
-		$('.table tr:eq(3) td:first,.table tr:eq(7) td:first,.table tr:eq(11) td:first').css('backgroundColor','#F0F0F0')
+		$('.table tr:eq(3) td:first,.table tr:eq(7) td:first,.table tr:eq(11) td:first').css('backgroundColor','#c5dbf3')
 		
 		//$('.table tr:eq(3)').hide()
 
