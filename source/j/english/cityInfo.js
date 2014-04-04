@@ -48,11 +48,11 @@ define(function(require){
 		var $uCL = $("#nearCity li");
 		var $uAL = $("#nearAttr li");
 		var colorNum = [0,3,4,7,8];
-		for(var i=1;i<12;i+=2){
+		for(var i=1;i<20;i+=2){
 			$uCL.eq(i).addClass("ml");
 			$uAL.eq(i).addClass("ml");
 		};
-		for(var i=2;i<12;i++){
+		for(var i=2;i<20;i++){
 			$uCL.eq(i).addClass("mt");
 			$uAL.eq(i).addClass("mt");
 		}
@@ -176,7 +176,7 @@ define(function(require){
 		}_roll()
 
 		//七天图例版的 奇偶行头部背景色 
-		$('.table tr:eq(3) td:first,.table tr:eq(7) td:first,.table tr:eq(11) td:first').css('backgroundColor','#c5dbf3')
+		$('.table tr:eq(3) td:first,.table tr:eq(7) td:first,.table tr:eq(11) td:first').css('backgroundColor','#F0F0F0')
 		
 		//$('.table tr:eq(3)').hide()
 
