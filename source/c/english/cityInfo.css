@@ -9,7 +9,7 @@ body { background:#fff;}
 .con .left .cityName ul { padding-left:7px; }
 .con .left .cityName ul li { float:left; height:30px; line-height:30px; }
 .con .left .cityName ul li a { color:#2e51a5; margin:0 5px; }
-.con .left .cityName h1 { font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
+.con .left .cityName h1 { font-size:18px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; position:absolute; left: 0; top: -5px; }
 .con .left .cityName span { height:40px; cursor:pointer; color:#3466bb; line-height:40px; display:inline-block; width:152px; font-size:18px;text-align:center; }
 .con .left .cityName span a{ height:100%; width:100%; display:block;color:#3466bb;}
 .con .left .cityName span a:hover{ color:#3466bb;}
