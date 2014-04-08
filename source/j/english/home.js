@@ -162,7 +162,7 @@ define(function(require){
 					var txt = alarminfo.gj[j].name+"Warning for National Meteorological Center"
 					var $li=$('<li><img src="http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg" width="25" height="25"/><a title="' + txt + '" >' + txt + '</a></li>');
 					$li.appendTo($alarmU);
-					if($alarmU.children('li').length>=6){
+					if($alarmU.children('li').length>=8){
 						return;
 					}
 				}
@@ -176,7 +176,7 @@ define(function(require){
 					var txt = gradeObj[grade]+" "+kindObj[kind]+" Warning for "+alarminfo.pr[i][0];
 					var $li = $('<li><img src="http://www.weather.com.cn/m/i/alarm_s/'+imgNumber+'.gif" width="25" height="20"/><a title="'+ txt +'" target="_blank">'+txt+'</a></li>');
 					$li.appendTo($alarmU);
-					if($alarmU.children('li').length>=6) return;
+					if($alarmU.children('li').length>=8) return;
 				}
 			}
 		})
@@ -185,7 +185,7 @@ define(function(require){
 			$(this).parent().animate({height:255+'px'},400);
 			$(this).children('i').addClass('down');
 		},function(){
-			$(this).parent().animate({height:'80px'},400);
+			$(this).parent().animate({height:'180px'},400);
 			$(this).children('i').removeClass();
 		})
 
