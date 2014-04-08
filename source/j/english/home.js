@@ -25,7 +25,7 @@ define(function(require){
 
 		 	var chNum = cityHistory.split(',');
 		 	var cityHis_index = 0;	
-		 	alert(chNum[0]);
+		 	
 		 	function setWeather(){  //递归法 解决for循环 异步执行 数据覆盖问题
 		 		$.ajax({
 		 			type:'GET',
@@ -34,7 +34,7 @@ define(function(require){
 		 			cache:false,
 		 			async:false,
 		 			success:function(type){
-		 				alert(11)
+		 				
 		 				var $li = $(".localWeather ul li").eq(cityHis_index);
 		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
 		 				$li.children('a').remove();
@@ -125,11 +125,11 @@ define(function(require){
 			$(this).parent().animate({height:35*height+45+'px'},400);
 			$(this).children('i').addClass('down');
 		},function(){
-<<<<<<< HEAD
+
 			$(this).parent().animate({height:'185px'},400);
-=======
+
 			$(this).parent().animate({height:'180px'},400);
->>>>>>> c7840832685e771740a8f7e823b206b523f2c177
+
 			$(this).children('i').removeClass();
 		})
 
