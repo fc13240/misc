@@ -128,7 +128,9 @@ define(function(require){
 		
 	    var ide=$(".con .left .act li.yb:first .wea").text();
 		$(".con .left .act li.sk p.wea").html(ide);
-
+        var skimg=$(".con .left .act li.yb").eq(0).find("img").attr("src");
+        $(".con .left .act li.sk").find("img").attr("src",skimg);
+        
 		//七天预报
 		$(".day7 h1 span").click(function(){
 			$('.tab,.gra').removeClass('on');
