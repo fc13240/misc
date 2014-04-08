@@ -7,27 +7,25 @@ define(function(require){
 	$(function(){
 
 		//温度格式切换
-		$("#weaUnit li:first").click(function(){
+		$("#weaUnit li").click(function(){
+			var index = $(this).index();
 			$(this).siblings().removeClass('on');
 			$(this).addClass('on');
-			weaTypeFunS();
-		}).click()
-		$("#weaUnit li:last").click(function(){
-			$(this).siblings().removeClass('on');
-			$(this).addClass('on');
-			weaTypeFunF();
-		})
-		
+			switch(index){
+				case 0:$(".wF").hide();$('.wC').fadeIn("slow");break;
+				case 1:$(".wC").hide();$('.wF').fadeIn("slow");break;
+			}
+		});
 		
 		//浏览历史 最近3个城市 Local Weather 模块 cookie
-		 function weaTypeFunS(){
+		 
 		 	//local weather
 		 	var defaultCityHistory = '101010100,101020100,101280101';  //默认城市 北上广
 		 	cityHistory = $.cookie('cityHistory') || defaultCityHistory;  //get cookie
 
 		 	var chNum = cityHistory.split(',');
 		 	var cityHis_index = 0;	
-		 	$(".localWeather dt").html("°C")
+		 	alert(chNum[0]);
 		 	function setWeather(){  //递归法 解决for循环 异步执行 数据覆盖问题
 		 		$.ajax({
 		 			type:'GET',
@@ -36,21 +34,22 @@ define(function(require){
 		 			cache:false,
 		 			async:false,
 		 			success:function(type){
+		 				alert(11)
 		 				var $li = $(".localWeather ul li").eq(cityHis_index);
-		 				//alert(fc_24_en.weatherinfo.city);
-		 				// $li.click(function(){
-		 				//  	window.open('http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml','_blank')
-		 				// })
 		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
 		 				$li.children('a').remove();
 		 				$li.append($li_a);
 		 				$li.children('h1').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
 		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 		 				tool_pngfix();
-		 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.temp1));
-		 				var indexVal = parseInt(fc_24_en.weatherinfo.indexval);
-		 				var indexVal = indexVal ? indexVal+'°':'';
-		 				$li.find('i').html(indexVal); 
+		 				$li.find("span.wC").html(parseInt(fc_24_en.weatherinfo.temp1));
+		 				$li.find("span.wF").html(parseInt(fc_24_en.weatherinfo.tempF1));
+		 				var indexVal_C = parseInt(fc_24_en.weatherinfo.indexval);
+		 				var indexVal_C = indexVal_C ? indexVal_C+'°':'';
+		 				var indexVal_F = parseInt(fc_24_en.weatherinfo.indexvalf);
+		 				var indexVal_F = indexVal_F ? indexVal_F+'°':'';
+		 				$li.find('i.wC').html(indexVal_C); 
+		 				$li.find('i.wF').html(indexVal_F); 
 		 				if(cityHis_index < chNum.length-1){
 		 					cityHis_index++;   //递归
 		 					setWeather();
@@ -60,91 +59,31 @@ define(function(require){
 		 		})
 		 	}setWeather()
 		 	//北京 上海 广州 福州 重庆 西安 南宁 昆明 济南 武汉 三亚 哈尔滨
-		 	var weaConArr = [101010100,101020100,101280101,101230101,101040100,101110101,101300101,101290101,101120101,101200101,101310201,101050101];
-		 	var weaConArr_index = 0;
-		 	function weaConFun(){
-		 		var id = weaConArr[weaConArr_index];
+		 	
+		 		$('.wF').hide();
 		 		$.ajax({
 		 			type:'GET',
-		 			url:'http://d1.weather.com.cn/fc_24_en/'+id+'.html',
+		 			url:'http://d1.weather.com.cn/city_12/city_12.html',
+		 			// url:'http://localhost/data.html'
 		 			dataType:'script',
 		 			cache:false,
 		 			async:false,
 		 			success:function(){
-		 				var $li = $("#ulStyle li").eq(weaConArr_index);
-		 				$li.children('span').html('<a target="_blank" href="http://en.weather.com.cn/weather/'+id+'.shtml">'+fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1)+'</a>');
-		 				$li.children('i').html(parseInt(fc_24_en.weatherinfo.temp1)+"°")
-		 				$li.children('img').attr('src','http://i.tq121.com.cn/i/english/weaIcon/blue/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png')			
+		 				
+		 				var $aLi = $("#ulStyle li");
+		 				for (var i = $aLi.length - 1; i >= 0; i--) {
+		 					var $li = $aLi.eq(i);
+		 					$li.children('span').html('<a target="_blank" href="http://en.weather.com.cn/weather/'+cityWeather.weatherinfo[i].cityid+'.shtml">'+cityWeather.weatherinfo[i].city.substring(0,1).toUpperCase()+cityWeather.weatherinfo[i].city.substring(1)+'</a>');
+		 					$li.children('i.wC').html(parseInt(cityWeather.weatherinfo[i].temp1)+"°")
+		 					$li.children('i.wF').html(parseInt(cityWeather.weatherinfo[i].tempF1)+"°")
+		 					$li.children('img').attr('src','http://i.tq121.com.cn/i/english/weaIcon/blue/'+cityWeather.weatherinfo[i].img1.substring(0,cityWeather.weatherinfo[i].img1.indexOf('.gif'))+'.png')
+		 				};
 		 				tool_pngfix();
-		 				if(weaConArr_index<weaConArr.length-1){
-		 					weaConArr_index++;
-		 					weaConFun();
-		 				}
 		 			}
 		 		})
-		 	}weaConFun();
-		 }
-		 function weaTypeFunF(){
-		 	//local weather
-		 	var defaultCityHistory = '101010100,101020100,101280101';  //默认城市
-		 	cityHistory = $.cookie('cityHistory') || defaultCityHistory;  //get cookie
-		 	var chNum = cityHistory.split(',')
-		 	var cityHis_index = 0;	
-		 	$(".localWeather dt").html("°F")
-		 	function setWeather(){
-		 		$.ajax({
-		 			type:'GET',
-		 			url:"http://d1.weather.com.cn/fc_24_en/"+chNum[cityHis_index]+".html",
-		 			dataType:'script',
-		 			cache:false,
-		 			async:false,
-		 			success:function(){
-		 				var $li = $(".localWeather ul li").eq(cityHis_index);
-		 				//alert(fc_24_en.weatherinfo.city);
-		 				// $li.click(function(){
-		 				//  	window.open('http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml','_blank')
-		 				// })
-		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
-		 				$li.children('a').remove();
-		 				$li.append($li_a);
-		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
-		 				tool_pngfix();
-		 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.tempF1));
-		 				var indexValf = parseInt(fc_24_en.weatherinfo.indexvalf);
-		 				var indexValf = indexValf?indexValf+'°':'';
-		 				$li.find('i').html(indexValf);
-		 				if(cityHis_index < chNum.length-1){
-		 					cityHis_index++;
-		 					setWeather()
-		 				}
-		 			}
-		 		})
-		 	}setWeather()
-		 	//北京 上海 广州 福州 重庆 西安 南宁 昆明 济南 武汉 三亚 哈尔滨
-		 	var weaConArr = [101010100,101020100,101280101,101230101,101040100,101110101,101300101,101290101,101120101,101200101,101310201,101050101];
-		 	var weaConArr_index = 0;
-		 	function weaConFun(){
-		 		var id = weaConArr[weaConArr_index];
-		 		$.ajax({
-		 			type:'GET',
-		 			url:'http://d1.weather.com.cn/fc_24_en/'+id+'.html',
-		 			dataType:'script',
-		 			cache:false,
-		 			async:false,
-		 			success:function(){
-		 				var $li = $("#ulStyle li").eq(weaConArr_index);
-		 				$li.children('span').html('<a target="_blank" href="http://en.weather.com.cn/weather/'+id+'.shtml">'+fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1)+'</a>');
-		 				$li.children('i').html(parseInt(fc_24_en.weatherinfo.tempF1)+"°")
-		 				$li.children('img').attr('src','http://i.tq121.com.cn/i/english/weaIcon/blue/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png')			
-		 				tool_pngfix();
-		 				if(weaConArr_index<weaConArr.length-1){
-		 					weaConArr_index++;
-		 					weaConFun();
-		 				}
-		 			}
-		 		})
-		 	}weaConFun();
-		 }
+		 
+	
+	
 		
 		//预警
 		$.ajax({
@@ -162,7 +101,7 @@ define(function(require){
 					var txt = alarminfo.gj[j].name+"Warning for National Meteorological Center"
 					var $li=$('<li><img src="http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg" width="25" height="25"/><a title="' + txt + '" >' + txt + '</a></li>');
 					$li.appendTo($alarmU);
-					if($alarmU.children('li').length>=6){
+					if($alarmU.children('li').length>=8){
 						return;
 					}
 				}
@@ -176,16 +115,17 @@ define(function(require){
 					var txt = gradeObj[grade]+" "+kindObj[kind]+" Warning for "+alarminfo.pr[i][0];
 					var $li = $('<li><img src="http://www.weather.com.cn/m/i/alarm_s/'+imgNumber+'.gif" width="25" height="20"/><a title="'+ txt +'" target="_blank">'+txt+'</a></li>');
 					$li.appendTo($alarmU);
-					if($alarmU.children('li').length>=6) return;
+					if($alarmU.children('li').length>=8) return;
 				}
 			}
 		})
 
 		$(".alarm h1").toggle(function(){
-			$(this).parent().animate({height:255+'px'},400);
+			var height = $(".alarm ul li").length;
+			$(this).parent().animate({height:35*height+45+'px'},400);
 			$(this).children('i').addClass('down');
 		},function(){
-			$(this).parent().animate({height:'80px'},400);
+			$(this).parent().animate({height:'185px'},400);
 			$(this).children('i').removeClass();
 		})
 

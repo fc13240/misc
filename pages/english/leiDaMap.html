@@ -77,34 +77,31 @@
 </div>
 <div class="con">
     <div class="box clearfix">
-        <div class="l">
+        <div class="left">
             <!--面包屑  城市名称 begin-->
             <div class="cityName">
-                <ul class="clearfix">
+                <ul class="t clearfix">
                     <li>
                         <a href="#">Home</a>
                         ></li>
                     <li>
-                        <a href="#">Wuhu</a>
+                        <a href="#">Radar</a>
                     </li>
                 </ul>
-                <span>
-                <a href="?index=1" >Radar</a>
-                </span>
-                <span>
-                <a href="?index=2" >Satellite</a>
-                </span>
-                <span>
-                <a href="?index=3" >Forecast Maps</a>
-                </span>
-                <span>
-                <a href="?index=3" >Severe</a>
-                </span>
+                
+                <ul class="b clearfix">
+                    <li class='on'><a href="?index1">Radar</a></li>
+                    <li><a href="?index2">Satellite</a></li>
+                    <li><a href="?index3">Forecast Maps</a></li>
+                    <li><a href="?index4">Severe</a></li>
+                </ul>
             </div>
             <!--面包屑  城市名称 end-->
             <!-- 雷达图展示 begin-->
             <div class="show">
-                <img src="http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_ebref_achn_l88_pi_20140404073000001.gif" alt="" width="630" />
+                <div class="img">
+                    <img src="http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_ebref_achn_l88_pi_20140404073000001.gif" alt="" width="630" />
+                </div>
                 <ul class="clearfix">
                     <li class='on'>
                         <a href="?index1" title="Nationwide">Nationwide</a>
@@ -136,13 +133,15 @@
             <!-- 控制台 begin-->
             <div class="contro1 clearfix">
                 <ul class="l clearfix">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="li1"></li>
+                    <li class="li2"></li>
+                    <li class="li3"></li>
+                    <li class="li4"></li>
+                    <li class="li5"></li>
                 </ul>
                 <div class="r">
+                    <p>2014-01-21 16:01 radar imgage</p>
+                    <i></i>
                     <ul>
                         <li>2014-01-21 16:01 radar imgage</li>
                         <li>2014-02-22 16:02 radar imgage</li>
@@ -162,6 +161,7 @@
             <div class="contro3 clearfix">
                 <h1>Change Regin</h1>
                 <div class="area">
+                    <i></i>
                     <ul>
                         <li>North China</li>
                         <li>North China</li>
@@ -170,6 +170,7 @@
                     </ul>
                 </div>
                 <div class="city">
+                    <i></i>
                     <ul>
                         <li>Hebie</li>
                         <li>Hebie</li>
@@ -187,7 +188,7 @@
             </div>
             <!-- 文字介绍 begin-->
         </div>
-        <div class="r">
+        <div class="right">
             <!-- 天气地图 begin-->
             <h1>Weather Maps</h1>
             <div class="img1">
@@ -212,9 +213,9 @@
             <div class="ad1"><img src="http://i.tq121.com.cn/i/english/leiDaMap/ad2.jpg" alt="1" width="300" height="250" title="1" /></div>
             <!-- 广告位 end-->
         </div>
+        <i class="conBgl"></i>
+        <i class="conBgr"></i>
     </div>
-    <i class="conBgl"></i>
-    <i class="conBgr"></i>
 </div>
 </div>
 <div class="footer">
@@ -232,30 +233,13 @@
     <a href="/wzfw/sybz/index.shtml" >Q&A </a>
     -
     <a href="/wzfw/wapb/index.shtml" >WAP</a>
-    -
-    <a href="/wzfw/wzdt/index.shtml">Site Map</a>
+    -    <a href="/wzfw/wzdt/index.shtml">Site Map</a>
     </span>
     <p> Copyright@The Public Weather Service Center of CMA All Rights Reserved (2008-2012)</p>
     <p>Important Notice:The distribution of the weather information from www.weather.com.cn is forbidden without warranty.</p>
     <p class="copyIcp">京ICP证010385号 京公网安备11041400134 Value-added Telecom Business License B2-20050053</p>
 </div>
 </body>
-<script>
-function readerinfo(json) {
-    tab = json.radars.length - 1;
-    var imgUrl = 'http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif';
-    $('.rader a').attr('target',"_blank").attr('href',imgUrl).children('img').attr("src",imgUrl).load(function(){ $(this).width(367).height(315).css('padding-top',0)});
-  }
-W(function(){
-  (function(xmlfile){
-    $.ajax({
-      type: "GET",
-      cache: false,
-      async: false,
-      url: xmlfile + '?jsoncallback=readerinfo',
-      dataType: 'jsonp' 
-    })
-  })('http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html')
-})
-</script>
+
+
 </html>
