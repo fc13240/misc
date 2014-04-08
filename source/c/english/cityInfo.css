@@ -41,7 +41,7 @@ body { background:#fff;}
 .con .left .act li.sk .num span.n_1{ background-position: 0px -292px;}
 .con .left .act li.sk .num span.ne_1{background-position: -2px -247px;}
 .con .left .act li.sk .num span.e_1{background-position: -2px -342px;}
-.con .left .act li.sk .num span.no_1{background-position: 0px -206px;}
+.con .left .act li.sk .num span.now_1{background-position: 0px -206px;}
 .con .left .act li.sk .num span.nw_1{background-position: 0px -160px;}
 .con .left .act li.sk .num span.s_1{background-position: 0px -119px;}
 .con .left .act li.sk .num span.se_1{background-position: 0px -81px;}
@@ -180,7 +180,7 @@ body { background:#fff;}
 .con .left .day7 table .red{color:#a92f2f;}
 .con .left .day7 table tr td img{ width:40px; height:30px;}
 
-.con .left .near { padding-top:10px; height: 330px; overflow: hidden; }
+.con .left .near { padding-top:10px; height: auto; overflow: hidden; }
 .con .left .near h1 { line-height:42px; padding-left:11px; font-size:20px; }
 .con .left .near h1 span { margin:0 16px; color:#2e51a5; cursor:pointer; }
 .con .left .near h1 span.on { color:#000; }
