@@ -5,49 +5,6 @@ define(function(require){
 	require('../tool/tool_pngfix');	
 
 	$(function(){
-		//预警
-		$.ajax({
-			type:'GET',
-			url:"http://product.weather.com.cn/alarm/Indexalarm_en.php",
-			dataType:'script',
-			cache:true,
-			async:true,
-			success:function(){
-				var $alarmU = $(".alarm ul");		
-				var l=alarminfo.pr.length;
-				var gradeObj={"01":'Blue','02':'Yellow','03':'Orange','04':'Red','91':'White'};
-				var kindObj = {'01':'Typhoon','02':'Torrential rain','03':'Snowstorm',"04":'Cold spell',"05":'Strong wind',"06":'Sandstorm',"07":'High temperature',"08":'Drought',"09":'Thunderbolt',"10":'Hail',"11":'Frost',"12":'Heavy fog',"13":'Haze',"14":'Icy road',"91":'Cold',"92":'Dust-haze',"93":'Thunderstorm and gale',"94":'Forest fire warning',"95":'Temperature drop',"96":'Snow and ice road',"97":'Dry-hot wind',"98":'Low temperature',"99":'Freeze'};
-				for(var j=0;j<alarminfo.gj.length;j++){
-					var txt = alarminfo.gj[j].name+"Warning for National Meteorological Center"
-					var $li=$('<li><img src="http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg" width="25" height="25"/><a title="' + txt + '" >' + txt + '</a></li>');
-					$li.appendTo($alarmU);
-					if($alarmU.children('li').length>=6){
-						return;
-					}
-				}
-				for(var i=0;i<l;i++){
-					var fileName = alarminfo.pr[i][1];
-					var point = fileName.lastIndexOf('-');
-					var kind = fileName.substr(point + 1, 2);
-					var grade = fileName.substr(point + 3, 2);
-					var imgNumber = fileName.substr(point + 1, 4);
-					var imgNumber = imgNumber>9001?'0000':imgNumber;
-					var txt = gradeObj[grade]+" "+kindObj[kind]+" Warning for "+alarminfo.pr[i][0];
-					var $li = $('<li><img src="http://www.weather.com.cn/m/i/alarm_s/'+imgNumber+'.gif" width="25" height="20"/><a title="'+ txt +'" target="_blank">'+txt+'</a></li>');
-					$li.appendTo($alarmU);
-					if($alarmU.children('li').length>=6) return;
-				}
-			}
-		})
-
-		$(".alarm h1").toggle(function(){
-			$(this).parent().animate({height:255+'px'},400);
-			$(this).children('i').addClass('down');
-		},function(){
-			$(this).parent().animate({height:'80px'},400);
-			$(this).children('i').removeClass();
-		})
-
 
 		//温度格式切换
 		$("#weaUnit li:first").click(function(){
@@ -80,11 +37,13 @@ define(function(require){
 		 			async:false,
 		 			success:function(type){
 		 				var $li = $(".localWeather ul li").eq(cityHis_index);
-		 				$li.click(function(){
-		 					window.open('http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml','_blank')
-		 				})
-		 				//var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
-		 				//$li.append($li_a);
+		 				//alert(fc_24_en.weatherinfo.city);
+		 				// $li.click(function(){
+		 				//  	window.open('http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml','_blank')
+		 				// })
+		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
+		 				$li.children('a').remove();
+		 				$li.append($li_a);
 		 				$li.children('h1').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
 		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 		 				tool_pngfix();
@@ -141,10 +100,13 @@ define(function(require){
 		 			async:false,
 		 			success:function(){
 		 				var $li = $(".localWeather ul li").eq(cityHis_index);
-		 				$li.click(function(){
-		 					window.open('http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml','_blank')
-		 				})
-		 				$li.children('h1').html(fc_24_en.weatherinfo.city.substring(0,1).toUpperCase()+fc_24_en.weatherinfo.city.substring(1));
+		 				//alert(fc_24_en.weatherinfo.city);
+		 				// $li.click(function(){
+		 				//  	window.open('http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml','_blank')
+		 				// })
+		 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
+		 				$li.children('a').remove();
+		 				$li.append($li_a);
 		 				$li.find("img").attr('src','http://i.tq121.com.cn/i/english/weaIcon/white/'+fc_24_en.weatherinfo.img1.substring(0,fc_24_en.weatherinfo.img1.indexOf('.gif'))+'.png');
 		 				tool_pngfix();
 		 				$li.find("span").html(parseInt(fc_24_en.weatherinfo.tempF1));
@@ -184,6 +146,48 @@ define(function(require){
 		 	}weaConFun();
 		 }
 		
+		//预警
+		$.ajax({
+			type:'GET',
+			url:"http://product.weather.com.cn/alarm/Indexalarm_en.php",
+			dataType:'script',
+			cache:true,
+			async:true,
+			success:function(){
+				var $alarmU = $(".alarm ul");		
+				var l=alarminfo.pr.length;
+				var gradeObj={"01":'Blue','02':'Yellow','03':'Orange','04':'Red','91':'White'};
+				var kindObj = {'01':'Typhoon','02':'Torrential rain','03':'Snowstorm',"04":'Cold spell',"05":'Strong wind',"06":'Sandstorm',"07":'High temperature',"08":'Drought',"09":'Thunderbolt',"10":'Hail',"11":'Frost',"12":'Heavy fog',"13":'Haze',"14":'Icy road',"91":'Cold',"92":'Dust-haze',"93":'Thunderstorm and gale',"94":'Forest fire warning',"95":'Temperature drop',"96":'Snow and ice road',"97":'Dry-hot wind',"98":'Low temperature',"99":'Freeze'};
+				for(var j=0;j<alarminfo.gj.length;j++){
+					var txt = alarminfo.gj[j].name+"Warning for National Meteorological Center"
+					var $li=$('<li><img src="http://www.weather.com.cn/m2/i/alarm/cma_weather.jpg" width="25" height="25"/><a title="' + txt + '" >' + txt + '</a></li>');
+					$li.appendTo($alarmU);
+					if($alarmU.children('li').length>=6){
+						return;
+					}
+				}
+				for(var i=0;i<l;i++){
+					var fileName = alarminfo.pr[i][1];
+					var point = fileName.lastIndexOf('-');
+					var kind = fileName.substr(point + 1, 2);
+					var grade = fileName.substr(point + 3, 2);
+					var imgNumber = fileName.substr(point + 1, 4);
+					var imgNumber = imgNumber>9001?'0000':imgNumber;
+					var txt = gradeObj[grade]+" "+kindObj[kind]+" Warning for "+alarminfo.pr[i][0];
+					var $li = $('<li><img src="http://www.weather.com.cn/m/i/alarm_s/'+imgNumber+'.gif" width="25" height="20"/><a title="'+ txt +'" target="_blank">'+txt+'</a></li>');
+					$li.appendTo($alarmU);
+					if($alarmU.children('li').length>=6) return;
+				}
+			}
+		})
+
+		$(".alarm h1").toggle(function(){
+			$(this).parent().animate({height:255+'px'},400);
+			$(this).children('i').addClass('down');
+		},function(){
+			$(this).parent().animate({height:'80px'},400);
+			$(this).children('i').removeClass();
+		})
 
 		 //"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 		 var $uSL = $("#ulStyle li");

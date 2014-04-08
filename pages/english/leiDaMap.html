@@ -5,7 +5,6 @@
 <!-- <script type="text/javascript" src="http://i.tq121.com.cn/j/core.js" ></script>
  -->
 <script type="text/javascript" src="http://10.14.85.90/source/j/core.js" ></script>
-
 <script>W.css("c/core.css","c/english/common.css","c/english/leiDaMap.css")</script>
 <script>W.use("j/english/leiDaMap")</script>
 <title>leiDaMap</title>
@@ -13,15 +12,25 @@
 
 <body>
 <div class="top box clearfix">
-	<div class="logo fl">
-		<a href="###"><img src="http://i.tq121.com.cn/i/english/home/logo.jpg" width="275" height="135" title="Weather China" alt="Weather China" /></a>
-	</div>
+    <div class="logo fl">
+        <a href="###"><img src="http://i.tq121.com.cn/i/english/home/logo.jpg" width="275" height="135" title="Weather China" alt="Weather China" /></a>
+    </div>
     <div class="cen fl">
-    	<p id="localTime" class="localTime"></p>
+        <p id="localTime" class="localTime"></p>
         <div class="searchBox">
-        	<p>Weather Forecast<a href="http://en.weather.com.cn/weather/101010100.shtml" title="">beijing</a><a href="http://en.weather.com.cn/weather/101120201.shtml" title="">qingdao</a><a href="http://en.weather.com.cn/weather/101020100.shtml" title="">shanghai</a><a title="" href="javascript:void(0)" class="rollRight"> &gt;&gt;</a><a title="" href="javascript:void(0)" style="display:none" class="rollLeft">&lt;&lt;</a><a href="http://en.weather.com.cn/weather/401110101.shtml" style="display:none">NewYork</a><a href="http://en.weather.com.cn/weather/202010100.shtml" style="display:none">Paris</a><a href="http://en.weather.com.cn/weather/103010100.shtml" style="display:none">Tokyo</a></p>
-       		<div class="search">
-            	<input class="txt" type="text" value="Enter Your City,ST or ZIP Code" onfocus="if(this.value=='Enter Your City,ST or ZIP Code')this.value=''" onblur="if(this.value=='')this.value='Enter Your City,ST or ZIP Code'"  />
+            <p>Weather Forecast
+                <a href="http://en.weather.com.cn/weather/101010100.shtml" title="">beijing</a>
+                <a href="http://en.weather.com.cn/weather/101120201.shtml" title="">qingdao</a>
+                <a href="http://en.weather.com.cn/weather/101020100.shtml" title="">shanghai</a>
+                <a title="" href="javascript:void(0)" class="rollRight">
+                &gt;&gt;</a>
+                <a title="" href="javascript:void(0)" style="display:none" class="rollLeft">&lt;&lt;</a>
+                <a href="http://en.weather.com.cn/weather/401110101.shtml" style="display:none">NewYork</a>
+                <a href="http://en.weather.com.cn/weather/202010100.shtml" style="display:none">Paris</a>
+                <a href="http://en.weather.com.cn/weather/103010100.shtml" style="display:none">Tokyo</a>
+            </p>
+            <div class="search">
+                <input class="txt" type="text" value="Enter Your City,ST or ZIP Code" onfocus="if(this.value=='Enter Your City,ST or ZIP Code')this.value=''" onblur="if(this.value=='')this.value='Enter Your City,ST or ZIP Code'"  />
                 <input class="btn" type="submit" value=""  />
                 <i class="l"></i>
                 <i class="r"></i>
@@ -31,62 +40,201 @@
     <div class="type fl">
         <a id="lanType" class="typeOn" title="">English</a>
         <ul>
-            <li><a href="###" title="English">English</a></li>
-            <li><a href="http://www1.weather.com.cn" title="中文">中文</a></li>
+            <li>
+                <a href="###" title="English">English</a>
+            </li>
+            <li>
+                <a href="http://www1.weather.com.cn" title="中文">中文</a>
+            </li>
         </ul>
     </div>
-    
 </div>
-
 <div class="nav">
     <div class="box">
         <ul class="navlink clearfix">
-            <li class="on"><a href="#">Home</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">Rader&Maps </a></li>
-            <li><a href="#">News&Video </a></li>
+            <li class="on">
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Travel</a>
+            </li>
+            <li>
+                <a href="#">Rader&Maps </a>
+            </li>
+            <li>
+                <a href="#">News&Video </a>
+            </li>
         </ul>
         <ul id="weaUnit" class="weaUnit">
-            <li class="on"><a href="###">°C</a></li>
-            <li><a href="###" >°F</a></li>
+            <li class="on">
+                <a href="###">°C</a>
+            </li>
+            <li>
+                <a href="###" >°F</a>
+            </li>
         </ul>
     </div>
 </div>
-
-
-
-
-
 <div class="con">
-  <div class="box clearfix">
-    <div class="l">
-      <!--面包屑  城市名称 begin-->
-      <div class="cityName">
-        <ul class="clearfix">
-            <li><a href="#">Home</a>></li>
-            <li><a href="#">Wuhu</a></li>
-        </ul>            
-        <span><a href="?index=1" >Radar</a></span>
-        <span><a href="?index=2" >Satellite</a></span>
-        <span><a href="?index=3" >Forecast Maps</a></span>
-        <span><a href="?index=3" >Severe</a></span>
-      </div>
-      <!--面包屑  城市名称 begin-->
-      <div id="page">
-        <div class="wrapper">
-          <h1>title</h1>
-          <div class="content">
-            <p>hello world</p>
-          </div>
+    <div class="box clearfix">
+        <div class="l">
+            <!--面包屑  城市名称 begin-->
+            <div class="cityName">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">Home</a>
+                        ></li>
+                    <li>
+                        <a href="#">Wuhu</a>
+                    </li>
+                </ul>
+                <span>
+                <a href="?index=1" >Radar</a>
+                </span>
+                <span>
+                <a href="?index=2" >Satellite</a>
+                </span>
+                <span>
+                <a href="?index=3" >Forecast Maps</a>
+                </span>
+                <span>
+                <a href="?index=3" >Severe</a>
+                </span>
+            </div>
+            <!--面包屑  城市名称 end-->
+            <!-- 雷达图展示 begin-->
+            <div class="show">
+                <img src="http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_ebref_achn_l88_pi_20140404073000001.gif" alt="" width="630" />
+                <ul class="clearfix">
+                    <li class='on'>
+                        <a href="?index1" title="Nationwide">Nationwide</a>
+                    </li>
+                    <li>
+                        <a href="?index2" title="Northeast">Northeast</a>
+                    </li>
+                    <li>
+                        <a href="?index3" title="North">North</a>
+                    </li>
+                    <li>
+                        <a href="?index4" title="Northwest">Northwest</a>
+                    </li>
+                    <li>
+                        <a href="?index5" title="East">East</a>
+                    </li>
+                    <li>
+                        <a href="?index6" title="Central">Central</a>
+                    </li>
+                    <li>
+                        <a href="?index7" title="South">South</a>
+                    </li>
+                    <li>
+                        <a href="?index8" title="Southwest">Southwest</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 雷达图展示 end-->
+            <!-- 控制台 begin-->
+            <div class="contro1 clearfix">
+                <ul class="l clearfix">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="r">
+                    <ul>
+                        <li>2014-01-21 16:01 radar imgage</li>
+                        <li>2014-02-22 16:02 radar imgage</li>
+                        <li>2014-03-23 16:03 radar imgage</li>
+                        <li>2014-04-24 16:04 radar imgage</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contro2 clearfix">
+                <h1>Play Speed:</h1>
+                <ul class="clearfix">
+                    <li>Fast</li>
+                    <li class="on">Normal</li>
+                    <li>Slow</li>
+                </ul>
+            </div>
+            <div class="contro3 clearfix">
+                <h1>Change Regin</h1>
+                <div class="area">
+                    <ul>
+                        <li>North China</li>
+                        <li>North China</li>
+                        <li>North China</li>
+                        <li>North China</li>
+                    </ul>
+                </div>
+                <div class="city">
+                    <ul>
+                        <li>Hebie</li>
+                        <li>Hebie</li>
+                        <li>Hebie</li>
+                        <li>Hebie</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 控制台 end-->
+            <!-- 文字介绍 begin-->
+            <div class="about">
+                <h1>About Weather Radar</h1>
+                <p>Weather radar, also called weather surveillance radar (WSR) and Doppler weather radar, is a type of radar used to locate precipitation, calculate its motion, and estimate its type (rain, snow, hail etc.).
+                    The animation of radar products can show the evolution of reflectivity and velocity patterns. The user can extract information on the dynamics of the meteorological phenomena, including the ability to extrapolate the motion and observe development or dissipation. This can also reveal non-meteorological artifacts (false echoes) that will be discussed later.Radar Integrated Display with Geospatial Elements</p>
+            </div>
+            <!-- 文字介绍 begin-->
         </div>
-      </div>
-
-<div></div>
-
-
+        <div class="r">
+            <!-- 天气地图 begin-->
+            <h1>Weather Maps</h1>
+            <div class="img1">
+                <img src="http://i.tq121.com.cn/i/english/cityInfo/map2.jpg" alt="1" width="180" height="125" title="1" />
+                <div class="d1">
+                    <div class="d2">
+                        <div class="d3">China Sathellite Image</div>
+                    </div>
+                </div>
+            </div>
+            <div class="img2">
+                <img src="http://i.tq121.com.cn/i/english/cityInfo/map1.jpg" alt="1" width="180" height="125" title="1" />
+                <div class="d1">
+                    <div class="d2">
+                        <div class="d3">Toady’s Precipition Forecast</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 天气地图 end-->
+            <!-- 广告位 begin-->
+            <div class="ad1"><img src="http://i.tq121.com.cn/i/english/leiDaMap/ad2.jpg" alt="1" width="300" height="250" title="1" /></div>
+            <div class="ad1"><img src="http://i.tq121.com.cn/i/english/leiDaMap/ad2.jpg" alt="1" width="300" height="250" title="1" /></div>
+            <!-- 广告位 end-->
+        </div>
+    </div>
+    <i class="conBgl"></i>
+    <i class="conBgr"></i>
+</div>
 </div>
 <div class="footer">
-    <span class="footerNav"><a href="/wzfw/gywm/index.shtml">About Us</a> - <a target="_blank" href="http://marketing.weather.com.cn/">Contact Us</a> - <a target="_blank" href="http://ad.weather.com.cn/">Job Offer</a> - <a href="/wzfw/lxwm/index.shtml">Customer Service</a> - <a href="/wzfw/ryzp/index.shtml">Registration</a> - <a href="/wzfw/sybz/index.shtml" >Q&A </a> - <a href="/wzfw/wapb/index.shtml" >WAP</a> - <a href="/wzfw/wzdt/index.shtml">Site Map</a></span>
+    <span class="footerNav">
+    <a href="/wzfw/gywm/index.shtml">About Us</a>
+    -
+    <a target="_blank" href="http://marketing.weather.com.cn/">Contact Us</a>
+    -
+    <a target="_blank" href="http://ad.weather.com.cn/">Job Offer</a>
+    -
+    <a href="/wzfw/lxwm/index.shtml">Customer Service</a>
+    -
+    <a href="/wzfw/ryzp/index.shtml">Registration</a>
+    -
+    <a href="/wzfw/sybz/index.shtml" >Q&A </a>
+    -
+    <a href="/wzfw/wapb/index.shtml" >WAP</a>
+    -
+    <a href="/wzfw/wzdt/index.shtml">Site Map</a>
+    </span>
     <p> Copyright@The Public Weather Service Center of CMA All Rights Reserved (2008-2012)</p>
     <p>Important Notice:The distribution of the weather information from www.weather.com.cn is forbidden without warranty.</p>
     <p class="copyIcp">京ICP证010385号 京公网安备11041400134 Value-added Telecom Business License B2-20050053</p>
@@ -94,20 +242,20 @@
 </body>
 <script>
 function readerinfo(json) {
-		tab = json.radars.length - 1;
-		var imgUrl = 'http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif';
-		$('.rader a').attr('target',"_blank").attr('href',imgUrl).children('img').attr("src",imgUrl).load(function(){ $(this).width(367).height(315).css('padding-top',0)});
-	}
+    tab = json.radars.length - 1;
+    var imgUrl = 'http://i.weather.com.cn/i/product/pic/m/sevp_aoc_rdcp_sldas_' + json.radars[tab].fn + '_l88_pi_' + json.radars[tab].ft + '.gif';
+    $('.rader a').attr('target',"_blank").attr('href',imgUrl).children('img').attr("src",imgUrl).load(function(){ $(this).width(367).height(315).css('padding-top',0)});
+  }
 W(function(){
-	(function(xmlfile){
-		$.ajax({
-			type: "GET",
-			cache: false,
-			async: false,
-			url: xmlfile + '?jsoncallback=readerinfo',
-			dataType: 'jsonp'	
-		})
-	})('http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html')
+  (function(xmlfile){
+    $.ajax({
+      type: "GET",
+      cache: false,
+      async: false,
+      url: xmlfile + '?jsoncallback=readerinfo',
+      dataType: 'jsonp' 
+    })
+  })('http://i.weather.com.cn/i/product/json/radar/JC_RADAR_CHN_JB.html')
 })
 </script>
 </html>
