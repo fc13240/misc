@@ -125,7 +125,11 @@ define(function(require){
 			$(this).parent().animate({height:35*height+45+'px'},400);
 			$(this).children('i').addClass('down');
 		},function(){
+<<<<<<< HEAD
 			$(this).parent().animate({height:'185px'},400);
+=======
+			$(this).parent().animate({height:'180px'},400);
+>>>>>>> c7840832685e771740a8f7e823b206b523f2c177
 			$(this).children('i').removeClass();
 		})
 
