@@ -128,8 +128,9 @@ define(function(require){
 		
 	    var ide=$(".con .left .act li.yb:first .wea").text();
 		$(".con .left .act li.sk p.wea").html(ide);
-        var skimg=$(".con .left .act li.yb").eq(0).find("img").attr("src");
-        $(".con .left .act li.sk").find("img").attr("src",skimg);
+         var skimg=$(".con .left .act li.yb").eq(0).find("img").attr("src");
+		var stimg=skimg.replace(/blue_80/g,"white_110");
+        $(".con .left .act li.sk").find("img").attr("src",stimg);
         
 		//七天预报
 		$(".day7 h1 span").click(function(){
