@@ -28,7 +28,7 @@ define(function(require){
  		$(".nav ul li[id="+$("#colorid").val()+"]").addClass("on");
 
 
-       $(".ci ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move");
+       $(".ci ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".box1").css("display","none");
 	   $(".defaults[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".defaults").css("display","none");
 	   $(".yingc[iname="+document.URL.substr(-2, 2)+"]").css("display","block").siblings(".box1").css("display","none");
 
