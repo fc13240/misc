@@ -1,3 +1,5 @@
+ define(function(require){
+  require('jquery');
  /**
  * jQuery jPages v0.7
  * Client side pagination with jQuery
@@ -7,7 +9,6 @@
  * Copyright 2012 Luís Almeida
  * https://github.com/luis-almeida
  */
-
 ;(function($, window, document, undefined) {
 
   var name = "jPages",
@@ -563,4 +564,5 @@
     return this;
   };
 
-})(this.W, window, document);
+})(jQuery, window, document);
+});
