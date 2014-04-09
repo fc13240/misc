@@ -1,6 +1,7 @@
 // JavaScript Document
 define(function(require) {
-	//require('./jpages.js');
+
+	require('./jpages.js');
 
 		var htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
 		switch (htmlIndex) {
@@ -68,7 +69,7 @@ define(function(require) {
 				$(".one .nat ul li").removeClass("move");
 				$(".one .nat ul li").eq(2).addClass("move");
 				break;
-		};
+		}
 
 
 	$(".ming ul li:odd").css("background-color", "#fff");
