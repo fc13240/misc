@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+
+.nav ul.weaUnit
+{
+display:none;}
+.con .right {
+    color: #333333;
+    margin-left: 12px;
+    width: 300px;
+}
+.cheWea {
+    border: 1px solid #CCCCCC;
+    margin-top: 10px;
+}
+.forcem .local
+{
+    background: none repeat scroll 0 0 #E2ECF7;
+    height: 69px;
+	margin-bottom:15px;
+}
+.con .left
+{
+	width:640px;}
+.forcem .local p {
+    color: #2E51A5;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 10px;
+}
+.forcem .local p a{
+	color:#2e51a5;
+	font-size:14px;}
+.forcem .local ul li
+{
+	float:left;
+	width:155px;
+	font-size:18px;
+	color:#3466bb;
+	text-align:center;
+	height:35px;
+	background:url(travel/line.jpg) no-repeat right;
+	line-height:35px;}
+.forcem .local ul li a
+{
+
+	height:35px;
+	color:#3466bb;
+	line-height:35px;}
+.forcem .local ul 
+{
+	padding-left:15px;}
+.forcem .local ul li.move
+{
+	background:#fff;}
+.ming 
+{
+	margin-left:10px;
+	clear:both;
+	width:633px;
+	margin-left:10px;}
+.ming ul li
+{
+	height:35px;
+	text-indent:30px;
+	overflow:hidden;
+	background:#f5f7fc;
+	line-height:35px;}
+.ming ul li.move
+{
+	height:35px;
+	background:#fff;
+	line-height:35px;}
+.ming ul li a 
+{
+	color:#2e51a5;
+	font-size:14px;}
+.ming ul 
+{
+	width:315px;
+	float:left;}
+.ming ul.zuobian
+{
+	border-right:1px solid #ccc;
+	}
+.nat
+{
+
+	margin:15px;
+	clear:both;
+	height:35px;
+		margin-left:45px;
+	}
+.nat ul li
+{
+	width:105px;
+	text-align:center;
+	float:left;
+	height:30px;
+
+	line-height:30px;}
+.nat ul li a
+{
+	color:#2e51a5;
+	font-size:14px;}
+.nat ul li.move
+{
+	background:#cdd9ee;}
+.box1
+{
+overflow:hidden;
+	height:420px;
+	}
+.ajfjq
+{
+	display:none;}
+.one .nat ul li
+{
+	width:133px;}
+.one .ming 
+{
+	display:none;}
