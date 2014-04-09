@@ -1,8 +1,8 @@
 // JavaScript Document
 define(function(require) {
 	require('./jpages.js');
-	function _htmlIndex() {
-		htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
+
+		var htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
 		switch (htmlIndex) {
 			case 1:
 				$(".forcem .local ul li").removeClass("move");
@@ -68,9 +68,8 @@ define(function(require) {
 				$(".one .nat ul li").removeClass("move");
 				$(".one .nat ul li").eq(2).addClass("move");
 				break;
-		}
-	}
-	_htmlIndex();
+		};
+
 
 	$(".ming ul li:odd").css("background-color", "#fff");
 	$(".nav ul li").removeClass('on');
