@@ -2,10 +2,10 @@
 define(function(require) {
 	require('./jpages.js');
 
-	function _htmlIndex() {
-		htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
 
-		alert('123');
+		var htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
+
+
 
 		switch (htmlIndex) {
 			case 1:
@@ -74,7 +74,7 @@ define(function(require) {
 				break;
 		}
 	}
-	_htmlIndex();
+
 
 
 
