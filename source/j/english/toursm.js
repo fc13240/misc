@@ -30,7 +30,7 @@ define(function(require){
 
        $(".ci ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move");
 	   $(".defaults[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".defaults").css("display","none");
-	   $(".yingc[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".box").css("display","none");
+	   $(".yingc[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".box1").css("display","none");
          $("div.holder").jPages({
       containerID  : "itemContainer",
       perPage      : 24,
