@@ -31,6 +31,11 @@ define(function(require){
        $(".ci ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move");
 	   $(".defaults[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".defaults").css("display","none");
 	   $(".yingc[iname="+document.URL.substr(-2, 2)+"]").css("display","block").siblings(".box1").css("display","none");
+
+       $(".forcem .local ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".local ul li").removeClass("move");
+
+
+
          $("div.holder").jPages({
       containerID  : "itemContainer",
       perPage      : 24,
