@@ -563,4 +563,4 @@
     return this;
   };
 
-})(jQuery, window, document);
+})(this.W, window, document);
