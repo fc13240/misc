@@ -76,17 +76,11 @@ define(function(require) {
 	}
 
 
-
-
 	$(".ming ul li:odd").css("background-color", "#fff");
 	$(".nav ul li").removeClass('on');
 	$(".nav ul li[id=" + $("#colorid").val() + "]").addClass("on");
-
-
 	$(".ci ul li a[iname=" + document.URL.substr(-2, 2) + "]").addClass("move");
 	$(".defaults[iname=" + document.URL.substr(-2, 2) + "]").addClass("move").siblings(".defaults").css("display", "none");
-
-
 
 	$("div.holder").jPages({
 		containerID: "itemContainer",
