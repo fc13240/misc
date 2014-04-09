@@ -1,6 +1,6 @@
 // JavaScript Document
 define(function(require) {
-	require('./jpages.js');
+	//require('./jpages.js');
 
 		var htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
 		switch (htmlIndex) {
