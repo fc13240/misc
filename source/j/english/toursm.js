@@ -1,6 +1,6 @@
 // JavaScript Document
 define(function(require){	
-	require('jquery');
+
 	require('./jpages.js');
 
 	$(function(){
