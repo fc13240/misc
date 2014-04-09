@@ -1,12 +1,8 @@
 // JavaScript Document
 define(function(require) {
 	require('./jpages.js');
-
-
-		var htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
-
-
-
+	function _htmlIndex() {
+		htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=') + 7)) || 1;
 		switch (htmlIndex) {
 			case 1:
 				$(".forcem .local ul li").removeClass("move");
@@ -74,12 +70,17 @@ define(function(require) {
 				break;
 		}
 	}
+	_htmlIndex();
 
 	$(".ming ul li:odd").css("background-color", "#fff");
 	$(".nav ul li").removeClass('on');
 	$(".nav ul li[id=" + $("#colorid").val() + "]").addClass("on");
+
+
 	$(".ci ul li a[iname=" + document.URL.substr(-2, 2) + "]").addClass("move");
 	$(".defaults[iname=" + document.URL.substr(-2, 2) + "]").addClass("move").siblings(".defaults").css("display", "none");
+
+
 
 	$("div.holder").jPages({
 		containerID: "itemContainer",
