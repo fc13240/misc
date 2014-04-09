@@ -10,7 +10,7 @@ define(function(require){
 		
 			switch(htmlIndex){
 				case 1:$(".forcem .local ul li").removeClass("move");$(".forcem .local ul li").eq(0).addClass("move");$(".jqd").hide();break;
-				//case 2:$(".forcem .local ul li").removeClass("move");$(".forcem .local ul li").eq(htmlIndex-1).addClass("move");$(".box1").hide();$(".box1").eq(1).show();break;
+				case 2:$(".forcem .local ul li").removeClass("move");$(".forcem .local ul li").eq(2).addClass("move");$(".box1").hide();$(".box1").eq(2).show();break;
 				case 3:$(".forcem .local ul li").removeClass("move");$(".forcem .local ul li").eq(1).addClass("move");$(".box1").hide();$(".jqd").show();break;
 				case 4:$(".forcem .local ul li").removeClass("move");$(".forcem .local ul li").eq(1).addClass("move");$(".box1").hide();$(".jqd").show();break;
 				case 5:$(".forcem .local ul li").removeClass("move");$(".forcem .local ul li").eq(1).addClass("move");$(".box1").hide();$(".jqd").show();$(".jqd .ming").hide();$(".jqd .ming").eq(1).show();$(".jqd .nat ul li").removeClass("move");$(".jqd .nat ul li").eq(1).addClass("move");break;
@@ -28,11 +28,10 @@ define(function(require){
  		$(".nav ul li[id="+$("#colorid").val()+"]").addClass("on");
 
 
-       $(".ci ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".box1").css("display","none");
+       $(".ci ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move");
 	   $(".defaults[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".defaults").css("display","none");
-	   $(".yingc[iname="+document.URL.substr(-2, 2)+"]").css("display","block").siblings(".box1").css("display","none");
-
-       $(".forcem .local ul li a[iname="+document.URL.substr(-2, 2)+"]").addClass("move").siblings(".local ul li").removeClass("move");
+	   
+      
 
 
 
