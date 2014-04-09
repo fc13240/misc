@@ -7,14 +7,15 @@ body{background: url('../../i/english/leiDaMap/11.jpg') -25px 0; height: 1000px;
 .left .cityName ul { padding-left:8px; }
 .left .cityName ul.t li { float:left; height:30px; line-height:30px; }
 .left .cityName ul.t li a { color:#2e51a5; margin:0 5px; }
-.left .cityName ul.b li { height:40px; cursor:pointer; color:#3466bb; line-height:40px; display:inline-block; width:152px; font-size:18px;text-align:center; }
-.left .cityName ul.b li a{ height:100%; width:100%; display:block;color:#3466bb;}
+.left .cityName ul.b li { cursor:pointer; color:#3466bb; float:left;width:152px; font-size:18px;text-align:center; }
+.left .cityName ul.b li a{ height:40px;line-height:40px; display:block;color:#3466bb;}
 .left .cityName ul.b li a:hover{ color:#3466bb;}
 .left .cityName ul.b li.on { background:#fff; color:#000; }
 .left .cityName ul.b li.on a{color:#000; }
+.left .cityName ul.b li.on a:hover{color:#000; }
 
-.left .show{margin-left: 13px; margin-top: 14px; }
-.left .show .img{border: 1px solid #9f9f9f;border-bottom: none; width: 628px;height: 546px; overflow: hidden;    height: 512px}
+.left .show{margin-left: 10px; margin-top: 14px; }
+.left .show .img{border: 1px solid #9f9f9f;border-bottom: none; width: 627px;height: 546px; overflow: hidden;    height: 517px}
 .left .show .img img{width: 630px;height: 550px;margin-left: -1px;margin-top: -1px;}
 .left .show ul{background:#3466bb;width:630px;margin-left: -1px;}
 .left .show ul li{float: left;}
@@ -22,59 +23,63 @@ body{background: url('../../i/english/leiDaMap/11.jpg') -25px 0; height: 1000px;
 .left .show ul li.on{background:#e2ecf7}
 .left .show ul li.on a{color: #22224e;}
 
-.left .contro1{margin-left: 10px;margin-top: 11px;}
+.left .contro1{margin-left: 10px;margin-top: 11px;color: #494949;}
 .left .contro1 ul.l{ float: left;margin-right: 46px;}
-.left .contro1 ul.l li{background-image: url('../../i/english/leiDaMap/icon.png'); height: 24px;width:30px; background-repeat: no-repeat; float: left;margin-right: 13px;}
+.left .contro1 ul.l li{background-image: url('../../i/english/leiDaMap/icon.jpg'); height: 24px;width:30px; background-repeat: no-repeat; float: left;margin-right: 13px;cursor: pointer;}
 .left .contro1 ul.l li.li1{background-position: 0px -6px;}
 .left .contro1 ul.l li.li2{background-position: -43px -6px;}
 .left .contro1 ul.l li.li3{background-position: -86px -6px;}
+.left .contro1 ul.l li.stop{background-position: -64px -53px;}
 .left .contro1 ul.l li.li4{background-position: -129px -6px;}
 .left .contro1 ul.l li.li5{background-position: -172px -6px;}
-.left .contro1 div.r,.area,.city{height: 23px;width: 210px;position: relative;border: 1px solid #ccc; position: relative;float: left;line-height: 23px;}
-.left .contro1 div.r p,.area p,.city p{text-indent: 8px;font-size: 14px;}
-.left .contro1 div.r i,.area i,.city i{background: url('../../i/english/leiDaMap/icon.jpg') no-repeat -4px -52px;height: 25px; width: 31px;position: absolute;top: 0;right: 0;display:block;margin-right: -31px;margin-top: -1px;}
-.left .contro1 div.r ul,.area ul,.city ul{display: none; background: #fff; border:1px solid #ccc;position: absolute;top: 0px;left: 0px;;position: absolute;left: 0;top: 23px;width: 209px;}
-.left .contro1 div.r ul li,.area ul li,.city ul li{color: #333;text-indent: 8px; font-size: 14px;}
-.left .contro1 div.r ul li.on,.area ul li.on,.city ul li.on{background: #3466bb; color: #fff;}
+.left .contro1 div.r,.area,.city{height: 23px;width: 250px;position: relative;border: 1px solid #ccc; position: relative;float: left;line-height: 23px;cursor: pointer;}
+.left .contro1 div.r p,.area p,.city p{text-indent: 8px;font-size: 14px;width: 220px; white-space: nowrap; overflow: hidden;}
+.left .contro1 div.r i,.area i,.city i{background: url('../../i/english/leiDaMap/icon.jpg') no-repeat -4px -52px;height: 25px; width: 31px;position: absolute;top: 0;right: 0;display:block;margin-right: -1px;margin-top: -1px;}
+.left .contro1 div.r ul,.area ul,.city ul{display: none; background: #fff; border:1px solid #ccc;position: absolute;top: 0px;left: 0px;;position: absolute;left: 0;top: 23px;width: 219px;z-index: 2;}
+.left .contro1 div.r ul li,.area ul li,.city ul li{color: #494949;text-indent: 8px; font-size: 14px;}
+.left .contro1 div.r ul li.on,.area ul li.on,.city ul li.on{background: #c5dbf3; color: #fff;}
 
-.left .contro2{margin-top: 13px;margin-left: 12px;color: #333;line-height: 24px;}
+
+
+.left .contro2{margin-top: 13px;margin-left: 12px;color: #494949;line-height: 24px;}
 .left .contro2 h1{float: left;font-size: 14px;}
 .left .contro2 ul{margin-left: 36px;float: left;}
-.left .contro2 ul li{background-image: url('../../i/english/leiDaMap/icon.png');background-repeat: no-repeat;background-position: -189px -100px;margin-right: 95px;float: left;padding-left: 20px;}
+.left .contro2 ul li{background-image: url('../../i/english/leiDaMap/icon.jpg');background-repeat: no-repeat;background-position: -189px -100px;margin-right: 97px;float: left;padding-left: 28px;}
 .left .contro2 ul li.on{background-position: -189px -56px;}
 
-.left .contro3{font-size: 14px;margin-left: 12px;}
-.left .contro3 h1{height: 25px;line-height: 25px;float: left;font-size: 14px}
-.left .contro3 .area{float: left;}
+
+.left .contro3{font-size: 14px;margin-left: 12px;margin-top: 17px;color: #494949;}
+.left .contro3 h1{height: 25px;line-height: 25px;float: left;font-size: 14px;margin-right:56px;}
+.left .contro3 .area{float: left;width: 150px;text-align: center;}
+.left .contro3 .area p{width: 120px;}
 .left .contro3 .area i{}
-.left .contro3 .area ul{}
+.left .contro3 .area ul{width: 119px;z-index: 1;}
 .left .contro3 .area ul li{}
-.left .contro3 .city{float: left;}
-.left .contro3 .city ul{}
+.left .contro3 .city{float: left;text-align: center;width: 157px;}
+.left .contro3 .city p{width: 127px;}
+.left .contro3 .city ul{width: 127px;z-index: 1;}
 .left .contro3 .city ul li{}
 
-.left .about{}
+.left .about{margin-left: 12px;margin-top: 10px;}
 .left .about h1{background: #e2ecf7;height: 36px; text-indent: 10px; line-height: 36px;font-size: 18px;}
-.left .about p{line-height: 25px;font-size: 14px;}
+.left .about p{color:#494949;line-height: 25px;font-size: 14px;margin-top: 7px;padding-left: 2px;}
 
 
-.right {float: left;width: 300px;margin-left: 12px;}
+.right {float: left;color:#494949;width: 312px;margin-left: 12px;font-size: 14px;line-height: 16px; _margin-left: 0px;_width: 317px;}
 .right h1{height: 40px; line-height: 40px;font-size: 18px;}
-.right .img1{}
-.right .img1 img{float: left;}
-.right .img1 .d1{float: left;}
-.right .img1 .d2{}
-.right .img1 .d3{}
+.right .img1 img,.img2 img{float: left;}
+.right .d1{float: left;display: table;width:132px;height: 125px;_width:134px;*position:relative;}
+.right .d2{display: table-cell;vertical-align:middle; *position:absolute;*top:50%;}
+.right .d3{padding-left: 11px;*position:relative;*top:-50%; }
 
 .right .img2{margin-top: 11px;}
-.right .img2 img{float: left;}
-.right .img2 .d1{float: left;}
-.right .img2 .d2{}
-.right .img2 .d3{}
+
 
 .right .ad1{margin-top: 10px;}
 .right .ad1 img{}
 .right .ad2{margin-top: 10px;}
 .right .ad2 img{}
+
+.footer{background: #fff;}
 
 

@@ -104,8 +104,6 @@ define(function(require){
 				case 3:$obj.hide();$('.livIndex').show();$spanL.addClass('on');break;
 			}
 		}_htmlIndex();
-
-
 		
 		//指数hot index & all index
 		$('.livIndex ul li:gt(8)').hide();
@@ -179,9 +177,7 @@ define(function(require){
 		}_roll()
 
 		//七天图例版的 奇偶行头部背景色 
-		$('.table tr:eq(3) td:first,.table tr:eq(7) td:first,.table tr:eq(11) td:first').css('backgroundColor','#F0F0F0')
-		
-		//$('.table tr:eq(3)').hide()
+		$('.table tr:eq(3) td:first,.table tr:eq(7) td:first,.table tr:eq(11) td:first').css('backgroundColor','#c5dbf3')
 
 		//头部推荐的三个城市切换
 		$('.searchBox p a.rollRight').click(function(){
