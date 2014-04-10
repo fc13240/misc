@@ -1,5 +1,3 @@
- define(function(require){
-  require('jquery');
  /**
  * jQuery jPages v0.7
  * Client side pagination with jQuery
@@ -565,4 +563,3 @@
   };
 
 })(jQuery, window, document);
-});
