@@ -64,10 +64,12 @@ $(function(){
 	})
 	$('.contro1 ul.l li.li1').click(function(){
 		$('.show .img:visible a').first().show();
-	}
+		$(".contro1 div.r p").html($('.contro1 div.r ul li:first').text());
+	})
 	$('.contro1 ul.l li.li5').click(function(){
-		$('.show .img:visible a').first().show();
-	}
+		$('.show .img:visible a').last().show();
+		$(".contro1 div.r p").html($('.contro1 div.r ul li:last').text());
+	})
 
 
 	function _show(){
