@@ -55,16 +55,19 @@ $(function(){
 
 	var pointer = 0;
 	//播放控制按钮
-	// show = setInterval(_show,500);
-	// clearInterval(show)
 	$('.contro1 ul.l li.li3').toggle(function(){
 		$(this).addClass('stop');
 		show = setInterval(_show,500);
 	},function(){
 		$(this).removeClass('stop');
-		clearInterval(show)
+		clearInterval(show);
 	})
-
+	$('.contro1 ul.l li.li1').click(function(){
+		$('.show .img:visible a').first().show();
+	}
+	$('.contro1 ul.l li.li5').click(function(){
+		$('.show .img:visible a').first().show();
+	}
 
 
 	function _show(){
