@@ -58,14 +58,15 @@ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
 .con .r .hot { margin-top:10px; width:298px; border:1px solid #9bb4dd; color:#3466bb; display:block; *height:266px;
 _height:200px; }
 .con .r .hot h1 { background:url(../../i/english/home/hot.jpg) no-repeat; height:39px; line-height:39px; color:#fff; font-size:18px; text-indent:55px }
-.con .r .hot h1 a { color:#fff; }
+.con .r .hot h1 a { color:#fff; display: block; height: 100%; width: 100%;}
 .con .r .hot p { background:#cdd9ee; height:29px; line-height:29px; border-top:1px solid #a8bee2; }
 .con .r .hot p i { margin-left:37px; }
 .con .r .hot p span { margin-left:88px; }
 .con .r .hot p em { margin-left:12px; }
 .con .r .hot ul li { height:36px; line-height:36px; font-size:14px; border-bottom:1px solid #9BB4DD; }
 .con .r .hot ul li span { width:166px; float:left; padding-left:8px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
-.con .r .hot ul li i { width:37px;  float:left; }
+.con .r .hot ul li span a{color: #3466BB;}
+.con .r .hot ul li i { width:37px; display:inline-block; float:left; }
 .con .r .hot ul li ul.index { margin:13px 11px 0 0; position:relative; }
 .con .r .hot ul li ul.index li { height:14px; width:15px; background-image:url(../../i/english/home/icon.jpg); background-repeat:no-repeat; float:left; border:none; }
 .con .r .hot ul li ul.index li.ulbox { width:0; height:0; }

@@ -121,7 +121,7 @@ define(function(require){
 				var $aLi = $('.hot ul.f>li');
 				for (var i = 0; i < citytr.trinfo.length; i++) {
 					var $li = $aLi.eq(i);
-					$li.find('span').html(citytr.trinfo[i].name);
+					$li.find('span').html('<a href="http://en.weather.com.cn/weather/'+citytr.trinfo[i].TAREAID+'.shtml" target="_blank">'+citytr.trinfo[i].name+'</a>');
 					$li.find('i.wC').html(parseInt(citytr.trinfo[i].temp1)+"°")
 					$li.find('i.wF').html(parseInt(citytr.trinfo[i].tempF1)+"°")
 					for(var j=0;j<citytr.trinfo[i].hintcn;j++){
