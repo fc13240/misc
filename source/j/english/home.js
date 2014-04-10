@@ -60,10 +60,9 @@ define(function(require){
  		$.ajax({
  			type:'GET',
  			url:'http://d1.weather.com.cn/city_12/city_12.html',
- 			// url:'http://localhost/data.html'
  			dataType:'script',
  			cache:false,
- 			async:false,
+ 			async:true,
  			success:function(){		
  				var $aLi = $("#ulStyle li");
  				for (var i = $aLi.length - 1; i >= 0; i--) {
@@ -111,6 +110,27 @@ define(function(require){
 				}
 			}
 		})
+		//景点温度、指数
+		$.ajax({
+			type:'GET',
+			url:'http://d1.weather.com.cn/city_12/tr_5.html',
+			dataType:'script',
+			cache:false,
+			async:true,
+			success:function(){
+				var $aLi = $('.hot ul.f>li');
+				for (var i = 0; i < citytr.trinfo.length; i++) {
+					var $li = $aLi.eq(i);
+					$li.find('span').html(citytr.trinfo[i].name);
+					$li.find('i.wC').html(parseInt(citytr.trinfo[i].temp1)+"°")
+					$li.find('i.wF').html(parseInt(citytr.trinfo[i].tempF1)+"°")
+					for(var j=0;j<citytr.trinfo[i].hintcn;j++){
+						$li.find('ul.on').append('<li></li>');
+					}
+				}
+			}
+		})
+
 		$(".alarm h1").toggle(function(){
 			var height = $(".alarm ul li").length;
 			$(this).parent().animate({height:35*height+45+'px'},400);
