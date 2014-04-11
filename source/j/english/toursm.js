@@ -71,7 +71,20 @@ define(function(require) {
 				break;
 		}
 
-
+     //中英文切换
+		$('#lanType').hover(function(){
+			$(this).addClass('down').next().show();
+		},function(){
+			$(this).removeClass('down').next().hover(function(){
+				$('#lanType').addClass('down');
+				$(this).show();
+			},function(){
+				$(this).hide();
+				$('#lanType').removeClass('down');
+			})
+			$(this).next().hide();
+		})
+		
 	$(".ming ul li:odd").css("background-color", "#fff");
 	$(".nav ul li").removeClass('on');
 	$(".nav ul li[id=" + $("#colorid").val() + "]").addClass("on");
