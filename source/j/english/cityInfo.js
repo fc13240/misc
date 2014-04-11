@@ -177,7 +177,7 @@ define(function(require){
 		}_roll()
 
 		//七天图例版的 奇偶行头部背景色 
-		if($('.table>tbody>tr').length==15){}
+		if($('.table>tbody>tr').length==15){
 			$('.table tr:eq(2) td:first,.table tr:eq(6) td:first,.table tr:eq(10) td:first,.table tr:eq(14) td:first').css('backgroundColor','#c5dbf3')
 		}else if($('.table>tbody>tr').length==14){
 			$('.table tr:eq(1) td:first,.table tr:eq(5) td:first,.table tr:eq(9) td:first,.table tr:eq(13) td:first').css('backgroundColor','#c5dbf3')
