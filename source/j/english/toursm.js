@@ -93,8 +93,6 @@ define(function(require) {
 	$(".nav ul li[id=" + $("#colorid").val() + "]").addClass("on");
 
 
-	$(".ci ul li a[iname=" + document.URL.substr(document.URL.length-2,2) + "]").addClass("move");
-	$(".defaults[iname=" + document.URL.substr(document.URL.length-2,2) + "]").addClass("move").siblings(".defaults").css("display", "none");
 
 
 
