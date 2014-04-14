@@ -8,7 +8,7 @@ i { font-style:normal; }
 a { color:#36B; text-decoration:none; font-size:12px; outline: medium none; }
 a:hover { color:#F60; text-decoration:underline; }
 .main { position:relative; }
-.banner { width:100%; position:absolute; background:url(http://i.tq121.com.cn/i/tqzt/photo/banner.jpg) no-repeat center top; height:514px; }
+.banner { width:1280px; margin: 0 auto;  background:url(http://i.tq121.com.cn/i/tqzt/photo/banner.jpg) no-repeat center top; height:514px; }
 .box { margin: 0 auto; padding-top: 390px; position: relative; width: 960px; z-index: 1; }
 .active { height:470px; margin-bottom:20px; background:#fff; }
 .left { width:440px; margin:28px 20px 0px 22px; float:left; }
