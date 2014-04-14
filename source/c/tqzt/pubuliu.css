@@ -2,7 +2,7 @@
 /* CSS Document */
 
 * { margin: 0; padding: 0; list-style:none; font-weight:normal; }
-a img { border:1px solid #dcdddd; }
+a img { border:0px solid #dcdddd; }
 body { font-family: "Microsoft Yahei", "Tahoma", "SimSun"; background:#719b4f; color:#000; font-size:12px; font-style:normal; }
 i { font-style:normal; }
 a { color:#36B; text-decoration:none; font-size:12px; outline: medium none; }
