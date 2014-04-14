@@ -8,15 +8,15 @@ i { font-style:normal; }
 a { color:#36B; text-decoration:none; font-size:12px; outline: medium none; }
 a:hover { color:#F60; text-decoration:underline; }
 .main { position:relative; }
-.banner { width:100%; position:absolute; background:url(img/banner.jpg) no-repeat center top; height:514px; }
+.banner { width:100%; position:absolute; background:url(http://i.tq121.com.cn/i/tqzt/banner.jpg) no-repeat center top; height:514px; }
 .box { margin: 0 auto; padding-top: 390px; position: relative; width: 960px; z-index: 1; }
 .active { height:470px; margin-bottom:20px; background:#fff; }
 .left { width:440px; margin:28px 20px 0px 22px; float:left; }
-.left h1 { background:url(img/title.jpg) no-repeat; width:115px; height:27px; margin-bottom:10px; line-height:27px; font-size:16px; font-weight:bold; color:#487938; }
+.left h1 { background:url(http://i.tq121.com.cn/i/tqzt/title.jpg) no-repeat; width:115px; height:27px; margin-bottom:10px; line-height:27px; font-size:16px; font-weight:bold; color:#487938; }
 .left p { word-break:break-all; margin-bottom:20px; line-height:24px; font-size:14px; }
 .left p span a { font-size:14px; color:#f44138; }
 .left p span { color:#3f3d3d; font-weight:bold; }
-.right { width:440px; float:left; background:url(img/line.jpg) no-repeat left; height:450px; padding-left:20px; margin:28px 0 0 0px; }
+.right { width:440px; float:left; background:url(http://i.tq121.com.cn/i/tqzt/line.jpg) no-repeat left; height:450px; padding-left:20px; margin:28px 0 0 0px; }
 .mains { position:relative; }
 .pin { width:310px; position:absolute; left:0px; top:0px; margin-top:10px; background:#e3f3e1; margin-left:8px; display:inline; float: left; }
 .boxs { padding: 20px 10px; border:1px solid #ccc; }
