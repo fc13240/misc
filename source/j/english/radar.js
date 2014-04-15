@@ -2,6 +2,9 @@ define(function(require){
 	require('./common');
 
 	$(function(){
+		//隐藏温度切换
+		$('#weaUnit').hide)();
+		//产品图片点击效果
 		$('.show ul li').click(function(){
 			var that = $(this);
 			var index = that.index();
