@@ -48,6 +48,7 @@ define(function(require){
 			$('.show div.img').hide().eq(index).show().children('a').hide().last().show();
 			$ul.hide().eq(index).show();
 			$(".contro1 div.r p").html($ul.eq(index).children('li').last().text());
+			$(".area p").html($(this).text());
 			return pointer=12-1;
 		})
 
