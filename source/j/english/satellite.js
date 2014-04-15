@@ -9,36 +9,46 @@ define(function(require){
 			var ajaxUrl = 'http://d1.weather.com.cn/satellite/JC_YT_'+ajaxId[i]+'.html';
 			ajaxJsonp(ajaxUrl);
 		};
+
 		//下拉窗添加点击事件
-		$('.contro1 div.r,.contro3 .area,.contro3 .city').click(function(){
+		$('.contro1 div.r').click(function(){
+			var $div = $(this).find('div');
+			if ($div.is(':visible')) {
+				$div.hide();
+			}else{
+				$div.show();
+			};
+		})
+		$('.contro3 .area').click(function(){
 			var $ul = $(this).find('ul');
 			if ($ul.is(':visible')) {
 				$ul.slideUp('fast');
 			}else{
 				$ul.slideDown('fast');
 			};
-		})//.mouseleave(function(){
-	//		
-	//		$(this).find('ul').slideUp('fast');
-	//	})
-
+		})
 		//第一个下拉窗标签li的点击事件
-		$('.contro1 div.r ul li').mouseenter(function(){
-			$(this).addClass('on').siblings().removeClass('on');
-		}).click(function(){
-			var index = $(this).index();
-			$(".contro1 div.r p").html($(this).text());
-			$('.show .img:visible a').hide().eq(index).show();
-			return pointer = index;
-		});
+		$('.contro1 div.r ul li').live('mouseenter click',function(event){
+			if (event.type == 'mouseenter') {
+				$(this).addClass('on').siblings().removeClass('on');
+			}else{
+				var index = $(this).index();
+				$(".contro1 div.r p").html($(this).text());
+				$('.show .img:visible a').hide().eq(index).show();
+				return pointer = index;
+			};;
+			
+		})		
 		//第二个下拉窗标签li点击事件
 		$('.contro3 .area ul li').mouseenter(function(){
 			$(this).addClass('on').siblings().removeClass('on');
 		}).click(function(){
 			var index = $(this).index();
-			$('.show div.img').hide().eq(index).show().children('a').hide().eq(0).show();
-			$(".contro1 div.r p").html($('.contro1 div.r ul li:first').text());
-			return pointer=0;
+			var $ul = $('.contro1 div.r div ul');
+			$('.show div.img').hide().eq(index).show().children('a').hide().last().show();
+			$ul.hide().eq(index).show();
+			$(".contro1 div.r p").html($ul.eq(index).children('li').last().text());
+			return pointer=12-1;
 		})
 
 		//播放速度控制按钮
@@ -110,32 +120,33 @@ define(function(require){
 
 function readerinfo(json) {
 	switch(json.radars[0].fn){
-		case 'wxcl_asc_e99_achn':var $divFarther=$('.show .img:eq(0)');break;//彩色云图
-		case 'wxbl_fy2d_ewvp_achn':var $divFarther=$('.show .img:eq(1)');break;//水汽云图
-		case 'wxsp_asc_eir_acwp':var $divFarther=$('.show .img:eq(2)');break;//太平洋红外
-		case 'wxbl_asc_eir_achn':var $divFarther=$('.show .img:eq(3)');var isEnd = true;break;//大陆红外
+		case 'wxcl_asc_e99_achn':var $divFather=$('.show .img:eq(0)');$ulFather=$('.contro1 div.r ul:eq(0)');var pH = 1;break;//彩色云图
+		case 'wxbl_fy2d_ewvp_achn':var $divFather=$('.show .img:eq(1)');$ulFather=$('.contro1 div.r ul:eq(1)');break;//水汽云图
+		case 'wxsp_asc_eir_acwp':var $divFather=$('.show .img:eq(2)');$ulFather=$('.contro1 div.r ul:eq(2)');break;//太平洋红外
+		case 'wxbl_asc_eir_achn':var $divFather=$('.show .img:eq(3)');$ulFather=$('.contro1 div.r ul:eq(3)');break;//大陆红外
 	}
 
 	var length = json.radars.length;
 	var showLength = length<12? length: 12;
 
 	for (var i = length - 1; i >= (length-showLength); i--) {
+		//prepend图片
 		var aHref = 'http://i.weather.com.cn/i/product/pic/l/sevp_nsmc_'+json.radars[i].fn+'_lno_py_' + json.radars[i].ft + '.jpg'; 
 		var imgUrl = 'http://i.weather.com.cn/i/product/pic/m/sevp_nsmc_'+json.radars[i].fn+'_lno_py_' + json.radars[i].ft + '.jpg'; 
 		$a = $('<a target="_blank" href="'+aHref+'"><img width="630" src="'+imgUrl+'"></a>')
-		$divFarther.prepend($a);	
+		$divFather.prepend($a);	
+		//下拉窗prepend子标签li
+		var li = '<li>'+json.radars[i].dt+' radar imgage</li>';
+		$ulFather.prepend(li);
 	};
 	//默认展示最后一张
-	$divFarther.children('a:last').show();
-
-	if(isEnd){
-		$(".contro1 div.r p").html(json.radars[length-1].dt+' radar imgage');
-		//下拉窗append子标签li
-		for (var j = length-1; j >=(length-showLength); j--){		
-			var text = json.radars[j].dt+' radar imgage';
-			$(".contro1 div.r ul li").eq(showLength+j-length).html(text); //9-(length-1-j)
-		};
-	}
+	$divFather.children('a:last').show();
+	if (pH) {
+		$(".contro1 div.r p").html($('.contro1 div.r div ul:first').children('li').last().text());
+	};
+	
+	
+	
 }	
 function ajaxJsonp(xmlfile){	
 	$.ajax({

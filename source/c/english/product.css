@@ -34,6 +34,7 @@
 .left .contro1 ul.l li.stop{background-position: -64px -53px;}
 .left .contro1 ul.l li.li4{background-position: -129px -6px;}
 .left .contro1 ul.l li.li5{background-position: -172px -6px;}
+.left .contro1 div.r div{display: none;}
 .left .contro1 div.r,.area,.city{height: 23px;z-index: 2; width: 250px;position: relative;border: 1px solid #ccc; position: relative;float: left;line-height: 23px;cursor: pointer;}
 .left .contro1 div.r p,.area p,.city p{text-indent: 8px;font-size: 14px;width: 220px; white-space: nowrap; overflow: hidden;}
 .left .contro1 div.r i,.area i,.city i{background: url('../../i/english/product/icon.jpg') no-repeat -4px -52px;height: 25px; width: 31px;position: absolute;top: 0;right: 0;display:block;margin-right: -1px;margin-top: -1px;}
@@ -75,6 +76,7 @@
 .satellite .left .contro3 .area{width:260px;margin-left: 113px; }
 .satellite .left .contro3 .area ul{width: 229px;}
 .satellite .left .contro3 .area ul li{width: 100%;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+.satellite .left .contro3 .area ul li a:hover{color: #494949}
 .satellite .left .contro3 .area p{width: 229px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
 /*卫星 end*/
 /*预报 begin*/
