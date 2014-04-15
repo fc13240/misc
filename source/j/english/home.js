@@ -42,7 +42,6 @@ define(function(require){
 	 		})
 	 	}setWeather()
 	 	//12城市 ： 北京 上海 广州 福州 重庆 西安 南宁 昆明 济南 武汉 三亚 哈尔滨
- 		$('.wF').hide();
  		$.ajax({
  			type:'GET',
  			url:'http://d1.weather.com.cn/city_12/city_12.html',
@@ -95,7 +94,16 @@ define(function(require){
 				}
 			}
 		})
-		//景点温度、指数
+		$(".alarm h1").toggle(function(){
+			var height = $(".alarm ul li").length;
+			$(this).parent().animate({height:35*height+45+'px'},400);
+			$(this).children('i').addClass('down');
+		},function(){
+			$(this).parent().animate({height:'185px'},400);
+			$(this).parent().animate({height:'180px'},400);
+			$(this).children('i').removeClass();
+		})
+		// 景点温度、指数
 		$.ajax({
 			type:'GET',
 			url:'http://d1.weather.com.cn/city_12/tr_5.html',
@@ -106,23 +114,21 @@ define(function(require){
 				var $aLi = $('.hot ul.f>li');
 				for (var i = 0; i < citytr.trinfo.length; i++) {
 					var $li = $aLi.eq(i);
+					var $ul = $li.children('ul.index');
 					$li.find('span').html('<a href="http://en.weather.com.cn/weather/'+citytr.trinfo[i].TAREAID+'.shtml" target="_blank">'+citytr.trinfo[i].name+'</a>');
-					$li.find('i.wC').html(parseInt(citytr.trinfo[i].temp1)+"°")
-					$li.find('i.wF').html(parseInt(citytr.trinfo[i].tempF1)+"°")
+					$li.find('i.wC').html(parseInt(citytr.trinfo[i].temp1)+"°");
+					$li.find('i.wF').html(parseInt(citytr.trinfo[i].tempF1)+"°");
 					for(var j=0;j<citytr.trinfo[i].hintcn;j++){
 						$li.find('ul.on').append('<li></li>');
 					}
+					switch(parseInt(citytr.trinfo[i].hintcn)){
+						case 1:$ul.addClass('index5');break;
+						case 2:$ul.addClass('index4');break;
+						case 3:$ul.addClass('index2');break;
+						case 4:$ul.addClass('index1');break;
+					}
 				}
 			}
-		})
-		$(".alarm h1").toggle(function(){
-			var height = $(".alarm ul li").length;
-			$(this).parent().animate({height:35*height+45+'px'},400);
-			$(this).children('i').addClass('down');
-		},function(){
-			$(this).parent().animate({height:'185px'},400);
-			$(this).parent().animate({height:'180px'},400);
-			$(this).children('i').removeClass();
 		})
 		//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 		var $uSL = $("#ulStyle li");

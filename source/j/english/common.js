@@ -19,7 +19,7 @@ define(function(require){
 		$(".nav ul.navlink li").removeClass('on');
 		$(".nav ul.navlink li[id="+$("#colorid").val()+"]").addClass("on");    
 		//摄氏度和华氏度切换
-		$('.wF').hide();
+		$('.wC').hide();
 		$("#weaUnit li").click(function(){
 			var that = $(this);
 			var index = that.index()
