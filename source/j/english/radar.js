@@ -42,13 +42,13 @@ define(function(require){
 			return pointer = index;
 		});
 		//播放速度控制按钮
-		var speed=1000;
+		var speed=500;
 		$('.contro2 ul li').click(function(){
 			$(this).addClass('on').siblings().removeClass('on');
 			switch($(this).index()){
-				case 0:speed=500;break;
-				case 1:speed=1000;break;
-				case 2:speed=2000;break;
+				case 0:speed=200;break;
+				case 1:speed=500;break;
+				case 2:speed=1000;break;
 			}
 			if ($('.contro1 ul.l li.li3').hasClass('stop')) {
 				clearInterval(show);
