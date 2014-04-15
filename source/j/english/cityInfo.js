@@ -1,10 +1,9 @@
 // JavaScript Document
 define(function(require){	
-	require('jquery');
+	require('./common');
 	require('./jq-cookie');
 	require('./broHistory');
 	require('../tool/tool_pngfix');	
-
 	$(function(){
 		//预警
 		$.ajax({
@@ -16,7 +15,6 @@ define(function(require){
 			success:function(){
 				var gradeObj={'01':'blue','02':'yellow','03':'orange','04':'red','91':'white'};
 				var kindObj = {'01':'typhoon','02':'torrential rain','03':'snowstorm','04':'cold spell','05':'strong wind','06':'sandstorm','07':'high temperature','08':'drought','09':'thunderbolt','10':'hail','11':'frost','12':'heavy fog','13':'haze','14':'icy road','91':'cold','92':'dust-haze','93':'thunderstorm and gale','94':'forest fire warning','95':'temperature drop','96':'snow and ice road','97':'dry-hot wind','98':'low temperature','99':'freeze'};
-				//var localId = parseInt(document.URL.substr(document.URL.indexOf('weather/')+8)).toString();   //提取当前页面的 9 位 站号
 				var reg = /\d{9}/;
 				var localId = document.URL.match(reg)[0];
 				
@@ -60,34 +58,6 @@ define(function(require){
 			$uCL.eq(colorNum[i]).addClass('c');
 			$uAL.eq(colorNum[i]).addClass('c');
 		}
-		
-		//摄氏度和华氏度切换
-		$('.wF').hide();
-		$("#weaUnit li").click(function(){
-			var that = $(this);
-			var index = $(this).index()
-			hoverClass(that,'li');
-			switch(index){
-				case 0:$(".wF").hide();$('.wC').fadeIn("slow");break;
-				case 1:$(".wC").hide();$('.wF').fadeIn("slow");break;
-			}
-		});
-		
-		//中英文切换
-		$('#lanType').hover(function(){
-			$(this).addClass('down').next().show();
-		},function(){
-			$(this).removeClass('down').next().hover(function(){
-				$('#lanType').addClass('down');
-				$(this).show();
-			},function(){
-				$(this).hide();
-				$('#lanType').removeClass('down');
-			})
-			$(this).next().hide();
-		})
-		
-		
 		//实况、六小时预报、指数 ?index
 		function _htmlIndex(){
 			var htmlIndex = parseInt(document.URL.substring(document.URL.indexOf('?index=')+7)) || 1;
@@ -104,7 +74,6 @@ define(function(require){
 				case 3:$obj.hide();$('.livIndex').show();$spanL.addClass('on');break;
 			}
 		}_htmlIndex();
-		
 		//指数hot index & all index
 		$('.livIndex ul li:gt(8)').hide();
 		$(".livIndex h1 a").click(function(){
@@ -123,13 +92,11 @@ define(function(require){
 			$(this).children('em').hide();
 		})
 		$()
-		
 	    var ide=$(".con .left .act li.yb:first .wea").text();
 		$(".con .left .act li.sk p.wea").html(ide);
          var skimg=$(".con .left .act li.yb").eq(0).find("img").attr("src");
 		var stimg=skimg.replace(/blue_80/g,"white_110");
         $(".con .left .act li.sk").find("img").attr("src",stimg);
-        
 		//七天预报
 		$(".day7 h1 span").click(function(){
 			$('.tab,.gra').removeClass('on');
@@ -175,23 +142,12 @@ define(function(require){
 				return iIndex;
 			}
 		}_roll()
-
 		//七天图例版的 奇偶行头部背景色 
 		if($('.table>tbody>tr').length==15){
 			$('.table tr:eq(2) td:first,.table tr:eq(6) td:first,.table tr:eq(10) td:first,.table tr:eq(14) td:first').css('backgroundColor','#c5dbf3')
 		}else if($('.table>tbody>tr').length==14){
 			$('.table tr:eq(1) td:first,.table tr:eq(5) td:first,.table tr:eq(9) td:first,.table tr:eq(13) td:first').css('backgroundColor','#c5dbf3')
 		}	
-		//头部推荐的三个城市切换
-		$('.searchBox p a.rollRight').click(function(){
-			$('.searchBox p a:lt(4)').hide();
-			$('.searchBox p a:gt(3)').show();
-		})
-		$('.searchBox p a.rollLeft').click(function(){
-			$('.searchBox p a:lt(4)').show();
-			$('.searchBox p a:gt(3)').hide();
-		})
-
 		//周边城市 周边景点
 		$(".near h1 span").click(function(){
 			var that = $(this);
@@ -201,30 +157,7 @@ define(function(require){
 			$(".near").children('ul').eq(index).show();
 		})
 		$('.near h1 span:last').click();
-
-		//mouse hover function
-		function hoverClass(that,obj){
-			that.siblings(obj).removeClass('on');
-			that.addClass('on')
-		}
-		
-		
-		
-		//Local Time
-		var $T=$("#localTime");
-		function time(){
-		  var date=new Date();
-		  var weatherDate=date_0_9(date.getHours())+":"+date_0_9(date.getMinutes())+"&nbsp; "+date.getFullYear()+"-"+date_0_9(date.getMonth()+1)+"-"+date_0_9(date.getDate());
-		  $T.html("Local Time in China &nbsp; "+weatherDate);
-		}
-		time();
-		setInterval(time,60000);
-		
+		//ie6 png
 		tool_pngfix();
 	})
-	//个位数补0
-	function date_0_9(n){
-	  if(n<10) return '0'+n;
-		  else return n; 
-	}
 })

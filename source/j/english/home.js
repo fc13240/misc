@@ -1,29 +1,15 @@
 // JavaScript Document
 define(function(require){	
-	require('jquery');
+	require('./common');
 	require('./jq-cookie');
 	require('../tool/tool_pngfix');	
-
 	$(function(){
-
-		//温度格式切换
-		$("#weaUnit li").click(function(){
-			var index = $(this).index();
-			$(this).siblings().removeClass('on');
-			$(this).addClass('on');
-			switch(index){
-				case 0:$(".wF").hide();$('.wC').fadeIn("slow");break;
-				case 1:$(".wC").hide();$('.wF').fadeIn("slow");break;
-			}
-		});
-		
 		//浏览历史 最近3个城市 Local Weather 模块 cookie  
 		//local weather	 	
 	 	var defaultCityHistory = '101010100,101020100,101280101';  //默认城市 北上广
 	 	var cityHistory = $.cookie('cityHistory') || defaultCityHistory;  //get cookie
 	 	var chNum = cityHistory.split(',');
 	 	var cityHis_index = 0;	
-	 	
 	 	function setWeather(){  //递归法 解决for循环 异步执行 数据覆盖问题
 	 		$.ajax({
 	 			type:'GET',
@@ -55,7 +41,7 @@ define(function(require){
 	 			}
 	 		})
 	 	}setWeather()
-	 	//北京 上海 广州 福州 重庆 西安 南宁 昆明 济南 武汉 三亚 哈尔滨
+	 	//12城市 ： 北京 上海 广州 福州 重庆 西安 南宁 昆明 济南 武汉 三亚 哈尔滨
  		$('.wF').hide();
  		$.ajax({
  			type:'GET',
@@ -75,7 +61,6 @@ define(function(require){
  				tool_pngfix();
  			}
  		})
- 		
 		//预警
 		$.ajax({
 			type:'GET',
@@ -130,7 +115,6 @@ define(function(require){
 				}
 			}
 		})
-
 		$(".alarm h1").toggle(function(){
 			var height = $(".alarm ul li").length;
 			$(this).parent().animate({height:35*height+45+'px'},400);
@@ -140,7 +124,6 @@ define(function(require){
 			$(this).parent().animate({height:'180px'},400);
 			$(this).children('i').removeClass();
 		})
-
 		//"China Weather Conditions"变来变去的颜色样式,用jq来添加样式，确保html代码的一致性
 		var $uSL = $("#ulStyle li");
 		var colorNum = [0,3,4,7,8,11];
@@ -153,45 +136,6 @@ define(function(require){
 		for(var i=0;i<colorNum.length;i++){
 			$uSL.eq(colorNum[i]).addClass('c');
 		}
-		
-		//头部推荐的三个城市切换
-		$('.searchBox p a.rollRight').click(function(){
-			$('.searchBox p a:lt(4)').hide();
-			$('.searchBox p a:gt(3)').show();
-		})
-		$('.searchBox p a.rollLeft').click(function(){
-			$('.searchBox p a:lt(4)').show();
-			$('.searchBox p a:gt(3)').hide();
-		})
-
-		//中英文切换
-		$('#lanType').hover(function(){
-			$(this).addClass('down').next().show();
-		},function(){
-			$(this).removeClass('down').next().hover(function(){
-				$('#lanType').addClass('down');
-				$(this).show();
-			},function(){
-				$(this).hide();
-				$('#lanType').removeClass('down');
-			})
-			$(this).next().hide();
-		})
-		
-		//Local Time
-		var $T=$("#localTime");
-		function time(){
-		  var date=new Date();
-		  var weatherDate=date_0_9(date.getHours())+":"+date_0_9(date.getMinutes())+"&nbsp; "+date.getFullYear()+"-"+date_0_9(date.getMonth()+1)+"-"+date_0_9(date.getDate());
-		  $T.html("Local Time in China &nbsp; "+weatherDate);
-		}
-		time();
-		setInterval(time,60000);
 	})
-	//个位数补0
-	function date_0_9(n){
-	  if(n<10) return '0'+n;
-		  else return n; 
-	}
 })
 
