@@ -198,7 +198,7 @@ body { background:#fff;}
 
 .con .right{ width:300px; margin-left:12px; color:#333;}
 .con .right .r{ width:120px;}
-.con .right h1{ font-size:20px; line-height:38px;}
+.con .right h1{ font-size:20px; line-height:38px;font-size: 18px;}
 .con .right .video{}
 .con .right .video h1{}
 .con .right  .r .txt{ padding-left:12px; height:54px; overflow:hidden; color:#333;}
@@ -210,6 +210,12 @@ body { background:#fff;}
 .con .right .ad2,ad{ margin-top:10px; border:1px solid #ccc;}
 .con .right .ad1,.cheWea{ margin-top:10px;}
 .con .right .ad2,.ad{ margin-top:10px;}
+
+.right .img1 img,.img2 img{float: left;}
+.right .d1{float: left;display: table;width:132px;height: 125px;_width:134px;*position:relative;}
+.right .d2{display: table-cell;vertical-align:middle; *position:absolute;*top:50%;}
+.right .d3{padding-left: 11px;*position:relative;*top:-50%; }
+.right .img2{margin-top: 11px;}
 
 
 /*国外 li*/

@@ -4,6 +4,7 @@ define(function(require){
 	$(function(){
 		//隐藏温度切换
 		$('#weaUnit').hide();
+		var speed=500;
 		//产品图片点击效果
 		$('.show ul li').click(function(){
 			var that = $(this);
@@ -11,7 +12,11 @@ define(function(require){
 			hoverClass(that,'li')
 			$('.show div.img').hide().eq(index).show().children('a').hide().last().show();
 			$(".contro1 div.r p").html($('.contro1 div.r ul li:last').text());
-			return pointer=10-1;
+			if (typeof show !== "undefined") {
+				clearInterval(show);
+			};
+			$('.contro1 ul.l li.li3').removeClass('stop');
+			return pointer=0;
 		})
 		//初始化雷达图数据
 		var ajaxId = ['CHN_JB','DB_JB','HB_JB','XB_JB','HD_JB','HZ_JB','HN_JB','XN_JB'];
@@ -27,7 +32,11 @@ define(function(require){
 			}else{
 				$ul.slideDown('fast');
 			};
-		})//.mouseleave(function(){
+		})
+		$("body").click(function(){
+			$('.contro1 div.r,.contro3 .area,.contro3 .city').find('ul').slideUp('fast');
+		})
+		//.mouseleave(function(){
 	//		
 	//		$(this).find('ul').slideUp('fast');
 	//	})
@@ -42,7 +51,7 @@ define(function(require){
 			return pointer = index;
 		});
 		//播放速度控制按钮
-		var speed=500;
+		
 		$('.contro2 ul li').click(function(){
 			$(this).addClass('on').siblings().removeClass('on');
 			switch($(this).index()){
@@ -59,13 +68,15 @@ define(function(require){
 		})
 		var pointer = 0;
 		//播放控制台按钮
-		$('.contro1 ul.l li.li3').toggle(function(){ //开始 暂停
-			$(this).addClass('stop');
-			_show();
-			show = setInterval(_show,speed);
-		},function(){
-			$(this).removeClass('stop');
-			clearInterval(show);
+		$('.contro1 ul.l li.li3').click(function(){ //开始 暂停
+			if ($(this).hasClass('stop')) {
+				$(this).removeClass('stop');
+				clearInterval(show);
+			}else{
+				$(this).addClass('stop');
+				_show();
+				show = setInterval(_show,speed);
+			};
 		})
 		$('.contro1 ul.l li.li1').click(function(){ //跳转到第一图
 			$('.show .img:visible a').hide().first().show();
@@ -96,15 +107,17 @@ define(function(require){
 
 		function _show(){
 			$('.show div.img:visible').children('a').hide().eq(pointer).show();
-			
 			$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
-			pointer++;
-			if(pointer<10){
+			if(pointer<9){
+				pointer++;
 				return pointer;
 			}else{
+				$('.contro1 ul.l li.li3').click();
 				return pointer=0;
 			}
 		}
+
+		
 	})
 })
 
