@@ -2,9 +2,13 @@ define(function(require){
 	require('./common');
 
 	$(function(){
-		//隐藏温度切换
-		$('#weaUnit').hide();
-		var speed=500;
+		
+		$('#weaUnit').hide();//隐藏温度切换按钮
+		var speed=500;  //默认正常播放速度
+		var l=10; //图片个数
+		var pointer = l-1; //全局指针
+		var arrShow = []; //播放定时器的存放数组；
+		
 		//产品图片点击效果
 		$('.show ul li').click(function(){
 			var that = $(this);
@@ -12,11 +16,11 @@ define(function(require){
 			hoverClass(that,'li')
 			$('.show div.img').hide().eq(index).show().children('a').hide().last().show();
 			$(".contro1 div.r p").html($('.contro1 div.r ul li:last').text());
-			if (typeof show !== "undefined") {
-				clearInterval(show);
-			};
+			// if (typeof show !== "undefined") {
+				clearIntervals(arrShow);
+			// };
 			$('.contro1 ul.l li.li3').removeClass('stop');
-			return pointer=0;
+			return pointer=l-1;
 		})
 		//初始化雷达图数据
 		var ajaxId = ['CHN_JB','DB_JB','HB_JB','XB_JB','HD_JB','HZ_JB','HN_JB','XN_JB'];
@@ -32,15 +36,9 @@ define(function(require){
 			}else{
 				$ul.slideDown('fast');
 			};
+		}).mouseleave(function(){
+			$(this).find('ul').slideUp('fast');
 		})
-		$("body").click(function(){
-			$('.contro1 div.r,.contro3 .area,.contro3 .city').find('ul').slideUp('fast');
-		})
-		//.mouseleave(function(){
-	//		
-	//		$(this).find('ul').slideUp('fast');
-	//	})
-
 		//下拉窗子标签li的点击事件
 		$('.contro1 div.r ul').children('li').mouseenter(function(){
 			$(this).addClass('on').siblings().removeClass('on');
@@ -50,8 +48,7 @@ define(function(require){
 			$('.show .img:visible a').hide().eq(index).show();
 			return pointer = index;
 		});
-		//播放速度控制按钮
-		
+		//播放速度控制按钮	
 		$('.contro2 ul li').click(function(){
 			$(this).addClass('on').siblings().removeClass('on');
 			switch($(this).index()){
@@ -60,61 +57,73 @@ define(function(require){
 				case 2:speed=1000;break;
 			}
 			if ($('.contro1 ul.l li.li3').hasClass('stop')) {
-				clearInterval(show);
-				_show();
-				show = setInterval(_show,speed);
+				clearIntervals(arrShow);
+				// _show();
+				arrShow.push(setInterval(_show, speed));
 			}
 			return speed;
 		})
-		var pointer = 0;
 		//播放控制台按钮
 		$('.contro1 ul.l li.li3').click(function(){ //开始 暂停
 			if ($(this).hasClass('stop')) {
 				$(this).removeClass('stop');
-				clearInterval(show);
+				clearIntervals(arrShow);
 			}else{
 				$(this).addClass('stop');
-				_show();
-				show = setInterval(_show,speed);
+				// _show();
+				arrShow.push(setInterval(_show, speed));
 			};
 		})
 		$('.contro1 ul.l li.li1').click(function(){ //跳转到第一图
 			$('.show .img:visible a').hide().first().show();
 			$(".contro1 div.r p").html($('.contro1 div.r ul li:first').text());
+			return pointer=0;
 		})
 		$('.contro1 ul.l li.li5').click(function(){ //跳转到最后一图
 			$('.show .img:visible a').hide().last().show();
 			$(".contro1 div.r p").html($('.contro1 div.r ul li:last').text());
+			return pointer=l-1;
 		})
 		$('.contro1 ul.l li.li4').click(function(){ //下一图
-			pointer++;
-			if(pointer>=10){
-				pointer=0;
+			clearIntervals(arrShow);
+			$('.contro1 ul.l li.li3').removeClass('stop');
+			if(pointer<(l-1)){		
+				pointer++;
+				$('.show div.img:visible a').hide().eq(pointer).show();
+				$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
+				return pointer;
 			}
-			$('.show div.img:visible a').hide().eq(pointer).show();
-			$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
-			return pointer;
+			
 		})
 		$('.contro1 ul.l li.li2').click(function(){ //上一图
-			pointer--;
-			if(pointer<0){
-				pointer=9;
-			}  
-			$('.show div.img:visible a').hide().eq(pointer).show();
-			$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
-			return pointer;
+			clearIntervals(arrShow);
+			$('.contro1 ul.l li.li3').removeClass('stop');
+			if(pointer>0){
+				pointer--;
+				$('.show div.img:visible a').hide().eq(pointer).show();
+				$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
+				return pointer;
+			}
+			
 		})
-
+		//关闭所有正在运行的定时器
+		function clearIntervals(array){
+			for (var i = array.length - 1; i >= 0; i--) {
+				// if (typeof array[i] !== 'undefined') {
+					clearInterval(array[i]);
+				// };
+			};
+		}
 		function _show(){
+			pointer++;
+			if (pointer>(l-1)) {
+				pointer=0;
+			}else if (pointer==(l-1)) {
+				$('.contro1 ul.l li.li3').click();
+			};
 			$('.show div.img:visible').children('a').hide().eq(pointer).show();
 			$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
-			if(pointer<9){
-				pointer++;
-				return pointer;
-			}else{
-				$('.contro1 ul.l li.li3').click();
-				return pointer=0;
-			}
+			return pointer;
 		}
 
 		
@@ -122,6 +131,7 @@ define(function(require){
 })
 
 function readerinfo(json) {
+	var l=10; //图片个数
 	switch(json.radars[0].fn){
 		case 'ebref_achn':var $divFather=$('.show .img:eq(0)');break;//华中
 		case 'ebref_anec':var $divFather=$('.show .img:eq(1)');break;//东北
@@ -134,7 +144,7 @@ function readerinfo(json) {
 	}
 
 	var length = json.radars.length;
-	var showLength = length<10? length: 10;
+	var showLength = length<l? length: l;
 
 	for (var i = length - 1; i >= (length-showLength); i--) {
 		var aHref = 'http://i.weather.com.cn/i/product/pic/l/sevp_aoc_rdcp_sldas_' + json.radars[i].fn + '_l88_pi_' + json.radars[i].ft + '.gif';
@@ -150,7 +160,7 @@ function readerinfo(json) {
 		//下拉窗append子标签li
 		for (var j = length-1; j >=(length-showLength); j--){		
 			var text = json.radars[j].dt+' radar imgage';
-			$(".contro1 div.r ul li").eq(10+j-length).html(text); //9-(length-1-j)
+			$(".contro1 div.r ul li").eq(l+j-length).html(text); //9-(length-1-j)
 		};
 	}
 }	

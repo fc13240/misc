@@ -212,7 +212,7 @@ body { background:#fff;}
 .con .right .ad2,.ad{ margin-top:10px;}
 
 .right .img1 img,.img2 img{float: left;}
-.right .d1{float: left;display: table;width:120px;height: 125px;_width:120px;*position:relative;}
+.right .d1{float: left;display: table;width:120px;height: 125px;*position:relative;}
 .right .d2{display: table-cell;vertical-align:middle; *position:absolute;*top:50%;}
 .right .d3{padding-left: 11px;*position:relative;*top:-50%; }
 .right .img2{margin-top: 11px;}
