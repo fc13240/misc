@@ -131,7 +131,7 @@ define(function(require){
 })
 
 function readerinfo(json) {
-	var l=10; //图片个数
+	var l=12; //图片个数
 	switch(json.radars[0].fn){
 		case 'ebref_achn':var $divFather=$('.show .img:eq(0)');break;//华中
 		case 'ebref_anec':var $divFather=$('.show .img:eq(1)');break;//东北
