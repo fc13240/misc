@@ -82,14 +82,16 @@
 /*预报 begin*/
 .forecast{min-height: 900px;}
 .forecast .left .imgNav{}
-.forecast .left .imgNav .t{}
-.forecast .left .imgNav .t a{display:inline-block;line-height: 46px;font-size: 14px;color: #666;height: 46px;padding:0 20px;}
-.forecast .left .imgNav .t a.on{color: #000033;}
+.forecast .left .imgNav .t{margin-top: 10px; margin-left: 12px;}
+.forecast .left .imgNav .t a{display:inline-block;line-height: 30px;font-size: 14px;color: #666;height: 30px;padding:0 19px;}
+.forecast .left .imgNav .t a.on{color: #000033; background:#E2ECF7;}
+.forecast .left .imgNav .b{margin-top: 5px;margin-left: 10px;}
 .forecast .left .imgNav .b p{display: none;}
-.forecast .left .imgNav .b p a{display: inline-block;font-size: 14px;color: #666;position: relative;padding:2px 22px 12px;}
+.forecast .left .imgNav .b p a{display: inline-block;font-size: 14px;color: #666;position: relative;padding:2px 15px 12px 13px;}
 .forecast .left .imgNav .b p a.on{color: #3466bb;}
 .forecast .left .imgNav .b p a.on i{background: url(../../i/english/product/icon.jpg) -10px -105px;height: 10px;width: 18px; position: absolute;top: 23px;left: 50%;margin-left: -9px;}
 .forecast .left .show{margin-top: 0px;}
+.forecast .left .show a{display: none;}
 .forecast .left .show .img{height: 544px;}
 .forecast .left .show .img img{margin-top: -4px;margin-left: -3px;}
 /*预报 end*/

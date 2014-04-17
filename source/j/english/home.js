@@ -17,8 +17,7 @@ define(function(require){
 	 			dataType:'script',
 	 			cache:false,
 	 			async:false,
-	 			success:function(type){
-	 				
+	 			success:function(){
 	 				var $li = $(".localWeather ul li").eq(cityHis_index);
 	 				var $li_a = $('<a href="http://en.weather.com.cn/weather/'+fc_24_en.weatherinfo.cityid+'.shtml" target="_blank"></a>');
 	 				$li.children('a').remove();

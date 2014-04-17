@@ -3,18 +3,17 @@
 /*国内 liu*/
 body { background:#fff;}
 .con .conBgl, .con .conBgr { background-image:url(../../i/english/cityInfo/conBg.jpg); }
-
 .con .left { width:640px; }
 .con .left .cityName { height:69px; background:#e2ecf7; }
 .con .left .cityName ul { padding-left:7px; }
 .con .left .cityName ul li { float:left; height:30px; line-height:30px; }
 .con .left .cityName ul li a { color:#2e51a5; margin:0 5px; }
-.con .left .cityName h1 { font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
+.con .left .cityName h1 {text-transform: capitalize; font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
 .con .left .cityName span { height:40px; cursor:pointer; color:#3466bb; line-height:40px; display:inline-block; width:152px; font-size:18px;text-align:center; }
 .con .left .cityName span a{ height:100%; width:100%; display:block;color:#3466bb;}
 .con .left .cityName span a:hover{ color:#3466bb;}
 .con .left .cityName span.on { background:#fff; color:#000; }
-.con .left .cityName span.on a{color:#000; }
+.con .left .cityName span.on a{color:#000033; }
 .con .left .alarm {padding-left:9px; display:none; margin-top:11px; margin-left:11px; height:33px; border:1px solid #ffd02c; background:#ffe795; }
 .con .left .alarm em { background:url(../../i/english/alarm/alarm.png); float:left; width:30px; height:26px; margin-top:3px; }
 .con .left .alarm strong {float:left text-indent:15px; line-height:33px; width:202px; float:left; text-indent:10px; overflow:hidden; height:33px; }
@@ -35,9 +34,6 @@ body { background:#fff;}
 .con .left .act li.sk .felike i { font-size:18px; margin-left:3px; }
 .con .left .act li.sk .num { padding-top:5px; }
 .con .left .act li.sk .num span { font-size: 12px; line-height: 14px; padding-left: 20px; background:url(../../i/english/weaIcon/fx/flx.png) no-repeat; }
-
-
-
 .con .left .act li.sk .num span.n_1{ background-position: 0px -292px;}
 .con .left .act li.sk .num span.ne_1{background-position: -2px -247px;}
 .con .left .act li.sk .num span.e_1{background-position: -2px -342px;}
@@ -47,13 +43,6 @@ body { background:#fff;}
 .con .left .act li.sk .num span.se_1{background-position: 0px -81px;}
 .con .left .act li.sk .num span.sw_1{background-position: 0px -47px;}
 .con .left .act li.sk .num span.w_1{background-position: 0px -10px;}
-
-
-
-
-
-
-
 .con .left .act li.sk .num .n1 { background: url("../../i/english/cityInfo/icon.png") no-repeat 0 -1px; padding-right: 14px; }
 .con .left .act li.sk .num .n2 { background: url("../../i/english/cityInfo/icon.png") no-repeat scroll 0px -18px; padding-left: 21px; }
 .con .left .act li.sk .cityAlarm{ display:none; background:url(../../i/english/alarm/cityAlarm.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/english/alarm/cityAlarm.png"); width:27px;height:27px; position:absolute; top:56px; left:123px;}
@@ -83,10 +72,6 @@ body { background:#fff;}
 .con .left .act li.yb .num span.se{background-position: 0px -155px;}
 .con .left .act li.yb .num span.sw{background-position: 0px -182px;}
 .con .left .act li.yb .num span.w{background-position: 0px -208px;}
-
-
-
-
 
 .con .left .livIndex{ background:#3466bb; display:none; margin-top:11px; margin-left:11px; color:#fff;}
 .con .left .livIndex h1{ height:40px; padding-right:10px; border-bottom:1px solid #688DCC;}
@@ -160,7 +145,7 @@ body { background:#fff;}
 .con .left .day7 .graph .b ul li div .l { padding-top:14px;_padding-top:0; width:106px; text-align:center; color:#2e51a5; font-weight:bold; }
 .con .left .day7 .graph .b ul li div .l p { height:36px; line-height:17px; _line-height:14px; padding-right:10px; overflow:hidden; }
 .con .left .day7 .graph .b ul li div .r { width:150px; padding-top:20px; }
-.con .left .day7 .graph .b ul li div .r p { font-size:18px; }
+.con .left .day7 .graph .b ul li div .r p { font-size:14px; }
 .con .left .day7 .graph .b ul li div .r p span { color: #999999; font-size: 12px; line-height: 36px; padding-right: 5px; vertical-align: bottom; }
 .con .left .day7 .graph .b ul li div .r p i { font-size:24px; color:#c4111a; margin:0 5px; }
 .con .left .day7 .graph .b ul li div .r p em { font-size: 18px; color:#2e51a5; line-height: 30px; vertical-align: top; }
@@ -223,10 +208,10 @@ body { background:#fff;}
 .local { height:90px; margin-bottom:10px; background:#e2ecf7; overflow:hidden; position:relative; }
 .local p { padding-left:10px; height:30px; line-height:30px; color:#2e51a5; }
 .local p a { color:#2e51a5; font-size:14px; }
-.local ul li a{ color:#000; height:100%; width:100%; display:block;}
-.local ul li a:hover{ color:#000;}
+.local ul li a{ color:#000033; height:100%; width:100%; display:block;}
+.local ul li a:hover{ color:#000033;}
 .con .le { margin-left:0; width:640px; }
-.local h1 {color: #000033; font-size: 24px;font-weight:bold;left:0;position: absolute;text-indent: 18px;top:5px; }
+.local h1 {text-transform: capitalize; color: #000033; font-size: 24px;font-weight:bold;left:0;position: absolute;text-indent: 18px;top:5px; }
 .local ul li { float:left; cursor:pointer; width:155px; text-align:center; line-height:40px; margin-right:10px; color:#3466bb; font-size:18px; height:40px; }
 .local ul li.move { background:#fff; color:#000033; }
 .local ul { left: 10px;  position: absolute;   top: 50px; }
@@ -250,7 +235,7 @@ body { background:#fff;}
 
 
 
-.yubao li h1 span{font-size:16px;padding-left:10px;}
+.yubao li h1 span{font-size:14px;padding-left:10px;}
 .yubao  li .tem span.hight { color:#ca3d46; font-size: 24px; padding-left: 4px; }
 .yubao  li .tem span.wC { font-size: 24px; padding-left: 4px; }
 .yubao  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
@@ -272,8 +257,9 @@ body { background:#fff;}
 .con .left .lcoalcity .day7 .graph ul.t li i { left:30px; background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat 0px -282px; }
 .con .left .lcoalcity .day7 .graph ul.t li.on i { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat -10px -305px; }
 .con .left .lcoalcity .day7 .graph .b ul li { width:201px; float:left; cursor:pointer; background:url(http://i.tq121.com.cn/i/english/cityInfo/line.png) no-repeat right #f0f5fb; color:#3466bb; padding-left:10px; height:111px; font-size:14px; }
-.con .left .lcoalcity .day7 .graph .b ul li p { text-align:center; height:30px; line-height:40px; color:#000033 }
-.con .left .lcoalcity .day7 .graph .b ul li span { display:block; text-align:center; width:200px; overflow:hidden; float:left; }
+.con .left .lcoalcity .day7 .graph .b ul li p { text-align:center; height:30px; line-height:30px; color:#000033;margin-top: 5px; }
+.con .left .lcoalcity .day7 .graph .b ul li span {margin-top:4px;display:block; text-align:center; width:200px; overflow:hidden; float:left; }
+.con .left .lcoalcity .day7 .graph .b ul li span img{margin: 0 5px;}
 .con .left .lcoalcity .day7 .graph .bBox { margin-left:0px; width:630px; }
 .con .left .lcoalcity .day7 .graph .b ul li span i { font-size:20px; }
 .con .left .lcoalcity .day7 .graph .b ul li span b{font-size:20px; font-weight: normal;}
@@ -293,14 +279,14 @@ body { background:#fff;}
 .lins_am span.x { margin-left:468px; }
 .sant {overflow:hidden; position:relative; width:640px; }
 .sant  li { margin-left:9px; _margin-left:7px; cursor:pointer; background:#e2ecf7; position:relative; height:230px; width:201px; color:#2e51a5; border:1px solid #e2ecf7; text-align:center; float:left; }
-.sant  li h1 { background:#fff; font-size:20px; line-height:30px }
+.sant  li h1 { background:#fff; font-size:18px; line-height:30px }
 .sant  li h2 { font-size:14px; background:#fff; line-height:30px; }
 .sant  li img { margin-top:20px }
 .sant  li .wea { font-weight:bold; line-height:30px; margin-top:9px }
 .sant  li .tem { font-size:18px }
-.sant  li .tem span { font-size:24px; vertical-align:bottom; padding-right:5px; line-height:36px }
+.sant  li .tem span { font-size:24px;color: #000; vertical-align:bottom; padding-right:5px; line-height:36px }
 #yubao .sant li .tem span { font-size:24px; vertical-align:bottom; padding-right:0px; line-height:25px; padding-left: 5px; }
-.yubao  li .tem { font-size:12px }
+.yubao  li .tem { font-size:12px;color: #666;}
 .sant  li .tem i { font-size:12px; position:relative; top:-20px; }
 .sant  li .tem span.hight { color:#ca3d46; }
 .sant  li .tem em { font-size:18px; vertical-align:top; line-height:30px }
@@ -312,7 +298,7 @@ body { background:#fff;}
 .sant  li.move { background:#ffd02c; color:#000; }
 .sant  li.move h1 { background:#ffe795; }
 .sant  li.move h2 { background:#ffe795; }
-.yubao  li .tem i { font-size:12px; position:relative; top:-8px; }
+.yubao  li .tem i { font-size:12px; position:relative; top:-8px;color: #000; }
 .yubao  li .wea { font-weight:bold; line-height:40px; margin-top:0px; margin-bottom: 5px; font-size: 14px; }
 .yubao li .num .n2{padding: 0;}
 .graph div.t { height:35px; line-height:35px; padding:0 35px; border-bottom:3px solid #3465ba; }
