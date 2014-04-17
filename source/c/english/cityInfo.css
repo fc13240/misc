@@ -4,11 +4,11 @@
 body { background:#fff;}
 .con .conBgl, .con .conBgr { background-image:url(../../i/english/cityInfo/conBg.jpg); }
 .con .left { width:640px; }
-.con .left .cityName { height:69px; background:#e2ecf7; }
-.con .left .cityName ul { padding-left:7px; }
+.con .left .cityName {background:#e2ecf7;padding-left: 10px; }
+.con .left .cityName ul { padding-left:7px; display: none;}
 .con .left .cityName ul li { float:left; height:30px; line-height:30px; }
 .con .left .cityName ul li a { color:#2e51a5; margin:0 5px; }
-.con .left .cityName h1 {text-transform: capitalize; font-size:24px; overflow:hidden; font-weight:bolder; height:40px; line-height:40px; float:left; width:170px; text-indent:22px; }
+.con .left .cityName h1 {text-transform: capitalize; font-size:24px; overflow:hidden; font-weight:bolder; height:44px; line-height:44px;padding-top: 1px; text-indent:12px; }
 .con .left .cityName span { height:40px; cursor:pointer; color:#3466bb; line-height:40px; display:inline-block; width:152px; font-size:18px;text-align:center; }
 .con .left .cityName span a{ height:100%; width:100%; display:block;color:#3466bb;}
 .con .left .cityName span a:hover{ color:#3466bb;}
@@ -258,7 +258,7 @@ body { background:#fff;}
 .con .left .lcoalcity .day7 .graph ul.t li.on i { background:url(http://i.tq121.com.cn/i/english/cityInfo/icon.png) no-repeat -10px -305px; }
 .con .left .lcoalcity .day7 .graph .b ul li { width:201px; float:left; cursor:pointer; background:url(http://i.tq121.com.cn/i/english/cityInfo/line.png) no-repeat right #f0f5fb; color:#3466bb; padding-left:10px; height:111px; font-size:14px; }
 .con .left .lcoalcity .day7 .graph .b ul li p { text-align:center; height:30px; line-height:30px; color:#000033;margin-top: 5px; }
-.con .left .lcoalcity .day7 .graph .b ul li span {margin-top:4px;display:block; text-align:center; width:200px; overflow:hidden; float:left; }
+.con .left .lcoalcity .day7 .graph .b ul li span {margin-top:5px;display:block; text-align:center; width:200px; overflow:hidden; float:left; }
 .con .left .lcoalcity .day7 .graph .b ul li span img{margin: 0 5px;}
 .con .left .lcoalcity .day7 .graph .bBox { margin-left:0px; width:630px; }
 .con .left .lcoalcity .day7 .graph .b ul li span i { font-size:20px; }
