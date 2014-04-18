@@ -214,8 +214,8 @@ body { background:#fff;}
 .local h1 {text-transform: capitalize; color: #000033; font-size: 24px;font-weight:bold;left:0;position: absolute;text-indent: 18px;top:5px; }
 .local ul li { float:left; cursor:pointer; width:155px; text-align:center; line-height:40px; margin-right:10px; color:#3466bb; font-size:18px; height:40px; }
 .local ul li.move { background:#fff; color:#000033; }
-.local ul li.move a{color: #3466BB;}
-.local ul li.move a:hover{color: #3466BB;}
+.local ul li.move a{color: #000033;}
+.local ul li.move a:hover{color: #000033;}
 .local ul { left: 10px;  position: absolute;   top: 50px; }
 .threeDay { height:110px; margin-left:10px; margin-bottom:10px; width:630px; background:#3466bb; }
 .threeDay ul { background:#fff; height:30px; }
