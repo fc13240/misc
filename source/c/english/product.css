@@ -91,7 +91,7 @@
 .forecast .left .imgNav .b p a.on{color: #3466bb;}
 .forecast .left .imgNav .b p a.on i{background: url(../../i/english/product/icon.jpg) -10px -105px;height: 10px;width: 18px; position: absolute;top: 23px;left: 50%;margin-left: -9px;}
 .forecast .left .show{margin-top: 0px;}
-.forecast .left .show a{display: none;}
+.forecast .left .show .txt{padding-left: 10px;margin-top: 20px;}
 .forecast .left .show .img{height: 544px;}
 .forecast .left .show .img img{margin-top: -4px;margin-left: -3px;}
 /*预报 end*/
