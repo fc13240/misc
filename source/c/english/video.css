@@ -286,6 +286,6 @@ float:left;
 }
 .right .img2{margin-top: 11px;}
 .right .img1 img,.img2 img{float: left;}
-.right .d1{float: left;display: table;width:132px;height: 125px;_width:134px;*position:relative;}
+.right .d1{float: left;display: table;width:120px;height: 125px;*position:relative;}
 .right .d2{display: table-cell;vertical-align:middle; *position:absolute;*top:50%;}
 .right .d3{padding-left: 11px;*position:relative;*top:-50%; }
