@@ -5,33 +5,33 @@
 <script type="text/javascript" src="http://10.14.85.90/source/j/core.js" ></script>
 <script>W.css("c/core.css","c/english/common.css","c/english/product.css")</script>
 <script>W.use("j/english/satellite")</script>
-
-
 <title>satellite</title>
 </head>
 
 <body>
+<input id="colorid" type="hidden" value="26615">
+<!--公共头部-->
 <div class="top box clearfix">
     <div class="logo fl">
-        <a href="###"><img src="http://i.tq121.com.cn/i/english/home/logo.jpg" width="275" height="135" title="Weather China" alt="Weather China" /></a>
+        <a href="http://en.weather.com.cn/"><img src="http://i.tq121.com.cn/i/english/home/logo.jpg" width="275" height="135" title="Weather China" alt="Weather China" /></a>
     </div>
     <div class="cen fl">
-        <p id="localTime" class="localTime"></p>
+        <p id="localTime" class="localTime">Local Time 09:30 2013-03-12</p>
         <div class="searchBox">
             <p>Weather Forecast
-                <a href="http://en.weather.com.cn/weather/101010100.shtml" title="">beijing</a>
-                <a href="http://en.weather.com.cn/weather/101120201.shtml" title="">qingdao</a>
-                <a href="http://en.weather.com.cn/weather/101020100.shtml" title="">shanghai</a>
-                <a title="" href="javascript:void(0)" class="rollRight">
-                &gt;&gt;</a>
-                <a title="" href="javascript:void(0)" style="display:none" class="rollLeft">&lt;&lt;</a>
-                <a href="http://en.weather.com.cn/weather/401110101.shtml" style="display:none">NewYork</a>
-                <a href="http://en.weather.com.cn/weather/202010100.shtml" style="display:none">Paris</a>
-                <a href="http://en.weather.com.cn/weather/103010100.shtml" style="display:none">Tokyo</a>
+                <a title="" href="http://en.weather.com.cn/weather/101010100.shtml">beijing</a>
+                <a title="" href="http://en.weather.com.cn/weather/101120201.shtml">qingdao</a>
+                <a title="" href="http://en.weather.com.cn/weather/101020100.shtml">shanghai</a>
+                <a class='rollRight' href="javascript:void(0)" title="">
+                >></a>
+                <a class='rollLeft' style='display:none' href="javascript:void(0)" title=""><<</a>
+                <a style='display:none' href="http://en.weather.com.cn/weather/401110101.shtml">NewYork</a>
+                <a style='display:none' href="http://en.weather.com.cn/weather/202010100.shtml">Paris</a>
+                <a style='display:none' href="http://en.weather.com.cn/weather/103010100.shtml">Tokyo</a>
             </p>
             <div class="search">
-                <input class="txt" type="text" value="Enter Your City,ST or ZIP Code" onfocus="if(this.value=='Enter Your City,ST or ZIP Code')this.value=''" onblur="if(this.value=='')this.value='Enter Your City,ST or ZIP Code'"  />
-                <input class="btn" type="submit" value=""  />
+                <input class="txt" id="text_fuza" type="text" value="Enter Your City,ST or ZIP Code" onfocus="if(this.value=='Enter Your City,ST or ZIP Code')this.value=''" onblur="if(this.value=='')this.value='Enter Your City,ST or ZIP Code'"  />
+                <input class="btn button"  type="button" value=""  />
                 <i class="l"></i>
                 <i class="r"></i>
             </div>
@@ -41,10 +41,7 @@
         <a id="lanType" class="typeOn" title="">English</a>
         <ul>
             <li>
-                <a href="###" title="English">English</a>
-            </li>
-            <li>
-                <a href="http://www1.weather.com.cn" title="中文">中文</a>
+                <a href="http://www.weather.com.cn/" title="中文">中文</a>
             </li>
         </ul>
     </div>
@@ -52,25 +49,25 @@
 <div class="nav">
     <div class="box">
         <ul class="navlink clearfix">
-            <li class="on">
-                <a href="#">Home</a>
+            <li id="26613" class="on">
+                <a href="http://en.weather.com.cn/">Home</a>
             </li>
-            <li>
-                <a href="#">Travel</a>
+            <li id="26614">
+                <a href="http://en.weather.com.cn/tourism/">Tourism</a>
             </li>
-            <li>
-                <a href="#">Rader&Maps </a>
+            <li id="26615">
+                <a href="http://en.weather.com.cn/radar/">Radar&Maps </a>
             </li>
-            <li>
-                <a href="#">News&Video </a>
+            <li id="26619">
+                <a href="http://en.weather.com.cn/news/">News&Video </a>
             </li>
         </ul>
         <ul id="weaUnit" class="weaUnit">
-            <li class="on">
-                <a href="###">°C</a>
+            <li >
+                <a href="javascript:void(0);">°C</a>
             </li>
-            <li>
-                <a href="###" >°F</a>
+            <li class="on">
+                <a href="javascript:void(0);" >°F</a>
             </li>
         </ul>
     </div>
@@ -82,38 +79,30 @@
             <div class="cityName">
                 <ul class="t clearfix">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="http://en.weather.com.cn/">Home</a>
                         ></li>
                     <li>
-                        <a href="#">Radar</a>
+                        <a href="javascript:void(0)">Satellite</a>
                     </li>
                 </ul>
-                
                 <ul class="b clearfix">
-                    <li><a href='radar.html'>Radar</a></li>
-                    <li class='on'><a href="satellite">Satellite</a></li>
-                    <li><a href="Forecast Maps.html">Forecast Maps</a></li>
-                    <li><a href="severe.html">Severe</a></li>
+                    <li>
+                        <a href="http://en.weather.com.cn/radar/">Radar</a>
+                    </li>
+                    <li class='on'>
+                        <a href="http://en.weather.com.cn/satellite/">Satellite</a>
+                    </li>
+                    <!--<li><a href="http://en.weather.com.cn/product/">Forecast Maps</a></li>
+                    <li><a href="http://en.weather.com.cn/product/index.shtml">Severe</a></li>-->
                 </ul>
             </div>
             <!--面包屑  城市名称 end-->
             <!-- 雷达图展示 begin-->
             <div class="show">
-                <div class="img" style='display:block'>
-                    
-                   
-                </div>
-                <div class="img">
-                   
-                </div>
-                <div class="img">
-                    
-                </div>
-                <div class="img">
-                   
-                </div>
-                
-               
+                <div class="img" style='display:block'></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
             </div>
             <!-- 雷达图展示 end-->
             <!-- 控制台 begin-->
@@ -125,14 +114,18 @@
                     <li class="li4"></li>
                     <li class="li5"></li>
                 </ul>
-                <div class="r">
+                <div class="right">
                     <p></p>
                     <i></i>
                     <div>
-                        <ul style='display:block'></ul>
-                        <ul></ul>
-                        <ul></ul>
-                        <ul></ul>
+                        <ul style='display:block'>
+                        </ul>
+                        <ul>
+                        </ul>
+                        <ul>
+                        </ul>
+                        <ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -156,34 +149,47 @@
                         <li>China:Infrared Satellite</li>
                     </ul>
                 </div>
-                
             </div>
             <!-- 控制台 end-->
-           
+            
         </div>
         <div class="right">
             <!-- 天气地图 begin-->
+            
             <h1>Weather Maps</h1>
             <div class="img1 clearfix">
-                <img src="http://i.tq121.com.cn/i/english/cityInfo/map2.jpg" alt="" width="180" height="125" title="" />
+                <a href="http://en.weather.com.cn/satellite/"><img src="http://i.tq121.com.cn/i/english/cityInfo/map2.jpg" alt="" width="180" height="125" title="" /></a>
                 <div class="d1">
                     <div class="d2">
-                        <div class="d3">China Sathellite Image</div>
+                        <div class="d3">
+                            <a href="http://en.weather.com.cn/satellite/">China Sathellite Image</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="img2 clearfix">
-                <img src="http://i.tq121.com.cn/i/english/cityInfo/map1.jpg" alt="" width="180" height="125" title="" />
+                <a href="http://en.weather.com.cn/radar/">
+                <img src="http://i.tq121.com.cn/i/english/cityInfo/map1.jpg" alt="" width="180" height="125" title="" /></a>
                 <div class="d1">
                     <div class="d2">
-                        <div class="d3">Toady’s Precipition Forecast</div>
+                        <div class="d3">
+                            <a href="http://en.weather.com.cn/radar/">China radar</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <!-- 天气地图 end-->
             <!-- 广告位 begin-->
-            <div class="ad1"><img src="http://i.tq121.com.cn/i/english/leiDaMap/ad11.jpg" alt="" width="300" height="250" title="" /></div>
-            <div class="ad1"><img src="http://i.tq121.com.cn/i/english/leiDaMap/ad1.jpg" alt="" width="300" height="250" title="" /></div>
+            <div class="ad1">
+                <div class="cheWea">
+                    <a href="http://www.kentier.com/" target="_blank"><img src="http://i.tq121.com.cn/i/english/home/recommend2.jpg" width="299" height="249" title="Meteorological Knowledge" alt="Meteorological Knowledge" /></a>
+                </div>
+            </div>
+            <div class="ad1">
+                <!--<div class="ad"> <img src="http://i.tq121.com.cn/i/english/home/img1.jpg" width="300" height="249"  /> </div>-->
+                
+            </div>
             <!-- 广告位 end-->
         </div>
         <i class="conBgl"></i>
@@ -191,32 +197,44 @@
     </div>
 </div>
 </div>
+
+<!--公共尾部-->
 <div class="footer">
     <span class="footerNav">
-    <a href="/wzfw/gywm/index.shtml">About Us</a>
+    <a href="http://www.weather.com.cn/wzfw/gywm/index.shtml" target="_blank">About Us</a>
     -
-    <a target="_blank" href="http://marketing.weather.com.cn/">Contact Us</a>
+    <a target="_blank" href="http://marketing.weather.com.cn/" >Contact Us</a>
     -
     <a target="_blank" href="http://ad.weather.com.cn/">Job Offer</a>
     -
-    <a href="/wzfw/lxwm/index.shtml">Customer Service</a>
+    <a href="http://www.weather.com.cn/wzfw/kfzx/index.shtml" target="_blank">Customer Service</a>
     -
-    <a href="/wzfw/ryzp/index.shtml">Registration</a>
+    <a href="http://club.weather.com.cn/member.php?mod=reuser.php" target="_blank">Registration</a>
     -
-    <a href="/wzfw/sybz/index.shtml" >Q&A </a>
+    <a href="http://www.weather.com.cn/wzfw/sybz/index.shtml" target="_blank">Q&A </a>
     -
-    <a href="/wzfw/wapb/index.shtml" >WAP</a>
-    -    <a href="/wzfw/wzdt/index.shtml">Site Map</a>
+    <a href="http://www.weather.com.cn/wzfw/wapb/index.shtml" target="_blank">WAP</a>
+    -
+    <a href="http://www.weather.com.cn/wzfw/wzdt/index.shtml" target="_blank">Site Map</a>
     </span>
-    <p> Copyright@The Public Weather Service Center of CMA All Rights Reserved (2008-2012)</p>
+    <p> Copyright@The Public Weather Service Center of CMA All Rights Reserved (2008-2014)</p>
     <p>Important Notice:The distribution of the weather information from www.weather.com.cn is forbidden without warranty.</p>
     <p class="copyIcp">京ICP证010385号 京公网安备11041400134 Value-added Telecom Business License B2-20050053</p>
 </div>
-<script type="text/javascript">
- 
+<script>W.use("j/english/search")</script>
 
+<!-- START WRating v1.0 -->
+<script type="text/javascript" src="http://c.wrating.com/a1.js">
 </script>
+<script type="text/javascript">
+var vjAcc="860010-2099790900";
+var wrUrl="http://c.wrating.com/";
+vjTrack("");
+</script>
+<noscript>
+<img src="http://c.wrating.com/a.gif?a=&c=860010-2099790900" width="1" height="1"/>
+</noscript>
+<!-- END WRating v1.0 -->
+
 </body>
-
-
 </html>

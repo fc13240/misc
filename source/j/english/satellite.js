@@ -17,15 +17,13 @@ define(function(require){
 		};
 
 		//第一个点击弹出下拉窗
-		$('.contro1 div.r').click(function(){
+		$('.contro1 div.right').click(function(){
 			var $div = $(this).find('div');
 			if ($div.is(':visible')) {
 				$div.hide();
 			}else{
 				$div.show();
 			};
-			
-			
 		}).mouseleave(function(){
 			$(this).find('div').hide();
 		})
@@ -33,20 +31,20 @@ define(function(require){
 		$('.contro3 .area').click(function(){
 			var $ul = $(this).find('ul');
 			if ($ul.is(':visible')) {
-				$ul.slideUp('fast');
+				$ul.hide();
 			}else{
-				$ul.slideDown('fast');
+				$ul.show();
 			};
 		}).mouseleave(function(){
 			$(this).find('ul').slideUp('fast');
 		})
 		//第一个下拉窗中标签li的点击事件
-		$('.contro1 div.r ul li').live('mouseenter click',function(event){
+		$('.contro1 divsatellitesatellitesatellite ul li').live('mouseenter click',function(event){
 			if (event.type == 'mouseenter') {
 				$(this).addClass('on').siblings().removeClass('on');
 			}else{
 				var index = $(this).index();
-				$(".contro1 div.r p").html($(this).text());
+				$(".contro1 div.right p").html($(this).text());
 				$('.show .img:visible a').hide().eq(index).show();
 				return pointer = index;
 			};;
@@ -57,10 +55,10 @@ define(function(require){
 			$(this).addClass('on').siblings().removeClass('on');
 		}).click(function(){
 			var index = $(this).index();
-			var $ul = $('.contro1 div.r div ul');
+			var $ul = $('.contro1 div.right div ul');
 			$('.show div.img').hide().eq(index).show().children('a').hide().last().show();
 			$ul.hide().eq(index).show();
-			$(".contro1 div.r p").html($ul.eq(index).children('li').last().text());
+			$(".contro1 div.right p").html($ul.eq(index).children('li').last().text());
 			$(".area p").html($(this).text());
 			clearIntervals(arrShow);
 			$('.contro1 ul.l li.li3').removeClass('stop');
@@ -97,12 +95,12 @@ define(function(require){
 		})
 		$('.contro1 ul.l li.li1').click(function(){ //跳转到第一图
 			$('.show .img:visible a').hide().first().show();
-			$(".contro1 div.r p").html($('.contro1 div.r ul li:first').text());
+			$(".contro1 div.right p").html($('.contro1 div.right ul li:first').text());
 			return pointer=0;
 		})
 		$('.contro1 ul.l li.li5').click(function(){ //跳转到最后一图
 			$('.show .img:visible a').hide().last().show();
-			$(".contro1 div.r p").html($('.contro1 div.r ul li:last').text());
+			$(".contro1 div.right p").html($('.contro1 div.right ul li:last').text());
 			return pointer=l-1;
 		})
 		$('.contro1 ul.l li.li4').click(function(){ //下一图
@@ -111,7 +109,7 @@ define(function(require){
 			if(pointer<(l-1)){		
 				pointer++;
 				$('.show div.img:visible a').hide().eq(pointer).show();
-				$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
+				$(".contro1 div.right p").html($('.contro1 div.right ul li').eq(pointer).text());
 				return pointer;
 			}
 		})
@@ -121,7 +119,7 @@ define(function(require){
 			if(pointer>0){
 				pointer--;
 				$('.show div.img:visible a').hide().eq(pointer).show();
-				$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
+				$(".contro1 div.right p").html($('.contro1 div.right ul li').eq(pointer).text());
 				return pointer;
 			}
 		})
@@ -141,7 +139,7 @@ define(function(require){
 				$('.contro1 ul.l li.li3').click();
 			};
 			$('.show div.img:visible').children('a').hide().eq(pointer).show();
-			$(".contro1 div.r p").html($('.contro1 div.r ul li').eq(pointer).text());
+			$(".contro1 div.right p").html($('.contro1 div.right ul li').eq(pointer).text());
 			return pointer;
 		}
 	})
@@ -149,10 +147,10 @@ define(function(require){
 
 function readerinfo(json) {
 	switch(json.radars[0].fn){
-		case 'wxcl_asc_e99_achn':var $divFather=$('.show .img:eq(0)');$ulFather=$('.contro1 div.r ul:eq(0)');var pH = 1;break;//彩色云图
-		case 'wxbl_fy2d_ewvp_achn':var $divFather=$('.show .img:eq(1)');$ulFather=$('.contro1 div.r ul:eq(1)');break;//水汽云图
-		case 'wxsp_asc_eir_acwp':var $divFather=$('.show .img:eq(2)');$ulFather=$('.contro1 div.r ul:eq(2)');break;//太平洋红外
-		case 'wxbl_asc_eir_achn':var $divFather=$('.show .img:eq(3)');$ulFather=$('.contro1 div.r ul:eq(3)');break;//大陆红外
+		case 'wxcl_asc_e99_achn':var $divFather=$('.show .img:eq(0)');$ulFather=$('.contro1 div.right ul:eq(0)');var pH = 1;break;//彩色云图
+		case 'wxbl_fy2d_ewvp_achn':var $divFather=$('.show .img:eq(1)');$ulFather=$('.contro1 div.right ul:eq(1)');break;//水汽云图
+		case 'wxsp_asc_eir_acwp':var $divFather=$('.show .img:eq(2)');$ulFather=$('.contro1 div.right ul:eq(2)');break;//太平洋红外
+		case 'wxbl_asc_eir_achn':var $divFather=$('.show .img:eq(3)');$ulFather=$('.contro1 div.right ul:eq(3)');break;//大陆红外
 	}
 	var l=12;
 	var length = json.radars.length;
@@ -171,7 +169,7 @@ function readerinfo(json) {
 	//默认展示最后一张
 	$divFather.children('a:last').show();
 	if (pH) {
-		$(".contro1 div.r p").html($('.contro1 div.r div ul:first').children('li').last().text());
+		$(".contro1 div.right p").html($('.contro1 div.right div ul:first').children('li').last().text());
 	};
 	
 	

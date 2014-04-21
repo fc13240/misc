@@ -71,29 +71,45 @@
 /*卫星 begin*/
 .satellite{min-height: 900px;}
 .satellite .left .contro1{margin-top: 20px;}
-.satellite .left  .img{border: none;height: 475px;width: 630px;}
-.satellite .left  .img img{width: 630px;height: 475px;margin: 0;}
+.satellite .left .img{border: none;width: 630px;}
+.satellite .left .img img{width: 630px;margin: 0;}
 .satellite .left .contro3 .area{width:260px;margin-left: 113px; }
 .satellite .left .contro3 .area ul{width: 229px;}
 .satellite .left .contro3 .area ul li{width: 100%;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
 .satellite .left .contro3 .area ul li a:hover{color: #494949}
 .satellite .left .contro3 .area p{width: 229px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+
+.satellite .left .contro3 .area{z-index: 3;}
+.satellite .left .contro3 .area ul{top: -97px;}
+ 
+
+.satellite .left .contro1 div.right {height: 23px;z-index: 2; width: 250px;position: relative;border: 1px solid #ccc; position: relative;float: left;line-height: 23px;cursor: pointer;}
+.satellite .left .contro1 div.right div{display: none;}
+.satellite .left .contro1 div.right p{text-indent: 8px;font-size: 14px;width: 220px; white-space: nowrap; overflow: hidden;}
+.satellite .left .contro1 div.right i{background: url('../../i/english/product/icon.jpg') no-repeat -4px -52px;height: 25px; width: 31px;position: absolute;top: 0;right: 0;display:block;margin-right: -1px;margin-top: -1px;}
+.satellite .left .contro1 div.right ul{display: none; background: #fff; border:1px solid #ccc;border-bottom: none; position: absolute;bottom: 23px;left: 0px;;position: absolute;left: 0;top: 23px;width: 219px;}
+.satellite .left .contro1 div.right ul li{border-bottom: 1px solid #ccc;	 color: #494949;text-indent: 8px; font-size: 14px;}
+.satellite .left .contro1 div.right ul li.on{background: #c5dbf3; color: #fff;}
+
 /*卫星 end*/
 /*预报 begin*/
 .forecast{min-height: 900px;}
 .forecast .left .imgNav{}
 .forecast .left .imgNav .t{margin-top: 10px; margin-left: 12px;}
 .forecast .left .imgNav .t a{display:inline-block;line-height: 30px;font-size: 14px;color: #666;height: 30px;padding:0 19px;}
-.forecast .left .imgNav .t a.on{color: #000033; background:#E2ECF7;}
+.forecast .left .imgNav .t a.on{color: #000033; background:#E2ECF7;}/*
 .forecast .left .imgNav .b{margin-top: 5px;margin-left: 10px;}
 .forecast .left .imgNav .b p{display: none;}
 .forecast .left .imgNav .b p a{display: inline-block;font-size: 14px;color: #666;position: relative;padding:2px 15px 12px 13px;}
 .forecast .left .imgNav .b p a.on{color: #3466bb;}
-.forecast .left .imgNav .b p a.on i{background: url(../../i/english/product/icon.jpg) -10px -105px;height: 10px;width: 18px; position: absolute;top: 23px;left: 50%;margin-left: -9px;}
-.forecast .left .show{margin-top: 0px;}
+.forecast .left .imgNav .b p a.on i{background: url(../../i/english/product/icon.jpg) -10px -105px;height: 10px;width: 18px; position: absolute;top: 23px;left: 50%;margin-left: -9px;}*/
+.forecast .left .show{margin-top: 10px;}
 .forecast .left .show .txt{padding-left: 10px;margin-top: 20px;}
 .forecast .left .show .img{height: 544px;}
 .forecast .left .show .img img{margin-top: -4px;margin-left: -3px;}
+
+
+
 /*预报 end*/
 
 
