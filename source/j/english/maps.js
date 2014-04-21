@@ -45,7 +45,8 @@ define(function(require){
 				dataType:'script',
 				async:false,
 				success:function(){
-					var strDiv = '<div class="mt clearfix"><a href="'+rightData[setRigIndex].ind+'"><img width="180" height="125" class="fl" src="http://i.weather.com.cn/i/product/pic/s/'+jsl.jsinfo[0].fn+'"></a><div class="fl r"><p class="txt">'+jsl.jsinfo[0].descpri+'</p><div class="time"><p>'+jsl.jsinfo[0].dt.split(' ')[1]+jsl.jsinfo[0].dt.split(' ')[2]+'</p><p>'+jsl.jsinfo[0].dt.split(' ')[0]+'</p>';
+					var arrTime = jsl.jsinfo[0].dt.split(' ');
+					var strDiv = '<div class="mt clearfix"><a href="'+rightData[setRigIndex].ind+'"><img width="180" height="125" class="fl" src="http://i.weather.com.cn/i/product/pic/s/'+jsl.jsinfo[0].fn+'"></a><div class="fl r"><p class="txt">'+jsl.jsinfo[0].descpri+'</p><div class="time"><p>'+arrTime[1]+arrTime[2].toLowerCase()+'</p><p>'+arrTime[0]+'</p>';
 					$('.map').append(strDiv);
 					if (setRigIndex<rightData.length-1) {
 						setRigIndex++;
@@ -67,9 +68,10 @@ define(function(require){
 					var aLink = 'http://i.weather.com.cn/i/product/pic/l/'+jsl.jsinfo[0].fn;
 					var imgSrc = 'http://i.weather.com.cn/i/product/pic/m/'+jsl.jsinfo[0].fn;
 					$('.show a').attr('href',aLink).children('img').attr('src',imgSrc);
-					$('.show .txt p:eq(0)').html('Product Name:'+jsl.jsinfo[0].descpri);
-					$('.show .txt p:eq(1)').html('Update Time:'+jsl.jsinfo[0].dt);
-					$('.show .txt p:eq(2)').html('Timeliness:'+jsl.jsinfo[0].vti+' hours');
+					$('.show .txt p:eq(0)').html('Product Name:&nbsp;&nbsp;'+jsl.jsinfo[0].descpri);
+					var arrTime = jsl.jsinfo[0].dt.split(' ');
+					$('.show .txt p:eq(1)').html('Update Time:&nbsp;&nbsp;'+arrTime[1]+arrTime[2].toLowerCase()+' '+arrTime[0]);
+					$('.show .txt p:eq(2)').html('Timeliness:&nbsp;&nbsp;'+jsl.jsinfo[0].vti+' hours');
 				}
 			})
 		}
