@@ -44,20 +44,16 @@
 */.left .contro1 div.r ul li,.area ul li,.city ul li{border-bottom: 1px solid #ccc;	 color: #494949;text-indent: 8px; font-size: 14px;}
 .left .contro1 div.r ul li.on,.area ul li.on,.city ul li.on{background: #c5dbf3; color: #fff;}
 
-
-
 .left .contro2{margin-top: 13px;margin-left: 12px;color: #494949;line-height: 24px;}
 .left .contro2 h1{float: left;font-size: 14px;}
 .left .contro2 ul{margin-left: 36px;float: left;}
 .left .contro2 ul li{background-image: url('../../i/english/product/icon.jpg');background-repeat: no-repeat;cursor: pointer; background-position: -189px -100px;margin-right: 97px; _margin-right:90px;float: left;padding-left: 28px;_padding-left:20px;}
 .left .contro2 ul li.on{background-position: -189px -56px;}
 
-
 .left .contro3{font-size: 14px;margin-left: 12px;margin-top: 17px;color: #494949;}
 .left .contro3 h1{height: 25px;line-height: 25px;float: left;font-size: 14px;}
 .left .contro3 .area{float: left;margin-left:56px;width: 150px;text-align: center;z-index: 1;}
 .left .contro3 .area p{width: 120px;}
-.left .contro3 .area i{}
 .left .contro3 .area ul{width: 119px;}
 .left .contro3 .area ul li{}
 .left .contro3 .city{float: left;text-align: center;width: 157px;z-index: 1;}
@@ -69,7 +65,7 @@
 .left .about h1{background: #e2ecf7;height: 36px; text-indent: 10px; line-height: 36px;font-size: 18px;}
 .left .about p{color:#494949;line-height: 25px;font-size: 14px;margin-top: 7px;padding-left: 2px;}
 /*卫星 begin*/
-.satellite{min-height: 900px;}
+.satellite{}
 .satellite .left .contro1{margin-top: 20px;}
 .satellite .left .img{border: none;width: 630px;}
 .satellite .left .img img{width: 630px;margin: 0;}
@@ -78,19 +74,16 @@
 .satellite .left .contro3 .area ul li{width: 100%;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
 .satellite .left .contro3 .area ul li a:hover{color: #494949}
 .satellite .left .contro3 .area p{width: 229px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
-
 .satellite .left .contro3 .area{z-index: 3;}
 .satellite .left .contro3 .area ul{top: -97px;}
- 
-
 .satellite .left .contro1 div.right {height: 23px;z-index: 2; width: 250px;position: relative;border: 1px solid #ccc; position: relative;float: left;line-height: 23px;cursor: pointer;}
 .satellite .left .contro1 div.right div{display: none;}
 .satellite .left .contro1 div.right p{text-indent: 8px;font-size: 14px;width: 220px; white-space: nowrap; overflow: hidden;}
-.satellite .left .contro1 div.right i{background: url('../../i/english/product/icon.jpg') no-repeat -4px -52px;height: 25px; width: 31px;position: absolute;top: 0;right: 0;display:block;margin-right: -1px;margin-top: -1px;}
-.satellite .left .contro1 div.right ul{display: none; background: #fff; border:1px solid #ccc;border-bottom: none; position: absolute;bottom: 23px;left: 0px;;position: absolute;left: 0;top: 23px;width: 219px;}
+.satellite .left .contro1 div.right i{background: url('../../i/english/product/icon.jpg') no-repeat -60px -94px;height: 25px; width: 31px;position: absolute;top: 0;right: 0;display:block;margin-right: -1px;margin-top: -1px;}
+.satellite .left .contro1 div.right ul{display: none; background: #fff; border:1px solid #ccc;border-bottom: none; position: absolute;bottom: 23px;left: 0px;;position: absolute;left: 0;width: 219px;}
 .satellite .left .contro1 div.right ul li{border-bottom: 1px solid #ccc;	 color: #494949;text-indent: 8px; font-size: 14px;}
 .satellite .left .contro1 div.right ul li.on{background: #c5dbf3; color: #fff;}
-
+.satellite .left .contro3 .area i{background:url("../../i/english/product/icon.jpg") no-repeat -60px -94px;}
 /*卫星 end*/
 /*预报 begin*/
 .forecast{min-height: 900px;}
@@ -107,22 +100,14 @@
 .forecast .left .show .txt{padding-left: 10px;margin-top: 20px;}
 .forecast .left .show .img{height: 544px;}
 .forecast .left .show .img img{margin-top: -4px;margin-left: -3px;}
-
-
-
 /*预报 end*/
-
-
-
 .right .r{ width:120px;}
-
 .right .r .txt{ padding-left:12px; height:54px;margin-top: 4px; overflow:hidden; color:#333;color: #3466bb;}
 .right .r .time{height:45px; padding-left:34px; color:#666; padding-top:8px;font-size: 12px;}
 .right .r a{ font-size:14px; float:right; color:#3466bb; line-height:20px;}
 .right .r a:hover{ text-decoration:underline;}
 .right .mt{ margin-top:12px;}
-
-.right {float: left;color:#494949;width: 312px;margin-left: 12px;font-size: 14px;line-height: 16px; _margin-left: 0px;_width: 317px;}
+.right {float: left;color:#494949;width: 312px;margin-left: 12px;font-size: 14px;line-height: 16px; _margin-left: 8px;_width: 317px;}
 .right h1{height: 40px; line-height: 40px;font-size: 18px;}
 .right .img1 img,.img2 img{float: left;}
 .right .d1{float: left;display: table;width:132px;height: 125px;_width:134px;*position:relative;}
@@ -130,8 +115,6 @@
 .right .d3{padding-left: 11px;*position:relative;*top:-50%; }
 
 .right .img2{margin-top: 11px;}
-
-
 .right .ad1{margin-top: 10px;}
 .right .ad1 img{}
 .right .ad2{margin-top: 10px;}

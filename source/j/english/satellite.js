@@ -36,10 +36,10 @@ define(function(require){
 				$ul.show();
 			};
 		}).mouseleave(function(){
-			$(this).find('ul').slideUp('fast');
+			$(this).find('ul').hide();
 		})
 		//第一个下拉窗中标签li的点击事件
-		$('.contro1 divsatellitesatellitesatellite ul li').live('mouseenter click',function(event){
+		$('.contro1 .right ul li').live('mouseenter click',function(event){
 			if (event.type == 'mouseenter') {
 				$(this).addClass('on').siblings().removeClass('on');
 			}else{
