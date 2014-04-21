@@ -98,6 +98,7 @@
 .forecast .left .show .img{height: 544px;}
 .forecast .left .show .img img{margin-top: -4px;margin-left: -3px;}
 .forecast .right .r .txt{height: 65px;}
+.forecast .map{min-height: 260px;}
 /*预报 end*/
 .right .r{ width:120px;}
 .right .r .txt{ padding-left:12px; height:54px;margin-top: 4px; overflow:hidden; color:#333;color: #3466bb;}

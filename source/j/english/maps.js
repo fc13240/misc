@@ -11,6 +11,7 @@ define(function(require){
 		//隐藏温度单位转换按钮
 		$('#weaUnit').hide();
 
+
 		switch(index){
 			case 1:_a_on(index);getData('YB_WD_ZG24');rightData = [{dataId:'YB_WD_ZD24',ind:'?index=6'},{dataId:'JC_WD_ZG10',ind:'?index=7'},{dataId:'JC_WD_ZG20',ind:'?index=8'}]; break;//24小时最高温度预报
 			case 2:_a_on(index);getData('YB_JSL_024');rightData = [{dataId:'YB_JSL_048',ind:'?index=9'},{dataId:'JC_JSL_02405',ind:'?index=10'},{dataId:'JC_JSL_10',ind:'?index=11'}]; break;//全国24小时降水量预报
@@ -53,6 +54,7 @@ define(function(require){
 				}
 			})
 		}setRight(); 
+
 		//主体内容的图片、说明的信息获取
 		function getData(dataId){
 			$.ajax({

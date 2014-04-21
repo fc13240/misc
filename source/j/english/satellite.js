@@ -5,7 +5,7 @@ define(function(require){
 		
 		$('#weaUnit').hide();//隐藏温度切换按钮
 		var speed=500;  //默认正常播放速度
-		var l=12; //图片个数
+		var l=10; //图片个数
 		var pointer = l-1; //全局指针
 		var arrShow = []; //播放定时器的存放数组；
 
@@ -152,7 +152,7 @@ function readerinfo(json) {
 		case 'wxsp_asc_eir_acwp':var $divFather=$('.show .img:eq(2)');$ulFather=$('.contro1 div.right ul:eq(2)');break;//太平洋红外
 		case 'wxbl_asc_eir_achn':var $divFather=$('.show .img:eq(3)');$ulFather=$('.contro1 div.right ul:eq(3)');break;//大陆红外
 	}
-	var l=12;
+	var l=10;
 	var length = json.radars.length;
 	var showLength = length<l? length: l;
 
