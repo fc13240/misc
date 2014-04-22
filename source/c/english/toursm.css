@@ -256,11 +256,14 @@ line-height:25px;
 .seach input#tourism 
 {
 	width:475px;
-	height:38px;}
+	height:38px;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;}
 .seach input.btns
 {
 	cursor:pointer;
 	background:none;
+	border: none;
 	height:25px;
 	width:25px;}
 .tourismRight{ width:300px; float:right;}
