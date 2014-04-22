@@ -48,6 +48,9 @@ define(function(require){
 					var arrTime = jsl.jsinfo[0].dt.split(' ');
 					var strDiv = '<div class="mt clearfix"><a href="'+rightData[setRigIndex].ind+'"><img width="180" height="125" class="fl" src="http://i.weather.com.cn/i/product/pic/s/'+jsl.jsinfo[0].fn+'"></a><div class="fl r"><p class="txt">'+jsl.jsinfo[0].descpri+'</p><div class="time"><p>'+arrTime[1]+arrTime[2].toLowerCase()+'</p><p>'+arrTime[0]+'</p>';
 					$('.map').append(strDiv);
+					if (setRigIndex==rightData.length-1) {
+						$('.map').height($('.map div.mt').length*135-5);
+					};
 					if (setRigIndex<rightData.length-1) {
 						setRigIndex++;
 						setRight();
@@ -81,6 +84,7 @@ define(function(require){
 			var imgSrc = 'http://i.weather.com.cn/i/product/pic/ybjt24m.png';
 
 			$('.show a').attr('href',aLink).children('img').attr('src',imgSrc);
+			
 			// $('.show .txt p:eq(0)').html('Product Name:  '+jsl.jsinfo[0].descpri);
 			// $('.show .txt p:eq(1)').html('Update Time:  '+jsl.jsinfo[0].dt);
 			// $('.show .txt p:eq(2)').html('Timeliness:  '+jsl.jsinfo[0].vti+' hours');
@@ -88,11 +92,10 @@ define(function(require){
 		//台风的flash动画
 		function typFlah(){	
 			var iframe = '<iframe width="630" scrolling="no" height="488" frameborder="0" src="http://flash.weather.com.cn/typhoon/taifeng.swf" name="surf"></iframe>'
-
 			$('.show').empty().append(iframe);
-
 			var strDiv = '<div class="mt clearfix"><a href="http://en.weather.com.cn/satellite/"><img width="180" height="125" class="fl" src="http://i.tq121.com.cn/i/english/cityInfo/map2.jpg"></a><div class="d1"><div class="d2"><div class="d3"><a href="http://en.weather.com.cn/satellite/">China Satellite Image</a></div></div></div></div><div class="mt clearfix"><a href="http://en.weather.com.cn/radar/"><img width="180" height="125" class="fl" src="http://i.tq121.com.cn/i/english/cityInfo/map1.jpg"></a><div class="d1"><div class="d2"><div class="d3"><a href="http://en.weather.com.cn/radar/">China Radar</a></div></div></div></div>';
-			$('.map').append(strDiv);
+			$('.map').append(strDiv).height(262);
+
 		}
 		//二级导航的选中样式
 		function _a_on(index){
