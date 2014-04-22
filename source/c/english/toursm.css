@@ -243,3 +243,77 @@ float:left;
 height:25px;
 line-height:25px;
 	font-size:12px;}
+
+
+.footer { clear:both; }
+.tourismLeft { float:left; width:640px; height:1000px; }
+.tourism { width:960px; margin:0 auto; }
+.weizhi p { color: #2E51A5; height: 34px; line-height: 34px; padding-left: 10px; }
+.sousuolan{ background:url(images/sousuolan.jpg) no-repeat; width:640px; height:183px; margin-bottom:10px; position:relative;}
+.seach{ left: 81px;
+    position: absolute;
+    top: 53px;}
+.seach input#tourism 
+{
+	width:475px;
+	height:38px;}
+.seach input.btns
+{
+	cursor:pointer;
+	background:none;
+	height:25px;
+	width:25px;}
+.tourismRight{ width:300px; float:right;}
+.quji
+{
+	width:620px;
+	margin:0 auto;
+	padding-top:10px;
+	border-top:1px solid #e6ecf6;}
+.quji p
+{
+	text-indent:15px;}
+.quji p a
+{
+	text-align:center;
+	line-height:22px;
+	color:#3466bb;
+	float:left;
+	text-indent:0;
+	display:block;
+	font-size:12px;
+	width:22px;
+	height:22px;}
+.quji p a.move
+{
+	text-indent:0;
+	background:#cdd9ee;}
+.chengshi ul
+{
+	float:right;
+	width:250px;}
+.chengshi ul li
+{
+	width:60px;
+	float:left;}
+.chengshi ul li a 
+{
+	font-size:16px; 
+	color:#3466bb;}
+.chengshi
+{
+	position:absolute;
+	left:30px;
+	width:575px;
+	top:157px;}
+.chengshi span
+{
+	color:#000033;
+	font-size:18px;
+	padding-right:25px;}
+.chengshi select
+{
+	width:200px;
+	height:25px;
+	border:1px solid #ccc;
+	line-height:25px;}
