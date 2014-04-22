@@ -31,3 +31,30 @@ a:hover { color:#F60; text-decoration:underline; }
 .top a{ color:#000; padding:0px 5px;}
 .right span{position:relative; top:-50px;left:250px;}
 .right span a{ padding-right: 8px;}
+.zpyq { height:auto; padding: 28px 10px 0 10px; background:#fff; margin-bottom:10px; }
+.zpyq h1 { background: url("http://i.tq121.com.cn/i/tqzt/photo/title.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0); color: #487938; font-size: 16px; font-weight: bold; height: 27px; line-height: 27px; text-indent:5px; margin-bottom: 10px; width: 115px; }
+.zpyq p { line-height:25px; word-break: break-all; font-size:14px; }
+.zpyq p span { color:#f00; }
+.upload { width:932px; padding-top:20px; height:523px; margin:0 auto; background:url(http://i.tq121.com.cn/i/tqzt/photo/baise.jpg) no-repeat; }
+.l { width:566px; float:left; height:500px; }
+.r { width:326px; float:right; height:500px; margin-right:20px; }
+.tx { height:185px; margin-bottom:10px; padding-top:0px; }
+.tx h1 { color: #487938; font-size: 16px; font-weight: bold; height: 27px; line-height: 27px; margin-bottom: 10px; text-indent: 5px; width:566px; background:url(http://i.tq121.com.cn/i/tqzt/photo/titles.jpg) no-repeat; }
+.tx table tr td { padding:10px 0px; font-size:14px; }
+.tx table tr td span { color:#f00; }
+.shang h1 { color: #487938; font-size: 16px; font-weight: bold; height: 27px; line-height: 27px; margin-bottom: 10px; text-indent: 5px; width:566px; background:url(http://i.tq121.com.cn/i/tqzt/photo/title.jpg) no-repeat; }
+.from2 { font-size: 12px; width: 430px; }
+.shang div { line-height:20px; }
+.zi{ color:#f00;}
+.r .xuanx
+{
+	width:325px;
+	height:220px;
+	background:#ccc;
+	margin-bottom:10px;}
+.r .xuans
+{
+	width:325px;
+	height:220px;
+	background:#ccc;
+	margin-bottom:10px;}
