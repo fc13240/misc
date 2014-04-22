@@ -249,7 +249,7 @@ line-height:25px;
 .tourismLeft { float:left; width:640px; height:1000px; }
 .tourism { width:960px; margin:0 auto; }
 .weizhi p { color: #2E51A5; height: 34px; line-height: 34px; padding-left: 10px; }
-.sousuolan{ background:url(images/sousuolan.jpg) no-repeat; width:640px; height:183px; margin-bottom:10px; position:relative;}
+.sousuolan{ background:url(../../i/english/tourism/sousuolan.jpg) no-repeat; width:640px; height:183px; margin-bottom:10px; position:relative;}
 .seach{ left: 81px;
     position: absolute;
     top: 53px;}
