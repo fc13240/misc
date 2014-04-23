@@ -1,5 +1,5 @@
 // JavaScript Document
- W.use('j/m_search_suggest_en',function(Suggest){
+ W.use('j/m_search_suggest_tourism',function(Suggest){
     var text = "Enter Your City,ST or ZIP Code";
     var $textBox = $('#text_fuza').focus(function(){
         if($(this).val() == text){
@@ -20,6 +20,7 @@
         ,'bindEvent': false
         ,'onSelect': function(data){
              var cityName = data[5];
+             alert(cityname);
               $("#text_fuza").val(cityName);
              var toUrl = '';
                  if(data.length == 20){                              
