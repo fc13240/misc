@@ -92,6 +92,26 @@ define(function(require) {
 	$(".nav ul li").removeClass('on');
 	$(".nav ul li[id=" + $("#colorid").val() + "]").addClass("on");
 
+    $('#liu').click(function(){
+		$('form').submit();
+	})
+	 $("button").click(function(){
+		 var $toObj = $('#input_type');
+		 if(!$(this).hasClass('jibie')){
+			 $toObj = $('#input_tnameen')
+		}
+		$toObj.val($(this).val());
+		$("form").submit();
+	  });  
+	  $(".daomian").change(function(){
+		  $('#liu').click();
+		  
+		$("form").submit();
+	 
+	  });	  
+
+
+
 
 
 

@@ -253,7 +253,7 @@ line-height:25px;
 .seach{ left: 81px;
     position: absolute;
     top: 53px;}
-.seach input#tourism 
+.seach input#text_fuza 
 {
 	width:475px;
 	height:35px;
@@ -320,3 +320,24 @@ line-height:25px;
 	height:25px;
 	border:1px solid #ccc;
 	line-height:25px;}
+.quji p button {
+    color: #3466BB;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-indent: 0;
+    width: 22px;
+}
+
+
+.ming ul li
+{
+text-indent:0;
+width:300px;
+float:left;}
+.ming ul{width:630px;}
+.seach{top:55px;}
+.seach input#tourism{line-height:35px;} 
