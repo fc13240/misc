@@ -181,7 +181,8 @@
 					arr[5] && content.push(arr[5]); //加入省名
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
-						var areaCode = arr[6];
+						var areaCode = arr[1];
+						
 						var postCode = arr[7];
 						if(tempReg.test(areaCode)){
 							content.push(areaCode);
