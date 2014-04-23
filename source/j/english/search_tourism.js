@@ -20,7 +20,6 @@
         ,'bindEvent': false
         ,'onSelect': function(data){
              var cityName = data[5];
-             alert(cityname);
               $("#text_fuza").val(cityName);
              var toUrl = '';
                  if(data.length == 20){                              
