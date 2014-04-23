@@ -182,7 +182,6 @@
 					var tempReg = new RegExp(key,'ig');
 					if(isNum){
 						var areaCode = arr[6];
-						alert(areaCode);
 						var postCode = arr[7];
 						if(tempReg.test(areaCode)){
 							content.push(areaCode);
