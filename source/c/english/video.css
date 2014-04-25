@@ -13,6 +13,9 @@
 	line-height:32px;
 	text-indent:10px;
 	background:#e2ecf7;}
+.videoc h1 a{
+	font-size: 14px;
+}
 .videoc h2
 {
 	font-size:20px;
@@ -140,6 +143,9 @@
     height: 32px;
     line-height: 32px;
     text-indent: 10px;}
+.news h1 a{
+	font-size: 14px;
+}
 .newsL
 {
 	margin-left:10px;}

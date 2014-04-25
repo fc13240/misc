@@ -6,7 +6,7 @@
 .left .cityName { height:69px; background:#e2ecf7; }
 .left .cityName ul { padding-left:8px; }
 .left .cityName ul.t li { float:left; height:30px; line-height:30px; }
-.left .cityName ul.t li a { color:#2e51a5; margin:0 5px; }
+.left .cityName ul.t li a { color:#2e51a5; margin:0 5px; font-size: 14px; }
 .left .cityName ul.b li { cursor:pointer; color:#3466bb; float:left;width:152px; font-size:18px;text-align:center; }
 .left .cityName ul.b li a{ height:40px;line-height:40px; display:block;color:#3466bb;}
 .left .cityName ul.b li a:hover{ color:#3466bb;}
