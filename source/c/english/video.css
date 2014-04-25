@@ -3,6 +3,7 @@
 
 .left
 {
+	overflow: hidden;
 	width:645px;}
 .videoc h1
 {
