@@ -20,8 +20,8 @@ display:none;}
 .forcem .local
 {
     background: none repeat scroll 0 0 #E2ECF7;
-    height: 69px;
-	margin-bottom:15px;
+    height: 35px;
+
 }
 .con .left
 {
@@ -243,3 +243,109 @@ float:left;
 height:25px;
 line-height:25px;
 	font-size:12px;}
+
+
+.footer { clear:both; }
+.tourismLeft { float:left; width:640px; height:1000px; }
+.tourism { width:960px; margin:0 auto; }
+.weizhi p { color: #2E51A5; height: 34px; line-height: 34px; padding-left: 10px; }
+.sousuolan{ background:url(../../i/english/tourism/sousuolan.jpg) no-repeat; width:640px; height:183px; margin-bottom:10px; position:relative;}
+.seach{ left: 81px;
+    position: absolute;
+    top: 53px;}
+.seach input#text_fuza 
+{
+	width:475px;
+	  color: #3366BB;
+    font-family: "Microsoft Yahei","Tahoma","SimSun";
+	height:35px;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;}
+.seach input.btns
+{
+	cursor:pointer;
+	background:none;
+	border: none;
+	height:25px;
+	width:25px;}
+.tourismRight{ width:300px; float:right;}
+.quji
+{
+	width:620px;
+	margin:0 auto;
+	padding-top:10px;
+	border-top:1px solid #e6ecf6;}
+.quji p
+{
+	text-indent:15px;}
+.quji p a
+{
+	text-align:center;
+	line-height:22px;
+	color:#3466bb;
+	float:left;
+	text-indent:0;
+	display:block;
+	font-size:12px;
+	width:22px;
+	height:22px;}
+.quji p a.move
+{
+	text-indent:0;
+	background:#cdd9ee;}
+.chengshi ul
+{
+	float:right;
+	margin-top: 10px;
+	width:250px;}
+.chengshi ul li
+{
+	width:60px;
+	float:left;}
+.chengshi ul li a 
+{
+	font-size:16px; 
+	color:#3466bb;}
+.chengshi
+{
+	position:absolute;
+	left:30px;
+	width:595px;
+	top:157px;}
+.chengshi span
+{
+	color:#000033;
+	font-size:18px;
+	padding-right:25px;}
+.chengshi select
+{
+	width:200px;
+	height:25px;
+	border:1px solid #ccc;
+	line-height:25px;}
+.quji p button {
+    color: #3466BB;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-indent: 0;
+    width: 22px;
+}
+
+
+.ming ul li
+{
+text-indent:0;
+width:315px;
+float:left;}
+.ming ul{width:630px;}
+.seach{top:55px;}
+.seach input#tourism{line-height:35px;} 
+.chengshi ul li .jibie{
+    color: #3466bb;
+    font-size: 16px;
+    
+}

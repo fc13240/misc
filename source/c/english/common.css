@@ -20,8 +20,8 @@ i { font-style:normal; }
 .top .type a.typeOn { background:url(../../i/english/home/icon.jpg) no-repeat 64px -422px; cursor:pointer; display:block; width:23px; height:22px; color:#3466bb; width:100px; line-height:23px; }
 .top .type a.down { background:url(../../i/english/home/icon.jpg) no-repeat 64px -401px; }
 .top .type ul { display:none; }
-.top .type ul li a { color:#3466bb; line-height:30px; width:89px; height:30px; display:block; }
-.top .type ul li a:hover { background:#3466bb; color:#fff; }
+.top .type ul li a {text-indent: 8px; color:#3466bb; line-height:30px; width:89px; height:30px; display:block; }
+.top .type ul li a:hover { background:#3466bb; color:#fff; text-indent: 8px; }
 .nav { width:100%; height:50px; background:#3466bb; }
 .nav .box { position:relative; }
 .nav ul.navlink li { float:left; }

@@ -92,6 +92,10 @@ define(function(require) {
 	$(".nav ul li").removeClass('on');
 	$(".nav ul li[id=" + $("#colorid").val() + "]").addClass("on");
 
+    
+
+
+
 
 
 

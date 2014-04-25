@@ -3,6 +3,7 @@
 
 .left
 {
+	overflow: hidden;
 	width:645px;}
 .videoc h1
 {
@@ -12,6 +13,10 @@
 	line-height:32px;
 	text-indent:10px;
 	background:#e2ecf7;}
+.videoc h1 a{
+	font-size: 14px;
+	color: #2E51A5;
+}
 .videoc h2
 {
 	font-size:20px;
@@ -106,6 +111,8 @@
 	line-height:32px;
 	text-indent:10px;
 	background:#e2ecf7;}
+
+.content h1 a{	color: #2E51A5;}
 .content h2
 {
 	font-size:20px;
@@ -139,6 +146,10 @@
     height: 32px;
     line-height: 32px;
     text-indent: 10px;}
+.news h1 a{
+	font-size: 14px;
+	color: #2E51A5;
+}
 .newsL
 {
 	margin-left:10px;}
@@ -289,3 +300,8 @@ float:left;
 .right .d1{float: left;display: table;width:120px;height: 125px;*position:relative;}
 .right .d2{display: table-cell;vertical-align:middle; *position:absolute;*top:50%;}
 .right .d3{padding-left: 11px;*position:relative;*top:-50%; }
+.right h1 {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+}
