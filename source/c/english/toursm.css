@@ -256,6 +256,8 @@ line-height:25px;
 .seach input#text_fuza 
 {
 	width:475px;
+	  color: #3366BB;
+    font-family: "Microsoft Yahei","Tahoma","SimSun";
 	height:35px;
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;}
@@ -308,7 +310,7 @@ line-height:25px;
 {
 	position:absolute;
 	left:30px;
-	width:575px;
+	width:595px;
 	top:157px;}
 .chengshi span
 {
