@@ -30,9 +30,9 @@ a
          font-size:12px;
          outline: medium none;
 	}
-.sumb dl a dd :hover
+.sumb dl a:hover dd 
     {
-	color:#ee842f;
+	color:#EE842F;
 	text-decoration:none;
 	}
 .sumb
