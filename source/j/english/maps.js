@@ -91,7 +91,7 @@ define(function(require){
 		}
 		//台风的flash动画
 		function typFlah(){	
-			var iframe = '<iframe width="630" scrolling="no" height="488" frameborder="0" src="http://flash.weather.com.cn/typhoon/taifeng.swf" name="surf"></iframe>'
+			var iframe = '<iframe width="630" scrolling="no" height="472" frameborder="0" src="http://flash.weather.com.cn/typhoon/taifeng.swf" name="surf"></iframe>'
 			$('.show').empty().append(iframe);
 			var strDiv = '<div class="mt clearfix"><a href="http://en.weather.com.cn/satellite/"><img width="180" height="125" class="fl" src="http://i.tq121.com.cn/i/english/cityInfo/map2.jpg"></a><div class="d1"><div class="d2"><div class="d3"><a href="http://en.weather.com.cn/satellite/">China Satellite Image</a></div></div></div></div><div class="mt clearfix"><a href="http://en.weather.com.cn/radar/"><img width="180" height="125" class="fl" src="http://i.tq121.com.cn/i/english/cityInfo/map1.jpg"></a><div class="d1"><div class="d2"><div class="d3"><a href="http://en.weather.com.cn/radar/">China Radar</a></div></div></div></div>';
 			$('.map').append(strDiv);
