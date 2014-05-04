@@ -19,13 +19,13 @@ rsync -vaz '-e ssh -p 2222'  $WORK_DIR/min/ wcc@61.4.184.131:/home/wcc/www/misc/
 echo '=======================================================';
 echo '</pre>';
 
-echo "<b>(3) Server 2 61.4.184.136</b>";
+echo "<b>(3) Server 3 61.4.184.136</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/min/ wcc@61.4.184.136:/home/wcc/www/misc/min/
 echo '=======================================================';
 echo '</pre>';
 
-echo "<b>(4) Server 2 61.4.184.137</b>";
+echo "<b>(4) Server 4 61.4.184.137</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/min/ wcc@61.4.184.137:/home/wcc/www/misc/min/
 echo '</pre>';
@@ -36,19 +36,19 @@ echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/source/ sam@61.4.185.223:/home/sam/www/misc/source/
 echo '========================================================';
 echo '</pre>';
-echo "<b>(2) Server2 61.4.184.131</b>";
+echo "<b>(2) Server 2 61.4.184.131</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/source/ wcc@61.4.184.131:/home/wcc/www/misc/source/
 echo '========================================================';
 echo '</pre>';
 
-echo "<b>(3) Server2 61.4.184.136</b>";
+echo "<b>(3) Server 3 61.4.184.136</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/source/ wcc@61.4.184.136:/home/wcc/www/misc/source/
 echo '========================================================';
 echo '</pre>';
 
-echo "<b>(4) Server2 61.4.184.137</b>";
+echo "<b>(4) Server 4 61.4.184.137</b>";
 echo '<pre>';
 rsync -vaz '-e ssh -p 2222'  $WORK_DIR/source/ wcc@61.4.184.137:/home/wcc/www/misc/source/
 echo '</pre>';
