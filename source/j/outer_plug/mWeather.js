@@ -1,8 +1,8 @@
 $(function() {
 	//getJson数据 城市天气信息
     function _getJson(cityid) {
-		// var url="http://www.weather.com.cn/data/cityinfo/"+cityid+".html";
-        var url = "data/" + cityid + ".html";
+		var url="http://www.weather.com.cn/data/cityinfo/"+cityid+".html";
+        //var url = "data/" + cityid + ".html";
         $.getJSON(url,
         function(data) {
             var aLink = "http://www1.weather.com.cn/weather/" + data.weatherinfo.cityid + ".shtml";

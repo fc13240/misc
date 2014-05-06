@@ -7,7 +7,7 @@
 .topsaetutton { width:43px; height:32px; float:left; }
 .topsaetutton input { width:43px; height:32px; background-image:url(../images/index_06.jpg); cursor:pointer; }
 .topsaetitle { width:259px; float:left; margin-top:10px; }
-.topsaetitle1 { width:249px; height:35px; background-image: url(../images/index_11.jpg); float:left; line-height:35px; padding-left:10px; font-size:14px; font-weight:bold; }
+.topsaetitle1 { width:249px; height:35px; background-image: url(http://i.tq121.com.cn/i/outer_plug/mWeather/index_11.jpg); float:left; line-height:35px; padding-left:10px; font-size:14px; font-weight:bold; }
 .topsaetitle2 { width:257px; height:232px; border:1px solid #b5babe; border-top:0; float:left; }
 .topsaetitle2 ul { width:237px; float:left; margin:0 0 0 10px; display:inline; }
 .topsaetitle2 ul li { width:237px; float:left; line-height:28px; font-size:14px; }
@@ -76,7 +76,7 @@
 .tqitit .span02 { float:left; margin:0 0 0 35px; display:inline; font-weight:normal; }
 .ys2 { width:75px; height:31px; float:left; }
 .s3 { width:75px; height:31px; float:left; }
-.select_box { width:75px; height:31px; line-height:31px; background: url(../images/indexbgds.jpg) no-repeat; position:relative; cursor:pointer; }
+.select_box { width:75px; height:31px; line-height:31px; background: url(http://i.tq121.com.cn/i/outer_plug/mWeather/indexbgds.jpg) no-repeat; position:relative; cursor:pointer; }
 .select_box span.search_site { width:75px; height:31px; line-height:31px; *line-height:31px;
 overflow:hidden; font-weight:normal; }
 .select_box .select_list { height: 107px; overflow: scroll; display: none;width:80px; background:#fff; border:1px solid #3582cf; position:absolute; top:31px; left:-1px;z-index:11}
