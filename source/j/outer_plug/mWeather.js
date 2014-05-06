@@ -43,7 +43,7 @@ $(function() {
         "cache": !1,
         "async": !1,
         "success": function() {
-			      $("#count").html("<a href='http://www.weather.com.cn/alarm/newalarmlist.shtml' target='_blank'>正在预警中" + alarminfo.count + "个</a>");
+			      $("#count").html("<a href='http://www.weather.com.cn/alarm/newalarmlist.shtml' target='_blank'>全国正在预警中" + alarminfo.count + "个</a>");
             if (alarminfo.gj.length > 0 || alarminfo.pr.length > 0) {
                 $alarm = $("#alarm"),
                 //$.each(alarminfo.gj,function(i, k) {
