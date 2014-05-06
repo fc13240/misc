@@ -46,12 +46,10 @@ $(function() {
 			      $("#count").html("<a href='http://www.weather.com.cn/alarm/newalarmlist.shtml' target='_blank'>正在预警中" + alarminfo.count + "个</a>");
             if (alarminfo.gj.length > 0 || alarminfo.pr.length > 0) {
                 $alarm = $("#alarm"),
-                $.each(alarminfo.gj,
-                function(i, k) {
-                    $('<a href="' + k.http + '" target="_blank" >中央气象台发布' + k.name + "</a>").appendTo($alarm);
-                }),
-                $.each(alarminfo.pr,
-                function(i, k) {
+                //$.each(alarminfo.gj,function(i, k) {
+                    //$('<a href="' + k.http + '" target="_blank" >中央气象台发布' + k.name + "</a>").appendTo($alarm);
+                //}),
+                $.each(alarminfo.pr,function(i, k) {
                     $filename = k[1],
                     $pos = $filename.lastIndexOf("-"),
                     $lb = $filename.substr($pos + 1, 2),
@@ -63,19 +61,22 @@ $(function() {
                     $lb > 90 && ($textlb = $gdlb[parseInt($lb, 10) - 91]),
                     $jb > 90 && ($textyc = $gdyc[parseInt($jb, 10) - 91]),
                     $('<a target="_blank" href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=' + $filename + '">' + k[0] + "气象台发布" + $textlb + $textyc + "预警</a>").appendTo($alarm);
+                    $('span.tianqnecon_1').append('<img class="alarmImg2" width="25" height="21" src="http://www.weather.com.cn/m/i/alarm_s/'+$img+'.gif">');
                 });
-                
                 var aPointer = 0;
                 $("#alarm a:first").show();
+                $("span.tianqnecon_1 img.alarmImg2:first").show();
                 function _showA() {
                     $("#alarm a").length > 1 && (aPointer++, aPointer = aPointer >= $("#alarm a").length ? 0 : aPointer, $("#alarm").children("a").hide().eq(aPointer).fadeIn());
+                    $('span.tianqnecon_1 img.alarmImg2').hide().eq(aPointer).fadeIn();
                 }
-                setInterval(_showA, 2e3);
+                setInterval(_showA, 3e3);
             }else{
-              $alarm = $("#alarm").html('无预警信息')
+              $alarm = $("#alarm").html('暂无省级预警信息');
+              $(".topsaetitle2 .tianqnecon_1 .alarmImg1").show();
             }
         }
-    }),
+    })
 	//城市下拉框
     $("#select_area").hover(function() {
         $("#select_main").show();

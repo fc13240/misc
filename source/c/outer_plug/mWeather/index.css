@@ -84,7 +84,8 @@ overflow:hidden; font-weight:normal; }
 .select_box .select_list a.active { background:#3582cf; color:#fff; text-decoration:none; font-weight:normal; }
 /*天气信息*/
 .tianqnecon { width:237px; height:100px; float:left; margin-left:10px; display:inline; }
-.tianqnecon_1 { width:29px; height:100px; float:left; margin-top:5px; }
+.tianqnecon_1 { width:29px; height:100px; float:left; margin-top:6px; }
+.tianqnecon_1 img{ display:none;}
 .tianqnecon_2 { width:208px; height:44px; line-height:22px; float:right; font-size:13px; margin-top:5px; }
 .tianqnecon_2 a{ height:44px; display:none;}
 .tianqnecon_3 { width:208px; height:28px; line-height:28px; float:right; font-size:13px; font-weight:bold; color:#e40000; }
