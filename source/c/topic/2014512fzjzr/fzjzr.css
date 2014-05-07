@@ -1,3 +1,4 @@
+
 * {
 	padding: 0;
 	margin: 0;
@@ -32,7 +33,7 @@ ul.tabs {
 }
 .wrape {
 	width: 968px;
-	margin: 234 auto;
+	margin: 0 auto;
 	margin-top:110px;
  
 }
@@ -121,63 +122,63 @@ body {
 	 
 	padding: 0;
 	margin: 0;
-	background: #01163c url(http://i.tq121.com.cn/i/topic/2014512fzjzr/beiJingTu.jpg);
+	background: #01163c url(f8/beiJingTu.jpg);
 	background-position: top center;
 	background-repeat:no-repeat;
 	
 	 
 	}
 ul .b_1 a.current {
-	background:url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by.png);
+	background:url(f8/by.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
 	width: 226px;
 }
 ul .b_1 a {
-	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by1.png);
+	background: url(f8/by1.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
 	width: 226px;
 }
 ul .b_2 a.current {
-	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by22.png);
+	background: url(f8/by22.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
 	width: 232px;
 }
 ul .b_2 a {
-	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by2.png);
+	background: url(f8/by2.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
 	width: 232px;
 }
 ul .b_3 a.current {
-	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by33.png);
+	background: url(f8/by33.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
 	width: 258px;
 }
 ul .b_3 a {
-	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by3.png);
+	background: url(f8/by3.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
 	width: 258px;
 }
 ul .b_4 a.current {
-	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by44.png);
+	background: url(f8/by44.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
 	width: 252px;
 }
 ul .b_4 a {
-	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by4.png);
+	background: url(f8/by4.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0;
@@ -218,20 +219,3 @@ ul .b_4 a {
 }
 .bei_jing{ position:absolute; width:100%; top:0;}
 .bei_jing img{ width:100%;}
-/* root element for tabs  */
-ul.tabs {
-    list-style:none;
-    margin:0 !important;
-    padding:0;
-    border-bottom:1px solid #666;
-    height:30px;
-}
-
-/* single tab */
-ul.tabs li {
-    float:left;
-    text-indent:0;
-    padding:0;
-    margin:0 !important;
-    list-style-image:none !important;
-}
