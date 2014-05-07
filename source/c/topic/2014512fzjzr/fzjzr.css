@@ -1,0 +1,237 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+a:active {
+    outline:none;
+}
+
+:focus {
+    -moz-outline-style:none;
+}
+ul.tabs li a {
+	margin-right: 4px;
+	height: 76px;
+	margin: 0;
+	line-height: 58px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+	font-family: "Microsoft YaHei";
+}
+ul.tabs li a.current {
+	color: #01163c;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+	font-size: 20px;
+}
+ul.tabs {
+	height: 76px;
+	padding-left: 2px;
+	width: 968px;
+}
+.wrape {
+	width: 968px;
+	margin: 234 auto;
+	margin-top:110px;
+ 
+}
+.panes div {
+	border: 1px solid #999;
+	border-top: 0;
+	font-size: 14px;
+	background-color: #fff;
+}
+.panes div div {
+	display: block;
+}
+.hg {
+	text-align: left;
+	clear: left;
+	font-size: 20px;
+	color: #003366;
+	text-indent: 2em;
+	width: 750px;
+	font-family: "Microsoft YaHei";
+	line-height: 50px;
+}
+.t_z {
+	display: none;
+	clear: left;
+	width: 100%;
+	float: left;
+}
+.zuo {
+	width: 750px;
+	clear: left;
+	float: left;
+}
+.tu {
+	float: left;
+	clear: left;
+	width: 440px;
+	height: 330px;
+	padding-left: 5px;
+}
+.tu img {
+	width: 100%;
+	height: 100%;
+}
+.tu {
+	float: left;
+	display: inline;
+}
+.bt {
+	font-size: 14px;
+	color: #003366;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+}
+.wen {
+	float: right;
+	display: inline;
+	width: 300px;
+}
+.zy {
+	color: #666666;
+	font-size: 12px;
+	line-height: 22px;
+	margin-top: 40px;
+	padding: 0 10px;
+	text-indent: 2em;
+}
+.tu_2 {
+	clear: left;
+}
+.zj_ts {
+	font-size: 20px;
+	color: #003366;
+	line-height: 50px;
+	text-indent: 0.5em;
+	font-family: "Microsoft YaHei";
+}
+.ts_tu {
+	padding: 0 5px;
+}
+.ts_tu img {
+	width: 100%;
+}
+body {
+	 
+	padding: 0;
+	margin: 0;
+	background: #01163c url(http://i.tq121.com.cn/i/topic/2014512fzjzr/beiJingTu.jpg);
+	background-position: top center;
+	background-repeat:no-repeat;
+	
+	 
+	}
+ul .b_1 a.current {
+	background:url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 226px;
+}
+ul .b_1 a {
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by1.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 226px;
+}
+ul .b_2 a.current {
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by22.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 232px;
+}
+ul .b_2 a {
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by2.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 232px;
+}
+ul .b_3 a.current {
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by33.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 258px;
+}
+ul .b_3 a {
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by3.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 258px;
+}
+ul .b_4 a.current {
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by44.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 252px;
+}
+ul .b_4 a {
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/by4.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0;
+	width: 252px;
+}
+.panes {
+	position: relative;
+}
+.weibo {
+	display: block;
+	position: absolute;
+	right: 5px;
+}
+.weibo span {
+	display: block;
+}
+.weibo h1 {
+	color: #003366;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+	line-height: 50px;
+}
+.panes div {
+	border: 0;
+}
+.sheji {
+	color: #fff;
+	font-size: 24px;
+	font-family: "Microsoft YaHei";
+	clear: both;
+	line-height: 50px;
+}
+.sheji .right {
+	float: right;
+}
+.sheji .center {
+	margin-left: 6em;
+}
+.bei_jing{ position:absolute; width:100%; top:0;}
+.bei_jing img{ width:100%;}
+/* root element for tabs  */
+ul.tabs {
+    list-style:none;
+    margin:0 !important;
+    padding:0;
+    border-bottom:1px solid #666;
+    height:30px;
+}
+
+/* single tab */
+ul.tabs li {
+    float:left;
+    text-indent:0;
+    padding:0;
+    margin:0 !important;
+    list-style-image:none !important;
+}
