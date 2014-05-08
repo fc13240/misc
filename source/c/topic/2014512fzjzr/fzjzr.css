@@ -249,9 +249,11 @@ ul .b_4 a {
 	font-family: "Microsoft YaHei";
 	clear: both;
 	line-height: 50px;
+	position: relative;
 }
 .sheji .right {
-	float: right;
+	position: absolute;
+    right: 0;
 }
 .sheji .center {
 	margin-left: 6em;
