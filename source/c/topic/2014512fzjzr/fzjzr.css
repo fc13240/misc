@@ -258,3 +258,60 @@ ul .b_4 a {
 }
 .bei_jing{ position:absolute; width:100%; top:0;}
 .bei_jing img{ width:100%;}
+.fanHuiShouYe {
+	background: url("http://t1.weathertv.cn/img/qianShe.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-style: none;
+	bottom: 4em;
+	display: none;
+	height: 58px;
+	position: fixed;
+	right: 4em;
+	width: 58px;
+}
+.fanHuiShouYe:hover {
+	background: url('http://t1.weathertv.cn/img/shenShe.png') no-repeat scroll 0px 0px;
+}
+.biaoJi {
+	font-size: 1px;
+}
+.tu a {
+	display: block;
+	height: 100%;
+	background: url('http://t1.weathertv.cn/img/bei_jinTu.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.tu a img {
+	height: 318px;
+	width: 440px;
+	border:0;
+}
+.tu {
+	margin-left: 20px;
+	width: 450px;
+	padding-left: 0;
+}
+.wen {
+	width: 270px;
+}
+.bt a {
+	display: block;
+	padding-right: 10px;
+}
+.wen p {
+	padding-right: 10px;
+}
+.sheji .center {
+	margin-left: 4em;
+}
+.biezheng {
+	height: 60px;
+    left: -8px;
+    position: absolute;
+    top: 32px;
+    width: 60px;
+	background: url('http://t1.weathertv.cn/img/bieZheng.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+	position:absolute;
+}
