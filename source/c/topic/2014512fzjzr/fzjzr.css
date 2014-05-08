@@ -89,6 +89,13 @@ ul.tabs {
 	font-family: "Microsoft YaHei";
 	font-weight: bold;
 }
+.bt a{
+	font-size: 14px;
+	color: #003366;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+}
 .wen {
 	float: right;
 	display: inline;
