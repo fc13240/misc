@@ -91,7 +91,7 @@ ul.tabs {
 	float: left;
 }
 .zuo {
-	width: 750px;
+	width: 700px;
 	clear: left;
 	float: left;
 }
@@ -128,7 +128,7 @@ ul.tabs {
 .wen {
 	float: right;
 	display: inline;
-	width: 300px;
+	width: 215px;
 }
 .zy {
 	color: #666666;
@@ -329,3 +329,4 @@ ul .b_4 a {
 	line-height::30px;
 	
 	}
+.sheji span{ font-weight:bold;}
