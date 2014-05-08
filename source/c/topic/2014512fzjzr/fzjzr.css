@@ -1,11 +1,38 @@
-
-* {
-	padding: 0;
+*
+   {
 	margin: 0;
+	padding: 0;
+	list-style:none;
+	font-weight:normal;
+    }
+a img
+    {
+	border:0px solid #dcdddd;
+	}
+body 
+    {
+	font-family: "Microsoft Yahei","Tahoma","SimSun";
+	background:#fff;
+	color:#000;
+	font-size:12px;
+font-style:normal;
+	}
+i 
+    {
+font-style:normal;
 }
-a:active {
-    outline:none;
-}
+a 
+    {
+	color:#36B;
+	text-decoration:none;
+         font-size:12px;
+         outline: medium none;
+	}
+a:hover
+    {
+	color:#F60;
+	text-decoration:underline;
+	}
 
 :focus {
     -moz-outline-style:none;
@@ -73,6 +100,7 @@ ul.tabs {
 	width: 440px;
 	height: 330px;
 	padding-left: 5px;
+	text-decoration:none
 }
 .tu img {
 	width: 100%;
