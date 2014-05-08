@@ -245,11 +245,12 @@ ul .b_4 a {
 }
 .sheji {
 	color: #fff;
-	font-size: 24px;
+	font-size: 14px;
 	font-family: "Microsoft YaHei";
 	clear: both;
-	line-height: 50px;
 	position: relative;
+	font-weight: bold;
+	line-height:20px;
 }
 .sheji .right {
 	position: absolute;
@@ -262,7 +263,7 @@ ul .b_4 a {
 .bei_jing{ position:absolute; width:100%; top:0;}
 .bei_jing img{ width:100%;}
 .fanHuiShouYe {
-	background: url("http://t1.weathertv.cn/img/qianShe.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("http://t1.weathertv.cn/img/qianShe.png") no-repeat scroll;
 	border-style: none;
 	bottom: 4em;
 	display: none;
@@ -318,3 +319,13 @@ ul .b_4 a {
 	background-position: left top;
 	position:absolute;
 }
+
+.hezuo{
+	color: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    font-weight: bold;
+	float:right;
+	line-height::30px;
+	
+	}
