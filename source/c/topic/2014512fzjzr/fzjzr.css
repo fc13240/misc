@@ -119,7 +119,7 @@ ul.tabs {
 	font-weight: bold;
 }
 .bt a{
-	font-size: 14px;
+	font-size: 20px;
 	color: #003366;
 	text-align: center;
 	font-family: "Microsoft YaHei";
@@ -132,9 +132,9 @@ ul.tabs {
 }
 .zy {
 	color: #666666;
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 22px;
-	margin-top: 40px;
+	margin-top: 16px;
 	padding: 0 10px;
 	text-indent: 2em;
 }
