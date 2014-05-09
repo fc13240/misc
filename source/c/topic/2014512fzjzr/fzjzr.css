@@ -157,11 +157,11 @@ ul.tabs {
 }
 body {
 	 
-	padding: 0;
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/beiJingTu.jpg) no-repeat scroll;
+	background-position:center top;
+	background-color:#01163C;
 	margin: 0;
-	background: #01163c url(http://i.tq121.com.cn/i/topic/2014512fzjzr/beiJingTu.jpg);
-	background-position: top center;
-	background-repeat:no-repeat;
+	padding: 0;
 	
 	 
 	}
@@ -320,4 +320,6 @@ ul .b_4 a {
 	line-height:50px;
 	
 	}
-.sheji span{ font-weight:bold;}
+.sheji span{
+	 font-weight:bold;
+margin-right:40px;}
