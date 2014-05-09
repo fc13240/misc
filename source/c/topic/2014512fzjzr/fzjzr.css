@@ -23,15 +23,14 @@ font-style:normal;
 }
 a 
     {
-	color:#36B;
+	
 	text-decoration:none;
-         font-size:12px;
-         outline: medium none;
+      outline: medium none;
 	}
 a:hover
     {
-	color:#F60;
-	text-decoration:underline;
+	
+	text-decoration:none;
 	}
 
 :focus {
@@ -119,7 +118,7 @@ ul.tabs {
 	font-weight: bold;
 }
 .bt a{
-	font-size: 14px;
+	font-size: 20px;
 	color: #003366;
 	text-align: center;
 	font-family: "Microsoft YaHei";
@@ -130,11 +129,20 @@ ul.tabs {
 	display: inline;
 	width: 215px;
 }
+.zy a{
+	color: #666666;
+	font-size: 15px;
+	line-height: 22px;
+	margin-top: 16px;
+	padding: 0 10px;
+	text-indent: 2em;
+}
+
 .zy {
 	color: #666666;
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 22px;
-	margin-top: 40px;
+	margin-top: 16px;
 	padding: 0 10px;
 	text-indent: 2em;
 }
@@ -157,11 +165,11 @@ ul.tabs {
 }
 body {
 	 
-	padding: 0;
+	background: url(http://i.tq121.com.cn/i/topic/2014512fzjzr/beiJingTu.jpg) no-repeat scroll;
+	background-position:center top;
+	background-color:#01163C;
 	margin: 0;
-	background: #01163c url(http://i.tq121.com.cn/i/topic/2014512fzjzr/beiJingTu.jpg);
-	background-position: top center;
-	background-repeat:no-repeat;
+	padding: 0;
 	
 	 
 	}
@@ -252,14 +260,8 @@ ul .b_4 a {
 	font-weight: bold;
 	line-height:20px;
 }
-.sheji .right {
-	position: absolute;
-    right:0;
-	 top:0;
-}
-.sheji .center {
-	margin-left: 6em;
-}
+
+
 .bei_jing{ position:absolute; width:100%; top:0;}
 .bei_jing img{ width:100%;}
 .fanHuiShouYe {
@@ -304,9 +306,7 @@ ul .b_4 a {
 .wen p {
 	padding-right: 10px;
 }
-.sheji .center {
-	margin-left: 4em;
-}
+
 .biezheng {
 	height: 60px;
     left: -8px;
@@ -328,4 +328,6 @@ ul .b_4 a {
 	line-height:50px;
 	
 	}
-.sheji span{ font-weight:bold;}
+.sheji span{
+	 font-weight:bold;
+margin-right:40px;}
