@@ -252,14 +252,8 @@ ul .b_4 a {
 	font-weight: bold;
 	line-height:20px;
 }
-.sheji .right {
-	position: absolute;
-    right:0;
-	 top:0;
-}
-.sheji .center {
-	margin-left: 6em;
-}
+
+
 .bei_jing{ position:absolute; width:100%; top:0;}
 .bei_jing img{ width:100%;}
 .fanHuiShouYe {
@@ -304,9 +298,7 @@ ul .b_4 a {
 .wen p {
 	padding-right: 10px;
 }
-.sheji .center {
-	margin-left: 4em;
-}
+
 .biezheng {
 	height: 60px;
     left: -8px;
