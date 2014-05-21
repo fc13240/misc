@@ -1,5 +1,5 @@
 @charset "utf-8";
-body { background: url("../../i/tqzt/nuanDong/11.jpg") no-repeat 25px 0px transparent; height: 2000px; }
+body { height: 2000px; }
 .box { margin: 0px auto; width: 1000px; }
 .sbox { margin: 0px auto; width: 800px; }
 .top { background: url("../../i/tqzt/nuanDong/topBg.jpg") repeat-x 0px 0px transparent; height: 76px; }
