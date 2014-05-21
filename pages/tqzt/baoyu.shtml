@@ -6,7 +6,7 @@
 <title>暴雨</title>
 <meta  name="keywords" content="" />
 <meta name="description" content="" />
-<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+<script type="text/javascript" src="http://10.14.85.90/source/j/core.js"></script>
 <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script>W.css('c/core.css','c/common.css',"c/tqzt/baoyu.css")</script>
 <script>W.use('j/tqzt/baoyu')</script>
@@ -407,8 +407,6 @@
 		<div class="m">
             <!-- flash begin -->
 			<embed class='swf' style='z-index:1' width="100%" height="100%" name="plugin" src="http://i.weather.com.cn/images/cn/index/dtpsc/2013/05/27/A4ED9C7B439D57AE6879B6CA6508DC2C.swf" type="application/x-shockwave-flash"></embed>
-            <embed class='swf' width="100%" height="100%" name="plugin" src="http://i.weather.com.cn/images/cn/index/dtpsc/2013/05/27/4B243172F9C52CDA67DFAD89A5B32EBD.swf"></embed>
-            <embed class='swf' width="100%" height="100%" name="plugin" src="http://i.weather.com.cn/images/cn/index/dtpsc/2013/05/27/8C8A22557C2C130D1EDCB7C71D781910.swf"></embed>
             <!-- flash end -->
 		</div>
 	</div>
@@ -503,9 +501,5 @@
 
 <script type="text/javascript" src="http://c.wrating.com/a1.js"></script>
 <script type="text/javascript" src="/site2/html/tongji/topic.js"></script>
-<script type="text/javascript">
-swfobject.registerObject("FlashID");
-swfobject.registerObject("FlashID");
-</script>
 </body>
 </html>

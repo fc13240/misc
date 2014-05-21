@@ -38,8 +38,12 @@ define(function(require){
 	    $('.con4 h1 p em').click(function(){
 	    	var that = $(this);
 	    	var index = _emClick(that);
-	    	$('.con4 .m embed').eq(index-1).css('z-index',1).siblings().css('z-index',0)
-	    	
+			$('.con4 div.m').empty();
+			switch(index){
+				case 1:$('.con4 div.m').append('<embed width="100%" height="100%" type="application/x-shockwave-flash" src="http://i.weather.com.cn/images/cn/index/dtpsc/2013/05/27/A4ED9C7B439D57AE6879B6CA6508DC2C.swf" name="plugin" style="z-index: 0;" class="swf">');break;
+	    		case 2:$('.con4 div.m').append('<embed width="100%" height="100%" src="http://i.weather.com.cn/images/cn/index/dtpsc/2013/05/27/4B243172F9C52CDA67DFAD89A5B32EBD.swf" name="plugin" class="swf" style="z-index: 1;">');break;
+	    		case 3:$('.con4 div.m').append('<embed width="100%" height="100%" src="http://i.weather.com.cn/images/cn/index/dtpsc/2013/05/27/8C8A22557C2C130D1EDCB7C71D781910.swf" name="plugin" class="swf" style="z-index: 0;">');break;
+	    	}
 	    })
 	    //风雨排行 降水 风力 切换效果
 	    $('.con2 .right h1 p em').click(function(){
@@ -60,8 +64,6 @@ define(function(require){
 	    	}
 	    	return index;
 	    }
-		
-
 		//底部滚动图
 	    var SN = {
 	    	ul:'#picShow ul',
@@ -92,16 +94,10 @@ define(function(require){
 		function _toRoll(sign){
 			$(SN.ul).stop(true,true);
 			var ulML = parseInt($(SN.ul).css('marginLeft'));
-			console.log(ulML+','+-ulW);
 			ulML<=-ulW && $(SN.ul).css('marginLeft',0) || ulML>=0 && $(SN.ul).css('marginLeft',-ulW+'px');			
 			$(SN.ul).stop(true,true).animate({marginLeft:sign+'='+SN.rW},'slow',function(){
 			});
 		}
-		
-
-
-
-
-		
+	
 	})
 })
