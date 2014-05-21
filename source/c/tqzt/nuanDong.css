@@ -20,6 +20,7 @@ body {  }
 .main .daoyu .l { background: none repeat scroll 0px 0px #1F4A76; color: #FFFFFF; height: 296px; padding: 12px 12px 12px 18px; width: 200px; }
 .main .daoyu .l h1 { font-size: 30px; margin-top: 12px; }
 .main .daoyu .l p { font-size: 16px; line-height: 28px; margin-top: 10px; }
+.main .daoyu .l p a{color:#f60;}
 .main .daoyu .r { }
 .main .daoyu .r img { }
 .word { margin-top: 51px; }
@@ -35,3 +36,18 @@ body {  }
 .word .end h1 { border-bottom: medium none; font-size: 30px; }
 .word .end p { font-size: 19px; line-height: 34px; padding: 0px 38px; }
 iframe{margin-top: 70px;}
+.sbox
+	{
+		position:relative;}
+	.s {
+    left: 499px;
+    position: absolute;
+    top: 7px;
+    width: 386px;
+}
+.s img.fl
+{
+	width:71px;}
+.s div.fr
+{
+	width:298px;}
