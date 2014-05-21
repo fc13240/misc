@@ -16,7 +16,7 @@ $(function(){
 			$('.yb_you p:last').html(data.t1+'/'+data.t2+'°C')
 		})
 	}
-
+	
 	//获取地理信息
 	if(!$.cookie('localCity')){
 		if(navigator.geolocation){
