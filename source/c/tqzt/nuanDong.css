@@ -11,7 +11,7 @@ body {  }
 .top .r { font-size: 16px; line-height: 78px; margin-right: 6px; }
 .main { background:url("../../i/tqzt/nuanDong/bg.jpg") repeat; }
 .main .box{background:url("../../i/tqzt/nuanDong/bg_box.jpg") repeat;}
-.main .tit { border-bottom: 1px solid #000000; height: 78px; padding-bottom: 16px; position: relative; }
+.main .tit { border-bottom: 1px solid #000000; height: 78px; padding-bottom: 16px;  }
 .main .tit .l { font-size: 32px; margin-top: 42px; }
 .main .tit .r { left: 563px; position: absolute; top: 7px; width: 319px; }
 .main .tit .r .fl { }
