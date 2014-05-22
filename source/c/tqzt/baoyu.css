@@ -293,14 +293,19 @@ a:hover {
 
 .con1 .right .r1 p {
      font-size: 14px;
-     line-height: 24px;
+     height: 97px;
+     line-height: 23px;
      margin-top: 10px;
+     overflow: hidden;
      text-indent: 2em;
+     text-overflow: ellipsis;
 }
 
 .con1 .right .r1 h1 a {
      border-bottom: 2px solid #62829B;
+     color: #8D0101;
      display: inline-block;
+     float: none;
      margin: 0px auto;
      text-align: center;
 }
@@ -407,22 +412,24 @@ a:hover {
 
 .con1 .right .r4 a {
      display: block;
-   
 }
-.con1 .right .r4 a img{
-	width:348px;
-	height:69px;
+
+.con1 .right .r4 a img {
+     height: 69px;
+     width: 348px;
 }
+
 .con2 {
      margin-top: 20px;
 }
 
 .con2 .left {
+     position: relative;
      width: 600px;
 }
 
 .con2 .left h1 {
-     padding-bottom: 6px;
+    
 }
 
 .con2 .left h1 i {
@@ -760,7 +767,9 @@ a:hover {
 }
 
 .con7 .m .mBox ul {
-     width: 1290px;
+     background: url("http://www.weather.com.cn/m2/i/tfty/tffy/title.jpg") no-repeat scroll 10px 8px transparent;
+     height: 38px;
+     padding-left: 15px;
 }
 
 .con7 .m .mBox ul li {
@@ -855,4 +864,61 @@ a:hover {
      padding-left: 38px;
      text-align: center;
      width: 480px;
+}
+
+.RadarSatellite {
+     height: 396px;
+     position: relative;
+}
+
+.RadarSatellite ul {
+     background: url("http://www.weather.com.cn/m2/i/tfty/tffy/title.jpg") no-repeat scroll 13px 8px transparent;
+     border-bottom: 1px dotted #BCBCBC;
+     height: 35px;
+     padding-left: 14px;
+}
+
+.RadarSatellite ul li {
+     cursor: pointer;
+     float: left;
+     font-size: 20px;
+     height: 27px;
+     line-height: 27px;
+     margin-left: 15px;
+}
+
+.RadarSatellite ul li a {
+    
+}
+
+.RadarSatellite ul li.moverad {
+     border-bottom: 3px solid #134481;
+}
+
+.RadarSatelliteimg {
+     display: none;
+     height: 350px;
+     margin-top: 10px;
+     width: 440px;
+}
+
+.RadarSatelliteimg img {
+     height: 350px;
+}
+
+.weatherRankingTable td {
+     border-bottom: 1px solid #E1E7F3;
+     padding-left: 5px;
+     text-align: left;
+}
+
+.weatherRankingTable td p {
+     height: 27px;
+     line-height: 27px;
+     overflow: hidden;
+}
+
+.weatherRankingTable tfoot td {
+     padding-right: 15px;
+     text-align: right;
 }
