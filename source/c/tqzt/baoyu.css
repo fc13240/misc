@@ -29,7 +29,7 @@ a:hover { text-decoration: none; }
 .con1 .left .video .l p { color: #FFFFFF; font-size: 17px; height: 30px; left: 0px; line-height: 30px; overflow: hidden; position: absolute; text-align: center; text-overflow: ellipsis; top: 190px; white-space: nowrap; width: 310px; z-index: 1; }
 .con1 .left .video .l div { background: none repeat scroll 0% 0% #000000; height: 30px; left: 0px; opacity: 0.5; position: absolute; top: 190px; width: 310px; }
 .con1 .left .video .r { margin-top: 4px; width: 290px; }
-.con1 .left .video .r li { float: left; margin-left: 5px; margin-top: 10px; position: relative; }
+.con1 .left .video .r li { float: left; margin-left: 5px; _margin-left:3px; margin-top: 10px; position: relative; }
 .con1 .left .video .r li a p { color: #FFFFFF; font-size: 12px; height: 20px; left: 0px; line-height: 20px; overflow: hidden; position: absolute; text-align: center; text-overflow: ellipsis; top: 85px; white-space: nowrap; width: 139px; z-index: 1; }
 .con1 .left .video .r li a div { background: none repeat scroll 0% 0% #000000; height: 20px; left: 0px; opacity: 0.5; position: absolute; top: 85px; width: 139px; }
 .con1 .right { margin-left: 12px; width: 348px; }
