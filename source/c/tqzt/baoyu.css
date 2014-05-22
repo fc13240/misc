@@ -1,924 +1,142 @@
-body {
-     background: none repeat scroll 0% 0% #FFFFFF;
-}
-
-a {
-    
-}
-
-a:hover {
-     text-decoration: none;
-}
-
-.box {
-     height: 100%;
-     margin: 0px auto;
-     width: 960px;
-}
-
-.top {
-     background: none repeat scroll 0% 0% #ABABAB;
-     height: 25px;
-}
-
-.banner {
-     height: 216px;
-}
-
-.banner .l {
-     padding-left: 19px;
-     width: 580px;
-}
-
-.banner .l h1 {
-     height: 36px;
-     line-height: 36px;
-     margin-top: 73px;
-}
-
-.banner .l h1 i {
-     background: none repeat scroll 0% 0% #004378;
-     float: left;
-     height: 37px;
-     width: 7px;
-}
-
-.banner .l h1 a {
-     color: #1A5C62;
-     float: left;
-     font-size: 34px;
-     font-weight: bold;
-     text-indent: 15px;
-}
-
-.banner .l p {
-     color: #444444;
-     font-size: 13px;
-     line-height: 28px;
-     margin-top: 18px;
-     padding-left: 5px;
-     width: 550px;
-}
-
-.con1 {
-     height: 682px;
-}
-
-.con1 .left {
-     width: 600px;
-}
-
-.con1 .left #show {
-     height: 400px;
-     overflow: hidden;
-     position: relative;
-}
-
-.con1 .left #show .bigImg {
-     left: 0px;
-     position: absolute;
-     top: 0px;
-     width: 3000px;
-}
-
-.con1 .left #show .bigImg li {
-     float: left;
-}
-
-.con1 .left #show .bottom {
-     color: #FFFFFF;
-     height: 38px;
-     left: 0px;
-     position: absolute;
-     top: 362px;
-     width: 100%;
-     z-index: 1;
-}
-
-.con1 .left #show .bottom p {
-     float: left;
-     font-size: 17px;
-     line-height: 38px;
-     overflow: hidden;
-     text-indent: 19px;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-     width: 430px;
-}
-
-.con1 .left #show .bottom ul {
-     float: right;
-     margin-top: 12px;
-     padding-right: 27px;
-}
-
-.con1 .left #show .bottom ul li {
-     background-image: url("../../i/tqzt/baoyu/icon.png");
-     background-position: -4px -22px;
-     color: #000000;
-     cursor: pointer;
-     float: left;
-     font-size: 12px;
-     font-weight: bold;
-     height: 15px;
-     margin-right: 6px;
-     text-indent: 4px;
-     width: 15px;
-}
-
-.con1 .left #show .bottom ul li.on {
-     background-position: -4px -5px;
-}
-
-.con1 .left #show .bottomBg {
-     background: none repeat scroll 0% 0% #000000;
-     height: 38px;
-     left: 0px;
-     opacity: 0.5;
-     position: absolute;
-     top: 362px;
-     width: 100%;
-}
-
-.con1 .left #show .rollLeft, #show .rollRight {
-     background-image: url("../../i/tqzt/baoyu/icon.png");
-     background-position: -2px -93px;
-     cursor: pointer;
-     display: block;
-     height: 42px;
-     left: 528px;
-     opacity: 0.5;
-     position: absolute;
-     top: 180px;
-     width: 42px;
-     z-index: 1;
-}
-
-.con1 .left #show .rollLeft {
-     background-position: -2px -45px;
-     left: 28px;
-}
-
-.con1 .left .video h1 {
-     border-bottom: 1px dotted #BCBCBC;
-     height: 20px;
-     line-height: 20px;
-     margin-top: 20px;
-     padding-bottom: 7px;
-     padding-left: 13px;
-}
-
-.con1 .left .video h1 i {
-     background: none repeat scroll 0% 0% #1A5C62;
-     float: left;
-     font-size: 0px;
-     height: 20px;
-     width: 5px;
-}
-
-.con1 .left .video h1 span {
-     float: left;
-     font-size: 20px;
-     padding-left: 9px;
-}
-
-.con1 .left .video .l {
-     margin-top: 14px;
-     position: relative;
-}
-
-.con1 .left .video .l p {
-     color: #FFFFFF;
-     font-size: 17px;
-     height: 30px;
-     left: 0px;
-     line-height: 30px;
-     overflow: hidden;
-     position: absolute;
-     text-align: center;
-     text-overflow: ellipsis;
-     top: 190px;
-     white-space: nowrap;
-     width: 310px;
-     z-index: 1;
-}
-
-.con1 .left .video .l div {
-     background: none repeat scroll 0% 0% #000000;
-     height: 30px;
-     left: 0px;
-     opacity: 0.5;
-     position: absolute;
-     top: 190px;
-     width: 310px;
-}
-
-.con1 .left .video .r {
-     margin-top: 4px;
-     width: 290px;
-}
-
-.con1 .left .video .r li {
-     float: left;
-     margin-left: 5px;
-     margin-top: 10px;
-     position: relative;
-}
-
-.con1 .left .video .r li a p {
-     color: #FFFFFF;
-     font-size: 12px;
-     height: 20px;
-     left: 0px;
-     line-height: 20px;
-     overflow: hidden;
-     position: absolute;
-     text-align: center;
-     text-overflow: ellipsis;
-     top: 85px;
-     white-space: nowrap;
-     width: 139px;
-     z-index: 1;
-}
-
-.con1 .left .video .r li a div {
-     background: none repeat scroll 0% 0% #000000;
-     height: 20px;
-     left: 0px;
-     opacity: 0.5;
-     position: absolute;
-     top: 85px;
-     width: 139px;
-}
-
-.con1 .right {
-     margin-left: 12px;
-     width: 348px;
-}
-
-.con1 .right .alarm {
-     background: none repeat scroll 0% 0% #FBC509;
-     height: 30px;
-     line-height: 30px;
-}
-
-.con1 .right .alarm i {
-     background: url("../../i/tqzt/baoyu/icon.png") repeat scroll -1px -149px transparent;
-     float: left;
-     height: 23px;
-     margin-left: 55px;
-     margin-top: 3px;
-     width: 45px;
-}
-
-.con1 .right .alarm span {
-     color: #1548C3;
-     float: left;
-     font-size: 13px;
-     margin-left: 13px;
-}
-
-.con1 .right .r1 {
-     margin-top: 14px;
-}
-
-.con1 .right .r1 h1 {
-     color: #8D0101;
-     font-size: 24px;
-     height: 44px;
-     line-height: 44px;
-     margin: 0px auto;
-     text-align: center;
-}
-
-.con1 .right .r1 p {
-     font-size: 14px;
-     height: 97px;
-     line-height: 23px;
-     margin-top: 10px;
-     overflow: hidden;
-     text-indent: 2em;
-     text-overflow: ellipsis;
-}
-
-.con1 .right .r1 h1 a {
-     border-bottom: 2px solid #62829B;
-     color: #8D0101;
-     display: inline-block;
-     float: none;
-     margin: 0px auto;
-     text-align: center;
-}
-
-.con1 .right .r2 {
-     margin-top: 12px;
-}
-
-.con1 .right .r2 h1, .tit {
-     border-bottom: 1px solid #D4D4D4;
-     font-size: 20px;
-     line-height: 20px;
-     padding-bottom: 8px;
-     padding-left: 7px;
-}
-
-.con1 .right .r2 h1 i, .tit i {
-     background: none repeat scroll 0% 0% #1A5C62;
-     float: left;
-     font-size: 0px;
-     height: 20px;
-     width: 5px;
-}
-
-.con1 .right .r2 h1 span, .tit span {
-     float: left;
-     height: 20px;
-     margin-left: 9px;
-}
-
-.con1 .right .r2 h1 a {
-     color: #555555;
-     font-size: 13px;
-     padding-right: 7px;
-}
-
-.con1 .right .r2 ul {
-     padding-top: 7px;
-}
-
-.con1 .right .r2 ul li {
-     background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -4px -379px transparent;
-     font-size: 14px;
-     height: 30px;
-     line-height: 30px;
-     overflow: hidden;
-     padding-left: 20px;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-}
-
-.con1 .right .r2 ul li.hot a, .con1 .right .r3 li.hot a {
-     color: #C76A07;
-}
-
-.con1 .right .r3 {
-     margin-top: 18px;
-}
-
-.con1 .right .r3 h1 {
-     border-bottom: 1px solid #D4D4D4;
-     font-size: 20px;
-     line-height: 20px;
-     padding-bottom: 8px;
-}
-
-.con1 .right .r3 h1 i {
-     background: none repeat scroll 0% 0% #1A5C62;
-     font-size: 0px;
-     height: 20px;
-     margin-left: 6px;
-     width: 5px;
-}
-
-.con1 .right .r3 h1 span {
-     height: 20px;
-     margin-left: 7px;
-}
-
-.con1 .right .r3 h1 a {
-     color: #555555;
-     font-size: 13px;
-     padding-right: 7px;
-}
-
-.con1 .right .r3 ul {
-     padding-top: 7px;
-}
-
-.con1 .right .r3 ul li {
-     background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -4px -379px transparent;
-     font-size: 14px;
-     height: 30px;
-     line-height: 30px;
-     overflow: hidden;
-     padding-left: 20px;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-}
-
-.con1 .right .r4 {
-     margin-top: 5px;
-}
-
-.con1 .right .r4 a {
-     display: block;
-}
-
-.con1 .right .r4 a img {
-     height: 69px;
-     width: 348px;
-}
-
-.con2 {
-     margin-top: 20px;
-}
-
-.con2 .left {
-     position: relative;
-     width: 600px;
-}
-
-.con2 .left h1 {
-    
-}
-
-.con2 .left h1 i {
-     margin-left: 6px;
-}
-
-.con2 .left .m {
-     margin-top: 7px;
-}
-
-.con2 .left .m a.l {
-     width: 420px;
-}
-
-.con2 .left .m .r {
-     margin-left: 5px;
-     width: 170px;
-}
-
-.con2 .left .m .r h1 {
-     font-size: 13px;
-     height: 13px;
-     line-height: 13px;
-     padding: 3px 4px 6px 0px;
-     text-align: right;
-}
-
-.con2 .left .m .r textarea {
-     border: 1px solid #D2D2D2;
-     font-size: 12px;
-     height: 301px;
-     line-height: 20px;
-     margin-left: 2px;
-     position: relative;
-     width: 100%;
-     z-index: 1;
-}
-
-.con2 .right {
-     margin-left: 10px;
-     position: relative;
-     width: 348px;
-}
-
-.con2 .right h1 {
-     padding-bottom: 0px;
-}
-
-.con2 .right h1 em {
-     color: #666666;
-     cursor: pointer;
-     float: left;
-     font-size: 14px;
-     margin-left: 22px;
-     padding: 3px 5px 1px;
-}
-
-.con2 .right h1 em.on {
-     border-bottom: 2px solid #1F5982;
-     color: #000000;
-}
-
-.con2 .right table {
-     background: none repeat scroll 0% 0% #FFFFFF;
-     margin-left: 34px;
-     margin-top: 9px;
-     position: absolute;
-}
-
-.con2 .right table tr.head {
-     color: #000000;
-     line-height: 24px;
-}
-
-.con2 .right table tr {
-     color: #666666;
-     line-height: 34px;
-}
-
-.con2 .right table tr td {
-     text-align: center;
-}
-
-.con2 .right table tr td.red {
-     color: #A30000;
-}
-
-.con2 .right p.info {
-     position: absolute;
-     right: 20px;
-     text-align: right;
-     top: 335px;
-}
-
-.con3 {
-     height: 437px;
-     margin-top: 17px;
-}
-
-.con3 .left {
-     float: left;
-     width: 600px;
-}
-
-.con3 .left h1 {
-     padding-bottom: 0px;
-     padding-left: 13px;
-}
-
-.con3 .left h1 em {
-     color: #666666;
-     cursor: pointer;
-     float: left;
-     font-size: 14px;
-     margin-left: 6px;
-     padding: 3px 5px 2px;
-}
-
-.con3 .left h1 em.on {
-     border-bottom: 2px solid #1F5982;
-     color: #000000;
-}
-
-.con3 .left #showBig {
-     position: relative;
-}
-
-.con3 .left #showBig .showBigBox {
-     display: none;
-     height: 397px;
-     left: 62px;
-     overflow: hidden;
-     position: absolute;
-     top: 8px;
-     width: 490px;
-}
-
-.con3 .left #showBig .showBigBox .bigImg {
-     left: 0px;
-     position: absolute;
-     top: 0px;
-     width: 1470px;
-}
-
-.con3 .left #showBig .showBigBox .bigImg li {
-     float: left;
-}
-
-.con3 .left #showBig .showLeft, #showBig .showRight {
-     background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll 0px -324px transparent;
-     cursor: pointer;
-     display: block;
-     height: 45px;
-     left: 23px;
-     opacity: 0.3;
-     position: absolute;
-     top: 177px;
-     width: 29px;
-}
-
-.con3 .left #showBig .showRight {
-     background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -3px -264px transparent;
-     left: 560px;
-}
-
-.con3 .right {
-     float: left;
-     margin-left: 10px;
-     width: 348px;
-}
-
-.con3 .right h1 a {
-     color: #555555;
-     float: right;
-     font-size: 13px;
-     padding-right: 7px;
-}
-
-.con3 .right .m {
-     margin-top: 9px;
-}
-
-.con3 .right .m img {
-     display: block;
-     margin: 0px auto;
-}
-
-.con3 .right .m ul {
-     padding-left: 9px;
-}
-
-.con3 .right .m ul li {
-     background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -9px -380px transparent;
-     font-size: 14px;
-     height: 30px;
-     line-height: 30px;
-     overflow: hidden;
-     padding-left: 10px;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-}
-
-.con4 {
-     height: 676px;
-     margin-top: 26px;
-}
-
-.con4 h1 {
-     padding-bottom: 0px;
-     padding-left: 13px;
-}
-
-.con4 h1 p {
-     margin-right: 30px;
-}
-
-.con4 h1 p em {
-     color: #666666;
-     cursor: pointer;
-     float: left;
-     font-size: 14px;
-     margin-left: 6px;
-     padding: 3px 5px 2px;
-}
-
-.con4 h1 p em.on {
-     border-bottom: 2px solid #1F5982;
-     color: #000000;
-}
-
-.con4 .m {
-     height: 635px;
-     margin-top: 7px;
-     position: relative;
-}
-
-.con4 .m .swf {
-     position: absolute;
-}
-
-.con4 .m iframe {
-     height: 635px;
-     width: 960px;
-}
-
-.con5 {
-     margin-top: 6px;
-}
-
-.con5 h1 {
-     padding-left: 13px;
-}
-
-.con5 .m {
-     height: 360px;
-     margin-top: 8px;
-}
-
-.con5 .m .left {
-     background: none repeat scroll 0% 0% #666666;
-     height: 100%;
-     width: 630px;
-}
-
-.con5 .m .right {
-     background: none repeat scroll 0% 0% #666666;
-     height: 100%;
-     margin-left: 10px;
-     width: 320px;
-}
-
-.con6 {
-     margin-top: 20px;
-}
-
-.con6 .left {
-     width: 630px;
-}
-
-.con6 .left h1 {
-     padding-bottom: 5px;
-     padding-left: 12px;
-}
-
-.con6 .left .m {
-     background: none repeat scroll 0% 0% red;
-     height: 618px;
-     margin-top: 15px;
-}
-
-.con6 .right {
-     margin-left: 10px;
-     width: 320px;
-}
-
-.con6 .right h1 {
-     padding-bottom: 5px;
-     padding-left: 7px;
-}
-
-.con6 .right h1 a {
-     color: #202020;
-     float: right;
-     font-size: 13px;
-     padding-right: 5px;
-}
-
-.con6 .right .m {
-     background: none repeat scroll 0% 0% red;
-     height: 618px;
-     margin-top: 15px;
-}
-
-.con7 {
-     margin-top: 19px;
-}
-
-.con7 h1 {
-     padding-bottom: 7px;
-     padding-left: 13px;
-}
-
-.con7 .m {
-     height: 141px;
-     position: relative;
-}
-
-.con7 .m .mBox {
-     height: 90px;
-     left: 32px;
-     overflow: hidden;
-     position: absolute;
-     top: 15px;
-     width: 900px;
-}
-
-.con7 .m .mBox ul {
-     background: url("http://www.weather.com.cn/m2/i/tfty/tffy/title.jpg") no-repeat scroll 10px 8px transparent;
-     height: 38px;
-     padding-left: 15px;
-}
-
-.con7 .m .mBox ul li {
-     float: left;
-     margin-right: 6px;
-     position: relative;
-     width: 123px;
-}
-
-.con7 .m .mBox ul li p {
-     color: #FFFFFF;
-     font-size: 20px;
-     height: 24px;
-     left: 0px;
-     line-height: 24px;
-     overflow: hidden;
-     position: absolute;
-     text-align: center;
-     text-overflow: ellipsis;
-     top: 67px;
-     white-space: nowrap;
-     width: 100%;
-     z-index: 1;
-}
-
-.con7 .m .mBox ul li div {
-     background: none repeat scroll 0% 0% #000000;
-     height: 24px;
-     left: 0px;
-     opacity: 0.6;
-     position: absolute;
-     top: 67px;
-     width: 100%;
-}
-
-.con7 .m .rollLeft, .con7 .m .rollRight {
-     background-image: url("../../i/tqzt/baoyu/icon.png");
-     background-position: 0px -216px;
-     cursor: pointer;
-     display: block;
-     height: 45px;
-     left: -3px;
-     opacity: 0.5;
-     position: absolute;
-     top: 40px;
-     width: 30px;
-}
-
-.con7 .m .rollRight {
-     background-position: 0px -175px;
-     left: 938px;
-}
-
-.bottomFooter {
-     background-color: #FFFFFF;
-     clear: both;
-     font-size: 12px;
-     height: 160px;
-     margin: 0px auto;
-     padding-top: 10px;
-     width: 954px;
-}
-
-.bottomFooter .footerNav {
-     background-color: #3466BB;
-     color: #FFFFFF;
-     display: block;
-     height: 25px;
-     line-height: 25px;
-     margin-bottom: 10px;
-     text-align: center;
-}
-
-.bottomFooter .footerNav a {
-     color: #FFFFFF;
-     margin: 0px 3px;
-}
-
-.bottomFooter p {
-     color: #020202;
-     line-height: 18px;
-     margin: 0px;
-     padding: 0px;
-     text-align: center;
-}
-
-.bottomFooter .copyIcp {
-     background: url("http://www.weather.com.cn/m2/i/icp07.gif") no-repeat scroll left top transparent;
-     display: block;
-     line-height: 43px;
-     margin: 0px auto;
-     padding-left: 38px;
-     text-align: center;
-     width: 480px;
-}
-
-.RadarSatellite {
-     height: 396px;
-     position: relative;
-}
-
-.RadarSatellite ul {
-     background: url("http://www.weather.com.cn/m2/i/tfty/tffy/title.jpg") no-repeat scroll 13px 8px transparent;
-     border-bottom: 1px dotted #BCBCBC;
-     height: 35px;
-     padding-left: 14px;
-}
-
-.RadarSatellite ul li {
-     cursor: pointer;
-     float: left;
-     font-size: 20px;
-     height: 27px;
-     line-height: 27px;
-     margin-left: 15px;
-}
-
-.RadarSatellite ul li a {
-    
-}
-
-.RadarSatellite ul li.moverad {
-     border-bottom: 3px solid #134481;
-}
-
-.RadarSatelliteimg {
-     display: none;
-     height: 350px;
-     margin-top: 10px;
-     width: 440px;
-}
-
-.RadarSatelliteimg img {
-     height: 350px;
-}
-
-.weatherRankingTable td {
-     border-bottom: 1px solid #E1E7F3;
-     padding-left: 5px;
-     text-align: left;
-}
-
-.weatherRankingTable td p {
-     height: 27px;
-     line-height: 27px;
-     overflow: hidden;
-}
-
-.weatherRankingTable tfoot td {
-     padding-right: 15px;
-     text-align: right;
-}
+body { background: none repeat scroll 0% 0% #FFFFFF; }
+a { }
+a:hover { text-decoration: none; }
+.box { height: 100%; margin: 0px auto; width: 960px; }
+.top { background: none repeat scroll 0% 0% #ABABAB; height: 25px; }
+.banner { height: 216px; }
+.banner .l { padding-left: 19px; width: 580px; }
+.banner .l h1 { height: 36px; line-height: 36px; margin-top: 73px; }
+.banner .l h1 i { background: none repeat scroll 0% 0% #004378; float: left; height: 37px; width: 7px; }
+.banner .l h1 a { color: #1A5C62; float: left; font-size: 34px; font-weight: bold; text-indent: 15px; }
+.banner .l p { color: #444444; font-size: 13px; line-height: 28px; margin-top: 18px; padding-left: 5px; width: 550px; }
+.con1 { height: 682px; }
+.con1 .left { width: 600px; }
+.con1 .left #show { height: 400px; overflow: hidden; position: relative; }
+.con1 .left #show .bigImg { left: 0px; position: absolute; top: 0px; width: 3000px; }
+.con1 .left #show .bigImg li { float: left; }
+.con1 .left #show .bottom { color: #FFFFFF; height: 38px; left: 0px; position: absolute; top: 362px; width: 100%; z-index: 1; }
+.con1 .left #show .bottom p { float: left; font-size: 17px; line-height: 38px; overflow: hidden; text-indent: 19px; text-overflow: ellipsis; white-space: nowrap; width: 430px; }
+.con1 .left #show .bottom ul { float: right; margin-top: 12px; padding-right: 27px; }
+.con1 .left #show .bottom ul li { background-image: url("../../i/tqzt/baoyu/icon.png"); background-position: -4px -22px; color: #000000; cursor: pointer; float: left; font-size: 12px; font-weight: bold; height: 15px; margin-right: 6px; text-indent: 4px; width: 15px; }
+.con1 .left #show .bottom ul li.on { background-position: -4px -5px; }
+.con1 .left #show .bottomBg { background: none repeat scroll 0% 0% #000000; height: 38px; left: 0px; opacity: 0.5; position: absolute; top: 362px; width: 100%; }
+.con1 .left #show .rollLeft, #show .rollRight { background-image: url("../../i/tqzt/baoyu/icon.png"); background-position: -2px -93px; cursor: pointer; display: block; height: 42px; left: 528px; opacity: 0.5; position: absolute; top: 180px; width: 42px; z-index: 1; }
+.con1 .left #show .rollLeft { background-position: -2px -45px; left: 28px; }
+.con1 .left .video h1 { border-bottom: 1px dotted #BCBCBC; height: 20px; line-height: 20px; margin-top: 20px; padding-bottom: 7px; padding-left: 13px; }
+.con1 .left .video h1 i { background: none repeat scroll 0% 0% #1A5C62; float: left; font-size: 0px; height: 20px; width: 5px; }
+.con1 .left .video h1 span { float: left; font-size: 20px; padding-left: 9px; }
+.con1 .left .video .l { margin-top: 14px; position: relative; }
+.con1 .left .video .l p { color: #FFFFFF; font-size: 17px; height: 30px; left: 0px; line-height: 30px; overflow: hidden; position: absolute; text-align: center; text-overflow: ellipsis; top: 190px; white-space: nowrap; width: 310px; z-index: 1; }
+.con1 .left .video .l div { background: none repeat scroll 0% 0% #000000; height: 30px; left: 0px; opacity: 0.5; position: absolute; top: 190px; width: 310px; }
+.con1 .left .video .r { margin-top: 4px; width: 290px; }
+.con1 .left .video .r li { float: left; margin-left: 5px; margin-top: 10px; position: relative; }
+.con1 .left .video .r li a p { color: #FFFFFF; font-size: 12px; height: 20px; left: 0px; line-height: 20px; overflow: hidden; position: absolute; text-align: center; text-overflow: ellipsis; top: 85px; white-space: nowrap; width: 139px; z-index: 1; }
+.con1 .left .video .r li a div { background: none repeat scroll 0% 0% #000000; height: 20px; left: 0px; opacity: 0.5; position: absolute; top: 85px; width: 139px; }
+.con1 .right { margin-left: 12px; width: 348px; }
+.con1 .right .alarm { background: none repeat scroll 0% 0% #FBC509; height: 30px; line-height: 30px; }
+.con1 .right .alarm i { background: url("../../i/tqzt/baoyu/icon.png") repeat scroll -1px -149px transparent; float: left; height: 23px; margin-left: 55px; margin-top: 3px; width: 45px; }
+.con1 .right .alarm span { color: #1548C3; float: left; font-size: 13px; margin-left: 13px; }
+.con1 .right .r1 { margin-top: 14px; }
+.con1 .right .r1 h1 { color: #8D0101; font-size: 24px; height: 44px; line-height: 44px; margin: 0px auto; text-align: center; }
+.con1 .right .r1 p { font-size: 14px; height: 97px; line-height: 23px; margin-top: 10px; overflow: hidden; text-indent: 2em; text-overflow: ellipsis; }
+.con1 .right .r1 h1 a { border-bottom: 2px solid #62829B; color: #8D0101; display: inline-block; float: none; margin: 0px auto; text-align: center; }
+.con1 .right .r2 { margin-top: 12px; }
+.con1 .right .r2 h1, .tit { border-bottom: 1px solid #D4D4D4; font-size: 20px; line-height: 20px; padding-bottom: 8px; padding-left: 7px; }
+.con1 .right .r2 h1 i, .tit i { background: none repeat scroll 0% 0% #1A5C62; float: left; font-size: 0px; height: 20px; width: 5px; }
+.con1 .right .r2 h1 span, .tit span { float: left; height: 20px; margin-left: 9px; }
+.con1 .right .r2 h1 a { color: #555555; font-size: 13px; padding-right: 7px; }
+.con1 .right .r2 ul { padding-top: 7px; }
+.con1 .right .r2 ul li { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -4px -379px transparent; font-size: 14px; height: 30px; line-height: 30px; overflow: hidden; padding-left: 20px; text-overflow: ellipsis; white-space: nowrap; }
+.con1 .right .r2 ul li.hot a, .con1 .right .r3 li.hot a { color: #C76A07; }
+.con1 .right .r3 { margin-top: 18px; }
+.con1 .right .r3 h1 { border-bottom: 1px solid #D4D4D4; font-size: 20px; line-height: 20px; padding-bottom: 8px; }
+.con1 .right .r3 h1 i { background: none repeat scroll 0% 0% #1A5C62; font-size: 0px; height: 20px; margin-left: 6px; width: 5px; }
+.con1 .right .r3 h1 span { height: 20px; margin-left: 7px; }
+.con1 .right .r3 h1 a { color: #555555; font-size: 13px; padding-right: 7px; }
+.con1 .right .r3 ul { padding-top: 7px; }
+.con1 .right .r3 ul li { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -4px -379px transparent; font-size: 14px; height: 30px; line-height: 30px; overflow: hidden; padding-left: 20px; text-overflow: ellipsis; white-space: nowrap; }
+.con1 .right .r4 { margin-top: 5px; }
+.con1 .right .r4 a { display: block; }
+.con1 .right .r4 a img { height: 69px; width: 348px; }
+.con2 { margin-top: 20px; }
+.con2 .left { position: relative; width: 600px; }
+.con2 .left h1 { }
+.con2 .left h1 i { margin-left: 6px; }
+.con2 .left .m { margin-top: 7px; }
+.con2 .left .m a.l { width: 420px; }
+.con2 .left .m .r { margin-left: 5px; width: 170px; }
+.con2 .left .m .r h1 { font-size: 13px; height: 13px; line-height: 13px; padding: 3px 4px 6px 0px; text-align: right; }
+.con2 .left .m .r textarea { border: 1px solid #D2D2D2; font-size: 12px; height: 301px; line-height: 20px; margin-left: 2px; position: relative; width: 100%; z-index: 1; }
+.con2 .right { margin-left: 10px; position: relative; width: 348px; }
+.con2 .right h1 { padding-bottom: 0px; }
+.con2 .right h1 em { color: #666666; cursor: pointer; float: left; font-size: 14px; margin-left: 22px; padding: 3px 5px 1px; }
+.con2 .right h1 em.on { border-bottom: 2px solid #1F5982; color: #000000; }
+.con2 .right table { background: none repeat scroll 0% 0% #FFFFFF; margin-left: 34px; margin-top: 9px; position: absolute; }
+.con2 .right table tr.head { color: #000000; line-height: 24px; }
+.con2 .right table tr { color: #666666; line-height: 34px; }
+.con2 .right table tr td { text-align: center; }
+.con2 .right table tr td.red { color: #A30000; }
+.con2 .right p.info { position: absolute; right: 20px; text-align: right; top: 335px; }
+.con3 { height: 437px; margin-top: 17px; }
+.con3 .left { float: left; width: 600px; }
+.con3 .left h1 { padding-bottom: 0px; padding-left: 13px; }
+.con3 .left h1 em { color: #666666; cursor: pointer; float: left; font-size: 14px; margin-left: 6px; padding: 3px 5px 2px; }
+.con3 .left h1 em.on { border-bottom: 2px solid #1F5982; color: #000000; }
+.con3 .left #showBig { position: relative; }
+.con3 .left #showBig .showBigBox { display: none; height: 397px; left: 62px; overflow: hidden; position: absolute; top: 8px; width: 490px; }
+.con3 .left #showBig .showBigBox .bigImg { left: 0px; position: absolute; top: 0px; width: 1470px; }
+.con3 .left #showBig .showBigBox .bigImg li { float: left; }
+.con3 .left #showBig .showLeft, #showBig .showRight { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll 0px -324px transparent; cursor: pointer; display: block; height: 45px; left: 23px; opacity: 0.3; position: absolute; top: 177px; width: 29px; }
+.con3 .left #showBig .showRight { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -3px -264px transparent; left: 560px; }
+.con3 .right { float: left; margin-left: 10px; width: 348px; }
+.con3 .right h1 a { color: #555555; float: right; font-size: 13px; padding-right: 7px; }
+.con3 .right .m { margin-top: 9px; }
+.con3 .right .m img { display: block; margin: 0px auto; }
+.con3 .right .m ul { padding-left: 9px; }
+.con3 .right .m ul li { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -9px -380px transparent; font-size: 14px; height: 30px; line-height: 30px; overflow: hidden; padding-left: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.con4 { height: 676px; margin-top: 26px; }
+.con4 h1 { padding-bottom: 0px; padding-left: 13px; }
+.con4 h1 p { margin-right: 30px; }
+.con4 h1 p em { color: #666666; cursor: pointer; float: left; font-size: 14px; margin-left: 6px; padding: 3px 5px 2px; }
+.con4 h1 p em.on { border-bottom: 2px solid #1F5982; color: #000000; }
+.con4 .m { height: 635px; margin-top: 7px; position: relative; }
+.con4 .m .swf { position: absolute; }
+.con4 .m iframe { height: 635px; width: 960px; }
+.con5 { margin-top: 6px; }
+.con5 h1 { padding-left: 13px; }
+.con5 .m { height: 360px; margin-top: 8px; }
+.con5 .m .left { background: none repeat scroll 0% 0% #666666; height: 100%; width: 630px; }
+.con5 .m .right { background: none repeat scroll 0% 0% #666666; height: 100%; margin-left: 10px; width: 320px; }
+.con6 { margin-top: 20px; }
+.con6 .left { width: 630px; }
+.con6 .left h1 { padding-bottom: 5px; padding-left: 12px; }
+.con6 .left .m { background: none repeat scroll 0% 0% red; height: 618px; margin-top: 15px; }
+.con6 .right { margin-left: 10px; width: 320px; }
+.con6 .right h1 { padding-bottom: 5px; padding-left: 7px; }
+.con6 .right h1 a { color: #202020; float: right; font-size: 13px; padding-right: 5px; }
+.con6 .right .m { background: none repeat scroll 0% 0% red; height: 618px; margin-top: 15px; }
+.con7 { margin-top: 19px; }
+.con7 h1 { padding-bottom: 7px; padding-left: 13px; }
+.con7 .m { height: 141px; position: relative; }
+.con7 .m .mBox { height: 90px; left: 32px; overflow: hidden; position: absolute; top: 15px; width: 900px; }
+.con7 .m .mBox ul { background: url("http://www.weather.com.cn/m2/i/tfty/tffy/title.jpg") no-repeat scroll 10px 8px transparent; height: 38px; padding-left: 15px; }
+.con7 .m .mBox ul li { float: left; margin-right: 6px; position: relative; width: 123px; }
+.con7 .m .mBox ul li p { color: #FFFFFF; font-size: 20px; height: 24px; left: 0px; line-height: 24px; overflow: hidden; position: absolute; text-align: center; text-overflow: ellipsis; top: 67px; white-space: nowrap; width: 100%; z-index: 1; }
+.con7 .m .mBox ul li div { background: none repeat scroll 0% 0% #000000; height: 24px; left: 0px; opacity: 0.6; position: absolute; top: 67px; width: 100%; }
+.con7 .m .rollLeft, .con7 .m .rollRight { background-image: url("../../i/tqzt/baoyu/icon.png"); background-position: 0px -216px; cursor: pointer; display: block; height: 45px; left: -3px; opacity: 0.5; position: absolute; top: 40px; width: 30px; }
+.con7 .m .rollRight { background-position: 0px -175px; left: 938px; }
+.bottomFooter { background-color: #FFFFFF; clear: both; font-size: 12px; height: 160px; margin: 0px auto; padding-top: 10px; width: 954px; }
+.bottomFooter .footerNav { background-color: #3466BB; color: #FFFFFF; display: block; height: 25px; line-height: 25px; margin-bottom: 10px; text-align: center; }
+.bottomFooter .footerNav a { color: #FFFFFF; margin: 0px 3px; }
+.bottomFooter p { color: #020202; line-height: 18px; margin: 0px; padding: 0px; text-align: center; }
+.bottomFooter .copyIcp { background: url("http://www.weather.com.cn/m2/i/icp07.gif") no-repeat scroll left top transparent; display: block; line-height: 43px; margin: 0px auto; padding-left: 38px; text-align: center; width: 480px; }
+.RadarSatellite { height: 396px; position: relative; }
+.RadarSatellite ul { background: url("http://www.weather.com.cn/m2/i/tfty/tffy/title.jpg") no-repeat scroll 13px 8px transparent; border-bottom: 1px dotted #BCBCBC; height: 35px; padding-left: 14px; }
+.RadarSatellite ul li { cursor: pointer; float: left; font-size: 20px; height: 27px; line-height: 27px; margin-left: 15px; }
+.RadarSatellite ul li a { }
+.RadarSatellite ul li.moverad { border-bottom: 3px solid #134481; }
+.RadarSatelliteimg { display: none; height: 350px; margin-top: 10px; width: 440px; }
+.RadarSatelliteimg img { height: 350px; }
+.weatherRankingTable td { border-bottom: 1px solid #E1E7F3; padding-left: 5px; text-align: left; }
+.weatherRankingTable td p { height: 27px; line-height: 27px; overflow: hidden; }
+.weatherRankingTable tfoot td { padding-right: 15px; text-align: right; }
