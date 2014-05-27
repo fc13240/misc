@@ -725,3 +725,14 @@ margin-right:60px;
 
 .block .rightBlock3{top:85px;}
 .block .rightBlock4{top:-32px;}
+
+/*popup*/
+.localPopup{display:none;height: 55px;position:fixed;left: 50%;bottom: 0;margin-left: -220px}
+.localPopup i{height: 100%; float:left; background-image: url(../../i/Popup/warn_04.png);}
+.localPopup i.l{width: 65px; background-position:0px -4px;}
+.localPopup i.r{width: 55px; background-position:0 -67px;position: relative;}
+.localPopup span{background: url(../../i/Popup/warn_04.png) 0 -189px; float:left;height: 100%;font-size: 18px;padding:6px 20px 0 10px;}
+.localPopup span a{color: #fff;}
+.localPopup span a:hover{text-decoration: underline;}
+.localPopup i a{display: block;height: 22px;width: 25px;background: none;position: absolute;left: 3px;top: 11px;cursor:pointer;}
+.localPopup i a:hover{background:url(../../i/Popup/warn_04.png) -3px -139px;};  
