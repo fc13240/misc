@@ -4,7 +4,7 @@ body {  }
 .sbox { margin: 0px auto; width: 800px; }
 .top { background: url("../../i/tqzt/nuanDong/topBg.jpg") repeat-x 0px 0px transparent; height: 76px; }
 .top .box { background: url("../../i/tqzt/nuanDong/top.jpg") repeat-x 0px 0px transparent; position: relative; }
-.top .logo { left: 0px; position: absolute; top: 0px; z-index: 1; }
+.top .logo { left: 0px; position: absolute; top: 7px; z-index: 1; }
 .top .m { font-size: 21px; margin-left: 370px; margin-top: 23px; }
 .top .m span { float: left; margin-left: 12px; }
 .top .m i { background: url("../../i/tqzt/nuanDong/icon.jpg") no-repeat; display: inline-block; height: 13px; margin: 11px; width: 19px; }
@@ -29,7 +29,8 @@ body {  }
 .word h1 span { float: left; font-size: 30px; padding-left: 9px; }
 .word h2 { color: #1F4A76; font-size: 19px; font-weight: normal; margin-left: 10px; margin-top: 24px; }
 .word .m { margin-top: 10px; }
-.word .m p { font-size: 16px; line-height: 28px; }
+.word .m p { font-size: 16px; line-height: 28px; text-indent: 2em; }
+.word .m p strong{ font-weight: bold;}
 .word .img { margin: 15px auto; width: 750px; }
 .word .img img { }
 .word .end { border-top: 2px solid #1F4A76; color: #1F4A76; margin-top: 43px; padding-top: 13px; }
