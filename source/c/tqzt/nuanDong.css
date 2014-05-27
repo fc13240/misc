@@ -26,7 +26,7 @@ body {  }
 .word { margin-top: 51px; }
 .word h1 { border-bottom: 2px solid #1F4A76; height: 33px; line-height: 32px; padding-bottom: 7px; padding-left: 7px; }
 .word h1 i { background: none repeat scroll 0% 0% #1F4A76; float: left; font-size: 0px; height: 100%; width: 8px; }
-.word h1 span { font-weight: bold; float: left; font-size: 30px; padding-left: 9px; }
+.word h1 span { font-weight: bold; float: left; font-size: 20px; padding-left: 9px; }
 .word h2 { color: #1F4A76; font-size: 19px; font-weight: normal; margin-left: 10px; margin-top: 24px; }
 .word .m { margin-top: 10px; }
 .word .m p { font-size: 16px; line-height: 28px; text-indent: 2em; }
