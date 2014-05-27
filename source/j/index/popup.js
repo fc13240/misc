@@ -46,5 +46,5 @@ function getInfo(){
             }
         }
     })
-}
+}getInfo()
 setInterval(getInfo, 1000*60)

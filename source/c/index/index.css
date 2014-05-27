@@ -727,7 +727,7 @@ margin-right:60px;
 .block .rightBlock4{top:-32px;}
 
 /*popup*/
-.localPopup{display:none;height: 55px;position:fixed;left: 50%;bottom: 0;margin-left: -220px}
+.localPopup{display:none;height: 55px;position:fixed;_position:absolute;left: 50%;bottom: 0;margin-left: -220px;_left:-600px;}
 .localPopup i{height: 100%; float:left; background-image: url(../../i/Popup/warn_04.png);}
 .localPopup i.l{width: 65px; background-position:0px -4px;}
 .localPopup i.r{width: 55px; background-position:0 -67px;position: relative;}
