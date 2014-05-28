@@ -3,16 +3,16 @@ body {  }
 .box { margin: 0px auto; width: 1000px; }
 .sbox { margin: 0px auto; width: 800px; }
 .top { background: url("../../i/tqzt/nuanDong/topBg.jpg") repeat-x 0px 0px transparent; height: 76px; }
-.top .box { background: url("../../i/tqzt/nuanDong/top.jpg") repeat-x 0px 0px transparent; position: relative; }
+.top .box { background: url("../../i/tqzt/nuanDong/top.jpg") repeat-x 0px 0px transparent; position: relative; height: 85px; }
 .top .logo { left: 0px; position: absolute; top: 7px; z-index: 1; }
 .top .m { font-size: 21px; margin-left: 370px; margin-top: 23px; }
 .top .m span { float: left; margin-left: 12px; }
-.top .m i { background: url("../../i/tqzt/nuanDong/icon.jpg") no-repeat; display: inline-block; height: 13px; margin: 11px; width: 19px; }
+.top .m i { float: left; background: url("../../i/tqzt/nuanDong/icon.jpg") no-repeat; display: inline-block; height: 13px; margin: 11px; width: 19px; }
 .top .r { font-size: 16px; line-height: 78px; margin-right: 6px; }
-.main { background:url("../../i/tqzt/nuanDong/bg.jpg") repeat; }
+.main { background:url("../../i/tqzt/nuanDong/bg.jpg") repeat; clear: both; }
 .main .box{background:url("../../i/tqzt/nuanDong/bg_box.jpg") repeat;}
 .main .tit { border-bottom: 1px solid #000000; height: 78px; padding-bottom: 16px;  }
-.main .tit .l { font-size: 32px; margin-top: 42px; }
+.main .tit .l { font-weight: bold; font-size: 32px; margin-top: 42px; }
 .main .tit .r { left: 563px; position: absolute; top: 7px; width: 319px; }
 .main .tit .r .fl { }
 .main .tit .r .fr { color: #1F4A76; font-size: 12px; height: 73px; line-height: 24px; width: 237px; }
@@ -26,7 +26,7 @@ body {  }
 .word { margin-top: 51px; }
 .word h1 { border-bottom: 2px solid #1F4A76; height: 33px; line-height: 32px; padding-bottom: 7px; padding-left: 7px; }
 .word h1 i { background: none repeat scroll 0% 0% #1F4A76; float: left; font-size: 0px; height: 100%; width: 8px; }
-.word h1 span { float: left; font-size: 30px; padding-left: 9px; }
+.word h1 span { font-weight: bold; float: left; font-size: 20px; padding-left: 9px; }
 .word h2 { color: #1F4A76; font-size: 19px; font-weight: normal; margin-left: 10px; margin-top: 24px; }
 .word .m { margin-top: 10px; }
 .word .m p { font-size: 16px; line-height: 28px; text-indent: 2em; }
@@ -51,4 +51,5 @@ iframe{margin-top: 70px;}
 	width:71px;}
 .s div.fr
 {
+	color: #3356BB;
 	width:298px;}
