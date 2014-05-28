@@ -981,7 +981,7 @@ img.lazy{
 
 
 /*popup*/
-.localPopup{height: 55px;overflow:hidden;position:fixed;_position:absolute;left: 50%;bottom: 0;margin-left: -220px;_left:-600px;}
+.localPopup{height: 55px;overflow:hidden;position:fixed;_position:absolute;left: 50%;bottom: 0;margin-left: -220px;_left:-600px; z-index:9999;}
 .localPopup ul{margin-top:0px;}
 .localPopup li{height: 55px;zoom:1}
 .localPopup li:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
