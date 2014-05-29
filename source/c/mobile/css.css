@@ -9,7 +9,7 @@ a { color:#807d7d; text-decoration:none; font-size:14px; outline: medium none; }
 a:hover { color:#F60; text-decoration:underline; }
 .wrap { width:100%; }
 .head { line-height:55px; overflow:hidden; display:block; height:55px; background:#f4f5f6; margin-bottom:10px; width:100%; }
-.logo { float:left; background:url(images/logo.jpg) no-repeat; width:128px; height:55px; }
+.logo { float:left; background:url(http://i.tq121.com.cn/i/mobile/images/logo.jpg) no-repeat; width:128px; height:55px; }
 .net { padding-right:10px; float:right; }
 .net a { color:#a3a3a4; font-size:150%; }
 .yj { height:30px; margin-bottom:10px; padding:0px 10px; clear:both; }
@@ -28,7 +28,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .nav { clear:both; }
 .nav ul li a { font-size:18px; }
 .nav ul li { width:28%; margin-right:5%; height:40px; line-height:40px; float:left; text-align:left; }
-.down { cursor:pointer; border-top:1px solid #4676c9; clear:both; padding-top:10px; height:15px; margin-top:15px; background:url(images/san.jpg) no-repeat top center; }
+.down { cursor:pointer; border-top:1px solid #4676c9; clear:both; padding-top:10px; height:15px; margin-top:15px; background:url(http://i.tq121.com.cn/i/mobile/images/san.jpg) no-repeat top center; }
 .nav ul { width:90%; margin:0 auto; margin-left:9%; }
 .footer { clear:both; padding-top:30px; }
 .footer p { color:#807d7d; text-align:center; font-size:16px; margin-bottom:10px; }
@@ -90,7 +90,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .content p { font-size:16px; margin-bottom:15px; line-height:25px; }
 .biaoz { height:100px; border:1px solid #4c7cd0; margin-bottom:15px; border-radius:5px; text-indent:31px; font-size:16px; padding-top:10px; line-height:25px; padding:5px; position:relative; }
 .biaoz i { left: -26px; position: absolute; top: 6px; }
-.aqi { background:url(images/air.jpg) no-repeat top center; background-size:70%; height:280px; text-align:center; width:320px;color:#487dcd; position:relative; margin:0 auto; }
+.aqi { background:url(http://i.tq121.com.cn/i/mobile/images/air.jpg) no-repeat top center; background-size:70%; height:280px; text-align:center; width:320px;color:#487dcd; position:relative; margin:0 auto; }
 .aqi span { font-size:40px; display:block; }
 .aqi b{ display:block; font-size:70px; padding-top:33px;}
 /*#sec
@@ -100,7 +100,7 @@ a:hover { color:#F60; text-decoration:underline; }
     position: absolute;
     top: 13px;
 	
-	background: url(images/sechand.png) no-repeat center top;
+	background: url(http://i.tq121.com.cn/i/mobile/images/sechand.png) no-repeat center top;
     width: 30px;}
 #sec {
         	
@@ -108,7 +108,7 @@ a:hover { color:#F60; text-decoration:underline; }
            	}*/
 			
 			
-.op_pm25_i { height: 202px; left: 145px; position: absolute; top: 13px; background: url(images/sechand.png) no-repeat center top; width: 30px; }
+.op_pm25_i { height: 202px; left: 145px; position: absolute; top: 13px; background: url(http://i.tq121.com.cn/i/mobile/images/sechand.png) no-repeat center top; width: 30px; }
 .op_pm25_i { z-index: 3; }
 .hotcity
 {
@@ -249,7 +249,7 @@ float:left;
 @media screen and (max-width:320px) {
 
 .head { height:30px; line-height:30px; }
-.logo { background:url(images/logo_320.jpg) no-repeat; }
+.logo { background:url(http://i.tq121.com.cn/i/mobile/images/logo_320.jpg) no-repeat; }
 .net a { font-size:14px; }
 .yb_you h1 { font-size:30px; }
 .yb_you p span { font-size:16px; }
