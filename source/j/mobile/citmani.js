@@ -8,7 +8,7 @@ $(function(){
 	var $firLi = $('.cityman ul li:first');
 	for (var i = arrCity.length - 1; i > 0; i--) {
 		var arr = arrCity[i].split(',');
-		$firLi.after('<li><a href="'+parseInt(arr[0])+'.html">'+arr[1]+'</a><img src="http://i.tq121.com.cn/i/mobile/images/cha.png"></li>') 
+		$firLi.after('<li><a href="http://wap.weather.com.cn/tq/'+parseInt(arr[0])+'.shtml">'+arr[1]+'</a><img src="http://i.tq121.com.cn/i/mobile/images/cha.png"></li>') 
 	};
 
 	$('.cityman ul li img').live('click',function(){
