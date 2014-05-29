@@ -59,6 +59,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .yb_l dl dt { margin-bottom:10px; text-indent:10px; font-size:20px; }
 .yb_l dl dd { margin-left:5%; }
 .yb_l dl dd table tr td { padding:5px 0px; text-align:center; font-size:16px; }
+.yb_l dl dd table tr td img{width: 53px;}
 .top { clear:both; border:1px solid #4676C9; border-top:0; width:100px; height:30px; line-height:30px; margin:0 auto; text-align:center; position:relative; top:-10px; color:#7498d7; font-weight:bold; }
 .hours3 { margin-left:10px; }
 .hours3 table { margin:0 auto; margin-bottom:20px; }
