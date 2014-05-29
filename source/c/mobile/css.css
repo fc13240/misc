@@ -41,6 +41,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .yb_you p { color:#4a7bce; line-height:30px; font-size:30px; }
 .yb_you p span { font-size:20px; display:block; height: 23px; }
 .yb_you h1 { color:#4a7bce; font-size:40px; font-weight:bold; }
+.yb_you h1 a { color:#4a7bce; font-size:40px; font-weight:bold; }
 .yb_you p.mid { margin-bottom:10px; }
 .fx { position:relative; height:28px; padding-top:10px; line-height:28px; clear:both; }
 .fx a { font-size:19px; margin-right:10px; }
