@@ -4,6 +4,37 @@ define(function(require){
 	var picRoll = require('j/m_picRoll');
 
 	$(function(){
+
+		$.getJSON('http://d1.weather.com.cn/product_json/JC_JSL_02405_by.html',function(data){
+			var strLi = '';
+			for (var i = data.jsl.length - 1; i >= 0; i--) {
+				 strLi += '<li><a target="_blank" title="全国降水量实况" href="http://i.weather.com.cn/i/product/pic/l/'+data.jsl[i].fn+'"><img width="490" height="398" alt="全国降水量实况图" src="http://i.weather.com.cn/i/product/pic/m/'+data.jsl[i].fn+'"></a></li>'				
+			};
+			$('#showBigBox1 ul.bigImg').empty().append(strLi);
+			roll({
+		    	eleFather:'#showBigBox1',
+		    	rollLeft:'#showBig .showLeft',
+		    	rollRight:'#showBig .showRight',
+		    	imgNum:data.jsl.length,
+		    	ulWidth:490*data.jsl.length
+	    	})
+		})
+		$.getJSON('http://d1.weather.com.cn/product_json/YB_JSL_024_by.html',function(data){
+			var strLi = '';
+			for (var i = data.jsl.length - 1; i >= 0; i--) {
+				 strLi += '<li><a target="_blank" title="全国24小时降水量预报" href="http://i.weather.com.cn/i/product/pic/l/'+data.jsl[i].fn+'"><img width="490" height="398" alt="全国24小时降水量预报" src="http://i.weather.com.cn/i/product/pic/m/'+data.jsl[i].fn+'"></a></li>'		
+			};
+			$('#showBigBox2 ul.bigImg').empty().append(strLi);
+			roll({
+		    	eleFather:'#showBigBox2',
+		    	rollLeft:'#showBig .showLeft',
+		    	rollRight:'#showBig .showRight',
+		    	imgNum:data.jsl.length,
+		    	ulWidth:490*data.jsl.length
+		    })
+		})
+
+
 		new picRoll({
             eleFather: '#show',  //容器标签 父元素 最外围标签  
             eleText: '#show .bottom p',    //图解文字所在标签
@@ -12,21 +43,7 @@ define(function(require){
             rollRight: '#show .rollRight'   //向右转标签
         }).roll();
 
-		new picRoll({
-	    	eleFather:'#showBigBox1',
-	    	rollLeft:'#showBig .showLeft',
-	    	rollRight:'#showBig .showRight'
-	    }).roll();
-	    new picRoll({
-	    	eleFather:'#showBigBox2',
-	    	rollLeft:'#showBig .showLeft',
-	    	rollRight:'#showBig .showRight'
-	    }).roll();
-	    new picRoll({
-	    	eleFather:'#showBigBox3',
-	    	rollLeft:'#showBig .showLeft',
-	    	rollRight:'#showBig .showRight'
-	    }).roll();
+	  
 
 	    $('.con3 .left h1 p em').click(function(){
 	    	var that = $(this);
@@ -34,6 +51,47 @@ define(function(require){
 	    	$('#showBig .showBigBox').hide();
 	    	$('#showBigBox'+index).show();
 	    })
+
+	    function roll(config){
+			var pointer = 0;
+			var $imgUl = $(config.eleFather).find('ul:has(img):first');//检索获取图片ul列表
+			var $botUl = $(config.eleFather).find('ul:not(:has(img)):last'); //检索获取缩略图ul列表
+			var imgWidth = $imgUl.find('img').width();
+			var imgNum = config.imgNum;
+			var arrInter = [];
+			console.log($imgUl,$botUl,imgWidth,imgNum);
+			$imgUl.width(config.ulWidth)
+			//左右点击按钮的hover透明度效果
+			var opa = $(config.rollLeft).css('opacity');
+			$(config.rollLeft+","+config.rollRight).hover(function(){
+				$(this).css('opacity',1);
+				
+			},function(){
+				$(this).css('opacity',opa);
+				
+			})
+			//向左，向右滚动点击效果
+			$(config.rollLeft).click(function(){
+				_move(--pointer);
+			})
+			$(config.rollRight).click(function(){
+				_move(++pointer);
+			})
+			
+			function _move(poi){
+				poi = poi>=imgNum?0:poi;
+				poi = poi<0?imgNum-1:poi;
+				$imgUl.stop(true,true).animate({left: -imgWidth*poi+'px'},'fast');
+		
+				return pointer = poi;
+			}
+			function _clearInter(arrInter){
+				for (var i = arrInter.length - 1; i >= 0; i--) {
+					clearInterval(arrInter[i]);
+				}
+			}
+		}
+
 	    //flash动画切换
 	    $('.con4 h1 p em').click(function(){
 	    	var that = $(this);
