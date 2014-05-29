@@ -265,7 +265,7 @@ float:left;
 .fx a img { width:20px; }
 }
 @media screen and (min-width:321px) and (max-width:480px) {
-
+.per_3h ul li i img { width:27px; }
 }
 @media screen and (min-width:481px) and (max-width:640px) {
 
