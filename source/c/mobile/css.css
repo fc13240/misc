@@ -245,7 +245,7 @@ float:left;
 .arrdiv b { display:block; background:url(../images/arrow.png) no-repeat; width:17px; height:28px; cursor:pointer; text-indent:-999em; }
 .arrdiv .pre { float:left; background-position:-7px 0px; }
 .arrdiv .next { float:right; background-position:-37px 0px; }
-
+.per_3h ul li i img { width:27px; }
 @media screen and (max-width:320px) {
 
 .head { height:30px; line-height:30px; }
