@@ -1,6 +1,6 @@
 // JavaScript Document
 //cookie
-$.cookie = function(name, value, options) {
+var myCookie = function(name, value, options) {
 	if (typeof value != 'undefined') { // name and value given, set cookie
 		options = options || {};
 		if (value === null) {
@@ -44,9 +44,9 @@ var $Ul = $('.localPopup ul');
 $('.localPopup .r a').live('click',function(){	
 	var $li = $(this).parents('li');	
 	$li.remove();
-	var file = $.cookie('closeWarn') || '';
+	var file = myCookie('closeWarn') || '';
 	var file = file +','+ $li.find('span').children('a').attr('href').split('=')[1];
-	$.cookie('closeWarn',file,{expires:30,path: '/'})
+	myCookie('closeWarn',file,{expires:30,path: '/'})
 })
 //预警
 var kindObj = {'01':'台风','02':'暴雨','03':'暴雪','04':'寒潮','05':'大风','06':'沙尘暴','07':'高温','08':'干旱','09':'雷电','10':'冰雹','11':'霜冻','12':'大雾','13':'霾','14':'道路结冰',
@@ -63,7 +63,7 @@ function getInfo(){
             if (typeof id != 'undefined') {
                 var localCityId = id.toString().substr(0,7);
 				var localProId =  localCityId.substr(0,5);
-				var strCookie = $.cookie('closeWarn') || '';
+				var strCookie = myCookie('closeWarn') || '';
 				var arrCookie = strCookie.split(",");
 				var li='' 
 				for (var i = alarminfo.data.length - 1; i >= 0; i--) {
