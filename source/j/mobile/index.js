@@ -26,13 +26,13 @@ $(function(){
 				var rs ="http://geoip.weather.com.cn/ll.php?lon="+lon+"&lat="+lat;
 				$.getScript(rs,function(){
 					// getData(id);
-					window.open('http://61.4.184.147/'+id+'.shtml','_self');
+					window.open('http://wap.weather.com.cn/'+id+'.shtml','_self');
 					$.cookie('localCity',id,{expires:30,path: '/'});
 				});
 			},function(error){
 				var areaid="101010100";
 				// getData(areaid);
-				window.open('http://61.4.184.147/'+areaid+'.shtml','_self');
+				window.open('http://wap.weather.com.cn/'+areaid+'.shtml','_self');
 				$.cookie('localCity',areaid,{expires:30,path: '/'});
 			},{
 				maximumAge:60*1000*3,
@@ -41,13 +41,13 @@ $(function(){
 		}else{		
 	        var areaid="101010100";
 			// getData(areaid);
-			window.open('http://61.4.184.147/'+areaid+'.shtml','_self');
+			window.open('http://wap.weather.com.cn/'+areaid+'.shtml','_self');
 			$.cookie('localCity',areaid,{expires:30,path: '/'});
 		}
 	}else{
 		var areaid=$.cookie('localCity');
 		// getData(areaid);
-		window.open('http://61.4.184.147/'+areaid+'.shtml','_self');
+		window.open('http://wap.weather.com.cn/'+areaid+'.shtml','_self');
 	}
 
 
