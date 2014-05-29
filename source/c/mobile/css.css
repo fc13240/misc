@@ -22,9 +22,9 @@ a:hover { color:#F60; text-decoration:underline; }
 .per_3h h1 { height:30px; margin:10px 0px; text-indent:10px; line-height:30px; margin-bottom:0; font-size:20px; }
 .per_3h ul li { clear:both; padding:10px 5px; font-size:18px; text-indent:5px; }
 .per_3h ul li span { padding-right:7px; display:block; overflow:hidden; float:right; }
-.per_3h ul li i { float:left; width:30%; text-align:center; text-align:right; }
+.per_3h ul li i { float:left; width:25%; text-align:center; }
 .per_3h ul li i img { position:relative; top:-5px; margin-left:5px; }
-.per_3h ul li b { float:left; }
+.per_3h ul li b { float:left; width: 40%; }
 .nav { clear:both; }
 .nav ul li a { font-size:18px; }
 .nav ul li { width:28%; margin-right:5%; height:40px; line-height:40px; float:left; text-align:left; }
@@ -199,6 +199,10 @@ float:left;
 {
 	color:#4d4d4d;
 	font-size:18px;}
+.cityman ul li img{
+
+	display: none;
+}
 .citylist
 {
 	margin:0 auto;
@@ -261,6 +265,12 @@ float:left;
 	
 	}
 .op_pm25_des{width: 90%; margin: 0 auto;}
+.yb_you h1 a#aqii
+{
+	font-size:14px;
+	font-weight:bold;
+	padding:2px 3px;
+	background:#e0edf6;}
 @media screen and (max-width:320px) {
 
 .head { height:30px; line-height:30px; }
