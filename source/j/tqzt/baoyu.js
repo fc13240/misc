@@ -4,34 +4,50 @@ define(function(require){
 	var picRoll = require('j/m_picRoll');
 
 	$(function(){
-
-		$.getJSON('http://d1.weather.com.cn/product_json/JC_JSL_02405_by.html',function(data){
-			var strLi = '';
-			for (var i = data.jsl.length - 1; i >= 0; i--) {
-				 strLi += '<li><a target="_blank" title="全国降水量实况" href="http://i.weather.com.cn/i/product/pic/l/'+data.jsl[i].fn+'"><img width="490" height="398" alt="全国降水量实况图" src="http://i.weather.com.cn/i/product/pic/m/'+data.jsl[i].fn+'"></a></li>'				
-			};
-			$('#showBigBox1 ul.bigImg').empty().append(strLi);
-			roll({
-		    	eleFather:'#showBigBox1',
-		    	rollLeft:'#showBig .showLeft',
-		    	rollRight:'#showBig .showRight',
-		    	imgNum:data.jsl.length,
-		    	ulWidth:490*data.jsl.length
-	    	})
+		var url_1 = 'http://d1.weather.com.cn/product_json/JC_JSL_02405_by.html'
+		var url_2 = 'http://d1.weather.com.cn/product_json/YB_JSL_024_by.html'
+		
+		$.ajax({
+			data:'GET',
+			url:url_1,
+			dataType:'script',
+			async:false,
+			cache:false,
+			success:function(){
+				var strLi = '';
+				for (var i = jslInfo.jsl.length - 1; i >= 0; i--) {
+					 strLi += '<li><a target="_blank" title="全国降水量实况" href="http://i.weather.com.cn/i/product/pic/l/'+jslInfo.jsl[i].fn+'"><img width="490" height="398" alt="全国降水量实况图" src="http://i.weather.com.cn/i/product/pic/m/'+jslInfo.jsl[i].fn+'"></a></li>'				
+				};
+				$('#showBigBox1 ul.bigImg').empty().append(strLi);
+				roll({
+			    	eleFather:'#showBigBox1',
+			    	rollLeft:'#showBig .showLeft',
+			    	rollRight:'#showBig .showRight',
+			    	imgNum:jslInfo.jsl.length,
+			    	ulWidth:490*jslInfo.jsl.length
+		    	})
+			}			
 		})
-		$.getJSON('http://d1.weather.com.cn/product_json/YB_JSL_024_by.html',function(data){
-			var strLi = '';
-			for (var i = data.jsl.length - 1; i >= 0; i--) {
-				 strLi += '<li><a target="_blank" title="全国24小时降水量预报" href="http://i.weather.com.cn/i/product/pic/l/'+data.jsl[i].fn+'"><img width="490" height="398" alt="全国24小时降水量预报" src="http://i.weather.com.cn/i/product/pic/m/'+data.jsl[i].fn+'"></a></li>'		
-			};
-			$('#showBigBox2 ul.bigImg').empty().append(strLi);
-			roll({
-		    	eleFather:'#showBigBox2',
-		    	rollLeft:'#showBig .showLeft',
-		    	rollRight:'#showBig .showRight',
-		    	imgNum:data.jsl.length,
-		    	ulWidth:490*data.jsl.length
-		    })
+		$.ajax({
+			data:'GET',
+			url:url_2,
+			dataType:'script',
+			async:false,
+			cache:false,
+			success:function(){
+				var strLi = '';
+				for (var i = jslInfo.jsl.length - 1; i >= 0; i--) {
+					 strLi += '<li><a target="_blank" title="全国24小时降水量预报" href="http://i.weather.com.cn/i/product/pic/l/'+jslInfo.jsl[i].fn+'"><img width="490" height="398" alt="全国24小时降水量预报" src="http://i.weather.com.cn/i/product/pic/m/'+jslInfo.jsl[i].fn+'"></a></li>'		
+				};
+				$('#showBigBox2 ul.bigImg').empty().append(strLi);
+				roll({
+			    	eleFather:'#showBigBox2',
+			    	rollLeft:'#showBig .showLeft',
+			    	rollRight:'#showBig .showRight',
+			    	imgNum:jslInfo.jsl.length,
+			    	ulWidth:490*jslInfo.jsl.length
+			    })
+			}
 		})
 
 
@@ -59,7 +75,7 @@ define(function(require){
 			var imgWidth = $imgUl.find('img').width();
 			var imgNum = config.imgNum;
 			var arrInter = [];
-			console.log($imgUl,$botUl,imgWidth,imgNum);
+			
 			$imgUl.width(config.ulWidth)
 			//左右点击按钮的hover透明度效果
 			var opa = $(config.rollLeft).css('opacity');
