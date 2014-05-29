@@ -260,6 +260,7 @@ float:left;
 	border-bottom:1px solid #4676C9;
 	
 	}
+.op_pm25_des{width: 90%; margin: 0 auto;}
 @media screen and (max-width:320px) {
 
 .head { height:30px; line-height:30px; }
