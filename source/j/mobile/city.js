@@ -36,7 +36,7 @@ define(function(require){
 			}
 			citys = arrCity.join('/');
 			$.cookie('citys',citys,{expires:30,path: '/'});
-            window.open('http://ljy.weather.com.cn/m/citmani.html','_self');
+            window.open('http://wap.weather.com.cn/m/citmani.html','_self');
         }
         ,'maxnum': 6
     });
