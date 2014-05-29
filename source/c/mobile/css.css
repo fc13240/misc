@@ -265,6 +265,12 @@ float:left;
 	
 	}
 .op_pm25_des{width: 90%; margin: 0 auto;}
+.yb_you h1 a#aqii
+{
+	font-size:14px;
+	font-weight:bold;
+	padding:2px 3px;
+	background:#e0edf6;}
 @media screen and (max-width:320px) {
 
 .head { height:30px; line-height:30px; }
