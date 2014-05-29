@@ -246,6 +246,19 @@ float:left;
 .arrdiv .pre { float:left; background-position:-7px 0px; }
 .arrdiv .next { float:right; background-position:-37px 0px; }
 .per_3h ul li i img { width:27px; }
+
+.di a
+{
+	display:block;
+	text-align:center;
+	clear:both;}
+.redown
+{
+	border-top:0;
+	background:url(http://i.tq121.com.cn/i/mobile/images/up.jpg) no-repeat center 11px;
+	border-bottom:1px solid #4676C9;
+	
+	}
 @media screen and (max-width:320px) {
 
 .head { height:30px; line-height:30px; }
