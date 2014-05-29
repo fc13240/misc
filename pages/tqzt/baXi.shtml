@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="dns-prefetch" href="http://i.tq121.com.cn">
+<meta charset="utf-8" />
+<title>巴西世界杯专题</title>
+<meta  name="keywords" content="" />
+<meta name="description" content="" />
+<script type="text/javascript" src="http://10.14.85.90/source/j/core.js"></script>
+<script>W.css("c/core.css","c/common.css","c/tqzt/baxi.css")</script>
+<script>W(function(){W.use('j/tqzt/baxi.js')})</script>
+<base target="_blank" />
+</head>
+
+<body>
+<div class="cityWea">
+	<div class="tit">
+		<h1>城市天气</h1>
+	</div>
+	<div class="main">
+		<ul class="t clearfix">
+			<li class="on">圣保罗</li>
+			<li>纳塔尔</li>
+			<li>库亚巴</li>
+			<li>萨尔瓦多</li>
+			<li>贝洛奥里藏特</li>
+			<li>福塔莱萨</li>
+			<li>累西腓</li>
+			<li>马瑙斯</li>
+			<li>巴西利亚</li>
+			<li>阿雷格里港</li>
+			<li>里约热内卢</li>
+			<li>库里蒂巴 </li>
+		</ul>
+		<div class="b clearfix">
+			<div class="l">
+				<img src="http://10.14.85.90/source/i/tqzt/baxi/b2.jpg" alt="巴西">
+				<img style="top: 239px; left: 228px;display:block;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h"><img class="h" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" style="top: 97px; left: 324px;"><img style="top: 176px; left: 165px;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h"><img class="h" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" style="top: 152px; left: 290px;"><img style="top: 200px; left: 253px;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h"><img class="h" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" style="top: 76px; left: 296px;"><img style="top: 113px; left: 324px;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h"><img class="h" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" style="top: 62px; left: 110px;"><img style="left: 220px; top: 174px;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h"><img style="top: 298px; left: 188px;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h"><img style="top: 232px; left: 259px;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h"><img style="left: 200px; top: 255px;" src="http://10.14.85.90/source/i/tqzt/baxi/b.png" class="h">
+			</div>
+			<div class="r">
+				<ul id="threeHour">
+					<li>
+						<p class="d">25日21时～26日00时</p>
+						<div class="m">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<span>多云转阵雨     17℃～17℃     东南风转东风      微风</span>
+						</div>
+					</li>
+					<li>
+						<p class="d">25日21时～26日00时</p>
+						<div class="m">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<span>多云转阵雨     17℃～17℃     东南风转东风      微风</span>
+						</div>
+					</li>
+					<li>
+						<p class="d">25日21时～26日00时</p>
+						<div class="m">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<span>多云转阵雨     17℃～17℃     东南风转东风      微风</span>
+						</div>
+					</li>
+					<li>
+						<p class="d">25日21时～26日00时</p>
+						<div class="m">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<img class="img1" width="39" height="27" src="http://www.weather.com.cn/m2/i/icon_weather/50x36/d01.gif" alt="">
+							<span>多云转阵雨     17℃～17℃     东南风转东风      微风</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

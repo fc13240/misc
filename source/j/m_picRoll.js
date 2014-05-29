@@ -16,7 +16,7 @@ define(function(require){
 		
 		this.roll = function(){
 			var pointer = 0;
-			var $imgUl = $(config.eleFather).find('ul:has(img):first');  //检索获取图片ul列表
+			var $imgUl = $(config.eleFather).find('ul:has(img):first');//检索获取图片ul列表
 			var $botUl = $(config.eleFather).find('ul:not(:has(img)):last'); //检索获取缩略图ul列表
 			var imgWidth = $imgUl.find('img').width();
 			var imgNum = $imgUl.find('img').length;

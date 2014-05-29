@@ -313,17 +313,16 @@
 				<i></i>
 				<span>暴雨产品</span>
 				<p class="fr clearfix">
-					<em class="on">逐小时预报</em>
+					<em class="on">全国降水量实况</em>
 					<em>|</em>
-					<em>累积降水量</em>
-					<em>|</em>
-					<em>短时强降雨落区</em>
+					<em>全国24小时降水量预报</em>
+					
 				</p>
 			</h1>
 			<div id="showBig" class='clearfix'>
                 <div id='showBigBox1' class="showBigBox" style='display:block'>
                     <ul class="bigImg">
-                        <li>
+                      <!--  <li>
                             <a target="_blank" title="" href=""><img width="490" height="398" alt="" src="http://i.weather.com.cn/i/product/pic/m/sevp_nmc_weap_sgis_ee0_achn_lno_p9_20140428210000000.jpg"></a>
                         </li>
                         <li>
@@ -331,12 +330,12 @@
                         </li>
                         <li>
                             <a target="_blank" title="" href=""><img width="490" height="398" alt="" src="http://i.weather.com.cn/i/product/pic/m/sevp_nmc_weap_sgis_ee0_achn_lno_p9_20140328210000000.jpg"></a>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
                 <div id='showBigBox2' class="showBigBox">
                     <ul class="bigImg">
-                        <li>
+                       <!-- <li>
                             <a target="_blank" title="" href=""><img width="490" height="398" alt="" src="http://i.weather.com.cn/i/product/pic/m/sevp_nmc_weap_sgis_ee0_achn_lno_p9_20140501210000000.jpg"></a>
                         </li>
                         <li>
@@ -344,22 +343,10 @@
                         </li>
                         <li>
                             <a target="_blank" title="" href=""><img width="490" height="398" alt="" src="http://i.weather.com.cn/i/product/pic/m/sevp_nmc_weap_sgis_ee0_achn_lno_p9_20140501210000000.jpg"></a>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
-                <div id='showBigBox3' class="showBigBox">
-                    <ul class="bigImg">
-                        <li>
-                            <a target="_blank" title="" href=""><img width="490" height="398" alt="" src="http://i.weather.com.cn/i/product/pic/m/sevp_nmc_weap_sgis_ee0_achn_lno_p9_20140405210000000.jpg"></a>
-                        </li>
-                        <li>
-                            <a target="_blank" title="" href=""><img width="490" height="398" alt="" src="http://i.weather.com.cn/i/product/pic/m/sevp_nmc_weap_sgis_ee0_achn_lno_p9_20140503210000000.jpg"></a>
-                        </li>
-                        <li>
-                            <a target="_blank" title="" href=""><img width="490" height="398" alt="" src="http://i.weather.com.cn/i/product/pic/m/sevp_nmc_weap_sgis_ee0_achn_lno_p9_20140501210000000.jpg"></a>
-                        </li>
-                    </ul>
-                </div>
+                
 				<div class="showLeft"></div>
 				<div class="showRight"></div>
 			</div>
