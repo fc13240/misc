@@ -22,7 +22,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .per_3h h1 { height:30px; margin:10px 0px; text-indent:10px; line-height:30px; margin-bottom:0; font-size:20px; }
 .per_3h ul li { clear:both; padding:10px 5px; font-size:18px; text-indent:5px; }
 .per_3h ul li span { padding-right:7px; display:block; overflow:hidden; float:right; }
-.per_3h ul li i { float:left; width:30%; text-align:center; }
+.per_3h ul li i { float:left; width:20%; text-align:center; }
 .per_3h ul li i img { position:relative; top:-5px; margin-left:5px; }
 .per_3h ul li b { float:left; width: 41%; }
 .nav { clear:both; }
