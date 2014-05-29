@@ -168,7 +168,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .search input
 {border:none;
 float:left;
-	
+	width: 94%;
 	height:50px;
 	line-height:50px;
 	padding-left:10px;
@@ -283,3 +283,6 @@ float:left;
 @media screen and (min-width:481px) and (max-width:640px) {
 
 }
+
+#text_simple{width: }
+.threeHours .title,.threeHours .hours3{display: none;}

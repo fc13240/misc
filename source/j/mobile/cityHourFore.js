@@ -10,5 +10,5 @@ $(function(){
 	var dayId = document.URL.match(reg) || "day=1";
 	var dayId = dayId.toString().match(/\d/);
 	dayId = dayId<1 || dayId >7 ? 1 : dayId;
-	$('.per_3h .title[data-id="day'+ dayId +'"],.per_3h .hours3[data-id="day'+ dayId +'"]').show();  
+	$('.title[data-id="day'+ dayId +'"],.hours3[data-id="day'+ dayId +'"]').show();  
 })

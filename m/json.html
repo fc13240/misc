@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" >
+ <head>
+     <title>Untitled Page</title>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript">
+     $(document).ready(function(){
+              $.ajax({
+			type : "GET",
+			url : "6.html",
+			dataType : "script",
+			jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+			jsonpCallback:"success_jsonpCallback",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+			success : function(){
+				alert(fc_24_en.weatherinfo.cityid);
+
+             
+			},
+			error:function(){
+			alert('fail');
+			}
+			});
+         
+     });
+     </script>
+     </head>
+  <body>
+  <div id="images">fsdfsf</div>
+  </body>
+ </html>

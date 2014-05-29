@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>首页</title>
+
+<link type="text/css" href="css.css" rel="stylesheet">
+<script src="http://i.tq121.com.cn/j/jquery-1.8.2.js" type="text/javascript"></script>
+
+<script>
+	$(function(){
+        $('.down').toggle(function() {
+		$('.di ul li.move').show();		
+	},
+	function() {
+		$('.di ul li.move').hide();
+     });	
+   $(".di[data=" + document.URL.substr(document.URL.length-1,1) + "]").addClass("move").siblings(".di").css("display","none");  
+    
+	$(".top").click(function(){
+	    $('html,body').animate({scrollTop: '0px'}, 300);	
+	})
+   
+   
+	})
+	
+	</script>
+
+</head>
+
+<body>
+
+<div class="box">
+<div class="wrap">
+	<header class="head">
+		<div class="logo"><a href=""></a></div>
+		<div class="net"><a href="#">网页版</a></div>
+	</header>
+	<div class="title">
+	  <a href="#" class="pre"><img src="images/pre.jpg"></a>大风蓝色预警  <a href="#" class="home"><img src="images/home.jpg"></a>
+	</div>
+    <div class="content">
+		<h1>甘肃省酒泉市发布大风蓝色预警</h1>
+		<h2>发布日期：2014-04-12  14:57:50</h2>
+		<p>七台河市气象台2014年5月7日12时50分发布雷电黄色预警信号：6小时内可能发生雷电活动，可能会造成雷电灾害事故，请注意防范。</p>
+		<div class="biaoz">
+			<i><img src="images/bz.jpg" width="30"></i>分发布雷电黄色预警信号分发布雷电黄色预警信号分发布雷电黄色预警信号分发布雷电黄色预警信号
+		</div>
+		<h3><img src="images/fy.jpg" width="30">防御指南：</h3>
+		<p style="text-indent:0;">1、政府及相关部门按照职责做好防雷工作；<br>2、密切关注天气，尽量避免户外活动。</p>
+	</div>
+	
+	<footer class="footer">
+	    <p><a href="#">天气应用</a>| <a href="#">意见反馈</a></p>
+		<p>Copyright@中国气象局公共气象服务中心</p>
+	</footer>
+	
+</div>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>
