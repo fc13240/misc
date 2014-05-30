@@ -17,7 +17,7 @@ $(function(){
 		$(this).parents('li').remove();
 		
 		for (var i = arrCity.length - 1; i > 0; i--) {
-			arrCity[i].split(',')[0] == parseInt($(this).prev().attr('href')) && arrCity.splice(i,1);
+			arrCity[i].split(',')[0] == $(this).prev().attr('href').match(/\d{5,}/) && arrCity.splice(i,1);
 		};
 		citysL = arrCity.join('/');
 		$.cookie('citys',citysL,{expires:30,path: '/'});
