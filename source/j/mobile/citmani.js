@@ -1,7 +1,7 @@
 $(function(){
 	var $firLi = $('.cityman ul li:first');
-	var localCity = $.cookie('localCity');
-	$firLi.children('a').attr('href',localCity+'.html');
+	var localCity = $.cookie('localCity') || "";
+	$firLi.children('a').attr('href','http://wap.weather.com.cn/tq/'+localCity+'.shtml');
 
 	var citys = $.cookie('citys');
 	var arrCity = citys.split('/');
