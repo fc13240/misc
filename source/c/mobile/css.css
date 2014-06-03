@@ -205,8 +205,9 @@ float:left;
 
 	display: none;
 	 position: absolute;
-    right: -17px;
+    right: -11px;
     top: -11px;
+    width: 25px;
 }
 .citylist
 {
