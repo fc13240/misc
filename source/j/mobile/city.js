@@ -38,6 +38,6 @@ define(function(require){
 			$.cookie('citys',citys,{expires:30,path: '/'});
             window.open('http://wap.weather.com.cn/m/citmani.html','_self');
         }
-        ,'maxnum': 6
+        ,'maxnum': 10
     });
 })
