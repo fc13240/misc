@@ -143,6 +143,7 @@ a:hover { color:#F60; text-decoration:underline; }
 	float:left;}
 .hotcity ul li a
 {
+	display: block;
 	font-weight:bold;
 	font-size:16px;}
 .hotcity ul
