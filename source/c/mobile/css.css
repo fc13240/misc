@@ -38,7 +38,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .per_3h ul { float:left; padding-bottom:10px; width:100%; }
 .pic_yb { float:left; padding-right:10%; width:40%; text-align:right; }
 .yb_you { width:50%; float:right; }
-.yb_you p { color:#4a7bce; line-height:30px; font-size:30px; }
+.yb_you p { color:#4a7bce; line-height:auto; font-size:30px; }
 .yb_you p span { font-size:20px; display:block; height: 23px; }
 .yb_you h1 { color:#4a7bce; font-size:40px; font-weight:bold; }
 .yb_you h1 a { color:#4a7bce; font-size:40px; font-weight:bold; }
