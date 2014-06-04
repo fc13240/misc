@@ -52,7 +52,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .di { display:none; }
 .per_3h .move { display:block; }
 .dii { display:block; }
-.title { font-size:25px; color:#4a7bce; border-bottom:1px solid #4676c9; height:50px; line-height:50px; position:relative; text-align:center; margin-bottom:10px; }
+.title { font-size:25px; color:#4a7bce; overflow: hidden; border-bottom:1px solid #4676c9; height:50px; line-height:50px; position:relative; text-align:center; margin-bottom:10px; }
 .title a img { width:100%; }
 .title a.pre { position:absolute; left:10px; top:10px; width:30px; }
 .title a.home { right:10px; top:10px; position:absolute; width:30px; }
