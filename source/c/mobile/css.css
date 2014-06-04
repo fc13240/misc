@@ -200,6 +200,9 @@ float:left;
 .cityman ul li a
 {
 	color:#4d4d4d;
+	display: block;
+	height: 46px;
+    overflow: hidden;
 	font-size:18px;}
 .cityman ul li img{
 
