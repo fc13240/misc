@@ -27,7 +27,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .per_3h ul li b { float:left; width: 40%; }
 .nav { clear:both; }
 .nav ul li a { font-size:18px; }
-.nav ul li { width:28%; margin-right:5%; height:40px; line-height:40px; float:left; text-align:left; }
+.nav ul li {  margin-right:5%; height:40px; line-height:40px; float:left; text-align:left; }
 .down { cursor:pointer; border-top:1px solid #4676c9; clear:both; padding-top:10px; height:15px; margin-top:15px; background:url(http://i.tq121.com.cn/i/mobile/images/san.jpg) no-repeat top center; }
 .nav ul { width:90%; margin:0 auto; margin-left:9%; }
 .footer { clear:both; padding-top:30px; }
