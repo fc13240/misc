@@ -17,7 +17,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .yj span { float:right; }
 .yj span a { color:#807d7d; }
 .yj_box { height:auto; float:left; width:100%; border-bottom:1px solid #4676c9; }
-.yb_b { width:90%; margin:0 auto; }
+.yb_b { width:95%; margin:0 auto; }
 .per_3h { clear:both; }
 .per_3h h1 { height:30px; margin:10px 0px; text-indent:10px; line-height:30px; margin-bottom:0; font-size:20px; }
 .per_3h ul li { clear:both; padding:10px 5px; font-size:18px; text-indent:5px; }
@@ -27,7 +27,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .per_3h ul li b { float:left; width: 40%; }
 .nav { clear:both; }
 .nav ul li a { font-size:18px; }
-.nav ul li { width:28%; margin-right:5%; height:40px; line-height:40px; float:left; text-align:left; }
+.nav ul li {  margin-right:5%; height:40px; line-height:40px; float:left; text-align:left; }
 .down { cursor:pointer; border-top:1px solid #4676c9; clear:both; padding-top:10px; height:15px; margin-top:15px; background:url(http://i.tq121.com.cn/i/mobile/images/san.jpg) no-repeat top center; }
 .nav ul { width:90%; margin:0 auto; margin-left:9%; }
 .footer { clear:both; padding-top:30px; }
@@ -36,9 +36,9 @@ a:hover { color:#F60; text-decoration:underline; }
 .per_3h	.title,.per_3h .hours3{display:none}
 .per_3h ul li.move { display:none; }
 .per_3h ul { float:left; padding-bottom:10px; width:100%; }
-.pic_yb { float:left; padding-right:10%; width:40%; text-align:right; }
-.yb_you { width:50%; float:right; }
-.yb_you p { color:#4a7bce; line-height:30px; font-size:30px; }
+.pic_yb { float:left; padding-right:0%; width:40%; text-align:left; }
+.yb_you { width:60%; float:right; }
+.yb_you p { color:#4a7bce; line-height:auto; font-size:30px; }
 .yb_you p span { font-size:20px; display:block; height: 23px; }
 .yb_you h1 { color:#4a7bce; font-size:40px; font-weight:bold; }
 .yb_you h1 a { color:#4a7bce; font-size:40px; font-weight:bold; }
@@ -52,7 +52,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .di { display:none; }
 .per_3h .move { display:block; }
 .dii { display:block; }
-.title { font-size:25px; color:#4a7bce; border-bottom:1px solid #4676c9; height:50px; line-height:50px; position:relative; text-align:center; margin-bottom:10px; }
+.title { font-size:25px; color:#4a7bce; overflow: hidden; border-bottom:1px solid #4676c9; height:auto; line-height:50px; position:relative; text-align:center; margin-bottom:10px; }
 .title a img { width:100%; }
 .title a.pre { position:absolute; left:10px; top:10px; width:30px; }
 .title a.home { right:10px; top:10px; position:absolute; width:30px; }
@@ -77,8 +77,8 @@ a:hover { color:#F60; text-decoration:underline; }
 .xgzs dl dd { font-size:16px; width:70%; float:right; }
 .xgzs dl dd span { color:#4777c9; font-size:20px; padding-top:0px; margin-bottom:5px; display:block; }
 
-#circle { float:right; width: 40px; text-align:center; line-height:30px; margin-right:10px; height: 40px; border:1px solid #8d8b8c; -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px; margin-bottom:10px; }
-.hours3 table tr td.t span { border: 1px solid #4777C9; border-radius: 5px; }
+#circle { clear: both; float:right; width: 40px; text-align:center; line-height:30px; margin-right:10px; height: 40px; border:1px solid #8d8b8c; -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px; margin-bottom:10px; }
+.hours3 table tr td.t span { border: 1px solid #4777C9; border-radius: 5px; padding:2px 10px;  }
 .list { width:97%; margin:0 auto; height:30px; margin-bottom:20px; border:1px solid #4676c9; border-radius:5px; line-height:30px; }
 .list a { display:block; font-size:14px; float:left; border-right:1px solid #4676c9; width:14%; text-align:center; }
 .list a.move { background:#4676c9; color:#fff; }
@@ -143,6 +143,7 @@ a:hover { color:#F60; text-decoration:underline; }
 	float:left;}
 .hotcity ul li a
 {
+	display: block;
 	font-weight:bold;
 	font-size:16px;}
 .hotcity ul
@@ -194,14 +195,22 @@ float:left;
 	vertical-align:middle;
 	border:1px solid #4b7bcf;
 	text-align:center;
+	position: relative;
 }
 .cityman ul li a
 {
 	color:#4d4d4d;
+	display: block;
+	height: 46px;
+    overflow: hidden;
 	font-size:18px;}
 .cityman ul li img{
 
 	display: none;
+	 position: absolute;
+    right: -11px;
+    top: -11px;
+    width: 25px;
 }
 .citylist
 {
