@@ -1,7 +1,7 @@
 // JavaScript Document
 //cookie
 var myCookie = function(name, value, options) {
-	if (typeof value != 'undefined') { // name and value given, set cookie
+	if (typeof value != 'undefined') { 
 		options = options || {};
 		if (value === null) {
 			value = '';
@@ -16,19 +16,18 @@ var myCookie = function(name, value, options) {
 			} else {
 				date = options.expires;
 			}
-			expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+			expires = '; expires=' + date.toUTCString(); 
 		}
 		var path = options.path ? '; path=' + options.path : '';
 		var domain = options.domain ? '; domain=' + options.domain : '';
 		var secure = options.secure ? '; secure' : '';
 		document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
-	} else { // only name given, get cookie
+	} else { 
 		var cookieValue = null;
 		if (document.cookie && document.cookie != '') {
 			var cookies = document.cookie.split(';');
 			for (var i = 0; i < cookies.length; i++) {
 				var cookie = jQuery.trim(cookies[i]);
-				// Does this cookie string begin with the name we want?
 				if (cookie.substring(0, name.length + 1) == (name + '=')) {
 					cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
 					break;
@@ -137,35 +136,35 @@ $('.localPopup span a').live('click',function(){
 var kindObj = {'01':'台风','02':'暴雨','03':'暴雪','04':'寒潮','05':'大风','06':'沙尘暴','07':'高温','08':'干旱','09':'雷电','10':'冰雹','11':'霜冻','12':'大雾','13':'霾','14':'道路结冰',
 '91':'寒冷','92':'灰霾','93':'雷雨大风','94':'森林火险','95':'降温','96':'道路冰雪','97':'干热风','98':'低温','99':'冰冻'};
 var gradeObj={'01':'蓝色','02':'黄色','03':'橙色','04':'红色','91':'白色'};
-// var $alarmUrl = "http://product.weather.com.cn/alarm/grepalarm_cn.php";
-var $alarmUrl = "http://10.14.85.90/data/Popup/grepalarm_cn.php";
-var $cInfoUrl = 'http://10.14.85.90/data/Popup/'+id+'.json'; 
+var $alarmUrl = "http://product.weather.com.cn/alarm/grepalarm_cn.php";
+// var $alarmUrl = "http://10.14.85.90/data/Popup/grepalarm_cn.php";
+// var $cInfoUrl = 'http://10.14.85.90/data/Popup/'+id+'.json'; 
 function getInfo(){
 	$Ul.empty();
-	$.ajax({ //ajax 周末天气
-        "type": "GET",
-        "url": $cInfoUrl,
-        "dataType": "script",
-        "cache":false,
-        "async":false,     
-        "success": function() {
-        	var strCookie = myCookie('closeWea') || '';
-			var arrCookie = strCookie.split(",");
-        	var li = '';
-        	for(prop in popupInfo){
-        		if(prop!='cityName'){
-        			var al = 1;
-        			for (var i = arrCookie.length - 1; i >= 0; i--) {
-	        			if(prop == arrCookie[i]) var al=0; 
-	        		}
-	        		if(al && popupInfo[prop].length!=0){
-	        			li += '<li><i class="l" style="background-image:url(&quot;http://i.tq121.com.cn/i/Popup/warn_10.png&quot;);"><img src="http://i.tq121.com.cn/i/english/weaIcon/white/'+popupInfo[prop][0]+'.png"></i><span style="background-image:url(&quot;http://i.tq121.com.cn/i/Popup/warn_10.png&quot;);"><a target="_blank" data-id="'+prop+'" href="http://www.weather.com.cn/weather/'+id+'.shtml">'+ popupInfo[prop][1] +'</a></span><i style="background-image:url(&quot;http://i.tq121.com.cn/i/Popup/warn_10.png&quot;);" class="r" data-id="10"><a data-id="'+prop+'"></a></i></li>';
-	        		}      	
-        		}
-        	}
-        	$Ul.append(li).hide();       		
-        }
-    })    
+	// $.ajax({ //ajax 周末天气
+ //        "type": "GET",
+ //        "url": $cInfoUrl,
+ //        "dataType": "script",
+ //        "cache":false,
+ //        "async":false,     
+ //        "success": function() {
+ //        	var strCookie = myCookie('closeWea') || '';
+	// 		var arrCookie = strCookie.split(",");
+ //        	var li = '';
+ //        	for(prop in popupInfo){
+ //        		if(prop!='cityName'){
+ //        			var al = 1;
+ //        			for (var i = arrCookie.length - 1; i >= 0; i--) {
+	//         			if(prop == arrCookie[i]) var al=0; 
+	//         		}
+	//         		if(al && popupInfo[prop].length!=0){
+	//         			li += '<li><i class="l" style="background-image:url(&quot;http://i.tq121.com.cn/i/Popup/warn_10.png&quot;);"><img src="http://i.tq121.com.cn/i/english/weaIcon/white/'+popupInfo[prop][0]+'.png"></i><span style="background-image:url(&quot;http://i.tq121.com.cn/i/Popup/warn_10.png&quot;);"><a target="_blank" data-id="'+prop+'" href="http://www.weather.com.cn/weather/'+id+'.shtml">'+ popupInfo[prop][1] +'</a></span><i style="background-image:url(&quot;http://i.tq121.com.cn/i/Popup/warn_10.png&quot;);" class="r" data-id="10"><a data-id="'+prop+'"></a></i></li>';
+	//         		}      	
+ //        		}
+ //        	}
+ //        	$Ul.append(li).hide();       		
+ //        }
+ //    })    
     $.ajax({ //ajax 预警
         "type": "GET",
         "url": $alarmUrl,
