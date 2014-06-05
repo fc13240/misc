@@ -94,7 +94,7 @@ a:hover { color:#F60; text-decoration:underline; }
 .aqi { background:url(http://i.tq121.com.cn/i/mobile/images/air.jpg) no-repeat top center; background-size:70%; height:280px; text-align:center; width:320px;color:#487dcd; position:relative; margin:0 auto; }
 .aqi span { font-size:40px; display:block; }
 .aqi b{ display:block; font-size:70px; padding-top:33px;}
-.nav h1{color:#497ccf; font-size:16px;text-indent: 10px;}
+.nav h1{color:#497ccf; font-size:18px;text-indent: 10px;}
 /*#sec
 {
 	height: 206px;
