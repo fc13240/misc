@@ -1,5 +1,6 @@
 // JavaScript Document
 define(function(require){
+	require('jquery');
 $(function(){
 $(".wqhgLi").click(function(){
 	alert("aa");
