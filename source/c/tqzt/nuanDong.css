@@ -6,7 +6,7 @@ body {  }
 .top .box { background: url("../../i/tqzt/nuanDong/top.jpg") repeat-x 0px 0px transparent; position: relative; height: 85px; }
 .top .logo { left: 0px; position: absolute; top: 7px; z-index: 1; }
 .top .m { font-size: 21px; margin-left: 370px; margin-top: 23px; }
-.top .m span { float: left; margin-left: 12px; }
+.top .m span { float: left; margin-left: 12px; position: relative;z-index: 10000; }
 .top .m i { float: left; background: url("../../i/tqzt/nuanDong/icon.jpg") no-repeat; display: inline-block; height: 13px; margin: 11px; width: 19px; }
 .top .r { font-size: 16px; line-height: 78px; margin-right: 6px; }
 .main { background:url("../../i/tqzt/nuanDong/bg.jpg") repeat; clear: both; }
@@ -53,3 +53,8 @@ iframe{margin-top: 70px;}
 {
 	color: #3356BB;
 	width:298px;}
+	.wqhgBox{position:absolute;width:300px;height:264px;top:29px;left:-7px;padding-top:20px;display:none;background:#fff;  }
+.wqhgBox .newsBox{border:1px solid #e0e0e0;background:#fff;padding:10px; font-size:14px;height:250px; }
+.wqhgBox .newsBox p{line-height:22px;height:22px;padding:10px 0px 10px 20px;background-position: -173px -158px ;border-bottom:1px solid #f2f2f2;  }
+.wqhgBox .newsBox p.more{text-align:right;padding-bottom:0px;border-bottom:none;background:none;   }
+.top .m span .wqhgBox .colTop{background:url("http://mat1.gtimg.com/view/todayTopic/2013/bntBg2.png") no-repeat; position:absolute;width:18px;height:10px;background-position:-74px -77px ;top:11px;left:35px;}
