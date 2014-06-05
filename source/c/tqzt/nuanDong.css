@@ -59,3 +59,17 @@ iframe{margin-top: 70px;}
 .wqhgBox .newsBox p{line-height:22px;height:auto;padding:10px 0px 10px 0px;background-position: -173px -158px ;border-bottom:1px solid #f2f2f2;  }
 .wqhgBox .newsBox p.more{text-align:right;padding-bottom:0px;border-bottom:none;background:none;   }
 .top .m span .wqhgBox .colTop{background:url("http://mat1.gtimg.com/view/todayTopic/2013/bntBg2.png") no-repeat; position:absolute;width:18px;height:10px;background-position:-74px -77px ;top:11px;left:35px;}
+.WeatherBottom
+{
+	clear:both;
+	color:black;
+	height:40px;
+	line-height:35px;
+	border:1px solid #CCCCCC;
+	padding-left:15px;
+	margin-bottom:10px;
+}
+.WeatherBottom span
+{
+	font-weight:bold;
+}
