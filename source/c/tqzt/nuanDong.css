@@ -53,8 +53,8 @@ iframe{margin-top: 70px;}
 {
 	color: #3356BB;
 	width:298px;}
-	.wqhgBox{position:absolute;width:300px;height:264px;top:18px;left:10px;padding-top:20px;display:none;background:#fff;  }
+	.wqhgBox{position:absolute;width:300px;height:264px;top:29px;left:10px;padding-top:20px;display:none;background:#fff;  }
 .wqhgBox .newsBox{border:1px solid #e0e0e0;background:#fff;padding:10px; font-size:14px;height:250px; }
 .wqhgBox .newsBox p{line-height:22px;height:22px;padding:10px 0px 10px 20px;background-position: -173px -158px ;border-bottom:1px solid #f2f2f2;  }
 .wqhgBox .newsBox p.more{text-align:right;padding-bottom:0px;border-bottom:none;background:none;   }
-.wqhgBox .colTop{position:absolute;width:18px;height:10px;background-position:-74px -77px ;top:11px;left:35px;}
+.wqhgBox .colTop{background:url("http://mat1.gtimg.com/view/todayTopic/2013/bntBg2.png") no-repeat; position:absolute;width:18px;height:10px;background-position:-74px -77px ;top:11px;left:35px;}
