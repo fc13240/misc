@@ -3,7 +3,6 @@ define(function(require){
 	require('jquery');
 $(function(){
 $(".wqhgLi").click(function(){
-	alert("aa");
         if ($('#wqhgBox').css("display") == "none") {  
             $('#wqhgBox').fadeIn('fast');
             $('.opact').show();
