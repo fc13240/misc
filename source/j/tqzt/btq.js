@@ -1,4 +1,5 @@
 // JavaScript Document
+define(function(require){
 $(function(){
 $(".wqhgLi").click(function(){
 	alert("aa");
@@ -10,4 +11,6 @@ $(".wqhgLi").click(function(){
             $('.opact').hide();
         }
     });	
+})
+
 })
