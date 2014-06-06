@@ -228,7 +228,7 @@ $('.localPopup').hover(function(){
 },function(){
 	arrInter.push(setInterval(groll, 1000*5));
 })
-if(navigator.appName=='Microsoft Internet Explorer' && navigator.appVersion.match(/6./i)=="6."){
+if(navigator.appName=='Microsoft Internet Explorer' && navigator.appVersion.match(/MSIE 6./i)=="MSIE 6."){
 	$('.localPopup').hide();
 }
 arrInter.push(setInterval(groll, 1000*5));
