@@ -94,7 +94,7 @@ a:hover { text-decoration: none; }
 .con3 .right h1 a { color: #555555; float: right; font-size: 13px; padding-right: 7px; }
 .con3 .right .m { margin-top: 9px; }
 .con3 .right .m img { display: block; margin: 0px auto; }
-.con3 .right .m ul { padding-left: 9px; }
+.con3 .right .m ul { padding-left: 9px; margin-top:10px; }
 .con3 .right .m ul li { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -9px -380px transparent; font-size: 14px; height: 30px; line-height: 30px; overflow: hidden; padding-left: 10px; text-overflow: ellipsis; white-space: nowrap; }
 .con4 { height: 676px; margin-top: 26px; }
 .con4 h1 { padding-bottom: 0px; padding-left: 13px; }
