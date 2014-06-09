@@ -25,7 +25,7 @@ a:hover { text-decoration: none; }
 .con1 .left .video h1 { border-bottom: 1px dotted #BCBCBC; height: 20px; line-height: 20px; margin-top: 20px; padding-bottom: 7px; padding-left: 13px; }
 .con1 .left .video h1 i { background: none repeat scroll 0% 0% #1A5C62; float: left; font-size: 0px; height: 20px; width: 5px; }
 .con1 .left .video h1 span { float: left; font-size: 20px; padding-left: 9px; }
-.con1 .left .video h1 a{ color: #555555; font-size: 20px; float:right; }
+.con1 .left .video h1 a { color: #555555; font-size: 20px; float:right; }
 .con1 .left .video .l { margin-top: 14px; position: relative; }
 .con1 .left .video .l p { color: #FFFFFF; font-size: 17px; height: 30px; left: 0px; line-height: 30px; overflow: hidden; position: absolute; text-align: center; text-overflow: ellipsis; top: 190px; white-space: nowrap; width: 310px; z-index: 1; }
 .con1 .left .video .l div { background: none repeat scroll 0% 0% #000000; height: 30px; left: 0px; opacity: 0.5; position: absolute; top: 190px; width: 310px; }
@@ -95,7 +95,7 @@ a:hover { text-decoration: none; }
 .con3 .right .m { margin-top: 9px; }
 .con3 .right .m img { display: block; margin: 0px auto; }
 .con3 .right .m ul { padding-left: 9px; margin-top: 10px; }
-.con3 .right .m ul li { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -9px -380px transparent; font-size: 14px; height: 30px; line-height: 30px; overflow: hidden; padding-left: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.con3 .right .m ul li { background: url("../../i/tqzt/baoyu/icon.png") no-repeat scroll -9px -375px rgba(0, 0, 0, 0); font-size: 14px; height: 40px; line-height: 40px; overflow: hidden; padding-left: 10px; text-overflow: ellipsis; white-space: nowrap; }
 .con4 { height: 676px; margin-top: 26px; }
 .con4 h1 { padding-bottom: 0px; padding-left: 13px; }
 .con4 h1 p { margin-right: 30px; }
