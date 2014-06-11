@@ -20,6 +20,7 @@ body{background:#c5e431;}
 
 .MainBoxTop{float:none; display:block;}
 .Three dd h3{overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.Three h2 {background: url("http://i.tq121.com.cn/i/tqzt/baxi/b3.jpg") no-repeat scroll 92px 2px #F9DB23;}
 .Three dl{overflow:hidden}
 .Three dd{overflow:hidden}
 .ifr{ height:445px;}
