@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+body {
+     height: 1000px;
+}
+
+.sevenDay {
+     background: none repeat scroll 0% 0% #FFFFFF;
+     margin-left: 17px;
+     margin-top: 62px;
+     position: relative;
+     width: 668px;
+}
+
+.sevenDay ul.b1 {
+     display: block;
+     padding: 80px 9px 0px 77px;
+}
+
+.sevenDay ul.b1 li {
+     border-top: 1px solid #CCCCCC;
+     height: 59px;
+}
+
+.sevenDay ul.b2 {
+     display: block;
+     left: 20px;
+     position: absolute;
+     top: 65px;
+}
+
+.sevenDay ul.b2 li {
+     font-size: 17px;
+     height: 60px;
+}
+
+.sevenDay ul.b li p {
+     border-top: 1px solid #CCCCCC;
+     height: 1px;
+     left: 57px;
+     position: absolute;
+     top: 0px;
+     width: 583px;
+}
+
+.sevenDay ul.f {
+     left: 100px;
+     position: absolute;
+     top: 80px;
+     z-index: 1;
+}
+
+.sevenDay ul.f li {
+     float: left;
+     margin-right: 50px;
+     position: relative;
+}
+
+.sevenDay ul.f li .t {
+     background: url("http://10.14.85.90/source/i/weather2014/7d/d.jpg") no-repeat scroll center bottom transparent;
+     font-size: 16px;
+     height: 64px;
+     left: -9px;
+     position: absolute;
+     text-align: center;
+     top: -68px;
+     width: 50px;
+}
+
+.sevenDay ul.f li .n {
+     background: none repeat scroll 0% 0% #FFFFFF;
+     border: 1px solid #000000;
+     height: 151px;
+     width: 28px;
+}
+
+.sevenDay ul.f li .b {
+     background: url("http://10.14.85.90/source/i/weather2014/7d/n.jpg") no-repeat scroll center top transparent;
+     bottom: -62px;
+     font-size: 16px;
+     left: -11px;
+     padding-top: 34px;
+     position: absolute;
+     text-align: center;
+     width: 50px;
+}
+
+.sevenDay ul.c {
+     left: 81px;
+     padding-top: 10px;
+     position: absolute;
+     top: 320px;
+}
+
+.sevenDay ul.c li {
+     color: #666666;
+     float: left;
+     text-align: center;
+     width: 80px;
+}
+
+.sevenDay ul.c li p {
+    
+}
+
+.sevenDay ul.d {
+     left: 80px;
+     position: absolute;
+     top: 380px;
+}
+
+.sevenDay ul.d li {
+     float: left;
+     width: 80px;
+}
+
+.sevenDay ul.d li .t {
+     border-left: 1px solid #CCCCCC;
+     font-size: 0px;
+     height: 10px;
+     width: 100%;
+}
+
+.sevenDay ul.d li .tz {
+     border-right: 1px solid #CCCCCC;
+}
+
+.sevenDay ul.d li .c {
+     background: none repeat scroll 0% 0% #87B946;
+     color: #FFFFFF;
+     font-size: 16px;
+     height: 20px;
+     line-height: 20px;
+     margin: 0px auto;
+     text-align: center;
+     width: 50px;
+}
+
+.sevenDay ul.d li .end {
+     background: none repeat scroll 0% 0% #F3842B;
+}
