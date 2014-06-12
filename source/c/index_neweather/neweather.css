@@ -184,7 +184,7 @@ a:hover{color:#ee842f;}
 #search .button{height:23px;width:42px;background:url(../../i/index/index_icons.png) no-repeat 0px -109px;text-indent:-9999px;position:absolute;right:1px;top:1px;cursor:pointer;}
 
 #nav{border:1px solid #6bb0da;padding:10px 0px 10px 10px;width:988px;height:48px;line-height:24px;margin:0 auto 10px;}
-#nav dl{float:left;height:48px;padding:0px 25px;border-right:1px solid #dee8f2;}
+#nav dl{float:left;height:48px;padding:0px 25px;_padding:0px 22px;border-right:1px solid #dee8f2;}
 #nav .last{border-right:none;}
 #nav dl dt{height:48px;width:26px;float:left;overflow:hidden;}
 #nav dl dd{height:48px;float:left;font-size:12px;}
@@ -234,10 +234,10 @@ a:hover{color:#ee842f;}
 .myZS{width:300px;margin-top:10px;overflow:hidden;}
 .myZS h3{font-size:16px;color:#076ea8;line-height:30px;}
 .myZS dl{ float:left;width:72px;height:72px;margin-bottom:1px; position:relative;}
-.myZS dl dt{ position:absolute; left:28px; top:8px;}
+.myZS dl dt{ position:absolute; left:28px; top:8px; z-index:20;}
 .myZS dl dt a{display:block;color:#fff;text-align:center;height:15px;line-height:15px;}
 .myZS dl dt a:hover,.myZS dl dd a:hover{color:#ee842f;}
-.myZS dl dd{width:72px;height:72px;float:left;overflow:hidden;}
+.myZS dl dd{width:72px;height:72px;float:left;overflow:hidden; position:absolute; left:0; top:0;}
 .myZS dl dd a{display:block;width:72px;height:72px; font-size:18px;background-color:#076ea8;color:#fff;float:left;text-align:center; font-weight:bold;line-height:93px;overflow:hidden;}
 .myZS dl dd a b{display:block;width:80px;font-size:14px;line-height:20px;}
 .zs-loading .citys p{padding-left:35px; background:url(../../i/index_neweather/zsys.png) no-repeat 6px 19px #ebebeb; width:77px; height:72px; float:left; margin-left:2px;}
@@ -336,7 +336,7 @@ a:hover{color:#ee842f;}
 .imgArea a b{display:block;width:68px;height:52px;position:absolute;left:0px;top:0px;color:#fff;z-index:5;font-size:26px;font-weight:normal;line-height:26px;padding:14px 20px;text-align:center;display:none;}
 
 .hotSpot{width:298px; height:372px;}
-.hotSpot h3,.rank h3,.climateChange h3{height:36px;line-height:36px;font-size:18px;font-weight:normal;padding-left:10px; font-weight:bold;}
+.hotSpot h3,.rank h3,.climateChange h3{height:36px;line-height:36px;font-size:18px;font-weight:normal;padding-left:10px; font-weight:bold; overflow:hidden; position:relative;}
 .hotSpot h3{font-size:16px; color:#076ea8; padding:0;}
 .hotSpot h3 b
 {
@@ -351,6 +351,9 @@ a:hover{color:#ee842f;}
 	  height: 1px;
     margin-top: 20px;
     width: 197px;
+	top:0;
+	right:0;
+	position:absolute;
 	display:block;
 	float:right;}
 .hotSpot h3 span,.rank h3 span{padding-left:10px;font-size:14px;}
@@ -633,7 +636,7 @@ right:10px;
 
     font-size: 18px;
     height: 32px;
-    line-height: 26px;
+    line-height: 32px;
 	background:none;
     
     margin-top: 2px;
@@ -790,11 +793,12 @@ right:10px;
 	font-size:14px;
 	color:#8abb4a;
 	height:30px;
-	line-height:30px;}
+	line-height:30px;
+	overflow:hidden;}
 .compere h1 i
 {
 	border-top:1px solid #8abb4a;
-	width:197px;
+	width:160px;
 	height:1px;
 	display:block;
 	 margin-top: 16px;
@@ -909,12 +913,12 @@ right:10px;
 	margin-top:4px;
 	float:right;}
 .climateChange h3{font-size:20px; color:#076ea8; padding:0; height:52px;}
-.climateChange h3 b
+.climateChange h3 p
 {
 	margin-top:11px;
 	display:inline;
 	margin-right:10px;
-	background:#076ea8; display:block; width:13px;
+	background:#076ea8; width:13px;
 	height:15px; float:left;}
 
 .climateChange h3 i
@@ -924,6 +928,9 @@ right:10px;
     margin-top: 16px;
     width: 192px;
 	display:block;
+	position:absolute;
+	top:0;
+	right:0;
 	float:right;}
 .exleft .jj
 {
@@ -965,6 +972,7 @@ right:10px;
 {
 	background:#6bb0da;
 	height:100px;
+	overflow:hidden;
 	float:right;
 	padding-left:8px;
 	width:156px;}
@@ -1098,6 +1106,7 @@ width:16px; height:4px }
 .tq121 ul li div.jfs 
 {
 	float:right;
+	overflow:hidden;
 	background:#ebebeb;
 	height:242px;
 	width:192px;}
