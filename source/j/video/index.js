@@ -75,7 +75,6 @@ W(function() {
 		$(".life dl dd p").css({
 			"color": "#ddd"
 		});
-
 		var urlopen = document.getElementById("comifra").src;
 		var mid = "_b";
 		var str2 = urlopen.substring(0, urlopen.indexOf(".jsp")) + mid + urlopen.substring(urlopen.indexOf(".jsp"));
