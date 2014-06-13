@@ -4,6 +4,7 @@
 	width:1000px;
 	position:relative
 }
+.box{width:1000px;margin:0 auto;}
 #toolBar{height:30px;background-color:#03192e;font-size:12px;min-width:1000px;}
 .midBlock{width:1000px;margin:0 auto;}
 #toolBar .midBlock{height:30px;line-height:30px;position:relative;color:#fff;}
