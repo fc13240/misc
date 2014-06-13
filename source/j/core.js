@@ -14,7 +14,7 @@ var seajs = global.seajs = {
 }
 
 var data = seajs.data = {}
-
+test
 /**
  * util-lang.js - The minimal language enhancement
  */

@@ -45,4 +45,9 @@ if($isShowForm){
 		<p>会把source和min下文件同步到生产服务器(i.tq121.com.cn)</p>
 	</form>
 <?php }?>
+<script type="text/javascript">
+if(~document.body.innerHTML.indexOf('*** error ***')){
+	alert('压缩出现了几个错误,再不处理打屁股！');
+}
+</script>
 </body>
