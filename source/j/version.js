@@ -1,1 +1,0 @@
-__coreCallback("@VERSION12");
