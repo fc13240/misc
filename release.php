@@ -13,6 +13,7 @@ if(!empty($_POST)){
 	if($_SESSION['flag'] != $_POST['flag']){
 		echo '<script>alert("请不要重复发布！");location.href=""</script>';
 	}else{
+		echo '<div id="result">';
 		$isShowForm = false;
 		$type = $_POST['release-type'];
 		$shellName = ($type == 1?'release-misc.sh':'release-web.sh');
@@ -22,6 +23,7 @@ if(!empty($_POST)){
 		echo '<br/>';
 		var_dump($res);
 		echo '<br/><a href="">发布成功,点击刷新</a>';
+		echo '</div>';
 		$_SESSION['flag'] = time();
 	}
 }else{
@@ -46,8 +48,11 @@ if($isShowForm){
 	</form>
 <?php }?>
 <script type="text/javascript">
-if(~document.body.innerHTML.indexOf('*** error ***')){
-	alert('压缩出现了几个错误,再不处理打屁股！');
+var result = document.getElementById('result');
+if(result){
+	if(~result.innerHTML.indexOf('*** error ***')){
+		alert('压缩出现了几个错误,再不处理打屁股！');
+	}
 }
 </script>
 </body>
