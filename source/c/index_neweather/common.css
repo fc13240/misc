@@ -979,7 +979,7 @@ img.lazy{
     z-index: 9;/*防止定位容器的z-index影响*/
 }
 .aboutUs a{color:#fff;}
-#ZipContent{ width:344px; height:38px; float:right; background:url(../../i/index_neweather/search.jpg) no-repeat;}
+#ZipContent{ width:344px; height:38px; float:right; margin-top:15px; background:url(../../i/index_neweather/search.jpg) no-repeat;}
 
 /*popup*/
 .localPopup{height: 55px;overflow:hidden;position:fixed;_position:absolute;bottom: 0;_left:-600px; z-index:9999;width: 100%;}
