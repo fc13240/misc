@@ -1,0 +1,351 @@
+@charset "utf-8";
+/* CSS Document */
+
+.nav ul.weaUnit
+{
+display:none;}
+.con .right {
+    color: #333333;
+    margin-left: 12px;
+    width: 300px;
+}
+.cheWea {
+    border: 1px solid #CCCCCC;
+    margin-top: 10px;
+}
+.forcem{
+
+	overflow: hidden;
+}
+.forcem .local
+{
+    background: none repeat scroll 0 0 #E2ECF7;
+    height: 35px;
+
+}
+.con .left
+{
+	width:640px;}
+.forcem .local p {
+    color: #2E51A5;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 10px;
+}
+.forcem .local p a{
+	color:#2e51a5;
+	font-size:14px;}
+.forcem .local ul li
+{
+	float:left;
+	width:155px;
+	font-size:18px;
+	color:#3466bb;
+	text-align:center;
+	height:35px;
+	background:url(travel/line.jpg) no-repeat right;
+	line-height:35px;}
+.forcem .local ul li a
+{
+
+	height:35px;
+	color:#3466bb;
+	line-height:35px;}
+.forcem .local ul 
+{
+	padding-left:15px;}
+.forcem .local ul li.move
+{
+	background:#fff;}
+.ming 
+{
+	margin-left:10px;
+	clear:both;
+	width:633px;
+	margin-left:10px;}
+.ming ul li
+{
+	height:35px;
+	text-indent:30px;
+	overflow:hidden;
+	background:#f5f7fc;
+	line-height:35px;}
+.ming ul li.move
+{
+	height:35px;
+	background:#fff;
+	line-height:35px;}
+.ming ul li a 
+{
+	color:#2e51a5;
+	font-size:14px;}
+.ming ul 
+{
+	width:315px;
+	float:left;}
+.ming ul.zuobian
+{
+	border-right:1px solid #ccc;
+	}
+.nat
+{
+
+	margin:15px;
+	clear:both;
+	height:35px;
+		margin-left:45px;
+	}
+.nat ul li
+{
+	width:105px;
+	text-align:center;
+	float:left;
+	height:30px;
+
+	line-height:30px;}
+.nat ul li a
+{
+	color:#2e51a5;
+	font-size:14px;}
+.nat ul li.move
+{
+	background:#cdd9ee;}
+.box1
+{
+overflow:hidden;
+	height:420px;
+	}
+.ajfjq
+{
+	display:none;}
+.one .nat ul li
+{
+	width:133px;}
+.one .ming 
+{
+	display:none;}
+.ci ul li 
+		{
+			float: left;
+    height: 30px;
+    line-height: 30px;
+	margin-bottom:10px;
+	display:block;
+    text-align: center;
+	margin-left:15px;
+    }
+	.ci ul li a 
+	{
+		display:block;
+		color: #2E51A5;
+		padding:2px 10px;
+    font-size: 14px;}
+   .ci ul li a.move
+   {
+	   background:#cedaf0;}
+	   
+	   
+	   
+	  .sheng ul li 
+		{
+			float: left;
+    height: 30px;
+    display: inline;
+    line-height: 30px;
+    text-align: center;
+	margin-left:20px;
+    }
+	.sheng ul li a 
+	{
+		display:block;
+		color: #2E51A5;
+		padding:2px 10px;
+
+    font-size: 14px;}
+   .sheng ul li a.move
+   {
+	   background:#cedaf0;} 
+	   .xians {
+    clear: both;
+    margin-left: 10px;
+    width: 633px;
+}
+
+.xians ul li {
+    background: none repeat scroll 0 0 #F5F7FC;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden; 
+    text-indent: 30px;
+	width:315px;
+	float:left;
+}
+.defaults ul li {
+    background: none repeat scroll 0 0 #F5F7FC;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    text-indent: 30px;
+	width:315px;
+	float:left;
+}
+.xians ul.zuobian {
+    border-right: 1px solid #CCCCCC;
+}
+.xians ul {
+
+    width: 630px;
+}
+.defaults ul {
+float:left;
+    width: 630px;
+}
+.defaults div
+{
+	text-align:center;}
+.xians ul li a {
+    color: #2E51A5;
+    font-size: 14px;
+}
+.defaults ul li a {
+    color: #2E51A5;
+    font-size: 14px;
+}
+.xians
+{
+	display:none;
+	}
+
+.sheng 
+{
+	clear:both;}
+	
+.defaults
+{
+	display:block;
+	clear:both;}
+	.move
+{
+	display:block;}
+.defaults div a
+{
+	cursor:pointer;
+	color:#3367bb;
+	padding:10px;}
+.defaults div a.jp-current
+{
+	color:#f60;
+	font-weight:bold;}
+.ci h1
+{
+	color:#666666;
+	text-indent:15px;
+height:25px;
+line-height:25px;
+	font-size:12px;}
+
+
+.footer { clear:both; }
+.tourismLeft { float:left; width:640px; height:1000px; }
+.tourism { width:960px; margin:0 auto; }
+.weizhi p { color: #2E51A5; height: 34px; line-height: 34px; padding-left: 10px; }
+.sousuolan{ background:url(../../i/english/tourism/sousuolan.jpg) no-repeat; width:640px; height:183px; margin-bottom:10px; position:relative;}
+.seach{ left: 81px;
+    position: absolute;
+    top: 53px;}
+.seach input#text_fuza 
+{
+	width:475px;
+	  color: #3366BB;
+	height:35px;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;}
+.seach input.btns
+{
+	cursor:pointer;
+	background:none;
+	border: none;
+	height:25px;
+	width:25px;}
+.tourismRight{ width:300px; float:right;}
+.quji
+{
+	width:620px;
+	margin:0 auto;
+	padding-top:10px;
+	border-top:1px solid #e6ecf6;}
+.quji p
+{
+	text-indent:15px;}
+.quji p a
+{
+	text-align:center;
+	line-height:22px;
+	color:#3466bb;
+	float:left;
+	text-indent:0;
+	display:block;
+	font-size:12px;
+	width:22px;
+	height:22px;}
+.quji p a.move
+{
+	text-indent:0;
+	background:#cdd9ee;}
+.chengshi ul
+{
+	float:right;
+	margin-top: 10px;
+	width:250px;}
+.chengshi ul li
+{
+	width:60px;
+	float:left;}
+.chengshi ul li a 
+{
+	font-size:16px; 
+	color:#3466bb;}
+.chengshi
+{
+	position:absolute;
+	left:30px;
+	width:595px;
+	top:157px;}
+.chengshi span
+{
+	color:#000033;
+	font-size:18px;
+	padding-right:25px;}
+.chengshi select
+{
+	width:200px;
+	height:25px;
+	color: #3466bb;
+	border:1px solid #ccc;
+	line-height:25px;}
+.quji p button {
+    color: #3466BB;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-indent: 0;
+    width: 22px;
+}
+
+
+.ming ul li
+{
+text-indent:0;
+width:315px;
+float:left;}
+.ming ul{width:630px;}
+.seach{top:55px;}
+.seach input#tourism{line-height:35px;} 
+.chengshi ul li .jibie{
+    color: #3466bb;
+    font-size: 16px;
+    
+}

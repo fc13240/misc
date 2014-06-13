@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+body {margin:0; padding:0; font:12px "\5B8B\4F5",san-serif; background:none;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,p{padding:0; margin:0;font-family:"Arial"}   
+li{list-style:None;}
+
+img{border:0;}
+
+
+.con2_left2{width:595px;float:left;margin-top:10px;}
+.con2_left2 .title{width:595px;height:23px;float:left;}
+.con2_left2 .title ul{width:595px;list-style:none;float:left;}
+.con2_left2 .title ul li{list-style:none;width:121px;line-height:23px;text-align:center;cursor:pointer;float:left;margin-left:-3px;font-size:14px;}
+.con2_left2 .title ul li:first-child{margin-left:0px;}
+.con2_left2 .list{width:593px;height:415px;margin-top:2px;float:left;overflow:hidden;}
+
+.htcurrbq span.span2,.htcurrbq span.span1{width:121px;height:23px;display:block;background:url(../../i/cma/201402071542.png) center no-repeat;color:#fff;}
+.htbq span.span1{width:121px;height:23px;display:block;background:url(../../i/cma/201402071543.png) center no-repeat;color:#333;}
+.htbq span.span2{background:url(../../i/cma/201402071544.png) center no-repeat;color:#333;width:121px;height:23px;display:block;}
+
+

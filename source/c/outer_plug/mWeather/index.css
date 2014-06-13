@@ -1,0 +1,123 @@
+.nanbox { width:1004px; height:70px; margin:0 auto; text-align:center; line-height:70px; font-size:34px; color:#005890; font-family:"微软雅黑"; font-weight:bold; }
+.topsaetex { width:1004px; margin:10px auto; }
+.topsaetebox1 { width:259px; float:left; margin-right:9px; }
+.saetex { width:257px; height:32px; float:left; border:1px solid #0088d6; }
+.topsaetexpn { width:212px; height:28px; float:left; margin-top:2px; border-right:1px solid #0088d6 }
+.topsaetexpn input { width:202px; height:28px; line-height:32px; padding-left:10px; font-size:13px; color:#999; }
+.topsaetutton { width:43px; height:32px; float:left; }
+.topsaetutton input { width:43px; height:32px; background-image:url(../images/index_06.jpg); cursor:pointer; }
+.topsaetitle { width:259px; float:left; margin-top:10px; }
+.topsaetitle1 { width:249px; height:35px; background-image: url(http://i.tq121.com.cn/i/outer_plug/mWeather/index_11.jpg); float:left; line-height:35px; padding-left:10px; font-size:14px; font-weight:bold; }
+.topsaetitle2 { width:257px; height:232px; border:1px solid #b5babe; border-top:0; float:left; }
+.topsaetitle2 ul { width:237px; float:left; margin:0 0 0 10px; display:inline; }
+.topsaetitle2 ul li { width:237px; float:left; line-height:28px; font-size:14px; }
+.topsaetitle2 ul li b { width:15px; height:50px; float:left; }
+.topsaetitle2 ul li span { width:220px; float:left; }
+.topsaebott { width:257px; height:40px; background:#f3f3f3; float:left; font-family:'微软雅黑'; line-height:40px; font-size:16px; font-weight:bold; text-align:center; margin-top:24px; }
+.topsaetitle2_tab { float:left; margin:7px 0 7px 10px; display:inline; line-height:22px; font-size:14px; }
+.topsaetitle2_tab2 { float:left; margin:7px 0 7px 10px; display:inline; font-size:14px; }
+.topsaetebox2 { width:515px; float:left; }
+.minbanner { width:515px; height:279px; float:left; margin-bottom:10px; }
+.newtjk { width:515px; float:left; margin-bottom:10px; }
+.newtjktit { width:514px; height:30px; border-right:1px solid #a4a4a4; border-top:3px solid #0088d6; background-image:url(../images/indexs_18.jpg); float:left; border-left:1px solid #a4a4a4; }
+.newtjktit_sk { float:right; margin-right:10px; line-height:30px; }
+.newtjmo { float:right; font-size:12px; margin-right:10px; line-height:35px; font-weight:normal; }
+.newtjmo2 { float:left; line-height:35px; color:#07426f }
+.newtjktit ul { float:left; }
+.newtjktit ul li { width:112px; height:30px; float:left; border-right:1px solid #a4a4a4; font-size:14px; text-align:center; cursor:pointer; line-height:30px; }
+.newtjktit ul li.hover { width:112px; height:30px; float:left; border-right:1px solid #a4a4a4; font-size:16px; text-align:center; font-family:"微软雅黑"; color:#F00; background-color:#FFF; line-height:30px; font-weight:bold; }
+.newtjklist { width:515px; height:147px; float:left; }
+.newtjklist_span { color:#999; }
+.newboxtit2 { width:515px; height:147px; float:left; }
+.newboxtit2 ul { width:515px; float:left; margin-top:10px; }
+.newboxtit2 li { width:515px; height:28px; float:left; font-size:14px; line-height:28px; }
+.newboxtit2 li img { float:left; width:17px; height:25px; margin:2px 0 0 10px; display:inline; }
+.newboxtit2 li span { width:400px; height:28px; float:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.newboxtit2 li i { width:60px; height:28px; float:right; text-align:center; color:#999; font-style:normal; }
+.newboxtit3 { width:515px; height:147px; float:left; }
+.newboxtit3 ul { float:left; margin-top:15px; margin-left:35px; display:inline; }
+.newboxtit3 li { width:150px; height:150px; float:left; font-size:14px; line-height:28px; }
+.newboxtit3 li img { float:left; width:107px; height:107px; margin:0 0 0 20px; display:inline; }
+.newboxtit3 li span { width:150px; float:left; text-align:center; }
+.sjjzdh01 { }
+.sjjzdh01 a { color:#0088d6; }
+.sjjzdh01 a:hover { color:#0088d6; }
+.minnavleft { width:175px; height:811px; float:left; margin-right:10px; }
+.minnavtabx { width:175px; height:577px; float:left; margin-bottom:10px; background-color:#e9f7ff }
+.minnavtable { float:left; line-height:33px; font-size:14px; }
+.minnavtable td { border-bottom:1px solid #fff; }
+.minnavbanner { width:175px; height:66px; float:left; }
+.minnavbbiaoq { width:175px; height:153px; float:left; margin-top:10px; }
+.minnavbbiao_sp { width:76px; height:28px; line-height:28px; text-align:center; background:#a93c99; margin:5px 0; color:#FFF; display:block; }
+.topsaetebox3 { width:212px; float:right; }
+.xtopsaetitle { width:212px; float:left; }
+.xtopsaetitle1 { width:202px; height:35px; background-image:url(../images/index_03.jpg); float:left; line-height:35px; padding-left:10px; font-size:14px; font-weight:bold; }
+.xtopsaetitle2 { width:210px; border:1px solid #b5babe; border-top:0; float:left; }
+.xtopsaetitle2_tab { float:left; margin:0 0 7px 10px; display:inline; line-height:28px; font-size:14px; }
+.xtopsaetitle2_tabs { float:left; margin:0 0 7px 10px; display:inline; line-height:25px; font-size:14px; border-bottom:1px dashed #d0d0d0; padding-bottom:10px; }
+.xtopsaetitle2_tabs a { font-size:14px; }
+.xtopsaetitle2_tabs a:hover { font-size:14px; font-weight:bold; color:#e40000; }
+.xtopsaetitle2_tab a { font-size:14px; }
+.xtopsaetitle2_tab a:hover { font-size:14px; font-weight:bold; color:#e40000; }
+.chakanzq { width:212px; height:44px; float:left; margin:10px 0; }
+/*宣教*/
+
+#picBox { width:190px; height:224px; overflow:hidden; position:relative; float:left; margin-top:10px; }
+#picBox ul#show_pic { margin:0; padding:0; list-style:none; height:207px; width:950px; position:absolute; float:left; }
+#picBox ul#show_pic li { width:190px; float:left; height:207px; }
+#picBox ul#show_pic li img { width:124px; height:173px; display:block; margin:0 31px 0 35px; float:left; display:inline; }
+#picBox ul#show_pic li span { width:190px; text-align:center; float:left; }
+#icon_num { position:absolute; bottom:5px; float:left; margin-left:15px; display:inline; }
+#icon_num li { float:left; background:#c7c7c7; width:30px; height:5px; list-style:none; text-align:center; cursor:pointer; margin-right:2px; }
+#icon_num li:hover, #icon_num li.active { background:#0073cd; }
+/*自定义样式的下拉框*/
+.tqitit { width:237px; height:31px; float:left; margin:2px 0 0 0; display:inline; border-bottom:1px #d0d0d0 solid; }
+.tqitit .span01 { float:left; margin:5px 0 0 25px; display:inline; }
+.tqitit .span02 { float:left; margin:0 0 0 35px; display:inline; font-weight:normal; }
+.ys2 { width:75px; height:31px; float:left; }
+.s3 { width:75px; height:31px; float:left; }
+.select_box { width:75px; height:31px; line-height:31px; background: url(http://i.tq121.com.cn/i/outer_plug/mWeather/indexbgds.jpg) no-repeat; position:relative; cursor:pointer; }
+.select_box span.search_site { width:75px; height:31px; line-height:31px; *line-height:31px;
+overflow:hidden; font-weight:normal; }
+.select_box .select_list { height: 107px; overflow: scroll; display: none;width:80px; background:#fff; border:1px solid #3582cf; position:absolute; top:31px; left:-1px;z-index:11}
+.select_box .select_list a { display:block; height:31px; text-indent:5px; font-weight:normal; }
+.select_box .select_list a.active { background:#3582cf; color:#fff; text-decoration:none; font-weight:normal; }
+/*天气信息*/
+.tianqnecon { width:237px; height:100px; float:left; margin-left:10px; display:inline; }
+.tianqnecon_1 { width:29px; height:100px; float:left; margin-top:6px; }
+.tianqnecon_1 img{ display:none;}
+.tianqnecon_2 { width:208px; height:44px; line-height:22px; float:right; font-size:13px; margin-top:5px; }
+.tianqnecon_2 a{ height:44px; display:none;}
+.tianqnecon_3 { width:208px; height:28px; line-height:28px; float:right; font-size:13px; font-weight:bold; color:#e40000; }
+.tianqnecon_3 a{ color:#e40000; }
+.tianqnecon_3 a:hover{ text-decoration:underline }
+
+.tianqnecon_4 { width:208px; height:28px; line-height:28px; float:right; font-size:14px; margin-top:5px; }
+/*专题专栏*/
+
+.topsaetitle3 { width:257px; height:190px; border:1px solid #b5babe; border-top:0; float:left; }
+.topsaetitle3 ul { width:237px; float:left; margin:0 0 0 10px; display:inline; }
+.topsaetitle3 ul li { width:237px; height:28px; float:left; line-height:28px; font-size:14px; }
+.topsaetitle3 ul li b { width:15px; height:50px; float:left; }
+.topsaetitle3 ul li span { width:220px; float:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+/*最新灾情*/
+
+.topsaetitle4 { width:210px; height:244px; float:left; }
+.topsaetitle4 ul { width:188px; float:left; margin:0 0 0 10px; display:inline; }
+.topsaetitle4 ul li { width:188px; height:28px; float:left; line-height:28px; font-size:14px; }
+.topsaetitle4 ul li b { width:15px; height:50px; float:left; }
+.topsaetitle4 ul li span { width:170px; float:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+/*监测评估*/
+
+.topsaetitle5 { width:210px; height:244px; float:left; }
+.topsaetitle5 ul { width:188px; float:left; margin:0 0 0 10px; display:inline; }
+.topsaetitle5 ul li { width:188px; float:left; line-height:28px; font-size:14px; margin-bottom:10px; border-bottom:1px dashed #d0d0d0; padding-bottom:10px; }
+.topsaetitle5 ul li b { width:15px; height:50px; float:left; }
+.topsaetitle5 ul li span { width:170px; float:left; }
+/*科普*/
+
+.topsaetitle6 { width:210px; float:left; }
+.topsaetitle6 ul { width:188px; float:left; margin:0 0 0 10px; display:inline; }
+.topsaetitle6 ul li { width:188px; float:left; line-height:28px; font-size:14px; margin-bottom:10px; border-bottom:1px dashed #d0d0d0; padding-bottom:10px; }
+.topsaetitle6 ul li b { width:15px; height:50px; float:left; }
+.topsaetitle6 ul li span { width:170px; float:left; }

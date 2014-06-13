@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+*
+   {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+	font-weight:normal;
+    }
+a img
+    {
+	border:0px solid #dcdddd;
+	}
+body 
+    {
+	font-family: Arial, Helvetica, sans-serif;
+	background:#F0F0F0;
+	color:#000;
+	font-size:12px;
+font-style:normal;
+	}
+i 
+    {
+font-style:normal;
+}
+a 
+    {
+	color:#36B;
+	text-decoration:none;
+         font-size:12px;
+         outline: medium none;
+	}
+.sumb dl a:hover dd 
+    {
+	color:#EE842F;
+	text-decoration:none;
+	}
+.sumb
+{
+	width:260px;
+	position:relative;
+	background:#F0F0F0;
+	top:0px;
+	float:left;
+	}
+.sumb dl dt
+{
+	background:url(../../i/en/home/index_m.jpg) no-repeat;
+	width:125px;
+	height:24px;
+	line-height:24px;
+	margin-bottom:12px;
+	text-align:center;
+	color:#000033;
+	font-size:14px;}
+.sumb dl dd
+{
+	font-size:14px;
+	word-break:break-all;
+	color:#333333;
+	margin-bottom:23px;
+	line-height:18px;}

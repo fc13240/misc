@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+* { margin: 0; padding: 0; list-style:none; font-weight:normal; }
+a img { border:0px solid #dcdddd; }
+body { font-family:"Microsoft Yahei","Tahoma","SimSun"; background:#f4f3f3; color:#000; font-size:12px; font-style:normal; }
+i { font-style:normal; }
+a { color:#444343; text-decoration:none; font-size:12px; outline: medium none; }
+a:hover { color:#F60; text-decoration:underline; }
+.main
+{
+	margin:0 auto;
+	background:#fff;
+	width:960px;}
+.main .nav
+{
+	background:url(../../i/tqzt/worldMetDay_2014/logo.jpg) no-repeat #fff;
+	height:42px;
+	line-height:42px;}
+.main .nav ul li
+{
+	float:left;
+	padding:0px 10px;
+	background:url(../../i/tqzt/worldMetDay_2014/line.jpg) no-repeat right;
+	}
+.main .nav ul
+{
+	float:right;}
+.banner
+{
+	height:220px;
+	margin-bottom:10px;}
+.box
+{
+	width:945px;
+	margin:0 auto;}
+.gdt
+{
+	overflow:hidden;
+	height:312px;
+	width:441px;
+	float:left;}
+.zhaiYao
+{
+	height:312px;
+	margin-bottom:15px;
+	float:left;
+	border:1px solid #dfe0e1;
+	margin-left:15px;
+	display:inline;
+	width:250px;}
+.zhaiYao h1
+{
+	margin-left:5px;
+	font-size:20px;
+	padding-top:15px;
+	text-indent:10px;
+	color:#608fc0;
+	margin-bottom:10px;
+	font-weight:bold;
+	background:url(../../i/tqzt/worldMetDay_2014/navline.jpg) no-repeat left bottom;}
+.zhaiYao h2
+{
+	height:30px;
+	line-height:30px;
+	text-align:center;}
+.zhaiYao h2 a
+{
+	color:#294a6d;
+	font-size:14px;
+	font-weight:bold;}
+.zhaiYao p
+{
+	width:230px;
+	margin:0 auto;
+	line-height:20px;}
+.zhaiYao ul li a 
+{
+	font-size:14px;}
+.zhaiYao ul li
+{
+	overflow: hidden;
+	background:url(../../i/tqzt/worldMetDay_2014/dian.jpg) no-repeat 0px 10px;
+	line-height:30px;
+	padding-left:10px;
+	margin-left:10px;
+	height:30px;}
+.pic
+{
+	float:right;}
+.act 
+{
+	clear:both;}
+.act h1
+{
+	margin-bottom:10px;}
+.openDay ul
+{
+	border:1px solid #c3c4c1;
+	padding-top:20px;
+	padding-bottom:20px;
+	float: left;
+	height:auto;
+}
+.openDay ul li
+{
+	float:left;
+	height:25px;
+	margin-left:20px;
+	display:inline;
+	line-height:25px;
+	padding-left:10px;
+	width:280px;
+	background:url(../../i/tqzt/worldMetDay_2014/ndian.jpg) no-repeat 0px 10px;}
+.openDay ul li a 
+{
+	font-size:14px;}
+	
+	
+.clearfix{zoom:1}
+.clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
+.fr{ float:right; display:inline;}
+
+#show { position:relative; overflow:hidden; width:441px; height:312px; }
+#show .bigImg{ position:absolute; top:0; left:0px; width:1764px;}
+#show .bigImg li{ float:left;}
+#show .bottom{ position: absolute; width:441px; left:0; top:274px; height:38px;  color:#fff; z-index:1;}
+#show .bottom p{ text-indent:19px; float:left; width:300px;  overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:14px;line-height:38px;}
+#show .bottom ul{ float:right; padding-right:7px; _padding-right:0px; margin-top:12px; }
+#show .bottom ul li{ width:15px; height:15px; float:left; margin-right:15px; background:#55606a; cursor:pointer; color:#000; font-size:12px; font-weight:bold; text-indent:4px; }
+#show .bottom ul li.on{ background:#fff;}
+#show .bottomBg{ background:#000; width:100%; height:38px; position:absolute; left:0; top:274px; opacity:0.5; filter:alpha(opacity=50)}
+
+
+.act #showBig { position:relative; overflow:hidden; width:937px; height:682px; border:1px solid #e1e1e1;}
+.act #showBig .bigImg{ position:absolute; top:0; left:0px; width:14504px;}
+.act #showBig .bigImg li{ float:left;}
+.act #showBig .bigImg li p{ font-size:16px; width:907px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; letter-spacing:2px; padding:5px 10px;;}
+.act #showBig .bigImg li p i{ font-size:22px; letter-spacing:1px;}
+.act #showBig .bottom{ background:#fcfcfc; border-top:1px solid #f7f7f7; position: absolute; width:100%; left:0; top:638px; height:38px; z-index:1;padding-top:15px;}
+.act #showBig .bottom ul{ margin:0 auto; width:138px;}
+.act #showBig .bottom ul li{ background:url(../../i/tqzt/worldMetDay_2014/icon.png) no-repeat; background-position:-5px -107px; width:14px; height:14px; float:left; margin-right:8px; cursor:pointer; font:0; font-size:0; }
+.act #showBig .bottom ul li.on{ background-position:-5px -130px;}
+.act #showBig .showLeft,.act #showBig .showRight{ display:block; background:url(../../i/tqzt/worldMetDay_2014/icon.png) no-repeat 0 -48px; cursor:pointer;  width:29px; height:45px; position:absolute; left:15px; top:250px; opacity:0.3; filter:alpha(opacity=30);}
+.act #showBig .showRight{ background:url(../../i/tqzt/worldMetDay_2014/icon.png) no-repeat 0 0; left:893px;}
+
+.microBlogs .blog{ margin-top:0;}
