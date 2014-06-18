@@ -1099,7 +1099,7 @@ width:16px; height:4px }
 .tq121 .prev,
 .tq121 .next {  width: 40px; height: 100px; background: url(../../i/weather2014/city/roll.png) no-repeat; position: absolute; top: 115px;}
 .tq121 .prev { left: 0; }
-.tq121 .next { background-position: -17px 6px;    right: 20px;}
+.tq121 .next { left: 279px; background-position: -17px 6px;}
 .tq121 ul li a {
 	display:block;
 	width:320px;
