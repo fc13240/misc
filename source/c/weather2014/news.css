@@ -18,7 +18,7 @@
 .news_btq { float:right; }
 .news_zjft ul { padding-top:10px; clear:both; }
 .news_zjft ul li { background:url(http://10.14.85.90/source/i/weather2014/city/c8.jpg) no-repeat 4px 10px; padding-left:23px; overflow:hidden; height:30px; line-height:30px; }
-.rank { width:300px; background-color:#e8e8e8; margin-top:10px; margin-bottom:10px; }
+.rank { width:300px; background-color:#e8e8e8; margin-top:10px; margin-bottom:31px; }
 .rank h3 { background-color:#006699; height:35px; line-height:35px; font-size:20px; text-indent:10px; color:#fff; }
 .rank h3 a { color:#fff; padding-right:10px; }
 .rank h3 span { font-size:12px; }
@@ -91,7 +91,8 @@ right: 20px; }
 
 
 
-#focus {width:300px; height:280px; overflow:hidden; position:relative;}
+#focus {width:300px; height:280px; overflow:hidden; position:relative; padding-top:20px; border-top:3px solid #8bbb4b;}
+#focus h1{ position:absolute; top:0px; z-index:9; width:100px; height:27px; font-size:20px; background:#8bbb4b; line-height:27px; text-align:center; color:#fff;}
 #focus ul {height:280px; position:absolute;}
 #focus ul li {float:left; width:300px; height:280px; overflow:hidden; position:relative; background:#000;}
 #focus ul li div {position:absolute; overflow:hidden;}
