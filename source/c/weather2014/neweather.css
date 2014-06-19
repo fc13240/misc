@@ -939,6 +939,7 @@ right:10px;
 .exbg
 {
 	position:absolute;
+	left:0;
 	top:0;}
 .exbg i
 {
@@ -1096,9 +1097,9 @@ width:16px; height:4px }
 
 /*上一个  下一个*/
 .tq121 .prev,
-.tq121 .next {  width: 40px; height: 100px; background: url(../images/btn.png) no-repeat; position: absolute; top: 115px;}
+.tq121 .next {  width: 40px; height: 100px; background: url(../../i/weather2014/city/roll.png) no-repeat; position: absolute; top: 115px;}
 .tq121 .prev { left: 0; }
-.tq121 .next { left: 279px; background-position: right }
+.tq121 .next { left: 279px; background-position: -17px 6px;}
 .tq121 ul li a {
 	display:block;
 	width:320px;
@@ -1154,3 +1155,11 @@ width:16px; height:4px }
 	height:45px;
 	line-height:45px;
 	border-bottom:1px dashed #d4d4d5;}
+.myZS ul li span img {
+  position:relative;
+  top:8px;
+}
+.myZS ul li span
+{
+	padding:0px 5px;
+	float:left;}
