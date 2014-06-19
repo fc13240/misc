@@ -39,7 +39,7 @@
 .rank h3 .on { background-color: #eeeeee; color: #076ea8; }
 .rank .detail { width:280px; border-top:1px solid #000; height:40px; line-height:40px; display:block; text-align:right; font-size:12px; color:#464a4e; }
 .rank .detail.on { background-color: #e8e8e8; }
-.news_right { float:right; }
+.news_right { float:right; width:300px; overflow:hidden; }
 .news_video { width:685px; float:left; }
 .news_zt { width:300px; }
 .news_video h1 { margin-bottom:10px; color:#006699; }
@@ -88,16 +88,18 @@ right: 20px; }
 .news_jctj .list li { background: url("http://10.14.85.90/source/i/weather2014/city/c8.jpg") no-repeat scroll -1px 12px transparent; height: 30px; line-height: 30px; padding-left: 15px; }
 .news_jctj .list li a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 280px; }
 .news_jctj .list li a:hover { color: #076ea8; }
-/*本例css*/
-.www51buycom { width: 800px; height: 330px; margin:25px auto; position: relative; overflow:hidden; margin-bottom: 15px; }
 
-/*数字按钮样式*/
-.www51buycom .num { overflow:hidden; height: 25px; position: absolute; bottom:12px; left: 15px; zoom:1; z-index:3 }
-.www51buycom .num li { width: 25px; height: 25px; line-height: 25px; text-align: center; font-weight: 400; font-family: "微软雅黑", Arial; color: #FFFFFF; background: #444444; margin-right: 10px; border-radius:50%; cursor:pointer; float: left; }
-.www51buycom .num li.on { background: #FF7700; } /*当前项*/
 
-/*上一个  下一个*/
-.www51buycom .prev,
-.www51buycom .next { display: none; width: 40px; height: 100px; background: url(../images/btn.png) no-repeat; position: absolute; top: 115px;}
-.www51buycom .prev { left: 0; }
-.www51buycom .next { right: 0; background-position: right }
+
+#focus {width:300px; height:280px; overflow:hidden; position:relative;}
+#focus ul {height:280px; position:absolute;}
+#focus ul li {float:left; width:300px; height:280px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus ul li a img{ width:300px; height:280px;}
+#focus .btnBg {position:absolute; width:800px; height:20px; left:0; bottom:0; background:#000;}
+#focus .btn {position:absolute; width:780px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(http://10.14.85.90/source/i/weather2014/city/rollL.png) no-repeat 0 0; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:-22px; background-position:right top;background:url(http://10.14.85.90/source/i/weather2014/city/rollR.png) no-repeat 0 0; cursor:pointer; }

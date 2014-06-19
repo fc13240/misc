@@ -58,19 +58,19 @@ define(function(require){
 	}
 	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
 	$("#focus").append(btn);
-	$("#focus .btnBg").css("opacity",0.5);
+	$("#focus .btnBg").css("opacity",1);
 
 	//为小按钮添加鼠标滑入事件，以显示相应的内容
-	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+	$("#focus .btn span").css("opacity",1).mouseenter(function() {
 		index = $("#focus .btn span").index(this);
 		showPics(index);
 	}).eq(0).trigger("mouseenter");
 
 	//上一页、下一页按钮透明度处理
-	$("#focus .preNext").css("opacity",0.2).hover(function() {
-		$(this).stop(true,false).animate({"opacity":"0.5"},300);
+	$("#focus .preNext").css("opacity",1).hover(function() {
+		$(this).stop(true,false).animate({"opacity":"1"},300);
 	},function() {
-		$(this).stop(true,false).animate({"opacity":"0.2"},300);
+		$(this).stop(true,false).animate({"opacity":"1"},300);
 	});
 
 	//上一页按钮
