@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>选择城市</title>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/mobile/jq-cookie.js"></script>
+<script>W.css('c/mobile/css.css')</script>
+<script>W.use('j/mobile/city.js')</script>
+<script>
+$(function(){
+	var id = document.URL.match(/\d{7}/);
+	var url = './city3jdata/station/'+id+'.html';
+	$.getJSON(url,function(data){
+		var li = '';
+		for (i in data) {
+			li += '<li><a data-id="'+id+i+'">'+data[i]+'</a></li>';
+		};
+		$('.citylist ul').append(li);
+	})
+	$('.hotcityb ul').find('a').live('click',function(){
+		var dataId = $(this).attr('data-id');
+		var citys = $.cookie('citys') || '';
+		var arrCity = citys.split('/');
+		var al = true;
+		for (var i = arrCity.length - 1; i >= 0; i--) {
+			if(parseInt(arrCity[i]) == dataId){
+				var al=false;
+				alert('该城市已添加过');
+			}
+		};
+		if(al){
+			var data = dataId+','+$(this).text();
+			arrCity.push(data);
+		}
+		citys = arrCity.join('/');
+		$.cookie('citys',citys,{expires:30,path: '/'});
+	})
+})
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div class="wrap">
+		<header class="head">
+			<div class="logo">
+				<a href=""></a>
+			</div>
+			<div class="net">
+				<a href="http://www.weather.com.cn" target="_blank">网页版</a>
+			</div>
+		</header>
+		<div class="title">
+			<a href="javascript:history.go(-1);" class="pre"><img src="http://i.tq121.com.cn/i/mobile/images/pre.jpg"></a>
+			选择城市
+			<a href="http://wap.weather.com.cn/index.html" class="home"><img src="http://i.tq121.com.cn/i/mobile/images/home.jpg"></a>
+		</div>
+		<div class="search">
+			<img src="http://i.tq121.com.cn/i/mobile/images/ss.jpg">
+			<input id="text_fuza" type="text" value="搜索城市(中文/拼音)">
+		</div>
+		<div class="hotcity">
+			<div class="hotcityb">
+				<h1>热门城市</h1>
+				<ul>
+					<li>
+						<a href="citmani.html" data-id="101010100">北京</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101020100">上海</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101280101">广州</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101230101">福州</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101040100">重庆</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101110101">西安</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101300101">南宁</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101280601">深圳</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101290101">昆明</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101120101">济南</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101200101">武汉</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101310101">海口</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101310201">三亚</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101060101">长春</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101220101">合肥</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101180101">郑州</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101030100">天津</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101100101">太原</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101240101">南昌</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101140101">拉萨</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101150101">西宁</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101320101">香港</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101330101">澳门</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101340101">台北</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101090101">石家庄</a>
+					</li>
+					<li>
+						<a href="citmani.html" data-id="101050101">哈尔滨</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="hotcity">
+			<div class="hotcityb">
+				<h1>更多查询</h1>
+				<p>
+					<a href="citylist/china.html">国内城市</a>
+					<a href="citylist/jingdian.html">国内景点</a>
+					<a href="citylist/guoji.html">国际城市</a>
+				</p>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>
+				<a href="#">天气应用</a>
+				|
+				<a href="#">意见反馈</a>
+			</p>
+			<p>Copyright@中国气象局公共气象服务中心</p>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

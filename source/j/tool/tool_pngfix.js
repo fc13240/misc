@@ -1,4 +1,4 @@
-//ie6下png透明背景bug修复
+//ie6下img标签png透明背景bug修复
 function tool_pngfix() {
   var arVersion = navigator.appVersion.split("MSIE")
   var version = parseFloat(arVersion[1])
@@ -17,5 +17,6 @@ function tool_pngfix() {
 	  }
 	}
   }
+
 }
 

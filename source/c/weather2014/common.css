@@ -995,3 +995,18 @@ img.lazy{
 .localPopup span a{color: #fff;}
 .localPopup span a:hover{text-decoration: underline;}
 .localPopup i a{display: block;height: 22px;width: 25px;background: none;position: absolute;left: 3px;top: 11px;cursor:pointer;}
+/*liu groll picture*/
+.pic { margin-top: 3px; }
+.pic h1 { border-top: 3px solid #076ea8; color: #076ea8; font-size: 18px; height: 38px; line-height: 28px; text-indent: 10px; }
+#scrollPic { height: 227px; overflow: hidden; position: relative; width: 300px;}
+#scrollPic ul.bigImg { width: 1200px; position:absolute;}
+#scrollPic ul.bigImg li { float: left; }
+#scrollPic ul.botIcon { left: 0; position: absolute; top: 170px; width: 110px; }
+#scrollPic ul.botIcon li { cursor:pointer; background:url(http://i.tq121.com.cn/i/weather2014/city/bot1.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot1.png"); float: left; margin-right: 5px;   width: 20px;height: 4px;  font:0; }
+#scrollPic ul.botIcon li.on { background:url(http://i.tq121.com.cn/i/weather2014/city/bot2.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot2.png"); }
+#scrollPic p, #scrollPic .bottomBg { bottom: 0px; height: 30px; left: 0px; line-height: 30px; position: absolute; width: 100%; }
+#scrollPic p { color: #ffffff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1; }
+#scrollPic .bottomBg { background: none repeat scroll 0% 0% #000000; opacity: 0.6; filter:alpha(opacity=60);}
+#scrollPic .rollLeft, #scrollPic .rollRight { background-position: 5px 6px;background-repeat: no-repeat; cursor: pointer; height: 40px; position: absolute; top: 89px; width: 30px; opacity:0.6; filter:alpha(opacity=60); }
+#scrollPic .rollLeft { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollL.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollL.png");  left: 20px; }
+#scrollPic .rollRight { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollR.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollR.png");  right: 20px; }
