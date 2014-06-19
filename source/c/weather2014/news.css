@@ -32,7 +32,7 @@
 .rank .ord i { font-style:normal; font-size:12px; display:block; width:18px; height:18px; line-height:18px; text-align:center; margin-top:
 }
 .rank li.on i { background-color:#076ea8; color:#fff; }
-.rank .city { width:70px; float:left; }
+.rank .city { width:259px; float:left; text-align: left; }
 .rank .prov { width:50px; float:left; }
 .rank .wd { width:125px; float:left; color:#076ea8; }
 .rank .wd a { color:#076ea8; }
