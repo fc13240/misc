@@ -1010,3 +1010,7 @@ img.lazy{
 #scrollPic .rollLeft, #scrollPic .rollRight { background-position: 5px 6px;background-repeat: no-repeat; cursor: pointer; height: 40px; position: absolute; top: 89px; width: 30px; opacity:0.6; filter:alpha(opacity=60); }
 #scrollPic .rollLeft { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollL.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollL.png");  left: 20px; }
 #scrollPic .rollRight { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollR.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollR.png");  right: 20px; }
+
+.topNav { background:none repeat scroll 0 0 #076ea8; height:40px; line-height:40px; margin-top:10px }
+.topNav span { color:#6bb0d9; float:left; font-size:28px; line-height:35px }
+.topNav a { display:inline; color:#fff; float:left; font-size:16px; width:118px; overflow:hidden; text-align:center; background:#076ea8; }

@@ -91,16 +91,22 @@ right: 20px; }
 
 
 
-#focus {width:300px; height:280px; overflow:hidden; position:relative; padding-top:20px; border-top:3px solid #8bbb4b;}
-#focus h1{ position:absolute; top:0px; z-index:9; width:100px; height:27px; font-size:20px; background:#8bbb4b; line-height:27px; text-align:center; color:#fff;}
+#focus {width:300px; height:210px; overflow:hidden; position:relative; padding-top:20px; border-top:3px solid #8bbb4b;}
+#focus h1{ position:absolute; top:20px; left:10px; z-index:9; width:100px; height:27px; font-size:20px; background:#8bbb4b; line-height:27px; text-align:center; color:#fff;}
 #focus ul {height:280px; position:absolute;}
-#focus ul li {float:left; width:300px; height:280px; overflow:hidden; position:relative; background:#000;}
+#focus ul li {float:left; width:300px; height:210px; overflow:hidden; position:relative; background:#000;}
 #focus ul li div {position:absolute; overflow:hidden;}
-#focus ul li a img{ width:300px; height:280px;}
-#focus .btnBg { display:none;position:absolute; width:800px; height:20px; left:0; bottom:0; background:#000;}
+#focus ul li a img{ width:300px; height:210px;}
+#focus .btnBg { display:none;position:absolute; width:300px; height:20px; left:0; bottom:0; background:#000;}
 #focus .btn {display:none;position:absolute; width:780px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
 #focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
 #focus .btn span.on {background:#fff;}
 #focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(http://10.14.85.90/source/i/weather2014/city/rollL.png) no-repeat 3px 33px; cursor:pointer;}
 #focus .pre {left:0;}
 #focus .next {right:-22px; background-position:right top;background:url(http://10.14.85.90/source/i/weather2014/city/rollR.png) no-repeat -3px 33px; cursor:pointer; }
+
+.ggt
+{
+	width:1000px;
+	height:90px;
+	background:#ccc;}
