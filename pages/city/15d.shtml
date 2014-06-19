@@ -4,7 +4,7 @@
 <link rel="dns-prefetch" href="http://i.tq121.com.cn">
 <meta charset="utf-8" />
 <title>北京</title>
-<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
+<script type="text/javascript" language="JavaScript" src="http://10.14.85.90/source/j/core.js"></script>
 <script>W.css('c/core.css','c/weather2014/common.css','c/weather2014/city.css')</script>
 <script>W.use('j/weather2014/city')</script>
 <!--[if lt IE 7]>

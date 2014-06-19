@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<input id="whichDay" type="hidden" value="2_3d" >
+<input id="whichDay" type="hidden" value="7d" >
 <div class="box">
 	<div class="ad clearfix">
 		<div class="ad1 fl">广告310*90</div>
@@ -73,7 +73,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="con d23 clearfix">
+	<div class="con d7 clearfix">
 		<div class="left fl">
 			<!--选项卡begin-->
 			<ul id="someDayNav" class="clearfix nav">
@@ -347,7 +347,6 @@
 							</p>
 							<div class="slid"></div>
 						</li>
-						
 					</ul>
 				</div>
 			</div>
@@ -388,6 +387,24 @@
 					<span>-15℃~-33℃</span>
 					<b>东北转东南风</b>
 					<strong>1-2级转3-4级</strong>
+				</li>
+				<li data-dn="7d1">
+					<i>11时-13时</i> |
+					<img class='img1' width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png">
+					<img class="img2" width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+					<em>晴间多云</em>
+					<span>-15℃~-33℃</span>
+					<b>东北</b>
+					<strong>1-2级</strong>
+				</li>
+				<li data-dn="7d1">
+					<i>11时-13时</i> |
+					<img class='img1' width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png">
+					<img class="img2" width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+					<em>晴间多云</em>
+					<span>-15℃~-33℃</span>
+					<b>东北</b>
+					<strong>1-2级</strong>
 				</li>
 				<li data-dn="7d1">
 					<i>11时-13时</i> |

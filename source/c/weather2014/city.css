@@ -1,4 +1,4 @@
-body { background:  #ffffff; color: #252525; }
+body { background:url(../../i/weather2014/city/111.jpg) -32px -110px;  #ffffff; color: #252525; }
 i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .ad { height: 90px; }
 .ad .ad1 { background: none repeat scroll 0% 0% #cccccc; height: 100%; width: 310px; }
@@ -49,11 +49,9 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .left .m ul.t li.sk .tem i { font-size: 24px; }
 .left .m ul.t li.sk .num { font-size: 16px; margin-left: 30px; margin-top: 3px; text-align: left; }
 .left .m ul.t li.sk .num span { display: inline-block; height: 24px; line-height: 24px; padding-left: 27px; }
-.left .m ul.t li.sk .num .sp1 { background: url("http://i.tq121.com.cn/i/weather2014/city/c2.jpg") no-repeat scroll 0px -1px transparent; }
-.left .m ul.t li.sk .num .sp2 { background: url("http://i.tq121.com.cn/i/weather2014/city/c1.jpg") no-repeat scroll 3px -4px transparent; margin-left: 20px; padding-left: 33px; }
-
-
-.left .m ul.t li.sk .num span.n_1{ background-position: 0px -292px;}
+.left .m ul.t li.sk .num span.sp1 { background: url("http://i.tq121.com.cn/i/weather2014/city/c2.jpg") no-repeat scroll 0px -1px transparent; }
+.left .m ul.t li.sk .num span.sp2 { background-image: url("http://10.14.85.90/source/i/weather2014/city/flxOn.jpg"); background-repeat:no-repeat; margin-left: 20px; padding-left: 33px; }
+.left .m ul.t li.sk .num span.n_1{ background-position: 4px -56px;}
 .left .m ul.t li.sk .num span.ne_1{background-position: -2px -247px;}
 .left .m ul.t li.sk .num span.e_1{background-position: -2px -342px;}
 .left .m ul.t li.sk .num span.now_1{background-position: 0px -206px;}
@@ -65,28 +63,39 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 
 
 .left .m ul.t li.sk .air, .left .m ul.t li.sk .wh { font-size: 16px; margin-left: 27px; margin-top: 7px; text-align: left; }
-.left .m ul.t li.sk .air span { background: none repeat scroll 0% 0% #985331; color: #ffffff; margin-left: 16px; padding: 0px 6px; }
+.left .m ul.t li.sk .air span { color: #ffffff; margin-left: 16px; padding: 0px 6px; }
 .left .m ul.t li.sk .wh { margin-top: 3px; }
 .left .m ul.t li.sk .wh span { margin-left: 18px; }
-.left .m ul.t li.dn { color: #606060; cursor: pointer; font-size: 16px; position: relative; width: 210px; margin:3px; }
+.left .m ul.t li.dn { color: #888; cursor: pointer; font-size: 16px; position: relative; width: 210px; margin:3px; }
 .left .m ul.t li.dn h1 { font-size: 14px; margin-top: 22px; }
-.left .m ul.t li.dn img { margin-top: 11px; }
-.left .m ul.t li.dn .wea { margin-top: -6px; }
+.left .m ul.t li.dn img { margin-top: 5px; }
+.left .m ul.t li.dn .wea { margin-top: 5px; }
 .left .m ul.t li.dn .tem { }
 .left .m ul.t li.dn .tem span { font-size: 36px; }
 .left .m ul.t li.dn .tem i { font-size: 24px; }
 .left .m ul.t li.dn .win { margin-top: 14px; }
-.left .m ul.t li.dn .win span { margin-left: 7px; }
+.left .m ul.t li.dn .win span,.left .m ul.t li.on .win span {background-image: url("http://10.14.85.90/source/i/weather2014/city/flx.jpg"); background-repeat:no-repeat; padding-left:30px; margin-left:-25px;}
+.left .m ul.t li.on .win span{background-image: url("http://10.14.85.90/source/i/weather2014/city/flxOn.jpg"); }
+.left .m ul.t li .win span.n_1{ background-position: 0px -56px;}
+.left .m ul.t li .win span.ne_1{background-position: -2px -247px;}
+.left .m ul.t li .win span.e_1{background-position: -2px -342px;}
+.left .m ul.t li .win span.now_1{background-position: 0px -206px;}
+.left .m ul.t li .win span.nw_1{background-position: 0px -160px;}
+.left .m ul.t li .win span.s_1{background-position: 0px -119px;}
+.left .m ul.t li .win span.se_1{background-position: 0px -81px;}
+.left .m ul.t li .win span.sw_1{background-position: 0px -47px;}
+.left .m ul.t li .win span.w_1{background-position: 0px -10px;}
+
 .left .m ul.t li.dn .win .winImg { margin-top: 0px; }
 .left .m ul.t li.dn .sunUp { background: url("http://i.tq121.com.cn/i/weather2014/city/c5.jpg") no-repeat scroll 44px -1px transparent; margin-top: 18px; padding-left: 86px; text-align: left; }
 .left .m ul.t li.dn .sunDown { background: url("http://i.tq121.com.cn/i/weather2014/city/c6.jpg") no-repeat scroll 40px -9px transparent; margin-top: 18px; padding-left: 86px; text-align: left; }
 .left .m ul.t li.dn .slid { background: url("http://i.tq121.com.cn/i/weather2014/city/c4.jpg") no-repeat scroll 0% 0% transparent; display: none; height: 15px; left: 94px; position: absolute; top: 320px; width: 26px; }
 .left .m ul.t li.hover{margin:0px; border:3px solid #b5d7ec; }
-.left .m ul.t li.on { border: 3px solid #076ea8; margin:0;}
+.left .m ul.t li.on { border: 3px solid #076ea8; margin:0; color:#252525;}
 .left .m ul.t li.on .tem { color: #076ea8; }
 .left .m ul.t li.on .slid { display: block; }
 .left .m ul.t li.on .sunUp{ background: url("http://i.tq121.com.cn/i/weather2014/city/c51.jpg") no-repeat scroll 44px -1px transparent;}
-.left .m ul.t li.on .sunDown{ background: url("http://i.tq121.com.cn/i/weather2014/city/c61.jpg") no-repeat scroll 44px -1px transparent;}
+.left .m ul.t li.on .sunDown{ background: url("http://i.tq121.com.cn/i/weather2014/city/c61.jpg") no-repeat scroll 40px -9px transparent;}
 .left .m ul.b { margin-left: 33px; }
 .left .m ul.b li { border-bottom: 1px solid #e5e5e5; color: #252525; height: 51px; line-height: 50px; width:600px; }
 .left .m ul.b li i { display: inline-block; width: 68px; }
@@ -105,9 +114,55 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .left .m2 ul.t li.dn .wea{margin-top:0px;}
 .left .m2 ul.t li.dn .win{ margin-top:0px;}
 
+
+.left .m3 ul.t li.dn { width:91px; background:url(http://10.14.85.90/source/i/weather2014/city/c12.jpg) no-repeat 89px 24px;}
+.left .m3 ul.t li.last{ background:none;}
+.left .m3 ul.t li.dn h1{ font-size:14px; margin-top:8px; line-height:16px;}
+.left .m3 ul.t li.dn h2{ font-size:14px; line-height:16px;}
+.left .m3 ul.t li.dn img{ display:block; margin-left:20px;}
+.left .m3 ul.t li.dn .img1{ margin-top:5px;}
+.left .m3 ul.t li.dn .img2{ margin-top:1px;}
+.left .m3 ul.t li.dn .wea{ margin:0; font-size:14px; line-height:14px; }
+.left .m3 ul.t li.dn .wea1{ margin-top:5px;}
+.left .m3 ul.t li.dn .wea2{}
+.left .m3 ul.t li.dn .tem{  line-height:24px;}
+.left .m3 ul.t li.dn .tem1{ margin-top:20px; line-height:24px;}
+.left .m3 ul.t li.dn .tem span{ font-size:24px;}
+.left .m3 ul.t li.dn .tem i{ font-size:18px;}
+.left .m3 ul.t li.dn .slid{ left:30px;}
+.left .m3 ul.t li.dn .win{ margin-top:15px; line-height:18px; font-size:14px;} 
+.left .m3 ul.t li.dn .win i{ margin-left:0;}
+.left .m3 ul.t li.dn .win span{margin-left:0; padding-left:0; display:block; height:23px;}
+.left .m3 ul.t li .win span.n_1{ background-position: 31px -56px;}
+.left .m3 ul.t li .win span.ne_1{background-position: -2px -247px;}
+.left .m3 ul.t li .win span.e_1{background-position: -2px -342px;}
+.left .m3 ul.t li .win span.now_1{background-position: 0px -206px;}
+.left .m3 ul.t li .win span.nw_1{background-position: 0px -160px;}
+.left .m3 ul.t li .win span.s_1{background-position: 0px -119px;}
+.left .m3 ul.t li .win span.se_1{background-position: 0px -81px;}
+.left .m3 ul.t li .win span.sw_1{background-position: 0px -47px;}
+.left .m3 ul.t li .win span.w_1{background-position: 0px -10px;}
+.left .m3 ul.t li.hover,.left .m3 ul.t li.on{ background:none;}
+
 .left .m4 ul.b li i{ line-height:14px; float:left; margin-top:10px; margin-right:5px;}
 .left .m4 ul.b li i em{display:block; width:100%;}
 .left .m4 ul.b li em em{line-height:14px;text-align:center;}
+
+#tabDays .m{ display:none;}  
+.today #tabDays .m1{ display:block;}
+.d23 #tabDays .m2{ display:block;}
+.d7 #tabDays .m3{ display:block;}
+
+#Hour3 { margin-left: 33px; }
+#Hour3 li { border-bottom: 1px solid #e5e5e5; color: #252525; height: 51px; line-height: 50px; width:600px; display:none; }
+#Hour3 li i { display: inline-block; width: 68px; }
+#Hour3 li b { display: inline-block; font-weight: normal; width: 104px; text-align:center }
+#Hour3 li strong { display: inline-block; width: 90px; text-align:center }
+#Hour3 li em { display: inline-block; width: 110px; text-align:center }
+#Hour3 li .img1 { margin-left: 10px; }
+#Hour3 li .img2 { margin-left: 0px; margin-right: 6px; }
+#Hour3 li span { color: #076ea8; display: inline-block; width: 90px; }
+
 
 #weatherChart { background-color: #f7f7f7; margin-top: 10px; padding-bottom: 5px; width: 680px; }
 #weatherChart .tabs { background-color: #bce9fa; height: 80px; padding-left: 10px; position: relative; }
