@@ -96,8 +96,8 @@ right: 20px; }
 #focus ul li {float:left; width:300px; height:280px; overflow:hidden; position:relative; background:#000;}
 #focus ul li div {position:absolute; overflow:hidden;}
 #focus ul li a img{ width:300px; height:280px;}
-#focus .btnBg {position:absolute; width:800px; height:20px; left:0; bottom:0; background:#000;}
-#focus .btn {position:absolute; width:780px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
+#focus .btnBg { display:none;position:absolute; width:800px; height:20px; left:0; bottom:0; background:#000;}
+#focus .btn {display:none;position:absolute; width:780px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
 #focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
 #focus .btn span.on {background:#fff;}
 #focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(http://10.14.85.90/source/i/weather2014/city/rollL.png) no-repeat 3px 33px; cursor:pointer;}
