@@ -9,7 +9,7 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .clearfix:after { clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
 .topNav { background: none repeat scroll 0% 0% #076ea8; height: 40px; line-height: 40px; margin-top: 10px; }
 .topNav span { color: #6bb0d9; float: left; font-size: 28px; line-height: 35px; }
-.topNav a { color: #ffffff; float: left; font-size: 16px; margin: 0px 43px; _margin:0 42px;}
+.topNav a { color: #ffffff; float: left; font-size: 16px; }
 .topNav a:hover { text-decoration: underline; }
 .cityName { margin-top: 11px; }
 .cityName h1 { display: inline; font-size: 22px; font-weight: bold; overflow: hidden; white-space: nowrap; }

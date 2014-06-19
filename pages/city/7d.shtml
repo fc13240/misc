@@ -4,7 +4,7 @@
 <link rel="dns-prefetch" href="http://i.tq121.com.cn">
 <meta charset="utf-8" />
 <title>北京</title>
-<script type="text/javascript" language="JavaScript" src="http://10.14.85.90/source/j/core.js"></script>
+<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
 <script>W.css('c/core.css','c/weather2014/common.css','c/weather2014/city.css')</script>
 <script>W.use('j/weather2014/city')</script>
 <!--[if lt IE 7]>
@@ -92,7 +92,7 @@
 								<span>08:00 实况</span>
 								<img src="http://www.weather.com.cn/m2/i/about/alarmpic/0902.gif" width="40" alt="">
 							</h1>
-							<img src="http://10.14.85.90/source/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
+							<img src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
 							<p class="wea">晴</p>
 							<p class="tem">
 								<span>35</span><i>°C</i>
@@ -110,7 +110,7 @@
 						</li>
 						<li class='dn on' data-dn='todayT'>
 							<h1>今天白天</h1>
-							<img src="http://10.14.85.90/source/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
+							<img src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
 							<p class="wea">多云转阴</p>
 							<p class="tem">
 								<span>34</span><i>°C</i>
@@ -125,7 +125,7 @@
 						</li>
 						<li class='dn' data-dn='todayN'>
 							<h1>今天夜间</h1>
-							<img src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="80" height="80" alt="">
+							<img src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="80" height="80" alt="">
 							<p class="wea">多云转阴</p>
 							<p class="tem">
 								<span>36</span><i>°C</i>
@@ -147,7 +147,7 @@
 							<ul class="clearfix">
 								<li>
 									<h1>白天</h1>
-									<img src="http://10.14.85.90/source/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
+									<img src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
 									<p class="wea">多云转阴</p>
 									<p class="tem">
 										<span>34</span><i>°C</i>
@@ -161,7 +161,7 @@
 								</li>
 								<li>
 									<h1>夜间</h1>
-									<img src="http://10.14.85.90/source/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
+									<img src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="80" height="80" alt="">
 									<p class="wea">多云转阴</p>
 									<p class="tem">
 										<span>34</span><i>°C</i>
@@ -181,7 +181,7 @@
 							<ul class="clearfix">
 								<li>
 									<h1>白天</h1>
-									<img src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="80" height="80" alt="">
+									<img src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="80" height="80" alt="">
 									<p class="wea">多云转阴</p>
 									<p class="tem">
 										<span>34</span><i>°C</i>
@@ -195,7 +195,7 @@
 								</li>
 								<li>
 									<h1>夜间</h1>
-									<img src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="80" height="80" alt="">
+									<img src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="80" height="80" alt="">
 									<p class="wea">多云转阴</p>
 									<p class="tem">
 										<span>34</span><i>°C</i>
@@ -217,8 +217,8 @@
 						<li class='dn on' data-dn='7d1'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
-							<img class="img1" src="http://10.14.85.90/source/i/weather2014/jpg/blue/d01.jpg" width="50" height="50" alt="">
-							<img class="img2" src="http://10.14.85.90/source/i/weather2014/jpg/blue/d01.jpg" width="50" height="50" alt="">
+							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="50" height="50" alt="">
+							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="50" height="50" alt="">
 							<p class="wea wea1">晴转多云转</p>
 							<p class="wea wea2">阴有小阵雨</p>
 							<p class="tem tem1">
@@ -236,8 +236,8 @@
 						<li class='dn' data-dn='7d2'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
-							<img class="img1" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<img class="img2" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<p class="wea wea1">晴转多云转</p>
 							<p class="wea wea2">阴有小阵雨</p>
 							<p class="tem tem1">
@@ -255,8 +255,8 @@
 						<li class='dn' data-dn='7d2'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
-							<img class="img1" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<img class="img2" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<p class="wea wea1">晴转多云转</p>
 							<p class="wea wea2">阴有小阵雨</p>
 							<p class="tem tem1">
@@ -274,8 +274,8 @@
 						<li class='dn' data-dn='7d2'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
-							<img class="img1" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<img class="img2" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<p class="wea wea1">晴转多云转</p>
 							<p class="wea wea2">阴有小阵雨</p>
 							<p class="tem tem1">
@@ -293,8 +293,8 @@
 						<li class='dn' data-dn='7d2'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
-							<img class="img1" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<img class="img2" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<p class="wea wea1">晴转多云转</p>
 							<p class="wea wea2">阴有小阵雨</p>
 							<p class="tem tem1">
@@ -312,8 +312,8 @@
 						<li class='dn' data-dn='7d2'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
-							<img class="img1" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<img class="img2" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<p class="wea wea1">晴转多云转</p>
 							<p class="wea wea2">阴有小阵雨</p>
 							<p class="tem tem1">
@@ -331,8 +331,8 @@
 						<li class='dn last' data-dn='7d2'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
-							<img class="img1" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<img class="img2" src="http://10.14.85.90/source/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
+							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<p class="wea wea1">晴转多云转</p>
 							<p class="wea wea2">阴有小阵雨</p>
 							<p class="tem tem1">
