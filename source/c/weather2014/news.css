@@ -100,6 +100,6 @@ right: 20px; }
 #focus .btn {position:absolute; width:780px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
 #focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
 #focus .btn span.on {background:#fff;}
-#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(http://10.14.85.90/source/i/weather2014/city/rollL.png) no-repeat 0 0; cursor:pointer;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(http://10.14.85.90/source/i/weather2014/city/rollL.png) no-repeat 3px 33px; cursor:pointer;}
 #focus .pre {left:0;}
-#focus .next {right:-22px; background-position:right top;background:url(http://10.14.85.90/source/i/weather2014/city/rollR.png) no-repeat 0 0; cursor:pointer; }
+#focus .next {right:-22px; background-position:right top;background:url(http://10.14.85.90/source/i/weather2014/city/rollR.png) no-repeat -3px 33px; cursor:pointer; }

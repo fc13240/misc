@@ -52,19 +52,19 @@ define(function(require){
 	var picTimer;
 	
 	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
-	var btn = "<div class='btnBg'></div><div class='btn'>";
-	for(var i=0; i < len; i++) {
-		btn += "<span></span>";
-	}
-	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
-	$("#focus").append(btn);
-	$("#focus .btnBg").css("opacity",1);
+	//var btn = "<div class='btnBg'></div><div class='btn'>";
+	//for(var i=0; i < len; i++) {
+	//	btn += "<span></span>";
+	//}
+	//btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	//$("#focus").append(btn);
+	//$("#focus .btnBg").css("opacity",1);
 
 	//为小按钮添加鼠标滑入事件，以显示相应的内容
-	$("#focus .btn span").css("opacity",1).mouseenter(function() {
-		index = $("#focus .btn span").index(this);
-		showPics(index);
-	}).eq(0).trigger("mouseenter");
+	//$("#focus .btn span").css("opacity",1).mouseenter(function() {
+	//	index = $("#focus .btn span").index(this);
+	//	showPics(index);
+	//}).eq(0).trigger("mouseenter");
 
 	//上一页、下一页按钮透明度处理
 	$("#focus .preNext").css("opacity",1).hover(function() {
