@@ -817,6 +817,7 @@ right:10px;
 .tralife ul li
 {
 	height:30px;
+	overflow: hidden;
 	background:url(../../i/index/index_icons.png) no-repeat -284px -147px;
 	padding:0px 10px;
 	line-height:30px;}
@@ -935,6 +936,8 @@ right:10px;
 .exleft .jj
 {
 	position:relative;
+	height: 210px;
+	overflow: hidden;
 	display:none;}
 .exbg
 {
@@ -982,7 +985,8 @@ right:10px;
 	display:block;
 	height:16px;
 	height:25px;
-	width:164px;
+	width:150px;
+	overflow: hidden;
 	color:#fff;
 	}
 .ztpic dl dd p
@@ -1030,6 +1034,8 @@ width:16px; height:4px }
 .trayin a
 {
 	display:block;
+	height: 119px;
+	overflow: hidden;
 	position:relative;}
 .trayin a img
 {
