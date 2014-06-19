@@ -67,6 +67,7 @@
 .topNav { background:none repeat scroll 0 0 #076ea8; height:40px; line-height:40px; margin-top:10px }
 .topNav span { color:#6bb0d9; float:left; font-size:28px; line-height:35px }
 .topNav a { display:inline; color:#fff; float:left; font-size:16px; width:118px; overflow:hidden; text-align:center; background:#076ea8; }
+.news_jctj .pic{ margin-top:0;}
 .news_jctj .pic #scrollPic { height: 250px; overflow: hidden; position: relative; width: 330px; margin-top:5px; }
 .news_jctj .pic .m ul.bigImg { width: 1320px; position:absolute; }
 .news_jctj .pic .m ul.bigImg li { float: left; }
