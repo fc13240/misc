@@ -22,7 +22,7 @@
 .rank h3 { background-color:#006699; height:35px; line-height:35px; font-size:20px; text-indent:10px; color:#fff; }
 .rank h3 a { color:#fff; padding-right:10px; }
 .rank h3 span { font-size:12px; }
-.rank h3 span a { padding:6px 5px; cursor:pointer; }
+.rank h3 span a { padding:6px 5px; cursor:pointer; border: none; background:none; }
 .rank ul { width:300px; display:none; }
 .rank ul.on { display:block; }
 .rank ul li { height:32px; line-height:32px; overflow:hidden; vertical-align:bottom; width:290px; padding:0px 10px; padding-right:0px; }
