@@ -29,7 +29,7 @@ body {  }
 .word h1 span { font-weight: bold; float: left; font-size: 20px; padding-left: 9px; }
 .word h2 { color: #1F4A76; font-size: 19px; font-weight: normal; margin-left: 10px; margin-top: 24px; }
 .word .m { margin-top: 10px; }
-.word .m p { font-size: 16px; line-height: 28px; text-indent: 2em; }
+.word .m p { font-size: 16px; line-height: 28px; text-indent: 2em; margin-bottom: 20px; }
 .word .m p strong{ font-weight: bold;}
 .word .img { margin: 15px auto; width: 750px; }
 .word .img img { }
