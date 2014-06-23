@@ -380,7 +380,7 @@ a:hover{color:#ee842f;}
 .hotSpot h3 .on,.rank h3 .on{background-color:#fff;color:#076ea8;}
 .hotSpot ul{display:none;border:1px dashed #C5C5C5; }
 .hotSpot ul.on{display:block;}
-.hotSpot ul li{height:35px;line-height:35px;border-bottom:1px solid #eee7e7;overflow:hidden;}
+.hotSpot ul li{height:35px;line-height:35px;border-bottom:1px solid #eee7e7;overflow:hidden; background: #36b;}
 .hotSpot ul li.title{ background:#ebebeb;}
 .hotSpot ul li.lasttitle{border-bottom:0;}
 .hotSpot ul .title .name{font-size:14px;color:#111111;}
@@ -786,7 +786,7 @@ right:10px;
 #topics dl{background:none;padding-left: 10px;}
 #topics h4{background-color: #E8E8E8;    font-size: 18px;    font-weight: normal;    height: 30px;    line-height: 30px;    padding-left: 10px;}
 
-.block .rightBlock3{top:69px;}
+.block .rightBlock3{top:69px; *top:50px;}
 
 .block .rightBlock4{top:-205px;}
 .compere
@@ -962,10 +962,12 @@ right:10px;
 	height: 210px;
 	overflow: hidden;
 	display:none;}
+	
 .exbg
 {
 	position:absolute;
 	left:0;
+	display:none;
 	top:0;}
 .exbg i
 {
