@@ -204,6 +204,7 @@ a:hover{color:#ee842f;}
 #topNews .news ul li a:hover,.life ul li a:hover,.climate ul li a:hover,.international ul li a:hover{background-position:-290px -184px;}
 #topNews .leftBlock{width:300px;overflow:hidden;}
 .news ul li{color: #076ea8;}
+.news ul li i{ font-style: normal; padding:0px 5px;}
 .news ul li a img{position: relative; top: 3px;}
 .focusImg{width:300px;height:260px;overflow:hidden;position:relative;}
 .focusImg ul li{width:300px;height:260px;float:left;background-color:#252525;}
@@ -353,7 +354,7 @@ a:hover{color:#ee842f;}
 .imgArea a i{display:block;width:108px;height:81px;position:absolute;left:0px;top:0px;background-color:#076ea8;opacity:0.9;filter:alpha(opacity=90);display:none;}
 .imgArea a b{display:block;width:68px;height:52px;position:absolute;left:0px;top:0px;color:#fff;z-index:5;font-size:26px;font-weight:normal;line-height:26px;padding:14px 20px;text-align:center;display:none;}
 
-.hotSpot{width:298px; height:372px;}
+.hotSpot{width:298px; height:362px; overflow: hidden;}
 .hotSpot h3,.rank h3,.climateChange h3{height:36px;line-height:36px;font-size:18px;font-weight:normal;padding-left:10px; font-weight:bold; overflow:hidden; position:relative;}
 .hotSpot h3{font-size:16px; color:#076ea8; padding:0;}
 .hotSpot h3 b
@@ -804,6 +805,7 @@ right:10px;
 {
 	float:left;
 	width:59px;
+	display: inline;
 	margin-bottom:3px;
 	height:59px;}
 .compere h1
@@ -842,7 +844,7 @@ right:10px;
 .tralife ul 
 {
 	float:left;
-	margin-left:18px;
+	margin-left:0px;
 	display:inline;
 	border-right:1px dashed #C5C5C5;
 	margin-top:10px;
@@ -1125,7 +1127,7 @@ width:16px; height:4px }
 
 /*上一个  下一个*/
 .tq121 .prev,
-.tq121 .next {  width: 40px; height: 100px; background: url(../../i/weather2014/city/roll.png) no-repeat; position: absolute; top: 115px;}
+.tq121 .next {  width: 40px; height: 100px; background: url(../../i/weather2014/city/roll.png) no-repeat 14px 0px; position: absolute; top: 115px;}
 .tq121 .prev { left: 0; }
 .tq121 .next { left: 279px; background-position: -17px 6px;}
 .tq121 ul li a {
