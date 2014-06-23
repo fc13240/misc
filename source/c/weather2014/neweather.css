@@ -184,7 +184,7 @@ a:hover{color:#ee842f;}
 #search .button{height:23px;width:42px;background:url(../../i/index/index_icons.png) no-repeat 0px -109px;text-indent:-9999px;position:absolute;right:1px;top:1px;cursor:pointer;}
 
 #nav{border:1px solid #6bb0da;padding:10px 0px 10px 10px;width:988px;height:48px;line-height:24px;margin:0 auto 10px;}
-#nav dl{float:left;height:48px;padding:0px 25px;_padding:0px 22px;border-right:1px solid #dee8f2;}
+#nav dl{float:left;height:48px;padding:0px 25px;*padding:0px 22px;border-right:1px solid #dee8f2;}
 #nav .last{border-right:none;}
 #nav dl dt{height:48px;width:26px;float:left;overflow:hidden;}
 #nav dl dd{height:48px;float:left;font-size:12px;}
