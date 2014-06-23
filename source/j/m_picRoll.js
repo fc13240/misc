@@ -42,10 +42,10 @@ define(function(require){
 			})
 			//向左，向右滚动点击效果
 			$(config.rollLeft).click(function(){
-				_move(++pointer);
+				_move(--pointer);
 			})
 			$(config.rollRight).click(function(){
-				_move(--pointer);
+				_move(++pointer);
 			})
 			//底部缩略图点击效果
 			$botUl.empty();
