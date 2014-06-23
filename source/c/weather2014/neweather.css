@@ -1169,3 +1169,192 @@ width:16px; height:4px }
 {
 	padding:0px 5px;
 	float:left;}
+.ad 
+{
+	height:90px;}
+.ad .ad_p1 {
+    background: none repeat scroll 0 0 #cccccc;
+    height: 100%;
+    width: 310px;
+}
+.ad .ad_p2 {
+    background: none repeat scroll 0 0 #cccccc;
+    height: 100%;
+    margin-left: 10px;
+    width: 680px;
+}
+.moreatlas{
+	width:680px;
+	float:left;}
+.moreatlas dl 
+{
+	width:330px;
+	margin-bottom:10px;
+	float:left;}
+.moreatlas dl dt
+{
+	width:330px;
+	height:220px;
+	margin-bottom:5px;}
+.moreatlas dl dd span a{
+	color:#076ea8;}
+.moreatlas dl dd
+{
+	height:30px;
+	line-height:30px;}
+.moreatlas dl dd a{
+	color:#333333;}
+.dListPic
+{
+	float:left;
+	margin-right:20px;
+	display:inline;
+	width:320px;}
+.pic_list{
+	height:auto;
+	margin:0 auto;}
+.dList{
+	float:left;}
+.dListPic h2
+{
+	font-size:16px;
+	color:#056ea8;
+	text-align:center;
+	height:50px;
+	line-height:40px;}
+.dList h1
+{
+	font-size:24px;
+	color:#333333;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	margin-bottom:10px;
+	margin-top:20px;
+	}
+.dList p
+{
+	height:30px;
+	text-align:center;
+	margin-bottom:10px;
+	color:#666666;
+	font-size:12px;
+	line-height:30px;}
+.dList p span
+{
+	padding:0px 20px;}
+.jctj_pic
+{
+	background:#f0f6fa;
+	height:555px;
+	width:300px;
+	float:right;}
+.jctj_pic .pic h1
+{
+	height:43px;
+	margin-bottom:10px;
+	background:url(../../i/weather2014/index_neweather/rmtj.jpg) no-repeat ;}
+.jc_ul p
+{
+	height:34px;
+	line-height:31px;
+	border-bottom:1px dashed #bfd6ed;
+	width:255px;
+	padding-left:25px;
+	margin:0 auto;
+	overflow:hidden;}
+.jc_ul
+{
+	background:url(../../i/weather2014/index_neweather/jctj.png) no-repeat  13px 6px;}
+.jc_ul p a
+{
+	font-size:12px;
+	color:#1c3f93;}
+.jc_ul p a:hover
+{
+	color:#ee842f;}
+.jctj_pic .pic #scrollPic
+{
+	margin-bottom:10px;}
+.pit_title
+{
+	line-height:24px;
+	margin-bottom:30px;}
+.ysyd h1
+{
+	background:url(../../i/weather2014/index_neweather/ysyd.jpg) no-repeat;
+	border-top:1px solid #dcf1bf; font-size:18px; font-style:italic; color:#666666; text-indent:30px;}
+.ysyd h2
+{
+	font-size:18px;
+	color:#333333;
+	text-align:center;
+	margin-bottom:15px;}
+.ysyd p
+{
+	font-size:12px;
+	color:#333333;
+	line-height:24px;}
+.shensuo
+{
+	width:1000px;
+	margin-top:20px;
+	background:url(../../i/weather2014/index_neweather/shensuo.jpg) no-repeat center bottom;
+	height:30px;
+	line-height:30px;
+	border-top:1px solid #dcf1bf;
+	text-align:center;}
+.shensuo span
+{
+	cursor:pointer;}
+.func
+{
+	position:relative;
+	clear:both;
+	height:50px;}
+.func i
+{
+	position:absolute;
+	display:block;
+	width:64px;
+	font-style:normal;
+	left:445px;}
+.func em
+{
+	color:#0570a6;
+	padding:0px 5px;}
+.func span
+{
+	float:right;
+	
+	}
+.func span b
+{
+	font-weight:normal;
+	display:block;
+	margin:0px 10px;
+	float:left;}
+.func span a 
+{
+	background:url(../../i/weather2014/index_neweather/hunhe.jpg) no-repeat;
+	padding-left:24px;
+	display:block;
+	float:left;
+	height:20px;
+	
+	}
+.func span a.mrst
+{
+	background-position:0px -146px;}
+.func span a.pl
+{
+	background-position:0px -45px;}
+.func span a.fx
+{
+	background-position:0px -95px;}
+.ggt {
+    background: none repeat scroll 0 0 #ccc;
+    height: 90px;
+    width: 1000px;
+	clear:both;
+}
