@@ -141,8 +141,8 @@ define(function(require){
 		//底部滚动图
 	    var SN = {
 	    	ul:'#picShow ul',
-	    	rLeft:'#picShow .rollLeft',
-	    	rRight:'#picShow .rollRight',
+	    	rLeft:'#picShow .rollRight',
+	    	rRight:'#picShow .rollLeft',
 	    	rW:'129px'//一次滚动的宽度，li的宽加上marign值
 	    }
 	    var ulW = $(SN.ul).width();
