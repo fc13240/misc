@@ -249,6 +249,22 @@ a:hover{color:#ee842f;}
 
 
 
+.myZSs{width:300px;margin-top:10px;overflow:hidden;}
+.myZSs h3{font-size:16px;color:#076ea8;line-height:30px;}
+.myZSs dl{ float:left;width:72px;height:72px;margin-bottom:1px; position:relative;}
+.myZSs dl dt{ position:absolute; left:28px; top:8px; z-index:20;}
+.myZSs dl dt a{display:block;color:#fff;text-align:center;height:15px;line-height:15px;}
+.myZSs dl dt a:hover,.myZS dl dd a:hover{color:#ee842f;}
+.myZSs dl dd{width:72px;height:72px;float:left;overflow:hidden; position:absolute; left:0; top:0;}
+.myZSs dl dd a{display:block;width:72px;height:72px; font-size:18px;background-color:#076ea8;color:#fff;float:left;text-align:center; font-weight:bold;line-height:93px;overflow:hidden;}
+.myZSs dl dd a b{display:block;width:80px;font-size:14px;line-height:20px;}
+.zs-loadings .cityss p{padding-left:35px; background:url(../../i/index_neweather/zsys.png) no-repeat 6px 19px #ebebeb; width:77px; height:72px; float:left; margin-left:2px;}
+.zs-loadings .cityss p a{ width:70px; color:#076ea8;  padding-top:10px; padding-left:0; height:30px; line-height:30px;}
+.zs-loadings .cityss p b{ width:70px; color:#076ea8;  font-size:16px; color:#252525; height:20px; }
+
+
+
+
 
 
 
@@ -540,8 +556,8 @@ a:hover{color:#ee842f;}
 .hotCitiesindex .showindex li {    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);    border-bottom: 1px solid #D9D9D9;    height: 32px;    line-height: 32px;    padding: 0 10px;    width: 230px;}
 .hotCitiesindex .showindex li.on {    background-color: #076EA8;    color: #FFFFFF;}
 .hotCitiesindex .showindex li b {    color: #FF6600;}
-.zs-loading{width:100%;height:72px;text-align: center; margin-bottom:3px;}
-.myZS dl dd a span{display: inline-block;height: 15px;line-height:15px;overflow: hidden;}
+.zs-loadings{width:100%;height:72px;text-align: center; margin-bottom:3px;}
+.myZSs dl dd a span{display: inline-block;height: 15px;line-height:15px;overflow: hidden;}
 
 .formBox {
     height: 29px;
@@ -915,6 +931,9 @@ right:10px;
 	width:300px;
 	margin-top:4px;
 	float:right;}
+.tfright .pic 
+{
+	margin-top:10px;}
 .climateChange h3{font-size:20px; color:#076ea8; padding:0; height:52px;}
 .climateChange h3 p
 {
@@ -1151,24 +1170,24 @@ width:16px; height:4px }
 	width:165px;
 	margin:0 auto;
 	line-height:21px;}
-.myZS ul
+.myZSs ul
 {
 	width:300px;
 	overflow:hidden;
 	height:90px;
 	background:#ebebeb;}
-.myZS ul li
+.myZSs ul li
 {
 	width:280px;
 	margin:0 auto;
 	height:45px;
 	line-height:45px;
 	border-bottom:1px dashed #d4d4d5;}
-.myZS ul li span img {
+.myZSs ul li span img {
   position:relative;
   top:8px;
 }
-.myZS ul li span
+.myZSs ul li span
 {
 	padding:0px 5px;
 	float:left;}
