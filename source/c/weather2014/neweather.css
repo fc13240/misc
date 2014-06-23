@@ -203,6 +203,8 @@ a:hover{color:#ee842f;}
 #topNews .news ul li a,.life ul li a,.climate ul li a,.international ul li a{height:30px;line-height:30px;margin-right: 10px;}
 #topNews .news ul li a:hover,.life ul li a:hover,.climate ul li a:hover,.international ul li a:hover{background-position:-290px -184px;}
 #topNews .leftBlock{width:300px;overflow:hidden;}
+.news ul li{color: #076ea8;}
+.news ul li a img{position: relative; top: 3px;}
 .focusImg{width:300px;height:260px;overflow:hidden;position:relative;}
 .focusImg ul li{width:300px;height:260px;float:left;background-color:#252525;}
 .focusImg ul li a{display:block;width:300px;height:260px;}
