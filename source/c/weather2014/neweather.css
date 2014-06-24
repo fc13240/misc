@@ -226,7 +226,7 @@ a:hover{color:#ee842f;}
 .rightBlock h2{font-size:12px;height:34px;line-height:34px;background-color:#fffac2;}
 .rightBlock h2 i{display:block;float:left;background:url(../../i/index/index_icons.png) no-repeat -42px -110px;width:34px;height:34px;margin-right:10px;}
 .rightBlock h2 b{color:#ee842f;}
-.rightBlock p{font-size:12px;height:34px;line-height:34px;background-color:#bdeafd;overflow:hidden;}
+.rightBlock p{font-size:12px;height:34px;line-height:34px;background-color:#ebebeb;overflow:hidden;}
 .knowledge dl dt p{width: 200px;}/*fixed ie 6*/
 .rightBlock p span{display:block;}
 .rightBlock p a{display:block;width:250px;height:34px;line-height:34px;padding-left:50px;}
@@ -287,6 +287,11 @@ a:hover{color:#ee842f;}
 .video{width:300px;margin-bottom:1px;}
 .video h3{height:30px;line-height:30px;background-color:#8abb4a;font-size:20px;font-weight:normal;}
 .video h3 a{color:#fff;padding-left:10px;}
+.video h3 span a{ font-size:14px;}
+.video h3 span{ float: right;}
+.topic h4 span a{ font-size:14px;}
+.topic h4 span{ float: right;}
+
 .video dl{width:300px;height:162px;overflow:hidden;margin-top:1px;position:relative; background:#ccc;}
 .video dl dt{height:30px;line-height:30px;width:300px;position:absolute;left:0px;bottom:0px; text-align:center;}
 .video dl dt i{display:block;width:300px;height:30px;background-color:#fff;opacity:0.5;filter:alpha(opacity=50);}
