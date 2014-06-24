@@ -1041,6 +1041,7 @@ right:10px;
 .ztpic
 {
 	height:100px;
+	margin-top: 5px;
 	margin-bottom:15px;}
 /* 焦点图 */
 .jctjs{ width:300px; overflow:hidden; height:325px; border:1px solid #C1D1E8; margin-bottom:10px;} 
