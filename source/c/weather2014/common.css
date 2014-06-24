@@ -15,7 +15,7 @@
 #toolBar b i{border-top:6px solid #adadad;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:0px;top:20px;}
 .links{display:block;height:30px;line-height:30px;position:absolute;right:0px;top:0px;}
 .links a{color:#fff;display:block;height:30px;line-height:30px;float:left;padding:0px 10px; overflow:hidden;}
-.links #setIndex,.links #eg{border-right:1px solid #275885;}
+.links #setIndex,.links #eg{border-right:0px solid #275885;}
 #provice{background-color:#ebebeb;color:#252525;width:74px;position:relative; padding:0; text-indent:12px;}
 #provice .icon{display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
 #provice .arrow{position:absolute;right:9px;top:14px;}
