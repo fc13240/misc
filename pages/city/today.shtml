@@ -85,7 +85,7 @@
 			</ul>
 			<!--今明后7d大包 begin-->
 			<div id="tabDays">
-				<div class="m m1" id="today">
+				<div id="today" class="m m1">
 					<ul class="t clearfix">
 						<li class="sk">
 							<h1>
@@ -99,7 +99,7 @@
 							</p>
 							<p class="num">
 								<span class="sp1">76%</span>
-								<span class="sp2 n_1">1~2级</span>
+								<span class="sp2 N">1~2级</span>
 							</p>
 							<p class="air">
 								空气质量<span>243重度污染</span>
@@ -116,7 +116,7 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span>无持续风向 微风</span>
+								<span class="N">1~2级</span>
 							</p>
 							<p class="sunUp">
 								日出 6：34
@@ -131,7 +131,7 @@
 								<span>36</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1">1~2级</span>
+								<span class="N">1~2级</span>
 							</p>
 							<p class="sunDown">
 								日落 19：34
@@ -140,7 +140,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="m m2" id="2/3d">
+				<div id="2_3d" class="m m2">
 					<ul class="t clearfix">
 						<li class='dn on' data-dn='23d2'>
 							<h2>明天(6月17日 周二)</h2>
@@ -153,7 +153,7 @@
 										<span>34</span><i>°C</i>
 									</p>
 									<p class="win">
-										<span>无持续风向 微风</span>
+										<span>1~2级</span>
 									</p>
 									<p class="sunUp">
 										日出 6：34
@@ -167,7 +167,7 @@
 										<span>34</span><i>°C</i>
 									</p>
 									<p class="win">
-										<span class='n_1'>1~2级</span>
+										<span class='N'>1~2级</span>
 									</p>
 									<p class="sunDown">
 										日落 19：34
@@ -187,7 +187,7 @@
 										<span>34</span><i>°C</i>
 									</p>
 									<p class="win">
-										<span>无持续风向 微风</span>
+										<span>1~2级</span>
 									</p>
 									<p class="sunUp">
 										日出 6：34
@@ -201,7 +201,7 @@
 										<span>34</span><i>°C</i>
 									</p>
 									<p class="win">
-										<span class="n_1">1~2级别</span>
+										<span class="N">1~2级别</span>
 									</p>
 									<p class="sunDown">
 										日落 19：34
@@ -212,15 +212,14 @@
 						</li>
 					</ul>
 				</div>
-				<div class="m m3" id="7d">
+				<div id="7d" class="m m3">
 					<ul class="t clearfix">
 						<li class='dn on' data-dn='7d1'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
 							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="50" height="50" alt="">
 							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg" width="50" height="50" alt="">
-							<p class="wea wea1">晴转多云转</p>
-							<p class="wea wea2">阴有小阵雨</p>
+							<p class="wea">晴转多云转阴有小阵雨阴有小阵雨</p>
 							<p class="tem tem1">
 								<span>34</span><i>°C</i>
 							</p>
@@ -228,8 +227,11 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1"></span>
-								<i>1~2级</i>
+								<em>
+									<span title="南风" class="S"></span>
+									<span title="东北风" class="NE"></span>
+								</em>
+								<i>1~2级转3~4级</i>
 							</p>
 							<div class="slid"></div>
 						</li>
@@ -238,8 +240,7 @@
 							<h2>6月16号</h2>
 							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<p class="wea wea1">晴转多云转</p>
-							<p class="wea wea2">阴有小阵雨</p>
+							<p class="wea">晴转多云转</p>
 							<p class="tem tem1">
 								<span>34</span><i>°C</i>
 							</p>
@@ -247,18 +248,20 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1"></span>
-								<i>1~2级</i>
+								<em>
+									<span title="南风" class="S"></span>
+									<span title="无持续风向" class=""></span>
+								</em>
+								<i>1~2级转3~4级</i>
 							</p>
 							<div class="slid"></div>
 						</li>
-						<li class='dn' data-dn='7d2'>
+						<li class='dn' data-dn='7d3'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
 							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<p class="wea wea1">晴转多云转</p>
-							<p class="wea wea2">阴有小阵雨</p>
+							<p class="wea">晴转多云转</p>
 							<p class="tem tem1">
 								<span>34</span><i>°C</i>
 							</p>
@@ -266,18 +269,20 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1"></span>
-								<i>1~2级</i>
+								<em>
+									<span title="西南风" class="SW"></span>
+									<span title="东南风" class="SE"></span>
+								</em>
+								<i>1~2级转3~4级</i>
 							</p>
 							<div class="slid"></div>
 						</li>
-						<li class='dn' data-dn='7d2'>
+						<li class='dn' data-dn='7d4'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
 							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<p class="wea wea1">晴转多云转</p>
-							<p class="wea wea2">阴有小阵雨</p>
+							<p class="wea">晴转多云转</p>
 							<p class="tem tem1">
 								<span>34</span><i>°C</i>
 							</p>
@@ -285,18 +290,20 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1"></span>
-								<i>1~2级</i>
+								<em>
+									<span title="东风" class="E"></span>
+									<span title="东北风" class="NE"></span>
+								</em>
+								<i>1~2级转3~4级</i>
 							</p>
 							<div class="slid"></div>
 						</li>
-						<li class='dn' data-dn='7d2'>
+						<li class='dn' data-dn='7d5'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
 							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<p class="wea wea1">晴转多云转</p>
-							<p class="wea wea2">阴有小阵雨</p>
+							<p class="wea">晴转多云转</p>
 							<p class="tem tem1">
 								<span>34</span><i>°C</i>
 							</p>
@@ -304,18 +311,20 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1"></span>
-								<i>1~2级</i>
+								<em>
+									<span title="" class="S"></span>
+									<span title="" class="N"></span>
+								</em>
+								<i>1~2级转3~4级</i>
 							</p>
 							<div class="slid"></div>
 						</li>
-						<li class='dn' data-dn='7d2'>
+						<li class='dn' data-dn='7d6'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
 							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<p class="wea wea1">晴转多云转</p>
-							<p class="wea wea2">阴有小阵雨</p>
+							<p class="wea">晴转多云转</p>
 							<p class="tem tem1">
 								<span>34</span><i>°C</i>
 							</p>
@@ -323,18 +332,20 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1"></span>
-								<i>1~2级</i>
+								<em>
+									<span title="" class="NE"></span>
+									<span title="" class="NW"></span>
+								</em>
+								<i>1~2级转3~4级</i>
 							</p>
 							<div class="slid"></div>
 						</li>
-						<li class='dn last' data-dn='7d2'>
+						<li class='dn last' data-dn='7d7'>
 							<h1>今天</h1>
 							<h2>6月16号</h2>
 							<img class="img1" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
 							<img class="img2" src="http://i.tq121.com.cn/i/weather2014/jpg/gray/d01.jpg" width="50" height="50" alt="">
-							<p class="wea wea1">晴转多云转</p>
-							<p class="wea wea2">阴有小阵雨</p>
+							<p class="wea">晴转多云转</p>
 							<p class="tem tem1">
 								<span>34</span><i>°C</i>
 							</p>
@@ -342,17 +353,28 @@
 								<span>34</span><i>°C</i>
 							</p>
 							<p class="win">
-								<span class="n_1"></span>
-								<i>1~2级</i>
+								<em>
+									<span title="" class="W"></span>
+									<span title="" class="SW"></span>
+								</em>
+								<i>1~2级转3~4级</i>
 							</p>
 							<div class="slid"></div>
 						</li>
-						
 					</ul>
 				</div>
 			</div>
 			<!--今明后7d大包 end-->
 			<ul id='Hour3'>
+				<li data-dn="todayT">
+					<i>05时-08时</i> |
+					<img class='img1' width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png">
+					<img class="img2" width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+					<em>晴间多云</em>
+					<span>-15℃~-33℃</span>
+					<b>东北转东南风</b>
+					<strong>1-2级转3-4级</strong>
+				</li>
 				<li data-dn="todayT">
 					<i>05时-08时</i> |
 					<img class='img1' width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png">
@@ -369,6 +391,33 @@
 					<em>晴间多云</em>
 					<span>-15℃~-33℃</span>
 					<b>东北转东南风</b>
+					<strong>1-2级转3-4级</strong>
+				</li>
+				<li data-dn="todayN">
+					<i>08时-11时</i> |
+					<img class='img1' width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png">
+					<img class="img2" width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+					<em>晴间多云</em>
+					<span>-15℃~-33℃</span>
+					<b>东北转东南风</b>
+					<strong>1-2级转3-4级</strong>
+				</li>
+				<li data-dn="23d2">
+					<i>11时-14时</i> |
+					<img class='img1' width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png">
+					<img class="img2" width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+					<em>晴</em>
+					<span>-15℃~-33℃</span>
+					<b>东南风</b>
+					<strong>1-2级转3-4级</strong>
+				</li>
+				<li data-dn="23d2">
+					<i>11时-14时</i> |
+					<img class='img1' width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d00.png">
+					<img class="img2" width="40" src="http://i.tq121.com.cn/i/english/weaIcon/blue/d01.png">
+					<em>晴</em>
+					<span>-15℃~-33℃</span>
+					<b>东南风</b>
 					<strong>1-2级转3-4级</strong>
 				</li>
 				<li data-dn="23d2">
@@ -417,7 +466,6 @@
 					<strong>1-2级</strong>
 				</li>
 			</ul>			
-
 			<!--选项卡end-->
 
 			<!--条形广告位begin-->

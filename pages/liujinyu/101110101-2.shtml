@@ -37,53 +37,118 @@ W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
 	</ul>
 	<ul class="f clearfix">
 		<li>
-			<div class="t">23°C</div>
-			<div class="n"></div>
-			<div class="b">11°C</div>
+			<div class="t">
+				<p>23°C</p>
+				<img src="http://10.14.85.90/source/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+			</div>
+			<div class="n">
+				<p class='zt'></p>
+				<p class='zc'></p>
+				<p class='zb'></p>
+			</div>
+			<div class="b">
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+				<p>15°C</p>
+			</div>
 		</li>
 		<li>
-			<div class="t">21°C</div>
-			<div class="n"></div>
-			<div class="b">11°C</div>
+			<div class="t">
+				<p>17°C</p>
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+			</div>
+			<div class="n">
+				<p class='zt'></p>
+				<p class='zc'></p>
+				<p class='zb'></p>
+			</div>
+			<div class="b"><img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+				<p>10°C</p>
+			</div>
 		</li>
 		<li>
-			<div class="t">21°C</div>
-			<div class="n"></div>
-			<div class="b">10°C</div>
+			<div class="t">
+				<p>34°C</p>
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+			</div>
+			<div class="n">
+				<p class='zt'></p>
+				<p class='zc'></p>
+				<p class='zb'></p>
+			</div>
+			<div class="b"><img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+				<p>23°C</p>
+			</div>
 		</li>
 		<li>
-			<div class="t">27°C</div>
-			<div class="n"></div>
-			<div class="b">4°C</div>
+			<div class="t">
+				<p>37°C</p>
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+			</div>
+			<div class="n">
+				<p class='zt'></p>
+				<p class='zc'></p>
+				<p class='zb'></p>
+			</div>
+			<div class="b"><img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+				<p>12°C</p>
+			</div>
 		</li>
 		<li>
-			<div class="t">35°C</div>
-			<div class="n"></div>
-			<div class="b">0°C</div>
+			<div class="t">
+				<p>17°C</p>
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+			</div>
+			<div class="n">
+				<p class='zt'></p>
+				<p class='zc'></p>
+				<p class='zb'></p>
+			</div>
+			<div class="b"><img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+				<p>10°C</p>
+			</div>
 		</li>
 		<li>
-			<div class="t">22°C</div>
-			<div class="n"></div>
-			<div class="b">12°C</div>
+			<div class="t">
+				<p>25°C</p>
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+			</div>
+			<div class="n">
+				<p class='zt'></p>
+				<p class='zc'></p>
+				<p class='zb'></p>
+			</div>
+			<div class="b">
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+				<p>01°C</p>
+			</div>
 		</li>
 		<li>
-			<div class="t">21°C</div>
-			<div class="n"></div>
-			<div class="b">11°C</div>
+			<div class="t">
+				<p>14°C</p>
+				<img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+			</div>
+			<div class="n">
+				<p class='zt'></p>
+				<p class='zc'></p>
+				<p class='zb'></p>
+			</div>
+			<div class="b"><img src="http://i.tq121.com.cn/i/english/weaIcon/blue/d02.png" width="30" height="30" >
+				<p>-1°C</p>
+			</div>
 		</li>
 	</ul>
 	<ul class="c clearfix">
 		<li>
-			<P>out:风向</P>
-			<P>out:风速</P>
+			<P>无持续风向</P>
+			<P>微风</P>
 		</li>
 		<li>
-			<P>out:风向</P>
-			<P>out:风速</P>
+			<P>东南风</P>
+			<P>1-2级</P>
 		</li>
 		<li>
-			<P>out:风向</P>
-			<P>out:风速</P>
+			<P>无持续风向</P>
+			<P>微风</P>
 		</li>
 		<li>
 			<P>out:风向</P>
@@ -105,34 +170,33 @@ W.use('j/tool/DD_belatedPNG',function(DD_belatedPNG){
 	<ul class="d clearfix">
 		<li>
 			<div class="t"></div>
+			<div class="c">今天</div>
+		</li>
+		<li>
+			<div class="t"></div>
+			<div class="c">明天</div>
+		</li>
+		<li>
+			<div class="t"></div>
+			<div class="c">后天</div>
+		</li>
+		<li>
+			<div class="t"></div>
+			<div class="c">周四</div>
+		</li>
+		<li>
+			<div class="t"></div>
+			<div class="c">周五</div>
+		</li>
+		<li>
+			<div class="t"></div>
 			<div class="c end">周六</div>
 		</li>
 		<li>
-			<div class="t"></div>
+			<div class="t  tz"></div>
 			<div class="c end">周日</div>
-		</li>
-		<li>
-			<div class="t">周一</div>
-			<div class="c"></div>
-		</li>
-		<li>
-			<div class="t"></div>
-			<div class="c"></div>
-		</li>
-		<li>
-			<div class="t"></div>
-			<div class="c"></div>
-		</li>
-		<li>
-			<div class="t"></div>
-			<div class="c"></div>
-		</li>
-		<li>
-			<div class="t tz"></div>
-			<div class="c"></div>
 		</li>
 	</ul>
 </div>
-
 </body>
 </html>
