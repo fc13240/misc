@@ -15,7 +15,7 @@
 #toolBar b i{border-top:6px solid #adadad;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:0px;top:20px;}
 .links{display:block;height:30px;line-height:30px;position:absolute;right:0px;top:0px;}
 .links a{color:#fff;display:block;height:30px;line-height:30px;float:left;padding:0px 10px; overflow:hidden;}
-.links #setIndex,.links #eg{border-right:1px solid #275885;}
+.links #setIndex,.links #eg{border-right:0px solid #275885;}
 #provice{background-color:#ebebeb;color:#252525;width:74px;position:relative; padding:0; text-indent:12px;}
 #provice .icon{display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
 #provice .arrow{position:absolute;right:9px;top:14px;}
@@ -31,16 +31,16 @@
 .footer dl dd p,.friendLink p{line-height:25px;}
 .footer dl p a,.friendLink p a{padding-right:10px;color:#959595;}
 .footer dl p a:hover,.friendLink p a:hover{color:#ee842f;}
-.friendLink{width:358px;position:absolute;right:0px;top:20px;padding:15px 15px 13px 15px;}
+.friendLink{width:358px;position:absolute;right:80px;top:20px;padding:15px 15px 13px 15px;}
 .friendLink h3{padding-bottom:5px;}
 .footer .last{border-top:1px solid #ebebeb;margin-top:5px;padding-top:5px;}
-.serviceinfo{padding:20px 0px;font-size:12px;line-height:20px;}
+.serviceinfo{ border-top:1px dashed #d5d4d4;padding:20px 0px;font-size:12px;line-height:20px;}
 .serviceinfo p{height:20px;}
 .serviceinfo p span{display:block;width:265px;float:left;}
 .serviceinfo a,.serviceinfo b{color:#076ea8;font-weight:normal;}
 .serviceinfo b{color: #252525;}
 .aboutUs{background-color:#7d7d7d;color:#fff;height:45px;line-height:45px;text-align:center;font-size:12px;min-width:1000px;}
-.provinceLinks{position:absolute;z-index:100;top:43px;left:0px;width:100%;height:175px;background-color:#ebebeb;display:none;}
+.provinceLinks{position:absolute;z-index:100;top:30px;left:0px;width:100%;height:175px;background-color:#ebebeb;display:none;}
 .provinceLinks dl{float:left;padding:10px 0px;}
 .provinceLinks dl dt{width:46px;height:40px;background:url(../i/index_icons.png) no-repeat 0px -43px;font-size:16px;line-height:20px;padding:13px 10px;text-align:center;float:left;margin-right:4px;}
 .provinceLinks dl .last{padding:13px 5px;width:56px;}

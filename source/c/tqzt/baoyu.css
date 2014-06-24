@@ -121,7 +121,7 @@ a:hover { text-decoration: none; }
 .con7 h1 { padding-bottom: 7px; padding-left: 13px; }
 .con7 .m { height: 141px; position: relative; }
 .con7 .m .mBox { height: 90px; left: 32px; overflow: hidden; position: absolute; top: 15px; width: 900px; }
-.con7 .m .mBox ul { background: url("http://www.weather.com.cn/m2/i/tfty/tffy/title.jpg") no-repeat scroll 10px 8px transparent; height: 38px; padding-left: 15px; }
+.con7 .m .mBox ul {}
 .con7 .m .mBox ul li { float: left; margin-right: 6px; position: relative; width: 123px; }
 .con7 .m .mBox ul li p { color: #FFFFFF; font-size: 20px; height: 24px; left: 0px; line-height: 24px; overflow: hidden; position: absolute; text-align: center; text-overflow: ellipsis; top: 67px; white-space: nowrap; width: 100%; z-index: 1; }
 .con7 .m .mBox ul li div { background: none repeat scroll 0% 0% #000000; height: 24px; left: 0px; opacity: 0.6; position: absolute; top: 67px; width: 100%; }

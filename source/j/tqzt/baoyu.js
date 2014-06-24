@@ -145,12 +145,12 @@ define(function(require){
 	    	rRight:'#picShow .rollRight',
 	    	rW:'129px'//一次滚动的宽度，li的宽加上marign值
 	    }
-	    var ulW = $(SN.ul).width();
+	    var ulW = $(SN.ul).children('li').length*129;
 	    var opac = $(SN.rLeft).css('opacity'); 
 		$(SN.ul).append($(SN.ul).find('li').clone()).width(ulW*2);
 		var arrInter = [];
 		$(SN.rLeft+','+SN.rRight).click(function(){
-			var sign = $(this).hasClass('rollLeft') && '-' || '+';
+			var sign = $(this).hasClass('rollLeft') && '+' || '-';
 			_toRoll(sign);
 		}).hover(function(){
 			$._clearInter(arrInter);
