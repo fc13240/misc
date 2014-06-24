@@ -236,17 +236,17 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 #sevenDay h1{ font-size:20px; color:#252525; text-indent:5px; border-top:3px solid #076ea8; height:34px; line-height:34px;}
 .sevenDay ul.b1 { display: block; padding: 15px 9px 0px 38px; }
 .sevenDay ul.b1 li { border-top: 1px solid #CCCCCC; height: 59px; border-left: 1px solid #CCCCCC; border-right: 1px solid #CCCCCC; }
-.sevenDay ul.b2 { display: block; left: 3px; position: absolute; top: 5px; }
+.sevenDay ul.b2 { display: block; left: -5px; position: absolute; top: 5px; width:40px; }
 .sevenDay ul.b2 li { font-size: 14px; height: 60px; text-align:right; color:#575757; }
 .sevenDay ul.b li p { border-top: 1px solid #CCCCCC; height: 1px; left: 57px; position: absolute; top: 0px; width: 583px; }
 .sevenDay ul.f { left: 80px; position: absolute; top: 16px; z-index: 1; }
 .sevenDay ul.f li { float: left; margin-right:60px; position: relative; }
-.sevenDay ul.f li .t { font-size: 16px; height: 64px; left: -12px; position: absolute; text-align: center; top: -56px; width: 50px; }
+.sevenDay ul.f li .t { font-size: 16px; height: 64px; left: -12px; position: absolute; text-align: center; top: -56px;_top:-48px; width: 50px; }
 .sevenDay ul.f li .n { width: 24px; }
 .sevenDay ul.f li .n .zt { background:url("http://i.tq121.com.cn/i/weather2014/city/z1.png") no-repeat scroll center bottom transparent; height:10px; }
 .sevenDay ul.f li .n .zc { background:url("http://i.tq121.com.cn/i/weather2014/city/z3.png") repeat scroll center center transparent; height:0px; }
 .sevenDay ul.f li .n .zb { background:url("http://i.tq121.com.cn/i/weather2014/city/z2.png") no-repeat scroll center top transparent; height:10px; }
-.sevenDay ul.f li .b { bottom: -56px; font-size: 16px; left: -11px; position: absolute; text-align: center; width: 50px; }
+.sevenDay ul.f li .b { bottom: -56px;_bottom:-45px; font-size: 16px; left: -11px; position: absolute; text-align: center; width: 50px; }
 .sevenDay ul.c { left: 81px; padding-top: 10px; position: absolute; top: 320px; }
 .sevenDay ul.c li { color: #666666; float: left; text-align: center; width: 80px; }
 .sevenDay ul.c li p { }
