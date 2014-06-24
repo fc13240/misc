@@ -1,4 +1,4 @@
-body { background:url(../../i/weather2014/city/111.jpg) 21px -417px no-repeat  #ffffff; color: #252525; }
+body { background: #ffffff; color: #252525; }
 i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .ad { height: 90px; }
 .ad .ad1 { background: none repeat scroll 0% 0% #cccccc; height: 100%; width: 310px; }
@@ -42,7 +42,7 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .left .m ul.t li p, .left .m ul.t li h1, .left .m ul.t li img { }
 .left .m ul.t li.sk { height: 309px; padding-top: 25px; position: relative; width: 244px; }
 .left .m ul.t li.sk h1 { font-size: 14px; }
-.left .m ul.t li.sk h1 img { position: absolute; right: 43px; top: 21px; }
+.left .m ul.t li.sk h1 img { position: absolute; right: 43px; top: 21px; display:none; }
 .left .m ul.t li.sk .wea { font-size: 16px; margin-top: 3px; }
 .left .m ul.t li.sk .tem { color: #252525; margin-top: 3px; }
 .left .m ul.t li.sk .tem span { font-size: 36px; }
@@ -206,7 +206,7 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .d7 .left .greatEvent ul{ margin-left:10px; margin-top:10px;}
 .d7 .left .greatEvent ul li{ background:url(../../i/weather2014/city/c15.jpg) no-repeat;zoom:1; height:138px;}
 .d7 .left .greatEvent ul li:after{clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
-.d7 .left .greatEvent ul li p.time{ text-align:right;width:75px; float:left; font-size:16px; color:#076ea8; padding-right:3px;}
+.d7 .left .greatEvent ul li p.time{ text-align:right;width:75px; float:left; font-size:16px; color:#076ea8; padding-right:3px; height:20px; line-height:20px;}
 .d7 .left .greatEvent ul li img{ float:left;}
 .d7 .left .greatEvent ul li div{ margin-left:10px; position:relative; float:left; width:445px; height:110px;}
 .d7 .left .greatEvent ul li div h2{  font-size:16px; width:409px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
@@ -241,12 +241,12 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .sevenDay ul.b li p { border-top: 1px solid #CCCCCC; height: 1px; left: 57px; position: absolute; top: 0px; width: 583px; }
 .sevenDay ul.f { left: 80px; position: absolute; top: 16px; z-index: 1; }
 .sevenDay ul.f li { float: left; margin-right:60px; position: relative; }
-.sevenDay ul.f li .t { font-size: 16px; height: 64px; left: -12px; position: absolute; text-align: center; top: -56px;_top:-48px; width: 50px; }
+.sevenDay ul.f li .t { font-size: 16px; height: 64px; left: -12px; position: absolute; text-align: center; top: -56px; width: 50px; }
 .sevenDay ul.f li .n { width: 24px; }
-.sevenDay ul.f li .n .zt { background:url("http://i.tq121.com.cn/i/weather2014/city/z1.png") no-repeat scroll center bottom transparent; height:10px; }
+.sevenDay ul.f li .n .zt { background:url("http://i.tq121.com.cn/i/weather2014/city/z1.png") no-repeat scroll center bottom transparent;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/z1.png");   height:10px; }
 .sevenDay ul.f li .n .zc { background:url("http://i.tq121.com.cn/i/weather2014/city/z3.png") repeat scroll center center transparent; height:0px; }
-.sevenDay ul.f li .n .zb { background:url("http://i.tq121.com.cn/i/weather2014/city/z2.png") no-repeat scroll center top transparent; height:10px; }
-.sevenDay ul.f li .b { bottom: -56px;_bottom:-45px; font-size: 16px; left: -11px; position: absolute; text-align: center; width: 50px; }
+.sevenDay ul.f li .n .zb { background:url("http://i.tq121.com.cn/i/weather2014/city/z2.png") no-repeat scroll center top transparent;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/z2.png");   height:10px; }
+.sevenDay ul.f li .b { bottom: -56px; font-size: 16px; left: -11px; position: absolute; text-align: center; width: 50px; }
 .sevenDay ul.c { left: 81px; padding-top: 10px; position: absolute; top: 320px; }
 .sevenDay ul.c li { color: #666666; float: left; text-align: center; width: 80px; }
 .sevenDay ul.c li p { }
@@ -451,7 +451,6 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 #todayliving .title h2 span { cursor: pointer; font-size: 16px; padding-left: 16px; }
 #todayliving .title h2 span.on { color: #076ea8; }
 .d7 #todayliving .detail aside { display:none;}
-
 .tabContent .zs { overflow: hidden; width: 680px; }
 .zs ul { width: 680px; }
 .zs ul li { background-color: #076ea8; color: #ffffff; float: left; height: 120px; margin: 5px 2px 0px 3px;_ margin: 5px 2px 0px 2px; overflow: hidden; position: relative; width: 221px; }
@@ -517,3 +516,157 @@ i, h1, h2, h3 { font-style: normal; font-weight: normal; }
 .zs .detail aside b { color: #ffffff; display: block; font-size: 24px; line-height: 30px; }
 .zs ul li h3 { border-top: 0px none; font-size: 14px; font-weight: normal; height: 25px; left: 0px; line-height: 16px; padding-left: 5px; position: absolute; text-align: center; top: 85px; width: 70px; }
 .zs ul li h3 a { color: #ffffff; }
+
+#aboutZS {
+	width:650px;
+	overflow:hidden;
+	margin-bottom:0px;
+	font: 14px/1.6 "Microsoft Yahei", "Tahoma", "SimSun";
+	color:#3f3f3f;
+	float:left;
+	height:auto;
+}
+.zs {
+	width:660px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.zs ul {
+	width:675px;
+}
+.zs ul li {
+	width:210px;
+	height:120px;
+	overflow:hidden;
+	margin:0px 10px 10px 0px;
+	float:left;
+	background-color:#076ea8;
+	color:#fff;
+	position:relative;
+}
+.zs ul li .xsm {
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/xsm.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/xsm.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .qlx{
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/qlx.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/qlx.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .ytw {
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/ytw.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/ytw.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .sl {
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/sl.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/sl.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .mask {
+	width:210px;
+	height:120px;
+	overflow:hidden;
+	position:relative;
+}
+.zs ul li .area {
+	width:210px;
+	height:240px;
+	overflow:hidden;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.zs ul li .imgArea {
+	width:210px;
+	height:120px;
+	overflow:hidden;
+}
+.zs ul li .imgArea img {
+	width:210px;
+	height:80px;
+	overflow:hidden;
+	border:0;
+}
+.zs ul li .detail {
+	padding:14px 0px 0px 10px;
+	width:200px;
+	height:110px;
+}
+.zs ul li .detail aside {
+	width:120px;
+	padding-right:10px;
+	float:right;
+	line-height:18px;
+	font-size:12px;
+	font:12px/1.6 "Microsoft Yahei", "Tahoma", "SimSun";
+}
+.zs ul li .detail aside b {
+	font-size:24px;
+	color:#fff;
+	display:block;
+	line-height:30px;
+	font-weight:bold;
+}
+.zs ul li .detail a img {
+	border:none;
+}
+.zs ul li h3 {
+	border-top:0px;
+	height:auto;
+	line-height:16px;
+	font-size:14px;
+	font-weight:normal;
+	padding-left:8px;
+	position:absolute;
+	left:0px;
+	top:85px;
+	text-align:left;
+	width:130px;
+}
+.zs ul li h3 a {
+	color:#fff;
+}
+.zs ul li h3 a b {
+	font-weight:bold;
+}
+.weatheH1 span a.ckqbs {
+	/*background-color: #EFEEFE;
+	border: 1px solid #99B0DA;
+	color: #3366BB;
+	display: inline;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 1px;
+	margin-top: 2px;
+	padding: 4px 5px;*/
+}
+.weatheH1 span a.ckqbs:hover {
+	color:#f60;
+	text-decoration:none;
+}

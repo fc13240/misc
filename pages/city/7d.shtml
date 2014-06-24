@@ -4,7 +4,7 @@
 <link rel="dns-prefetch" href="http://i.tq121.com.cn">
 <meta charset="utf-8" />
 <title>北京</title>
-<script type="text/javascript" language="JavaScript" src="http://10.14.85.90/source/j/core.js"></script>
+<script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
 <script>W.css('c/core.css','c/weather2014/common.css','c/weather2014/city.css')</script>
 <script>W.use('j/weather2014/city')</script>
 <!--[if lt IE 7]>
@@ -478,7 +478,7 @@
 				<div id="todayliving">
 					<div class="tabContent">
 						<div class="zs">
-							<ul>
+							<ul class="clearfix">
 								<li>
 									<section class="mask xc">
 										<section class="area" style="top: 0px;">
@@ -842,108 +842,108 @@
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/d02.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='30' src="http://10.14.85.90/source/i/weather2014/png/blue_30/n10.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>

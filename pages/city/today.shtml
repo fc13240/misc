@@ -5,8 +5,8 @@
 <meta charset="utf-8" />
 <title>北京</title>
 <script type="text/javascript" language="JavaScript" src="http://i.tq121.com.cn/j/core.js"></script>
-<script>W.css('c/core.css','c/weather2014/common.css','c/weather2014/city.css')</script>
-<script>W.use('j/weather2014/city')</script>
+<script>W.css('c/core.css','c/weather2014/common.css','c/weather2014/city.css','c/weather2014/zs.css')</script>
+<script>W.use(['j/weather2014/zs','j/weather2014/city'])</script>
 <!--[if lt IE 7]>
     <script>
         W.use('j/DD_belatedPNG',function(DD_belatedPNG){
@@ -517,174 +517,379 @@
 			</div>
 			<script>
 				var cityid = "101010100";
-				W.use(['j/weatherfc/city_main','j/tool/slidebar']);
+				W.use('j/weatherfc/city_main');
 			</script>
 			
 			<!--整点天气end-->
 
 			<!--指数begin-->
 			<div id="aboutZS">
-				<div id="todayliving">
-					<div class="title clearfix">
-						<h1>生活指数</h1>
-						<h2>
-							<span class='on'>热门指数</span>
-							<span>其他指数</span>
-						</h2>
-						<i></i>
-					</div>
-					<div class="tabContent">
-						<div class="zs">
-							<ul>
-								<li>
-									<section class="mask xc">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>不宜</b>有雨，雨水和泥水会弄脏爱车。</aside>
-												<a href="http://www.weather.com.cn/indexfc/xc/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/xc/101010100.shtml"></a>
-											</section>
-										</section>
+				<h2 class="weatheH1"> 
+					生活指数 
+					<span>
+						<a href="javascript:void(0)" class="ckqbs on" >热门指数</a>
+						<a href="javascript:void(0)" class="ckqbs">其他指数</a>
+					</span>
+				</h2>
+				<div class="zs" id="zs0">
+					<ul>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail gl">
+										<aside><b> 必要 </b> 建议佩戴透射比为1级的浅色太阳镜 </aside>
+										<a></a>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/xc/101010100.shtml">洗车指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask tr">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>适宜</b>温度适宜，可尽情享受大自然风光。</aside>
-												<a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml"></a>
-											</section>
-										</section>
+									<section class="imgArea"><img alt="太阳镜指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/22.jpg">
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 必要 </span>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml">旅游指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask ct">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>较舒适</b>建议穿薄外套或牛仔裤等服装。</aside>
-												<a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml"></a>
-											</section>
-										</section>
+								</section>
+							</section>
+							<h3>
+								<a><b>太阳镜指数</b></a>
+							</h3>
+							<span class="sl"></span>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail ct">
+										<aside><b> 炎热 </b> 建议穿短衫、短裤等清凉夏季服装。 </aside>
+										<a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml" target="_blank"></a>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml">穿衣指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask gz">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>干燥</b>建议涂抹高保湿型护肤品。</aside>
-												<a href="http://www.weather.com.cn/indexfc/gz/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/gz/101010100.shtml"></a>
-											</section>
-										</section>
+									<section class="imgArea">
+										<a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml" target="_blank" title="穿衣指数"><img alt="穿衣指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/5.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 炎热 </span>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/gz/101010100.shtml">干燥指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask co">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>舒适</b>白天不冷不热，风力不大。</aside>
-												<a href="http://www.weather.com.cn/indexfc/co/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/co/101010100.shtml"></a>
-											</section>
-										</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://www.weather.com.cn/indexfc/ct/101010100.shtml" target="_blank"><b>穿衣指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail tr">
+										<aside><b> 适宜 </b> 微风，虽天气稍热，但不会影响心情。 </aside>
+										<a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml" target="_blank"></a>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/co/101010100.shtml">舒适度指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask pl">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>中</b>易感人群应适当减少室外活动。</aside>
-												<a href="http://www.weather.com.cn/indexfc/pl/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/pl/101010100.shtml"></a>
-											</section>
-										</section>
+									<section class="imgArea">
+										<a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml" target="_blank" title="旅游指数"><img alt="旅游指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/12.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 适宜 </span>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/pl/101010100.shtml">空气污染扩散指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask uv">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>最弱</b>辐射弱，涂擦SPF8-12防晒护肤品。</aside>
-												<a href="http://www.weather.com.cn/indexfc/uv/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/uv/101010100.shtml"></a>
-											</section>
-										</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://www.weather.com.cn/indexfc/tr/101010100.shtml" target="_blank"><b>旅游指数（24日白天）</b></a>
+							</h3>
+							<span class="qlx"></span>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail yd">
+										<aside><b> 较适宜 </b> 天气较好，较适宜进行各种运动，但因天气热，请适当减少运动时间，降低运动强度。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1395.php" target="_blank"></a>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/uv/101010100.shtml">紫外线指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask fs">
-										<section class="area" style="top: 0px;">
-											<section class="detail">
-												<aside><b>弱</b>涂抹8-12SPF防晒护肤品。</aside>
-												<a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml"></a>
-											</section>
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml"></a>
-											</section>
-										</section>
+									<section class="imgArea">
+										<a  title="运动指数" target="_blank" href="http://baike.weather.com.cn/index.php?doc-view-1395.php"><img alt="运动指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/1.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 较适宜 </span>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml">防晒指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-								<li>
-									<section class="mask ys">
-										<section class="area" style="top: 0px;">
-											<section class="imgArea">
-												<a href="http://www.weather.com.cn/indexfc/ys/101010100.shtml"></a>
-											</section>
-											<section class="detail">
-												<aside><b>不带伞</b>阴天，无需带雨伞。</aside>
-												<a href="http://www.weather.com.cn/indexfc/ys/101010100.shtml"></a>
-											</section>
-										</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1395.php" target="_blank"><b>运动指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail xc">
+										<aside><b> 不宜 </b> 有雨，雨水和泥水会弄脏爱车。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1393.php" target="_blank"></a>
 									</section>
-									<h3>
-										<a href="http://www.weather.com.cn/indexfc/ys/101010100.shtml">雨伞指数</a>
-									</h3>
-									<span class="notice" style="display: none;"></span></li>
-							</ul>
-						</div>
-					</div>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1393.php" target="_blank" title="洗车指数"><img alt="洗车指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/3.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 不宜 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1393.php" target="_blank"><b>洗车指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail pp">
+										<aside><b> 防脱水 </b> 请选用防脱水化妆品。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1397.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1397.php" target="_blank" title="化妆指数"><img alt="化妆指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/6.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 防脱水 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1397.php" target="_blank"><b>化妆指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail gm">
+										<aside><b> 少发 </b> 感冒机率较低，避免长期处于空调屋中。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1391.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1391.php" target="_blank" title="感冒指数"><img alt="感冒指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/19.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 少发 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1391.php" target="_blank"><b>感冒指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail uv">
+										<aside><b> 中等 </b> 涂擦SPF大于15、PA+防晒护肤品。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1387.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1387.php" target="_blank" title="紫外线指数"><img alt="紫外线指数"  src="http://www.weather.com.cn/m2/i/zs/zs_pic/20.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 中等 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1387.php" target="_blank"><b>紫外线指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail co">
+										<aside><b> 较不舒适 </b> 多云，有些热。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1051.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1051.php" target="_blank" title="舒适度指数"><img alt="舒适度指数" src="http://www.weather.com.cn/m2/i/zs/zs_pic/7.jpg"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 较不舒适 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1051.php" target="_blank"><b>舒适度指数</b></a>
+							</h3>
+						</li>
+					</ul>
 				</div>
+				<div class="zs yinc" id="zs1" style="display:none;">
+					<ul>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail gj">
+										<aside><b> 较适宜 </b> 穿上透气衣服就可以放心出门逛街了。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1404.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1404.php" target="_blank" title="逛街指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 较适宜 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1404.php" target="_blank"><b>逛街指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail mf">
+										<aside><b> 一般 </b> 注意头发清洁，选用防晒型护发品。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1405.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1405.php" target="_blank" title="美发指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 一般 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1405.php" target="_blank"><b>美发指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail ys">
+										<aside><b> 不带伞 </b> 天气较好，不用带雨伞。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1400.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1400.php" target="_blank" title="雨伞指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 不带伞 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1400.php" target="_blank"><b>雨伞指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail jt">
+										<aside><b> 良好 </b> 气象条件良好，车辆可以正常行驶。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1392.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1392.php" target="_blank" title="交通指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 良好 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1392.php" target="_blank"><b>交通指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail lk">
+										<aside><b> 干燥 </b> 天气较好，路面较干燥，路况较好。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1401.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1401.php" target="_blank" title="路况指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 干燥 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1401.php" target="_blank"><b>路况指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail cl">
+										<aside><b> 适宜 </b> 天气不错，空气清新，是晨练的好时机。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1390.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1390.php" target="_blank" title="晨练指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 适宜 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1390.php" target="_blank"><b>晨练指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail dy">
+										<aside><b> 较适宜 </b> 天气稍热会对垂钓产生一定影响。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1398.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1398.php" target="_blank" title="钓鱼指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 较适宜 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1398.php" target="_blank"><b>钓鱼指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail hc">
+										<aside><b> 适宜 </b> 天气较好，适宜划船及嬉玩水上运动。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1402.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1402.php" target="_blank" title="划船指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 适宜 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1402.php" target="_blank"><b>划船指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail yh">
+										<aside><b> 较不适宜 </b> 天气较热，建议尽量不要去室外约会。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1399.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1399.php" target="_blank" title="约会指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 较不适宜 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1399.php" target="_blank"><b>约会指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail ls">
+										<aside><b> 适宜 </b> 天气不错，抓紧时机让衣物晒太阳吧。 </aside>
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1394.php" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a href="http://baike.weather.com.cn/index.php?doc-view-1394.php" target="_blank" title="晾晒指数"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 适宜 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://baike.weather.com.cn/index.php?doc-view-1394.php" target="_blank"><b>晾晒指数</b></a>
+							</h3>
+						</li>
+						<li>
+							<section class="mask">
+								<section class="area">
+									<section class="detail fs">
+										<aside><b> 中等 </b> 适合涂擦SPF大于15，PA+护肤品。 </aside>
+										<a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml" target="_blank"></a>
+									</section>
+									<section class="imgArea">
+										<a title="防晒指数" target="_blank" href="http://www.weather.com.cn/indexfc/fs/101010100.shtml"></a>
+										<span style="float: right;font-size: 16px;font-weight: bold;margin-right: 15px;margin-top: -2px;"> 中等 </span>
+									</section>
+								</section>
+							</section>
+							<h3>
+								<a href="http://www.weather.com.cn/indexfc/fs/101010100.shtml" target="_blank"><b>防晒指数</b></a>
+							</h3>
+						</li>
+					</ul>
+				</div>
+			</div>			
+			
+			
+			<div class="adposter_6123" id="adposter_6123">
+				<div class="adposter_6123" style="background:url(/m2/i/index/loading.gif) center center no-repeat #eee"></div>
 			</div>
+			
+			
+			
+			
 			<!--指数end-->
 			<div class="ad3">广告</div>
 			<!--周边地区begin-->
@@ -697,112 +902,111 @@
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
 					<li>
 						<span><a href="">石家庄</a></span>
 						<div class="img clearfix">
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/d02.png" alt="d02.png">
 							<em>/</em>
-							<img width='32' src="http://i.tq121.com.cn/i/english/weaIcon/blue/d18.png">
+							<img width='30' src="http://i.tq121.com.cn/i/weather2014/png/blue_30/n10.png"  alt="n10.png">
 						</div>
 						<i>-25/-10°C</i>
 					</li>
-					
 				</ul>
 			</div>
 			<!--周边地区end-->

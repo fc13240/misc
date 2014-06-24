@@ -15,8 +15,6 @@ define(function(require){
 	})
 	
 	$(function(){
-		//ie6 png
-		tool_pngfix();
 		//滚动图
 		new picRoll({
             eleFather: '#scrollPic',  //容器标签 父元素 最外围标签  
@@ -63,13 +61,24 @@ define(function(require){
 		$todayUl.find('li[data-dn='+dataDn+']').show();
 		$('.d23 #todayliving .detail aside[data-dn=23d2]').show();
 		//今天 明后天 7d 15d 联动
-		var $todayUl = $('#Hour3');
+	
 		$('#tabDays li.dn').click(function(){
+			var $imgS1 = $(this).siblings(".on").find('img:eq(0)');
+			var $imgS2 = $(this).siblings(".on").find('img:eq(1)');
+		
+			if($imgS1.attr('src'))$imgS1.attr('src',$imgS1.attr('src').replace(/\/blue\//,'/gray/'));
+			if($imgS2.attr('src')){$imgS2.attr('src',$imgS2.attr('src').replace(/\/blue\//,'/gray/'))};
+
+
 			$(this).addClass('on').siblings().removeClass('on');
-			var $img = $(this).find('img');
-			var imgName = $img.attr('src').match(/\w\d+\.jpg/g);
-			$img.attr('src','http://i.tq121.com.cn/i/weather2014/jpg/blue/'+imgName);
-			$(this).siblings(".dn").find('img').attr('src','http://i.tq121.com.cn/i/weather2014/jpg/gray/'+imgName)
+			var $img1 = $(this).find('img:eq(0)');
+			var $img2 = $(this).find('img:eq(1)');
+			$img1.attr('src') && $img1.attr('src',$img1.attr('src').replace(/\/gray\//,'/blue/'));
+			$img2.attr('src') && $img2.attr('src',$img2.attr('src').replace(/\/gray\//,'/blue/'));
+			
+			
+			// var $imgS2 = $(this).siblings(".on").find('img:eq(1)');
+			
 			// "http://i.tq121.com.cn/i/weather2014/jpg/blue/d01.jpg"
 			dataDn = $(this).attr('data-dn');
 			$todayUl.children('li[data-dn='+dataDn+']').show();
@@ -110,21 +119,18 @@ define(function(require){
 			$(this).addClass('hover').siblings().removeClass('hover')
 			$img1 = $(this).find('img:first');
 			$img2 = $(this).find('img:last');
-			imgSrc1 = $img1.attr("src").replace(/blue_30/,'white_30');
-			imgSrc2 = $img2.attr("src").replace(/blue_30/,'white_30');
-			$img1.attr("src",imgSrc1);
-			$img2.attr('src',imgSrc2);
+			$img1.attr("src",'http://i.tq121.com.cn/i/weather2014/png/white_30/'+$img1.attr('alt'));
+			$img2.attr("src",'http://i.tq121.com.cn/i/weather2014/png/white_30/'+$img2.attr('alt'));
+			tool_pngfix();
 		},function(){
-			$(this).removeClass('hover');
+			$(this).removeClass('hover')
 			$img1 = $(this).find('img:first');
 			$img2 = $(this).find('img:last');
-			imgSrc1 = $img1.attr("src").replace(/white_30/,'blue_30');
-			imgSrc2 = $img2.attr("src").replace(/white_30/,'blue_30');
-			$img1.attr("src",imgSrc1);
-			$img2.attr('src',imgSrc2);
+			$img1.attr("src",'http://i.tq121.com.cn/i/weather2014/png/blue_30/'+$img1.attr('alt'));
+			$img2.attr("src",'http://i.tq121.com.cn/i/weather2014/png/blue_30/'+$img2.attr('alt'));
+			tool_pngfix();
 		});
 		//七天趋势
-		
 		var $F = $('.sevenDay');
 		var $fUl = $F.find('ul.f');
 		var $fLi = $fUl.find('li');
@@ -151,7 +157,6 @@ define(function(require){
 			}
 			var strImg1 = img1 == ' ' && ' ' || '<img src="http://i.tq121.com.cn/i/weather2014/png/blue_30/'+img1+'png" width="30" height="30" >';
 			var strImg2 = img2 == ' ' && ' ' || '<img src="http://i.tq121.com.cn/i/weather2014/png/blue_30/'+img2+'png" width="30" height="30" >';
-			
 			$F.children('ul.f').children('li:eq('+i+')').find("p:first").html(tem1s).after(strImg1);
 			$F.children('ul.f').children('li:eq('+i+')').find("p:last").html(tem2s).before(strImg2);
 			var $c = $F.children('ul.d').children('li:eq('+i+')').children('.c');
@@ -165,7 +170,6 @@ define(function(require){
 			maxT = tem1 > maxT ? tem1 : maxT;
 			minT = tem2 < minT ? tem2 : minT;
 		}
-		
 		var lineT = Math.ceil(maxT/5)+1;
 		var lineB = minT%5;
 		var lineB = lineB > 3 ? Math.ceil(minT/5)-1:Math.floor(minT/5)-1;
@@ -182,8 +186,7 @@ define(function(require){
 		var lineN = lineT-lineB;
 		$F.children('ul.b1').empty().append(b1Li).children('li:last').css({'border-left':'none','border-right':'none'}).parent('ul').next('.b2').empty().append(b2Li);
 		$F.children('ul.d').css('top',lineN*60+15+"px");
-	
-
-		
+		//ie6 png
+		tool_pngfix();
 	})()
 })
