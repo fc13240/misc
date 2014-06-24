@@ -520,13 +520,7 @@ padding:4px 0;
 overflow:hidden;
 padding:4px 0;
 }
-#lqPlayBut {
 
-background:url(http://www.weather.com.cn/m2/i/imageset_3/e_m_01.png) no-repeat -300px -900px;
-float:left;
-height:23px;
-width:69px;
-}
 #lqnextPicsBut {
 background:url(http://www.weather.com.cn/m2/i/imageset_3/e_m_01.png) no-repeat scroll -400px -900px;
 float:left;

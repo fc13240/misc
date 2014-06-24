@@ -71,7 +71,7 @@ $(document).ready(function() {
 	function Nextpic() {
 		tab = $(".lqPicListtu1 ul li").index($(".lqPicListtu1 ul li.move"));
 		if (tab == $(".lqPicListtu1 ul li").length - 1) {
-			$("#lqendSelect").show();
+			$(".pic_transition").show().siblings(".xian").hide();
 			$("#tqtad").attr('src', 'http://www.weather.com.cn/m2/i/index/tqtad.jpg');
 			return false;
 		} else {
@@ -202,10 +202,8 @@ $(document).ready(function() {
 	});
 	/*重新播放*/
 	$("#lqPlayBut").click(function() {
-		$("#lqendSelect").hide();
-		$("#lq_BigPic > img").hide();
-		$("#lq_BigPic > img").attr("src", $(".lqPicListtu1 ul li").eq(0).find("a").attr("href"));
-		$("#lq_BigPic > img").show();
+		$(".pic_transition").hide();
+		$(".xian").show();
 		$(".picchra h2").html($(".lqPicListtu1 ul li").eq(0).find("a").attr("title"));
 		$("#djz").html('1');
 		$(".lqPicListtu1").scrollLeft(0);
