@@ -380,7 +380,18 @@ a:hover{color:#ee842f;}
 	position:absolute;
 	display:block;
 	float:right;}
-.qhbh h1 { border: none;}
+
+.qhbh h1 {
+    color: #076ea8;
+    font-size: 16px;
+    border:none;
+     font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
 .qhbh h1 b
 {
 	margin-top:11px;
