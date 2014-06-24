@@ -107,15 +107,7 @@ $(function(){
             }), flag = !0), weather_ZS_Manager.init({
                 "Container": "#zs" + zs + " ul li",
                 "mask": ".area"
-            }), $("#aboutZS h2 span a").css({
-                "font-weight": "normal",
-                "background": "#efeefe",
-                "color": "#36b"
-            }), $(this).css({
-                "font-weight": "bold",
-                "background": "#fff",
-                "color": "#000"
-            });
+            }),$(this).addClass('on').siblings().removeClass('on');
         }), $(".RadarSatellit").find("li").mouseover(function() {
             var t0 = $(".RadarSatellit").find("li").index(this);
             return $(".RadarSatelliteim").hide(), $(".RadarSatelliteim").eq(t0).show(), $(".RadarSatellit").find("li").removeClass("moverad"), $(this).addClass("moverad"), !1;
