@@ -32,6 +32,11 @@ define(function(require){
 		$(".rank ul.on li.on").removeClass("on");
 		$(this).addClass("on");
 	})
+	$(".hotSpot ul li").hover(function(){
+		if($(this).hasClass("on")) return;
+		$(".hotSpot ul li.on").removeClass("on");
+		$(this).addClass("on");
+	})
 
 
 		//ie6 png
