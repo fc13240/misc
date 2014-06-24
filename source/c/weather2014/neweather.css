@@ -388,14 +388,14 @@ a:hover{color:#ee842f;}
     text-indent: 0;
      font-weight: bold;
     height: 36px;
-    line-height: 36px;
+    line-height: 23px;
     overflow: hidden;
     position: relative;
     padding: 0;
 }
 .qhbh h1 b
 {
-	margin-top:7px;
+	margin-top:0px;
 	display:inline;
 	margin-right:6px;
 	background:#076ea8; display:block; width:13px;
