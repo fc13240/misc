@@ -17,6 +17,23 @@ define(function(require){
 	})
 	
 	$(function(){
+
+       //排行切换
+	$(".rank h3 span a").hover(function(){
+		if($(this).hasClass("on")) return;
+		var currIndex = $(".rank h3 span a").index($(this));
+		$(".rank h3 span .on").removeClass("on");
+		$(this).addClass("on");
+		$(".rank ul.on").removeClass("on");
+		$(".rank ul").eq(currIndex).addClass("on");
+	})
+	$(".rank ul li").hover(function(){
+		if($(this).hasClass("on")) return;
+		$(".rank ul.on li.on").removeClass("on");
+		$(this).addClass("on");
+	})
+
+
 		//ie6 png
 		tool_pngfix();
 		//滚动图
