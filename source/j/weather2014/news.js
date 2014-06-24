@@ -39,6 +39,25 @@ define(function(require){
 	})
 
 
+
+    $(".exleft ul li").click(function(){
+		var slide =  $(".exleft ul li").index(this);
+		$(".exleft ul li .jj").hide();
+		$(".exleft ul li .jj").eq(slide).show();
+	})		
+	
+	
+	$(".trayin a").hover(function(){
+		$(this).find("i").stop().fadeIn();
+		$(this).find("b").stop().fadeIn();
+		$(this).find("em").stop().fadeIn();
+	},function(){
+		$(this).find("i").stop().fadeOut();
+		$(this).find("b").stop().fadeOut();
+		$(this).find("em").stop().fadeOut();
+	})
+
+
 		//ie6 png
 		tool_pngfix();
 		//滚动图
