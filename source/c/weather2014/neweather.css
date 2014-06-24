@@ -323,7 +323,7 @@ a:hover{color:#ee842f;}
 .life h4 a:hover{color:#ee842f;}
 .life p{line-height:30px;height: 60px;overflow: hidden;}
 .life ul{width:273px;position:absolute;right:0px;top:40px;border:1px solid #eee7e7;padding:5px 10px;overflow:hidden;}
-
+.travel h3 span{ float: right;;}
 .block .rightBlock{width:300px;position:absolute;right:0px;top:-10px;}
 .expert,.knowledge{width:300px;border-top:3px solid #076ea8;}
 .expert h3,.knowledge h3{height:30px;line-height:30px;background-color:#e8e8e8;padding-left:10px;font-size:18px;font-weight:normal;}
@@ -383,8 +383,9 @@ a:hover{color:#ee842f;}
 
 .qhbh h1 {
     color: #076ea8;
-    font-size: 16px;
+    font-size: 20px;
     border:none;
+    text-indent: 0;
      font-weight: bold;
     height: 36px;
     line-height: 36px;
@@ -394,16 +395,16 @@ a:hover{color:#ee842f;}
 }
 .qhbh h1 b
 {
-	margin-top:11px;
+	margin-top:7px;
 	display:inline;
-	margin-right:10px;
+	margin-right:6px;
 	background:#076ea8; display:block; width:13px;
-	height:15px; float:left;}
+	height:22px; float:left;}
 .qhbh h1 i
 {
-	 border-top: 1px solid #007bb9;
+	 border-top: 3px solid #007bb9;
 	  height: 1px;
-    margin-top: 20px;
+    margin-top: 12px;
     width: 197px;
 	top:0;
 	right:0;
