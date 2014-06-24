@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+.pit_title
+{
+	line-height:24px;
+	clear:both;
+	text-align:left;
+	margin-bottom:20px;}
+.lqPicListtu1 li.move
+{
+	opacity:0.5;}
+.ysyd
+{
+	clear:both;}
+.ysyd h1
+{
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/ysyd.jpg) no-repeat;
+	border-top:1px solid #dcf1bf; font-size:18px; font-style:italic; color:#666666; text-indent:30px;}
+.ysyd h2
+{
+	font-size:18px;
+	color:#333333;
+	text-align:center;
+	margin-bottom:15px;}
+.ysyd p
+{
+	font-size:12px;
+	color:#333333;
+	line-height:24px;}
+.shensuo
+{
+	width:1000px;
+	margin-top:20px;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/shensuo.jpg) no-repeat center bottom;
+	height:30px;
+	line-height:30px;
+	border-top:1px solid #dcf1bf;
+	text-align:center;}
+.shensuo span
+{
+	cursor:pointer;}
+.func
+{
+	position:relative;
+	clear:both;
+	height:50px;}
+.func i
+{
+	position:absolute;
+	display:block;
+	width:64px;
+	font-style:normal;
+	left:445px;}
+.func em
+{
+	color:#0570a6;
+	padding:0px 5px;}
+.func span
+{
+	float:right;
+	
+	}
+.func span b
+{
+	font-weight:normal;
+	display:block;
+	margin:0px 10px;
+	float:left;}
+.func span a 
+{
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/hunhe.jpg) no-repeat;
+	padding-left:24px;
+	display:block;
+	float:left;
+	height:20px;
+	
+	}
+.func span a.mrst
+{
+	background-position:0px -146px;}
+.func span a.pl
+{
+	background-position:0px -45px;}
+.func span a.fx
+{
+	background-position:0px -95px;}
