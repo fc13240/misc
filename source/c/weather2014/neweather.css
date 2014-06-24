@@ -380,6 +380,26 @@ a:hover{color:#ee842f;}
 	position:absolute;
 	display:block;
 	float:right;}
+.qhbh h1 { border: none;}
+.qhbh h1 b
+{
+	margin-top:11px;
+	display:inline;
+	margin-right:10px;
+	background:#076ea8; display:block; width:13px;
+	height:15px; float:left;}
+.qhbh h1 i
+{
+	 border-top: 1px solid #007bb9;
+	  height: 1px;
+    margin-top: 20px;
+    width: 197px;
+	top:0;
+	right:0;
+	position:absolute;
+	display:block;
+	float:right;}
+
 .hotSpot h3 span,.rank h3 span{padding-left:10px;font-size:14px;}
 .hotSpot h3 span a,.rank h3 span a{background-color:#076ea8;color:#fff;padding:6px 10px;border-right:1px solid #ebebeb;}
 .hotSpot h3 .on,.rank h3 .on{background-color:#fff;color:#076ea8;}
