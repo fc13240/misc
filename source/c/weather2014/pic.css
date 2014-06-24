@@ -110,7 +110,7 @@ padding-right:8px;
 }
 .fxss
 {
-	background:url(gongzuoyong/misc/source/i/weather2014/index_neweather/pic_pl.jpg) no-repeat 0px -65px;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pic_pl.jpg) no-repeat 0px -65px;
 	float:left;
 	width:80px;}
 .fxss a
@@ -168,7 +168,7 @@ padding-right:8px;
 	width:1px;
 }
 #picComm {
-	background:url(gongzuoyong/misc/source/i/weather2014/index_neweather/pic_pl.jpg) no-repeat 0px -32px;;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pic_pl.jpg) no-repeat 0px -32px;;
 	float:left;
 	height:30px;
 	line-height:24px;
@@ -182,7 +182,7 @@ padding-right:8px;
 	color:#c7000a;
 	font-size:14px;}
 #picMode {
-	background:url(gongzuoyong/misc/source/i/weather2014/index_neweather/pic_pl.jpg) no-repeat;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pic_pl.jpg) no-repeat;
 	float:left;
 	height:30px;
 	line-height:24px;
@@ -272,7 +272,7 @@ padding-right:8px;
 #efpLeftArea {
 	Z-INDEX: 9;
 	POSITION: absolute;
-	background:url(gongzuoyong/misc/source/i/weather2014/index_neweather/dlr.png) no-repeat left center;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/dlr.png) no-repeat left center;
 	WIDTH: 64px;
     cursor:pointer;
 	HEIGHT: 100%;
@@ -287,7 +287,7 @@ padding-right:8px;
 #efpRightArea {
 	Z-INDEX: 9;
 	POSITION: absolute;
-	background:url(gongzuoyong/misc/source/i/weather2014/index_neweather/dlr.png) no-repeat right center;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/dlr.png) no-repeat right center;
 	width:64px;
 	HEIGHT: 100%;
 	TOP: 0px;
@@ -385,7 +385,7 @@ font-weight:bold;
 	margin-top:17px;
 }
 .lqPicListshang {
-	background:url(gongzuoyong/misc/source/i/weather2014/index_neweather/lor.jpg) no-repeat 0px 10px;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/lor.jpg) no-repeat 0px 10px;
 	float:left;
 	height:40px;
 	width:15px;
@@ -441,7 +441,7 @@ text-align:center;
 	float:right;
 }
 .lqPicListnext {
-	background:url(gongzuoyong/misc/source/i/weather2014/index_neweather/lor.jpg) no-repeat -14px 10px;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/lor.jpg) no-repeat -14px 10px;
 	float:right;
 	height:40px;
 	width:15px;
