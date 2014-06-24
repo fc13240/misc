@@ -31,7 +31,7 @@
 .footer dl dd p,.friendLink p{line-height:25px;}
 .footer dl p a,.friendLink p a{padding-right:10px;color:#959595;}
 .footer dl p a:hover,.friendLink p a:hover{color:#ee842f;}
-.friendLink{width:358px;position:absolute;right:0px;top:20px;padding:15px 15px 13px 15px;}
+.friendLink{width:358px;position:absolute;right:80px;top:20px;padding:15px 15px 13px 15px;}
 .friendLink h3{padding-bottom:5px;}
 .footer .last{border-top:1px solid #ebebeb;margin-top:5px;padding-top:5px;}
 .serviceinfo{padding:20px 0px;font-size:12px;line-height:20px;}
