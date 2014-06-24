@@ -459,7 +459,7 @@ a:hover{color:#ee842f;}
 .hotSpot .weather .n53{background-position:-175px -245px;}
 
 
-.hotSpot .wd{width:85px;color:#666;}
+.hotSpot .wd{width:85px;}
 .hotSpot .zs{width:65px;}
 .hotSpot .zs a{color:#ee842f;}
 .ad2{width:300px;height:250px;margin-top:10px;overflow:hidden;}
@@ -1145,6 +1145,7 @@ width:16px; height:4px }
 	background:#ebebeb;
 	height:242px;
 	width:192px;}
+.tq121 ul li div.jfs p a{ position: absolute; }
 .tq121 ul li 
 {
 	width:514px;}
