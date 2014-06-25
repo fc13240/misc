@@ -18,6 +18,15 @@ define(function(require){
 	
 	$(function(){
 
+	$('.sugg_tan').find('li').click(function() {
+		var sug=$('.sugg_tan').find('li').index(this);
+		$('.sugg_tan .sugg_show').hide();
+		$('.sugg_tan .sugg_show').eq(sug).show();
+		$('.sugg_tan').find('li').removeClass('move')
+		$(this).addClass('move');
+		return false;
+        })	
+
        //排行切换
 	$(".rank h3 span a").hover(function(){
 		if($(this).hasClass("on")) return;
@@ -57,14 +66,7 @@ define(function(require){
 		$(this).find("em").stop().hide();
 	})
 
-     $('.sugg_tan').find('li').click(function() {
-		var sug=$('.sugg_tan').find('li').index(this);
-		$('.sugg_tan .sugg_show').hide();
-		$('.sugg_tan .sugg_show').eq(sug).show();
-		$('.sugg_tan').find('li').removeClass('move')
-		$(this).addClass('move');
-		return false;
-        })	
+        	
 
 		//ie6 png
 		tool_pngfix();
