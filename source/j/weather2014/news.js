@@ -36,13 +36,13 @@ define(function(require){
 	
 	
 	$(".trayin a").hover(function(){
-		$(this).find("i").stop().fadeIn();
-		$(this).find("b").stop().fadeIn();
-		$(this).find("em").stop().fadeIn();
+		$(this).find("i").show();
+		$(this).find("b").show();
+		$(this).find("em").show();
 	},function(){
-		$(this).find("i").stop().fadeOut();
-		$(this).find("b").stop().fadeOut();
-		$(this).find("em").stop().fadeOut();
+		$(this).find("i").hide();
+		$(this).find("b").hide();
+		$(this).find("em").hide();
 	})
 
 
