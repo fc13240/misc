@@ -360,7 +360,7 @@ a:hover{color:#ee842f;}
 .imgArea a b{display:block;width:68px;height:52px;position:absolute;left:0px;top:0px;color:#fff;z-index:5;font-size:26px;font-weight:normal;line-height:26px;padding:14px 20px;text-align:center;display:none;}
 
 .hotSpot{width:298px; height:362px;}
-.hotSpot h3,.rank h3,.climateChange h3{height:36px;line-height:36px;font-size:18px;font-weight:normal;padding-left:10px; font-weight:bold; overflow:hidden; position:relative;}
+.hotSpot h3,.rank h3,.ranks h3,.climateChange h3{height:36px;line-height:36px;font-size:18px;font-weight:normal;padding-left:10px; font-weight:bold; overflow:hidden; position:relative;}
 .hotSpot h3{font-size:16px; color:#076ea8; padding:0;}
 .hotSpot h3 b
 {
@@ -412,9 +412,9 @@ a:hover{color:#ee842f;}
 	display:block;
 	float:right;}
 
-.hotSpot h3 span,.rank h3 span{padding-left:10px;font-size:14px;}
-.hotSpot h3 span a,.rank h3 span a{background-color:#076ea8;color:#fff;padding:6px 10px;border-right:1px solid #ebebeb;}
-.hotSpot h3 .on,.rank h3 .on{background-color:#fff;color:#076ea8;}
+.hotSpot h3 span,.ranks h3 span,.rank h3 span{padding-left:10px;font-size:14px;}
+.hotSpot h3 span a,.ranks h3 span a,.rank h3 span a{background-color:#076ea8;color:#fff;padding:6px 10px;border-right:1px solid #ebebeb;}
+.hotSpot h3 .on,.ranks h3 .on,.rank h3 .on{background-color:#fff;color:#076ea8;}
 .hotSpot ul{display:none;border:1px dashed #C5C5C5; }
 .hotSpot ul.on{display:block;}
 .hotSpot ul li{height:34px;line-height:34px;border-bottom:1px solid #eee7e7;overflow:hidden; }
@@ -546,6 +546,27 @@ a:hover{color:#ee842f;}
 .rank .prov{width:50px;float:left;}
 .rank .wd{width:125px;float:left;color:#076ea8;}
 .rank .wd a{color:#076ea8;}
+.ranks{width:300px;background-color:#e8e8e8;margin-top:10px;margin-bottom:10px; }
+.ranks h3{background-color:#252525;color:#fff;}
+.ranks h3 a{color:#fff;}
+.ranks h3 span{font-size:12px;}
+.ranks h3 span a{padding:6px 5px;border-right:1px solid #252525;}
+.ranks ul{width:300px;display:none;}
+.ranks ul.on{display:block;}
+.ranks ul li{height:33px;line-height:33px;vertical-align:bottom;width:290px;padding:0px 10px;padding-right:0px;}
+.ranks ul .on{background-color:#fff;}
+.ranks ul li span{display:block;height:33px;float:left;text-align:center;}
+.ranks .ord{width:30px;height:25px;padding-top:8px;float:left;}
+.ranks .ord i{font-style:normal;font-size:12px;display:block;width:18px;height:18px;line-height:18px;text-align:center;background-color:#fff;margin-top:}
+.ranks li.on i{background-color:#076ea8;color:#fff;}
+.ranks .city{width:70px;float:left;}
+.ranks .prov{width:50px;float:left;}
+.ranks .wd{width:125px;float:left;color:#076ea8;}
+.ranks .wd a{color:#076ea8;}
+
+
+.ranks .detail{width:280px;border-top:1px solid #000;height:40px;line-height:40px;display:block;text-align:right;font-size:12px;color:#464a4e;}
+.ranks.detail.on{background-color: #e8e8e8;}
 
 .rank .detail{width:280px;border-top:1px solid #000;height:40px;line-height:40px;display:block;text-align:right;font-size:12px;color:#464a4e;}
 .rank .detail.on{background-color: #e8e8e8;}
