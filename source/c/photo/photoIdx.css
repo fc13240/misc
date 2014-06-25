@@ -12,7 +12,7 @@ background:#FFF;
 color:#333; 
 font:12px/1.5em Helvetica, Arial, sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-size:1em; }
-a { color:#2B93D2; text-decoration:none; }
+a { /*color:#2B93D2;*/ text-decoration:none; }
 a:hover { color:#E31E1C; text-decoration:underline; }
 ul, li { list-style:none; }
 fieldset, img { border:none; }
@@ -286,3 +286,4 @@ img{border:0}
 .sheYingDaSai .zuo div span{position:absolute; display:block; bottom:0;background-image:url(/i/photo/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px; line-height:25px;}
 .you2 p{ background-color:#d6e3f3; height:20px; margin-bottom:10px; margin-top:5px;}
 .you1 .wz{ height:258px; color:#929196;}
+.you2 h1{ position:relative; left:-12px;}
