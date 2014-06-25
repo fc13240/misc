@@ -723,6 +723,7 @@ right:10px;
     overflow-y: auto;
     padding: 0;
     position: absolute;
+    background: #fff;
     right: 55px;
     top: 32px;
     width: 345px;
