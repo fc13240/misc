@@ -715,11 +715,7 @@ right:10px;
 }
 
 .suggest-additions {
-    background-color: #FFFFFF;
-    border-color: #7F9DB9;
-    border-right: 1px solid #7F9DB9;
-    border-style: solid;
-    border-width: 1px;
+   
     color: #000000;
     display: none;
     margin: 0;
@@ -729,7 +725,7 @@ right:10px;
     position: absolute;
     right: 55px;
     top: 32px;
-    width: 404px;
+    width: 345px;
     z-index: 100;
 }
 #selectsionTabs .tab {
