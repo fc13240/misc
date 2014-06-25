@@ -529,7 +529,7 @@ a:hover{color:#ee842f;}
 .imgs dl dt a:hover{color:#ee842f;}
 .international ul{width:343px;border:1px solid #eee7e7;float:left;padding:5px 10px;margin-left:3px;}
 
-.rank{width:300px;background-color:#e8e8e8;margin-top:10px;margin-bottom:10px; }
+.rank{width:300px;background-color:#e8e8e8;margin-top:10px;margin-bottom:10px; position:relative; z-index: 10; }
 .rank h3{background-color:#252525;color:#fff;}
 .rank h3 a{color:#fff;}
 .rank h3 span{font-size:12px;}

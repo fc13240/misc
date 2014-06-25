@@ -142,11 +142,11 @@ define(function(require){
 		$(".rank ul.on").removeClass("on");
 		$(".rank ul").eq(currIndex).addClass("on");
 	})
-	/*$(".rank ul li").hover(function(){
+	$(".rank ul li").hover(function(){
 		if($(this).hasClass("on")) return;
 		$(".rank ul.on li.on").removeClass("on");
 		$(this).addClass("on");
-	})*/
+	})
 
 	
 })
