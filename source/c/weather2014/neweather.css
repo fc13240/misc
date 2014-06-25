@@ -323,7 +323,8 @@ a:hover{color:#ee842f;}
 .life h4 a:hover{color:#ee842f;}
 .life p{line-height:30px;height: 60px;overflow: hidden;}
 .life ul{width:273px;position:absolute;right:0px;top:40px;border:1px solid #eee7e7;padding:5px 10px;overflow:hidden;}
-.travel h3 span{ float: right;;}
+.travel h3 span{ float: right;}
+.travel h3 span a{ font-size: 14px;}
 .block .rightBlock{width:300px;position:absolute;right:0px;top:-10px;}
 .expert,.knowledge{width:300px;border-top:3px solid #076ea8;}
 .expert h3,.knowledge h3{height:30px;line-height:30px;background-color:#e8e8e8;padding-left:10px;font-size:18px;font-weight:normal;}
