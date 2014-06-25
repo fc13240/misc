@@ -9,7 +9,7 @@ a:hover{color:#ee842f;}
 #search{height:64px;margin:16px auto;height:64px;}
 #search h1{display:block;float:left;width:140px;height:35px;background:url(../../i/index/index_icons.png) no-repeat -160px 0px;margin-top:15px;margin-right:10px;overflow:hidden;}
 #search h1 a{display:block;width:140px;height:35px;text-indent:-9999px;}
-#search dl{width:90px;height:55px; border:1px solid #cfe0f3;float:left;margin-left:3px;background-color:#ebf4ff;color:#076ea8;font-size:14px;font-weight:bold;}
+#search dl{width:90px;height:65px; border:1px solid #cfe0f3;float:left;margin-left:3px;background-color:#ebf4ff;color:#076ea8;font-size:14px;font-weight:bold;}
 #search dl dt{padding-left:10px;height:30px;line-height:30px;overflow: hidden;}
 #search dl dd{line-height:16px;padding-top:0px;padding-left:10px;}
 #search dl.city dd{overflow: hidden;}
@@ -115,8 +115,8 @@ a:hover{color:#ee842f;}
 	background: #ee1c25;
 	float: left;
 	margin-left: -10px;
-	width: 80px;
-	margin-top: 5px;
+	width: 90px;
+	margin-top: 4px;
 }
 #search .city.alarm div a{
 	color: white;
