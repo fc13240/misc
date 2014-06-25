@@ -4,6 +4,7 @@
 .news_left { float:left; width:685px; margin-bottom:20px; margin-top:10px; display:inline; }
 .news_jctj { width:330px; float:left; margin-bottom:10px; height:377px; overflow:hidden; }
 .news_weatherh1 { height:40px; border-top:3px solid #006699; font-size:20px; color:#252525; line-height:40px; }
+.pic h1.news_weatherh1 { height:40px; border-top:3px solid #006699; font-size:20px; color:#252525; line-height:40px; }
 .news_tqxw { width:335px; float:right; height:377px; float:right; }
 .news_weatherh1 span { float:right; }
 .news_weatherh1 span a { font-size:14px; color:#252525; }
