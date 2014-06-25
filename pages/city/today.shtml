@@ -517,7 +517,7 @@
 			</div>
 			<script>
 				var cityid = "101010100";
-				W.use('j/weatherfc/city_main');
+				W.use('j/weather2014/hourWeather');
 			</script>
 			
 			<!--整点天气end-->
