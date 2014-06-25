@@ -573,7 +573,7 @@ a:hover{color:#ee842f;}
 	float:right;}
 .hdImgs span a
 {
-	position:inherit;}
+	right: 0;}
 .hdImgs #img1{width:167px;height:126px;top:40px;left:0px;}
 .hdImgs #img2{width:167px;height:126px;top:170px;left:0px;}
 .hdImgs #img3{width:338px;height:256px;top:40px;left:171px;}

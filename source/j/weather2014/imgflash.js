@@ -148,6 +148,7 @@ $(document).ready(function() {
 		$(".dListPic").removeClass("dListPic1");
 		$(this).addClass("dListPic1");
 		$("#djz").html($(".dListPic").index(this) + 1);
+		
 	});
 	/*全屏查看*/
 	$("#picFullScreen").click(function() {
