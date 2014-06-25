@@ -263,7 +263,7 @@ a:hover{color:#ee842f;}
 .zs-loadings .cityss p a{ width:70px; color:#076ea8;  padding-top:10px; padding-left:0; height:30px; line-height:30px;}
 .zs-loadings .cityss p b{ width:70px; color:#076ea8;  font-size:16px; color:#252525; height:20px; }
 
-
+.myZSs h3 span{float: right;}
 
 
 
@@ -323,7 +323,8 @@ a:hover{color:#ee842f;}
 .life h4 a:hover{color:#ee842f;}
 .life p{line-height:30px;height: 60px;overflow: hidden;}
 .life ul{width:273px;position:absolute;right:0px;top:40px;border:1px solid #eee7e7;padding:5px 10px;overflow:hidden;}
-
+.travel h3 span{ float: right;}
+.travel h3 span a{ font-size: 14px;}
 .block .rightBlock{width:300px;position:absolute;right:0px;top:-10px;}
 .expert,.knowledge{width:300px;border-top:3px solid #076ea8;}
 .expert h3,.knowledge h3{height:30px;line-height:30px;background-color:#e8e8e8;padding-left:10px;font-size:18px;font-weight:normal;}
@@ -380,6 +381,38 @@ a:hover{color:#ee842f;}
 	position:absolute;
 	display:block;
 	float:right;}
+
+.qhbh h1 {
+    color: #076ea8;
+    font-size: 20px;
+    border:none;
+    text-indent: 0;
+     font-weight: bold;
+    height: 36px;
+    line-height: 23px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+.qhbh h1 b
+{
+	margin-top:0px;
+	display:inline;
+	margin-right:6px;
+	background:#076ea8; display:block; width:13px;
+	height:22px; float:left;}
+.qhbh h1 i
+{
+	 border-top: 3px solid #007bb9;
+	  height: 1px;
+    margin-top: 12px;
+    width: 197px;
+	top:0;
+	right:0;
+	position:absolute;
+	display:block;
+	float:right;}
+
 .hotSpot h3 span,.rank h3 span{padding-left:10px;font-size:14px;}
 .hotSpot h3 span a,.rank h3 span a{background-color:#076ea8;color:#fff;padding:6px 10px;border-right:1px solid #ebebeb;}
 .hotSpot h3 .on,.rank h3 .on{background-color:#fff;color:#076ea8;}
@@ -497,7 +530,7 @@ a:hover{color:#ee842f;}
 .imgs dl dt a:hover{color:#ee842f;}
 .international ul{width:343px;border:1px solid #eee7e7;float:left;padding:5px 10px;margin-left:3px;}
 
-.rank{width:300px;background-color:#e8e8e8;margin-top:10px;margin-bottom:10px; }
+.rank{width:300px;background-color:#e8e8e8;margin-top:10px;margin-bottom:10px; position:relative; z-index: 10; }
 .rank h3{background-color:#252525;color:#fff;}
 .rank h3 a{color:#fff;}
 .rank h3 span{font-size:12px;}
@@ -541,7 +574,7 @@ a:hover{color:#ee842f;}
 	float:right;}
 .hdImgs span a
 {
-	position:inherit;}
+	right: 0;}
 .hdImgs #img1{width:167px;height:126px;top:40px;left:0px;}
 .hdImgs #img2{width:167px;height:126px;top:170px;left:0px;}
 .hdImgs #img3{width:338px;height:256px;top:40px;left:171px;}
@@ -863,6 +896,7 @@ right:10px;
 {
 	float:left;
 	margin-left:0px;
+	padding-left: 17px;
 	display:inline;
 	border-right:1px dashed #C5C5C5;
 	margin-top:10px;

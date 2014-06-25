@@ -19,23 +19,31 @@ define(function(require){
 	$(function(){
 
        //排行切换
-	$(".rank h3 span a").hover(function(){
-		if($(this).hasClass("on")) return;
-		var currIndex = $(".rank h3 span a").index($(this));
-		$(".rank h3 span .on").removeClass("on");
-		$(this).addClass("on");
-		$(".rank ul.on").removeClass("on");
-		$(".rank ul").eq(currIndex).addClass("on");
-	})
-	$(".rank ul li").hover(function(){
-		if($(this).hasClass("on")) return;
-		$(".rank ul.on li.on").removeClass("on");
-		$(this).addClass("on");
-	})
+	
 	$(".hotSpot ul li").hover(function(){
 		if($(this).hasClass("on")) return;
 		$(".hotSpot ul li.on").removeClass("on");
 		$(this).addClass("on");
+	})
+    
+   
+
+
+    $(".exleft ul li").click(function(){
+		var slide =  $(".exleft ul li").index(this);
+		$(".exleft ul li .jj").hide();
+		$(".exleft ul li .jj").eq(slide).show();
+	})		
+	
+	
+	$(".trayin a").hover(function(){
+		$(this).find("i").show();
+		$(this).find("b").show();
+		$(this).find("em").show();
+	},function(){
+		$(this).find("i").hide();
+		$(this).find("b").hide();
+		$(this).find("em").hide();
 	})
 
 
