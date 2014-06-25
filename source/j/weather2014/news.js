@@ -26,11 +26,7 @@ define(function(require){
 		$(this).addClass("on");
 	})
     
-    $(".ranks ul li").hover(function(){
-		if($(this).hasClass("on")) return;
-		$(".ranks ul li").removeClass("on");
-		$(this).addClass("on");
-	})
+   
 
 
     $(".exleft ul li").click(function(){
