@@ -18,6 +18,12 @@
 .clear { clear:both; }
 .news_btq { float:right; }
 .news_zjft ul { padding-top:10px; clear:both; }
+.news_jctj .list li {
+    background: url("http://i.tq121.com.cn/i/weather2014/city/c8.jpg") no-repeat scroll -1px 12px transparent;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+}
 .news_zjft ul li { background:url(http://i.tq121.com.cn/i/weather2014/city/c8.jpg) no-repeat 4px 10px; padding-left:23px; overflow:hidden; height:30px; line-height:30px; }
 .rank { width:300px; background-color:#e8e8e8; margin-top:10px; margin-bottom:31px; }
 .rank h3 { background-color:#006699; height:35px; line-height:35px; font-size:20px; text-indent:10px; color:#fff; }
@@ -82,7 +88,13 @@
 .news_jctj .list li a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 280px; }
 .news_jctj .list li a:hover { color: #076ea8; }
 
-
+.news_zt ul li {
+    background: url("http://i.tq121.com.cn/i/weather2014/city/c8.jpg") no-repeat scroll 6px 14px rgba(0, 0, 0, 0);
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    padding-left: 19px;
+}
 
 #focus {width:300px; height:210px; overflow:hidden; position:relative; padding-top:20px; border-top:3px solid #8bbb4b;}
 #focus h1{ position:absolute; top:20px; left:10px; z-index:9; width:100px; height:27px; font-size:20px; background:#8bbb4b; line-height:27px; text-align:center; color:#fff;}
