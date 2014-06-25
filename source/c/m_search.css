@@ -1,6 +1,6 @@
-.suggest-additions {
+/*.suggest-additions {
     BORDER-RIGHT: #7f9db9 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #7f9db9 1px solid; OVERFLOW-Y: auto; PADDING-LEFT: 0px; Z-INDEX: 99; OVERFLOW-X: hidden; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #7f9db9 1px solid; COLOR: #000000; PADDING-TOP: 0px; BORDER-BOTTOM: #7f9db9 1px solid; POSITION: absolute; BACKGROUND-COLOR: #ffffff;display: none; top: 27px; width: 404px; *top:27px;*left:0px;
-    z-index: 100;/*在最上层*/
+    z-index: 100;
 }
 #selectsionTabs .tab {
     float: left;
@@ -73,7 +73,7 @@
 #selectsionTabs .tab{width:45px;margin: 4px 1px 0 1px; padding:2px 0px; font-size:14px;}
 #selectsionGroups ul.dWeatherRankingBox {
     margin-bottom:8px;
-}
+}*/
 #selectsionGroups ul.dWeatherRankingBox {
         margin:0px 0px;
 /*background:url(/m2/i/topTen.jpg) no-repeat scroll 0 5px;*/
@@ -133,3 +133,15 @@
 .chengshi{position:absolute; display:none;width:300px; padding:7px 2px; border:1px solid #36b; top:90px; left:150px; background:#fff; z-index:9999;}
 .chengshi ul li a{font-size:13px;}
 .zxbg{background:url(http://www.weather.com.cn/m2/i/zxbg.jpg) no-repeat right bottom; height:150px;padding-top:10px;}
+
+.sugg_tan { width:343px; height:208px; float:left; border:1px solid #7f9db9; overflow:hidden; }
+.sugg_tan ul { overflow:hidden; height:26px; display:block; background:url(http://www.weather.com.cn/m2/i/line08.gif) repeat-x 0px 25px; _background-position:0px 25px; }
+.sugg_tan ul li { font-size:15px; text-align:center; float:left; width:113px; cursor:pointer; border-right:1px solid #7f9db9; color:#076ea9; font-weight:bold; height:25px; background:#eceff8; line-height:25px; }
+.sugg_tan ul li.move { color:#8bbb4b; height:27px; background:#fff; }
+.sugg_tan .sugg_show a { display:block; height:29px; line-height:29px; width:75px; padding-left:5px; text-align:center; float:left; overflow:hidden; }
+.sugg_tan .sugg_show { float:left; padding-top:5px; display:none; }
+.sugg_tan div.citysug span a { margin:0; height:25px; line-height:25px; text-align:center; }
+.sugg_tan div.citysugs a { height:29px; line-height:29px; text-align:center; }
+.sugg_tan .sugg_show p { margin-left:20px; width:376px; float: none; height: 24px; line-height: 24px; padding-left: 20px; text-align: left; }
+.sugg_tan .sugg_show p a { font-size:14px; text-align:left; float:none; width:auto; }
+.zxbg { background:url(http://www.weather.com.cn/m2/i/zxbg.jpg) no-repeat 3px 31px; height:150px; padding-top:10px; }

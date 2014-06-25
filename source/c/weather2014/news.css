@@ -83,7 +83,6 @@
 .news_jctj .pic #scrollPic p, .news_jctj .pic #scrollPic .bottomBg { bottom: 0px; height: 30px; left: 0px; line-height: 30px; position: absolute; width: 100%; }
 .news_jctj .pic #scrollPic p { color: #ffffff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1; }
 .news_jctj .pic #scrollPic .bottomBg { background: none repeat scroll 0% 0% #000000; opacity: 0.6; filter:alpha(opacity=60); }
-
 .news_jctj .list { margin-top: 4px; padding-left: 5px; }
 .news_jctj .list li a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 280px; }
 .news_jctj .list li a:hover { color: #076ea8; }
