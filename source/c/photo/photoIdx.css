@@ -146,7 +146,10 @@ background:url(../images/20081221041748583.gif) no-repeat; }
 .tianXiaQiGuan div{ float:left;background-color:#33CC00; position:relative;}
 .tianXiaQiGuan div a{ display:block; text-decoration:none; height:100%;}
 .tianXiaQiGuan div a img{ width:100%; height:100%; border:0;}
-span{ position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px;}
+.tianXiaQiGuan div span{ position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px;}
+.tuJieTianQi  span{ position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px;}
+.quWeiKePu div  span{ position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px;}
+.qiXiangRen div  span{ position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px;}
 .tianXiaQiGuan h1{ margin-bottom:30px;}
 .qg1{ width:540px; height:360px; margin-right:20px;}
 .qg2{ width:260px; height:170px;}
@@ -182,13 +185,13 @@ span{ position:absolute; display:block; bottom:0;background-image:url(/img/tou_m
 .tj4 span{ font-size:12px; line-height:30px;}
 .tj5 span{ font-size:12px; line-height:30px;}
 .tuJieTianQi .right span{ font-size:14px; line-height:40px;}
-.quWeiKePu{ width:490px; height:330px; float:left;}
+.quWeiKePu{ width:490px; float:left;}
 .quWeiKePu h1{ background-image:url(/img/quWeiKePu2.jpg) ; background-position:bottom; background-repeat:repeat-x;margin-bottom:20px;}
 .quWeiKePu div { width:240px; height:160px; background-color:#33CC00; float:left;position:relative;}
 .quWeiKePu div a{ display:block; text-decoration:none; height:100%;}
 .quWeiKePu div a img{ width:100%; height:100%; border:0;}
 .quWeiKePu div span{ font-size:14px; line-height:30px;}
-.qiXiangRen{ width:490px; height:330px; float:right;}
+.qiXiangRen{ width:490px;  float:right;}
 .qiXiangRen h1{ background-image:url(/img/qiXiangRen2.jpg) ; background-position:bottom; background-repeat:repeat-x; margin-bottom:20px;}
 .qiXiangRen div{ width:240px; height:160px; background-color:#33CC00; float:left; position:relative;}
 .qiXiangRen div a{ display:block; text-decoration:none; height:100%;}
@@ -212,72 +215,74 @@ iframe{ position:relative; left:-1px;}
 .huiDaoDingBu div a:hover{ color:#066fa9;}
 /*huangDengPian-beging*/
 
-  
-a { color:#213f71; font-size:9pt; text-decoration:none;}
-a:hover {color:#0066cc; }
-.blk_18 {
- overflow:hidden;
- zoom:1;
- font-size:9pt;
- border:1px solid #e3e3e3;
- background:#eee;
- 
- width:1000px;
- margin-top:8px;
-}
-.blk_18 .pcont {
- 
- width:1000px;
- float:left;
- overflow:hidden;
- padding-left:0px;
-}
-.blk_18 .ScrCont {
- width:32766px;
- zoom:1;
- margin-left:-14px;
-}
-.blk_18 #List1_1, .blk_18 #List2_1 {
- float:left;
-}
-.blk_18 .LeftBotton, .blk_18 .RightBotton {
- width:15px;
- height:74px;
- float:left;
- background:url(ax.gif) no-repeat;
-}
-.blk_18 .LeftBotton {
- background-position: 0 0;
- margin:8px 5px 0;
-}
-.blk_18 .RightBotton {
- background-position: 0 -100px;
- margin:8px 1px 10px 5px;
-}
-.blk_18 .LeftBotton:hover {
- background-position: -20px 0;
-}
-.blk_18 .RightBotton:hover {
- background-position: -20px -100px;
-}
-.blk_18 .pl img {
- display:block;
- cursor:pointer;
- border:none;
- margin:6px auto 1px auto;
-}
-.blk_18 .pl {
- width:255px;
- border:1px solid #f3f3f3;
- float:left;
- float:left;
- text-align:center;
- line-height:24px;
-}
-.blk_18 a.pl:hover {
- border:1px solid #5dacec;
- color:#5dacec;
- background:#fff;
-}
-.ScrCont div a img{ width:235px; height:160px;}  
+img{border:0}
+
+
+/* Ωπµ„Õº */
+.rslides{width:100%;position:relative;list-style:none;padding:0}
+.rslides_nav{height:100px;width:60px;position:absolute;-webkit-tap-highlight-color:rgba(0,0,0,0);top:50%;left:0;opacity:0.5;text-indent:-9999px;overflow:hidden;text-decoration:none; margin-top:-28px; background:url(/img/zuo_da.png) no-repeat}
+.rslides_nav:active{opacity:1.0}
+.rslides_nav.next{left:auto;background-position:-31px -560px;right:0;background:url(/img/you_da.png) no-repeat;}
+
+.rslides1_tabs{bottom: 0;clear: both;padding:8px 0;margin: 0;position: absolute; width: 100%;  display:inline;background-image:url(/img/tou_min.png);background-repeat:repeat;}
+.rslides_tabs li{display:inline;float:none;_float:left;*float:left;margin-right:15px;}
+.rslides_tabs a{text-indent:-9999px;overflow:hidden;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;background:rgba(0,0,0, .2);background:#DDD;display:inline-block;_display:block;*display:block;width:20px;height:20px;background:url(/img/hei_dian.png) no-repeat;}
+.rslides_tabs .rslides_here a{background:rgba(0,0,0, .6);background:url(/img/bai_dian.png) no-repeat;}
+.rslides_tabs{text-align: left;top: 520px;}
+/*
+.f426x240{width:426px;height:240px;overflow:hidden}
+.f426x240 img{width:426px;height:240px}
+*/
+.in-tad{width:408px;height:69px;float:left;margin-top:45px;border:1px solid #EEE;padding:9px 0 10px 16px}
+.in-tad dd{width:194px;height:22px;line-height:22px;float:left;margin:0 10px 2px 0;display:inline}
+.in-tad dd a{color:#999;display:block}
+.in-tad dd a:hover{color:#390}
+
+.in-main .m{width:418px;height:390px;float:left}
+.in-main .m dt{height:40px;margin-left:6px;background:url(http://www.wwee.cc/list_sc_files/i.png) no-repeat 0 0;margin-bottom:4px}
+.in-main .m dt span{float:right;margin:14px 2px;color:#999}
+.in-main .m dd{width:402px;height:32px;float:left;margin-left:8px;border-bottom:1px dashed #F0F0F0;display:inline}
+.in-main .m dd a{color:#666;line-height:32px;display:block;padding:0 22px;background:urlhttp://www.wwee.cc/list_sc_files/a.png) no-repeat -178px -60px}
+.in-main .m dd a:hover{color:#390}
+.in-main .m dd span{margin-right:10px;padding-left:18px;float:right;margin-top:-26px;color:#CCC}
+
+.in-main .r{width:298px;height:383px;float:right}
+.in-main .r dt{height:40px;background:url(http://www.wwee.cc/list_sc_files/i.png) no-repeat 0 -40px}
+.in-main .r dt a{float:right;margin:12px;color:#666}
+.in-main .r dd{width:282px;height:152px;margin:10px 8px 2px;float:left;display:inline}
+.in-main .r dd p{width:280px;height:120px;border:1px solid #EEE;overflow:hidden}
+.in-main .r dd a{color:#666;line-height:30px;display:block}
+.in-main .r dd a:hover{color:#390}
+.in-main .r dd img{width:280px;height:140px}
+.in-main .r dd span{float:right;margin-top:-22px;color:#ccc;font-size:12px}
+.focus{width:1000px;height:550px;border:1px solid #EEE;position:relative;   }
+.f426x240{width:1000px;height:550px;overflow:hidden;}
+.f426x240 img{width:1000px;height:550px;}
+.add_class{ margin-left:460px;}
 /*huangDengPian-end*/
+.sheYingDaSai{ float: left; display:inline; width:1000px; background-color:#e7f0f7; padding:10px 0;}
+.sheYingDaSai .shang{ background:url(/img/jiaoJuan.jpg); background-repeat:repeat-x; display:block; height:25px;}
+.sheYingDaSai .xia{ background:url(/img/jiaoJuan.jpg); background-repeat:repeat-x; display:block; height:25px; clear:both;}
+.sheYingDaSai .zuo{ float:left; display:inline; margin-top:20px;}
+.sheYingDaSai .you{ float:right; display:inline; width:800px; height:490px;}
+.sheYingDaSai .you .you1{ float:left; display:inline; width:140px;margin-right:20px;}
+.sheYingDaSai .you .you1 div{position:relative; margin-top:20px;}
+.sheYingDaSai .you .you2 div{position:relative; height:436px;}
+.sheYingDaSai .you .you1 div a{ height:100%;}
+.sheYingDaSai .you .you1 div span{position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px; line-height:30px}
+.sheYingDaSai .you .you2 div span{position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:14px; line-height:40px;}
+
+.sheYingDaSai .you .you1 a{ display:block; height:100%}
+.sheYingDaSai .you .you1 a img{ width:140px; height:230px;}
+.sheYingDaSai .you .you2{ float:left; display:inline; width:250px; }
+.sheYingDaSai .you .you2 a{ display:block; height:100%}
+.sheYingDaSai .you .you2 a img{  width:250px; height:100%;}
+.sheYingDaSai .you .you3{ float:right; display:inline; width:360px;margin-top:20px;}
+.sheYingDaSai .you .you3 a{ display:block; height:100%}
+.sheYingDaSai .you .you3 a img{   width:360px; height:508px;}
+.sheYingDaSai .zuo div{ width:180px; height:120px; position:relative; margin-bottom:10px;}
+ .sheYingDaSai .zuo div a{ display:block; height:100%;}
+.sheYingDaSai .zuo div a img{ width:100%; height:100%;}
+.sheYingDaSai .zuo div span{position:absolute; display:block; bottom:0;background-image:url(/img/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; font-size:12px; line-height:25px;}
+.you2 p{ background-color:#d6e3f3; height:20px; margin-bottom:10px; margin-top:5px;}
+.you1 .wz{ height:258px; color:#929196;}
