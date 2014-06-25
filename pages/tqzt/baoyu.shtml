@@ -72,7 +72,7 @@
 			</div>
 			<div class="video clearfix">
 				<h1><i></i>
-					<span>视频报道</span></h1>
+					<span>视频报道</span><a target="_blank" href="http://cms.weather.com.cn/site2/html/zt/tqzt/2122564/28357.shtml">更多>></a></h1>
 				<a href="" class="l fl">
 				<img src="http://i.tq121.com.cn/i/tqzt/baoyu/v1.jpg" alt="" width="310" height="220">
 				<p>南方出现今年最强降雨</p>
@@ -360,12 +360,6 @@
 			<div class="m">
 				<img src="http://i.tq121.com.cn/i/tqzt/baoyu/img1.jpg" alt="" width="324" height="241">
 				<ul>
-					<li>
-						<a href="">提到台风，人们首先想到的就是狂风大作。</a>
-					</li>
-					<li>
-						<a href="">这只是台风属性的一小部分，想要了解台风的真正</a>
-					</li>
 					<li>
 						<a href="">提到台风，人们首先想到的就是狂风大作。</a>
 					</li>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>国际城市</title>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="http://i.tq121.com.cn/j/core.js"></script>
+<script>W.css('c/mobile/css.css')</script>
+<script>W.use('j/mobile/city.js')</script>
+<script>
+$(function(){
+	$(".top").click(function(){
+	    $('html,body').animate({scrollTop: '0px'}, 300);	
+	})
+	var id = document.URL.match(/\d/);
+	var id = id<1||id>6?1:id;
+	var url = './city3jdata/guojia/'+id+'.html';
+	$.getJSON(url,function(data){
+		var li = '';
+		for (i in data) {
+			li += '<li><a href="guowaicity.html?id='+id+i+'">'+data[i]+'</a></li>';
+		};
+		$('.citylist ul').append(li);
+	})
+})
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div class="wrap">
+		<header class="head">
+			<div class="logo">
+				<a href=""></a>
+			</div>
+			<div class="net">
+				<a href="#">网页版</a>
+			</div>
+		</header>
+		<div class="title">
+			<a href="javascript:history.go(-1);" class="pre"><img src="http://i.tq121.com.cn/i/mobile/images/pre.jpg"></a>
+			选择国家
+			<a href="http://wap.weather.com.cn/index.html" class="home"><img src="http://i.tq121.com.cn/i/mobile/images/home.jpg"></a>
+		</div>
+		<div class="search">
+			<img src="http://i.tq121.com.cn/i/mobile/images/ss.jpg">
+			<input id="text_fuza" type="text" value="搜索城市(中文/拼音)">
+		</div>
+		<div class="citylist">
+			<ul>
+			</ul>
+		</div>
+		<div class="line" style="border:none;border-bottom:1px solid #4775CA;"></div>
+		<div class="top" style="top:0px;">
+			<a href="#">返回顶部</a>
+		</div>
+		<footer class="footer">
+			<p>
+				<a href="#">天气应用</a>
+				|
+				<a href="#">意见反馈</a>
+			</p>
+			<p>Copyright@中国气象局公共气象服务中心</p>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

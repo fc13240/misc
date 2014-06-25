@@ -5,7 +5,7 @@ define(function(require){
 	var defaultConfig = {
 		eleFather: null,  //容器标签 父元素 最外围标签  
 		eleText: null,    //图解文字所在标签
-		eleSmallClass: null, //下方的缩略图选中时的样式
+		eleSmallClass: 'on', //下方的缩略图选中时的样式
 		// eleBottom: null,  //下方的缩略图
 		rollLeft: null,   //向左转标签
 		rollRight: null,  //向右转标签
@@ -21,6 +21,9 @@ define(function(require){
 			var imgWidth = $imgUl.find('img').width();
 			var imgNum = $imgUl.find('img').length;
 			var arrInter = [];
+			//根据图片数量自匹配imgUl的宽
+			$imgUl.width(imgWidth*imgNum);
+			
 			//定时器
 			arrInter.push(setInterval(function(){_move(++pointer)},config.time));
 			$(config.eleFather).mouseover(function(){
@@ -39,16 +42,22 @@ define(function(require){
 			})
 			//向左，向右滚动点击效果
 			$(config.rollLeft).click(function(){
-				_move(++pointer);
-			})
-			$(config.rollRight).click(function(){
 				_move(--pointer);
 			})
+			$(config.rollRight).click(function(){
+				_move(++pointer);
+			})
 			//底部缩略图点击效果
-			$botUl.find('li').click(function(){
+			$botUl.empty();
+			var $botUlLi = '';
+			for (var i = imgNum - 1; i >= 0; i--) {
+				$botUlLi += '<li></li>';
+			};
+			$botUl.append($botUlLi).find('li').live('click',function(){
 				pointer = $(this).index();
 				_move(pointer);
-			})
+			}).first().addClass(config.eleSmallClass);
+			$(config.eleText).html($imgUl.find('img').first().attr('alt'));
 			function _move(poi){
 				poi = poi>=imgNum?0:poi;
 				poi = poi<0?imgNum-1:poi;

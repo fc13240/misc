@@ -1,0 +1,858 @@
+@charset "utf-8";
+/* CSS Document */
+
+.topic_nav dl {
+	height:89px;
+	line-height:32px;
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/Lnav.jpg) repeat-x;
+	position:relative;
+	
+}
+.navpath {
+border-bottom:1px solid #E5E6E6;
+height:30px;
+line-height:30px;
+position:absolute;
+top:32px;
+left:10px;
+}
+.topic_nav dl dt {
+	float:left;
+	margin-left:10px;
+	display:inline;
+}
+.topic_nav dl dt a img
+{
+border:0;
+}
+.topic_nav dl dd {
+	float:right;
+}
+.topic_nav dl dd a {
+	color:#000;
+	padding-left:8px;
+padding-right:8px;
+}
+
+.picTitle {
+	height:49px;
+}
+.picTitle h1 {
+	font-family:"Microsoft YaHei","微软雅黑","SimSun","宋体","Arial","Helvetica","sans-serif";
+	color:#000;
+	font-weight:bold;
+	font-size:20px;
+	text-align:center;
+	margin-right:50px;
+	padding-top:2px;
+}
+
+.picTitle #total {
+	font-size:13px;
+	font-family:Verdana;
+	padding-left:6px;
+}
+.lqPhotoPhotos {
+	height:auto;
+	width:650px;
+	clear:both;
+}
+.lqPhotoPhotos h1 {
+	height:30px;
+	line-height:30px;
+	background:#3366bb;
+	position:relative;
+	color:#FFF;
+	font-size:14px;
+	padding-left:8px;
+	font-weight:bold;
+}
+.lqPhotoPhotos1 {
+	height:auto;
+	clear:both;
+}
+.lqPhotoPhotos1 dl {
+	height:100px;
+	margin-top:8px;
+	width:320px;
+	border:1px solid #C2D0E7;
+}
+.lqPhotoPhotos1 dl dt {
+	float:left;
+	height:90px;
+	padding-left:10px;
+	margin-top:10px;
+	display:inline;
+}
+.lqPhotoPhotos1 dl dd {
+	float:right;
+	height:100px;
+	line-height:20px;
+	width:200px;
+	display:inline;
+	margin-top:10px;
+}
+.lqPhotoPhotos1 dl dd a {
+	font-size:14px;
+	font-weight:bold;
+}
+.piccontrol {
+	height:49px;
+	margin-left:660px;
+	margin-top:-50px;
+	position:relative;
+	z-index:100;
+}
+.piccontent {
+	position:relative;
+	float:right;
+	padding-top:9px;
+}
+.fxss
+{
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pic_pl.jpg) no-repeat 0px -65px;
+	float:left;
+	width:80px;}
+.fxss a
+{
+	color:#c7000a;
+	font-size:14px;}
+#piccontbtn {
+	position:relative;
+	z-index:5px;
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/la.gif) no-repeat;
+	color:#fff;
+	cursor:default;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	height:30px;
+	line-height:28px;
+	width:43px;
+	padding-left:5px;
+	
+}
+#piccontbtn .piccontbtn1 {
+	padding-right:6px;
+	text-align:center;
+	width:37px;
+}
+#picPrevious {
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/left.gif) no-repeat;
+	float:left;
+	height:30px;
+	margin-left:4px;
+	width:32px;
+	position:relative;
+	z-index:5;
+}
+
+.picPlay {
+	float:left;
+	height:28px;
+	margin-left:8px;
+	width:31px;
+	position:relative;
+	z-index:5;
+	background:transparent url(http://www.weather.com.cn/m2/i/imageset_3/play.gif) no-repeat;
+	height:30px;
+	width:32px;
+}
+
+
+#picLine {
+	background:#C0C9E2;
+	float:left;
+	height:28px;
+	margin-left:8px;
+	width:1px;
+}
+#picComm {
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pic_pl.jpg) no-repeat 0px -32px;;
+	float:left;
+	height:30px;
+	line-height:24px;
+	margin-left:4px;
+	width:76px;
+	position: relative;
+	z-index: 5;
+}
+#picComm a
+{
+	color:#c7000a;
+	font-size:14px;}
+#picMode {
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pic_pl.jpg) no-repeat;
+	float:left;
+	height:30px;
+	line-height:24px;
+	width:109px;
+	position: relative;
+	z-index: 5;
+}
+#picMode a 
+{
+	color:#c7000a;
+	font-size:14px;}
+#picFullScreen {
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/screen.gif) no-repeat;
+	float:left;
+	height:30px;
+	margin-left:4px;
+	width:32px;
+	position: relative;
+	z-index: 5;
+}
+#viewdg {
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/commit.gif) no-repeat;
+	float:left;
+	height:28px;
+	margin-left:8px;
+	width:31px;
+	position: relative;
+	z-index: 5;
+}
+#viewMen {
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/return.gif) no-repeat;
+	float:left;
+	height:30px;
+	margin-left:8px;
+	margin-right:39px;
+	width:32px;
+	position: relative;
+	z-index: 5;
+
+}
+.picmid {
+
+	position:relative;
+	
+	width:1000px;
+	border-bottom:0px;
+
+}
+.lqbigpic {
+	
+	position:relative;
+	text-align:center;
+	width:1000px;
+
+
+	
+}
+
+#picClew {
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/02.png) no-repeat;
+	height:20px;
+	left:0;
+	position:absolute;
+	top:92px;
+	width:150px;
+	
+}
+#picClose {
+	cursor:pointer;
+	height:5px;
+	overflow:hidden;
+	position:absolute;
+	right:5px;
+	top:4px;
+	width:5px;
+	z-index:2;
+}
+.lq_BigPic {
+	min-height:300px;
+	width:1000px;
+}
+
+.arrLeft {
+         width:30px;
+         height:30px;
+}
+#efpLeftArea {
+	Z-INDEX: 9;
+	POSITION: absolute;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/dlr.png) no-repeat left center;
+	WIDTH: 64px;
+    cursor:pointer;
+	HEIGHT: 100%;
+
+	
+	TOP: 0px;
+	top:0px;
+	LEFT: 0px;
+
+	
+}
+#efpRightArea {
+	Z-INDEX: 9;
+	POSITION: absolute;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/dlr.png) no-repeat right center;
+	width:64px;
+	HEIGHT: 100%;
+	TOP: 0px;
+	RIGHT: 0px;
+	cursor:pointer;
+
+}
+
+.picchra {
+	
+	width:1000px;
+	height:auto;
+	border-top:0px;
+	float:left;
+ 
+	
+}
+.picchra h2 {
+         font-family:"SimSun","宋体","Arial","Helvetica","sans-serif";
+	-x-system-font:none;
+	font-size:16px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:24px;
+	padding:5px 0;
+	text-align:center;
+	font-weight:bold;
+}
+.picchra h2 a{
+font-family:"SimSun","宋体","Arial","Helvetica","sans-serif";
+	-x-system-font:none;
+	font-size:16px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:24px;
+	padding:5px 0;
+	text-align:center;
+	font-weight:bold;
+
+}
+.picchra h2 span{
+font-weight:bold;
+}
+.lqTime {
+	color:#999999;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	line-height:24px;
+	padding:5px 0;
+	text-align:center;
+}
+.lqPicIntro {
+	color:#666666;
+	line-height:23px;
+	margin:0 auto;
+	text-indent:2em;
+	width:750px;
+         text-align:left;
+}
+#lqPicList {
+	height:130px;
+	overflow:hidden;
+	border-top:0;
+	width:1000px;
+	
+}
+.lqPicListtu dl dt {
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/e_m_01.png) no-repeat 0 -350px;
+	height:72px;
+	padding:9px 0 0 11px;
+	width:99px;
+	margin-bottom:2px;
+	margin-top:17px;
+}
+.lqPicListtu dl dd {
+	text-align:center;
+	width:99px;
+}
+.lqPicListtu dl {
+	width:100px;
+	height:80px;
+	margin-left:31px;
+}
+.lqPicListtu dl dd a {
+	color:#999999;
+}
+.lqPicListtu dl dt img {
+	margin-left:20px;
+	margin-top:17px;
+}
+.lqPicListshang {
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/lor.jpg) no-repeat 0px 10px;
+	float:left;
+	height:40px;
+	width:15px;
+	cursor:pointer;
+	margin-top:40px;
+	display:inline;
+}
+#lq_BigPic img{
+    	
+	width:1000px;
+	
+	}
+.lqPicListtu {
+	float:left;
+}
+.lqPicListtu1 {
+	height:130px;
+
+
+
+	float:left;
+	
+text-align:center;
+
+	overflow:hidden;
+}
+.picright dl dt {
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/e_m_01.png) no-repeat 0 -350px;
+	height:72px;
+	padding:9px 0 0 11px;
+	width:99px;
+	margin-bottom:2px;
+	margin-top:17px;
+}
+.picright dl dd {
+	text-align:center;
+	width:99px;
+}
+.picright dl {
+	width:100px;
+	height:80px;
+	margin-left:21px;
+}
+.picright dl dd a {
+	color:#999999;
+}
+.picright dl dt img {
+	margin-left:20px;
+	margin-top:17px;
+}
+.picright {
+	margin-right:41px;
+	float:right;
+}
+.lqPicListnext {
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/lor.jpg) no-repeat -14px 10px;
+	float:right;
+	height:40px;
+	width:15px;
+	cursor:pointer;
+	margin-top:40px;
+}
+.lqPicListtu1 li {
+	float:left;
+	margin-top:10px;
+	margin-bottom:20px;
+	vertical-align:middle;
+	margin-left:10px;
+	width:150px;
+	display:inline;
+	cursor:pointer;
+}
+.lqcommit
+{
+	height:138px;
+
+
+width:247px;
+
+right:0px;
+position:absolute;
+top:120px;
+background:transparent url(http://www.weather.com.cn/m2/i/imageset_3/e_m_01.png) no-repeat scroll 0 -450px;
+z-index:102;}
+.lqcommit form
+{
+	padding-left:30px;
+padding-top:50px;}
+
+#lqendSelect {
+border:1px solid #8A8A8A;
+display:none;
+height:71px;
+left:359px;
+position:absolute;
+top:245px;
+width:230px;
+z-index:20;
+}
+#lqendSelect #endSelClose {
+
+background:url(http://www.weather.com.cn/m2/i/imageset_3/e_m_01.png) no-repeat -300px -950px;
+cursor:pointer;
+height:11px;
+overflow:hidden;
+position:absolute;
+right:3px;
+top:3px;
+width:11px;
+z-index:2;
+}
+#lqendSelect .lqbg {
+background:#000000;
+height:100%;
+opacity:0.5;
+width:100%;
+filter:Alpha(Opacity=50);
+-moz-opacity: 0.5;
+}
+#lqendSelect .lq_Cont {
+color:#FFFFFF;
+font-size:14px;
+left:26px;
+position:absolute;
+top:10px;
+}
+#lqendSelect .lq_Cont p {
+overflow:hidden;
+padding:4px 0;
+}
+#lqendSelect .lq_Cont p {
+overflow:hidden;
+padding:4px 0;
+}
+
+#lqnextPicsBut {
+background:url(http://www.weather.com.cn/m2/i/imageset_3/e_m_01.png) no-repeat scroll -400px -900px;
+float:left;
+height:23px;
+margin-left:10px;
+width:97px;
+}
+.isplay {
+	float:left;
+	height:28px;
+	margin-left:8px;
+	width:31px;
+	position:relative;
+	z-index:5;
+	background:transparent url(http://www.weather.com.cn/m2/i/imageset_3/noplay.gif) no-repeat;
+	height:30px;
+	width:32px;
+}
+
+
+.dListPic
+{
+	width:230px;
+	height:280px;
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/d1.jpg);
+	background-repeat:no-repeat;
+	text-align:center;
+	float:left;
+	display:inline;
+	margin-left:10px;
+	margin-bottom:10px;
+	
+}
+.dListPicBox
+{
+	width:230px;
+	height:160px;
+	/**line-height:188px;
+	vertical-align:middle;
+	display:table-cell;
+	text-align:center;
+	+display:block;
+	+font-size:165px;**/
+}
+.dListPicBox img
+{
+	border:1px solid #B4B4B4;
+         margin-top:40px;
+	margin-bottom:40px;
+cursor:pointer;
+	/**vertical-align:middle;**/
+}
+.dListPic h2
+{
+	font-size:12px;
+	font-weight:normal;
+	color:#858585;
+         height:46px;
+}
+.dListPic span
+{
+line-height:35px;
+color:#B6B6B6;
+font-size:10px;
+}
+.dListPic1
+{
+	width:230px;
+	height:280px;
+	background:url(http://www.weather.com.cn/m2/i/imageset_3/d2.jpg) no-repeat;
+	text-align:center;
+	float:left;
+	display:inline;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+.dListPic1 .dListPicBox img
+{
+	border:1px solid #FF9845;
+}
+.dListPic1 h2
+{
+	font-size:12px;
+	font-weight:normal;
+	color:#FF8C46;
+}
+.dListPic1 span
+{
+line-height:35px;
+color:#FFAD84;
+font-size:10px;
+}
+.lqPicIntro a
+{
+	padding-left:0px;
+	}
+#djz
+{
+	color:#076ea8;
+	font-size:24px;
+	font-weight:normal;}
+	
+#gjz
+{
+	font-size:14px;
+	font-weight:normal;
+	color:#666;}
+	
+
+
+.pit_title
+{
+	line-height:24px;
+	clear:both;
+	text-align:left;
+	margin-bottom:20px;}
+.lqPicListtu1 li.move
+{
+	opacity:0.5;}
+.ysyd
+{
+	clear:both;}
+.ysyd h1
+{
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/ysyd.jpg) no-repeat;
+	border-top:1px solid #dcf1bf; font-size:18px; font-style:italic; color:#666666; text-indent:30px;}
+.ysyd h2
+{
+	font-size:18px;
+	color:#333333;
+	text-align:center;
+	margin-bottom:15px;}
+.ysyd p
+{
+	font-size:12px;
+	color:#333333;
+	line-height:24px;}
+.shensuo
+{
+	width:1000px;
+	margin-top:20px;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/shensuo.jpg) no-repeat center bottom;
+	height:30px;
+	line-height:30px;
+	border-top:1px solid #dcf1bf;
+	text-align:center;}
+.shensuo span
+{
+	cursor:pointer;}
+.func
+{
+	position:relative;
+	clear:both;
+	height:50px;}
+.func i
+{
+	position:absolute;
+	display:block;
+	width:64px;
+	font-style:normal;
+	left:445px;}
+.func em
+{
+	color:#0570a6;
+	padding:0px 5px;}
+.func span
+{
+	float:right;
+	
+	}
+.func span b
+{
+	font-weight:normal;
+	display:block;
+	margin:0px 10px;
+	float:left;}
+.func span a 
+{
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/hunhe.jpg) no-repeat;
+	padding-left:24px;
+	display:block;
+	float:left;
+	height:20px;
+	
+	}
+.func span a.mrst
+{
+	background-position:0px -146px;}
+.func span a.pl
+{
+	background-position:0px -45px;}
+.func span a.fx
+{
+	background-position:0px -95px;}
+.pic_transition
+{
+	}
+.transtion_left
+{
+	float:left;
+	width:700px;
+	}
+.transtion_left dl
+{
+	width:330px;
+	float:left;
+	height:218px;
+	display:inline;
+	margin:0px 20px 20px 0px;
+	overflow:hidden;
+	position:relative;}
+.transtion_left dl dd 
+{
+	position:absolute;
+	width:330px;
+	height:40px;
+	bottom:0px;
+	left:0;}
+.transtion_left dl dd i
+{
+	height:40px;
+	line-height:40px;
+	z-index:9;
+	bottom:0;
+	left:0;
+	position:absolute;
+	display:block;
+	background:#666666;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	width:330px;
+	}
+.transtion_left dl dd a
+{
+	position:absolute;
+	z-index:10;
+	display:block;
+	width:330px;
+	text-align:center;
+	left:0;
+	top:5px;
+	font-size:16px;
+	color:#fff;}
+.pic_transition
+{
+	margin-top:20px;
+	}
+.transtion_right
+{
+	float:right;
+	width:300px;
+	height:456px;
+	background:#cee1ef;}
+.transtion_b h1
+{
+	text-align:center;
+	margin:25px 0px 5px 0px;}
+.transtion_b h1 a
+{
+	color:#333333;
+	font-size:24px;
+	}
+.transtion_b p
+{
+	width:235px;
+	margin:0 auto;
+	text-align:center;
+	line-height:35px;}
+.rtjs
+{
+	clear:both;
+	width:235px;
+	margin:0 auto;}
+.rtjs h1
+{
+	color:#076ea8;
+	height:35px;
+	line-height:35px;
+	font-size:18px;
+	}
+.rtjs h1 span
+{
+	color:#8abb4a;
+	font-size:14px;
+	font-style:italic;
+	padding-left:5px;
+	}
+.rtjs ul li
+{
+	height:35px;
+	padding-left:20px;
+	line-height:35px;
+	border-bottom:1px dashed #b5d0ea;}
+.transtion_b
+{
+	width:240px;
+	margin:0 auto;}
+.transtion_b .cb
+{
+	height:30px;
+	margin-bottom:25px;
+	width:110px;
+	background:#8abb4a;
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	color:#fff;
+	float:left;}
+.transtion_b .cb a
+{
+	color:#fff;}
+.transtion_b .pl
+{
+	width:110px;
+	float:left;
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pl_pic.jpg) no-repeat 12px 4px;
+	height:30px;
+	text-align:center;
+	margin-bottom:10px;
+	display:inline;
+	line-height:30px;}
+.transtion_b .fx
+{
+	margin-bottom:10px;
+	display:inline;
+	float:right;
+		background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/pl_pic.jpg) no-repeat 12px -23px;
+	text-align:center;
+	width:110px;
+	height:30px;
+	line-height:30px;}
+.rtjs ul
+{
+	
+	background:url(http://i.tq121.com.cn/i/weather2014/index_neweather/ph.png) no-repeat 2px 11px;}

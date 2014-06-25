@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+.news_left { float:left; width:685px; margin-bottom:20px; margin-top:10px; display:inline; }
+.news_jctj { width:330px; float:left; margin-bottom:10px; height:377px; overflow:hidden; }
+.news_weatherh1 { height:40px; border-top:3px solid #006699; font-size:20px; color:#252525; line-height:40px; }
+.news_tqxw { width:335px; float:right; height:377px; float:right; }
+.news_weatherh1 span { float:right; }
+.news_weatherh1 span a { font-size:14px; color:#252525; }
+.news_tqxw h2 a { display:block; height:48px; line-height:48px; font-size:18px; color:#333333; }
+.news_tqxw p { height: 35px; overflow: hidden; padding-left: 30px; background:url(http://10.14.85.90/source/i/weather2014/city/c8.jpg) no-repeat 11px 14px; line-height:35px; }
+.news_tqxw p a { font-size:14px; color:#242424; }
+.news_zjft { width:330px; float:left; }
+.news_zjft dl dt { width:150px; float:left; }
+.news_zjft dl dd { float:right; line-height:20px; font-size:12px; width:170px; }
+.news_zjft dl dd a { margin-bottom:10px; display:block; font-size:16px; color:#333333; font-weight:bold; }
+.clear { clear:both; }
+.news_btq { float:right; }
+.news_zjft ul { padding-top:10px; clear:both; }
+.news_zjft ul li { background:url(http://10.14.85.90/source/i/weather2014/city/c8.jpg) no-repeat 4px 10px; padding-left:23px; overflow:hidden; height:30px; line-height:30px; }
+.rank { width:300px; background-color:#e8e8e8; margin-top:10px; margin-bottom:31px; }
+.rank h3 { background-color:#006699; height:35px; line-height:35px; font-size:20px; text-indent:10px; color:#fff; }
+.rank h3 a { color:#fff; padding-right:10px; }
+.rank h3 span { font-size:12px; }
+.rank h3 span a { padding:6px 5px; cursor:pointer; border: none; background:none; }
+.rank ul { width:300px; display:none; }
+.rank ul.on { display:block; }
+.rank ul li { height:32px; line-height:32px; overflow:hidden; vertical-align:bottom; width:290px; padding:0px 10px; padding-right:0px; }
+.rank ul .on { background-color:#fff; }
+.rank ul li span { display:block; height:33px; float:left; text-align:center; }
+.rank .ord { width:30px; height:25px; padding-top:8px; float:left; }
+.rank .ord i { font-style:normal; font-size:12px; display:block; width:18px; height:18px; line-height:18px; text-align:center; margin-top:
+}
+.rank li.on i { background-color:#076ea8; color:#fff; }
+.rank .city { width:259px; float:left; text-align: left; }
+.rank .prov { width:50px; float:left; }
+.rank .wd { width:125px; float:left; color:#076ea8; }
+.rank .wd a { color:#076ea8; }
+.rank h3 .on { background-color: #eeeeee; color: #076ea8; }
+.rank .detail { width:280px; border-top:1px solid #000; height:40px; line-height:40px; display:block; text-align:right; font-size:12px; color:#464a4e; }
+.rank .detail.on { background-color: #e8e8e8; }
+.news_right { float:right; width:300px; overflow:hidden; }
+.news_video { width:685px; float:left; }
+.news_zt { width:300px; }
+.news_video h1 { margin-bottom:10px; color:#006699; }
+.news_video p { position:relative; }
+.news_video p i { position:absolute; left:0; display:block; width:350px; color:#fff; z-index:10; font-size:19px; text-align:center; bottom:3px; }
+.news_video p b { left:0; display:block; z-index:9; width:350px; height:35px; opacity:0.7; line-height:35px; background:#000; bottom:0; position:absolute; }
+.news_video p em { top:75px; left:135px; position:absolute; }
+.news_video p { width:350px; float:left; }
+.news_video ul { width:327px; float:right; }
+.news_video ul li { overflow:hidden; float:left; margin-bottom:9px; display:inline; position:relative; width:160px; height:120px; }
+.news_video ul li a img { width:160px; height:120px; }
+.news_video ul li i { position:absolute; left:0; display:block; width:160px; color:#fff; z-index:10; font-size:14px; text-align:center; bottom:3px; }
+.news_video ul li b { left:0; display:block; z-index:9; width:160px; height:25px; opacity:0.7; line-height:25px; background:#000; bottom:0; position:absolute; }
+.news_video ul li em { left: 127px; position: absolute; top: 65px; }
+.news_video p { width:350px; float:left; }
+.news_zt { float:right; }
+.news_zt h1 { color: #006699; margin-bottom: 2px; }
+.news_zt h2 { height:38px; font-size:16px; }
+.news_zt dl dt { width:95px; float:left; height:70px; }
+.news_zt dl dd { font-size:12px; line-height:20px; float:right; width:185px; }
+.news_zt dl { width:290px; height:70px; margin:0 auto; margin-bottom:10px; }
+.news_zt ul { clear:both; }
+.news_zt ul li { line-height:35px; overflow: hidden; padding-left: 19px; background: url(http://10.14.85.90/source/i/weather2014/city/c8.jpg) no-repeat 6px 14px; height:35px; }
+.news_zjft ul li { height: 30px; line-height: 30px; }
+.topNav { background:none repeat scroll 0 0 #076ea8; height:40px; line-height:40px; margin-top:10px }
+.topNav span { color:#6bb0d9; float:left; font-size:28px; line-height:35px }
+.topNav a { display:inline; color:#fff; float:left; font-size:16px; width:118px; overflow:hidden; text-align:center; background:#076ea8; }
+.news_jctj .pic{ margin-top:0;}
+.news_jctj .pic #scrollPic { height: 250px; overflow: hidden; position: relative; width: 330px; margin-top:5px; }
+.news_jctj .pic .m ul.bigImg { width: 1320px; position:absolute; }
+.news_jctj .pic .m ul.bigImg li { float: left; }
+.news_jctj .pic #scrollPic ul.botIcon { left: 0; position: absolute; top: 205px; width: 136px; margin-left:107.5px; }
+.news_jctj .pic #scrollPic ul.botIcon li { cursor:pointer; background:url(http://10.14.85.90/source/i/weather2014/city/bot1.png); _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://10.14.85.90/source/i/weather2014/city/bot1.png");
+float: left; margin-right: 5px; width: 20px; height: 4px; font:0; }
+.news_jctj .pic #scrollPic ul.botIcon li.on { background:url(http://10.14.85.90/source/i/weather2014/city/bot2.png); _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://10.14.85.90/source/i/weather2014/city/bot2.png");
+}
+.news_jctj .pic #scrollPic p, .news_jctj .pic #scrollPic .bottomBg { bottom: 0px; height: 30px; left: 0px; line-height: 30px; position: absolute; width: 100%; }
+.news_jctj .pic #scrollPic p { color: #ffffff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1; }
+.news_jctj .pic #scrollPic .bottomBg { background: none repeat scroll 0% 0% #000000; opacity: 0.6; filter:alpha(opacity=60); }
+.news_jctj .pic #scrollPic .rollLeft, .news_jctj .pic .m .rollRight { background-position: 5px 6px; background-repeat: no-repeat; cursor: pointer; height: 40px; position: absolute; top: 89px; width: 30px; opacity:0.6; filter:alpha(opacity=60); }
+.news_jctj .pic #scrollPic .rollLeft { background-image: url("http://10.14.85.90/source/i/weather2014/city/rollL.png"); _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://10.14.85.90/source/i/weather2014/city/rollL.png");
+left: 20px; }
+.news_jctj .pic #scrollPic .rollRight { background-image: url("http://10.14.85.90/source/i/weather2014/city/rollR.png"); _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://10.14.85.90/source/i/weather2014/city/rollR.png");
+right: 20px; }
+.news_jctj .list { margin-top: 4px; padding-left: 5px; }
+.news_jctj .list li { background: url("http://10.14.85.90/source/i/weather2014/city/c8.jpg") no-repeat scroll -1px 12px transparent; height: 30px; line-height: 30px; padding-left: 15px; }
+.news_jctj .list li a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 280px; }
+.news_jctj .list li a:hover { color: #076ea8; }
+
+
+
+#focus {width:300px; height:210px; overflow:hidden; position:relative; padding-top:20px; border-top:3px solid #8bbb4b;}
+#focus h1{ position:absolute; top:20px; left:10px; z-index:9; width:100px; height:27px; font-size:20px; background:#8bbb4b; line-height:27px; text-align:center; color:#fff;}
+#focus ul {height:280px; position:absolute;}
+#focus ul li {float:left; width:300px; height:210px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus ul li a img{ width:300px; height:210px;}
+#focus .btnBg { display:none;position:absolute; width:300px; height:20px; left:0; bottom:0; background:#000;}
+#focus .btn {display:none;position:absolute; width:780px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(http://10.14.85.90/source/i/weather2014/city/rollL.png) no-repeat 3px 33px; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:-22px; background-position:right top;background:url(http://10.14.85.90/source/i/weather2014/city/rollR.png) no-repeat -3px 33px; cursor:pointer; }
+
+.ggt
+{
+	width:1000px;
+	height:90px;
+	background:#ccc;}

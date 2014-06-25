@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+#aboutZS { margin-top:10px; width:680px; overflow:hidden; margin-bottom:0px; font: 14px/1.6 "Microsoft Yahei", "Tahoma", "SimSun"; color:#3f3f3f; float:none; height:auto; }
+.zs { width:685px; margin-right:-5px; overflow:hidden; margin-top:10px; }
+.zs ul { width:100%; }
+.zs ul li { width:223px; height:120px; overflow:hidden; margin:0px 5px 5px 0px; float:left; background-color:#076ea8; color:#fff; position:relative; }
+.zs ul li .xsm { display:block; width:50px; height:50px; background:url(http://www.weather.com.cn/m2/i/zs/xsm.png) no-repeat right top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.weather.com.cn/m2/i/zs/xsm.png');
+_background-image:none; position:absolute; right:0px; top:0px; }
+.zs ul li .qlx { display:block; width:50px; height:50px; background:url(http://www.weather.com.cn/m2/i/zs/qlx.png) no-repeat right top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.weather.com.cn/m2/i/zs/qlx.png');
+_background-image:none; position:absolute; right:0px; top:0px; }
+.zs ul li .ytw { display:block; width:50px; height:50px; background:url(http://www.weather.com.cn/m2/i/zs/ytw.png) no-repeat right top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.weather.com.cn/m2/i/zs/ytw.png');
+_background-image:none; position:absolute; right:0px; top:0px; }
+.zs ul li .sl { display:block; width:50px; height:50px; background:url(http://www.weather.com.cn/m2/i/zs/sl.png) no-repeat right top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.weather.com.cn/m2/i/zs/sl.png');
+_background-image:none; position:absolute; right:0px; top:0px; }
+.zs ul li .mask { width:223px; height:120px; overflow:hidden; position:relative; }
+.zs ul li .area { width:223px; height:240px; overflow:hidden; position:absolute; left:0px; top:0px; }
+.zs ul li .imgArea { width:223px; height:120px; overflow:hidden; }
+.zs ul li .imgArea img { width:223px; height:80px; overflow:hidden; border:0; }
+.zs ul li .detail { padding:14px 0px 0px 10px; width:200px; height:110px; }
+.zs ul li .detail aside { width:120px; padding-right:10px; float:right; line-height:18px; font-size:12px; font:12px/1.6 "Microsoft Yahei", "Tahoma", "SimSun"; }
+.zs ul li .detail aside b { font-size:24px; color:#fff; display:block; line-height:30px; font-weight:bold; }
+.zs ul li .detail a img { border:none; }
+.zs ul li h3 { border-top:0px; height:auto; line-height:16px; font-size:14px; font-weight:normal; padding-left:8px; position:absolute; left:0px; top:85px; text-align:left; width:130px; }
+.zs ul li h3 a { color:#fff; }
+.zs ul li h3 a b { font-weight:bold; }
+.topSj { height:205px; }
+.adposter_6122 { height:90px; clear:both; margin-bottom:10px; }
+.adposter_6117 { height:250px; margin-bottom:10px; }
+.adposter_6118 { height:250px; margin-bottom:10px; }
+.adposter_6119 { height:250px; margin-bottom:10px; }
+.adposter_6120 { height:250px; margin-bottom:10px; }
+.adposter_6121 { height:250px; clear:both; margin-bottom:10px; }
+.adposter_pos { background: url("#") repeat scroll 0 0 rgba(0, 0, 0, 0); left: -10000px; position: absolute; z-index: 9; }
+#zs0 { height:381px; margin-bottom:-10px; }
+#zs1 { height:509px; margin-bottom:10px; }
+.weatherPartners { border:1px #c1d1e8 solid; height:10px; margin-bottom:10px; padding-bottom:10px; width:650px; clear:both; }
+html>body .weatherPartners { height:190px; min-height:10px; }
+.weatherPartners ul { margin-top:10px; }
+.weatherPartners li { float:left; line-height:25px; height:25px; margin:0 0 0 10px; text-indent:15px; width:93px; text-align:center; display:inline; }
+.weatheH1 { border-top: 3px solid #6bb0d9; height: 36px; line-height: 36px; font-size:20px; padding-left:10px; position:relative; }
+.weatheH1 span { position:absolute; top:0px; right:4px; }
+.weatheH1 span a.ckqbs { color:#252525; font-size:16px; cursor:pointer; margin-left:22px; height:44px; float:left; line-height:44px; }
+.weatheH1 span a.ckqbs:hover { color:#f60; text-decoration:none; }
+.weatheH1 span a.on { color:#076ea8; font-size:16px; cursor:pointer; background:url("http://i.tq121.com.cn/i/weather2014/city/c9.jpg") no-repeat scroll center 0 transparent; }
+.weatherPartners li a { font-weight:bold; font-size:14px; color:#36b; }
+.weatherPartners li a.hui { font-weight:normal; }
+.zs .detail a { display:block; width:54px; height:63px; overflow:hidden; background:url(http://www.weather.com.cn/m2/i/zs/icons.jpg) no-repeat; }
+.zs .ag a { background-position:1px 0px; }
+.zs .yd a { background-position:-51px 0px; }
+.zs .xc a { background-position:-104px 0px; }
+.zs .pp a { background-position:-162px 0px; height:74px; }
+.zs .gm a { background-position:-218px 0px; }
+.zs .uv a { background-position:-277px 0px; }
+.zs .tr a { background-position:-332px 0px; }
+.zs .pl a { background-position:-388px 0px; }
+.zs .ct a { background-position:-450px 0px; }
+.zs .gj a { background-position:-510px 0px; }
+.zs .co a { background-position:3px -78px; }
+.zs .mf a { background-position:-51px -78px; }
+.zs .ys a { background-position:-104px -78px; }
+.zs .jt a { background-position:-158px -78px; }
+.zs .lk a { background-position:-212px -78px; }
+.zs .cl a { background-position:-266px -67px; width:67px; height:74px; }
+.zs .dy a { background-position:-333px -78px; }
+.zs .hc a { background-position:-386px -81px; width:63px; height:55px; }
+.zs .yh a { background-position:-449px -78px; width:61px; }
+.zs .ls a { background-position:-510px -73px; width:61px; height:68px; }
+.zs .gl a { background-position:-580px -78px; }
+#hhs { height:275px; width:60%; z-index:9999; }
+.abc { height:250px; overflow:hidden; background-color: rgba(48, 47, 47, 0.9); border-radius:7px; -webkit-box-shadow:5px 5px 5px #999; color:#fff; font-size:40px; }
+.abc dl { margin-top:20px; }
+.abc dl dt { float:left; width:165px; padding-top:20px; margin-left:40px; }
+.abc dl dt img { width:165px; }
+.abc dl dd { width:60%; margin-left:20px; margin-top:10px; line-height:50px; float:left; }
+.abc dl dd b { color:#ff0; }
+.abc dl dd img { width:50px; }
+.abc span { position:absolute; right:20px; top:20px; }
+.abc span img { width:40px; }
+.sanjiao { text-align:center; }
+.sanjiao img { width:50px; }
+.lts { width:648px; margin:0 auto; border:1px solid #c3cfe5; height:326px; margin-bottom:10px; clear:both; }
+.lesa { float:left; margin-bottom:15px; width:291px; margin-top:15px; display:inline; overflow:hidden; margin-left:20px; }
+.lesa dl { display: inline; float: left; height: 110px; margin-bottom:10px; margin-left: 20px; margin-top: 10px; width: 120px; }
+.lesa dl dt img { height: 90px; width: 120px; }
+.lesa dl dd { height: 20px; line-height: 20px; overflow: hidden; text-align: center; }
+.lesa p { height:25px; line-height:25px; background:url(http://www.weather.com.cnhttp://www.weather.com.cn/m2/i/dian09.gif) no-repeat 20px 10px; padding-left:30px; }
+.relight { width:290px; margin-top:20px; display:inline; float:left; margin-left:30px; }
+.relight h2 { color:#096e9a; font-weight:bold; font-size:14px; margin-bottom:5px; }
+.relight ul { background:url(http://www.weather.com.cn/m2/i/index/paihang.jpg) no-repeat; height:190px; }
+.relight ul li { padding-left:25px; height:20px; margin-bottom:14px; line-height:20px; }
+.lts p.retie { color:#3f3f3f; font-size:14px; font-weight:bold; clear:both; margin-left:40px; }
+.lts p.retie span { color:#3f3f3f; font-size:14px; float:left; font-weight:bold; display:block; height:28px; line-height:28px; margin-right:10px; }
+.lts p.retie a { margin-right:15px; margin-left:5px; color:#3f3f3f; float:left; display:block; background:url(http://www.weather.com.cn/m2/i/index/retie.jpg) no-repeat; width:67px; height:28px; line-height:28px; text-align:center; }
+.tjztsa { width:648px; border:1px solid #c3cfe5; height:540px; margin:0 auto; margin-bottom:10px; }
+.tjztLeft { background:url(http://www.weather.com.cn/m2/i/index/tjztsa.jpg) no-repeat 15px 44px; width:80px; height:500px; margin-left:6px; float:left; display:inline; }
+.tjztRight { width:540px; float:left; margin-left:10px; display:inline; }
+.tjztdl dl dt a img { width:100px; height:75px; }
+.tjztdl dl { height:80px; margin-bottom:15px; }
+.tjztdl dl dt { float:left; width:100px; height:75px; }
+.tjztdl dl dd { float:right; width:424px; line-height:22px; }
+.tjztdl dl dd a { font-weight:bold; font-size:14px; }
+.tjztdl dl dd a.xq { font-weight:normal; color:#ff4e00; padding:0px 10px; font-size:12px; }
+.tjztdl { height:90px; margin-top:30px; }
+.tjztLeft p { margin-top:30px; font-weight:bold; font-family:寰蒋闆呴粦; color:#838383; font-size:14px; text-indent:10px; margin-bottom:100px; }
+#selectsionTabs .tab { width:45px; margin: 4px 1px 0 1px; padding:2px 0px; font-size:14px; }
+#selectsionGroups ul.dWeatherRankingBox { margin-bottom:8px; }
+#selectsionGroups ul.dWeatherRankingBox { margin:0px 0px;/*background:url(http://www.weather.com.cn/m2/i/topTen.jpg) no-repeat scroll 0 5px;*/ }
+#selectsionGroups ul.dWeatherRankingBox li { float: none; line-height: 24px; height:24px; text-align:left; padding-left: 20px; width: 376px; }
+#selectsionGroups ul.dWeatherRankingBox li a { padding-right:5px; font-size:14px; color:#000; }
+#selectsionGroups .hot-icon-orange { background: none repeat scroll 0 0 #FA8F29; }
+#selectsionGroups .hot-icon-dark { background: none repeat scroll 0 0 #DFDFDF; }
+#selectsionGroups .hot-icon-index { color: #FFFFFF; margin-right: 8px; text-align: center; width: 14px; }
+#selectsionGroups .hot-icon { display: inline-block; position:relative; top:-3px; font-size: 11px; height: 14px; line-height: 14px; }
+#selectsionGroups .hot-icon-new { color:#f00; }
+.chinaTop { position:relative; z-index:9999; }
+.chengshi ul li { float:left; height:20px; line-height:20px; width:50px; text-align:center; }
+.chengshi { position:absolute; display:none; width:300px; padding:7px 2px; border:1px solid #36b; top:90px; left:150px; background:#fff; z-index:9999; }
+.chengshi ul li a { font-size:13px; }
+.zxbg { background:url(http://www.weather.com.cn/m2/i/zxbg.jpg) no-repeat right bottom; height:150px; padding-top:10px; }
+.zs .fs a { background-position: -578px 0; height: 68px; width: 61px; }
+.weatherYubao .weatherYubaoBox { margin:0 auto; width:640px; padding:0; padding-top:3px; }
+.weatherYubao { float:left; background:#EBEFF7; width:650px; }

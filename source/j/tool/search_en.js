@@ -109,5 +109,5 @@ define(function(require){
 				$addition.css(cssObj);
 			}
 		};
-	}
+	// }
 })

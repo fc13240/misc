@@ -1,0 +1,672 @@
+body { background: #ffffff; color: #252525; }
+i, h1, h2, h3 { font-style: normal; font-weight: normal; }
+.ad { height: 90px; }
+.ad .ad1 { background: none repeat scroll 0% 0% #cccccc; height: 100%; width: 310px; }
+.ad .ad2 { background: none repeat scroll 0% 0% #cccccc; height: 100%; margin-left: 10px; width: 680px; }
+.ad4 { background: none repeat scroll 0% 0% #cccccc; height: 250px; margin-top: 10px; width: 300px; }
+.left .ad3 { background: none repeat scroll 0% 0% #cccccc; height: 90px; margin-top: 10px; width: 680px; }
+.clearfix { }
+.clearfix:after { clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
+.topNav { background: none repeat scroll 0% 0% #076ea8; height: 40px; line-height: 40px; margin-top: 10px; }
+.topNav span { color: #6bb0d9; float: left; font-size: 28px; line-height: 35px; }
+.topNav a { color: #ffffff; float: left; font-size: 16px; }
+.topNav a:hover { text-decoration: underline; }
+.cityName { margin-top: 11px; }
+.cityName h1 { display: inline; font-size: 22px; font-weight: bold; overflow: hidden; white-space: nowrap; }
+.cityName h2 { display: inline; font-size: 18px; margin-left: 10px; }
+.cityName h3 { display: inline; font-size: 18px; margin-left: 10px; }
+.cityName .scorll { float: right; margin-top: 13px; width: 180px; z-index: 999; }
+.cityName .scorll span { float: left; font-size: 14px; line-height: 21px; }
+.cityName .scorll div { z-index:999; background: none repeat scroll 0% 0% #ffffff; border: 1px solid #6bb0d9; float: left; font-size: 13px; height: 18px; line-height: 18px; position: relative; text-indent: 3px; width: 80px; }
+.cityName .scorll div p { color: #aaaaaa; cursor: pointer; }
+.cityName .scorll div i { background: url("http://i.tq121.com.cn/i/weather2014/city/down.jpg") no-repeat scroll -4px 2px transparent; height: 14px; position: absolute; right: 1px; top: 1px; width: 14px; }
+.cityName .scorll div ul { background: none repeat scroll 0% 0% #ffffff; border: 1px solid #cccccc; display: none; left: 0px; position: absolute; top: 18px; width: 78px; z-index: 999; }
+.cityName .scorll div ul li { border-bottom: 1px solid #cccccc; cursor: pointer; }
+.cityName .scorll div ul li a { display: block; height: 100%; width: 100%; }
+.cityName .scorll div ul li a:hover { background: none repeat scroll 0% 0% #6bb0d9; color: #ffffff; }
+.cityName .area { width: 143px; }
+.cityName .area div { margin-left: 4px; }
+.cityName .view { margin-left: 7px; width: 186px; }
+.cityName .view div { margin-left: 4px; width: 124px; }
+.cityName .view div ul { width: 122px; }
+.left { width: 680px; }
+.left ul.nav { margin-top: 10px; }
+.left ul.nav li { background: none repeat scroll 0% 0% #e3e3e3; color: #252525; cursor: pointer; float: left; height: 32px; line-height: 32px; margin-right: 2px; text-align: center; width: 133px; }
+.left ul.nav li a{ float:left; width:100%; height:100%;}
+.left ul.nav li a:hover{color:#000;}
+.left ul.nav li.hover{ background:#eee;}
+.left ul.nav li.on { -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; background: none repeat scroll 0% 0% #ffffff; border-color: #076ea8 #076ea8 -moz-use-text-color; border-image: none; border-style: solid solid none; border-width: 1px 1px medium;}
+.left ul.nav li.on a{ color: #076ea8; }
+.left .m { padding-bottom: 10px; }
+.left .m ul.t li { float: left; height: 320px; text-align: center; }
+.left .m ul.t li p, .left .m ul.t li h1, .left .m ul.t li img { }
+.left .m ul.t li.sk { height: 309px; padding-top: 25px; position: relative; width: 244px; }
+.left .m ul.t li.sk h1 { font-size: 14px; }
+.left .m ul.t li.sk h1 img { position: absolute; right: 43px; top: 21px; display:none; }
+.left .m ul.t li.sk .wea { font-size: 16px; margin-top: 3px; }
+.left .m ul.t li.sk .tem { color: #252525; margin-top: 3px; }
+.left .m ul.t li.sk .tem span { font-size: 36px; }
+.left .m ul.t li.sk .tem i { font-size: 24px; }
+.left .m ul.t li.sk .num { font-size: 16px; margin-left: 30px; margin-top: 3px; text-align: left; }
+.left .m ul.t li.sk .num span { display: inline-block; height: 24px; line-height: 24px; padding-left: 27px; }
+.left .m ul.t li.sk .num span.sp1 { background: url("http://i.tq121.com.cn/i/weather2014/city/c2.jpg") no-repeat scroll 0px -1px transparent; }
+.left .m ul.t li.sk .num .sp2 { background-image: url("http://i.tq121.com.cn/i/weather2014/city/flxOn.jpg"); background-repeat:no-repeat; margin-left: 20px; padding-left: 26px; background-position:0 5px;}
+.left .m ul.t li.sk .num .N {background-position: 0px -30px;}
+.left .m ul.t li.sk .num .S {background-position: 0px -57px;}
+.left .m ul.t li.sk .num .E{background-position: 0px -80px;}
+.left .m ul.t li.sk .num .W{background-position: 0px -98px;}
+.left .m ul.t li.sk .num .SW{background-position: 0px -120px;}
+.left .m ul.t li.sk .num .SE{background-position: 0px -145px;}
+.left .m ul.t li.sk .num .NW{background-position: 0px -174px;}
+.left .m ul.t li.sk .num .NE{background-position: 0px -200px;}
+
+
+
+.left .m ul.t li.sk .air, .left .m ul.t li.sk .wh { font-size: 16px; margin-left: 27px; margin-top: 7px; text-align: left; }
+.left .m ul.t li.sk .air span { color: #ffffff; margin-left: 16px; padding: 0px 6px; }
+.left .m ul.t li.sk .wh { margin-top: 3px; }
+.left .m ul.t li.sk .wh span { margin-left: 18px; }
+.left .m ul.t li.dn { color: #888; cursor: pointer; font-size: 16px; position: relative; width: 210px; border:3px solid #fff; }
+.left .m ul.t li.dn h1 { font-size: 14px; margin-top: 22px; }
+.left .m ul.t li.dn img { margin-top: 5px; }
+.left .m ul.t li.dn .wea { margin-top: 5px; }
+.left .m ul.t li.dn .tem { }
+.left .m ul.t li.dn .tem span { font-size: 36px; }
+.left .m ul.t li.dn .tem i { font-size: 24px; }
+.left .m ul.t li.dn .win { margin-top: 14px; }
+.left .m ul.t li.dn .win span,.left .m ul.t li.on .win span {background-image: url("http://i.tq121.com.cn/i/weather2014/city/flx.jpg"); background-repeat:no-repeat; padding-left:30px; margin-left:-25px; background-position:0px 3px;}
+.left .m ul.t li.on .win span{background-image: url("http://i.tq121.com.cn/i/weather2014/city/flxOn.jpg");}
+.left .m ul.t li .win span.N {background-position: 0px -30px;}
+.left .m ul.t li .win span.S {background-position: 0px -57px;}
+.left .m ul.t li .win span.E{background-position: 0px -80px;}
+.left .m ul.t li .win span.W{background-position: 0px -98px;}
+.left .m ul.t li .win span.SW{background-position: 0px -120px;}
+.left .m ul.t li .win span.SE{background-position: 0px -145px;}
+.left .m ul.t li .win span.NW{background-position: 0px -174px;}
+.left .m ul.t li .win span.NE{background-position: 0px -200px;}
+
+
+.left .m ul.t li.dn .win .winImg { margin-top: 0px; }
+.left .m ul.t li.dn .sunUp { background: url("http://i.tq121.com.cn/i/weather2014/city/c51.jpg") no-repeat scroll 44px -1px transparent; margin-top: 18px; padding-left: 86px; text-align: left; }
+.left .m ul.t li.dn .sunDown { background: url("http://i.tq121.com.cn/i/weather2014/city/c61.jpg") no-repeat scroll 40px -7px transparent; margin-top: 18px; padding-left: 86px; text-align: left; }
+.left .m ul.t li.dn .slid { background: url("http://i.tq121.com.cn/i/weather2014/city/c4.jpg") no-repeat scroll 0% 0% transparent; display: none; height: 15px; left: 94px; position: absolute; top: 320px; width: 26px; _top:323px; }
+.left .m ul.t li.hover{border:3px solid #b5d7ec; }
+.left .m ul.t li.on { border: 3px solid #076ea8; margin:0; color:#252525;}
+.left .m ul.t li.on .tem { color: #076ea8; }
+.left .m ul.t li.on .slid { display: block; }
+.left .m ul.t li.on .sunUp{ background: url("http://i.tq121.com.cn/i/weather2014/city/c5.jpg") no-repeat scroll 44px -1px transparent;}
+.left .m ul.t li.on .sunDown{ background: url("http://i.tq121.com.cn/i/weather2014/city/c6.jpg") no-repeat scroll 40px -7px transparent;}
+.left .m ul.b { margin-left: 33px; }
+.left .m ul.b li { border-bottom: 1px solid #e5e5e5; color: #252525; height: 51px; line-height: 50px; width:600px; }
+.left .m ul.b li i { display: inline-block; width: 68px; }
+.left .m ul.b li b { display: inline-block; font-weight: normal; width: 104px; text-align:center }
+.left .m ul.b li strong { display: inline-block; width: 90px; text-align:center }
+.left .m ul.b li em { display: inline-block; width: 110px; text-align:center }
+.left .m ul.b li .img1 { margin-left: 10px; }
+.left .m ul.b li .img2 { margin-left: 0px; margin-right: 6px; }
+.left .m ul.b li span { color: #076ea8; display: inline-block; width: 90px; }
+.left .m2 ul.t li.dn{width:331px;font-size:14px;}
+.left .m2 ul.t li.dn h2{ font-size:14px; padding-top:8px;}
+.left .m2 ul.t li.dn h1{ margin-top:10px;}
+.left .m2 ul.t li.dn .sunUp,.left .m2 ul.t li.dn .sunDown{background:url("http://i.tq121.com.cn/i/weather2014/city/c51.jpg") no-repeat 20px -4px;padding-left:60px; margin-top:14px;}
+.left .m2 ul.t li.dn .sunDown{background:url("http://i.tq121.com.cn/i/weather2014/city/c61.jpg") no-repeat 16px -8px;}
+.left .m2 ul.t li.dn ul li{ float:left; height:280px; width:165px;}
+.left .m2 ul.t li.dn .slid{left:154px; background:url("http://i.tq121.com.cn/i/weather2014/city/c10.jpg") no-repeat ;width:35px; height:15px;}
+.left .m2 ul.t li.dn .wea{margin-top:0px;}
+.left .m2 ul.t li.dn .win{ margin-top:0px; height:23px;padding-left:68px;}
+.left .m2 ul.t li.dn .win span{ height:23px; line-height:23px; float:left;}
+.left .m2 ul.t li.on .sunUp,.left .m2 ul.t li.on .sunDown{background:url("http://i.tq121.com.cn/i/weather2014/city/c5.jpg") no-repeat 20px -4px;padding-left:60px; margin-top:14px;}
+.left .m2 ul.t li.on .sunDown{background:url("http://i.tq121.com.cn/i/weather2014/city/c6.jpg") no-repeat 16px -8px;}
+.d23 #todayliving .detail aside { display:none;}
+
+
+.left .m3 ul.t li.dn { width:90px; background:url(http://i.tq121.com.cn/i/weather2014/city/c12.jpg) no-repeat 88px 24px;}
+.left .m3 ul.t li.last{ background:none;}
+.left .m3 ul.t li.dn h1{ font-size:14px; margin-top:8px; line-height:16px;}
+.left .m3 ul.t li.dn h2{ font-size:14px; line-height:16px;}
+.left .m3 ul.t li.dn img{ display:block; margin-left:20px;}
+.left .m3 ul.t li.dn .img1{ margin-top:5px;}
+.left .m3 ul.t li.dn .img2{ margin-top:1px;}
+.left .m3 ul.t li.dn .wea{ margin:0; font-size:14px; line-height:14px; padding:0 5px; overflow:hidden; height:43px;}
+.left .m3 ul.t li.dn .wea1{ margin-top:5px;}
+.left .m3 ul.t li.dn .wea2{}
+.left .m3 ul.t li.dn strong{ height:50px; display:block; width:100%;}
+.left .m3 ul.t li.dn .tem{  line-height:24px; height:26px;}
+.left .m3 ul.t li.dn .tem1{ margin-top:10px; line-height:24px;}
+.left .m3 ul.t li.dn .tem span{ font-size:24px;}
+.left .m3 ul.t li.dn .tem i{ font-size:18px;}
+.left .m3 ul.t li.dn .slid{ left:30px;}
+.left .m3 ul.t li.dn .win{ margin-top:5px; line-height:18px; font-size:14px;} 
+.left .m3 ul.t li.dn .win i{ margin-left:0; padding:0 5px;}
+.left .m3 ul.t li.dn .win em{ display:block; padding-left:16px; width:70px;zoom:1;}
+.left .m3 ul.t li.dn .win em:after{ clear:both; content: "."; display: block; height: 0px; visibility: hidden; }
+.left .m3 ul.t li.dn .win span{margin-left:0; padding-left:0; float:left; width:26px; height:23px;}
+.left .m3 ul.t li .win .N {background-position: 0px -30px;}
+.left .m3 ul.t li .win .S {background-position: 0px -57px;}
+.left .m3 ul.t li .win .E{background-position: 0px -80px;}
+.left .m3 ul.t li .win .W{background-position: 0px -98px;}
+.left .m3 ul.t li .win .SW{background-position: 0px -120px;}
+.left .m3 ul.t li .win .SE{background-position: 0px -145px;}
+.left .m3 ul.t li .win .NW{background-position: 0px -174px;}
+.left .m3 ul.t li .win .NE{background-position: 0px -200px;}
+.left .m3 ul.t li.hover,.left .m3 ul.t li.on{ background:none;}
+.left .m4 ul.b li i{ line-height:14px; float:left; margin-top:10px; margin-right:5px;}
+.left .m4 ul.b li i em{display:block; width:100%;}
+.left .m4 ul.b li em em{line-height:14px;text-align:center;}
+
+#tabDays .m{ display:none;}  
+.today #tabDays .m1{ display:block;}
+.d23 #tabDays .m2{ display:block;}
+.d7 #tabDays .m3{ display:block;}
+
+#Hour3 { margin-left: 33px; margin-top:2px; }
+#Hour3 li { border-bottom: 1px solid #e5e5e5; color: #252525; height: 51px; line-height: 50px; width:600px; display:none; }
+#Hour3 li i { display: inline-block; width: 68px; }
+#Hour3 li b { display: inline-block; font-weight: normal; width: 104px; text-align:center }
+#Hour3 li strong { display: inline-block; width: 90px; text-align:center }
+#Hour3 li em { display: inline-block; width: 110px; text-align:center }
+#Hour3 li .img1 { margin-left: 10px; }
+#Hour3 li .img2 { margin-left: 0px; margin-right: 6px; }
+#Hour3 li span { color: #076ea8; display: inline-block; width: 90px; }
+
+.d7 #Hour3{ }
+.d7 #Hour3 li { border-bottom:1px dotted #ccc; }
+.d7 .left{ position:relative}
+.d7 .left .h3zs{ border-top:1px solid #6eafd9; background:#f0f5fb; padding-top:25px; position:relative; margin-top:2px;}
+.d7 .left .h3zs .nav{ position:absolute; left:429px; top:0px;}
+.d7 .left .h3zs .nav span{ float:left; color:#0570b4; font-size:18px; cursor:pointer; line-height:30px; height:30px;padding:0 10px; margin-left:5px;}
+.d7 .left .h3zs .nav span.on{ background:#6eafd9; color:#fff;}
+.d7 #todayliving{display:none; border:none;}
+.d7 .left .sqhd{ margin-top:10px;}
+.d7 .left .sqhd h1{ border-top:3px solid #076ea8; height:34px; line-height:34px;}
+.d7 .left .sqhd h1 span{ float:left; font-size:20px; margin-left:5px;}
+.d7 .left .sqhd h1 i{ float:right; padding-right:10px; font-size:16px; }
+.d7 .left .sqhd .l{ width:300px; float:left; margin-top:5px;}
+.d7 .left .sqhd .l .t2{ margin-top:10px; }
+.d7 .left .sqhd .l .t2 img{ float:left;}
+.d7 .left .sqhd .l .t2 .t2r{ float:left; margin-left:4px; border:1px dotted #6eafd9; width:155px; height:98px; padding-left:7px;}
+.d7 .left .sqhd .l .t2 .t2r h2{ font-size:16px; margin-top:8px; color:#076ea8; width:100%; white-space:nowrap; overflow:hidden;}
+.d7 .left .sqhd .l .t2 .t2r p{ font-size:12px; margin-top:3px; height:52px; overflow:hidden; line-height:17px;}
+.d7 .left .sqhd .r{ width:360px; float:left;background:url(../../i/weather2014/city/c13.jpg) no-repeat 12px 6px; margin-left:10px;}
+.d7 .left .sqhd .r h2{ border-bottom:2px solid #bbd8ee; font-style:italic; margin-top:8px; padding-left:27px; margin-left:54px; *line-height:33px; font-size:21px;}
+.d7 .left .sqhd .r ul.list{ margin-top:13px; margin-left:15px;}
+.d7 .left .sqhd .r ul.list li{ padding-left:30px; border-bottom:1px dotted #ccc; width:270px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; height:35px; line-height:35px; font-size:14px; background-image:url(../../i/weather2014/city/top.jpg); background-repeat:no-repeat; background-position:1px -65px;}
+.d7 .left .sqhd .r ul.list li a{ }
+.d7 .left .sqhd .r ul.list li.t1{ background-position:1px 6px;}
+.d7 .left .sqhd .r ul.list li.t1 a{color:#c7000a; }
+.d7 .left .sqhd .r ul.list li.t2{ background-position:1px -30px;}
+.d7 .left .sqhd .r .b{ background:url(../../i/weather2014/city/c14.jpg) no-repeat 8px 0px}
+.d7 .left .sqhd .r .b h3{ line-height:20px; font-size:16px; height:20px; background:#fff; margin-left:29px; margin-top:15px; width:66px}
+.d7 .left .sqhd .r .b ul{margin-left:13px; margin-top:8px;}
+.d7 .left .sqhd .r .b ul li{ float:left; font-size:14px; color:#ccc; line-height:28px;  }
+.d7 .left .sqhd .r .b ul li a{ color:#076ea8; width:83px; float:left; text-align:center; _width:80px;}
+
+.d7 .left .greatEvent{margin-top:10px;}
+.d7 .left .greatEvent h1{border-top:3px solid #076ea8; height:34px; line-height:34px; padding-left:5px;font-size:20px;}
+.d7 .left .greatEvent ul{ margin-left:10px; margin-top:10px;}
+.d7 .left .greatEvent ul li{ background:url(../../i/weather2014/city/c15.jpg) no-repeat;zoom:1; height:138px;}
+.d7 .left .greatEvent ul li:after{clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
+.d7 .left .greatEvent ul li p.time{ text-align:right;width:75px; float:left; font-size:16px; color:#076ea8; padding-right:3px; height:20px; line-height:20px;}
+.d7 .left .greatEvent ul li img{ float:left;}
+.d7 .left .greatEvent ul li div{ margin-left:10px; position:relative; float:left; width:445px; height:110px;}
+.d7 .left .greatEvent ul li div h2{  font-size:16px; width:409px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.d7 .left .greatEvent ul li div h2 a{color:#076ea8;}
+.d7 .left .greatEvent ul li div h2 a:hover{color:#ee842f;}
+.d7 .left .greatEvent ul li div p{ font-size:13px; line-height:20px; height:62px; overflow:hidden; width:420px;}
+.d7 .left .greatEvent ul li div a.xq{position:absolute; right:23px; bottom:6px; font-size:13px; color:#8abb4a;}
+.d7 .right .travel{ margin-top:10px;}
+
+.d7 .right .weaPro{ margin-top:10px;}
+
+.d7 .right .weaPro h1{border-top:3px solid #076ea8; height:38px; line-height:28px; padding-left:5px;font-size:18px; color:#076ea8;}
+.d7 .right .weaPro .cen{  }
+.d7 .right .weaPro .cen .l{float:left;width:138px;}
+.d7 .right .weaPro .cen .l img{ }
+.d7 .right .weaPro .cen .l p{ text-overflow:ellipsis; white-space:nowrap; overflow:hidden; margin-top:10px; width:100%}
+.d7 .right .weaPro .cen .r{ width: 160px; float:left; margin-top:-6px;}
+.d7 .right .weaPro .cen .r li{ width:140px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;background:url("http://i.tq121.com.cn/i/weather2014/city/c8.jpg") no-repeat scroll 5px 9px transparent; padding-left:20px; height:30px; line-height:30px; }
+
+.d7 .right .weaSer{ margin-top:10px;}
+.d7 .right .weaSer h1{border-top:3px solid #076ea8;height:30px; padding-left:10px; line-height:28px;font-size:18px; color:#076ea8; background:#e8e8e8;}
+.d7 .right .weaSer div {padding-left:10px;}
+.d7 .right .weaSer div h2{ font-size:14px; color:#2e8abb; height:20px; line-height:16px; margin-top:8px;}
+.d7 .right .weaSer div p{font-size:14px; line-height:19px; width:90%}
+.sevenDay { background: none repeat scroll 0% 0% #FFFFFF; position: relative; width: 680px; }
+#sevenDay{margin-top: 10px;  }
+#sevenDay h1{ font-size:20px; color:#252525; text-indent:5px; border-top:3px solid #076ea8; height:34px; line-height:34px;}
+.sevenDay ul.b1 { display: block; padding: 15px 9px 0px 38px; }
+.sevenDay ul.b1 li { border-top: 1px solid #CCCCCC; height: 59px; border-left: 1px solid #CCCCCC; border-right: 1px solid #CCCCCC; }
+.sevenDay ul.b2 { display: block; left: -5px; position: absolute; top: 5px; width:40px; }
+.sevenDay ul.b2 li { font-size: 14px; height: 60px; text-align:right; color:#575757; }
+.sevenDay ul.b li p { border-top: 1px solid #CCCCCC; height: 1px; left: 57px; position: absolute; top: 0px; width: 583px; }
+.sevenDay ul.f { left: 80px; position: absolute; top: 16px; z-index: 1; }
+.sevenDay ul.f li { float: left; margin-right:60px; position: relative; }
+.sevenDay ul.f li .t { font-size: 16px; height: 64px; left: -12px; position: absolute; text-align: center; top: -56px; width: 50px; }
+.sevenDay ul.f li .n { width: 24px; }
+.sevenDay ul.f li .n .zt { background:url("http://i.tq121.com.cn/i/weather2014/city/z1.png") no-repeat scroll center bottom transparent;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/z1.png");   height:10px; }
+.sevenDay ul.f li .n .zc { background:url("http://i.tq121.com.cn/i/weather2014/city/z3.png") repeat scroll center center transparent; height:0px; }
+.sevenDay ul.f li .n .zb { background:url("http://i.tq121.com.cn/i/weather2014/city/z2.png") no-repeat scroll center top transparent;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/z2.png");   height:10px; }
+.sevenDay ul.f li .b { bottom: -56px; font-size: 16px; left: -11px; position: absolute; text-align: center; width: 50px; }
+.sevenDay ul.c { left: 81px; padding-top: 10px; position: absolute; top: 320px; }
+.sevenDay ul.c li { color: #666666; float: left; text-align: center; width: 80px; }
+.sevenDay ul.c li p { }
+.sevenDay ul.d { left: 50px; position: absolute; top: 380px; }
+.sevenDay ul.d li { float: left; width: 85px; }
+.sevenDay ul.d li .t { border-left: 1px solid #CCCCCC; font-size: 0px; height: 10px; width: 100%; }
+.sevenDay ul.d li .tz { border-right: 1px solid #CCCCCC; }
+.sevenDay ul.d li .c { color: #0b70a9; font-size: 16px; height: 20px; line-height: 20px; margin: 0px auto; text-align: center; width: 50px; }
+.sevenDay ul.d li .end { color:#8abb4a; }
+
+
+#weatherChart { background-color: #f7f7f7; margin-top: 10px; padding-bottom: 5px; width: 680px; }
+#weatherChart .tabs { background-color: #bce9fa; height: 80px; padding-left: 10px; position: relative; }
+#weatherChart .tabs h2 { border-right: 1px solid #ffffff; float: left; font-size: 24px; font-weight: normal; height: 60px; line-height: 30px; margin-right: 10px; padding: 10px 10px 10px 0px; text-align: center; width: 115px; }
+#weatherChart .tabs h2 i { display: block; font-size: 14px; font-style: normal; line-height: 20px; text-align: center; }
+#weatherChart .tabs p { height: 30px; line-height: 30px; padding: 7px 0px 0px; }
+#weatherChart .second { padding-top: 0px; }
+#weatherChart .second i { border-top: 1px dashed #3f3f3f; display: block; font-style: normal; height: 30px; line-height: 30px; margin-left: 125px; width: 260px; }
+#weatherChart .tabs ul { height: 80px; line-height: 33px; position: absolute; right: 0px; top: 0px; width: 264px; }
+#weatherChart .tabs ul li, #history .tabs ul li { border-left: 1px solid #ffffff; color: #ffffff; cursor: pointer; float: left; font-size: 14px; height: 35px; overflow: hidden; padding-top: 45px; text-align: center; width: 65px; }
+#weatherChart .tabs .on, #history .tabs .wd_on { background-color: #f5fcff; color: #076ea8; }
+#weatherChart .wd, #history .wd { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll 0px -120px transparent; }
+#weatherChart .wd_on, #history .wd_on { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll 0px -200px transparent; }
+#weatherChart .sd { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll -65px -120px transparent; }
+#weatherChart .tabs .sd_on { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll -65px -200px transparent; }
+#weatherChart .tabs .js, #history .tabs .js { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll -130px -120px transparent; }
+#weatherChart .tabs .js_on, #history .tabs .js_on { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll -130px -200px transparent; }
+#weatherChart .tabs .fl { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll -195px -120px transparent; }
+#weatherChart .tabs .fl_on { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll -195px -200px transparent; }
+#weatherChart .chart { background-color: #f5fcff; width: 670px; }
+#weatherChart .chart #hourHolder { height: 300px; padding: 10px 0px; position: relative; width: 680px; }
+#hourHolder .xLabel { bottom: 5px; height: 35px; left: 36px; line-height: 35px; position: absolute; }
+#hourHolder .xLabel span { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll 1px -285px transparent; display: block; float: left; font-size: 12px; height: 40px; text-align: center; width: 25px; }
+#hourHolder .yLabel { height: 280px; left: 2px; position: absolute; top: 11px; width: 40px; }
+#hourHolder .yLabel span { display: block; font-size: 12px; height: 40px; line-height: 28px; text-align: right; width: 30px; }
+#hourHolder .result { color: #ee842f; display: none; font-weight: bold; left: 40%; position: absolute; top: 60%; }
+#hourHolder .showData { background-color: #076ea8; color: #ffffff; display: none; left: 40%; padding: 0px 5px; position: absolute; top: 60%; }
+#hourHolder .data { background-color: #076ea8; color: #ffffff; height: 24px; line-height: 24px; position: absolute; text-align: center; width: 50px; }
+#hourHolder .date { background-color: #076ea8; color: #ffffff; height: 24px; line-height: 24px; position: absolute; text-align: center; width: 150px; }
+#weatherChart .chart .humidity, #weatherChart .chart .temperature, #weatherChart .chart .rain, #weatherChart .chart .wind { display: none; }
+#weatherChart .chart .detail { position:relative; display: block; font-size: 12px; height: 60px; line-height: 60px; padding: 0px 10px; text-align: right; width: 660px; }
+#weatherChart .chart .detail img{ position:absolute; top:10px; left:20px;}
+#weatherChart .chart .detail a {  color: #076ea8; }
+.left .around { margin-top: 10px; _margin-left:-10px; }
+.left .around h1 { border-top: 3px solid #076ea8; height: 34px; line-height: 34px; }
+.left .around h1 span { float: left; color:#252525; font-size: 20px; margin-left: 5px; _margin-left:15px; }
+.left .around h1 i { color: #848484; float: right; font-size: 14px; height: 30px; margin-right: 12px; margin-top: 4px; }
+.left .around ul { margin-left: -10px; }
+.left .around ul li { font-size:16px; border: 1px solid #6bb0d9; cursor: pointer; float: left; height: 53px; line-height: 53px; margin-left: 10px; margin-top: 7px; width: 333px; }
+.left .around ul li span { margin-left: 21px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 150px; _width:130px; float:left; }
+.left .around ul li .img { float:left; _margin-top:14px; }
+.left .around ul li em { color: #6bb0d9; margin-left: -3px; margin-right: -3px; }
+.left .around ul li i { margin-left: 7px; }
+.left .around ul li.hover { background: none repeat scroll 0% 0% #8abb4a; border: 1px solid #8abb4a; color: #ffffff; }
+.left .around ul li.hover em, .left .around ul li.hover a { color: #ffffff; }
+.left .around ul li.hover a:hover { text-decoration: underline; }
+.right { margin-left: 20px; width: 300px; _ margin-left: 15px; }
+.right .shar { margin-top: 8px; text-align: right; }
+.right .shar a { display: inline-block; height: 23px; width: 18px; }
+.right .shar .a1 { background: url("http://i.tq121.com.cn/i/weather2014/city/w1.jpg") no-repeat scroll -4px 4px transparent; width: 22px; }
+.right .shar .a2 { background: url("http://i.tq121.com.cn/i/weather2014/city/w2.jpg") no-repeat scroll -2px 5px transparent; width: 16px; }
+.right .shar .a3 { background: url("http://i.tq121.com.cn/i/weather2014/city/w3.jpg") no-repeat scroll -3px 5px transparent; }
+.right .pic { margin-top: 3px; }
+.right .pic h1 { border-top: 3px solid #076ea8; color: #076ea8; font-size: 18px; height: 38px; line-height: 28px; text-indent: 10px; }
+#scrollPic { height: 227px; overflow: hidden; position: relative; width: 300px;}
+#scrollPic ul.bigImg { width: 1200px; position:absolute;}
+#scrollPic ul.bigImg li { float: left; }
+#scrollPic ul.botIcon { left: 0; position: absolute; top: 170px; width: 110px; }
+#scrollPic ul.botIcon li { cursor:pointer; background:url(http://i.tq121.com.cn/i/weather2014/city/bot1.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot1.png"); float: left; margin-right: 5px;   width: 20px;height: 4px;  font:0; }
+#scrollPic ul.botIcon li.on { background:url(http://i.tq121.com.cn/i/weather2014/city/bot2.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot2.png"); }
+#scrollPic p, #scrollPic .bottomBg { bottom: 0px; height: 30px; left: 0px; line-height: 30px; position: absolute; width: 100%; }
+#scrollPic p { color: #ffffff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1; }
+#scrollPic .bottomBg { background: none repeat scroll 0% 0% #000000; opacity: 0.6; filter:alpha(opacity=60);}
+#scrollPic .rollLeft, #scrollPic .rollRight { background-position: 5px 6px;background-repeat: no-repeat; cursor: pointer; height: 40px; position: absolute; top: 89px; width: 30px; opacity:0.6; filter:alpha(opacity=60); }
+#scrollPic .rollLeft { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollL.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollL.png");  left: 20px; }
+#scrollPic .rollRight { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollR.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollR.png");  right: 20px; }
+.scrollPic { height: 227px; overflow: hidden; position: relative; width: 300px;}
+.scrollPic ul.bigImg { width: 1200px; position:absolute;}
+.scrollPic ul.bigImg li { float: left; }
+.scrollPic ul.botIcon { left: 0; position: absolute; top: 170px; width: 110px; }
+.scrollPic ul.botIcon li { cursor:pointer; background:url(http://i.tq121.com.cn/i/weather2014/city/bot1.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot1.png"); float: left; margin-right: 5px;   width: 20px;height: 4px;  font:0; }
+.scrollPic ul.botIcon li.on { background:url(http://i.tq121.com.cn/i/weather2014/city/bot2.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot2.png"); }
+.scrollPic p, .scrollPic .bottomBg { bottom: 0px; height: 30px; left: 0px; line-height: 30px; position: absolute; width: 100%; }
+.scrollPic p { color: #ffffff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1; }
+.scrollPic .bottomBg { background: none repeat scroll 0% 0% #000000; opacity: 0.6; filter:alpha(opacity=60);}
+.scrollPic .rollLeft, .scrollPic .rollRight { background-position: 5px 6px;background-repeat: no-repeat; cursor: pointer; height: 40px; position: absolute; top: 89px; width: 30px; opacity:0.6; filter:alpha(opacity=60); }
+.scrollPic .rollLeft { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollL.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollL.png");  left: 20px; }
+.scrollPic .rollRight { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollR.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollR.png");  right: 20px; }
+.right .list { margin-top: 4px; padding-left: 8px; }
+.right .list li { background: url("http://i.tq121.com.cn/i/weather2014/city/c8.jpg") no-repeat scroll -1px 12px transparent; height: 30px; line-height: 30px; padding-left: 15px; }
+.right .list li a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 280px; }
+.right .list li a:hover { color: #076ea8; }
+.right .chartPH { margin-top: 10px; }
+.right .chartPH h1 { background: none repeat scroll 0% 0% #076ea8; color: #ffffff; height: 37px; line-height: 37px; padding: 0px 10px; }
+.right .chartPH h1 span { float: left; font-size: 18px; }
+.right .chartPH h1 i { cursor: pointer; float: right; font-size: 12px; height: 32px; line-height: 32px; margin-top: 5px; padding: 0px 10px; }
+.right .chartPH h1 i.on { background: none repeat scroll 0% 0% #e6e6e6; color: #007bb9; }
+.right .chartPH ul { background: none repeat scroll 0px 0px #eeeeee; padding-bottom: 10px; padding-top: 6px; }
+.right .chartPH #video { display: none; }
+.right .chartPH ul li { height: 34px; line-height: 34px; }
+.right .chartPH ul li:after { clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
+.right .chartPH ul li i { background: none repeat scroll 0px 0px #ffffff; float: left; height: 20px; line-height: 20px; margin-left: 12px; margin-top: 7px; text-align: center; width: 20px; }
+.right .chartPH ul li a { color: #252525; float: left; margin-left: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 240px; }
+.right .chartPH ul li.hover { background: none repeat scroll 0% 0% #ffffff; }
+.right .chartPH ul li.hover i { background: none repeat scroll 0% 0% #076ea8; color: #ffffff; }
+.right .chartPH ul li.hover a { color: #076ea8; }
+
+
+
+.rank{ background: none repeat scroll 0% 0% #eeeeee; border-top: 3px solid #076ea8; margin-top: 10px; }
+.rank .tabs{color: #076ea8; font-size: 18px; height: 30px; line-height: 30px; padding-left: 8px;}
+
+.rank .rankItems{ margin-top: 10px; }
+.rank .rankItems ul{padding-left:10px;}
+.rank .rankItems ul li{height:35px;line-height:35px;}
+.rank .rankItems ul li span{display:block;float:left;height:35px;overflow:hidden;}
+.rank .rankItems ul li span.num{width:30px;}
+.rank .rankItems ul li span.num b{padding:0px 5px;background-color:#076ea8;color:#fff;font-weight:normal;}
+.rank .rankItems ul li span.city{width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.rank .rankItems ul li span.city a{color:#076ea8;}
+.rank .rankItems ul li span.tempImg{width:70px;}
+.rank .rankItems ul li span.tempWord{width:75px; padding-right:15px;color:#666666;text-align:right;}
+.rank .rankItems .legend{display:block;width:35px;height:35px;float:left;background-image:url(http://i.tq121.com.cn/i/weatherfc/legend35X35.gif);background-repeat:no-repeat;}
+.rank .rankItems .d00{background-position:0px 0px;}
+.rank .rankItems .d01{background-position:-35px 0px;}
+.rank .rankItems .d02{background-position:-70px 0px;}
+.rank .rankItems .d03{background-position:-105px 0px;}
+.rank .rankItems .d04{background-position:-140px 0px;}
+.rank .rankItems .d05{background-position:-175px 0px;}
+.rank .rankItems .d06{background-position:-210px 0px;}
+.rank .rankItems .d07{background-position:-245px 0px;}
+.rank .rankItems .d08{background-position:-280px 0px;}
+.rank .rankItems .d09{background-position:0px -35px;}
+.rank .rankItems .d10{background-position:-35px -35px;}
+.rank .rankItems .d11{background-position:-70px -35px;}
+.rank .rankItems .d12{background-position:-105px -35px;}
+.rank .rankItems .d13{background-position:-140px -35px;}
+.rank .rankItems .d14{background-position:-175px -35px;}
+.rank .rankItems .d15{background-position:-210px -35px;}
+.rank .rankItems .d16{background-position:-245px -35px;}
+.rank .rankItems .d17{background-position:-280px -35px;}
+.rank .rankItems .d18{background-position:0px -70px;}
+.rank .rankItems .d19{background-position:-35px -70px;}
+.rank .rankItems .d20{background-position:-70px -70px;}
+.rank .rankItems .d21{background-position:-105px -70px;}
+.rank .rankItems .d22{background-position:-140px -70px;}
+.rank .rankItems .d23{background-position:-175px -70px;}
+.rank .rankItems .d24{background-position:-210px -70px;}
+.rank .rankItems .d25{background-position:-245px -70px;}
+.rank .rankItems .d26{background-position:-280px -70px;}
+.rank .rankItems .d27{background-position:0px -105px;}
+.rank .rankItems .d28{background-position:-35px -105px;}
+.rank .rankItems .d29{background-position:-70px -105px;}
+.rank .rankItems .d30{background-position:-105px -105px;}
+.rank .rankItems .d31{background-position:-140px -105px;}
+.rank .rankItems .d53{background-position:-175px -105px;}
+.rank .rankItems .n00{background-position:0px -140px;}
+.rank .rankItems .n01{background-position:-35px -140px;}
+.rank .rankItems .n02{background-position:-70px -140px;}
+.rank .rankItems .n03{background-position:-105px -140px;}
+.rank .rankItems .n04{background-position:-140px -140px;}
+.rank .rankItems .n05{background-position:-175px -140px;}
+.rank .rankItems .n06{background-position:-210px -140px;}
+.rank .rankItems .n07{background-position:-245px -140px;}
+.rank .rankItems .n08{background-position:-280px -140px;}
+.rank .rankItems .n09{background-position:0px -175px;}
+.rank .rankItems .n10{background-position:-35px -175px;}
+.rank .rankItems .n11{background-position:-70px -175px;}
+.rank .rankItems .n12{background-position:-105px -175px;}
+.rank .rankItems .n13{background-position:-140px -175px;}
+.rank .rankItems .n14{background-position:-175px -175px;}
+.rank .rankItems .n15{background-position:-210px -175px;}
+.rank .rankItems .n16{background-position:-245px -175px;}
+.rank .rankItems .n17{background-position:-280px -175px;}
+.rank .rankItems .n18{background-position:0px -210px;}
+.rank .rankItems .n19{background-position:-35px -210px;}
+.rank .rankItems .n20{background-position:-70px -210px;}
+.rank .rankItems .n21{background-position:-105px -210px;}
+.rank .rankItems .n22{background-position:-140px -210px;}
+.rank .rankItems .n23{background-position:-175px -210px;}
+.rank .rankItems .n24{background-position:-210px -210px;}
+.rank .rankItems .n25{background-position:-245px -210px;}
+.rank .rankItems .n26{background-position:-280px -210px;}
+.rank .rankItems .n27{background-position:0px -245px;}
+.rank .rankItems .n28{background-position:-35px -245px;}
+.rank .rankItems .n29{background-position:-70px -245px;}
+.rank .rankItems .n30{background-position:-105px -245px;}
+.rank .rankItems .n31{background-position:-140px -245px;}
+.rank .rankItems .n53{background-position:-175px -245px;}
+
+
+.rank .kqzl ul li{height:34px;line-height:34px;border-bottom:1px solid #d9d9d9;}
+.rank p{border-top: 1px solid #dadada; color: #888888; font-size: 12px; height: 26px; line-height: 26px; margin: 18px 10px 0px; padding-right: 8px; text-align: right;}
+
+
+
+#todayliving { border-top: 3px solid #6bb0d9; margin-top: 10px; width: 680px; }
+#todayliving .title { height: 36px; line-height: 36px; padding-top: 2px; position: relative; }
+#todayliving .title i { background: url("http://i.tq121.com.cn/i/weather2014/city/c9.jpg") no-repeat scroll 0% 0% transparent; display: block; height: 9px; left: 548px; position: absolute; top: 0px; width: 19px; }
+#todayliving .title h1 { float: left; font-size: 20px; text-indent: 10px; }
+#todayliving .title h2 { float: right; width: 170px; }
+#todayliving .title h2 span { cursor: pointer; font-size: 16px; padding-left: 16px; }
+#todayliving .title h2 span.on { color: #076ea8; }
+.d7 #todayliving .detail aside { display:none;}
+.tabContent .zs { overflow: hidden; width: 680px; }
+.zs ul { width: 680px; }
+.zs ul li { background-color: #076ea8; color: #ffffff; float: left; height: 120px; margin: 5px 2px 0px 3px;_ margin: 5px 2px 0px 2px; overflow: hidden; position: relative; width: 221px; }
+.zs ul li .notice { background: url("http://i.tq121.com.cn/i/weatherfc/city_icons.png") no-repeat scroll right top transparent; display: block; height: 50px; position: absolute; right: 0px; top: 0px; width: 50px; }
+.zs .mask { height: 120px; overflow: hidden; position: relative; width: 220px; }
+.zs .area { height: 240px; left: 0px; overflow: hidden; position: absolute; top: 0px; width: 220px; }
+.zs .imgArea { height: 120px; overflow: hidden; width: 220px; }
+.zs .imgArea img { overflow: hidden; width: 220px; }
+.zs .detail { height: 110px; padding: 14px 0px 0px 10px; width: 200px; }
+.zs .detail a { background: url("http://i.tq121.com.cn/i/weatherfc/zs_icon.gif") no-repeat scroll 0% 0% transparent; display: block; height: 63px; overflow: hidden; width: 54px; }
+.ag .detail a { background-position: -11px -6px; }
+.yd .detail a { background-position: -11px -235px; }
+.xc .detail a { background-position: -11px -380px; }
+.pp .detail a { background-position: -11px -608px; height: 74px; }
+.gm .detail a { background-position: -11px -82px; }
+.uv .detail a { background-position: -11px -154px; }
+.tr .detail a { background-position: -11px -1070px; }
+.pl .detail a { background-position: -11px -310px; }
+.ct .detail a { background-position: -11px -538px; }
+.gj .detail a { background-position: -11px -462px; }
+.co .detail a { background-position: -11px -690px; }
+.mf .detail a { background-position: -11px -766px; }
+.ys .detail a { background-position: -11px -845px; }
+.jt .detail a { background-position: -11px -918px; }
+.lk .detail a { background-position: -11px -995px; }
+.cl .detail a { background-position: -3px -1140px; height: 74px; width: 67px; }
+.dy .detail a { background-position: -11px -1222px; }
+.hc .detail a { background-position: -7px -1301px; height: 55px; width: 63px; }
+.Yh .detail a { background-position: -7px -1374px; width: 61px; }
+.ls .detail a { background-position: -7px -1448px; height: 68px; width: 61px; }
+.zs .zs .detail a { background-position: -11px -1526px; width: 55px; }
+.ac .detail a { background-position: -8px -1602px; width: 62px; }
+.xq .detail a { background-position: -6px -1678px; width: 62px; }
+.pj .detail a { background-position: -11px -1754px; }
+.be .detail a { background-position: -11px -1830px; }
+.pk .detail a { background-position: -9px -1907px; width: 58px; }
+.nl .detail a { background-position: -11px -1982px; height: 64px; }
+.fs .detail a { background-position: -11px -2058px; }
+.sg .detail a { background-position: -11px -2136px; }
+.gz .detail a { background-position: -11px -2208px; }
+.zs .imgArea a { background: url("http://i.tq121.com.cn/i/weatherfc/zs_img.jpg") no-repeat scroll 0% 0% transparent; display: block; height: 80px; overflow: hidden; width: 223px; }
+.ag .imgArea a { background-position: 0px 0px; }
+.yd .imgArea a { background-position: 0px -80px; }
+.xc .imgArea a { background-position: 0px -160px; }
+.pp .imgArea a { background-position: 0px -240px; }
+.gm .imgArea a { background-position: 0px -320px; }
+.uv .imgArea a { background-position: 0px -400px; }
+.tr .imgArea a { background-position: 0px -480px; }
+.pl .imgArea a { background-position: 0px -560px; }
+.ct .imgArea a { background-position: 0px -640px; }
+.gj .imgArea a { background-position: 0px -720px; }
+.co .imgArea a { background-position: -220px 0px; }
+.mf .imgArea a { background-position: -220px -80px; }
+.ys .imgArea a { background-position: -220px -160px; }
+.jt .imgArea a { background-position: -220px -240px; }
+.lk .imgArea a { background-position: -220px -320px; }
+.cl .imgArea a { background-position: -220px -400px; }
+.dy .imgArea a { background-position: -220px -480px; }
+.hc .imgArea a { background-position: -220px -560px; }
+.Yh .imgArea a { background-position: -220px -640px; }
+.ls .imgArea a { background-position: -220px -720px; }
+.zs .detail aside { float: right; line-height: 20px; width: 120px; }
+.zs .detail aside b { color: #ffffff; display: block; font-size: 24px; line-height: 30px; }
+.zs ul li h3 { border-top: 0px none; font-size: 14px; font-weight: normal; height: 25px; left: 0px; line-height: 16px; padding-left: 5px; position: absolute; text-align: center; top: 85px; width: 70px; }
+.zs ul li h3 a { color: #ffffff; }
+
+#aboutZS {
+	width:650px;
+	overflow:hidden;
+	margin-bottom:0px;
+	font: 14px/1.6 "Microsoft Yahei", "Tahoma", "SimSun";
+	color:#3f3f3f;
+	float:left;
+	height:auto;
+}
+.zs {
+	width:660px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.zs ul {
+	width:675px;
+}
+.zs ul li {
+	width:210px;
+	height:120px;
+	overflow:hidden;
+	margin:0px 10px 10px 0px;
+	float:left;
+	background-color:#076ea8;
+	color:#fff;
+	position:relative;
+}
+.zs ul li .xsm {
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/xsm.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/xsm.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .qlx{
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/qlx.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/qlx.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .ytw {
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/ytw.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/ytw.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .sl {
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(/m2/i/zs/sl.png) no-repeat right top;
+         _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/m2/i/zs/sl.png');
+	_background-image:none;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.zs ul li .mask {
+	width:210px;
+	height:120px;
+	overflow:hidden;
+	position:relative;
+}
+.zs ul li .area {
+	width:210px;
+	height:240px;
+	overflow:hidden;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.zs ul li .imgArea {
+	width:210px;
+	height:120px;
+	overflow:hidden;
+}
+.zs ul li .imgArea img {
+	width:210px;
+	height:80px;
+	overflow:hidden;
+	border:0;
+}
+.zs ul li .detail {
+	padding:14px 0px 0px 10px;
+	width:200px;
+	height:110px;
+}
+.zs ul li .detail aside {
+	width:120px;
+	padding-right:10px;
+	float:right;
+	line-height:18px;
+	font-size:12px;
+	font:12px/1.6 "Microsoft Yahei", "Tahoma", "SimSun";
+}
+.zs ul li .detail aside b {
+	font-size:24px;
+	color:#fff;
+	display:block;
+	line-height:30px;
+	font-weight:bold;
+}
+.zs ul li .detail a img {
+	border:none;
+}
+.zs ul li h3 {
+	border-top:0px;
+	height:auto;
+	line-height:16px;
+	font-size:14px;
+	font-weight:normal;
+	padding-left:8px;
+	position:absolute;
+	left:0px;
+	top:85px;
+	text-align:left;
+	width:130px;
+}
+.zs ul li h3 a {
+	color:#fff;
+}
+.zs ul li h3 a b {
+	font-weight:bold;
+}
+.weatheH1 span a.ckqbs {
+	/*background-color: #EFEEFE;
+	border: 1px solid #99B0DA;
+	color: #3366BB;
+	display: inline;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 1px;
+	margin-top: 2px;
+	padding: 4px 5px;*/
+}
+.weatheH1 span a.ckqbs:hover {
+	color:#f60;
+	text-decoration:none;
+}

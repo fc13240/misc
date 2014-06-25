@@ -1154,3 +1154,12 @@ width:16px; height:4px }
 	height:45px;
 	line-height:45px;
 	border-bottom:1px dashed #d4d4d5;}
+	
+.myZS ul li span img {
+  position:relative;
+  top:8px;
+}
+.myZS ul li span
+{
+	padding:0px 5px;
+	float:left;}

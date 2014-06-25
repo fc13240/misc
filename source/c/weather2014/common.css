@@ -4,6 +4,7 @@
 	width:1000px;
 	position:relative
 }
+.box{width:1000px;margin:0 auto;}
 #toolBar{height:30px;background-color:#03192e;font-size:12px;min-width:1000px;}
 .midBlock{width:1000px;margin:0 auto;}
 #toolBar .midBlock{height:30px;line-height:30px;position:relative;color:#fff;}
@@ -14,7 +15,7 @@
 #toolBar b i{border-top:6px solid #adadad;border-right:6px dashed transparent;border-bottom:6px dashed transparent;border-left:6px dashed transparent;display:block;width:0px;height:0px;overflow:hidden;position:absolute;right:0px;top:20px;}
 .links{display:block;height:30px;line-height:30px;position:absolute;right:0px;top:0px;}
 .links a{color:#fff;display:block;height:30px;line-height:30px;float:left;padding:0px 10px; overflow:hidden;}
-.links #setIndex,.links #eg{border-right:1px solid #275885;}
+.links #setIndex,.links #eg{border-right:0px solid #275885;}
 #provice{background-color:#ebebeb;color:#252525;width:74px;position:relative; padding:0; text-indent:12px;}
 #provice .icon{display:block;width:40px;height:43px;position:absolute;left:10px;top:0px;}
 #provice .arrow{position:absolute;right:9px;top:14px;}
@@ -30,23 +31,24 @@
 .footer dl dd p,.friendLink p{line-height:25px;}
 .footer dl p a,.friendLink p a{padding-right:10px;color:#959595;}
 .footer dl p a:hover,.friendLink p a:hover{color:#ee842f;}
-.friendLink{width:358px;position:absolute;right:0px;top:20px;padding:15px 15px 13px 15px;}
+.friendLink{width:358px;position:absolute;right:80px;top:20px;padding:15px 15px 13px 15px;}
 .friendLink h3{padding-bottom:5px;}
 .footer .last{border-top:1px solid #ebebeb;margin-top:5px;padding-top:5px;}
-.serviceinfo{padding:20px 0px;font-size:12px;line-height:20px;}
+.serviceinfo{ border-top:1px dashed #d5d4d4;padding:20px 0 20px 67px;font-size:12px;line-height:20px;}
 .serviceinfo p{height:20px;}
-.serviceinfo p span{display:block;width:265px;float:left;}
+.serviceinfo p span{display:block;width:294px;float:left;}
 .serviceinfo a,.serviceinfo b{color:#076ea8;font-weight:normal;}
 .serviceinfo b{color: #252525;}
 .aboutUs{background-color:#7d7d7d;color:#fff;height:45px;line-height:45px;text-align:center;font-size:12px;min-width:1000px;}
-.provinceLinks{position:absolute;z-index:100;top:43px;left:0px;width:100%;height:175px;background-color:#ebebeb;display:none;}
+.provinceLinks{position:absolute;z-index:100;top:30px;left:0px;width:100%;height:175px;background-color:#ebebeb;display:none;}
 .provinceLinks dl{float:left;padding:10px 0px;}
-.provinceLinks dl dt{width:46px;height:40px;background:url(../i/index_icons.png) no-repeat 0px -43px;font-size:16px;line-height:20px;padding:13px 10px;text-align:center;float:left;margin-right:4px;}
+.provinceLinks dl dt{width:46px;height:40px;background:url(../../i/index_icons.png) no-repeat 0px -43px;font-size:16px;line-height:20px;padding:13px 10px;text-align:center;float:left;margin-right:4px;}
 .provinceLinks dl .last{padding:13px 5px;width:56px;}
 .provinceLinks a{color:#076ea8;}
 .provinceLinks a:hover{color:#ee842f;}
 .provinceLinks dl dd{font-size:16px;float:left;padding:5px 0px;height:56px;line-height:28px;}
 .provinceLinks dl dd a{padding:0px 19px;}
+.provinceLinks .midBlock dl dt a{color:#fff; font-weight: bold;}
 .provinceLinks .line{border-bottom:1px solid #d7d7d7;height:0px;overflow:hidden;float:left;width:1000px;}
 .app{position:absolute;z-index:100;width:120px;height:70px;top:35px;left:50%;margin-left:-280px;display:none;}
 .app i{display:block;width:120px;height:70px;background-color:#fff;opacity:0.95;filter:alpha(opacity=95);position:absolute;left:0px;top:0px;}
@@ -994,3 +996,22 @@ img.lazy{
 .localPopup span a{color: #fff;}
 .localPopup span a:hover{text-decoration: underline;}
 .localPopup i a{display: block;height: 22px;width: 25px;background: none;position: absolute;left: 3px;top: 11px;cursor:pointer;}
+/*liu groll picture*/
+.pic { margin-top: 3px; }
+.pic h1 { border-top: 3px solid #076ea8; color: #076ea8; font-size: 18px; height: 38px; line-height: 28px; text-indent: 10px; }
+#scrollPic { height: 227px; overflow: hidden; position: relative; width: 300px;}
+#scrollPic ul.bigImg { width: 1200px; position:absolute;}
+#scrollPic ul.bigImg li { float: left; }
+#scrollPic ul.botIcon { left: 0; position: absolute; top: 170px; width: 110px; }
+#scrollPic ul.botIcon li { cursor:pointer; background:url(http://i.tq121.com.cn/i/weather2014/city/bot1.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot1.png"); float: left; margin-right: 5px;   width: 20px;height: 4px;  font:0; }
+#scrollPic ul.botIcon li.on { background:url(http://i.tq121.com.cn/i/weather2014/city/bot2.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/bot2.png"); }
+#scrollPic p, #scrollPic .bottomBg { bottom: 0px; height: 30px; left: 0px; line-height: 30px; position: absolute; width: 100%; }
+#scrollPic p { color: #ffffff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1; }
+#scrollPic .bottomBg { background: none repeat scroll 0% 0% #000000; opacity: 0.6; filter:alpha(opacity=60);}
+#scrollPic .rollLeft, #scrollPic .rollRight { background-position: 5px 6px;background-repeat: no-repeat; cursor: pointer; height: 40px; position: absolute; top: 89px; width: 30px; opacity:0.6; filter:alpha(opacity=60); }
+#scrollPic .rollLeft { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollL.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollL.png");  left: 20px; }
+#scrollPic .rollRight { background-image: url("http://i.tq121.com.cn/i/weather2014/city/rollR.png");_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://i.tq121.com.cn/i/weather2014/city/rollR.png");  right: 20px; }
+
+.topNav { background:none repeat scroll 0 0 #076ea8; height:40px; line-height:40px; margin-top:10px }
+.topNav span { color:#6bb0d9; float:left; font-size:28px; line-height:35px }
+.topNav a { display:inline; color:#fff; float:left; font-size:16px; width:118px; overflow:hidden; text-align:center; background:#076ea8; }
