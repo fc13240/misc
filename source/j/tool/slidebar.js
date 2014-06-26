@@ -5,7 +5,7 @@ define(function(require){
 
 	var html = '<div class="icons">'+
 					'<ul class="citylist">'+
-						'<li class="addCity"><a href="http://www1.weather.com.cn/profile/city.shtml" style="display:block;" _hover-ignore="1" _orighref="http://www1.weather.com.cn/profile/city.shtml" _tkworked="true"><strong>+</strong>定制城市</a></li>'+
+						'<li class="addCity"><a href="/profile/city.shtml" style="display:block;" _hover-ignore="1" _orighref="/profile/city.shtml" _tkworked="true"><strong>+</strong>定制城市</a></li>'+
 					'</ul>'+
 				'</div>';
 	var REG_IMG = /([a-z])(\d+)/;
