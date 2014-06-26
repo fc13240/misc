@@ -225,11 +225,11 @@ img{border:0}
 .rslides_nav:active{opacity:1.0}
 .rslides_nav.next{left:auto;background-position:-31px -560px;right:0;background:url(/i/photo/you_da.png) no-repeat;}
 
-.rslides1_tabs{bottom: 0;clear: both;padding:8px 0;margin: 0;position: absolute; width: 100%;  display:inline;background-image:url(/i/photo/tou_min.png);background-repeat:repeat;}
+.rslides1_tabs{bottom: 0;clear: both;padding:8px 0;margin: 0;position: absolute; width: 100%;  display:inline;}
 .rslides_tabs li{display:inline;float:none;_float:left;*float:left;margin-right:15px;}
 .rslides_tabs a{text-indent:-9999px;overflow:hidden;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;background:rgba(0,0,0, .2);background:#DDD;display:inline-block;_display:block;*display:block;width:20px;height:20px;background:url(/i/photo/hei_dian.png) no-repeat;}
 .rslides_tabs .rslides_here a{background:rgba(0,0,0, .6);background:url(/i/photo/bai_dian.png) no-repeat;}
-.rslides_tabs{text-align: left;top: 520px;}
+.rslides_tabs{text-align: left;top: 460px;}
 /*
 .f426x240{width:426px;height:240px;overflow:hidden}
 .f426x240 img{width:426px;height:240px}
@@ -288,3 +288,18 @@ img{border:0}
 .you2 p{ background-color:#d6e3f3; height:20px; margin-bottom:10px; margin-top:5px;}
 .you1 .wz{ height:258px; color:#929196;}
 .you2 h1{ position:relative; left:-12px;}
+.oi .focus ul li span{
+    background-image:url(/i/photo/tou_min.png);background-repeat:repeat;
+	background-repeat:repeat;
+    bottom: 0;
+    color: #e8e8e8;
+    display: block;
+    font-size: 24px;
+    height: 60px;
+    left: 0;
+    line-height: 60px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 11;
+}
