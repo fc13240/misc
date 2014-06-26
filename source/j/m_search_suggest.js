@@ -159,8 +159,12 @@
 			var maxnum = options.maxnum;
 			var suggestList = options.textBox.data(DATA_LIST_NAME);
 			var $temp = $();
+			var regnew =  /^[1-9]\d{10}A/;
 			if(data.length > 0){
 				data.sort(function(a,b){
+					if(regnew.ref.localeCompare(b.ref)){
+                     return;
+					}
 					return a.ref.localeCompare(b.ref);
 				});
 				$(data).each(function(i,item){
@@ -198,7 +202,7 @@
 					content = content.join('-').replace(tempReg,function(match){
 						return '<b>'+match+'</b>';
 					});
-					$temp = $temp.add($('<li class=js>').data('d',arr).html(content));
+					$temp = $temp.add($('<li>').data('d',arr).html(content));
 				});
 			}else{
 				$temp = $temp.add($('<b class="no-data">'+noDataNotice+'</b>'));
