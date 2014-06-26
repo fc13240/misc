@@ -12,7 +12,7 @@ background:#FFF;
 color:#333; 
 font:12px/1.5em Helvetica, Arial, sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-size:1em; }
-a { /*color:#2B93D2;*/ text-decoration:none; }
+a { text-decoration:none; }
 a:hover { color:#E31E1C; text-decoration:underline; }
 ul, li { list-style:none; }
 fieldset, img { border:none; }
