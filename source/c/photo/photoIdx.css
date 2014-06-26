@@ -114,7 +114,7 @@ background:url(../images/20081221041748583.gif) no-repeat; }
 .xc5{ margin-left:15px; margin-right:15px;}
 .yiZhouReiTuPiaHang{   float:right; width:300px; }
 .yiZhouReiTuPiaHang div a { text-decoration:none; display:block;  width:220px; margin-left:30px; border-bottom: 1px dashed #cedaea; overflow:hidden; position:relative;height:40px}
-.yiZhouReiTuPiaHang div a span{ display:inline; width:300px;font-size:12px;   color:#656565; position:absolute;font-style: normal;}
+.yiZhouReiTuPiaHang div a span{ display:inline; width:300px;font-size:12px;   color:#656565; position:absolute;font-style: normal; cursor:pointer;}
 .yiZhouReiTuPiaHang div a:hover{ color:#ff8a02;}
 .yiZhouReiTuPiaHang div .addclass{ color:#ff8a02;}
 .yiZhouReiTuPiaHang div{ position:relative; line-height:40px; width:250px; margin:0 auto;}
