@@ -70,15 +70,23 @@ $(document).ready(function() {
 
 	function Nextpic() {
 		tab = $(".lqPicListtu1 ul li").index($(".lqPicListtu1 ul li.move"));
-		if (tab == $(".lqPicListtu1 ul li").length - 1) {
+		if (tab == $(".lqPicListtu1 ul li").length - 2) {
 			$(".pic_transition").show().siblings(".xian").hide();
+			delayURL("http://www.baidu.com");
 			$("#tqtad").attr('src', 'http://www.weather.com.cn/m2/i/index/tqtad.jpg');
 			return false;
 		} else {
 			if ($("#lq_BigPic > img:animated").length <= 0) {
 
 				$("#lq_BigPic > img").fadeOut("slow", function() {
+					
+					
 					$("#lq_BigPic > img").attr("src", $(".lqPicListtu1 ul li").eq(tab + 1).find("a").attr("href"));
+					
+					
+					
+					
+					
 					$("#lqendSelect").hide();
 					//$("#lq_BigPic > img").fadeIn("slow");
 				});
@@ -203,6 +211,7 @@ $(document).ready(function() {
 	});
 	/*重新播放*/
 	$("#lqPlayBut").click(function() {
+		clearInterval(clearURL);
 		$(".pic_transition").hide();
 		$(".xian").show();
 		$(".picchra h2").html($(".lqPicListtu1 ul li").eq(0).find("a").attr("title"));
@@ -252,3 +261,27 @@ function download() {
 	$src = $("#lq_BigPic > img").attr("src");
 	$("#downloadFrame").attr("src", "http://search.weather.com.cn/static/download.php?filename=" + $src);
 }
+
+
+function delayURL(url) {
+		var delay = document.getElementById("times").innerHTML;
+		if(delay > 0) {
+			delay--;
+			document.getElementById("times").innerHTML = delay;
+		} else {
+			window.top.location.href = url;
+		}
+		setTimeout("delayURL('" + url + "')", 1000);
+	}
+	
+	
+function clearURL(url) {
+		var delay = document.getElementById("times").innerHTML;
+		if(delay > 0) {
+			delay--;
+			document.getElementById("times").innerHTML = delay;
+		} else {
+			window.top.location.href = url;
+		}
+		clearInterval("delayURL('" + url + "')", 1000);
+	}
