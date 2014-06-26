@@ -9,6 +9,8 @@
 			,'cbName': 'callback' //回调函数名
 			,'onSelect': function(){} //建议项选中的回调函数
 			,'maxnum': 12		//最大条数
+			,'isShowForeign': true
+			,'isShowScenic': true
 		};
 		var searchNotice = "输入城市名、全拼、简拼、电话区号、邮编查询";
 		var noDataNotice = "对不起，未找到您查询的城市天气!";
@@ -144,6 +146,8 @@
 			},1500);
 		}
 		var REG_LETTER = /^\w+$/;
+		var REG_SCENIC = /^101\d{8}A/;
+		var REG_CHINA = /^101/
 		/*渲染数据*/
 		suggestProp.render = function(data,key){
 			var _this = this;
@@ -160,6 +164,27 @@
 			var suggestList = options.textBox.data(DATA_LIST_NAME);
 			var $temp = $();
 			if(data.length > 0){
+				var tempData = [];
+				var isShowForeign = options.isShowForeign;
+				var isShowScenic = options.isShowScenic;
+				$(data).each(function(i,item){
+					var str = item.ref;
+					var isDelete = false;
+					if(!isShowForeign){
+						if(!REG_CHINA.test(str)){
+							isDelete = true;
+						}
+					}
+					if(!isShowScenic){
+						if(REG_SCENIC.test(str)){
+							isDelete = true;
+						}
+					}
+					if(!isDelete){
+						tempData.push(item);
+					}
+				});
+				data = tempData;
 				data.sort(function(a,b){
 					return a.ref.localeCompare(b.ref);
 				});

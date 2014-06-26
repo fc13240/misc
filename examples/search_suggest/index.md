@@ -81,7 +81,9 @@ body{
             ,'onSelect': function(data){
                 $textBox.val(data[2]+data[0]);
             }
-            ,'maxnum': 6
+            // ,'maxnum': 6
+            ,'isShowForeign': false
+            ,isShowScenic: false
         });
     });
     </script>
