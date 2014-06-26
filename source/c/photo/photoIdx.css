@@ -1,3 +1,41 @@
+.rollBox img{border:none;}
+.rollBox{width:1000px;overflow:hidden;margin:0 auto; position:relative; height:160px;  }
+.rollBox .Cont{width:1000px;overflow:hidden;margin:0 auto;/*padding-top:20px;*/ position:relative;}
+.rollBox .ScrCont{width:10000000px;}
+/*.rollBox .Cont .pic{width:130px;float:left;text-align:center;padding-right:20px;}*/
+.rollBox .Cont .pic{ width:235px; height:160px; float:left; text-align:center; margin-right:20px;  position:relative;}
+.hua_dong{ display:block; position:relative;}
+.hua_dong span{ bottom:0;background-image:url(http://i.tq121.com.cn/i/photo/tou_min.png); text-align:center;background-repeat:repeat; color:#fff; width:100%; position:absolute;  line-height:30px; font-size:14px; left:0;} 
+/*+html .rollBox .Cont .pic{width:235px;float:left;text-align:center;padding-right:30px;}*/
+/*.rollBox .Cont .pic img{padding:4px;background:#fff;border:1px solid #ccc;display:block;margin:0 auto;}*/
+.rollBox .Cont .pic img{ width:235px; height:160px;}
+.rollBox .Cont .pic p{line-height:26px;color:#505050;}
+.rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;}
+.rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
+.rollBox #List1,.rollBox #List2{float:left;}
+.img1,.img2,.Cont{
+float:left;}
+.img1,.img2{
+width:25px;
+height:105px;
+display:block;
+cursor:pointer;
+margin-top:20px;
+}
+.img1{
+	background-image:url(http://i.tq121.com.cn/i/photo/zuo.xiao.png);
+	background-repeat: no-repeat;
+	background-position: center center; position:absolute; left:0; z-index:999;}
+.img2{
+	background-image:url(http://i.tq121.com.cn/i/photo/you_xiao.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	position:absolute;
+	right:0;
+	z-index:999;
+}
+
+/************yiShangHuaDong***************/
 * { 
 margin:0; 
 padding:0; 
